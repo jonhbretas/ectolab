@@ -1,8 +1,18 @@
-/* ============================================================
-   ECTOLAB — Design System
-   Associação Internacional de Pesquisa Laboratorial
-   em Paracirurgia e Ectoplasmia
-   ============================================================ */
+/**
+ * ============================================================
+ * ECTOLAB — Design System e Estilos Globais globais
+ * ============================================================
+ * 
+ * ÍNDICE DE MANUTENÇÃO (Use CTRL+F para buscar as sessões abaixo):
+ * 1. Tokens (Variáveis Nativas de Cor, Tipografia e Layout)
+ * 2. Tipografia (Tags Títulos, Parágrafos, Classes Úteis)
+ * 3. Primitivas de Layout (Wrap, Section, Grid Lab)
+ * 4. Utilitários Glassmorphism e Atmosfera
+ * 5. Componentes Genéricos (Botões, Cards, Tags)
+ * 6. Estrutura Global (Menu Header e Rodapé)
+ * 7. Classes de Auxílio Rápido (Flex, Gaps)
+ * ============================================================
+ */
 
 :root {
   /* Color tokens — Ectolab brand palette */
@@ -295,21 +305,72 @@ p { margin: 0 0 1em; }
   margin-left: auto;
   font-size: 14.5px;
 }
-.nav a {
+.nav-item { position: relative; }
+.nav-item > a {
   position: relative;
   color: var(--ink-2);
   padding: 8px 0;
   transition: color 0.15s;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
-.nav a:hover { color: var(--blue); }
-.nav a.active { color: var(--blue); }
-.nav a.active::after {
+.nav-item > a:hover { color: var(--blue); }
+.nav-item > a.active { color: var(--blue); }
+.nav-item > a.active::after {
   content: "";
   position: absolute;
   left: 0; right: 0; bottom: 2px;
   height: 2px;
   background: var(--gold);
 }
+.caret { font-size: 10px; opacity: 0.6; }
+
+.nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%) translateY(10px);
+  background: rgba(255,255,255,0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  box-shadow: 0 16px 40px rgba(8,34,43,0.12);
+  padding: 24px;
+  display: flex;
+  gap: 40px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s;
+  pointer-events: none;
+  min-width: max-content;
+}
+.nav-item.has-drop:hover .nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(-50%) translateY(0);
+  pointer-events: auto;
+}
+.nav-drop-group { display: flex; flex-direction: column; gap: 8px; }
+.nav-drop-cat {
+  font-family: var(--mono);
+  font-size: 10px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--blue);
+  margin-bottom: 6px;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 6px;
+}
+.nav-drop-group a {
+  color: var(--ink-2);
+  font-size: 14px;
+  padding: 4px 0;
+  white-space: nowrap;
+  transition: color 0.15s;
+}
+.nav-drop-group a:hover { color: var(--blue); }
 
 .lang-switch {
   display: flex;

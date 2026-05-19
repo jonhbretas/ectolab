@@ -1,5 +1,5 @@
-/* global React, ReactDOM */
-const { useState, useEffect } = React;
+import React, { useState, useEffect } from 'react';
+import ReactDOM from 'react-dom/client';
 
 /* ============================================================
    HERO VARIATIONS
@@ -13,22 +13,20 @@ function HeroConservadora() {
           <div className="hero-left">
             <div className="eyebrow">
               <span className="dot"></span>
-              FUNDADA EM 2003 &nbsp;·&nbsp; FOZ DO IGUAÇU, BR &nbsp;·&nbsp; INST. CONSCIENCIOCÊNTRICA
+              ECTOLAB &nbsp;·&nbsp; ASSOC. INT. DE PESQUISA EM ECTOPLASMIA E PARACIRURGIA
             </div>
             <h1 className="h-display" style={{ marginTop: 24 }}>
-              Pesquisa laboratorial<br />
-              em <strong style={{ color: "var(--teal)", fontWeight: 700 }}>ectoplasmologia</strong>{" "}
-              e <strong style={{ color: "var(--teal)", fontWeight: 700 }}>paracirurgia</strong>.
+              Onde o invisível<br />
+              <em>se torna técnica</em>.
             </h1>
             <p className="lede" style={{ maxWidth: 620, marginTop: 28 }}>
-              A Ectolab é uma associação internacional, sem fins lucrativos, que congrega pesquisadores
-              dedicados à qualificação da <strong>interassistência parapsíquica</strong> e ao estudo
-              técnico do <strong>ectoplasma</strong> — energia semimaterial usada em paracirurgias e
-              assistência paraterapêutica.
+              Investigamos o ectoplasma, a paracirurgia e os fenômenos parapsíquicos com método científico,
+              rigor cosmoético e o <em style={{ fontStyle: "normal", fontWeight: 600 }}>Princípio da Descrença</em> —
+              não acredite em nada, experimente.
             </p>
             <div className="flex gap-12" style={{ marginTop: 36, flexWrap: "wrap" }}>
-              <a href="pages/paracirurgia.html#solicitar" className="btn btn-orange">
-                Solicitar paracirurgia <span className="arrow">→</span>
+              <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange">
+                Solicitar paracirurgia <span className="arrow">↗</span>
               </a>
               <a href="pages/trilha.html" className="btn btn-ghost">
                 Quero pesquisar — comece pela Trilha
@@ -56,6 +54,29 @@ function HeroConservadora() {
             </a>
           </aside>
         </div>
+
+        <div className="quadrant">
+          <div className="quadrant__cell">
+            <span className="specimen">I.</span>
+            <h3 className="h3">Pesquisar</h3>
+            <p>Laboratórios de Paracirurgia, Bioenergologia e Ectoplasmologia abertos a voluntários qualificados.</p>
+          </div>
+          <div className="quadrant__cell">
+            <span className="specimen">II.</span>
+            <h3 className="h3">Ensinar</h3>
+            <p>5 programas regulares — PROEP, EPPI, Imersão em Ectoplasmia, Fitoectoplasmia e Ciclo Vital do Ectoplasta.</p>
+          </div>
+          <div className="quadrant__cell">
+            <span className="specimen">III.</span>
+            <h3 className="h3">Assistir</h3>
+            <p>Solicitação de Paracirurgia à distância e Dinâmicas Interassistenciais (DIPs) presenciais em 6 cidades.</p>
+          </div>
+          <div className="quadrant__cell">
+            <span className="specimen">IV.</span>
+            <h3 className="h3">Publicar</h3>
+            <p>Verbetes, blog técnico e relatórios de pesquisa abertos. 124 artigos e 28 autores.</p>
+          </div>
+        </div>
       </div>
     </section>
   );
@@ -79,8 +100,8 @@ function HeroEquilibrada() {
           não acredite em nada, experimente.
         </p>
         <div className="flex gap-12 center-cta">
-          <a href="pages/paracirurgia.html#solicitar" className="btn btn-orange">
-            Solicitar paracirurgia <span className="arrow">→</span>
+          <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange">
+            Solicitar paracirurgia <span className="arrow">↗</span>
           </a>
           <a href="pages/trilha.html" className="btn btn-ghost">
             Quero pesquisar
@@ -136,7 +157,7 @@ function HeroOusada() {
               da consciência — onde nada se pede por fé.
             </p>
             <div className="ousada-cta">
-              <a href="pages/paracirurgia.html#solicitar" className="btn btn-orange btn-big">
+              <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange btn-big">
                 Solicitar paracirurgia <span className="arrow">↗</span>
               </a>
               <a href="pages/trilha.html" className="btn-text">
@@ -187,11 +208,11 @@ function PrincipioDescrenca() {
         </div>
 
         <div className="paths-grid">
-          <a href="pages/paracirurgia.html#solicitar" className="path-card path-card--orange">
+          <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="path-card path-card--orange">
             <span className="specimen">CAMINHO 01</span>
             <h3 className="h2 path-h">Busco assistência</h3>
             <p>Quero solicitar uma paracirurgia para mim, terceiros ou animais. Vou ao Portal do Assistido para entender preparo, prazos e relatório.</p>
-            <span className="link-arrow">Solicitar paracirurgia →</span>
+            <span className="link-arrow">Solicitar paracirurgia ↗</span>
           </a>
           <a href="pages/trilha.html" className="path-card path-card--teal">
             <span className="specimen">CAMINHO 02</span>
@@ -347,10 +368,10 @@ function PorOndeComecar() {
 
 function CursosDestaque() {
   const cursos = [
-    { sigla: "PROEP", nome: "Programa de Estimulação Parapsíquica", duracao: "Presencial · Foz", nivel: "Avançado", preco: "4 vagas", color: "var(--teal-soft)" },
-    { sigla: "EPPI", nome: "Ectoplasmia Projetiva Paracirúrgica Ectoplásmica Interassistencial", duracao: "Curso de campo", nivel: "Intermediário", preco: "Inscrições abertas", color: "var(--orange-soft)" },
-    { sigla: "IMERSÃO", nome: "Imersão em Ectoplasmia 2026", duracao: "27h · hoteleiro", nivel: "Intermediário", preco: "Vagas limitadas", color: "var(--teal-soft)" },
-    { sigla: "FITO", nome: "Fitoectoplasmia Interassistencial", duracao: "Curso de campo", nivel: "Avançado", preco: "Em breve", color: "var(--paper-2)" },
+    { sigla: "PROEP", nome: "Programa de Estimulação Parapsíquica", duracao: "Presencial · Foz", nivel: "Avançado", preco: "4 vagas", color: "var(--teal-soft)", link: "pages/curso-proep.html" },
+    { sigla: "IMERSÃO", nome: "Imersão em Ectoplasmia 2026", duracao: "27h · hoteleiro", nivel: "Principal Atividade", preco: "Vagas limitadas", color: "var(--teal-soft)", link: "pages/curso-imersao.html" },
+    { sigla: "ONLINE", nome: "Ectoplasmia Interassistencial", duracao: "5 Módulos · Gravado", nivel: "EaD", preco: "Acesso imediato", color: "var(--orange-soft)", link: "pages/curso-ectoplasmia-interassistencial.html" },
+    { sigla: "FITO", nome: "Fitoectoplasmia Interassistencial", duracao: "Curso de campo", nivel: "Avançado", preco: "Em breve", color: "var(--paper-2)", link: "pages/cursos.html" },
   ];
   return (
     <section className="section" style={{ background: "var(--white)" }}>
@@ -365,7 +386,7 @@ function CursosDestaque() {
 
         <div className="cursos-grid">
           {cursos.map((c, i) => (
-            <a href={i === 0 ? "pages/curso-proep.html" : "pages/cursos.html"} key={c.sigla} className="curso-card" style={{ "--bg": c.color }}>
+            <a href={c.link} key={c.sigla} className="curso-card" style={{ "--bg": c.color }}>
               <div className="curso-card__viz">
                 <span className="curso-card__sigla">{c.sigla}</span>
                 <span className="specimen curso-card__lvl">{c.nivel}</span>

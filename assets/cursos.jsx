@@ -1,0 +1,72 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+
+const CURSOS = [
+  { id: 'campo', type: 'Cursos de Campo', items: [
+    { t: 'EPPI', desc: 'Ectoplasmia Projetiva Paracirúrgica Ectoplásmica Interassistencial.', link: '/pages/curso-eppi.html', tag: 'Presencial' },
+    { t: 'Campo Paracirúrgico', desc: 'Campo Interassistencial Paracirúrgico para reequilíbrio bioenergético.', link: '/pages/curso-campo.html', tag: 'Presencial' },
+    { t: 'Imersão em Ectoplasmia', desc: 'Maratona ectoplásmica de 27 horas em ambiente hoteleiro.', link: '/pages/curso-imersao.html', tag: 'Imersão' }
+  ]},
+  { id: 'presenciais', type: 'Cursos Presenciais', items: [
+    { t: 'PROEP', desc: 'Programa de Estimulação Parapsíquica Ectoplásmica. Turmas reduzidas.', link: '/pages/curso-proep.html', tag: 'Avançado' },
+    { t: 'Ectoplasmia Protetiva', desc: 'Conheça situações traumáticas e profilaxia para ectoplastas.', link: '/pages/curso-ectoplasmia-protetiva.html', tag: 'Presencial' },
+    { t: 'Fitoectoplasmia Interassistencial', desc: 'Contato com fitoectoplasma e bioenergias vegetais.', link: '#', tag: 'Presencial' }
+  ]},
+  { id: 'online', type: 'Cursos Gravados', items: [
+    { t: 'Ectoplasmia Interassistencial', desc: 'Fundamentos da assistência com ectoplasma.', link: '/pages/curso-ectoplasmia-interassistencial.html', tag: 'Online' },
+    { t: 'Aplicações Práticas da Ectoplasmia', desc: 'Utilidades e técnicas para ativação do ectoplasma.', link: '/pages/curso.html?id=aplicacao', tag: 'Online' },
+    { t: 'Ciclo Vital do Ectoplasta', desc: 'Período entre ressoma e dessoma do ectoplasta.', link: '/pages/curso.html?id=ciclo', tag: 'Online' },
+    { t: 'Raízes da Ectoplasmia', desc: 'Origens, fitoectoplasmia e morfogenia.', link: '/pages/curso.html?id=raizes', tag: 'Online' }
+  ]},
+  { id: 'sincrono', type: 'Cursos Ao Vivo (Síncronos)', items: [
+    { t: 'Auto-organização Bioenergética', desc: 'Homeostase identificando focos de desperdício.', link: '/pages/curso.html?id=auto-org', tag: 'Ao Vivo' },
+    { t: 'Qualificação dos Pensenes', desc: 'Qualificação de pensamentos, sentimentos e energias.', link: '/pages/curso.html?id=qualificacao', tag: 'Ao Vivo' }
+  ]}
+];
+
+const TAG_COLORS = {
+  'Avançado': 'tag dark',
+  'Presencial': 'tag soft',
+  'Online': 'tag ghost',
+  'Imersão': 'tag gold'
+};
+
+function App() {
+  return (
+    <>
+      <section className="section" style={{ paddingTop: '80px', paddingBottom: '64px' }}>
+        <div className="wrap">
+          <div className="eyebrow"><span className="dot"></span>FORMAÇÃO PESQUISÍSTICA</div>
+          <h1 className="h-display" style={{ marginTop: 24 }}>
+            Cursos &amp; <br />
+            <strong style={{ color: "var(--teal)", fontWeight: 700 }}>Programas</strong>.
+          </h1>
+          <p className="lede" style={{ maxWidth: 720, marginTop: 28 }}>
+            Desenvolva seu parapsiquismo de forma técnica, teática e fundamentada no Princípio da Descrença. 
+            Nossos cursos abrangem desde introdução online até imersões e laboratórios de campo presencial.
+          </p>
+        </div>
+      </section>
+
+      {CURSOS.map((cat, i) => (
+        <section key={i} id={cat.id} className="section-sm" style={{ background: i % 2 !== 0 ? 'var(--paper-2)' : 'var(--white)', scrollMarginTop: '80px' }}>
+          <div className="wrap">
+            <h2 className="h2" style={{ marginBottom: 32 }}>{cat.type}</h2>
+            <div className="grid g3 gap-24">
+              {cat.items.map(curso => (
+                <a href={curso.link} key={curso.t} className="card" style={{ padding: 24, textDecoration: 'none', color: 'inherit' }}>
+                  <div style={{ marginBottom: 16 }}><span className={TAG_COLORS[curso.tag] || 'tag'}>{curso.tag}</span></div>
+                  <h3 className="h4" style={{ color: 'var(--teal)' }}>{curso.t}</h3>
+                  <p style={{ fontSize: 14, color: 'var(--ink-2)', marginTop: 12, marginBottom: 24, flex: 1 }}>{curso.desc}</p>
+                  <span className="link-arrow" style={{ alignSelf: 'flex-start' }}>Ver detalhes →</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        </section>
+      ))}
+    </>
+  );
+}
+
+ReactDOM.createRoot(document.getElementById("app")).render(<App />);
