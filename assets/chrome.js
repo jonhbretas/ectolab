@@ -17,7 +17,7 @@
 
   // --- 2. Central de Navegação (Criação de Novas Páginas) ---
   // Para registrar uma NOVA PÁGINA no menu do site, basta inserir o objeto abaixo.
-  const logoSVG = `<img src="${P}assets/logo.webp" alt="Ectolab — Associação Internacional de Pesquisa Laboratorial em Ectoplasmia e Paracirurgia" class="brand-img" />`;
+  const logoSVG = `<img src="${P || './'}assets/logo.webp" alt="Ectolab — Associação Internacional de Pesquisa Laboratorial em Ectoplasmia e Paracirurgia" class="brand-img" />`;
 
   const navItems = [
     { 
@@ -128,7 +128,7 @@
     <header class="site-header">
       <div class="wrap site-header__inner">
         <a href="${P}index.html" class="brand">
-          ${logoSVG}
+          <img src="${P || './'}assets/logo.webp" alt="Ectolab" class="brand-img" />
         </a>
         <nav class="nav">${navHTML}</nav>
         <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange btn-sm header-cta">Solicitar paracirurgia <span class="arrow">↗</span></a>
@@ -146,7 +146,7 @@
         <div class="grid">
           <div>
             <div class="flex center gap-12" style="margin-bottom:18px">
-              <img src="${P}assets/logo.webp" alt="Ectolab" style="height:36px;width:auto;filter:brightness(0) invert(1)" />
+              <img src="${P || './'}assets/logo.webp" alt="Ectolab" style="height:36px;width:auto;filter:brightness(0) invert(1)" />
             </div>
             <p style="font-size:14px;line-height:1.6;opacity:0.78;max-width:300px">
               Associação Internacional de Pesquisa Laboratorial em Paracirurgia e Ectoplasmia.
