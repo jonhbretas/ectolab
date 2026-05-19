@@ -17,13 +17,12 @@
   const logoSVG = `<img src="${P}assets/logo.webp" alt="Ectolab — Associação Internacional de Pesquisa Laboratorial em Ectoplasmia e Paracirurgia" class="brand-img" />`;
 
   const navItems = [
-    { id: "trilha",        label: "Trilha do Saber", href: P + "pages/trilha.html" },
+    { id: "paracirurgia",  label: "Paracirurgia",    href: P + "pages/paracirurgia.html" },
+    { id: "trilha",        label: "Trilha",          href: P + "pages/trilha.html" },
     { id: "cursos",        label: "Cursos",          href: P + "pages/cursos.html" },
     { id: "atividades",    label: "Atividades",      href: P + "pages/atividades.html" },
-    { id: "ectoplasma",    label: "Ectoplasma",      href: P + "pages/conscienciologia.html" },
-    { id: "quem",          label: "Quem somos",      href: P + "pages/quem-somos.html" },
+    { id: "quem",          label: "Ectolab",         href: P + "pages/quem-somos.html" },
     { id: "blog",          label: "Blog",            href: P + "pages/blog.html" },
-    { id: "contato",       label: "Contato",         href: P + "pages/contato.html" },
   ];
 
   const navHTML = navItems
@@ -37,6 +36,7 @@
           ${logoSVG}
         </a>
         <nav class="nav">${navHTML}</nav>
+        <a href="${P}pages/paracirurgia.html#solicitar" class="btn btn-orange btn-sm header-cta">Solicitar paracirurgia <span class="arrow">→</span></a>
         <div class="lang-switch" role="group" aria-label="Idioma">
           <button data-lang="PT" class="${lang === "PT" ? "on" : ""}">PT</button>
           <button data-lang="EN" class="${lang === "EN" ? "on" : ""}">EN</button>
@@ -58,16 +58,16 @@
               Fundada em 2003, com sede em Foz do Iguaçu, Brasil.
             </p>
             <p class="mono" style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange);margin-top:24px">
-              CNPJ &nbsp;05.XXX.XXX/0001-XX &nbsp;&middot;&nbsp; Inst. de Pesquisa
+              CNPJ &nbsp;18.782.858/0001-10 &nbsp;&middot;&nbsp; Inst. Conscienciocêntrica
             </p>
           </div>
           <div>
             <h5>Pesquisa</h5>
             <ul>
-              <li><a href="${P}pages/conscienciologia.html">O que é Conscienciologia</a></li>
-              <li><a href="${P}pages/quem-somos.html">Quem somos</a></li>
-              <li><a href="${P}pages/historia.html">História da Ectolab</a></li>
-              <li><a href="${P}pages/fatos-parafatos.html">Fatos &amp; Parafatos</a></li>
+              <li><a href="${P}pages/paracirurgia.html">Paracirurgia</a></li>
+              <li><a href="${P}pages/conscienciologia.html">Ciência &amp; Ectoplasmologia</a></li>
+              <li><a href="${P}pages/quem-somos.html">Quem somos &middot; CGC</a></li>
+              <li><a href="${P}pages/historia.html">História &middot; Fatos &amp; Parafatos</a></li>
             </ul>
           </div>
           <div>
