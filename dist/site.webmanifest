@@ -1,0 +1,16 @@
+{
+  "name": "Ectolab",
+  "short_name": "Ectolab",
+  "description": "Pesquisa laboratorial em ectoplasmia e paracirurgia.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f7f3ea",
+  "theme_color": "#0f5d73",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "64x64",
+      "type": "image/svg+xml"
+    }
+  ]
+}

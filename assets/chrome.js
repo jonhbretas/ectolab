@@ -179,6 +179,8 @@
             <h5>Contato</h5>
             <ul>
               <li><a href="${P}pages/contato.html">Visite o Campus</a></li>
+              <li>Av. Paraná, 1230 · Foz do Iguaçu, PR</li>
+              <li>Telefone: +55 (45) 3025-XXXX</li>
               <li><a href="mailto:contato@ectolab.org">contato@ectolab.org</a></li>
               <li><a href="#">Newsletter</a></li>
               <li><a href="#">Imprensa</a></li>
