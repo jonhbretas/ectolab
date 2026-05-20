@@ -15,7 +15,7 @@
 
   // --- 2. Central de Navegação (Criação de Novas Páginas) ---
   // Para registrar uma NOVA PÁGINA no menu do site, basta inserir o objeto abaixo.
-  const logoPath = "/logo-ectolab-1.png";
+  const logoPath = "/assets/logo-ectolab-1.png";
   const logoHTML = `<img src="${logoPath}" alt="Ectolab" class="brand-img" />`;
 
   const navItems = [
