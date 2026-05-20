@@ -100,7 +100,7 @@ function seoPlugin() {
   <link rel="canonical" href="${canonical}" />
   <link rel="alternate" hreflang="pt-BR" href="${canonical}" />
   <link rel="alternate" hreflang="x-default" href="${canonical}" />
-  <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+  <link rel="icon" href="/favicon.png" type="image/png" />
   <link rel="manifest" href="/site.webmanifest" />
   <meta name="theme-color" content="#0f5d73" />
   <meta property="og:type" content="website" />
