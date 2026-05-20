@@ -1,0 +1,1017 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Parcerias &amp; Pesquisa · Ectolab</title>
+  <meta name="description" content="A Ectolab oferece infraestrutura, acervo e equipe para pesquisadores das ciências da consciência. Recebemos pesquisadores de vários estados do Brasil, da França e dos EUA. Conheça nossos marcos editoriais e contribuições científicas." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="../assets/inner.css" />
+  <style>
+    /* ============================================================
+       PARCERIAS — local styles
+       ============================================================ */
+
+    /* Hero with researcher photo placeholder */
+    .parc-hero {
+      background: var(--paper);
+      position: relative;
+      overflow: hidden;
+      padding: clamp(56px, 7vw, 96px) 0 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .parc-hero__grid {
+      display: grid;
+      grid-template-columns: 1.25fr 1fr;
+      gap: 64px;
+      align-items: end;
+    }
+    .parc-hero__viz {
+      aspect-ratio: 5 / 6;
+      background: var(--ink);
+      border-radius: var(--r-md) var(--r-md) 0 0;
+      position: relative;
+      overflow: hidden;
+      margin-bottom: -1px;
+      background-image:
+        repeating-linear-gradient(135deg, transparent 0 22px, rgba(240,160,48,0.08) 22px 23px),
+        radial-gradient(circle at 30% 30%, rgba(31,135,168,0.45) 0%, transparent 55%);
+    }
+    .parc-hero__viz .corner {
+      position: absolute;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.6);
+    }
+    .parc-hero__viz .tl { top: 18px; left: 18px; }
+    .parc-hero__viz .tr { top: 18px; right: 18px; }
+    .parc-hero__viz .br { bottom: 18px; right: 18px; }
+    .parc-hero__viz .bl { bottom: 18px; left: 18px; color: var(--gold); }
+    .parc-hero__viz::after {
+      content: "ESPAÇO DE PESQUISA  ·  CAMPUS ECTOLAB  ·  FOZ DO IGUAÇU";
+      position: absolute;
+      left: 50%; top: 50%;
+      transform: translate(-50%, -50%) rotate(-90deg);
+      transform-origin: center;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.3em;
+      color: rgba(255,255,255,0.55);
+      white-space: nowrap;
+    }
+    @media (max-width: 900px) {
+      .parc-hero__grid { grid-template-columns: 1fr; gap: 32px; }
+      .parc-hero__viz { aspect-ratio: 4 / 3; }
+    }
+
+    /* Infrastructure list */
+    .infra-list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+    .infra-item {
+      padding: 36px 32px;
+      border-right: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      background: var(--white);
+      position: relative;
+    }
+    .infra-item__num {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: var(--orange-2);
+    }
+    .infra-item h3 {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: -0.012em;
+      margin: 0;
+      line-height: 1.15;
+    }
+    .infra-item p {
+      margin: 0;
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--ink-2);
+    }
+    .infra-item__tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: auto;
+      padding-top: 12px;
+    }
+    .infra-tag {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 4px 9px;
+      border: 1px solid var(--line-2);
+      border-radius: 999px;
+      color: var(--ink-2);
+    }
+    @media (max-width: 700px) {
+      .infra-list { grid-template-columns: 1fr; }
+    }
+
+    /* Geography panel */
+    .geo-panel {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: var(--r-md);
+      padding: clamp(36px, 5vw, 64px);
+      position: relative;
+      overflow: hidden;
+    }
+    .geo-panel::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.05) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.05) 1px, transparent 1px);
+      background-size: 32px 32px;
+      pointer-events: none;
+    }
+    .geo-panel__grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 48px;
+      align-items: start;
+      position: relative;
+      z-index: 1;
+    }
+    .geo-stats {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,0.18);
+    }
+    .geo-stats > div {
+      padding: 22px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.18);
+    }
+    .geo-stats .num {
+      font-family: var(--display);
+      font-size: 48px;
+      font-weight: 600;
+      letter-spacing: -0.03em;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .geo-stats .lbl {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.65);
+      margin-top: 10px;
+    }
+    /* Origins list */
+    .geo-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      border-top: 1px solid rgba(255,255,255,0.18);
+    }
+    .geo-list li {
+      display: grid;
+      grid-template-columns: 56px 1fr auto;
+      align-items: center;
+      gap: 16px;
+      padding: 14px 0;
+      border-bottom: 1px solid rgba(255,255,255,0.12);
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.04em;
+    }
+    .geo-list .code {
+      color: var(--gold);
+      letter-spacing: 0.18em;
+      font-weight: 500;
+    }
+    .geo-list .name {
+      color: var(--white);
+      font-family: var(--display);
+      font-size: 16px;
+      letter-spacing: -0.005em;
+      font-weight: 500;
+    }
+    .geo-list .count {
+      color: rgba(255,255,255,0.7);
+      font-variant-numeric: tabular-nums;
+    }
+    .geo-list li.intl .name::after {
+      content: "INTL";
+      font-family: var(--mono);
+      font-size: 9.5px;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      margin-left: 10px;
+      padding: 2px 6px;
+      border: 1px solid var(--gold);
+      border-radius: 2px;
+      vertical-align: 2px;
+    }
+    @media (max-width: 900px) { .geo-panel__grid { grid-template-columns: 1fr; gap: 32px; } }
+
+    /* Scientific contributions */
+    .contrib-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .contrib {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      padding: 32px;
+      display: grid;
+      grid-template-columns: 88px 1fr;
+      gap: 28px;
+      position: relative;
+      transition: border-color 0.2s;
+    }
+    .contrib:hover { border-color: var(--ink); }
+    .contrib__code {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--orange-2);
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-right: 1px solid var(--line);
+      padding-right: 12px;
+    }
+    .contrib__body {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .contrib__head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 16px;
+    }
+    .contrib h3 {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 24px;
+      letter-spacing: -0.018em;
+      margin: 0;
+      line-height: 1.15;
+    }
+    .contrib__year {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      color: var(--ink-3);
+      padding-top: 6px;
+      white-space: nowrap;
+    }
+    .contrib p {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--ink-2);
+      margin: 0;
+    }
+    .contrib__refs {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--ink-3);
+      padding-top: 12px;
+      border-top: 1px dashed var(--line);
+      margin-top: 4px;
+    }
+    .contrib__refs strong { color: var(--blue); font-weight: 500; }
+    @media (max-width: 900px) {
+      .contrib-grid { grid-template-columns: 1fr; }
+      .contrib { grid-template-columns: 1fr; gap: 16px; }
+      .contrib__code { writing-mode: horizontal-tb; transform: none; border-right: none; border-bottom: 1px solid var(--line); padding-right: 0; padding-bottom: 10px; justify-content: flex-start; }
+    }
+
+    /* Books / publications shelf */
+    .shelf {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 32px;
+    }
+    .book {
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      text-decoration: none;
+      color: inherit;
+    }
+    .book__cover {
+      aspect-ratio: 3 / 4.4;
+      border-radius: 3px 6px 6px 3px;
+      position: relative;
+      overflow: hidden;
+      box-shadow:
+        0 1px 0 rgba(255,255,255,0.5) inset,
+        -1px 0 0 rgba(0,0,0,0.18) inset,
+        12px 14px 30px -10px rgba(8,34,43,0.35),
+        0 2px 6px -2px rgba(8,34,43,0.18);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 22px 20px 20px 24px;
+      transition: transform 0.25s ease;
+    }
+    .book:hover .book__cover { transform: translateY(-4px); }
+    /* Book spine line */
+    .book__cover::before {
+      content: "";
+      position: absolute;
+      left: 8px; top: 0; bottom: 0;
+      width: 1px;
+      background: rgba(255,255,255,0.18);
+    }
+    .book__cover::after {
+      content: "";
+      position: absolute;
+      left: 0; top: 0; bottom: 0;
+      width: 6px;
+      background: linear-gradient(to right, rgba(0,0,0,0.18), transparent);
+      pointer-events: none;
+    }
+    .book__cover .pub {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      opacity: 0.65;
+    }
+    .book__cover .title {
+      font-family: var(--display);
+      font-weight: 500;
+      font-size: 22px;
+      line-height: 1.05;
+      letter-spacing: -0.018em;
+    }
+    .book__cover .title em { font-style: italic; font-weight: 400; }
+    .book__cover .author {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-top: 6px;
+      opacity: 0.78;
+    }
+
+    /* Cover color variants */
+    .book__cover.teal { background: linear-gradient(170deg, var(--teal) 0%, var(--teal-2) 100%); color: var(--paper); }
+    .book__cover.teal .pub { color: var(--gold); opacity: 1; }
+    .book__cover.ink  { background: linear-gradient(170deg, var(--ink-2) 0%, var(--ink) 100%); color: var(--paper); }
+    .book__cover.ink .pub { color: var(--gold); opacity: 1; }
+    .book__cover.paper { background: linear-gradient(170deg, #f3ebd8 0%, #e7d8b6 100%); color: var(--ink); }
+    .book__cover.paper .pub { color: var(--orange-2); opacity: 1; }
+    .book__cover.orange { background: linear-gradient(170deg, var(--orange) 0%, var(--orange-2) 100%); color: var(--ink); }
+    .book__cover.orange .pub { color: var(--ink); opacity: 0.75; }
+    .book__cover.glow { background: linear-gradient(170deg, var(--teal-glow) 0%, var(--teal) 100%); color: var(--paper); }
+    .book__cover.glow .pub { color: var(--gold); opacity: 1; }
+    .book__cover.cream { background: linear-gradient(170deg, #ebe1cf 0%, #d9c9a7 100%); color: var(--teal-3); }
+    .book__cover.cream .pub { color: var(--teal); opacity: 0.85; }
+    .book__cover.deep { background: linear-gradient(170deg, #0e3e4d 0%, #082831 100%); color: var(--paper); }
+    .book__cover.deep .pub { color: var(--gold); opacity: 1; }
+
+    .book__meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      color: var(--ink-3);
+    }
+    .book__meta .author-name {
+      color: var(--ink);
+      font-weight: 500;
+      letter-spacing: -0.005em;
+      font-family: var(--display);
+      font-size: 14px;
+    }
+    @media (max-width: 1100px) { .shelf { grid-template-columns: repeat(2, 1fr); } }
+    @media (max-width: 560px) { .shelf { grid-template-columns: 1fr 1fr; gap: 20px; } }
+
+    /* Researcher CTA box */
+    .researcher-cta {
+      background: linear-gradient(140deg, var(--teal-2), var(--teal-3));
+      color: var(--paper);
+      border-radius: var(--r-lg);
+      padding: clamp(40px, 5vw, 72px);
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 56px;
+      align-items: center;
+      position: relative;
+      overflow: hidden;
+    }
+    .researcher-cta::before {
+      content: "";
+      position: absolute;
+      top: -160px; right: -160px;
+      width: 480px; height: 480px;
+      background: radial-gradient(circle, var(--orange) 0%, transparent 60%);
+      opacity: 0.18;
+      pointer-events: none;
+    }
+    .researcher-cta > * { position: relative; z-index: 1; }
+    .researcher-cta h2 {
+      font-family: var(--display);
+      font-size: clamp(30px, 3.4vw, 44px);
+      font-weight: 500;
+      letter-spacing: -0.022em;
+      line-height: 1.05;
+      margin: 0 0 20px;
+      color: var(--white);
+    }
+    .researcher-cta h2 em { font-style: normal; color: var(--gold); }
+    .researcher-cta p { color: rgba(255,255,255,0.78); font-size: 16px; line-height: 1.6; margin: 0 0 28px; max-width: 520px; }
+    .researcher-cta__steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .researcher-cta__steps li {
+      display: grid;
+      grid-template-columns: 36px 1fr;
+      gap: 16px;
+      padding: 16px 0;
+      border-bottom: 1px dashed rgba(255,255,255,0.18);
+      font-family: var(--display);
+      font-size: 15.5px;
+      line-height: 1.45;
+      color: rgba(255,255,255,0.92);
+    }
+    .researcher-cta__steps li:last-child { border-bottom: none; }
+    .researcher-cta__steps .step-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      color: var(--gold);
+      padding-top: 4px;
+    }
+    .researcher-cta__buttons { display: flex; gap: 12px; flex-wrap: wrap; }
+    @media (max-width: 900px) {
+      .researcher-cta { grid-template-columns: 1fr; gap: 32px; padding: 36px 28px; }
+    }
+
+    /* Quote strip */
+    .quote-strip {
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+      background: var(--white);
+      padding: clamp(48px, 6vw, 80px) 0;
+    }
+    .quote-strip blockquote {
+      max-width: 920px;
+      margin: 0 auto;
+      font-family: var(--display);
+      font-weight: 400;
+      font-size: clamp(24px, 2.6vw, 36px);
+      line-height: 1.25;
+      letter-spacing: -0.018em;
+      color: var(--ink);
+      text-align: center;
+    }
+    .quote-strip blockquote::before {
+      content: "“";
+      display: block;
+      font-family: var(--display);
+      color: var(--orange);
+      font-size: 64px;
+      line-height: 0.4;
+      margin-bottom: 24px;
+    }
+    .quote-strip cite {
+      display: block;
+      margin-top: 28px;
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+      font-style: normal;
+    }
+    .quote-strip cite strong { color: var(--blue); font-weight: 500; }
+
+    /* Two-column section heading */
+    .sec-head {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 48px;
+      align-items: end;
+      margin-bottom: 48px;
+    }
+    .sec-head p {
+      font-size: 16px;
+      color: var(--ink-2);
+      line-height: 1.6;
+      margin: 0;
+    }
+    @media (max-width: 900px) { .sec-head { grid-template-columns: 1fr; gap: 16px; } }
+  </style>
+</head>
+<body data-active="">
+  <div id="__header"></div>
+
+  <main>
+
+    <!-- ============================================================
+         HERO
+         ============================================================ -->
+    <section class="parc-hero">
+      <div class="wrap">
+        <div class="breadcrumb">
+          <a href="../index.html">Ectolab</a><span class="sep">◆</span><span>Parcerias &amp; Pesquisa</span>
+        </div>
+
+        <div class="parc-hero__grid">
+          <div style="padding-bottom: clamp(40px, 5vw, 72px)">
+            <div class="eyebrow"><span class="dot"></span>PARCERIAS &nbsp;·&nbsp; PESQUISA HOSPEDADA &nbsp;·&nbsp; CAMPUS FOZ</div>
+            <h1 class="h-display" style="margin-top:24px">
+              Um <strong style="color:var(--blue);font-weight:700">espaço</strong><br />
+              feito para quem<br />
+              vem <em style="font-style:italic;color:var(--orange-2);font-weight:500">pesquisar.</em>
+            </h1>
+            <p class="lede" style="margin-top:32px;max-width:580px">
+              A Ectolab é, antes de qualquer coisa, um laboratório. Quem chega aqui para investigar ectoplasma, paracirurgia ou parafenômenos da consciência encontra acervo, infraestrutura, equipe e protocolos já calibrados para o trabalho de pesquisa — não precisa começar do zero.
+            </p>
+            <div class="flex gap-12" style="margin-top:36px;flex-wrap:wrap">
+              <a href="#hospedar" class="btn btn-orange">Quero pesquisar aqui <span class="arrow">→</span></a>
+              <a href="#contribuicoes" class="btn btn-ghost">Ver contribuições científicas</a>
+            </div>
+
+            <dl class="meta-grid" style="margin-top:56px;max-width:560px">
+              <div><dt>Pesquisadores recebidos</dt><dd>184 desde 2008</dd></div>
+              <div><dt>Origem</dt><dd>BR · FR · USA</dd></div>
+              <div><dt>Livros publicados</dt><dd>11 títulos</dd></div>
+              <div><dt>Verbetes científicos</dt><dd>247 publicados</dd></div>
+            </dl>
+          </div>
+
+          <div class="parc-hero__viz">
+            <span class="corner tl">ECTOLAB · CAMPUS</span>
+            <span class="corner tr">25° 32′ S · 54° 35′ W</span>
+            <span class="corner bl">★ ESPAÇO DE PESQUISA</span>
+            <span class="corner br">FOTO · A INSERIR</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         INFRA / O QUE OFERECEMOS
+         ============================================================ -->
+    <section class="section" id="hospedar">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <div class="eyebrow"><span class="dot"></span>INFRAESTRUTURA &nbsp;·&nbsp; O QUE ENCONTRARÁ AQUI</div>
+            <h2 class="h1" style="margin-top:16px">
+              Um espaço <strong style="color:var(--blue);font-weight:700">otimizado</strong><br />
+              para o trabalho do pesquisador.
+            </h2>
+          </div>
+          <p>
+            O campus da Ectolab foi pensado, ao longo de 23 anos, para sustentar pesquisa de longa duração: tem acervo especializado, salas, instrumentos de campo, supervisão metodológica e hospedagem no mesmo perímetro. Quem chega para investigar não perde tempo montando estrutura — entra direto na pesquisa.
+          </p>
+        </div>
+
+        <div class="infra-list">
+          <div class="infra-item">
+            <div class="infra-item__num">01 &nbsp;/&nbsp; ACERVO</div>
+            <h3>Biblioteca especializada em parafenômenos</h3>
+            <p>Mais de 4.200 títulos catalogados em conscienciologia, parapsicologia, neurociência da consciência, anatomia sutil, ectoplasmia e literatura correlata. Acervo aberto a pesquisadores hospedados.</p>
+            <div class="infra-item__tags">
+              <span class="infra-tag">4.200 títulos</span>
+              <span class="infra-tag">PT · EN · ES · FR</span>
+              <span class="infra-tag">Empréstimo local</span>
+            </div>
+          </div>
+
+          <div class="infra-item">
+            <div class="infra-item__num">02 &nbsp;/&nbsp; LABORATÓRIO</div>
+            <h3>Campos paracirúrgicos abertos à observação</h3>
+            <p>Os Campos da Ectolab funcionam como laboratório de campo: o pesquisador observa, coleta dados de bioenergética e parapercepção, e participa do registro sob protocolo. 410 Campos conduzidos desde 2003.</p>
+            <div class="infra-item__tags">
+              <span class="infra-tag">410 Campos</span>
+              <span class="infra-tag">Protocolo Ectolab</span>
+              <span class="infra-tag">Equipe titular</span>
+            </div>
+          </div>
+
+          <div class="infra-item">
+            <div class="infra-item__num">03 &nbsp;/&nbsp; SUPERVISÃO</div>
+            <h3>Reuniões metodológicas semanais</h3>
+            <p>Toda quarta-feira, a equipe-titular se reúne para revisar hipóteses, discutir achados e ajustar protocolos. Pesquisadores hospedados são convidados a apresentar seus recortes e receber leitura crítica entre pares.</p>
+            <div class="infra-item__tags">
+              <span class="infra-tag">Semanal · 4h</span>
+              <span class="infra-tag">Peer review</span>
+              <span class="infra-tag">Sigilo de dados</span>
+            </div>
+          </div>
+
+          <div class="infra-item">
+            <div class="infra-item__num">04 &nbsp;/&nbsp; HOSPEDAGEM</div>
+            <h3>Alojamento no campus, para estadas longas</h3>
+            <p>Quartos individuais a 90 segundos da biblioteca e dos salões de Campo. Pensamos para estadas de 1 a 12 semanas, com cozinha compartilhada, sala de leitura silenciosa e acesso 24h ao acervo.</p>
+            <div class="infra-item__tags">
+              <span class="infra-tag">12 quartos</span>
+              <span class="infra-tag">1–12 semanas</span>
+              <span class="infra-tag">Subsídio integral</span>
+            </div>
+          </div>
+
+          <div class="infra-item">
+            <div class="infra-item__num">05 &nbsp;/&nbsp; ACERVO DE RELATOS</div>
+            <h3>Base de relatos paraperceptivos anonimizados</h3>
+            <p>Mais de 11.300 relatos paraperceptivos coletados desde 2003, anonimizados e indexados por tipo de fenômeno, ano e localidade. Disponível sob acordo de pesquisa e cláusula de confidencialidade.</p>
+            <div class="infra-item__tags">
+              <span class="infra-tag">11.300+ relatos</span>
+              <span class="infra-tag">Indexado</span>
+              <span class="infra-tag">Sob acordo</span>
+            </div>
+          </div>
+
+          <div class="infra-item">
+            <div class="infra-item__num">06 &nbsp;/&nbsp; INSTRUMENTAL</div>
+            <h3>Mapeamento de sinais autonômicos durante Campo</h3>
+            <p>Equipamento próprio para registro de variabilidade da frequência cardíaca, condutância da pele e termografia regional durante sessões de paracirurgia — protocolo Ectolab desenvolvido entre 2017 e 2024.</p>
+            <div class="infra-item__tags">
+              <span class="infra-tag">HRV · GSR · Termo</span>
+              <span class="infra-tag">Setup próprio</span>
+              <span class="infra-tag">Open data*</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ORIGEM DOS PESQUISADORES
+         ============================================================ -->
+    <section class="section bg-paper">
+      <div class="wrap">
+        <div class="geo-panel">
+          <div class="geo-panel__grid">
+            <div>
+              <div class="eyebrow" style="color:var(--gold)"><span class="dot"></span>ALCANCE &nbsp;·&nbsp; DE ONDE VÊM OS PESQUISADORES</div>
+              <h2 class="h1" style="color:var(--white);margin-top:16px;margin-bottom:28px;max-width:540px">
+                Pesquisadores de <em style="font-style:italic;color:var(--gold);font-weight:500">três países</em><br />
+                já passaram pelo campus.
+              </h2>
+              <p style="color:rgba(255,255,255,0.72);font-size:16px;line-height:1.65;max-width:480px;margin:0 0 36px">
+                Desde 2008, a Ectolab recebeu pesquisadores de instituições brasileiras, francesas e norte-americanas em estadas de pesquisa formal. A maior parte são profissionais de saúde, psicólogos, antropólogos e estudantes de pós-graduação que vêm investigar um recorte específico dos parafenômenos.
+              </p>
+
+              <div class="geo-stats">
+                <div>
+                  <div class="num">184</div>
+                  <div class="lbl">Pesquisadores hospedados</div>
+                </div>
+                <div>
+                  <div class="num">3</div>
+                  <div class="lbl">Países de origem</div>
+                </div>
+                <div>
+                  <div class="num">11</div>
+                  <div class="lbl">Estados do Brasil</div>
+                </div>
+                <div>
+                  <div class="num">28</div>
+                  <div class="lbl">Universidades parceiras</div>
+                </div>
+              </div>
+            </div>
+
+            <ul class="geo-list">
+              <li><span class="code">SP &middot; BR</span><span class="name">São Paulo</span><span class="count">42 pesquisadores</span></li>
+              <li><span class="code">PR &middot; BR</span><span class="name">Paraná</span><span class="count">38 pesquisadores</span></li>
+              <li><span class="code">RJ &middot; BR</span><span class="name">Rio de Janeiro</span><span class="count">21 pesquisadores</span></li>
+              <li><span class="code">MG &middot; BR</span><span class="name">Minas Gerais</span><span class="count">17 pesquisadores</span></li>
+              <li><span class="code">RS &middot; BR</span><span class="name">Rio Grande do Sul</span><span class="count">14 pesquisadores</span></li>
+              <li><span class="code">SC &middot; BR</span><span class="name">Santa Catarina</span><span class="count">11 pesquisadores</span></li>
+              <li><span class="code">BA &middot; BR</span><span class="name">Bahia</span><span class="count">8 pesquisadores</span></li>
+              <li><span class="code">DF &middot; BR</span><span class="name">Distrito Federal</span><span class="count">7 pesquisadores</span></li>
+              <li class="intl"><span class="code">FR</span><span class="name">França &middot; Paris, Lyon</span><span class="count">14 pesquisadores</span></li>
+              <li class="intl"><span class="code">USA</span><span class="name">Estados Unidos &middot; CA, NY, MA</span><span class="count">9 pesquisadores</span></li>
+              <li style="border-bottom:none;color:rgba(255,255,255,0.5)"><span class="code">+</span><span class="name" style="font-size:14px;color:rgba(255,255,255,0.55)">PE, GO, CE, ES, MT &amp; outros</span><span class="count">3 pesquisadores</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FALA DE PESQUISADOR
+         ============================================================ -->
+    <section class="quote-strip">
+      <div class="wrap">
+        <blockquote>
+          O que me surpreendeu foi a disciplina metodológica. Eu esperava encontrar misticismo<br />
+          e encontrei caderno de campo, protocolo, planilha e revisão entre pares.
+        </blockquote>
+        <cite>
+          <strong>Dr. Camille Léger</strong> &nbsp;·&nbsp; Université Paris-Saclay &nbsp;·&nbsp; Estada de pesquisa, jun – ago / 2024
+        </cite>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTRIBUIÇÕES CIENTÍFICAS
+         ============================================================ -->
+    <section class="section" id="contribuicoes">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <div class="eyebrow"><span class="dot"></span>AVANÇOS DA INSTITUIÇÃO &nbsp;·&nbsp; 2008 – 2026</div>
+            <h2 class="h1" style="margin-top:16px">
+              Contribuições científicas<br />
+              <strong style="color:var(--blue);font-weight:700">originais</strong> da Ectolab.
+            </h2>
+          </div>
+          <p>
+            Em 23 anos de pesquisa de campo, a Ectolab formulou um corpo conceitual próprio para descrever fenômenos que a literatura precedente apenas mencionava sem caracterizar. Os conceitos abaixo são desenvolvimentos autorais — alguns já incorporados em outras instituições da Conscienciologia.
+          </p>
+        </div>
+
+        <div class="contrib-grid">
+          <article class="contrib">
+            <div class="contrib__code">CONCEITO &middot; 01</div>
+            <div class="contrib__body">
+              <div class="contrib__head">
+                <h3>Interstício Celular</h3>
+                <span class="contrib__year">2014</span>
+              </div>
+              <p>Caracterização do <em>locus</em> bioenergético em que se dá a entrega ectoplásmica durante a paracirurgia — espaço funcional entre tecido biológico denso e camada bioplásmica.</p>
+              <div class="contrib__refs"><strong>Refs.:</strong> 6 verbetes encicl. &nbsp;·&nbsp; 2 livros &nbsp;·&nbsp; cit. em 11 instituições</div>
+            </div>
+          </article>
+
+          <article class="contrib">
+            <div class="contrib__code">CONCEITO &middot; 02</div>
+            <div class="contrib__body">
+              <div class="contrib__head">
+                <h3>Mapeamento dos Sinais e Sintomas da Ectoplasmia</h3>
+                <span class="contrib__year">2016</span>
+              </div>
+              <p>Quadro semiológico com 84 sinais e sintomas observáveis em paracirurgiandos durante e após sessão de Campo — desde marcadores autonômicos até manifestações paraperceptivas tardias.</p>
+              <div class="contrib__refs"><strong>Refs.:</strong> 84 sinais catalogados &nbsp;·&nbsp; 3 livros &nbsp;·&nbsp; protocolo aberto</div>
+            </div>
+          </article>
+
+          <article class="contrib">
+            <div class="contrib__code">CONCEITO &middot; 03</div>
+            <div class="contrib__body">
+              <div class="contrib__head">
+                <h3>Interação com o Sistema Nervoso Autônomo</h3>
+                <span class="contrib__year">2019</span>
+              </div>
+              <p>Hipótese, com correlatos mensuráveis, de que a paracirurgia atua sobre o ramo parassimpático antes de qualquer manifestação visível — vagotonia mensurada por HRV e termografia regional durante o Campo.</p>
+              <div class="contrib__refs"><strong>Refs.:</strong> n = 412 sessões &nbsp;·&nbsp; paper em revisão &nbsp;·&nbsp; replicado por Ectolab-FR</div>
+            </div>
+          </article>
+
+          <article class="contrib">
+            <div class="contrib__code">CONCEITO &middot; 04</div>
+            <div class="contrib__body">
+              <div class="contrib__head">
+                <h3>Síndrome Ectoplásmica</h3>
+                <span class="contrib__year">2021</span>
+              </div>
+              <p>Conjunto sindrômico que descreve o quadro de quem produz ectoplasma sem ter consciência da função — fadiga adrenal, hipersensibilidade somática, padrão específico de sono e marcadores psíquicos correlatos.</p>
+              <div class="contrib__refs"><strong>Refs.:</strong> 73 casos clínicos &nbsp;·&nbsp; livro 2023 &nbsp;·&nbsp; em estudo USA</div>
+            </div>
+          </article>
+
+          <article class="contrib">
+            <div class="contrib__code">CONCEITO &middot; 05</div>
+            <div class="contrib__body">
+              <div class="contrib__head">
+                <h3>Bioenergética da Entrega Ectoplásmica</h3>
+                <span class="contrib__year">2022</span>
+              </div>
+              <p>Modelo de quatro fases para o ciclo de doação ectoplásmica: convocação, dissociação, entrega e recomposição. Cada fase tem assinatura autonômica e parapsíquica distinta.</p>
+              <div class="contrib__refs"><strong>Refs.:</strong> 4 fases &middot; 12 marcadores &nbsp;·&nbsp; ensinado no PROEP</div>
+            </div>
+          </article>
+
+          <article class="contrib">
+            <div class="contrib__code">CONCEITO &middot; 06</div>
+            <div class="contrib__body">
+              <div class="contrib__head">
+                <h3>Protocolo de Recomposição Pós-Campo</h3>
+                <span class="contrib__year">2024</span>
+              </div>
+              <p>Sequência de 11 passos para a recuperação bioenergética do paracirurgião nas primeiras 72 horas após Campo extenso — desenvolvido a partir do mapeamento de 7 anos de descompensações pós-trabalho.</p>
+              <div class="contrib__refs"><strong>Refs.:</strong> 11 passos &nbsp;·&nbsp; 72h &nbsp;·&nbsp; adotado em 4 instituições</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         MARCOS EDITORIAIS / LIVROS
+         ============================================================ -->
+    <section class="section bg-white">
+      <div class="wrap">
+        <div class="sec-head">
+          <div>
+            <div class="eyebrow"><span class="dot"></span>MARCOS EDITORIAIS &nbsp;·&nbsp; 11 LIVROS &nbsp;·&nbsp; 247 VERBETES</div>
+            <h2 class="h1" style="margin-top:16px">
+              Onde o trabalho<br />
+              de pesquisa <strong style="color:var(--blue);font-weight:700">se ancora</strong>.
+            </h2>
+          </div>
+          <p>
+            A Ectolab e seus pesquisadores titulares produziram, ao longo de duas décadas, uma bibliografia primária em ectoplasmia e paracirurgia. São livros que partem do trabalho de campo da instituição — alguns institucionais, outros assinados por pesquisadores em estadas longas.
+          </p>
+        </div>
+
+        <div class="shelf">
+          <a href="#" class="book">
+            <div class="book__cover teal">
+              <div>
+                <div class="pub">★ Ectolab · 2018</div>
+                <h3 class="title" style="margin-top:14px">Ectoplasma:<br />uma <em>investigação<br />laboratorial</em></h3>
+              </div>
+              <div class="author">RUTH PINHEIRO</div>
+            </div>
+            <div class="book__meta">
+              <span class="author-name">Ruth Pinheiro</span>
+              <span>1ª ed. 2018 · 412 pp.</span>
+            </div>
+          </a>
+
+          <a href="#" class="book">
+            <div class="book__cover ink">
+              <div>
+                <div class="pub">★ Ectolab · 2021</div>
+                <h3 class="title" style="margin-top:14px">Mapa dos<br />Sinais e<br />Sintomas</h3>
+              </div>
+              <div class="author">RUTH PINHEIRO</div>
+            </div>
+            <div class="book__meta">
+              <span class="author-name">Ruth Pinheiro</span>
+              <span>1ª ed. 2021 · 286 pp.</span>
+            </div>
+          </a>
+
+          <a href="#" class="book">
+            <div class="book__cover paper">
+              <div>
+                <div class="pub">★ Ectolab · 2019</div>
+                <h3 class="title" style="margin-top:14px">Paracirurgia<br />&amp; <em>Sistema<br />Autonômico</em></h3>
+              </div>
+              <div class="author">GUSTAVO CHIEZA</div>
+            </div>
+            <div class="book__meta">
+              <span class="author-name">Gustavo Chieza</span>
+              <span>1ª ed. 2019 · 308 pp.</span>
+            </div>
+          </a>
+
+          <a href="#" class="book">
+            <div class="book__cover orange">
+              <div>
+                <div class="pub">★ Ectolab · 2024</div>
+                <h3 class="title" style="margin-top:14px">Intersticio<br />Celular</h3>
+              </div>
+              <div class="author">GUSTAVO CHIEZA</div>
+            </div>
+            <div class="book__meta">
+              <span class="author-name">Gustavo Chieza</span>
+              <span>1ª ed. 2024 · 192 pp.</span>
+            </div>
+          </a>
+
+          <a href="#" class="book">
+            <div class="book__cover glow">
+              <div>
+                <div class="pub">★ Ectolab · 2020</div>
+                <h3 class="title" style="margin-top:14px">Síndrome<br /><em>Ectoplásmica</em></h3>
+              </div>
+              <div class="author">ISMAEL PINHEIRO</div>
+            </div>
+            <div class="book__meta">
+              <span class="author-name">Ismael Pinheiro</span>
+              <span>1ª ed. 2020 · 354 pp.</span>
+            </div>
+          </a>
+
+          <a href="#" class="book">
+            <div class="book__cover cream">
+              <div>
+                <div class="pub">★ Ectolab · 2023</div>
+                <h3 class="title" style="margin-top:14px">Paracirurgião:<br />a <em>formação</em></h3>
+              </div>
+              <div class="author">ISMAEL PINHEIRO</div>
+            </div>
+            <div class="book__meta">
+              <span class="author-name">Ismael Pinheiro</span>
+              <span>1ª ed. 2023 · 268 pp.</span>
+            </div>
+          </a>
+
+          <a href="#" class="book">
+            <div class="book__cover deep">
+              <div>
+                <div class="pub">★ Institucional · 2015</div>
+                <h3 class="title" style="margin-top:14px">Manual de<br /><em>Campo<br />Paracirúrgico</em></h3>
+              </div>
+              <div class="author">ECTOLAB (ORG.)</div>
+            </div>
+            <div class="book__meta">
+              <span class="author-name">Ectolab (org.)</span>
+              <span>3ª ed. 2022 · 478 pp.</span>
+            </div>
+          </a>
+
+          <a href="#" class="book">
+            <div class="book__cover teal">
+              <div>
+                <div class="pub">★ Institucional · 2025</div>
+                <h3 class="title" style="margin-top:14px">Anais<br />Ectolab<br />2003–2025</h3>
+              </div>
+              <div class="author">ECTOLAB (ORG.)</div>
+            </div>
+            <div class="book__meta">
+              <span class="author-name">Ectolab (org.)</span>
+              <span>1ª ed. 2025 · 632 pp.</span>
+            </div>
+          </a>
+        </div>
+
+        <div style="margin-top:48px;text-align:center">
+          <p class="muted" style="font-size:14.5px">+ 3 outros títulos no acervo · 247 verbetes publicados na Enciclopédia da Conscienciologia · catálogo completo na biblioteca do campus.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CTA — Pesquisar conosco
+         ============================================================ -->
+    <section class="section bg-paper">
+      <div class="wrap" id="contato-pesquisador">
+        <div class="researcher-cta">
+          <div>
+            <div class="eyebrow" style="color:var(--gold)"><span class="dot" style="background:var(--gold)"></span>QUER PESQUISAR CONOSCO?</div>
+            <h2 style="margin-top:18px">
+              A Ectolab abre suas portas<br />
+              para quem deseja <em>investigar.</em>
+            </h2>
+            <p>
+              Se você é pesquisador, profissional de saúde, mestrando, doutorando ou pós-doutorando e tem um projeto que dialoga com ectoplasma, paracirurgia ou parafenômenos da consciência — escreva pra gente. Avaliamos cada projeto com seriedade e respondemos em até 14 dias.
+            </p>
+            <div class="researcher-cta__buttons">
+              <a href="/cdn-cgi/l/email-protection#7707120406021e041637121403181b161559180510480402151d1214034a27051807180403165713125707120406021e0416" class="btn btn-orange"><span class="__cf_email__" data-cfemail="5626332527233f253716333522393a373478392431">[email&#160;protected]</span> <span class="arrow">→</span></a>
+              <a href="contato.html" class="btn btn-ghost" style="color:var(--white);border-color:rgba(255,255,255,0.4)">Outras formas de contato</a>
+            </div>
+          </div>
+
+          <ol class="researcher-cta__steps" aria-label="Como propor uma pesquisa">
+            <li><span class="step-num">01</span><span>Envie um <em style="font-style:italic;color:var(--gold)">resumo de 2 páginas</em> com hipótese, recorte e cronograma de campo.</span></li>
+            <li><span class="step-num">02</span><span>Em até 14 dias, a equipe-titular devolve leitura crítica e propõe encaixe possível.</span></li>
+            <li><span class="step-num">03</span><span>Combinamos uma <em style="font-style:italic;color:var(--gold)">estada de 1 a 12 semanas</em> com acesso a acervo, Campos e supervisão.</span></li>
+            <li><span class="step-num">04</span><span>Pesquisa hospedada é, por princípio, <em style="font-style:italic;color:var(--gold)">gratuita</em> e custeada pela instituição.</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="__footer"></div>
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script src="../assets/chrome.js"></script>
+</body>
+</html>

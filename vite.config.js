@@ -34,7 +34,8 @@ export default defineConfig({
         contato: resolve(__dirname, 'pages/contato.html'),
         conscienciologia: resolve(__dirname, 'pages/conscienciologia.html'),
         fatosParafatos: resolve(__dirname, 'pages/fatos-parafatos.html'),
-        blog: resolve(__dirname, 'pages/blog.html')
+        blog: resolve(__dirname, 'pages/blog.html'),
+        parcerias: resolve(__dirname, 'pages/parcerias.html')
       }
     }
   }
