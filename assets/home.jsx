@@ -13,23 +13,23 @@ function HeroConservadora() {
           <div className="hero-left">
             <div className="eyebrow">
               <span className="dot"></span>
-              ECTOLAB &nbsp;·&nbsp; ASSOC. INT. DE PESQUISA EM ECTOPLASMIA E PARACIRURGIA
+              ECTOLAB &nbsp;·&nbsp; ASSOCIAÇÃO INTERNACIONAL DE PESQUISA EM ECTOPLASMIA E PARACIRURGIA
             </div>
             <h1 className="h-display" style={{ marginTop: 24 }}>
-              Onde o invisível<br />
-              <em>se torna técnica</em>.
+              Pesquisa técnica<br />
+              <em>em fenômenos ectoplásmicos</em>.
             </h1>
             <p className="lede" style={{ maxWidth: 620, marginTop: 28 }}>
-              Investigamos o ectoplasma, a paracirurgia e os fenômenos parapsíquicos com método científico,
-              rigor cosmoético e o <em style={{ fontStyle: "normal", fontWeight: 600 }}>Princípio da Descrença</em> —
-              não acredite em nada, experimente.
+              A Ectolab é a Associação Internacional de Pesquisa em Ectoplasmia e Paracirurgia.
+              Investigamos o ectoplasma, a paracirurgia e os fenômenos ectoplásmicos com método,
+              registro técnico e compromisso interassistencial.
             </p>
             <div className="flex gap-12" style={{ marginTop: 36, flexWrap: "wrap" }}>
               <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange">
                 Solicitar paracirurgia <span className="arrow">↗</span>
               </a>
               <a href="pages/trilha.html" className="btn btn-ghost">
-                Quero pesquisar — comece pela Trilha
+                Consultar a Trilha do Saber
               </a>
             </div>
           </div>
@@ -42,10 +42,10 @@ function HeroConservadora() {
               Resumo&nbsp;<span className="aster">*</span>&nbsp;ECTOLAB
             </div>
             <dl className="hero-card__list">
-              <div><dt>Natureza</dt><dd>Assoc. internacional, conscienciocêntrica, sem fins lucrativos</dd></div>
+              <div><dt>Natureza</dt><dd>Associação internacional de pesquisa, sem fins lucrativos</dd></div>
               <div><dt>Especialidades</dt><dd>Ectoplasmologia &middot; Paracirurgia &middot; Bioenergologia</dd></div>
               <div><dt>Base científica</dt><dd>Conscienciologia (W. Vieira, 1981)</dd></div>
-              <div><dt>Princípio</dt><dd>Da Descrença — nada por fé, tudo por experimentação</dd></div>
+              <div><dt>Princípio</dt><dd>Descrença lúcida, experimentação pessoal e registro crítico</dd></div>
               <div><dt>Sede</dt><dd>Foz do Iguaçu, Paraná &middot; BR</dd></div>
               <div><dt>Regime</dt><dd>100% voluntariado</dd></div>
             </dl>
@@ -59,22 +59,22 @@ function HeroConservadora() {
           <div className="quadrant__cell">
             <span className="specimen">I.</span>
             <h3 className="h3">Pesquisar</h3>
-            <p>Laboratórios de Paracirurgia, Bioenergologia e Ectoplasmologia abertos a voluntários qualificados.</p>
+            <p>Investigação da consciência, dos fenômenos ectoplásmicos e das interações energéticas.</p>
           </div>
           <div className="quadrant__cell">
             <span className="specimen">II.</span>
             <h3 className="h3">Ensinar</h3>
-            <p>5 programas regulares — PROEP, EPPI, Imersão em Ectoplasmia, Fitoectoplasmia e Ciclo Vital do Ectoplasta.</p>
+            <p>Aprendizagem orientada pela pesquisa e retribuição do conhecimento pela docência.</p>
           </div>
           <div className="quadrant__cell">
             <span className="specimen">III.</span>
             <h3 className="h3">Assistir</h3>
-            <p>Solicitação de Paracirurgia à distância e Dinâmicas Interassistenciais (DIPs) presenciais em 6 cidades.</p>
+            <p>Dinâmicas em Brasília, Curitiba, Foz do Iguaçu, São Paulo, Rio de Janeiro, Florianópolis, Portugal e Alemanha.</p>
           </div>
           <div className="quadrant__cell">
             <span className="specimen">IV.</span>
             <h3 className="h3">Publicar</h3>
-            <p>Verbetes, blog técnico e relatórios de pesquisa abertos. 124 artigos e 28 autores.</p>
+            <p>Livros, artigos, verbetes, blog técnico e resultados de pesquisas institucionais.</p>
           </div>
         </div>
       </div>
@@ -88,23 +88,23 @@ function HeroEquilibrada() {
       <div className="wrap">
         <div className="eyebrow center-eye">
           <span className="dot"></span>
-          ECTOLAB &nbsp;·&nbsp; ASSOC. INT. DE PESQUISA EM ECTOPLASMIA E PARACIRURGIA &nbsp;·&nbsp; EST. 2003
+          ECTOLAB &nbsp;·&nbsp; ASSOCIAÇÃO INTERNACIONAL DE PESQUISA EM ECTOPLASMIA E PARACIRURGIA &nbsp;·&nbsp; EST. 2003
         </div>
         <h1 className="h-display center-title">
-          Onde o invisível<br />
-          <strong style={{ color: "var(--teal)", fontWeight: 700 }}>se torna técnica</strong>.
+          Pesquisa em ectoplasmia,<br />
+          <strong style={{ color: "var(--teal)", fontWeight: 700 }}>paracirurgia e interassistência</strong>.
         </h1>
         <p className="lede center-lede">
-          Investigamos o ectoplasma, a paracirurgia e os fenômenos parapsíquicos com método científico,
-          rigor cosmoético e o <em style={{ fontStyle: "normal", fontWeight: 600 }}>Princípio da Descrença</em> —
-          não acredite em nada, experimente.
+          A Ectolab é a Associação Internacional de Pesquisa em Ectoplasmia e Paracirurgia.
+          Desenvolvemos investigação técnica e experimental sobre fenômenos ectoplásmicos,
+          formação de voluntários e práticas interassistenciais.
         </p>
         <div className="flex gap-12 center-cta">
           <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange">
             Solicitar paracirurgia <span className="arrow">↗</span>
           </a>
           <a href="pages/trilha.html" className="btn btn-ghost">
-            Quero pesquisar
+            Buscar conhecimento
           </a>
         </div>
 
@@ -112,22 +112,22 @@ function HeroEquilibrada() {
           <div className="quadrant__cell">
             <span className="specimen">I.</span>
             <h3 className="h3">Pesquisar</h3>
-            <p>Laboratórios de Paracirurgia, Bioenergologia e Ectoplasmologia abertos a voluntários qualificados.</p>
+            <p>Investigação da consciência, dos fenômenos ectoplásmicos e das interações energéticas.</p>
           </div>
           <div className="quadrant__cell">
             <span className="specimen">II.</span>
             <h3 className="h3">Ensinar</h3>
-            <p>5 programas regulares — PROEP, EPPI, Imersão em Ectoplasmia, Fitoectoplasmia e Ciclo Vital do Ectoplasta.</p>
+            <p>Aprendizagem orientada pela pesquisa e retribuição do conhecimento pela docência.</p>
           </div>
           <div className="quadrant__cell">
             <span className="specimen">III.</span>
             <h3 className="h3">Assistir</h3>
-            <p>Solicitação de Paracirurgia à distância e Dinâmicas Interassistenciais (DIPs) presenciais em 6 cidades.</p>
+            <p>Dinâmicas em Brasília, Curitiba, Foz do Iguaçu, São Paulo, Rio de Janeiro, Florianópolis, Portugal e Alemanha.</p>
           </div>
           <div className="quadrant__cell">
             <span className="specimen">IV.</span>
             <h3 className="h3">Publicar</h3>
-            <p>Verbetes, blog técnico e relatórios de pesquisa abertos. 124 artigos e 28 autores.</p>
+            <p>Livros, artigos, verbetes, blog técnico e resultados de pesquisas institucionais.</p>
           </div>
         </div>
       </div>
@@ -145,23 +145,23 @@ function HeroOusada() {
             <span className="specimen ousada-tag">EDIÇÃO 2026 &nbsp;·&nbsp; VOL. XXIII</span>
           </div>
           <h1 className="ousada-display">
-            <span className="line">Ecto&shy;</span>
-            <span className="line line--gold">plasma</span>
+            <span className="line">Pesquisa</span>
+            <span className="line line--gold">ecto&shy;plásmica</span>
             <span className="line">&amp; para&shy;</span>
             <span className="line line--outline">cirurgia.</span>
           </h1>
           <div className="ousada-row2">
             <p className="ousada-lede">
-              Há 23 anos a Ectolab transforma fenômenos antes chamados de mágicos
-              em <u>protocolos de pesquisa replicáveis</u>. Bem-vindo ao laboratório
-              da consciência — onde nada se pede por fé.
+              A Ectolab é a Associação Internacional de Pesquisa em Ectoplasmia e Paracirurgia.
+              Há 23 anos desenvolve protocolos de observação, formação e assistência para
+              o estudo técnico dos fenômenos ectoplásmicos.
             </p>
             <div className="ousada-cta">
               <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange btn-big">
                 Solicitar paracirurgia <span className="arrow">↗</span>
               </a>
               <a href="pages/trilha.html" className="btn-text">
-                Primeira vez aqui? Comece pela Trilha.
+                Primeira vez aqui? Consulte a Trilha do Saber.
               </a>
             </div>
           </div>
@@ -195,13 +195,13 @@ function PrincipioDescrenca() {
             <div>
               <h2 className="descrenca-h2">Princípio da Descrença</h2>
               <p className="descrenca-lede">
-                <strong>Não acredite em nada do que está aqui.</strong> Submeta toda informação à
-                experimentação pessoal, ao registro disciplinado e ao ceticismo científico.
+                Toda informação deve ser submetida à experimentação pessoal, ao registro
+                disciplinado e à análise crítica.
               </p>
               <p className="descrenca-body">
-                Esta é a pedra angular do nosso trabalho. Não somos religião, não pedimos fé, não
-                temos lideranças carismáticas. O que pedimos é honestidade na observação. O Princípio
-                da Descrença atravessa cada curso, cada paracirurgia, cada artigo, cada relatório.
+                Este princípio orienta a postura pesquisística da Ectolab: observar com honestidade,
+                registrar com método, comparar evidências e revisar conclusões. Ele atravessa cursos,
+                dinâmicas de paracirurgia, artigos e relatórios institucionais.
               </p>
             </div>
           </div>
@@ -211,14 +211,14 @@ function PrincipioDescrenca() {
           <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="path-card path-card--orange">
             <span className="specimen">CAMINHO 01</span>
             <h3 className="h2 path-h">Busco assistência</h3>
-            <p>Quero solicitar uma paracirurgia para mim, terceiros ou animais. Vou ao Portal do Assistido para entender preparo, prazos e relatório.</p>
+            <p>Quero solicitar paracirurgia para mim, terceiros ou animais e compreender preparo, prazos e registro pós-atendimento.</p>
             <span className="link-arrow">Solicitar paracirurgia ↗</span>
           </a>
           <a href="pages/trilha.html" className="path-card path-card--teal">
             <span className="specimen">CAMINHO 02</span>
-            <h3 className="h2 path-h">Quero pesquisar</h3>
-            <p>Quero entender o ectoplasma, participar de uma Dinâmica Interassistencial (DIP), fazer cursos e — se for o caso — formar-me pesquisador.</p>
-            <span className="link-arrow">Começar pela Trilha →</span>
+            <h3 className="h2 path-h">Quero aprender</h3>
+            <p>Quero entender ectoplasmia, conhecer a formação inicial, participar de atividades práticas e avançar na pesquisa.</p>
+            <span className="link-arrow">Consultar a Trilha do Saber →</span>
           </a>
         </div>
       </div>
@@ -231,7 +231,7 @@ function PrincipioDescrenca() {
    ============================================================ */
 
 function Marquee() {
-  const items = ["Ectoplasma", "Paracirurgia", "Interassistencialidade", "Cosmoética", "Pensene", "Holossomática", "Ectoplasmologia", "Bioenergologia", "Tenepes", "Estado Vibracional"];
+  const items = ["Ectoplasma", "Paracirurgia", "Interassistencialidade", "Pesquisa", "Consciência", "Ectoplasmologia", "Bioenergologia", "Experimentação", "Docência", "Produção científica"];
   const line = (
     <span>
       {items.map((t, i) => (
@@ -253,10 +253,10 @@ function Marquee() {
 
 function OQueFazemos() {
   const cells = [
-    { num: "01", title: "Paracirurgia à distância", text: "Atendimento paraterapêutico em equipe, à distância, com protocolo de preparo, sessão e relatório pós-atendimento. Submissões até sexta às 12h30.", link: "pages/paracirurgia.html" },
-    { num: "02", title: "Dinâmicas Interassistenciais", text: "Trabalhos grupais (DIPs) em São Paulo, Curitiba, Foz do Iguaçu, Recife, Lisboa e Madri. Voluntariado consciencial em campo bioenergético.", link: "pages/atividades.html" },
-    { num: "03", title: "Laboratórios técnicos", text: "Paracirurgia, Bioenergologia e Ectoplasmologia. Experimentos individuais e em equipe, com preenchimento de parapercepiogramas.", link: "pages/atividades.html#laboratorios" },
-    { num: "04", title: "Formação & Pesquisa", text: "PROEP, EPPI, Imersão em Ectoplasmia, Fitoectoplasmia. Verbetes, relatórios e blog técnico em produção contínua.", link: "pages/cursos.html" },
+    { num: "01", title: "Pesquisa", text: "Investigação técnica sobre ectoplasmia, consciência, interações energéticas e efeitos interassistenciais observáveis.", link: "pages/parcerias.html" },
+    { num: "02", title: "Cursos", text: "Cursos e imersões que conectam estudo, observação, prática orientada e retribuição pela docência.", link: "pages/cursos.html" },
+    { num: "03", title: "Paracirurgia", text: "Dinâmicas em Brasília, Curitiba, Foz do Iguaçu, São Paulo, Rio de Janeiro, Florianópolis, Portugal e Alemanha.", link: "pages/paracirurgia.html" },
+    { num: "04", title: "Qualificação", text: "Formação de voluntários, parcerias institucionais, produção científica e continuidade de pesquisa.", link: "pages/atividades.html" },
   ];
   return (
     <section className="section">
@@ -266,7 +266,7 @@ function OQueFazemos() {
             <div className="eyebrow"><span className="dot"></span>O QUE FAZEMOS</div>
             <h2 className="h1" style={{ marginTop: 16, maxWidth: 820 }}>
               Quatro frentes, uma única missão:
-              <strong style={{ color: "var(--teal)", fontWeight: 700 }}> qualificar a interassistência parapsíquica</strong>.
+              <strong style={{ color: "var(--teal)", fontWeight: 700 }}> interassistência</strong>.
             </h2>
           </div>
         </div>
@@ -300,16 +300,16 @@ function Manifesto() {
           </div>
           <div className="manifesto-right">
             <p className="lede">
-              A história da ciência é a história do que aprendemos a observar.
-              O <strong>ectoplasma</strong> — substância energética semimaterial, viscosa, emitida pela
-              consciência em estados específicos — é hoje, para nós, o que o magnetismo era para
-              Faraday em 1820: real, replicável, mas ainda mal compreendido.
+              A história da ciência avança quando fenômenos complexos passam a ser observados
+              com linguagem, método e documentação. O <strong>ectoplasma</strong> é estudado pela
+              Ectolab como hipótese e objeto de investigação técnica, em contextos de assistência,
+              formação e experimentação grupal.
             </p>
             <p>
-              A Ectolab existe para mudar isso. Não pelo dogma, nem pela fé — mas pela observação
-              cuidadosa, registro disciplinado e revisão entre pares. Trabalhamos sob o
-              <strong> Código Grupal de Cosmoética (CGC)</strong>: interassistencialidade,
-              rigor científico, imparcialidade, confidencialidade e cooperação.
+              A Ectolab organiza esse campo de estudo por meio de observação cuidadosa, registro
+              disciplinado, revisão crítica e cooperação entre voluntários, docentes e pesquisadores.
+              O <strong>Código Grupal de Cosmoética (CGC)</strong> orienta confidencialidade,
+              responsabilidade interassistencial e seriedade institucional.
             </p>
             <p>
               A base teórica é a <a href="pages/conscienciologia.html">Conscienciologia</a>,
@@ -328,10 +328,10 @@ function Manifesto() {
 
 function PorOndeComecar() {
   const steps = [
-    { n: "01", title: "Entenda o vocabulário", text: "Glossário ilustrado com os termos essenciais — ectoplasma, paracirurgia, pensene, cosmoética, EV.", link: "pages/conscienciologia.html", time: "10 min de leitura" },
-    { n: "02", title: "Participe de uma DIP", text: "Dinâmica Interassistencial da Paracirurgia. Atividade gratuita em SP, Curitiba, Foz, Recife e online.", link: "pages/atividades.html", time: "Próxima: SP, 21/jun" },
-    { n: "03", title: "Faça o EPPI ou Imersão", text: "Cursos de campo. Imersão em Ectoplasmia 2026 — 27h em ambiente hoteleiro, com fitoectoplasma.", link: "pages/cursos.html", time: "Inscrições abertas" },
-    { n: "04", title: "Aprofunde no PROEP", text: "Programa de Estimulação Parapsíquica. Presencial em Foz, 4 vagas/turma. Inclui estimulação vagal e eletrossomatografia.", link: "pages/curso-proep.html", time: "4 vagas · turma 2026.2" },
+    { n: "01", title: "Entenda o Vocabulário", text: "Conceitos essenciais sobre ectoplasmia, paracirurgia, interassistência e investigação da consciência.", link: "pages/conscienciologia.html", time: "Entenda" },
+    { n: "02", title: "Participe de uma DIP", text: "Formação de entrada para organizar linguagem, postura pesquisística e bases da prática interassistencial.", link: "pages/cursos.html", time: "Experimente" },
+    { n: "03", title: "Faça um Curso", text: "Aprofundamento técnico em fenômenos ectoplásmicos, registro de experiência e qualificação energética.", link: "pages/cursos.html", time: "Desenvolva" },
+    { n: "04", title: "Imersão Ectoplásmica", text: "Participação em curso de campo imersivo com observação, assistência e pesquisa aplicada.", link: "pages/atividades.html", time: "Aprofunde" },
   ];
   return (
     <section className="section trilha-mini">
@@ -341,7 +341,7 @@ function PorOndeComecar() {
             <div className="eyebrow"><span className="dot"></span>POR ONDE COMEÇAR</div>
             <h2 className="h1" style={{ marginTop: 16 }}>A Trilha do Saber, em 4 passos.</h2>
           </div>
-          <a href="pages/trilha.html" className="btn btn-ghost hide-mobile">Ver trilha completa →</a>
+          <a href="pages/trilha.html" className="btn btn-ghost hide-mobile">Ver Trilha do Saber completa →</a>
         </div>
 
         <div className="trilha-rail">
@@ -368,10 +368,10 @@ function PorOndeComecar() {
 
 function CursosDestaque() {
   const cursos = [
-    { sigla: "PROEP", nome: "Programa de Estimulação Parapsíquica", duracao: "Presencial · Foz", nivel: "Avançado", preco: "4 vagas", color: "var(--teal-soft)", link: "pages/curso-proep.html" },
-    { sigla: "IMERSÃO", nome: "Imersão em Ectoplasmia 2026", duracao: "27h · hoteleiro", nivel: "Principal Atividade", preco: "Vagas limitadas", color: "var(--teal-soft)", link: "pages/curso-imersao.html" },
-    { sigla: "ONLINE", nome: "Ectoplasmia Interassistencial", duracao: "5 Módulos · Gravado", nivel: "EaD", preco: "Acesso imediato", color: "var(--orange-soft)", link: "pages/curso-ectoplasmia-interassistencial.html" },
-    { sigla: "FITO", nome: "Fitoectoplasmia Interassistencial", duracao: "Curso de campo", nivel: "Avançado", preco: "Em breve", color: "var(--paper-2)", link: "pages/cursos.html" },
+    { sigla: "PROEP", nome: "Programa Exclusivo Presencial em Foz", duracao: "Presencial", nivel: "Avançado", preco: "04 Alunos por Turma", color: "var(--teal-soft)", link: "pages/curso-proep.html" },
+    { sigla: "IMERSÃO", nome: "Imersão em Ectoplasmia 2027", duracao: "Prática intensiva", nivel: "Campo de pesquisa", preco: "Vagas limitadas", color: "var(--teal-soft)", link: "pages/curso-imersao.html" },
+    { sigla: "GRAVADO", nome: "Ectoplasmia Interassistencial", duracao: "Módulos gravados", nivel: "EaD", preco: "Acesso imediato", color: "var(--orange-soft)", link: "pages/curso-ectoplasmia-interassistencial.html" },
+    { sigla: "PARCERIA", nome: "Materializações Interassistenciais", duracao: "Curso temático", nivel: "Aprofundamento", preco: "Em breve", color: "var(--paper-2)", link: "pages/cursos.html" },
   ];
   return (
     <section className="section" style={{ background: "var(--white)" }}>
@@ -379,7 +379,11 @@ function CursosDestaque() {
         <div className="section-head between">
           <div>
             <div className="eyebrow"><span className="dot"></span>CURSOS &amp; PROGRAMAS</div>
-            <h2 className="h1" style={{ marginTop: 16 }}>Formação em parapsiquismo ectoplasmático.</h2>
+            <h2 className="h1" style={{ marginTop: 16 }}>Formação, pesquisa e produção científica.</h2>
+            <p className="lede" style={{ marginTop: 12, maxWidth: 760 }}>
+              Programas para quem busca ambiente pesquisístico, imersões técnicas, parcerias com
+              universidades e desenvolvimento de produção científica em ectoplasmia e paracirurgia.
+            </p>
           </div>
           <a href="pages/cursos.html" className="btn btn-ghost hide-mobile">Ver todos os cursos →</a>
         </div>
@@ -411,12 +415,12 @@ function EventosBlog() {
   const eventos = [
     { data: "21 JUN", titulo: "DIP — Dinâmica Interassistencial da Paracirurgia · São Paulo", local: "Sede SP · Vila Mariana", tipo: "ATIVIDADE GRATUITA" },
     { data: "28 JUN", titulo: "DIP — Dinâmica Interassistencial · Curitiba", local: "Sede Curitiba · Centro", tipo: "ATIVIDADE GRATUITA" },
-    { data: "05 JUL", titulo: "Imersão em Ectoplasmia 2026 — turma única", local: "Foz do Iguaçu · hoteleiro", tipo: "CURSO INTENSIVO" },
+    { data: "05 JUL", titulo: "Imersão em Ectoplasmia 2027 — turma única", local: "Foz do Iguaçu · ambiente pesquisístico", tipo: "CURSO INTENSIVO" },
   ];
   const posts = [
-    { tag: "ECTOPLASMIA", titulo: "Qualificação dos pensenes do ectoplasta: 7 práticas diárias.", autor: "Dra. Lívia M. Ferraz", min: "8 min" },
-    { tag: "SÍNDROMES", titulo: "Síndrome Ectoplásmica: como reconhecer e tratar o descontrole bioenergético.", autor: "Dr. André Salgado", min: "12 min" },
-    { tag: "TÉCNICAS", titulo: "Técnica Arco Voltaico Craniochacral — energização da região encefálica.", autor: "Prof. R. Caldeira", min: "10 min" },
+    { tag: "ECTOPLASMIA", titulo: "Ectoplasmia aplicada: critérios para observação e registro.", autor: "Dra. Lívia M. Ferraz", min: "8 min" },
+    { tag: "PESQUISA", titulo: "Fenômenos ectoplásmicos: como organizar dados de campo.", autor: "Dr. André Salgado", min: "12 min" },
+    { tag: "TÉCNICAS", titulo: "Paracirurgia e interassistência: limites, método e responsabilidade.", autor: "Prof. R. Caldeira", min: "10 min" },
   ];
   return (
     <section className="section eventos-blog">
@@ -469,10 +473,10 @@ function EventosBlog() {
 
 function Glossario() {
   const terms = [
-    { t: "Ectoplasma", d: "Energia semimaterial, viscosa, esbranquiçada, emitida pela consciência em estados específicos. Matéria-prima de fenômenos de materialização e paraterapia.", aka: "do gr. ektós (fora) + plásma (forma)" },
-    { t: "Paracirurgia", d: "Intervenção energética paraterapêutica que visa desbloqueios psicossomáticos. Não substitui medicina convencional — subcampo científico da Consciencioterapia.", aka: "para- + cirurgia" },
-    { t: "Pensene", d: "Unidade pensênica que reúne pensamento + sentimento + energia. Tudo o que a consciência manifesta é pensene.", aka: "pen + sen + ene · neologismo conscienciológico" },
-    { t: "Cosmoética", d: "Ética cósmica, multidimensional, multimilenar. Princípio condutor do CGC — Código Grupal de Cosmoética da Ectolab.", aka: "cosmo- (universo) + ética" },
+    { t: "Ectoplasma", d: "Hipótese de substância ou energia semimaterial associada a manifestações observadas em fenômenos ectoplásmicos.", aka: "do gr. ektós (fora) + plásma (forma)" },
+    { t: "Paracirurgia", d: "Prática interassistencial de base energética, conduzida com preparo, equipe, protocolo e registro pós-atendimento.", aka: "para- + cirurgia" },
+    { t: "Interassistência", d: "Relação de auxílio mútuo em que assistência, aprendizagem e responsabilidade caminham juntas.", aka: "inter- + assistência" },
+    { t: "Pesquisa", d: "Postura técnica de observar, registrar, comparar, revisar e transformar experiência em conhecimento comunicável.", aka: "método + evidência + revisão" },
   ];
   return (
     <section className="section glossario">
@@ -507,11 +511,11 @@ function Glossario() {
 
 function FAQ() {
   const qs = [
-    { q: "Isto é religião ou seita?", a: "Não. A Ectolab é uma associação conscienciocêntrica, sem fins lucrativos, dedicada à pesquisa. Não há rituais, dogmas, lideranças carismáticas ou cobrança de fé. Trabalhamos sob o Princípio da Descrença: nada por fé, tudo por experimentação." },
-    { q: "Vocês 'curam' à distância?", a: "Não. A Paracirurgia é uma intervenção energética paraterapêutica que visa desbloqueios psicossomáticos — não substitui medicina, psicologia ou terapia regulamentada. Assistidos relatam alívio em diferentes graus; isso vira dado de pesquisa, não promessa." },
-    { q: "Como funciona a Solicitação de Paracirurgia?", a: "Você preenche o formulário até sexta-feira, 12h30. O atendimento ocorre à distância no fim de semana, enquanto você permanece em repouso em casa, em ambiente silencioso, sem eletrônicos, incensos ou músicas. Até domingo à meia-noite você envia o relatório de parapercepções." },
-    { q: "Preciso 'acreditar' para participar?", a: "Não, pelo contrário: o Princípio da Descrença pede o oposto. O que pedimos é honestidade na observação — registrar o que se percebe, sem inflar nem reduzir. O ceticismo educado é bem-vindo." },
-    { q: "Cirurgia espiritual e paracirurgia são a mesma coisa?", a: "Não. A 'cirurgia espiritual' brasileira é um fenômeno mediúnico tradicional, com forte componente religioso e dependência de entidades externas. A paracirurgia da Ectolab é laica, em equipe (Epicon, Acopladores, Energizadores, Doadores, Pesquisadores) e baseada no parapsiquismo do próprio voluntário." },
+    { q: "A Ectolab é uma instituição religiosa?", a: "Não. A Ectolab é uma associação sem fins lucrativos dedicada à pesquisa, ao ensino e à interassistência. O trabalho é conduzido com linguagem técnica, voluntariado, confidencialidade e compromisso institucional." },
+    { q: "A paracirurgia substitui tratamento médico?", a: "Não. A paracirurgia é uma prática interassistencial de base energética e não substitui medicina, psicologia ou qualquer cuidado regulamentado. Relatos e resultados são tratados como dados de acompanhamento, não como promessa." },
+    { q: "Como funciona a solicitação de paracirurgia?", a: "A pessoa preenche o formulário, recebe orientações de preparo e participa à distância em horário indicado. Depois, pode registrar percepções e efeitos observados para apoiar o acompanhamento e a pesquisa institucional." },
+    { q: "Preciso ter alguma crença para participar?", a: "Não. A participação exige abertura para observar, registrar e avaliar a própria experiência com honestidade. O Princípio da Descrença orienta análise crítica e autonomia do pesquisador ou participante." },
+    { q: "Qual é a diferença entre cirurgia espiritual e paracirurgia?", a: "A Ectolab trabalha com a paracirurgia como prática técnica, laica e interassistencial, organizada por equipe, preparo, protocolo e registro. A abordagem institucional evita linguagem devocional e foca qualificação da assistência." },
   ];
   const [open, setOpen] = useState(0);
   return (
@@ -550,9 +554,9 @@ function FAQ() {
 
 function Depoimentos() {
   const ts = [
-    { quote: "Entrei cética. Achei que era mais uma promessa de cura. O que encontrei foi um instituto que pede que você NÃO acredite — só observe. Mudou minha forma de pesquisar.", autor: "Dra. Lívia M. Ferraz", role: "Pesquisadora-titular · PhD Psicologia" },
-    { quote: "O Princípio da Descrença não é uma frase de efeito — é uma disciplina diária. Pesquisar com ele dá trabalho. Pesquisar sem ele é só repetir crença.", autor: "Prof. R. Caldeira", role: "Co-fundador da Ectolab · Epicon" },
-    { quote: "23 anos depois, ainda chego em cada DIP sem saber o que vou observar. É a beleza do voluntariado conscienciocêntrico.", autor: "Marta Olinda", role: "Acopladora · 16 anos de campo" },
+    { quote: "Encontrei uma instituição que organiza experiência, linguagem e registro. Isso mudou minha forma de estudar os fenômenos ectoplásmicos.", autor: "Dra. Lívia M. Ferraz", role: "Pesquisadora-titular · PhD Psicologia" },
+    { quote: "O Princípio da Descrença, quando aplicado com método, transforma curiosidade em investigação e experiência em responsabilidade.", autor: "Prof. R. Caldeira", role: "Co-fundador da Ectolab · Epicon" },
+    { quote: "A dinâmica interassistencial exige preparo, cooperação e atenção ao detalhe. É nesse conjunto que a pesquisa começa a ganhar forma.", autor: "Marta Olinda", role: "Voluntária · 16 anos de campo" },
   ];
   return (
     <section className="section depo">
@@ -587,7 +591,7 @@ function Newsletter() {
                 Receba <strong style={{ color: "var(--orange)", fontWeight: 700 }}>O Parafato</strong>, todo mês.
               </h2>
               <p className="lede" style={{ marginTop: 12, color: "rgba(255,255,255,0.78)" }}>
-                Resumo de pesquisa, calendário de DIPs, e um verbete novo por mês.
+                Resumo de pesquisa, calendário de dinâmicas, artigos e novos verbetes.
                 4.200 leitores em 47 países.
               </p>
             </div>

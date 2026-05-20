@@ -4,8 +4,8 @@ import { relative, resolve } from 'path';
 
 const SITE_URL = 'https://ectolab.vercel.app';
 const SITE_NAME = 'Ectolab';
-const HOME_TITLE = 'Ectolab: ectoplasmia e paracirurgia';
-const HOME_DESCRIPTION = 'Pesquisa laboratorial em ectoplasmia, paracirurgia e parafenômenos da consciência, com sede em Foz do Iguaçu desde 2003.';
+const HOME_TITLE = 'Ectolab: pesquisa em ectoplasmia';
+const HOME_DESCRIPTION = 'Pesquisa técnica em ectoplasmia, fenômenos ectoplásmicos, paracirurgia e interassistência, com sede em Foz do Iguaçu.';
 const DEFAULT_DESCRIPTION = 'Conheça a Ectolab: pesquisa, cursos e atividades sobre ectoplasmia, paracirurgia e parafenômenos da consciência.';
 
 function pagePath(filename) {
