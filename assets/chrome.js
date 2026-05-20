@@ -10,14 +10,12 @@
   const lang = (localStorage.getItem("ecto_lang") || "PT").toUpperCase();
   const active = document.body.getAttribute("data-active") || "";
 
-  // Resolução de caminho relativo de segurança
-  const path = location.pathname.replace(/\\/g, "/");
-  const inPages = /\/pages\//.test(path);
-  const P = inPages ? "../" : "";
+  // Usar rotas absolutas a partir da raiz para garantir consistência no carregamento de links e assets
+  const P = "/";
 
   // --- 2. Central de Navegação (Criação de Novas Páginas) ---
   // Para registrar uma NOVA PÁGINA no menu do site, basta inserir o objeto abaixo.
-  const logoPath = P + "assets/logo.webp";
+  const logoPath = "/assets/logo.webp";
   const logoHTML = `<img src="${logoPath}" alt="Ectolab" class="brand-img" />`;
 
   const navItems = [

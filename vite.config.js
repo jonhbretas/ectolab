@@ -28,7 +28,13 @@ export default defineConfig({
         cursoEctoplasmiaProtetiva: resolve(__dirname, 'pages/curso-ectoplasmia-protetiva.html'),
         curso: resolve(__dirname, 'pages/curso.html'),
         rede: resolve(__dirname, 'pages/rede.html'),
-        materiais: resolve(__dirname, 'pages/materiais.html')
+        materiais: resolve(__dirname, 'pages/materiais.html'),
+        trilha: resolve(__dirname, 'pages/trilha.html'),
+        historia: resolve(__dirname, 'pages/historia.html'),
+        contato: resolve(__dirname, 'pages/contato.html'),
+        conscienciologia: resolve(__dirname, 'pages/conscienciologia.html'),
+        fatosParafatos: resolve(__dirname, 'pages/fatos-parafatos.html'),
+        blog: resolve(__dirname, 'pages/blog.html')
       }
     }
   }
