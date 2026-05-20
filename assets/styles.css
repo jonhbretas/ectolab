@@ -444,6 +444,24 @@ p { margin: 0 0 1em; }
 }
 .btn-ghost:hover { background: var(--ink); color: var(--white); }
 
+.btn-parcerias {
+  background: linear-gradient(var(--paper), var(--paper)) padding-box,
+              linear-gradient(90deg, var(--teal-soft2), var(--orange-soft), var(--teal-soft2)) border-box;
+  border: 1px solid transparent;
+  color: var(--ink-2);
+  background-size: 200% 100%;
+  animation: btn-parcerias-spin 3s linear infinite;
+  box-shadow: none !important;
+}
+.btn-parcerias:hover {
+  background: linear-gradient(var(--white), var(--white)) padding-box,
+              linear-gradient(90deg, var(--teal), var(--orange), var(--teal)) border-box;
+  color: var(--ink);
+}
+@keyframes btn-parcerias-spin {
+  to { background-position: 200% center; }
+}
+
 .btn-text {
   display: inline-flex;
   gap: 8px;

@@ -131,7 +131,7 @@
           ${logoHTML}
         </a>
         <nav class="nav">${navHTML}</nav>
-        <a href="${P}pages/parcerias.html" class="btn btn-ghost btn-sm header-cta">Parcerias de Pesquisa</a>
+        <a href="${P}pages/parcerias.html" class="btn btn-parcerias btn-sm header-cta">Parcerias de Pesquisa</a>
         <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange btn-sm header-cta">Solicitar paracirurgia <span class="arrow">↗</span></a>
         <div class="lang-switch" role="group" aria-label="Idioma">
           <button data-lang="PT" class="${lang === "PT" ? "on" : ""}">PT</button>
