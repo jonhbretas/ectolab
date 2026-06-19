@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Painel de Pedidos de Paracirurgia — Ectolab</title>
+  <meta name="description" content="Dashboard público com dados dos pedidos de paracirurgia recebidos pela Ectolab." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <style>
+    .dashboard-frame {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      overflow: hidden;
+      box-shadow: 0 18px 50px -28px rgba(8,34,43,0.45);
+    }
+    .dashboard-frame iframe {
+      width: 100%;
+      min-height: 1200px;
+      display: block;
+      border: 0;
+    }
+    @media (max-width: 760px) {
+      .dashboard-frame iframe {
+        min-height: 900px;
+      }
+    }
+  </style>
+</head>
+<body data-active="paracirurgia">
+  <div id="__header"></div>
+
+  <main>
+    <section class="section bg-white" style="padding-top:80px;padding-bottom:64px">
+      <div class="wrap">
+        <div class="eyebrow"><span class="dot"></span>DADOS DA ASSISTÊNCIA</div>
+        <h1 class="h-display" style="margin-top:24px">Painel de Pedidos de Paracirurgia.</h1>
+        <p class="lede" style="margin-top:24px;max-width:760px">
+          Acompanhe os dados consolidados dos pedidos de paracirurgia recebidos pela Ectolab. O painel é atualizado a partir da base de registros utilizada para organização e análise da assistência.
+        </p>
+
+        <div class="dashboard-frame" style="margin-top:48px">
+          <iframe
+            width="1200"
+            height="1200"
+            src="https://lookerstudio.google.com/embed/reporting/835925de-b80d-404c-b9c5-c01895a0ca10/page/kNHRD"
+            allowfullscreen
+            sandbox="allow-storage-access-by-user-activation allow-scripts allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+            title="Painel de pedidos de paracirurgia">
+          </iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="__footer"></div>
+
+  <script type="module" src="/assets/chrome.js"></script>
+</body>
+</html>

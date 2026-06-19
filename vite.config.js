@@ -165,6 +165,7 @@ export default defineConfig({
         cursoEctoplasmiaProtetiva: resolve(__dirname, 'pages/curso-ectoplasmia-protetiva.html'),
         curso: resolve(__dirname, 'pages/curso.html'),
         rede: resolve(__dirname, 'pages/rede.html'),
+        painelPedidosParacirurgia: resolve(__dirname, 'pages/painel-pedidos-paracirurgia.html'),
         materiais: resolve(__dirname, 'pages/materiais.html'),
         trilha: resolve(__dirname, 'pages/trilha.html'),
         historia: resolve(__dirname, 'pages/historia.html'),
