@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+﻿import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 
 /* ============================================================
@@ -411,51 +411,118 @@ function CursosDestaque() {
   );
 }
 
+function ProximosEventos() {
+  const eventos = [
+    { dia: "22", mes: "JUN", titulo: "Tertúlia — Ectoplasma e Mediunidade Brasileira", tipo: "TERTÚLIA · GRATUITO", local: "Online · Zoom + YouTube", href: "pages/atividades.html" },
+    { dia: "05", mes: "JUL", titulo: "IECTO — Imersão em Ectoplasmia · Turma 2026.2", tipo: "CURSO · IMERSÃO", local: "Sede Foz · Laboratório 03", href: "pages/curso-imersao.html" },
+    { dia: "11", mes: "JUL", titulo: "Tertúlia — O Parácorpo: anatomia e função na paracirurgia", tipo: "TERTÚLIA · GRATUITO", local: "Online · Zoom + YouTube", href: "pages/atividades.html" },
+    { dia: "05", mes: "AGO", titulo: "III Simpósio Ectolab — Paracirurgia e Saúde Integrativa", tipo: "SIMPÓSIO · INTERNACIONAL", local: "Sede Foz + Online · 3 dias", href: "pages/atividades.html" },
+  ];
+  return (
+    <section className="prox-eventos">
+      <div className="wrap">
+        <div className="prox-eventos__head">
+          <div className="eyebrow"><span className="dot"></span>PRÓXIMAS ATIVIDADES</div>
+          <a href="pages/agenda.html" className="link-arrow">Ver agenda completa →</a>
+        </div>
+        <div className="prox-eventos__rail">
+          {eventos.map((e, i) => (
+            <a href={e.href} key={i} className="prox-evento">
+              <div className="prox-evento__date">
+                <strong>{e.dia}</strong>
+                <span>{e.mes}</span>
+              </div>
+              <div className="prox-evento__body">
+                <span className="specimen prox-evento__tipo">{e.tipo}</span>
+                <span className="h4 prox-evento__titulo">{e.titulo}</span>
+                <span className="prox-evento__local">{e.local}</span>
+              </div>
+              <span className="agenda__arr">→</span>
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function EventosBlog() {
+  const showEventos = false;
   const eventos = [
     { data: "21 JUN", titulo: "DIP — Dinâmica Interassistencial da Paracirurgia · São Paulo", local: "Sede SP · Vila Mariana", tipo: "ATIVIDADE GRATUITA" },
     { data: "28 JUN", titulo: "DIP — Dinâmica Interassistencial · Curitiba", local: "Sede Curitiba · Centro", tipo: "ATIVIDADE GRATUITA" },
     { data: "05 JUL", titulo: "Imersão em Ectoplasmia 2027 — turma única", local: "Foz do Iguaçu · ambiente pesquisístico", tipo: "CURSO INTENSIVO" },
   ];
   const posts = [
-    { tag: "ECTOPLASMIA", titulo: "Ectoplasmia aplicada: critérios para observação e registro.", autor: "ECTOLAB", min: "8 min" },
-    { tag: "PESQUISA", titulo: "Fenômenos ectoplásmicos: como organizar dados de campo.", autor: "Dr. André Salgado", min: "12 min" },
-    { tag: "TÉCNICAS", titulo: "Paracirurgia e interassistência: limites, método e responsabilidade.", autor: "ECTOLAB", min: "10 min" },
+    {
+      tag: "AUTOPESQUISA",
+      titulo: "A Técnica Arco Voltaico Craniochacral e Paracirurgia",
+      autor: "ECTOLAB",
+      data: "26 OUT 2025",
+      href: "/tecnica-arco-voltaico-craniochacral-e-paracirurgia/",
+    },
+    {
+      tag: "AUTOQUALIFICAÇÃO",
+      titulo: "Qualificação dos pensenes do ectoplasta",
+      autor: "ECTOLAB",
+      data: "22 SET 2025",
+      href: "/qualificacao-dos-pensenes-do-ectoplasta/",
+    },
+    {
+      tag: "SAÚDE ENERGÉTICA",
+      titulo: "Saúde Energética: O que é? Como desenvolver?",
+      autor: "ECTOLAB",
+      data: "22 JUN 2025",
+      href: "/saude-energetica-o-que-e-como-desenvolver/",
+    },
+    {
+      tag: "PARACIRURGIA",
+      titulo: "Paracirurgia e Ectoplasmia: qual a relação com o ECTOLAB?",
+      autor: "ECTOLAB",
+      data: "01 MAI 2025",
+      href: "/paracirurgia-ectoplasmia/",
+    },
   ];
   return (
     <section className="section eventos-blog">
       <div className="wrap">
-        <div className="grid g2 gap-48">
-          <div>
-            <div className="eyebrow"><span className="dot"></span>PRÓXIMAS DINÂMICAS</div>
-            <h2 className="h2" style={{ marginTop: 12 }}>Agenda aberta.</h2>
-            <ul className="agenda">
-              {eventos.map((e, i) => (
-                <li key={i}>
-                  <span className="agenda__date mono">{e.data}</span>
-                  <span className="col" style={{ flex: 1, gap: 4 }}>
-                    <span className="specimen" style={{ color: "var(--teal)" }}>{e.tipo}</span>
-                    <span className="h4">{e.titulo}</span>
-                    <span className="muted" style={{ fontSize: 13 }}>{e.local}</span>
-                  </span>
-                  <span className="agenda__arr">→</span>
-                </li>
-              ))}
-            </ul>
-            <a href="pages/atividades.html" className="link-arrow" style={{ marginTop: 24, display: "inline-flex" }}>
-              Agenda completa →
-            </a>
-          </div>
+        <div className={showEventos ? "grid g2 gap-48" : "blog-home-panel"}>
+          {showEventos && (
+            <div>
+              <div className="eyebrow"><span className="dot"></span>PRÓXIMAS DINÂMICAS</div>
+              <h2 className="h2" style={{ marginTop: 12 }}>Agenda aberta.</h2>
+              <ul className="agenda">
+                {eventos.map((e, i) => (
+                  <li key={i}>
+                    <span className="agenda__date mono">{e.data}</span>
+                    <span className="col" style={{ flex: 1, gap: 4 }}>
+                      <span className="specimen" style={{ color: "var(--teal)" }}>{e.tipo}</span>
+                      <span className="h4">{e.titulo}</span>
+                      <span className="muted" style={{ fontSize: 13 }}>{e.local}</span>
+                    </span>
+                    <span className="agenda__arr">→</span>
+                  </li>
+                ))}
+              </ul>
+              <a href="pages/atividades.html" className="link-arrow" style={{ marginTop: 24, display: "inline-flex" }}>
+                Agenda completa →
+              </a>
+            </div>
+          )}
           <div>
             <div className="eyebrow"><span className="dot"></span>DO BLOG</div>
-            <h2 className="h2" style={{ marginTop: 12 }}>Para entender o tema.</h2>
+            <h2 className="h2" style={{ marginTop: 12 }}>Últimos artigos publicados.</h2>
+            <p className="lede" style={{ marginTop: 12, maxWidth: 720 }}>
+              Conteúdos do acervo real da Ectolab sobre ectoplasmia, paracirurgia,
+              saúde energética e autopesquisa.
+            </p>
             <ul className="agenda agenda--blog">
               {posts.map((p, i) => (
-                <li key={i}>
+                <li key={i} onClick={() => { window.location.href = p.href; }}>
                   <span className="tag" style={{ marginRight: 12, flex: "none" }}>{p.tag}</span>
                   <span className="col" style={{ flex: 1, gap: 4 }}>
                     <span className="h4">{p.titulo}</span>
-                    <span className="muted" style={{ fontSize: 13 }}>{p.autor} &middot; {p.min} de leitura</span>
+                    <span className="muted" style={{ fontSize: 13 }}>{p.autor} &middot; {p.data}</span>
                   </span>
                   <span className="agenda__arr">→</span>
                 </li>
@@ -485,7 +552,7 @@ function Glossario() {
           <div>
             <div className="eyebrow"><span className="dot"></span>GLOSSÁRIO RÁPIDO</div>
             <h2 className="h1" style={{ marginTop: 16, maxWidth: 700 }}>
-              Os 4 termos que abrem todas as portas.
+              Os 4 termos que adentram a especialidade.
             </h2>
           </div>
         </div>
@@ -501,7 +568,7 @@ function Glossario() {
         </div>
         <div style={{ marginTop: 40, textAlign: "center" }}>
           <a href="pages/conscienciologia.html" className="btn btn-ghost">
-            Glossário completo (47 verbetes) →
+            Saiba mais →
           </a>
         </div>
       </div>
@@ -652,6 +719,7 @@ function App() {
     <>
       <Hero />
       <Marquee />
+      <ProximosEventos />
       <PrincipioDescrenca />
       <OQueFazemos />
       <Manifesto />
@@ -701,3 +769,4 @@ function TweaksPanel({ hero, setHero, onClose }) {
 }
 
 ReactDOM.createRoot(document.getElementById("app")).render(<App />);
+

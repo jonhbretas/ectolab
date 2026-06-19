@@ -433,6 +433,7 @@
   border-bottom: 1px solid var(--line);
   background: var(--paper);
 }
+.post-hero .breadcrumb { text-align: center; }
 .post-hero h1 { max-width: 880px; margin: 24px auto 24px; text-align: center; }
 .post-meta {
   display: flex;
@@ -627,6 +628,149 @@
 .pessoa .specimen { color: var(--blue); }
 .pessoa p { font-size: 13.5px; color: var(--ink-2); margin: 0; line-height: 1.55; }
 @media (max-width: 900px) { .equipe-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ============================================================
+   AGENDA — Timeline page
+   ============================================================ */
+.agenda-month-block {
+  margin-bottom: 56px;
+}
+.agenda-month-head {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding-bottom: 14px;
+  border-bottom: 2px solid var(--ink);
+  margin-bottom: 0;
+}
+.agenda-month-label {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.agenda-month-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.agenda-timeline {
+  position: relative;
+}
+.agenda-rail {
+  position: absolute;
+  left: 25px;
+  top: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--line);
+  pointer-events: none;
+}
+.agenda-row {
+  display: grid;
+  grid-template-columns: 52px 1fr 180px;
+  gap: 28px;
+  align-items: start;
+  padding: 24px 0;
+  border-bottom: 1px dashed var(--line);
+  text-decoration: none;
+  color: inherit;
+  position: relative;
+  transition: padding-left 0.2s;
+}
+.agenda-row:hover { padding-left: 10px; }
+.agenda-row:hover .link-arrow { color: var(--blue); }
+
+.agenda-row__date {
+  width: 52px;
+  text-align: center;
+  flex: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--gold);
+  border: 1px solid var(--gold-2);
+  border-radius: var(--r-sm);
+  padding: 8px 0;
+  box-shadow: 0 4px 12px -4px rgba(240,160,48,0.4);
+  position: relative;
+  z-index: 2;
+}
+.agenda-row__date strong {
+  font-family: var(--display);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--ink);
+}
+.agenda-row__date span {
+  font-family: var(--mono);
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-2);
+  margin-top: 3px;
+}
+.agenda-row__body {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  min-width: 0;
+  padding-top: 2px;
+}
+.agenda-row__top {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.agenda-row__titulo {
+  font-family: var(--display);
+  font-size: 19px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 0;
+}
+.agenda-row__meta {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  font-family: var(--mono);
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  color: var(--ink-3);
+}
+.agenda-row__side {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+  padding-top: 2px;
+}
+.agenda-row__price {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--blue);
+  letter-spacing: 0.04em;
+}
+.agenda-row__sub {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--ink-3);
+  letter-spacing: 0.04em;
+  margin-top: -4px;
+}
+@media (max-width: 900px) {
+  .agenda-rail { display: none; }
+  .agenda-row { grid-template-columns: 52px 1fr; gap: 16px; }
+  .agenda-row__side { display: none; }
+  .agenda-row__titulo { font-size: 17px; }
+}
 
 /* ============================================================
    HISTÓRIA — Timeline
