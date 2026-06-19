@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="loading-site no-js">
+<head>
+	<meta charset="UTF-8" />
+	<link rel="profile" href="http://gmpg.org/xfn/11" />
+	<link rel="pingback" href="https://ectolab.org/xmlrpc.php" />
+
+	<script>(function(html){html.className = html.className.replace(/\bno-js\b/,'js')})(document.documentElement);</script>
+<meta name='robots' content='noindex, follow' />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<!-- This site is optimized with the Yoast SEO Premium plugin v23.9 (Yoast SEO v26.4) - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>Página não encontrada - Ectolab</title>
+	<meta property="og:locale" content="pt_BR" />
+	<meta property="og:title" content="Página não encontrada - Ectolab" />
+	<meta property="og:site_name" content="Ectolab" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://ectolab.org/#website","url":"https://ectolab.org/","name":"Ectolab","description":"Associação Internacional de Pesquisa Laboratorial em Ectoplasmia e Paracirurgia","publisher":{"@id":"https://ectolab.org/#organization"},"potentialAction":[{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://ectolab.org/?s={search_term_string}"},"query-input":{"@type":"PropertyValueSpecification","valueRequired":true,"valueName":"search_term_string"}}],"inLanguage":"pt-BR"},{"@type":"Organization","@id":"https://ectolab.org/#organization","name":"Associação Internacional de Pesquisa Laboratorial em Ectoplasmia e Paracirurgia","url":"https://ectolab.org/","logo":{"@type":"ImageObject","inLanguage":"pt-BR","@id":"https://ectolab.org/#/schema/logo/image/","url":"https://ectolab.org/wp-content/uploads/2023/02/logo-ectolab.png","contentUrl":"https://ectolab.org/wp-content/uploads/2023/02/logo-ectolab.png","width":420,"height":121,"caption":"Associação Internacional de Pesquisa Laboratorial em Ectoplasmia e Paracirurgia"},"image":{"@id":"https://ectolab.org/#/schema/logo/image/"},"sameAs":["https://www.facebook.com/ectolab/","https://www.instagram.com/ectolab/"]}]}</script>
+	<!-- / Yoast SEO Premium plugin. -->
+
+
+<link rel='prefetch' href='https://ectolab.org/wp-content/themes/flatsome/assets/js/flatsome.js?ver=e2eddd6c228105dac048' />
+<link rel='prefetch' href='https://ectolab.org/wp-content/themes/flatsome/assets/js/chunk.slider.js?ver=3.20.3' />
+<link rel='prefetch' href='https://ectolab.org/wp-content/themes/flatsome/assets/js/chunk.popups.js?ver=3.20.3' />
+<link rel='prefetch' href='https://ectolab.org/wp-content/themes/flatsome/assets/js/chunk.tooltips.js?ver=3.20.3' />
+<link rel='prefetch' href='https://ectolab.org/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=1c9be63d628ff7c3ff4c' />
+<link rel="alternate" type="application/rss+xml" title="Feed para Ectolab &raquo;" href="https://ectolab.org/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Feed de comentários para Ectolab &raquo;" href="https://ectolab.org/comments/feed/" />
+<style id="wp-img-auto-sizes-contain-inline-css">
+img:is([sizes=auto i],[sizes^="auto," i]){contain-intrinsic-size:3000px 1500px}
+/*# sourceURL=wp-img-auto-sizes-contain-inline-css */
+</style>
+
+<link rel='stylesheet' id='wc-blocks-integration-css' href='https://ectolab.org/wp-content/plugins/woocommerce-subscriptions/vendor/woocommerce/subscriptions-core/build/index.css?ver=39fa8b.0' media='all' />
+<style id="wp-emoji-styles-inline-css">
+
+	img.wp-smiley, img.emoji {
+		display: inline !important;
+		border: none !important;
+		box-shadow: none !important;
+		height: 1em !important;
+		width: 1em !important;
+		margin: 0 0.07em !important;
+		vertical-align: -0.1em !important;
+		background: none !important;
+		padding: 0 !important;
+	}
+/*# sourceURL=wp-emoji-styles-inline-css */
+</style>
+<style id="wp-block-library-inline-css">
+:root{--wp-block-synced-color:#7a00df;--wp-block-synced-color--rgb:122,0,223;--wp-bound-block-color:var(--wp-block-synced-color);--wp-editor-canvas-background:#ddd;--wp-admin-theme-color:#007cba;--wp-admin-theme-color--rgb:0,124,186;--wp-admin-theme-color-darker-10:#006ba1;--wp-admin-theme-color-darker-10--rgb:0,107,160.5;--wp-admin-theme-color-darker-20:#005a87;--wp-admin-theme-color-darker-20--rgb:0,90,135;--wp-admin-border-width-focus:2px}@media (min-resolution:192dpi){:root{--wp-admin-border-width-focus:1.5px}}.wp-element-button{cursor:pointer}:root .has-very-light-gray-background-color{background-color:#eee}:root .has-very-dark-gray-background-color{background-color:#313131}:root .has-very-light-gray-color{color:#eee}:root .has-very-dark-gray-color{color:#313131}:root .has-vivid-green-cyan-to-vivid-cyan-blue-gradient-background{background:linear-gradient(135deg,#00d084,#0693e3)}:root .has-purple-crush-gradient-background{background:linear-gradient(135deg,#34e2e4,#4721fb 50%,#ab1dfe)}:root .has-hazy-dawn-gradient-background{background:linear-gradient(135deg,#faaca8,#dad0ec)}:root .has-subdued-olive-gradient-background{background:linear-gradient(135deg,#fafae1,#67a671)}:root .has-atomic-cream-gradient-background{background:linear-gradient(135deg,#fdd79a,#004a59)}:root .has-nightshade-gradient-background{background:linear-gradient(135deg,#330968,#31cdcf)}:root .has-midnight-gradient-background{background:linear-gradient(135deg,#020381,#2874fc)}:root{--wp--preset--font-size--normal:16px;--wp--preset--font-size--huge:42px}.has-regular-font-size{font-size:1em}.has-larger-font-size{font-size:2.625em}.has-normal-font-size{font-size:var(--wp--preset--font-size--normal)}.has-huge-font-size{font-size:var(--wp--preset--font-size--huge)}:root .has-text-align-center{text-align:center}:root .has-text-align-left{text-align:left}:root .has-text-align-right{text-align:right}.has-fit-text{white-space:nowrap!important}#end-resizable-editor-section{display:none}.aligncenter{clear:both}.items-justified-left{justify-content:flex-start}.items-justified-center{justify-content:center}.items-justified-right{justify-content:flex-end}.items-justified-space-between{justify-content:space-between}.screen-reader-text{word-wrap:normal!important;border:0;clip-path:inset(50%);height:1px;margin:-1px;overflow:hidden;padding:0;position:absolute;width:1px}.screen-reader-text:focus{background-color:#ddd;clip-path:none;color:#444;display:block;font-size:1em;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}html :where(.has-border-color){border-style:solid}html :where([style*=border-color]){border-style:solid}html :where([style*=border-top-color]){border-top-style:solid}html :where([style*=border-right-color]){border-right-style:solid}html :where([style*=border-bottom-color]){border-bottom-style:solid}html :where([style*=border-left-color]){border-left-style:solid}html :where([style*=border-width]){border-style:solid}html :where([style*=border-top-width]){border-top-style:solid}html :where([style*=border-right-width]){border-right-style:solid}html :where([style*=border-bottom-width]){border-bottom-style:solid}html :where([style*=border-left-width]){border-left-style:solid}html :where(img[class*=wp-image-]){height:auto;max-width:100%}:where(figure){margin:0 0 1em}html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:var(--wp-admin--admin-bar--height,0px)}@media screen and (max-width:600px){html :where(.is-position-sticky){--wp-admin--admin-bar--position-offset:0px}}
+
+/*# sourceURL=/wp-includes/css/dist/block-library/common.min.css */
+</style>
+
+<link rel='stylesheet' id='wc-blocks-style-css' href='https://ectolab.org/wp-content/plugins/woocommerce/assets/client/blocks/wc-blocks.css?ver=wc-10.8.1' media='all' />
+
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--primary: #446084;--wp--preset--color--secondary: #C05530;--wp--preset--color--success: #627D47;--wp--preset--color--alert: #b20000;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){margin-left: auto !important;margin-right: auto !important;}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}a:where(:not(.wp-element-button)){text-decoration: none;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-success-color{color: var(--wp--preset--color--success) !important;}.has-alert-color{color: var(--wp--preset--color--alert) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-success-background-color{background-color: var(--wp--preset--color--success) !important;}.has-alert-background-color{background-color: var(--wp--preset--color--alert) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-success-border-color{border-color: var(--wp--preset--color--success) !important;}.has-alert-border-color{border-color: var(--wp--preset--color--alert) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='contact-form-7-css' href='https://ectolab.org/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=6.1.3' media='all' />
+<link rel='stylesheet' id='wpa-css-css' href='https://ectolab.org/wp-content/plugins/honeypot/includes/css/wpa.css?ver=2.3.04' media='all' />
+<style id="woocommerce-inline-inline-css">
+.woocommerce form .form-row .required { visibility: visible; }
+/*# sourceURL=woocommerce-inline-inline-css */
+</style>
+<link rel='stylesheet' id='woo-checkout-for-digital-goods-css' href='https://ectolab.org/wp-content/plugins/woo-checkout-for-digital-goods/public/css/woo-checkout-for-digital-goods-public.css?ver=3.8.3' media='all' />
+<link rel='stylesheet' id='elementor-frontend-css' href='https://ectolab.org/wp-content/plugins/elementor/assets/css/frontend.min.css?ver=3.33.2' media='all' />
+<style id="elementor-frontend-inline-css">
+.elementor-kit-2037{--e-global-color-primary:#6EC1E4;--e-global-color-secondary:#54595F;--e-global-color-text:#7A7A7A;--e-global-color-accent:#61CE70;--e-global-typography-primary-font-family:"Roboto";--e-global-typography-primary-font-weight:600;--e-global-typography-secondary-font-family:"Roboto Slab";--e-global-typography-secondary-font-weight:400;--e-global-typography-text-font-family:"Roboto";--e-global-typography-text-font-weight:400;--e-global-typography-accent-font-family:"Roboto";--e-global-typography-accent-font-weight:500;}.elementor-kit-2037 e-page-transition{background-color:#FFBC7D;}.elementor-section.elementor-section-boxed > .elementor-container{max-width:1140px;}.e-con{--container-max-width:1140px;}.elementor-widget:not(:last-child){margin-block-end:20px;}.elementor-element{--widgets-spacing:20px 20px;--widgets-spacing-row:20px;--widgets-spacing-column:20px;}{}h1.entry-title{display:var(--page-title-display);}@media(max-width:1024px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:1024px;}.e-con{--container-max-width:1024px;}}@media(max-width:767px){.elementor-section.elementor-section-boxed > .elementor-container{max-width:767px;}.e-con{--container-max-width:767px;}}
+/*# sourceURL=elementor-frontend-inline-css */
+</style>
+<link rel='stylesheet' id='flatsome-main-css' href='https://ectolab.org/wp-content/themes/flatsome/assets/css/flatsome.css?ver=3.20.3' media='all' />
+<style id="flatsome-main-inline-css">
+@font-face {
+				font-family: "fl-icons";
+				font-display: block;
+				src: url(https://ectolab.org/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot?v=3.20.3);
+				src:
+					url(https://ectolab.org/wp-content/themes/flatsome/assets/css/icons/fl-icons.eot#iefix?v=3.20.3) format("embedded-opentype"),
+					url(https://ectolab.org/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff2?v=3.20.3) format("woff2"),
+					url(https://ectolab.org/wp-content/themes/flatsome/assets/css/icons/fl-icons.ttf?v=3.20.3) format("truetype"),
+					url(https://ectolab.org/wp-content/themes/flatsome/assets/css/icons/fl-icons.woff?v=3.20.3) format("woff"),
+					url(https://ectolab.org/wp-content/themes/flatsome/assets/css/icons/fl-icons.svg?v=3.20.3#fl-icons) format("svg");
+			}
+/*# sourceURL=flatsome-main-inline-css */
+</style>
+<link rel='stylesheet' id='flatsome-shop-css' href='https://ectolab.org/wp-content/themes/flatsome/assets/css/flatsome-shop.css?ver=3.20.3' media='all' />
+<link rel='stylesheet' id='flatsome-style-css' href='https://ectolab.org/wp-content/themes/flatsome/style.css?ver=3.20.3' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-roboto-css' href='https://ectolab.org/wp-content/uploads/elementor/google-fonts/css/roboto.css?ver=1752066268' media='all' />
+<link rel='stylesheet' id='elementor-gf-local-robotoslab-css' href='https://ectolab.org/wp-content/uploads/elementor/google-fonts/css/robotoslab.css?ver=1752066272' media='all' />
+<script id="jquery-core-js" src="https://ectolab.org/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://ectolab.org/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script data-wp-strategy="defer" id="wc-jquery-blockui-js" src="https://ectolab.org/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.10.8.1"></script>
+<script id="wc-add-to-cart-js-extra">
+var wc_add_to_cart_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_view_cart":"Ver carrinho","cart_url":"https://ectolab.org/cart/","is_cart":"","cart_redirect_after_add":"no"};
+//# sourceURL=wc-add-to-cart-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="wc-add-to-cart-js" src="https://ectolab.org/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=4b733b"></script>
+<script data-wp-strategy="defer" id="wc-js-cookie-js" src="https://ectolab.org/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.10.8.1"></script>
+<script id="woo-checkout-for-digital-goods-js" src="https://ectolab.org/wp-content/plugins/woo-checkout-for-digital-goods/public/js/woo-checkout-for-digital-goods-public.js?ver=3.8.3"></script>
+<link rel="https://api.w.org/" href="https://ectolab.org/wp-json/" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://ectolab.org/xmlrpc.php?rsd" />
+
+	<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11345251023">
+</script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-11345251023');
+</script>
+<meta name="redi-version" content="1.2.7" /><link rel="icon" href="https://ectolab.org/wp-content/uploads/2023/02/Design-sem-nome-20.png" sizes="32x32" />
+<link rel="icon" href="https://ectolab.org/wp-content/uploads/2023/02/Design-sem-nome-20.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://ectolab.org/wp-content/uploads/2023/02/Design-sem-nome-20.png" />
+<meta name="msapplication-TileImage" content="https://ectolab.org/wp-content/uploads/2023/02/Design-sem-nome-20.png" />
+<style id="custom-css" type="text/css">:root {--primary-color: #446084;--fs-color-primary: #446084;--fs-color-secondary: #C05530;--fs-color-success: #627D47;--fs-color-alert: #b20000;--fs-color-base: #4a4a4a;--fs-experimental-link-color: #334862;--fs-experimental-link-color-hover: #111;}.tooltipster-base {--tooltip-color: #fff;--tooltip-bg-color: #000;}.off-canvas-right .mfp-content, .off-canvas-left .mfp-content {--drawer-width: 300px;}.off-canvas .mfp-content.off-canvas-cart {--drawer-width: 360px;}.header-main{height: 104px}#logo img{max-height: 104px}#logo{width:220px;}.header-bottom{min-height: 50px}.header-top{min-height: 60px}.transparent .header-main{height: 30px}.transparent #logo img{max-height: 30px}.has-transparent + .page-title:first-of-type,.has-transparent + #main > .page-title,.has-transparent + #main > div > .page-title,.has-transparent + #main .page-header-wrapper:first-of-type .page-title{padding-top: 110px;}.header.show-on-scroll,.stuck .header-main{height:70px!important}.stuck #logo img{max-height: 70px!important}.search-form{ width: 100%;}.header-bg-color {background-color: rgba(255,255,255,0.9)}.header-bottom {background-color: #17566b}.top-bar-nav > li > a{line-height: 16px }.header-main .nav > li > a{line-height: 16px }.header-bottom-nav > li > a{line-height: 16px }@media (max-width: 549px) {.header-main{height: 60px}#logo img{max-height: 60px}}.header-top{background-color:rgba(224,224,224,0.79)!important;}body{font-family: Lato, sans-serif;}body {font-weight: 400;font-style: normal;}.nav > li > a {font-family: Lato, sans-serif;}.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-family: Lato, sans-serif;}.nav > li > a,.mobile-sidebar-levels-2 .nav > li > ul > li > a {font-weight: 700;font-style: normal;}h1,h2,h3,h4,h5,h6,.heading-font, .off-canvas-center .nav-sidebar.nav-vertical > li > a{font-family: Lato, sans-serif;}h1,h2,h3,h4,h5,h6,.heading-font,.banner h1,.banner h2 {font-weight: 700;font-style: normal;}.alt-font{font-family: "Dancing Script", sans-serif;}.alt-font {font-weight: 400!important;font-style: normal!important;}.header:not(.transparent) .header-bottom-nav.nav > li > a{color: #ffffff;}@media screen and (min-width: 550px){.products .box-vertical .box-image{min-width: 300px!important;width: 300px!important;}}.footer-2{background-color: #17566b}.nav-vertical-fly-out > li + li {border-top-width: 1px; border-top-style: solid;}.label-new.menu-item > a:after{content:"Novo";}.label-hot.menu-item > a:after{content:"Quente";}.label-sale.menu-item > a:after{content:"Promoção";}.label-popular.menu-item > a:after{content:"Popular";}</style><style id="kirki-inline-styles">/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://ectolab.org/wp-content/fonts/lato/S6uyw4BMUTPHjxAwXjeu.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://ectolab.org/wp-content/fonts/lato/S6uyw4BMUTPHjx4wXg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://ectolab.org/wp-content/fonts/lato/S6u9w4BMUTPHh6UVSwaPGR_p.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Lato';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url(https://ectolab.org/wp-content/fonts/lato/S6u9w4BMUTPHh6UVSwiPGQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}/* vietnamese */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://ectolab.org/wp-content/fonts/dancing-script/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSo3Rep8ltA.woff2) format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://ectolab.org/wp-content/fonts/dancing-script/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSo3ROp8ltA.woff2) format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Dancing Script';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(https://ectolab.org/wp-content/fonts/dancing-script/If2cXTr6YS-zF4S-kcSWSVi_sxjsohD9F50Ruu7BMSo3Sup8.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}</style><link rel='stylesheet' id='wc-stripe-blocks-checkout-style-css' href='https://ectolab.org/wp-content/plugins/woocommerce-gateway-stripe/build/upe-blocks.css?ver=7a015a6f0fabd17529b6' media='all' />
+
+</head>
+
+<body class="error404 wp-theme-flatsome theme-flatsome woocommerce-no-js header-shadow lightbox nav-dropdown-has-arrow nav-dropdown-has-shadow nav-dropdown-has-border elementor-default elementor-kit-2037">
+
+
+<a class="skip-link screen-reader-text" href="#main">Skip to content</a>
+
+<div id="wrapper">
+
+	
+	<header id="header" class="header ">
+		<div class="header-wrapper">
+			<div id="top-bar" class="header-top hide-for-sticky">
+    <div class="flex-row container">
+      <div class="flex-col hide-for-medium flex-left">
+          <ul class="nav nav-left medium-nav-center nav-small  nav-divided">
+              <li class="header-contact-wrapper">
+		<ul id="header-contact" class="nav medium-nav-center nav-divided nav-uppercase header-contact">
+					<li>
+			  <a target="_blank" rel="noopener" href="https://maps.google.com/?q=Av Felipe Wandscheer, 6.200, Sala 12 – Discernimentum" title="Av Felipe Wandscheer, 6.200, Sala 12 – Discernimentum" class="tooltip">
+			  	 <i class="icon-map-pin-fill" aria-hidden="true" style="font-size:16px;"></i>			     <span>
+			     	Foz do Iguaçu			     </span>
+			  </a>
+			</li>
+			
+						<li>
+			  <a href="mailto:ectolab@ectolab.org" class="tooltip" title="ectolab@ectolab.org">
+				  <i class="icon-envelop" aria-hidden="true" style="font-size:16px;"></i>			       <span>
+			       	Email			       </span>
+			  </a>
+			</li>
+			
+			
+						<li>
+			  <a href="tel:Telefone" class="tooltip" title="Telefone">
+			     <i class="icon-phone" aria-hidden="true" style="font-size:16px;"></i>			      <span>Telefone</span>
+			  </a>
+			</li>
+			
+				</ul>
+</li>
+          </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-center">
+          <ul class="nav nav-center nav-small  nav-divided">
+                        </ul>
+      </div>
+
+      <div class="flex-col hide-for-medium flex-right">
+         <ul class="nav top-bar-nav nav-right nav-small  nav-divided">
+              <li class="html header-button-1">
+	<div class="header-button">
+		<a href="https://ectolab.org/pedido-de-tenepes/" class="button primary is-medium box-shadow-1 box-shadow-2-hover" style="border-radius:25px;">
+		<span>Tenepes</span>
+	</a>
+	</div>
+</li>
+<li class="html header-button-2">
+	<div class="header-button">
+		<a href="https://ectolab.org/solicitacao-de-paracirurgia/" class="button alert is-medium box-shadow-1 box-shadow-2-hover" style="border-radius:25px;">
+		<span>Paracirurgia</span>
+	</a>
+	</div>
+</li>
+          </ul>
+      </div>
+
+            <div class="flex-col show-for-medium flex-grow">
+          <ul class="nav nav-center nav-small mobile-nav  nav-divided">
+              <li class="html header-button-1">
+	<div class="header-button">
+		<a href="https://ectolab.org/pedido-de-tenepes/" class="button primary is-medium box-shadow-1 box-shadow-2-hover" style="border-radius:25px;">
+		<span>Tenepes</span>
+	</a>
+	</div>
+</li>
+<li class="html header-button-2">
+	<div class="header-button">
+		<a href="https://ectolab.org/solicitacao-de-paracirurgia/" class="button alert is-medium box-shadow-1 box-shadow-2-hover" style="border-radius:25px;">
+		<span>Paracirurgia</span>
+	</a>
+	</div>
+</li>
+          </ul>
+      </div>
+      
+    </div>
+</div>
+<div id="masthead" class="header-main hide-for-sticky nav-dark">
+      <div class="header-inner flex-row container logo-left medium-logo-center" role="navigation">
+
+          <!-- Logo -->
+          <div id="logo" class="flex-col logo">
+            
+<!-- Header logo -->
+<a href="https://ectolab.org/" title="Ectolab - Associação Internacional de Pesquisa Laboratorial em Ectoplasmia e Paracirurgia" rel="home">
+		<img fetchpriority="high" width="420" height="121" src="https://ectolab.org/wp-content/uploads/2023/02/logo-ectolab-1.png" class="header_logo header-logo" alt="Ectolab"/><img  width="420" height="121" src="https://ectolab.org/wp-content/uploads/2023/02/logo-ectolab-1.png" class="header-logo-dark" alt="Ectolab"/></a>
+          </div>
+
+          <!-- Mobile Left Elements -->
+          <div class="flex-col show-for-medium flex-left">
+            <ul class="mobile-nav nav nav-left ">
+              <li class="nav-icon has-icon">
+	<div class="header-button">		<a href="#" class="icon primary button circle is-small" data-open="#main-menu" data-pos="left" data-bg="main-menu-overlay" role="button" aria-label="Menu" aria-controls="main-menu" aria-expanded="false" aria-haspopup="dialog" data-flatsome-role-button>
+			<i class="icon-menu" aria-hidden="true"></i>					</a>
+	 </div> </li>
+            </ul>
+          </div>
+
+          <!-- Left Elements -->
+          <div class="flex-col hide-for-medium flex-left
+            flex-grow">
+            <ul class="header-nav header-nav-main nav nav-left  nav-tabs nav-uppercase" >
+                          </ul>
+          </div>
+
+          <!-- Right Elements -->
+          <div class="flex-col hide-for-medium flex-right">
+            <ul class="header-nav header-nav-main nav nav-right  nav-tabs nav-uppercase">
+              <li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative is-normal"><form role="search" method="get" class="searchform" action="https://ectolab.org/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-0">Pesquisar por:</label>
+			<input type="search" id="woocommerce-product-search-field-0" class="search-field mb-0" placeholder="O que está procurando?" value="" name="s" />
+			<input type="hidden" name="post_type" value="product" />
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Pesquisar" class="ux-search-submit submit-button secondary button  icon mb-0" aria-label="Enviar">
+				<i class="icon-search" aria-hidden="true"></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li>
+            </ul>
+          </div>
+
+          <!-- Mobile Right Elements -->
+          <div class="flex-col show-for-medium flex-right">
+            <ul class="mobile-nav nav nav-right ">
+              <li class="cart-item has-icon">
+
+<div class="header-button">
+		<a href="https://ectolab.org/cart/" class="header-cart-link nav-top-link icon primary button circle is-small off-canvas-toggle" title="Carrinho" aria-label="Ver carrinho" aria-expanded="false" aria-haspopup="dialog" role="button" data-open="#cart-popup" data-class="off-canvas-cart" data-pos="right" aria-controls="cart-popup" data-flatsome-role-button>
+
+  	<i class="icon-shopping-cart" aria-hidden="true" data-icon-label="0"></i>  </a>
+</div>
+
+  <!-- Cart Sidebar Popup -->
+  <div id="cart-popup" class="mfp-hide">
+  <div class="cart-popup-inner inner-padding cart-popup-inner--sticky">
+      <div class="cart-popup-title text-center">
+          <span class="heading-font uppercase">Carrinho</span>
+          <div class="is-divider"></div>
+      </div>
+	  <div class="widget_shopping_cart">
+		  <div class="widget_shopping_cart_content">
+			  
+
+	<div class="ux-mini-cart-empty flex flex-row-col text-center pt pb">
+				<div class="ux-mini-cart-empty-icon">
+			<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 19" style="opacity:.1;height:80px;">
+				<path d="M8.5 0C6.7 0 5.3 1.2 5.3 2.7v2H2.1c-.3 0-.6.3-.7.7L0 18.2c0 .4.2.8.6.8h15.7c.4 0 .7-.3.7-.7v-.1L15.6 5.4c0-.3-.3-.6-.7-.6h-3.2v-2c0-1.6-1.4-2.8-3.2-2.8zM6.7 2.7c0-.8.8-1.4 1.8-1.4s1.8.6 1.8 1.4v2H6.7v-2zm7.5 3.4 1.3 11.5h-14L2.8 6.1h2.5v1.4c0 .4.3.7.7.7.4 0 .7-.3.7-.7V6.1h3.5v1.4c0 .4.3.7.7.7s.7-.3.7-.7V6.1h2.6z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"></path>
+			</svg>
+		</div>
+				<p class="woocommerce-mini-cart__empty-message empty">Sem produto(s) no carrinho.</p>
+					<p class="return-to-shop">
+				<a class="button primary wc-backward" href="https://ectolab.org/loja/">
+					Retornar para a loja				</a>
+			</p>
+				</div>
+
+
+		  </div>
+	  </div>
+               </div>
+  </div>
+
+</li>
+            </ul>
+          </div>
+
+      </div>
+
+            <div class="container"><div class="top-divider full-width"></div></div>
+      </div>
+<div id="wide-nav" class="header-bottom wide-nav hide-for-sticky nav-dark hide-for-medium">
+    <div class="flex-row container">
+
+                        <div class="flex-col hide-for-medium flex-left">
+                <ul class="nav header-nav header-bottom-nav nav-left  nav-uppercase nav-prompts-overlay">
+                    <li id="menu-item-1807" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1807 menu-item-design-default"><a href="https://ectolab.org/" class="nav-top-link">Início</a></li>
+<li id="menu-item-1823" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1823 menu-item-design-default"><a href="https://ectolab.org/agenda/" class="nav-top-link">Agenda</a></li>
+<li id="menu-item-2478" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2478 menu-item-design-default"><a href="https://store.conscienciologia.org.br/product-brand/ectolab/" class="nav-top-link">Loja</a></li>
+<li id="menu-item-1817" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1817 menu-item-design-default has-dropdown"><a href="http://www.ectolab.org/quem-somos/" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Ectolab<i class="icon-angle-down" aria-hidden="true"></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-default">
+	<li id="menu-item-2764" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2764"><a href="https://ectolab.org/planos/">Ectolab Interassistencial</a></li>
+	<li id="menu-item-1818" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1818"><a href="http://ectolab.org/site/quem-somos/">Quem somos</a></li>
+	<li id="menu-item-1819" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1819"><a href="https://ectolab.org/conscienciologia/">As ciências</a></li>
+	<li id="menu-item-1827" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1827"><a href="https://ectolab.org/materiais-publicados/">Materiais Publicados</a></li>
+	<li id="menu-item-1820" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1820"><a href="http://ectolab.org/quem-somos/#cgc">Código Grupal de Cosmoética</a></li>
+	<li id="menu-item-1821" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1821"><a href="http://ectolab.org/quem-somos/#voluntariado">Seja um voluntário</a></li>
+	<li id="menu-item-1822" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="https://ectolab.org/politica-de-privacidade-2/">Política de Privacidade</a></li>
+</ul>
+</li>
+<li id="menu-item-1816" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1816 menu-item-design-default has-dropdown"><a href="https://ectolab.org/o-que-e/" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Paracirurgia<i class="icon-angle-down" aria-hidden="true"></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-default">
+	<li id="menu-item-1810" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1810 nav-dropdown-col"><a href="https://ectolab.org/o-que-e/">Sobre a atividade</a>
+	<ul class="sub-menu nav-column nav-dropdown-default">
+		<li id="menu-item-1808" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1808"><a href="https://ectolab.org/o-que-e/">O que é</a></li>
+		<li id="menu-item-1811" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1811"><a href="http://ectolab.org/o-que-e/#como-funciona">Como funciona?</a></li>
+		<li id="menu-item-1812" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1812"><a href="http://ectolab.org/o-que-e/#quem-atua">Quem faz o quê?</a></li>
+		<li id="menu-item-1813" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1813"><a href="http://ectolab.org/o-que-e/#como-participar">Como participar?</a></li>
+		<li id="menu-item-1809" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1809"><a href="https://ectolab.org/perguntas-frequentes/">Perguntas Frequentes</a></li>
+		<li id="menu-item-3205" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3205"><a href="https://dip-ectolab.org.br/login">Sistema da DIP</a></li>
+		<li id="menu-item-3210" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3210"><a href="https://ectolab.org/pontoacoes-do-pedido-de-paracirurgia/">Pontoações da DIP</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1814" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1814 nav-dropdown-col"><a href="https://ectolab.org/solicitacao-de-paracirurgia/">Solicitações</a>
+	<ul class="sub-menu nav-column nav-dropdown-default">
+		<li id="menu-item-1815" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1815"><a href="https://ectolab.org/solicitacao-de-paracirurgia/">Solicitação de Paracirurgia</a></li>
+		<li id="menu-item-1894" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1894"><a href="https://ectolab.org/relatorio-apos-paracirurgia/">Relatório após Paracirurgia</a></li>
+		<li id="menu-item-1900" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1900"><a href="https://ectolab.org/assistente-a-distancia-criterios/">Rede Interassistencial de Cirurgia Invisivel a Distância</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-1905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1905 menu-item-design-default has-dropdown"><a href="https://ectolab.org/laboratorio/" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Laboratórios<i class="icon-angle-down" aria-hidden="true"></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-default">
+	<li id="menu-item-1944" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1944"><a href="https://ectolab.org/laboratorio-de-paracirurgia/">Paracirurgia</a></li>
+	<li id="menu-item-1906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1906"><a href="https://ectolab.org/bioenergologia/">Bioenergologia</a></li>
+	<li id="menu-item-1929" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1929"><a href="https://ectolab.org/ectoplasmologia/">Ectoplasmologia</a></li>
+</ul>
+</li>
+<li id="menu-item-1952" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-1952 menu-item-design-default has-dropdown"><a href="http://ectolab.org" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Atividades<i class="icon-angle-down" aria-hidden="true"></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-default">
+	<li id="menu-item-1828" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1828 nav-dropdown-col"><a href="http://ectolab.org/materiais-publicados/">Gratuito</a>
+	<ul class="sub-menu nav-column nav-dropdown-default">
+		<li id="menu-item-1831" class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1831"><a href="https://ectolab.org/blog/">Blog</a></li>
+		<li id="menu-item-1830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1830"><a href="https://www.youtube.com/@ectolab933">Lives</a></li>
+		<li id="menu-item-1930" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1930"><a href="https://ectolab.org/product/orientacaobioenergologia/">Orientação Gratuita</a></li>
+	</ul>
+</li>
+	<li id="menu-item-1948" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-1948 nav-dropdown-col"><a href="http://ectolab.org">Dinâmicas</a>
+	<ul class="sub-menu nav-column nav-dropdown-default">
+		<li id="menu-item-3414" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3414"><a href="https://ectolab.org/dip-na-alemanha/">Alemanha</a></li>
+		<li id="menu-item-3415" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3415"><a href="https://ectolab.org/dip-em-portugal/">Portugal</a></li>
+		<li id="menu-item-3390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3390"><a href="https://ectolab.org/dip-em-brasilia/">Brasília</a></li>
+		<li id="menu-item-1950" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1950"><a href="https://ectolab.org/dip-em-curitiba-parana/">Curitiba</a></li>
+		<li id="menu-item-3380" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3380"><a href="https://ectolab.org/dip-em-florianopolis/">Florianópolis</a></li>
+		<li id="menu-item-1949" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1949"><a href="https://ectolab.org/dip-em-foz-do-iguacu/">Foz do Iguaçu</a></li>
+		<li id="menu-item-3413" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3413"><a href="https://ectolab.org/dip-no-rio-de-janeiro-rj/">Rio de Janeiro</a></li>
+		<li id="menu-item-1951" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1951"><a href="https://ectolab.org/dinamica-interassistencial-da-paracirurgia-sao-paulo/">São Paulo</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-2695" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-2695 menu-item-design-default has-dropdown"><a href="https://ectolab.org/" class="nav-top-link" aria-expanded="false" aria-haspopup="menu">Cursos<i class="icon-angle-down" aria-hidden="true"></i></a>
+<ul class="sub-menu nav-dropdown nav-dropdown-default">
+	<li id="menu-item-2851" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-2851 nav-dropdown-col"><a href="https://ectolab.org/">Cursos de Campo</a>
+	<ul class="sub-menu nav-column nav-dropdown-default">
+		<li id="menu-item-2785" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2785"><a href="https://ectolab.org/eppi-ectoplasmia-projetiva-paracirurgica-ectoplasmica-interassistencial/">Eppi</a></li>
+		<li id="menu-item-2797" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2797"><a href="https://ectolab.org/campo-interassistencial-paracirurgico/">Campo Paracirúrgico</a></li>
+		<li id="menu-item-2849" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2849"><a href="https://ectolab.org/imersao-em-ectoplasmia/">Imersão Em Ectoplasmia 2026</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2852" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-2852 nav-dropdown-col"><a href="https://ectolab.org/">Cursos Presenciais</a>
+	<ul class="sub-menu nav-column nav-dropdown-default">
+		<li id="menu-item-2696" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2696"><a href="https://ectolab.org/programa-de-estimulacao-parapsiquica-proep/">PROEP</a></li>
+		<li id="menu-item-2850" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2850"><a href="https://store.conscienciologia.org.br/loja/ectolab/?s=fitoectoplasmia+inter">Fitoectoplasmia Interassistencial</a></li>
+	</ul>
+</li>
+	<li id="menu-item-2853" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-2853 nav-dropdown-col"><a href="https://ectolab.org/">Cursos Gravados</a>
+	<ul class="sub-menu nav-column nav-dropdown-default">
+		<li id="menu-item-2864" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2864"><a href="https://store.conscienciologia.org.br/product/ectoplasmia-interassistencial-23-09/">Ectoplasmia Interassistencial</a></li>
+		<li id="menu-item-2854" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2854"><a href="https://store.conscienciologia.org.br/product/quadro-sinoptico-parapesquisistico/">Quadro Sinóptico Parapesquisístico</a></li>
+		<li id="menu-item-2861" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2861"><a href="https://store.conscienciologia.org.br/product/curso-livre-ciclo-vital-do-ectoplasta/">Ciclo Vital do Ectoplasta</a></li>
+		<li id="menu-item-2862" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2862"><a href="https://store.conscienciologia.org.br/product/curso-livre-aplicacoes-praticas-da-ectoplasmia/">Aplicações Práticas da Ectoplasmia</a></li>
+		<li id="menu-item-2863" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2863"><a href="https://store.conscienciologia.org.br/product/curso-livre-raizes-da-ectoplasmia/">Raízes da Ectoplasmia</a></li>
+		<li id="menu-item-2865" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2865"><a href="https://store.conscienciologia.org.br/sku/304395/">Ectoplasmia Protetiva</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-1825" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1825 menu-item-design-default"><a href="https://ectolab.org/1100-2/" class="nav-top-link">Contato</a></li>
+                </ul>
+            </div>
+            
+            
+                        <div class="flex-col hide-for-medium flex-right flex-grow">
+              <ul class="nav header-nav header-bottom-nav nav-right  nav-uppercase nav-prompts-overlay">
+                   <li class="cart-item has-icon has-dropdown">
+<div class="header-button">
+<a href="https://ectolab.org/cart/" class="header-cart-link nav-top-link icon primary button circle is-small" title="Carrinho" aria-label="Ver carrinho" aria-expanded="false" aria-haspopup="true" role="button" data-flatsome-role-button>
+
+
+    <i class="icon-shopping-cart" aria-hidden="true" data-icon-label="0"></i>  </a>
+</div>
+ <ul class="nav-dropdown nav-dropdown-default">
+    <li class="html widget_shopping_cart">
+      <div class="widget_shopping_cart_content">
+        
+
+	<div class="ux-mini-cart-empty flex flex-row-col text-center pt pb">
+				<div class="ux-mini-cart-empty-icon">
+			<svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 17 19" style="opacity:.1;height:80px;">
+				<path d="M8.5 0C6.7 0 5.3 1.2 5.3 2.7v2H2.1c-.3 0-.6.3-.7.7L0 18.2c0 .4.2.8.6.8h15.7c.4 0 .7-.3.7-.7v-.1L15.6 5.4c0-.3-.3-.6-.7-.6h-3.2v-2c0-1.6-1.4-2.8-3.2-2.8zM6.7 2.7c0-.8.8-1.4 1.8-1.4s1.8.6 1.8 1.4v2H6.7v-2zm7.5 3.4 1.3 11.5h-14L2.8 6.1h2.5v1.4c0 .4.3.7.7.7.4 0 .7-.3.7-.7V6.1h3.5v1.4c0 .4.3.7.7.7s.7-.3.7-.7V6.1h2.6z" fill-rule="evenodd" clip-rule="evenodd" fill="currentColor"></path>
+			</svg>
+		</div>
+				<p class="woocommerce-mini-cart__empty-message empty">Sem produto(s) no carrinho.</p>
+					<p class="return-to-shop">
+				<a class="button primary wc-backward" href="https://ectolab.org/loja/">
+					Retornar para a loja				</a>
+			</p>
+				</div>
+
+
+      </div>
+    </li>
+     </ul>
+
+</li>
+
+<li class="account-item has-icon">
+
+	<a href="https://ectolab.org/my-account/" class="nav-top-link nav-top-not-logged-in is-small" title="Entrar" role="button" data-open="#login-form-popup" aria-controls="login-form-popup" aria-expanded="false" aria-haspopup="dialog" data-flatsome-role-button>
+					<span>
+			Entrar			</span>
+				</a>
+
+
+
+
+</li>
+              </ul>
+            </div>
+            
+            
+    </div>
+</div>
+
+<div class="header-bg-container fill"><div class="header-bg-image fill"></div><div class="header-bg-color fill"></div></div>		</div>
+	</header>
+
+	
+	<main id="main" class="">
+	<div id="primary" class="content-area container pt">
+		<section class="error-404 not-found mt mb">
+			<div class="row">
+				<div class="col medium-3"><span class="header-font" style="font-size: 6em; font-weight: bold; opacity: .3">404</span></div>
+				<div class="col medium-9">
+					<header class="page-title">
+						<h1 class="page-title">Oops! Essa página não foi encontrada.</h1>
+					</header>
+					<div class="page-content">
+						<p>Parece que nada foi encontrado nessa localização. Que tal tentar um dos links abaixo ou fazer uma busca?</p>
+						<form method="get" class="searchform" action="https://ectolab.org/" role="search">
+		<div class="flex-row relative">
+			<div class="flex-col flex-grow">
+	   	   <input type="search" class="search-field mb-0" name="s" value="" id="s" placeholder="O que está procurando?" />
+			</div>
+			<div class="flex-col">
+				<button type="submit" class="ux-search-submit submit-button secondary button icon mb-0" aria-label="Enviar">
+					<i class="icon-search" aria-hidden="true"></i>				</button>
+			</div>
+		</div>
+    <div class="live-search-results text-left z-top"></div>
+</form>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>
+
+</main>
+
+<footer id="footer" class="footer-wrapper">
+
+	
+<!-- FOOTER 1 -->
+
+<!-- FOOTER 2 -->
+<div class="footer-widgets footer footer-2 dark">
+		<div class="row dark large-columns-4 mb-0">
+	   		
+		<div id="block_widget-2" class="col pb-0 widget block_widget">
+		<span class="widget-title">Sobre nós</span><div class="is-divider small"></div>
+		<ul>
+<li><a href="https://ectolab.org/quem-somos/">Quem somos</a></li>
+<li><a href="https://ectolab.org/quem-somos/#voluntariado">Seja um Voluntário</a></li>
+<li><a href="https://ectolab.org/quem-somos/#cgc">Código Grupal de Cosmoética</a></li>
+<li><a href="https://ectolab.org/planos/" target="_blank" rel="noopener">Ectolab Interassitencial</a></li>
+</ul>
+<div class="social-icons follow-icons" style="font-size:78%"><a href="https://www.facebook.com/ectolab" target="_blank" data-label="Facebook" class="icon primary button circle tooltip facebook" title="Follow on Facebook" aria-label="Follow on Facebook" rel="noopener nofollow"><i class="icon-facebook" aria-hidden="true"></i></a><a href="https://www.instagram.com/ectolab/" target="_blank" data-label="Instagram" class="icon primary button circle tooltip instagram" title="Follow on Instagram" aria-label="Follow on Instagram" rel="noopener nofollow"><i class="icon-instagram" aria-hidden="true"></i></a><a href="tel:+ 55 (45) 99101 1407" data-label="Phone" target="_blank" class="icon primary button circle tooltip phone" title="Call us" aria-label="Call us" rel="nofollow noopener"><i class="icon-phone" aria-hidden="true"></i></a><a href="https://www.youtube.com/channel/UCGlwoHzl-u1sEe7B6wPsGcA" data-label="YouTube" target="_blank" class="icon primary button circle tooltip youtube" title="Follow on YouTube" aria-label="Follow on YouTube" rel="noopener nofollow"><i class="icon-youtube" aria-hidden="true"></i></a></div>
+		</div>
+				<div id="flatsome_recent_posts-18" class="col pb-0 widget flatsome_recent_posts">		<span class="widget-title">Blog</span><div class="is-divider small"></div>		<ul>		
+		
+		<li class="recent-blog-posts-li">
+			<div class="flex-row recent-blog-posts align-top pt-half pb-half">
+				<div class="flex-col mr-half">
+					<div class="badge post-date badge-small badge-outline">
+							<div class="badge-inner bg-fill" >
+                                								<span class="post-date-day">26</span><br>
+								<span class="post-date-month is-xsmall">out</span>
+                                							</div>
+					</div>
+				</div>
+				<div class="flex-col flex-grow">
+					  <a href="https://ectolab.org/tecnica-arco-voltaico-craniochacral-e-paracirurgia/" title="A Técnica Arco Voltaico Craniochacral e Paracirurgia">A Técnica Arco Voltaico Craniochacral e Paracirurgia</a>
+					  				   	  <span class="post_comments op-8 block is-xsmall"><span>Comentários desativados<span class="screen-reader-text"> em A Técnica Arco Voltaico Craniochacral e Paracirurgia</span></span></span>
+				</div>
+			</div>
+		</li>
+		
+		
+		<li class="recent-blog-posts-li">
+			<div class="flex-row recent-blog-posts align-top pt-half pb-half">
+				<div class="flex-col mr-half">
+					<div class="badge post-date badge-small badge-outline">
+							<div class="badge-inner bg-fill" >
+                                								<span class="post-date-day">22</span><br>
+								<span class="post-date-month is-xsmall">set</span>
+                                							</div>
+					</div>
+				</div>
+				<div class="flex-col flex-grow">
+					  <a href="https://ectolab.org/qualificacao-dos-pensenes-do-ectoplasta/" title="Qualificação dos pensenes do ectoplasta">Qualificação dos pensenes do ectoplasta</a>
+					  				   	  <span class="post_comments op-8 block is-xsmall"><span>Comentários desativados<span class="screen-reader-text"> em Qualificação dos pensenes do ectoplasta</span></span></span>
+				</div>
+			</div>
+		</li>
+		
+		
+		<li class="recent-blog-posts-li">
+			<div class="flex-row recent-blog-posts align-top pt-half pb-half">
+				<div class="flex-col mr-half">
+					<div class="badge post-date badge-small badge-outline">
+							<div class="badge-inner bg-fill" >
+                                								<span class="post-date-day">22</span><br>
+								<span class="post-date-month is-xsmall">jun</span>
+                                							</div>
+					</div>
+				</div>
+				<div class="flex-col flex-grow">
+					  <a href="https://ectolab.org/saude-energetica-o-que-e-como-desenvolver/" title="Saúde Energética: O que é ? Como desenvolver ?">Saúde Energética: O que é ? Como desenvolver ?</a>
+					  				   	  <span class="post_comments op-8 block is-xsmall"><span>Comentários desativados<span class="screen-reader-text"> em Saúde Energética: O que é ? Como desenvolver ?</span></span></span>
+				</div>
+			</div>
+		</li>
+		
+		
+		<li class="recent-blog-posts-li">
+			<div class="flex-row recent-blog-posts align-top pt-half pb-half">
+				<div class="flex-col mr-half">
+					<div class="badge post-date badge-small badge-outline">
+							<div class="badge-inner bg-fill" >
+                                								<span class="post-date-day">09</span><br>
+								<span class="post-date-month is-xsmall">jun</span>
+                                							</div>
+					</div>
+				</div>
+				<div class="flex-col flex-grow">
+					  <a href="https://ectolab.org/estado-vibracional-e-saude-energetica/" title="Estado Vibracional: Autoconhecimento e Saúde Energética">Estado Vibracional: Autoconhecimento e Saúde Energética</a>
+					  				   	  <span class="post_comments op-8 block is-xsmall"><span>Comentários desativados<span class="screen-reader-text"> em Estado Vibracional: Autoconhecimento e Saúde Energética</span></span></span>
+				</div>
+			</div>
+		</li>
+				</ul>		</div>
+		<div id="block_widget-3" class="col pb-0 widget block_widget">
+		<span class="widget-title">Fique por dentro!</span><div class="is-divider small"></div>
+		<ul>
+<li><a href="https://ectolab.org/solicitacao-de-paracirurgia/">Solicitação de paracirurgia</a></li>
+<li><a href="https://ectolab.org/laboratorio-de-paracirurgia/">Laboratório de paracirurgia</a></li>
+<li><a href="https://ectolab.org/relatorio-apos-paracirurgia/">Relatório após paracirurgia</a></li>
+<li><a href="https://ectolab.org/assistente-a-distancia-criterios/">Assistente a distância</a></li>
+</ul>
+		</div>
+		<div id="nav_menu-3" class="col pb-0 widget widget_nav_menu"><span class="widget-title">Menu</span><div class="is-divider small"></div><div class="menu-main-container"><ul id="menu-main-1" class="menu"><li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1807"><a href="https://ectolab.org/">Início</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1823"><a href="https://ectolab.org/agenda/">Agenda</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2478"><a href="https://store.conscienciologia.org.br/product-brand/ectolab/">Loja</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1817"><a href="http://www.ectolab.org/quem-somos/">Ectolab</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2764"><a href="https://ectolab.org/planos/">Ectolab Interassistencial</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1818"><a href="http://ectolab.org/site/quem-somos/">Quem somos</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1819"><a href="https://ectolab.org/conscienciologia/">As ciências</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1827"><a href="https://ectolab.org/materiais-publicados/">Materiais Publicados</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1820"><a href="http://ectolab.org/quem-somos/#cgc">Código Grupal de Cosmoética</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1821"><a href="http://ectolab.org/quem-somos/#voluntariado">Seja um voluntário</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="https://ectolab.org/politica-de-privacidade-2/">Política de Privacidade</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1816"><a href="https://ectolab.org/o-que-e/">Paracirurgia</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1810"><a href="https://ectolab.org/o-que-e/">Sobre a atividade</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1808"><a href="https://ectolab.org/o-que-e/">O que é</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1811"><a href="http://ectolab.org/o-que-e/#como-funciona">Como funciona?</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1812"><a href="http://ectolab.org/o-que-e/#quem-atua">Quem faz o quê?</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1813"><a href="http://ectolab.org/o-que-e/#como-participar">Como participar?</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1809"><a href="https://ectolab.org/perguntas-frequentes/">Perguntas Frequentes</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3205"><a href="https://dip-ectolab.org.br/login">Sistema da DIP</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3210"><a href="https://ectolab.org/pontoacoes-do-pedido-de-paracirurgia/">Pontoações da DIP</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1814"><a href="https://ectolab.org/solicitacao-de-paracirurgia/">Solicitações</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1815"><a href="https://ectolab.org/solicitacao-de-paracirurgia/">Solicitação de Paracirurgia</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1894"><a href="https://ectolab.org/relatorio-apos-paracirurgia/">Relatório após Paracirurgia</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1900"><a href="https://ectolab.org/assistente-a-distancia-criterios/">Rede Interassistencial de Cirurgia Invisivel a Distância</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1905"><a href="https://ectolab.org/laboratorio/">Laboratórios</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1944"><a href="https://ectolab.org/laboratorio-de-paracirurgia/">Paracirurgia</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1906"><a href="https://ectolab.org/bioenergologia/">Bioenergologia</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1929"><a href="https://ectolab.org/ectoplasmologia/">Ectoplasmologia</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-1952"><a href="http://ectolab.org">Atividades</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1828"><a href="http://ectolab.org/materiais-publicados/">Gratuito</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1831"><a href="https://ectolab.org/blog/">Blog</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1830"><a href="https://www.youtube.com/@ectolab933">Lives</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1930"><a href="https://ectolab.org/product/orientacaobioenergologia/">Orientação Gratuita</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-1948"><a href="http://ectolab.org">Dinâmicas</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3414"><a href="https://ectolab.org/dip-na-alemanha/">Alemanha</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3415"><a href="https://ectolab.org/dip-em-portugal/">Portugal</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3390"><a href="https://ectolab.org/dip-em-brasilia/">Brasília</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1950"><a href="https://ectolab.org/dip-em-curitiba-parana/">Curitiba</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3380"><a href="https://ectolab.org/dip-em-florianopolis/">Florianópolis</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1949"><a href="https://ectolab.org/dip-em-foz-do-iguacu/">Foz do Iguaçu</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3413"><a href="https://ectolab.org/dip-no-rio-de-janeiro-rj/">Rio de Janeiro</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1951"><a href="https://ectolab.org/dinamica-interassistencial-da-paracirurgia-sao-paulo/">São Paulo</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-2695"><a href="https://ectolab.org/">Cursos</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-2851"><a href="https://ectolab.org/">Cursos de Campo</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2785"><a href="https://ectolab.org/eppi-ectoplasmia-projetiva-paracirurgica-ectoplasmica-interassistencial/">Eppi</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2797"><a href="https://ectolab.org/campo-interassistencial-paracirurgico/">Campo Paracirúrgico</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2849"><a href="https://ectolab.org/imersao-em-ectoplasmia/">Imersão Em Ectoplasmia 2026</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-2852"><a href="https://ectolab.org/">Cursos Presenciais</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2696"><a href="https://ectolab.org/programa-de-estimulacao-parapsiquica-proep/">PROEP</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2850"><a href="https://store.conscienciologia.org.br/loja/ectolab/?s=fitoectoplasmia+inter">Fitoectoplasmia Interassistencial</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-2853"><a href="https://ectolab.org/">Cursos Gravados</a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2864"><a href="https://store.conscienciologia.org.br/product/ectoplasmia-interassistencial-23-09/">Ectoplasmia Interassistencial</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2854"><a href="https://store.conscienciologia.org.br/product/quadro-sinoptico-parapesquisistico/">Quadro Sinóptico Parapesquisístico</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2861"><a href="https://store.conscienciologia.org.br/product/curso-livre-ciclo-vital-do-ectoplasta/">Ciclo Vital do Ectoplasta</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2862"><a href="https://store.conscienciologia.org.br/product/curso-livre-aplicacoes-praticas-da-ectoplasmia/">Aplicações Práticas da Ectoplasmia</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2863"><a href="https://store.conscienciologia.org.br/product/curso-livre-raizes-da-ectoplasmia/">Raízes da Ectoplasmia</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2865"><a href="https://store.conscienciologia.org.br/sku/304395/">Ectoplasmia Protetiva</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1825"><a href="https://ectolab.org/1100-2/">Contato</a></li>
+</ul></div></div>		</div>
+</div>
+
+
+
+<div class="absolute-footer dark medium-text-center small-text-center">
+  <div class="container clearfix">
+
+          <div class="footer-secondary pull-right">
+                <div class="payment-icons inline-block" role="group" aria-label="Payment icons"><div class="payment-icon"><svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 64 32">
+<path d="M10.781 7.688c-0.251-1.283-1.219-1.688-2.344-1.688h-8.376l-0.061 0.405c5.749 1.469 10.469 4.595 12.595 10.501l-1.813-9.219zM13.125 19.688l-0.531-2.781c-1.096-2.907-3.752-5.594-6.752-6.813l4.219 15.939h5.469l8.157-20.032h-5.501l-5.062 13.688zM27.72 26.061l3.248-20.061h-5.187l-3.251 20.061h5.189zM41.875 5.656c-5.125 0-8.717 2.72-8.749 6.624-0.032 2.877 2.563 4.469 4.531 5.439 2.032 0.968 2.688 1.624 2.688 2.499 0 1.344-1.624 1.939-3.093 1.939-2.093 0-3.219-0.251-4.875-1.032l-0.688-0.344-0.719 4.499c1.219 0.563 3.437 1.064 5.781 1.064 5.437 0.032 8.97-2.688 9.032-6.843 0-2.282-1.405-4-4.376-5.439-1.811-0.904-2.904-1.563-2.904-2.499 0-0.843 0.936-1.72 2.968-1.72 1.688-0.029 2.936 0.314 3.875 0.752l0.469 0.248 0.717-4.344c-1.032-0.406-2.656-0.844-4.656-0.844zM55.813 6c-1.251 0-2.189 0.376-2.72 1.688l-7.688 18.374h5.437c0.877-2.467 1.096-3 1.096-3 0.592 0 5.875 0 6.624 0 0 0 0.157 0.688 0.624 3h4.813l-4.187-20.061h-4zM53.405 18.938c0 0 0.437-1.157 2.064-5.594-0.032 0.032 0.437-1.157 0.688-1.907l0.374 1.72c0.968 4.781 1.189 5.781 1.189 5.781-0.813 0-3.283 0-4.315 0z"></path>
+</svg>
+<span class="screen-reader-text">Visa</span></div><div class="payment-icon"><svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 64 32">
+<path d="M35.255 12.078h-2.396c-0.229 0-0.444 0.114-0.572 0.303l-3.306 4.868-1.4-4.678c-0.088-0.292-0.358-0.493-0.663-0.493h-2.355c-0.284 0-0.485 0.28-0.393 0.548l2.638 7.745-2.481 3.501c-0.195 0.275 0.002 0.655 0.339 0.655h2.394c0.227 0 0.439-0.111 0.569-0.297l7.968-11.501c0.191-0.275-0.006-0.652-0.341-0.652zM19.237 16.718c-0.23 1.362-1.311 2.276-2.691 2.276-0.691 0-1.245-0.223-1.601-0.644-0.353-0.417-0.485-1.012-0.374-1.674 0.214-1.35 1.313-2.294 2.671-2.294 0.677 0 1.227 0.225 1.589 0.65 0.365 0.428 0.509 1.027 0.404 1.686zM22.559 12.078h-2.384c-0.204 0-0.378 0.148-0.41 0.351l-0.104 0.666-0.166-0.241c-0.517-0.749-1.667-1-2.817-1-2.634 0-4.883 1.996-5.321 4.796-0.228 1.396 0.095 2.731 0.888 3.662 0.727 0.856 1.765 1.212 3.002 1.212 2.123 0 3.3-1.363 3.3-1.363l-0.106 0.662c-0.040 0.252 0.155 0.479 0.41 0.479h2.147c0.341 0 0.63-0.247 0.684-0.584l1.289-8.161c0.040-0.251-0.155-0.479-0.41-0.479zM8.254 12.135c-0.272 1.787-1.636 1.787-2.957 1.787h-0.751l0.527-3.336c0.031-0.202 0.205-0.35 0.41-0.35h0.345c0.899 0 1.747 0 2.185 0.511 0.262 0.307 0.341 0.761 0.242 1.388zM7.68 7.473h-4.979c-0.341 0-0.63 0.248-0.684 0.584l-2.013 12.765c-0.040 0.252 0.155 0.479 0.41 0.479h2.378c0.34 0 0.63-0.248 0.683-0.584l0.543-3.444c0.053-0.337 0.343-0.584 0.683-0.584h1.575c3.279 0 5.172-1.587 5.666-4.732 0.223-1.375 0.009-2.456-0.635-3.212-0.707-0.832-1.962-1.272-3.628-1.272zM60.876 7.823l-2.043 12.998c-0.040 0.252 0.155 0.479 0.41 0.479h2.055c0.34 0 0.63-0.248 0.683-0.584l2.015-12.765c0.040-0.252-0.155-0.479-0.41-0.479h-2.299c-0.205 0.001-0.379 0.148-0.41 0.351zM54.744 16.718c-0.23 1.362-1.311 2.276-2.691 2.276-0.691 0-1.245-0.223-1.601-0.644-0.353-0.417-0.485-1.012-0.374-1.674 0.214-1.35 1.313-2.294 2.671-2.294 0.677 0 1.227 0.225 1.589 0.65 0.365 0.428 0.509 1.027 0.404 1.686zM58.066 12.078h-2.384c-0.204 0-0.378 0.148-0.41 0.351l-0.104 0.666-0.167-0.241c-0.516-0.749-1.667-1-2.816-1-2.634 0-4.883 1.996-5.321 4.796-0.228 1.396 0.095 2.731 0.888 3.662 0.727 0.856 1.765 1.212 3.002 1.212 2.123 0 3.3-1.363 3.3-1.363l-0.106 0.662c-0.040 0.252 0.155 0.479 0.41 0.479h2.147c0.341 0 0.63-0.247 0.684-0.584l1.289-8.161c0.040-0.252-0.156-0.479-0.41-0.479zM43.761 12.135c-0.272 1.787-1.636 1.787-2.957 1.787h-0.751l0.527-3.336c0.031-0.202 0.205-0.35 0.41-0.35h0.345c0.899 0 1.747 0 2.185 0.511 0.261 0.307 0.34 0.761 0.241 1.388zM43.187 7.473h-4.979c-0.341 0-0.63 0.248-0.684 0.584l-2.013 12.765c-0.040 0.252 0.156 0.479 0.41 0.479h2.554c0.238 0 0.441-0.173 0.478-0.408l0.572-3.619c0.053-0.337 0.343-0.584 0.683-0.584h1.575c3.279 0 5.172-1.587 5.666-4.732 0.223-1.375 0.009-2.456-0.635-3.212-0.707-0.832-1.962-1.272-3.627-1.272z"></path>
+</svg>
+<span class="screen-reader-text">PayPal</span></div><div class="payment-icon"><svg aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"  viewBox="0 0 64 32">
+<path d="M7.114 14.656c-1.375-0.5-2.125-0.906-2.125-1.531 0-0.531 0.437-0.812 1.188-0.812 1.437 0 2.875 0.531 3.875 1.031l0.563-3.5c-0.781-0.375-2.406-1-4.656-1-1.594 0-2.906 0.406-3.844 1.188-1 0.812-1.5 2-1.5 3.406 0 2.563 1.563 3.688 4.125 4.594 1.625 0.594 2.188 1 2.188 1.656 0 0.625-0.531 0.969-1.5 0.969-1.188 0-3.156-0.594-4.437-1.343l-0.563 3.531c1.094 0.625 3.125 1.281 5.25 1.281 1.688 0 3.063-0.406 4.031-1.157 1.063-0.843 1.594-2.062 1.594-3.656-0.001-2.625-1.595-3.719-4.188-4.657zM21.114 9.125h-3v-4.219l-4.031 0.656-0.563 3.563-1.437 0.25-0.531 3.219h1.937v6.844c0 1.781 0.469 3 1.375 3.75 0.781 0.625 1.907 0.938 3.469 0.938 1.219 0 1.937-0.219 2.468-0.344v-3.688c-0.282 0.063-0.938 0.22-1.375 0.22-0.906 0-1.313-0.5-1.313-1.563v-6.156h2.406l0.595-3.469zM30.396 9.031c-0.313-0.062-0.594-0.093-0.876-0.093-1.312 0-2.374 0.687-2.781 1.937l-0.313-1.75h-4.093v14.719h4.687v-9.563c0.594-0.719 1.437-0.968 2.563-0.968 0.25 0 0.5 0 0.812 0.062v-4.344zM33.895 2.719c-1.375 0-2.468 1.094-2.468 2.469s1.094 2.5 2.468 2.5 2.469-1.124 2.469-2.5-1.094-2.469-2.469-2.469zM36.239 23.844v-14.719h-4.687v14.719h4.687zM49.583 10.468c-0.843-1.094-2-1.625-3.469-1.625-1.343 0-2.531 0.563-3.656 1.75l-0.25-1.469h-4.125v20.155l4.688-0.781v-4.719c0.719 0.219 1.469 0.344 2.125 0.344 1.157 0 2.876-0.313 4.188-1.75 1.281-1.375 1.907-3.5 1.907-6.313 0-2.499-0.469-4.405-1.407-5.593zM45.677 19.532c-0.375 0.687-0.969 1.094-1.625 1.094-0.468 0-0.906-0.093-1.281-0.281v-7c0.812-0.844 1.531-0.938 1.781-0.938 1.188 0 1.781 1.313 1.781 3.812 0.001 1.437-0.219 2.531-0.656 3.313zM62.927 10.843c-1.032-1.312-2.563-2-4.501-2-4 0-6.468 2.938-6.468 7.688 0 2.625 0.656 4.625 1.968 5.875 1.157 1.157 2.844 1.719 5.032 1.719 2 0 3.844-0.469 5-1.251l-0.501-3.219c-1.157 0.625-2.5 0.969-4 0.969-0.906 0-1.532-0.188-1.969-0.594-0.5-0.406-0.781-1.094-0.875-2.062h7.75c0.031-0.219 0.062-1.281 0.062-1.625 0.001-2.344-0.5-4.188-1.499-5.5zM56.583 15.094c0.125-2.093 0.687-3.062 1.75-3.062s1.625 1 1.687 3.062h-3.437z"></path>
+</svg>
+<span class="screen-reader-text">Stripe</span></div><div class="payment-icon"><svg aria-hidden="true" viewBox="0 0 64 32" xmlns="http://www.w3.org/2000/svg">
+	<path d="M18.4306 31.9299V29.8062C18.4306 28.9938 17.9382 28.4618 17.0929 28.4618C16.6703 28.4618 16.2107 28.6021 15.8948 29.0639C15.6486 28.6763 15.2957 28.4618 14.7663 28.4618C14.4135 28.4618 14.0606 28.5691 13.7816 28.9567V28.532H13.043V31.9299H13.7816V30.0536C13.7816 29.4515 14.0975 29.167 14.5899 29.167C15.0823 29.167 15.3285 29.4845 15.3285 30.0536V31.9299H16.0671V30.0536C16.0671 29.4515 16.42 29.167 16.8754 29.167C17.3678 29.167 17.614 29.4845 17.614 30.0536V31.9299H18.4306ZM29.3863 28.532H28.1882V27.5051H27.4496V28.532H26.7808V29.2041H27.4496V30.7629C27.4496 31.5423 27.7655 32 28.6108 32C28.9268 32 29.2797 31.8928 29.5259 31.7526L29.3125 31.1134C29.0991 31.2536 28.8529 31.2907 28.6765 31.2907C28.3236 31.2907 28.1841 31.0763 28.1841 30.7258V29.2041H29.3822V28.532H29.3863ZM35.6562 28.4577C35.2335 28.4577 34.9504 28.6722 34.774 28.9526V28.5278H34.0354V31.9258H34.774V30.0124C34.774 29.4474 35.0202 29.1258 35.4797 29.1258C35.6192 29.1258 35.7957 29.1629 35.9393 29.1959L36.1527 28.4866C36.0049 28.4577 35.7957 28.4577 35.6562 28.4577ZM26.1817 28.8124C25.8288 28.5649 25.3364 28.4577 24.8071 28.4577C23.9618 28.4577 23.3997 28.8825 23.3997 29.5546C23.3997 30.1196 23.8223 30.4412 24.5609 30.5443L24.9138 30.5814C25.2995 30.6515 25.5128 30.7588 25.5128 30.9361C25.5128 31.1835 25.2297 31.3608 24.7373 31.3608C24.2449 31.3608 23.8551 31.1835 23.6089 31.0062L23.256 31.5711C23.6417 31.8557 24.1711 31.9959 24.7004 31.9959C25.6852 31.9959 26.2514 31.534 26.2514 30.899C26.2514 30.2969 25.7919 29.9794 25.0902 29.8722L24.7373 29.835C24.4214 29.7979 24.1752 29.7278 24.1752 29.5175C24.1752 29.2701 24.4214 29.1299 24.8112 29.1299C25.2338 29.1299 25.6565 29.3072 25.8698 29.4144L26.1817 28.8124ZM45.8323 28.4577C45.4097 28.4577 45.1265 28.6722 44.9501 28.9526V28.5278H44.2115V31.9258H44.9501V30.0124C44.9501 29.4474 45.1963 29.1258 45.6559 29.1258C45.7954 29.1258 45.9718 29.1629 46.1154 29.1959L46.3288 28.4948C46.1852 28.4577 45.9759 28.4577 45.8323 28.4577ZM36.3948 30.2309C36.3948 31.2577 37.1005 32 38.192 32C38.6844 32 39.0373 31.8928 39.3901 31.6124L39.0373 31.0103C38.7541 31.2247 38.4751 31.3278 38.1551 31.3278C37.556 31.3278 37.1333 30.9031 37.1333 30.2309C37.1333 29.5917 37.556 29.167 38.1551 29.134C38.471 29.134 38.7541 29.2412 39.0373 29.4515L39.3901 28.8495C39.0373 28.5649 38.6844 28.4618 38.192 28.4618C37.1005 28.4577 36.3948 29.2041 36.3948 30.2309ZM43.2267 30.2309V28.532H42.4881V28.9567C42.2419 28.6392 41.889 28.4618 41.4295 28.4618C40.4775 28.4618 39.7389 29.2041 39.7389 30.2309C39.7389 31.2577 40.4775 32 41.4295 32C41.9219 32 42.2748 31.8227 42.4881 31.5051V31.9299H43.2267V30.2309ZM40.5144 30.2309C40.5144 29.6289 40.9002 29.134 41.5362 29.134C42.1352 29.134 42.5579 29.5959 42.5579 30.2309C42.5579 30.833 42.1352 31.3278 41.5362 31.3278C40.9043 31.2907 40.5144 30.8289 40.5144 30.2309ZM31.676 28.4577C30.6912 28.4577 29.9854 29.167 29.9854 30.2268C29.9854 31.2907 30.6912 31.9959 31.7129 31.9959C32.2053 31.9959 32.6977 31.8557 33.0875 31.534L32.7346 31.0021C32.4515 31.2165 32.0986 31.3567 31.7498 31.3567C31.2903 31.3567 30.8348 31.1423 30.7281 30.5443H33.227C33.227 30.4371 33.227 30.367 33.227 30.2598C33.2598 29.167 32.6238 28.4577 31.676 28.4577ZM31.676 29.0969C32.1355 29.0969 32.4515 29.3814 32.5213 29.9093H30.7609C30.8307 29.4515 31.1467 29.0969 31.676 29.0969ZM50.0259 30.2309V27.1876H49.2873V28.9567C49.0411 28.6392 48.6882 28.4618 48.2286 28.4618C47.2767 28.4618 46.5381 29.2041 46.5381 30.2309C46.5381 31.2577 47.2767 32 48.2286 32C48.721 32 49.0739 31.8227 49.2873 31.5051V31.9299H50.0259V30.2309ZM47.3136 30.2309C47.3136 29.6289 47.6993 29.134 48.3353 29.134C48.9344 29.134 49.357 29.5959 49.357 30.2309C49.357 30.833 48.9344 31.3278 48.3353 31.3278C47.6993 31.2907 47.3136 30.8289 47.3136 30.2309ZM22.5872 30.2309V28.532H21.8486V28.9567C21.6024 28.6392 21.2495 28.4618 20.79 28.4618C19.838 28.4618 19.0994 29.2041 19.0994 30.2309C19.0994 31.2577 19.838 32 20.79 32C21.2824 32 21.6352 31.8227 21.8486 31.5051V31.9299H22.5872V30.2309ZM19.8421 30.2309C19.8421 29.6289 20.2278 29.134 20.8638 29.134C21.4629 29.134 21.8855 29.5959 21.8855 30.2309C21.8855 30.833 21.4629 31.3278 20.8638 31.3278C20.2278 31.2907 19.8421 30.8289 19.8421 30.2309Z"/>
+	<path d="M26.6745 12.7423C26.6745 8.67216 28.5785 5.05979 31.5 2.72577C29.3499 1.0268 26.6376 0 23.6791 0C16.6707 0 11 5.69897 11 12.7423C11 19.7856 16.6707 25.4845 23.6791 25.4845C26.6376 25.4845 29.3499 24.4577 31.5 22.7588C28.5744 20.4577 26.6745 16.8124 26.6745 12.7423Z"/>
+	<path d="M31.5 2.72577C34.4215 5.05979 36.3255 8.67216 36.3255 12.7423C36.3255 16.8124 34.4585 20.4206 31.5 22.7588L25.9355 22.7588V2.72577L31.5 2.72577Z" fill-opacity="0.6"/>
+	<path d="M52 12.7423C52 19.7856 46.3293 25.4845 39.3209 25.4845C36.3624 25.4845 33.6501 24.4577 31.5 22.7588C34.4585 20.4206 36.3255 16.8124 36.3255 12.7423C36.3255 8.67216 34.4215 5.05979 31.5 2.72577C33.646 1.0268 36.3583 0 39.3168 0C46.3293 0 52 5.73608 52 12.7423Z" fill-opacity="0.4"/>
+</svg>
+<span class="screen-reader-text">MasterCard</span></div></div>      </div>
+    
+    <div class="footer-primary pull-left">
+            <div class="copyright-footer">
+        Copyright 2026 © <strong>Ectolab</strong> - CNPJ: 18.782.858/0001-10      </div>
+          </div>
+  </div>
+</div>
+<button type="button" id="top-link" class="back-to-top button icon invert plain fixed bottom z-1 is-outline circle hide-for-medium" aria-label="Go to top"><i class="icon-angle-up" aria-hidden="true"></i></button>
+</footer>
+
+</div>
+
+<div id="main-menu" class="mobile-sidebar no-scrollbar mfp-hide">
+
+	
+	<div class="sidebar-menu no-scrollbar ">
+
+		
+					<ul class="nav nav-sidebar nav-vertical nav-uppercase" data-tab="1">
+				<li class="header-search-form search-form html relative has-icon">
+	<div class="header-search-form-wrapper">
+		<div class="searchform-wrapper ux-search-box relative is-normal"><form role="search" method="get" class="searchform" action="https://ectolab.org/">
+	<div class="flex-row relative">
+						<div class="flex-col flex-grow">
+			<label class="screen-reader-text" for="woocommerce-product-search-field-1">Pesquisar por:</label>
+			<input type="search" id="woocommerce-product-search-field-1" class="search-field mb-0" placeholder="O que está procurando?" value="" name="s" />
+			<input type="hidden" name="post_type" value="product" />
+					</div>
+		<div class="flex-col">
+			<button type="submit" value="Pesquisar" class="ux-search-submit submit-button secondary button  icon mb-0" aria-label="Enviar">
+				<i class="icon-search" aria-hidden="true"></i>			</button>
+		</div>
+	</div>
+	<div class="live-search-results text-left z-top"></div>
+</form>
+</div>	</div>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-1807"><a href="https://ectolab.org/">Início</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1823"><a href="https://ectolab.org/agenda/">Agenda</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2478"><a href="https://store.conscienciologia.org.br/product-brand/ectolab/">Loja</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1817"><a href="http://www.ectolab.org/quem-somos/">Ectolab</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2764"><a href="https://ectolab.org/planos/">Ectolab Interassistencial</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1818"><a href="http://ectolab.org/site/quem-somos/">Quem somos</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1819"><a href="https://ectolab.org/conscienciologia/">As ciências</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1827"><a href="https://ectolab.org/materiais-publicados/">Materiais Publicados</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1820"><a href="http://ectolab.org/quem-somos/#cgc">Código Grupal de Cosmoética</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1821"><a href="http://ectolab.org/quem-somos/#voluntariado">Seja um voluntário</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1822"><a href="https://ectolab.org/politica-de-privacidade-2/">Política de Privacidade</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1816"><a href="https://ectolab.org/o-que-e/">Paracirurgia</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1810"><a href="https://ectolab.org/o-que-e/">Sobre a atividade</a>
+	<ul class="sub-menu nav-sidebar-ul">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1808"><a href="https://ectolab.org/o-que-e/">O que é</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1811"><a href="http://ectolab.org/o-que-e/#como-funciona">Como funciona?</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1812"><a href="http://ectolab.org/o-que-e/#quem-atua">Quem faz o quê?</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1813"><a href="http://ectolab.org/o-que-e/#como-participar">Como participar?</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1809"><a href="https://ectolab.org/perguntas-frequentes/">Perguntas Frequentes</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3205"><a href="https://dip-ectolab.org.br/login">Sistema da DIP</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3210"><a href="https://ectolab.org/pontoacoes-do-pedido-de-paracirurgia/">Pontoações da DIP</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1814"><a href="https://ectolab.org/solicitacao-de-paracirurgia/">Solicitações</a>
+	<ul class="sub-menu nav-sidebar-ul">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1815"><a href="https://ectolab.org/solicitacao-de-paracirurgia/">Solicitação de Paracirurgia</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1894"><a href="https://ectolab.org/relatorio-apos-paracirurgia/">Relatório após Paracirurgia</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1900"><a href="https://ectolab.org/assistente-a-distancia-criterios/">Rede Interassistencial de Cirurgia Invisivel a Distância</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-1905"><a href="https://ectolab.org/laboratorio/">Laboratórios</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1944"><a href="https://ectolab.org/laboratorio-de-paracirurgia/">Paracirurgia</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1906"><a href="https://ectolab.org/bioenergologia/">Bioenergologia</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1929"><a href="https://ectolab.org/ectoplasmologia/">Ectoplasmologia</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-1952"><a href="http://ectolab.org">Atividades</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-1828"><a href="http://ectolab.org/materiais-publicados/">Gratuito</a>
+	<ul class="sub-menu nav-sidebar-ul">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page current_page_parent menu-item-1831"><a href="https://ectolab.org/blog/">Blog</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1830"><a href="https://www.youtube.com/@ectolab933">Lives</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1930"><a href="https://ectolab.org/product/orientacaobioenergologia/">Orientação Gratuita</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-1948"><a href="http://ectolab.org">Dinâmicas</a>
+	<ul class="sub-menu nav-sidebar-ul">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3414"><a href="https://ectolab.org/dip-na-alemanha/">Alemanha</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3415"><a href="https://ectolab.org/dip-em-portugal/">Portugal</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3390"><a href="https://ectolab.org/dip-em-brasilia/">Brasília</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1950"><a href="https://ectolab.org/dip-em-curitiba-parana/">Curitiba</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3380"><a href="https://ectolab.org/dip-em-florianopolis/">Florianópolis</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1949"><a href="https://ectolab.org/dip-em-foz-do-iguacu/">Foz do Iguaçu</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-3413"><a href="https://ectolab.org/dip-no-rio-de-janeiro-rj/">Rio de Janeiro</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1951"><a href="https://ectolab.org/dinamica-interassistencial-da-paracirurgia-sao-paulo/">São Paulo</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-2695"><a href="https://ectolab.org/">Cursos</a>
+<ul class="sub-menu nav-sidebar-ul children">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-2851"><a href="https://ectolab.org/">Cursos de Campo</a>
+	<ul class="sub-menu nav-sidebar-ul">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2785"><a href="https://ectolab.org/eppi-ectoplasmia-projetiva-paracirurgica-ectoplasmica-interassistencial/">Eppi</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2797"><a href="https://ectolab.org/campo-interassistencial-paracirurgico/">Campo Paracirúrgico</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2849"><a href="https://ectolab.org/imersao-em-ectoplasmia/">Imersão Em Ectoplasmia 2026</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-2852"><a href="https://ectolab.org/">Cursos Presenciais</a>
+	<ul class="sub-menu nav-sidebar-ul">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2696"><a href="https://ectolab.org/programa-de-estimulacao-parapsiquica-proep/">PROEP</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2850"><a href="https://store.conscienciologia.org.br/loja/ectolab/?s=fitoectoplasmia+inter">Fitoectoplasmia Interassistencial</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-home menu-item-has-children menu-item-2853"><a href="https://ectolab.org/">Cursos Gravados</a>
+	<ul class="sub-menu nav-sidebar-ul">
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2864"><a href="https://store.conscienciologia.org.br/product/ectoplasmia-interassistencial-23-09/">Ectoplasmia Interassistencial</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2854"><a href="https://store.conscienciologia.org.br/product/quadro-sinoptico-parapesquisistico/">Quadro Sinóptico Parapesquisístico</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2861"><a href="https://store.conscienciologia.org.br/product/curso-livre-ciclo-vital-do-ectoplasta/">Ciclo Vital do Ectoplasta</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2862"><a href="https://store.conscienciologia.org.br/product/curso-livre-aplicacoes-praticas-da-ectoplasmia/">Aplicações Práticas da Ectoplasmia</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2863"><a href="https://store.conscienciologia.org.br/product/curso-livre-raizes-da-ectoplasmia/">Raízes da Ectoplasmia</a></li>
+		<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-2865"><a href="https://store.conscienciologia.org.br/sku/304395/">Ectoplasmia Protetiva</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-1825"><a href="https://ectolab.org/1100-2/">Contato</a></li>
+
+<li class="account-item has-icon menu-item">
+			<a href="https://ectolab.org/my-account/" class="nav-top-link nav-top-not-logged-in" title="Entrar">
+			<span class="header-account-title">
+				Entrar			</span>
+		</a>
+	
+	</li>
+			</ul>
+		
+		
+	</div>
+
+	
+</div>
+<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/flatsome/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+<div class="gtranslate_wrapper" id="gt-wrapper-60345792"></div><div class="ux-body-overlay"></div>	<div id="login-form-popup" class="lightbox-content mfp-hide">
+				<div class="woocommerce">
+			<div class="woocommerce-notices-wrapper"></div>
+<div class="account-container lightbox-inner">
+
+	
+			<div class="account-login-inner">
+
+				<h2 class="uppercase h3">Entrar</h2>
+
+				<form class="woocommerce-form woocommerce-form-login login" method="post" novalidate>
+
+					
+					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+						<label for="username">Nome de usuário ou e-mail&nbsp;<span class="required" aria-hidden="true">*</span><span class="screen-reader-text">Obrigatório</span></label>
+						<input type="text" class="woocommerce-Input woocommerce-Input--text input-text" name="username" id="username" autocomplete="username" value="" required aria-required="true" />					</p>
+					<p class="woocommerce-form-row woocommerce-form-row--wide form-row form-row-wide">
+						<label for="password">Senha&nbsp;<span class="required" aria-hidden="true">*</span><span class="screen-reader-text">Obrigatório</span></label>
+						<input class="woocommerce-Input woocommerce-Input--text input-text" type="password" name="password" id="password" autocomplete="current-password" required aria-required="true" />
+					</p>
+
+					<input type="hidden" id="wpa_initiator" class="wpa_initiator" name="wpa_initiator" value="" />
+					<p class="form-row">
+						<label class="woocommerce-form__label woocommerce-form__label-for-checkbox woocommerce-form-login__rememberme">
+							<input class="woocommerce-form__input woocommerce-form__input-checkbox" name="rememberme" type="checkbox" id="rememberme" value="forever" /> <span>Lembre-me</span>
+						</label>
+						<input type="hidden" id="woocommerce-login-nonce" name="woocommerce-login-nonce" value="33b896b4ff" /><input type="hidden" name="_wp_http_referer" value="/wp-content/uploads/2023/10/Blog-600-x-350-px.png" />						<button type="submit" class="woocommerce-button button woocommerce-form-login__submit" name="login" value="Acessar">Acessar</button>
+					</p>
+					<p class="woocommerce-LostPassword lost_password">
+						<a href="https://ectolab.org/my-account/lost-password/">Perdeu sua senha?</a>
+					</p>
+
+					
+				</form>
+			</div>
+
+			
+</div>
+
+		</div>
+			</div>
+		<script type='text/javascript'>
+		(function () {
+			var c = document.body.className;
+			c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+			document.body.className = c;
+		})();
+	</script>
+	<script id="wp-hooks-js" src="https://ectolab.org/wp-includes/js/dist/hooks.min.js?ver=7496969728ca0f95732d"></script>
+<script id="wp-i18n-js" src="https://ectolab.org/wp-includes/js/dist/i18n.min.js?ver=781d11515ad3d91786ec"></script>
+<script id="wp-i18n-js-after">
+wp.i18n.setLocaleData( { 'text direction\u0004ltr': [ 'ltr' ] } );
+//# sourceURL=wp-i18n-js-after
+</script>
+<script id="swv-js" src="https://ectolab.org/wp-content/plugins/contact-form-7/includes/swv/js/index.js?ver=6.1.3"></script>
+<script id="contact-form-7-js-translations">
+( function( domain, translations ) {
+	var localeData = translations.locale_data[ domain ] || translations.locale_data.messages;
+	localeData[""].domain = domain;
+	wp.i18n.setLocaleData( localeData, domain );
+} )( "contact-form-7", {"translation-revision-date":"2025-05-19 13:41:20+0000","generator":"GlotPress\/4.0.1","domain":"messages","locale_data":{"messages":{"":{"domain":"messages","plural-forms":"nplurals=2; plural=n > 1;","lang":"pt_BR"},"Error:":["Erro:"]}},"comment":{"reference":"includes\/js\/index.js"}} );
+//# sourceURL=contact-form-7-js-translations
+</script>
+<script id="contact-form-7-js-before">
+var wpcf7 = {
+    "api": {
+        "root": "https:\/\/ectolab.org\/wp-json\/",
+        "namespace": "contact-form-7\/v1"
+    },
+    "cached": 1
+};
+//# sourceURL=contact-form-7-js-before
+</script>
+<script id="contact-form-7-js" src="https://ectolab.org/wp-content/plugins/contact-form-7/includes/js/index.js?ver=6.1.3"></script>
+<script id="wpascript-js" src="https://ectolab.org/wp-content/plugins/honeypot/includes/js/wpa.js?ver=2.3.04"></script>
+<script id="wpascript-js-after">
+wpa_field_info = {"wpa_field_name":"jyztmx6841","wpa_field_value":423601,"wpa_add_test":"no"}
+//# sourceURL=wpascript-js-after
+</script>
+<script id="woocommerce-js-extra">
+var woocommerce_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","i18n_password_show":"Mostrar senha","i18n_password_hide":"Ocultar senha"};
+//# sourceURL=woocommerce-js-extra
+</script>
+<script data-wp-strategy="defer" id="woocommerce-js" src="https://ectolab.org/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=4b733b"></script>
+<script id="flatsome-live-search-js" src="https://ectolab.org/wp-content/themes/flatsome/assets/js/extensions/flatsome-live-search.js?ver=3.20.3"></script>
+<script id="sourcebuster-js-js" src="https://ectolab.org/wp-content/plugins/woocommerce/assets/js/sourcebuster/sourcebuster.min.js?ver=4b733b"></script>
+<script id="wc-order-attribution-js-extra">
+var wc_order_attribution = {"params":{"lifetime":1.0e-5,"session":30,"base64":false,"ajaxurl":"https://ectolab.org/wp-admin/admin-ajax.php","prefix":"wc_order_attribution_","allowTracking":true},"fields":{"source_type":"current.typ","referrer":"current_add.rf","utm_campaign":"current.cmp","utm_source":"current.src","utm_medium":"current.mdm","utm_content":"current.cnt","utm_id":"current.id","utm_term":"current.trm","utm_source_platform":"current.plt","utm_creative_format":"current.fmt","utm_marketing_tactic":"current.tct","session_entry":"current_add.ep","session_start_time":"current_add.fd","session_pages":"session.pgs","session_count":"udata.vst","user_agent":"udata.uag"}};
+//# sourceURL=wc-order-attribution-js-extra
+</script>
+<script id="wc-order-attribution-js" src="https://ectolab.org/wp-content/plugins/woocommerce/assets/js/frontend/order-attribution.min.js?ver=4b733b"></script>
+<script id="google-recaptcha-js" src="https://www.google.com/recaptcha/api.js?render=6LfYTEspAAAAAMnM6fjHlStpt7rm0pykLGw5g_-J&#038;ver=3.0"></script>
+<script id="wp-polyfill-js" src="https://ectolab.org/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0"></script>
+<script id="wpcf7-recaptcha-js-before">
+var wpcf7_recaptcha = {
+    "sitekey": "6LfYTEspAAAAAMnM6fjHlStpt7rm0pykLGw5g_-J",
+    "actions": {
+        "homepage": "homepage",
+        "contactform": "contactform"
+    }
+};
+//# sourceURL=wpcf7-recaptcha-js-before
+</script>
+<script id="wpcf7-recaptcha-js" src="https://ectolab.org/wp-content/plugins/contact-form-7/modules/recaptcha/index.js?ver=6.1.3"></script>
+<script id="hoverIntent-js" src="https://ectolab.org/wp-includes/js/hoverIntent.min.js?ver=1.10.2"></script>
+<script id="flatsome-js-js-extra">
+var flatsomeVars = {"theme":{"version":"3.20.3"},"ajaxurl":"https://ectolab.org/wp-admin/admin-ajax.php","rtl":"","sticky_height":"70","stickyHeaderHeight":"0","scrollPaddingTop":"0","assets_url":"https://ectolab.org/wp-content/themes/flatsome/assets/","lightbox":{"close_markup":"\u003Cbutton title=\"%title%\" type=\"button\" class=\"mfp-close\"\u003E\u003Csvg xmlns=\"http://www.w3.org/2000/svg\" width=\"28\" height=\"28\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"feather feather-x\"\u003E\u003Cline x1=\"18\" y1=\"6\" x2=\"6\" y2=\"18\"\u003E\u003C/line\u003E\u003Cline x1=\"6\" y1=\"6\" x2=\"18\" y2=\"18\"\u003E\u003C/line\u003E\u003C/svg\u003E\u003C/button\u003E","close_btn_inside":false},"user":{"can_edit_pages":false},"i18n":{"mainMenu":"Menu Principal","toggleButton":"Toggle"},"options":{"cookie_notice_version":"1","swatches_layout":false,"swatches_disable_deselect":false,"swatches_box_select_event":false,"swatches_box_behavior_selected":false,"swatches_box_update_urls":"1","swatches_box_reset":false,"swatches_box_reset_limited":false,"swatches_box_reset_extent":false,"swatches_box_reset_time":300,"search_result_latency":"0","header_nav_vertical_fly_out_frontpage":1},"is_mini_cart_reveal":"1"};
+//# sourceURL=flatsome-js-js-extra
+</script>
+<script id="flatsome-js-js" src="https://ectolab.org/wp-content/themes/flatsome/assets/js/flatsome.js?ver=e2eddd6c228105dac048"></script>
+<script id="flatsome-theme-woocommerce-js-js" src="https://ectolab.org/wp-content/themes/flatsome/assets/js/woocommerce.js?ver=1c9be63d628ff7c3ff4c"></script>
+<script id="wc-cart-fragments-js-extra">
+var wc_cart_fragments_params = {"ajax_url":"/wp-admin/admin-ajax.php","wc_ajax_url":"/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_58cba88879b992644b2d753ad7aa74fc","fragment_name":"wc_fragments_58cba88879b992644b2d753ad7aa74fc","request_timeout":"5000"};
+//# sourceURL=wc-cart-fragments-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="wc-cart-fragments-js" src="https://ectolab.org/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=4b733b"></script>
+<script id="gt_widget_script_60345792-js-before">
+window.gtranslateSettings = /* document.write */ window.gtranslateSettings || {};window.gtranslateSettings['60345792'] = {"default_language":"pt","languages":["ar","zh-CN","nl","en","fr","de","it","pt","ru","es"],"url_structure":"none","flag_style":"2d","wrapper_selector":"#gt-wrapper-60345792","alt_flags":{"pt":"brazil"},"float_switcher_open_direction":"top","switcher_horizontal_position":"left","switcher_vertical_position":"bottom","flags_location":"\/wp-content\/plugins\/gtranslate\/flags\/"};
+//# sourceURL=gt_widget_script_60345792-js-before
+</script><script src="https://ectolab.org/wp-content/plugins/gtranslate/js/float.js?ver=39fa8b" data-no-optimize="1" data-no-minify="1" data-gt-orig-url="/wp-content/uploads/2023/10/Blog-600-x-350-px.png" data-gt-orig-domain="ectolab.org" data-gt-widget-id="60345792" defer></script><script id="wp-emoji-settings" type="application/json">
+{"baseUrl":"https://s.w.org/images/core/emoji/17.0.2/72x72/","ext":".png","svgUrl":"https://s.w.org/images/core/emoji/17.0.2/svg/","svgExt":".svg","source":{"concatemoji":"https://ectolab.org/wp-includes/js/wp-emoji-release.min.js?ver=39fa8b"}}
+</script>
+<script type="module">
+/*! This file is auto-generated */
+const a=JSON.parse(document.getElementById("wp-emoji-settings").textContent),o=(window._wpemojiSettings=a,"wpEmojiSettingsSupports"),s=["flag","emoji"];function i(e){try{var t={supportTests:e,timestamp:(new Date).valueOf()};sessionStorage.setItem(o,JSON.stringify(t))}catch(e){}}function c(e,t,n){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);t=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(n,0,0);const a=new Uint32Array(e.getImageData(0,0,e.canvas.width,e.canvas.height).data);return t.every((e,t)=>e===a[t])}function p(e,t){e.clearRect(0,0,e.canvas.width,e.canvas.height),e.fillText(t,0,0);var n=e.getImageData(16,16,1,1);for(let e=0;e<n.data.length;e++)if(0!==n.data[e])return!1;return!0}function u(e,t,n,a){switch(t){case"flag":return n(e,"\ud83c\udff3\ufe0f\u200d\u26a7\ufe0f","\ud83c\udff3\ufe0f\u200b\u26a7\ufe0f")?!1:!n(e,"\ud83c\udde8\ud83c\uddf6","\ud83c\udde8\u200b\ud83c\uddf6")&&!n(e,"\ud83c\udff4\udb40\udc67\udb40\udc62\udb40\udc65\udb40\udc6e\udb40\udc67\udb40\udc7f","\ud83c\udff4\u200b\udb40\udc67\u200b\udb40\udc62\u200b\udb40\udc65\u200b\udb40\udc6e\u200b\udb40\udc67\u200b\udb40\udc7f");case"emoji":return!a(e,"\ud83e\u1fac8")}return!1}function f(e,t,n,a){let r;const o=(r="undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?new OffscreenCanvas(300,150):document.createElement("canvas")).getContext("2d",{willReadFrequently:!0}),s=(o.textBaseline="top",o.font="600 32px Arial",{});return e.forEach(e=>{s[e]=t(o,e,n,a)}),s}function r(e){var t=document.createElement("script");t.src=e,t.defer=!0,document.head.appendChild(t)}a.supports={everything:!0,everythingExceptFlag:!0},new Promise(t=>{let n=function(){try{var e=JSON.parse(sessionStorage.getItem(o));if("object"==typeof e&&"number"==typeof e.timestamp&&(new Date).valueOf()<e.timestamp+604800&&"object"==typeof e.supportTests)return e.supportTests}catch(e){}return null}();if(!n){if("undefined"!=typeof Worker&&"undefined"!=typeof OffscreenCanvas&&"undefined"!=typeof URL&&URL.createObjectURL&&"undefined"!=typeof Blob)try{var e="postMessage("+f.toString()+"("+[JSON.stringify(s),u.toString(),c.toString(),p.toString()].join(",")+"));",a=new Blob([e],{type:"text/javascript"});const r=new Worker(URL.createObjectURL(a),{name:"wpTestEmojiSupports"});return void(r.onmessage=e=>{i(n=e.data),r.terminate(),t(n)})}catch(e){}i(n=f(s,u,c,p))}t(n)}).then(e=>{for(const n in e)a.supports[n]=e[n],a.supports.everything=a.supports.everything&&a.supports[n],"flag"!==n&&(a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&a.supports[n]);var t;a.supports.everythingExceptFlag=a.supports.everythingExceptFlag&&!a.supports.flag,a.supports.everything||((t=a.source||{}).concatemoji?r(t.concatemoji):t.wpemoji&&t.twemoji&&(r(t.twemoji),r(t.wpemoji)))});
+//# sourceURL=https://ectolab.org/wp-includes/js/wp-emoji-loader.min.js
+</script>
+
+</body>
+</html>
+
+
+<!-- Page cached by LiteSpeed Cache 7.6.2 on 2026-06-19 15:42:26 -->
