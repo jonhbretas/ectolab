@@ -62,7 +62,7 @@ function seoPlugin() {
               legalName: 'Associação Internacional de Pesquisa Laboratorial em Paracirurgia e Ectoplasmia',
               url: SITE_URL,
               logo: image,
-              foundingDate: '2003',
+              foundingDate: '2013',
               email: 'contato@ectolab.org',
               address: {
                 '@type': 'PostalAddress',
@@ -72,7 +72,7 @@ function seoPlugin() {
                 postalCode: '85851-040',
                 addressCountry: 'BR'
               },
-              areaServed: ['BR', 'PT', 'ES', 'US'],
+              areaServed: ['BR', 'PT', 'ES'],
               knowsAbout: ['ectoplasmia', 'ectoplasma', 'paracirurgia', 'conscienciologia', 'parafenomenos']
             },
             {
