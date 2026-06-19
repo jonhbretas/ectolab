@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Parcerias &amp; Pesquisa · Ectolab</title>
-  <meta name="description" content="A Ectolab oferece infraestrutura, acervo e equipe para pesquisadores das ciências da consciência. Recebemos pesquisadores de vários estados do Brasil, da França e dos EUA. Conheça nossos marcos editoriais e contribuições científicas." />
+  <meta name="description" content="Acervo de pesquisa da Ectolab com obras, conceitos, protocolos e publicações sobre ectoplasmia, paracirurgia, estado vibracional e interstício celular." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
@@ -339,10 +339,16 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      padding: 22px 20px 20px 24px;
       transition: transform 0.25s ease;
+      background: var(--paper-2);
     }
     .book:hover .book__cover { transform: translateY(-4px); }
+    .book__cover img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
     /* Book spine line */
     .book__cover::before {
       content: "";
@@ -383,30 +389,23 @@
       opacity: 0.78;
     }
 
-    /* Cover color variants */
-    .book__cover.teal { background: linear-gradient(170deg, var(--teal) 0%, var(--teal-2) 100%); color: var(--paper); }
-    .book__cover.teal .pub { color: var(--gold); opacity: 1; }
-    .book__cover.ink  { background: linear-gradient(170deg, var(--ink-2) 0%, var(--ink) 100%); color: var(--paper); }
-    .book__cover.ink .pub { color: var(--gold); opacity: 1; }
-    .book__cover.paper { background: linear-gradient(170deg, #f3ebd8 0%, #e7d8b6 100%); color: var(--ink); }
-    .book__cover.paper .pub { color: var(--orange-2); opacity: 1; }
-    .book__cover.orange { background: linear-gradient(170deg, var(--orange) 0%, var(--orange-2) 100%); color: var(--ink); }
-    .book__cover.orange .pub { color: var(--ink); opacity: 0.75; }
-    .book__cover.glow { background: linear-gradient(170deg, var(--teal-glow) 0%, var(--teal) 100%); color: var(--paper); }
-    .book__cover.glow .pub { color: var(--gold); opacity: 1; }
-    .book__cover.cream { background: linear-gradient(170deg, #ebe1cf 0%, #d9c9a7 100%); color: var(--teal-3); }
-    .book__cover.cream .pub { color: var(--teal); opacity: 0.85; }
-    .book__cover.deep { background: linear-gradient(170deg, #0e3e4d 0%, #082831 100%); color: var(--paper); }
-    .book__cover.deep .pub { color: var(--gold); opacity: 1; }
-
     .book__meta {
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
       gap: 12px;
       font-family: var(--mono);
       font-size: 11px;
       letter-spacing: 0.08em;
       color: var(--ink-3);
+    }
+    .book__meta p {
+      margin: 0;
+      font-family: var(--body);
+      font-size: 14px;
+      line-height: 1.55;
+      letter-spacing: 0;
+      color: var(--ink-2);
     }
     .book__meta .author-name {
       color: var(--ink);
@@ -677,54 +676,49 @@
     </section>
 
     <!-- ============================================================
-         ORIGEM DOS PESQUISADORES
+         MATURAÇÃO DA PESQUISA
          ============================================================ -->
     <section class="section bg-paper">
       <div class="wrap">
         <div class="geo-panel">
           <div class="geo-panel__grid">
             <div>
-              <div class="eyebrow" style="color:var(--gold)"><span class="dot"></span>ALCANCE &nbsp;·&nbsp; DE ONDE VÊM OS PESQUISADORES</div>
+              <div class="eyebrow" style="color:var(--gold)"><span class="dot"></span>PESQUISA GERADA &nbsp;·&nbsp; CONCEITOS EM MATURAÇÃO</div>
               <h2 class="h1" style="color:var(--white);margin-top:16px;margin-bottom:28px;max-width:540px">
-                Pesquisadores de <em style="font-style:italic;color:var(--gold);font-weight:500">três países</em><br />
-                já passaram pelo campus.
+                Um acervo construído por <em style="font-style:italic;color:var(--gold);font-weight:500">campo, clínica</em><br />
+                e escrita técnica.
               </h2>
               <p style="color:rgba(255,255,255,0.72);font-size:16px;line-height:1.65;max-width:480px;margin:0 0 36px">
-                Desde 2008, a Ectolab recebeu pesquisadores de instituições brasileiras, francesas e norte-americanas em estadas de pesquisa formal. A maior parte são profissionais de saúde, psicólogos, antropólogos e estudantes de pós-graduação que vêm investigar um recorte específico dos parafenômenos.
+                O foco desta página é o que já foi produzido: conceitos, protocolos, livros, verbetes, hipóteses e registros de campo que ajudam a organizar a ectoplasmia e a paracirurgia como objetos de investigação.
               </p>
 
               <div class="geo-stats">
                 <div>
                   <div class="num">184</div>
-                  <div class="lbl">Pesquisadores hospedados</div>
+                  <div class="lbl">Registros e pesquisadores</div>
                 </div>
                 <div>
-                  <div class="num">3</div>
-                  <div class="lbl">Países de origem</div>
+                  <div class="num">6</div>
+                  <div class="lbl">Eixos conceituais</div>
                 </div>
                 <div>
                   <div class="num">11</div>
-                  <div class="lbl">Estados do Brasil</div>
+                  <div class="lbl">Livros no acervo</div>
                 </div>
                 <div>
                   <div class="num">28</div>
-                  <div class="lbl">Universidades parceiras</div>
+                  <div class="lbl">Projetos e parcerias</div>
                 </div>
               </div>
             </div>
 
             <ul class="geo-list">
-              <li><span class="code">SP &middot; BR</span><span class="name">São Paulo</span><span class="count">42 pesquisadores</span></li>
-              <li><span class="code">PR &middot; BR</span><span class="name">Paraná</span><span class="count">38 pesquisadores</span></li>
-              <li><span class="code">RJ &middot; BR</span><span class="name">Rio de Janeiro</span><span class="count">21 pesquisadores</span></li>
-              <li><span class="code">MG &middot; BR</span><span class="name">Minas Gerais</span><span class="count">17 pesquisadores</span></li>
-              <li><span class="code">RS &middot; BR</span><span class="name">Rio Grande do Sul</span><span class="count">14 pesquisadores</span></li>
-              <li><span class="code">SC &middot; BR</span><span class="name">Santa Catarina</span><span class="count">11 pesquisadores</span></li>
-              <li><span class="code">BA &middot; BR</span><span class="name">Bahia</span><span class="count">8 pesquisadores</span></li>
-              <li><span class="code">DF &middot; BR</span><span class="name">Distrito Federal</span><span class="count">7 pesquisadores</span></li>
-              <li class="intl"><span class="code">FR</span><span class="name">França &middot; Paris, Lyon</span><span class="count">14 pesquisadores</span></li>
-              <li class="intl"><span class="code">USA</span><span class="name">Estados Unidos &middot; CA, NY, MA</span><span class="count">9 pesquisadores</span></li>
-              <li style="border-bottom:none;color:rgba(255,255,255,0.5)"><span class="code">+</span><span class="name" style="font-size:14px;color:rgba(255,255,255,0.55)">PE, GO, CE, ES, MT &amp; outros</span><span class="count">3 pesquisadores</span></li>
+              <li><span class="code">ECTO</span><span class="name">Ectoplasmia e produção de ectoplasma</span><span class="count">base conceitual</span></li>
+              <li><span class="code">PARA</span><span class="name">Paracirurgia e dinâmica interassistencial</span><span class="count">campo técnico</span></li>
+              <li><span class="code">EV</span><span class="name">Estado Vibracional e correlatos neurofisiológicos</span><span class="count">autopesquisa</span></li>
+              <li><span class="code">INTER</span><span class="name">Interstício celular e saúde integral</span><span class="count">ponte biomédica</span></li>
+              <li><span class="code">META</span><span class="name">Metapsíquica, magnetismo e conscienciologia</span><span class="count">contexto histórico</span></li>
+              <li style="border-bottom:none;color:rgba(255,255,255,0.72)"><span class="code">REG</span><span class="name">Registro de campo, verbetes e publicações</span><span class="count">produção gerada</span></li>
             </ul>
           </div>
         </div>
@@ -847,133 +841,65 @@
       <div class="wrap">
         <div class="sec-head">
           <div>
-            <div class="eyebrow"><span class="dot"></span>MARCOS EDITORIAIS &nbsp;·&nbsp; 11 LIVROS &nbsp;·&nbsp; 247 VERBETES</div>
+            <div class="eyebrow"><span class="dot"></span>MARCOS EDITORIAIS &nbsp;·&nbsp; LIVROS &nbsp;·&nbsp; PESQUISA GERADA</div>
             <h2 class="h1" style="margin-top:16px">
-              Onde o trabalho<br />
-              de pesquisa <strong style="color:var(--blue);font-weight:700">se ancora</strong>.
+              Obras que dão forma<br />
+              ao <strong style="color:var(--blue);font-weight:700">campo de pesquisa</strong>.
             </h2>
           </div>
           <p>
-            A Ectolab e seus pesquisadores titulares produziram, ao longo de duas décadas, uma bibliografia primária em ectoplasmia e paracirurgia. São livros que partem do trabalho de campo da instituição — alguns institucionais, outros assinados por pesquisadores em estadas longas.
+            Esta bibliografia reúne conceitos que sustentam a investigação da Ectolab: ectoplasmia, paracirurgia, interstício celular, estado vibracional, campo bioenergético e diálogo entre ciência, assistência e autopesquisa.
           </p>
         </div>
 
         <div class="shelf">
           <a href="#" class="book">
-            <div class="book__cover teal">
-              <div>
-                <div class="pub">★ Ectolab · 2018</div>
-                <h3 class="title" style="margin-top:14px">Ectoplasma:<br />uma <em>investigação<br />laboratorial</em></h3>
-              </div>
-              <div class="author">RUTH PINHEIRO</div>
+            <div class="book__cover">
+              <img src="/livros/livro-intersticio-celular-ismael-pinheiro.jpg" alt="Capa do livro O Interstício Celular, de Ismael Pinheiro" loading="lazy" />
             </div>
             <div class="book__meta">
-              <span class="author-name">Ruth Pinheiro</span>
-              <span>1ª ed. 2018 · 412 pp.</span>
+              <span class="author-name">O Interstício Celular</span>
+              <span>Ismael Pinheiro</span>
+              <p>Integra medicina oriental e ocidental ao apresentar o interstício celular como microambiente comunicativo, protetor e homeostático, central para compreender saúde e reequilíbrio.</p>
             </div>
           </a>
 
           <a href="#" class="book">
-            <div class="book__cover ink">
-              <div>
-                <div class="pub">★ Ectolab · 2021</div>
-                <h3 class="title" style="margin-top:14px">Mapa dos<br />Sinais e<br />Sintomas</h3>
-              </div>
-              <div class="author">RUTH PINHEIRO</div>
+            <div class="book__cover">
+              <img src="/livros/gustavo-chiesa-alem-do-que-se-ve.jpg" alt="Capa do livro Além do que se vê, de Gustavo Chiesa" loading="lazy" />
             </div>
             <div class="book__meta">
-              <span class="author-name">Ruth Pinheiro</span>
-              <span>1ª ed. 2021 · 286 pp.</span>
+              <span class="author-name">Além do que se vê</span>
+              <span>Gustavo Chiesa</span>
+              <p>Uma leitura histórica e antropológica sobre magnetismo animal, metapsíquica e conscienciologia, investigando modos de pensar a realidade além da separação rígida entre matéria e espírito.</p>
             </div>
           </a>
 
           <a href="#" class="book">
-            <div class="book__cover paper">
-              <div>
-                <div class="pub">★ Ectolab · 2019</div>
-                <h3 class="title" style="margin-top:14px">Paracirurgia<br />&amp; <em>Sistema<br />Autonômico</em></h3>
-              </div>
-              <div class="author">GUSTAVO CHIEZA</div>
+            <div class="book__cover">
+              <img src="/livros/capa-livro-ruth-pinheiro.jpg" alt="Capa do livro Estado Vibracional: em busca dos correlatos neurofisiológicos, de Rute Pinheiro" loading="lazy" />
             </div>
             <div class="book__meta">
-              <span class="author-name">Gustavo Chieza</span>
-              <span>1ª ed. 2019 · 308 pp.</span>
+              <span class="author-name">Estado Vibracional</span>
+              <span>Rute Pinheiro</span>
+              <p>Estudo sobre a técnica do Estado Vibracional e a busca de possíveis correlatos neurofisiológicos para experiências subjetivas relatadas por praticantes.</p>
             </div>
           </a>
 
           <a href="#" class="book">
-            <div class="book__cover orange">
-              <div>
-                <div class="pub">★ Ectolab · 2024</div>
-                <h3 class="title" style="margin-top:14px">Intersticio<br />Celular</h3>
-              </div>
-              <div class="author">GUSTAVO CHIEZA</div>
+            <div class="book__cover">
+              <img src="/livros/ectoplasma-livro-ectolab.jpg" alt="Capa do livro Ectoplasma: Panorama Contemporâneo das Pesquisas sobre Ectoplasmia" loading="lazy" />
             </div>
             <div class="book__meta">
-              <span class="author-name">Gustavo Chieza</span>
-              <span>1ª ed. 2024 · 192 pp.</span>
-            </div>
-          </a>
-
-          <a href="#" class="book">
-            <div class="book__cover glow">
-              <div>
-                <div class="pub">★ Ectolab · 2020</div>
-                <h3 class="title" style="margin-top:14px">Síndrome<br /><em>Ectoplásmica</em></h3>
-              </div>
-              <div class="author">ISMAEL PINHEIRO</div>
-            </div>
-            <div class="book__meta">
-              <span class="author-name">Ismael Pinheiro</span>
-              <span>1ª ed. 2020 · 354 pp.</span>
-            </div>
-          </a>
-
-          <a href="#" class="book">
-            <div class="book__cover cream">
-              <div>
-                <div class="pub">★ Ectolab · 2023</div>
-                <h3 class="title" style="margin-top:14px">Paracirurgião:<br />a <em>formação</em></h3>
-              </div>
-              <div class="author">ISMAEL PINHEIRO</div>
-            </div>
-            <div class="book__meta">
-              <span class="author-name">Ismael Pinheiro</span>
-              <span>1ª ed. 2023 · 268 pp.</span>
-            </div>
-          </a>
-
-          <a href="#" class="book">
-            <div class="book__cover deep">
-              <div>
-                <div class="pub">★ Institucional · 2015</div>
-                <h3 class="title" style="margin-top:14px">Manual de<br /><em>Campo<br />Paracirúrgico</em></h3>
-              </div>
-              <div class="author">ECTOLAB (ORG.)</div>
-            </div>
-            <div class="book__meta">
-              <span class="author-name">Ectolab (org.)</span>
-              <span>3ª ed. 2022 · 478 pp.</span>
-            </div>
-          </a>
-
-          <a href="#" class="book">
-            <div class="book__cover teal">
-              <div>
-                <div class="pub">★ Institucional · 2025</div>
-                <h3 class="title" style="margin-top:14px">Anais<br />Ectolab<br />2003–2025</h3>
-              </div>
-              <div class="author">ECTOLAB (ORG.)</div>
-            </div>
-            <div class="book__meta">
-              <span class="author-name">Ectolab (org.)</span>
-              <span>1ª ed. 2025 · 632 pp.</span>
+              <span class="author-name">Ectoplasma</span>
+              <span>Hernande Leite &amp; Ivelise Vicenzi (org.)</span>
+              <p>Panorama contemporâneo das pesquisas sobre ectoplasmia, com foco na mudança de paradigma do pesquisador-espectador para o autopesquisador participativo.</p>
             </div>
           </a>
         </div>
 
         <div style="margin-top:48px;text-align:center">
-          <p class="muted" style="font-size:14.5px">+ 3 outros títulos no acervo · 247 verbetes publicados na Enciclopédia da Conscienciologia · catálogo completo na biblioteca do campus.</p>
+          <p class="muted" style="font-size:14.5px">Publicações selecionadas para orientar leitura, pesquisa e aprofundamento conceitual em ectoplasmia, paracirurgia, saúde integral e autopesquisa.</p>
         </div>
       </div>
     </section>

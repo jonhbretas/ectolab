@@ -66,10 +66,10 @@ function seoPlugin() {
               email: 'contato@ectolab.org',
               address: {
                 '@type': 'PostalAddress',
-                streetAddress: 'Av. Paraná, 1230',
+                streetAddress: 'Rua da Cosmoética, 1635 – sala 12',
                 addressLocality: 'Foz do Iguaçu',
                 addressRegion: 'PR',
-                postalCode: '85851-040',
+                postalCode: '85853-755',
                 addressCountry: 'BR'
               },
               areaServed: ['BR', 'PT', 'ES'],
