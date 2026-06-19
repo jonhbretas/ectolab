@@ -188,10 +188,21 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      display: flex;
-      flex-direction: column;
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: minmax(280px, 46%);
+      grid-template-rows: repeat(8, auto);
       gap: 0;
       border-top: 1px solid rgba(255,255,255,0.18);
+      overflow-x: auto;
+      overflow-y: hidden;
+      scroll-snap-type: x mandatory;
+      scroll-behavior: smooth;
+      scrollbar-width: none;
+      padding-bottom: 6px;
+    }
+    .geo-list::-webkit-scrollbar {
+      display: none;
     }
     .geo-list li {
       display: grid;
@@ -203,6 +214,7 @@
       font-family: var(--mono);
       font-size: 13px;
       letter-spacing: 0.04em;
+      scroll-snap-align: start;
     }
     .geo-list .code {
       color: var(--gold);
@@ -216,7 +228,49 @@
       letter-spacing: -0.005em;
       font-weight: 500;
     }
-    @media (max-width: 900px) { .geo-panel__grid { grid-template-columns: 1fr; gap: 32px; } }
+    .verbete-slider {
+      min-width: 0;
+    }
+    .verbete-slider__head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      margin-bottom: 18px;
+      border-top: 1px solid rgba(255,255,255,0.18);
+      padding-top: 18px;
+    }
+    .verbete-slider__head p {
+      margin: 0;
+      color: rgba(255,255,255,0.68);
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+    .verbete-slider__controls {
+      display: flex;
+      gap: 8px;
+      flex: 0 0 auto;
+    }
+    .verbete-slider__btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,0.24);
+      background: rgba(255,255,255,0.04);
+      color: var(--white);
+      font-family: var(--mono);
+      cursor: pointer;
+    }
+    .verbete-slider__btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+    }
+    @media (max-width: 900px) {
+      .geo-panel__grid { grid-template-columns: 1fr; gap: 32px; }
+      .geo-list { grid-auto-columns: 86%; grid-template-rows: repeat(6, auto); }
+    }
 
     /* Scientific contributions */
     .contrib-grid {
@@ -703,55 +757,65 @@
               </div>
             </div>
 
-            <ul class="geo-list">
-              <li><span class="code">01</span><span class="name">Ectoplasma</span></li>
-              <li><span class="code">02</span><span class="name">Paracirurgia</span></li>
-              <li><span class="code">03</span><span class="name">Síndrome ectoplásmica</span></li>
-              <li><span class="code">04</span><span class="name">Dinâmica Interassistencial de Paracirurgia</span></li>
-              <li><span class="code">05</span><span class="name">Parapercepciograma</span></li>
-              <li><span class="code">06</span><span class="name">Efeito da Ectoplasmia</span></li>
-              <li><span class="code">07</span><span class="name">Jovem ectoplasta</span></li>
-              <li><span class="code">08</span><span class="name">Assunção da Autoectoplasmia</span></li>
-              <li><span class="code">09</span><span class="name">Autocognição Parapsíquica Ectoplásmica</span></li>
-              <li><span class="code">10</span><span class="name">Autogestão Ectoplásmica</span></li>
-              <li><span class="code">11</span><span class="name">Autoimunidade Pensênica do Ectoplasta</span></li>
-              <li><span class="code">12</span><span class="name">Automotivação Gesconográfica do Ectoplasta</span></li>
-              <li><span class="code">13</span><span class="name">Conscin Ectoplasta</span></li>
-              <li><span class="code">14</span><span class="name">Docente Ectoplasta</span></li>
-              <li><span class="code">15</span><span class="name">Ectoplasmia Autocurativa</span></li>
-              <li><span class="code">16</span><span class="name">Ectoplasmia na Autodefesa Energética</span></li>
-              <li><span class="code">17</span><span class="name">Efeito da Ortopensenidade na Autoectoplasmia</span></li>
-              <li><span class="code">18</span><span class="name">Estimulação Parapsíquica Ectoplásmica</span></li>
-              <li><span class="code">19</span><span class="name">Fitoectoplasma</span></li>
-              <li><span class="code">20</span><span class="name">Ginoectoplasma</span></li>
-              <li><span class="code">21</span><span class="name">Holosfera Paracirúrgica</span></li>
-              <li><span class="code">22</span><span class="name">Interação Ectoplasmia-Clarividência</span></li>
-              <li><span class="code">23</span><span class="name">Pedido de Paracirurgia</span></li>
-              <li><span class="code">24</span><span class="name">Potencial Ectoplásmico Interassistencial</span></li>
-              <li><span class="code">25</span><span class="name">Proexista Ectoplasta</span></li>
-              <li><span class="code">26</span><span class="name">Zooectoplasma</span></li>
-              <li><span class="code">27</span><span class="name">Autorganização do Ectoplasta</span></li>
-              <li><span class="code">28</span><span class="name">Desintoxicação Energossomática do Ectoplasta</span></li>
-              <li><span class="code">29</span><span class="name">Ectoplasta Desassediador</span></li>
-              <li><span class="code">30</span><span class="name">Inversor Ectoplasta</span></li>
-              <li><span class="code">31</span><span class="name">Parassegurança do Ectoplasta</span></li>
-              <li><span class="code">32</span><span class="name">Saúde Consciencial do Ectoplasta</span></li>
-              <li><span class="code">33</span><span class="name">Tenepessista Ectoplasta</span></li>
-              <li><span class="code">34</span><span class="name">Ectoplasmia Interassistencial</span></li>
-              <li><span class="code">35</span><span class="name">Efeito Paciológico da Ectoplasmia</span></li>
-              <li><span class="code">36</span><span class="name">Grafoectoplasmia</span></li>
-              <li><span class="code">37</span><span class="name">Interação Ectoplasmia-Arco Voltaico Craniochacral</span></li>
-              <li><span class="code">38</span><span class="name">Laboratório Conscienciológico da Ectoplasmia</span></li>
-              <li><span class="code">39</span><span class="name">Requinte da Ectoplasmia</span></li>
-              <li><span class="code">40</span><span class="name">Sinalética da Ectoplasmia</span></li>
-              <li><span class="code">41</span><span class="name">Interação Paracirurgia-Megafraternidade</span></li>
-              <li><span class="code">42</span><span class="name">Interação Parapercepção Ectoplásmica-Paracirurgia</span></li>
-              <li><span class="code">43</span><span class="name">Rede Interassistencial da Paracirurgia a Distância</span></li>
-              <li><span class="code">44</span><span class="name">Sintoma em Paracirurgia</span></li>
-              <li><span class="code">45</span><span class="name">Autodisponibilidade Ectoplásmica</span></li>
-              <li><span class="code">46</span><span class="name">Ectoplasmologia</span></li>
-              <li style="border-bottom:none"><span class="code">47</span><span class="name">Ectoplasmólogo</span></li>
-            </ul>
+            <div class="verbete-slider">
+              <div class="verbete-slider__head">
+                <p>Deslize para ver a relação completa</p>
+                <div class="verbete-slider__controls" aria-label="Navegar pelos verbetes">
+                  <button class="verbete-slider__btn" type="button" data-verbete-prev aria-label="Ver verbetes anteriores">←</button>
+                  <button class="verbete-slider__btn" type="button" data-verbete-next aria-label="Ver próximos verbetes">→</button>
+                </div>
+              </div>
+
+              <ul class="geo-list" data-verbete-list>
+                <li><span class="code">01</span><span class="name">Ectoplasma</span></li>
+                <li><span class="code">02</span><span class="name">Paracirurgia</span></li>
+                <li><span class="code">03</span><span class="name">Síndrome ectoplásmica</span></li>
+                <li><span class="code">04</span><span class="name">Dinâmica Interassistencial de Paracirurgia</span></li>
+                <li><span class="code">05</span><span class="name">Parapercepciograma</span></li>
+                <li><span class="code">06</span><span class="name">Efeito da Ectoplasmia</span></li>
+                <li><span class="code">07</span><span class="name">Jovem ectoplasta</span></li>
+                <li><span class="code">08</span><span class="name">Assunção da Autoectoplasmia</span></li>
+                <li><span class="code">09</span><span class="name">Autocognição Parapsíquica Ectoplásmica</span></li>
+                <li><span class="code">10</span><span class="name">Autogestão Ectoplásmica</span></li>
+                <li><span class="code">11</span><span class="name">Autoimunidade Pensênica do Ectoplasta</span></li>
+                <li><span class="code">12</span><span class="name">Automotivação Gesconográfica do Ectoplasta</span></li>
+                <li><span class="code">13</span><span class="name">Conscin Ectoplasta</span></li>
+                <li><span class="code">14</span><span class="name">Docente Ectoplasta</span></li>
+                <li><span class="code">15</span><span class="name">Ectoplasmia Autocurativa</span></li>
+                <li><span class="code">16</span><span class="name">Ectoplasmia na Autodefesa Energética</span></li>
+                <li><span class="code">17</span><span class="name">Efeito da Ortopensenidade na Autoectoplasmia</span></li>
+                <li><span class="code">18</span><span class="name">Estimulação Parapsíquica Ectoplásmica</span></li>
+                <li><span class="code">19</span><span class="name">Fitoectoplasma</span></li>
+                <li><span class="code">20</span><span class="name">Ginoectoplasma</span></li>
+                <li><span class="code">21</span><span class="name">Holosfera Paracirúrgica</span></li>
+                <li><span class="code">22</span><span class="name">Interação Ectoplasmia-Clarividência</span></li>
+                <li><span class="code">23</span><span class="name">Pedido de Paracirurgia</span></li>
+                <li><span class="code">24</span><span class="name">Potencial Ectoplásmico Interassistencial</span></li>
+                <li><span class="code">25</span><span class="name">Proexista Ectoplasta</span></li>
+                <li><span class="code">26</span><span class="name">Zooectoplasma</span></li>
+                <li><span class="code">27</span><span class="name">Autorganização do Ectoplasta</span></li>
+                <li><span class="code">28</span><span class="name">Desintoxicação Energossomática do Ectoplasta</span></li>
+                <li><span class="code">29</span><span class="name">Ectoplasta Desassediador</span></li>
+                <li><span class="code">30</span><span class="name">Inversor Ectoplasta</span></li>
+                <li><span class="code">31</span><span class="name">Parassegurança do Ectoplasta</span></li>
+                <li><span class="code">32</span><span class="name">Saúde Consciencial do Ectoplasta</span></li>
+                <li><span class="code">33</span><span class="name">Tenepessista Ectoplasta</span></li>
+                <li><span class="code">34</span><span class="name">Ectoplasmia Interassistencial</span></li>
+                <li><span class="code">35</span><span class="name">Efeito Paciológico da Ectoplasmia</span></li>
+                <li><span class="code">36</span><span class="name">Grafoectoplasmia</span></li>
+                <li><span class="code">37</span><span class="name">Interação Ectoplasmia-Arco Voltaico Craniochacral</span></li>
+                <li><span class="code">38</span><span class="name">Laboratório Conscienciológico da Ectoplasmia</span></li>
+                <li><span class="code">39</span><span class="name">Requinte da Ectoplasmia</span></li>
+                <li><span class="code">40</span><span class="name">Sinalética da Ectoplasmia</span></li>
+                <li><span class="code">41</span><span class="name">Interação Paracirurgia-Megafraternidade</span></li>
+                <li><span class="code">42</span><span class="name">Interação Parapercepção Ectoplásmica-Paracirurgia</span></li>
+                <li><span class="code">43</span><span class="name">Rede Interassistencial da Paracirurgia a Distância</span></li>
+                <li><span class="code">44</span><span class="name">Sintoma em Paracirurgia</span></li>
+                <li><span class="code">45</span><span class="name">Autodisponibilidade Ectoplásmica</span></li>
+                <li><span class="code">46</span><span class="name">Ectoplasmologia</span></li>
+                <li style="border-bottom:none"><span class="code">47</span><span class="name">Ectoplasmólogo</span></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
@@ -896,7 +960,7 @@
             </h2>
           </div>
           <p>
-            Esta bibliografia reúne conceitos que sustentam a investigação da Ectolab: ectoplasmia, paracirurgia, interstício celular, estado vibracional, campo bioenergético e diálogo entre ciência, assistência e autopesquisa.
+            Esta bibliografia reúne conceitos que sustentam a investigação da Ectolab: ectoplasmia, paracirurgia, interstício celular, estado vibracional, campo bioenergético e diálogo entre ciência, assistência e autopesquisa. Em diferentes momentos, essas obras se relacionaram com estruturas da Ectolab, seja por meio das dinâmicas, cursos de campo, laboratório ou ambiente de pesquisa.
           </p>
         </div>
 
@@ -947,7 +1011,7 @@
         </div>
 
         <div style="margin-top:48px;text-align:center">
-          <p class="muted" style="font-size:14.5px">Publicações selecionadas para orientar leitura, pesquisa e aprofundamento conceitual em ectoplasmia, paracirurgia, saúde integral e autopesquisa.</p>
+          <p class="muted" style="font-size:14.5px">Publicações selecionadas para orientar leitura, pesquisa e aprofundamento conceitual em ectoplasmia, paracirurgia, saúde integral e autopesquisa, com apoio direto ou indireto das estruturas pesquisísticas da Ectolab.</p>
         </div>
       </div>
     </section>
@@ -986,6 +1050,21 @@
   </main>
 
   <div id="__footer"></div>
+  <script>
+    (() => {
+      const list = document.querySelector("[data-verbete-list]");
+      const prev = document.querySelector("[data-verbete-prev]");
+      const next = document.querySelector("[data-verbete-next]");
+      if (!list || !prev || !next) return;
+
+      const slide = (direction) => {
+        list.scrollBy({ left: direction * list.clientWidth * 0.9, behavior: "smooth" });
+      };
+
+      prev.addEventListener("click", () => slide(-1));
+      next.addEventListener("click", () => slide(1));
+    })();
+  </script>
   <script type="module" src="/assets/chrome.js"></script>
 </body>
 </html>
