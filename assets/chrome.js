@@ -97,7 +97,6 @@
         ]},
         { cat: "Acervo de Pesquisa", links: [
           { label: "Base: Conscienciologia", href: P + "pages/conscienciologia.html" },
-          { label: "Fatos & Parafatos", href: P + "pages/fatos-parafatos.html" },
           { label: "Materiais Publicados & FAQ", href: P + "pages/materiais.html" }
         ]}
       ]
@@ -152,7 +151,7 @@
             </div>
             <p style="font-size:14px;line-height:1.6;opacity:0.78;max-width:300px">
               Associação Internacional de Pesquisa Laboratorial em Paracirurgia e Ectoplasmia.
-              Fundada em 2003, com sede em Foz do Iguaçu, Brasil.
+              Fundada em 2013, com sede em Foz do Iguaçu, Brasil.
             </p>
             <p class="mono" style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange);margin-top:24px">
               CNPJ &nbsp;18.782.858/0001-10 &nbsp;&middot;&nbsp; Inst. Conscienciocêntrica
@@ -164,7 +163,7 @@
               <li><a href="${P}pages/paracirurgia.html">Paracirurgia</a></li>
               <li><a href="${P}pages/conscienciologia.html">Ciência &amp; Ectoplasmologia</a></li>
               <li><a href="${P}pages/quem-somos.html">Quem somos &middot; CGC</a></li>
-              <li><a href="${P}pages/historia.html">História &middot; Fatos &amp; Parafatos</a></li>
+              <li><a href="${P}pages/historia.html">Nossa História</a></li>
             </ul>
           </div>
           <div>
@@ -179,7 +178,7 @@
           <div>
             <h5>Contato</h5>
             <ul>
-              <li><a href="${P}pages/contato.html">Visite o Campus</a></li>
+              <li><a href="${P}pages/contato.html">Ver Local</a></li>
               <li>Av. Paraná, 1230 · Foz do Iguaçu, PR</li>
               <li>Telefone: +55 (45) 3025-XXXX</li>
               <li><a href="mailto:contato@ectolab.org">contato@ectolab.org</a></li>
@@ -189,7 +188,7 @@
           </div>
         </div>
         <div class="copy">
-          <span>© 2003–2026 Ectolab. Todos os direitos reservados.</span>
+          <span>© 2013–2026 Ectolab. Todos os direitos reservados.</span>
           <span>Foz do Iguaçu · Paraná · Brasil &nbsp;◆&nbsp; 25° 32′ S · 54° 35′ W</span>
         </div>
       </div>

@@ -171,7 +171,6 @@ export default defineConfig({
         historia: resolve(__dirname, 'pages/historia.html'),
         contato: resolve(__dirname, 'pages/contato.html'),
         conscienciologia: resolve(__dirname, 'pages/conscienciologia.html'),
-        fatosParafatos: resolve(__dirname, 'pages/fatos-parafatos.html'),
         blog: resolve(__dirname, 'pages/blog.html'),
         blogPost: resolve(__dirname, 'pages/blog-post.html'),
         parcerias: resolve(__dirname, 'pages/parcerias.html')

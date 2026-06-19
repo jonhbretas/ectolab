@@ -88,7 +88,7 @@ function HeroEquilibrada() {
       <div className="wrap">
         <div className="eyebrow center-eye">
           <span className="dot"></span>
-          ECTOLAB &nbsp;·&nbsp; ASSOCIAÇÃO INTERNACIONAL DE PESQUISA EM ECTOPLASMIA E PARACIRURGIA &nbsp;·&nbsp; EST. 2003
+          ECTOLAB &nbsp;·&nbsp; ASSOCIAÇÃO INTERNACIONAL DE PESQUISA EM ECTOPLASMIA E PARACIRURGIA &nbsp;·&nbsp; EST. 2013
         </div>
         <h1 className="h-display center-title">
           Pesquisa em ectoplasmia,<br />
@@ -153,7 +153,7 @@ function HeroOusada() {
           <div className="ousada-row2">
             <p className="ousada-lede">
               A Ectolab é a Associação Internacional de Pesquisa em Ectoplasmia e Paracirurgia.
-              Há 23 anos desenvolve protocolos de observação, formação e assistência para
+              Desde 2013 desenvolve protocolos de observação, formação e assistência para
               o estudo técnico dos fenômenos ectoplásmicos.
             </p>
             <div className="ousada-cta">
@@ -418,9 +418,9 @@ function EventosBlog() {
     { data: "05 JUL", titulo: "Imersão em Ectoplasmia 2027 — turma única", local: "Foz do Iguaçu · ambiente pesquisístico", tipo: "CURSO INTENSIVO" },
   ];
   const posts = [
-    { tag: "ECTOPLASMIA", titulo: "Ectoplasmia aplicada: critérios para observação e registro.", autor: "Dra. Lívia M. Ferraz", min: "8 min" },
+    { tag: "ECTOPLASMIA", titulo: "Ectoplasmia aplicada: critérios para observação e registro.", autor: "ECTOLAB", min: "8 min" },
     { tag: "PESQUISA", titulo: "Fenômenos ectoplásmicos: como organizar dados de campo.", autor: "Dr. André Salgado", min: "12 min" },
-    { tag: "TÉCNICAS", titulo: "Paracirurgia e interassistência: limites, método e responsabilidade.", autor: "Prof. R. Caldeira", min: "10 min" },
+    { tag: "TÉCNICAS", titulo: "Paracirurgia e interassistência: limites, método e responsabilidade.", autor: "ECTOLAB", min: "10 min" },
   ];
   return (
     <section className="section eventos-blog">
@@ -554,8 +554,8 @@ function FAQ() {
 
 function Depoimentos() {
   const ts = [
-    { quote: "Encontrei uma instituição que organiza experiência, linguagem e registro. Isso mudou minha forma de estudar os fenômenos ectoplásmicos.", autor: "Dra. Lívia M. Ferraz", role: "Pesquisadora-titular · PhD Psicologia" },
-    { quote: "O Princípio da Descrença, quando aplicado com método, transforma curiosidade em investigação e experiência em responsabilidade.", autor: "Prof. R. Caldeira", role: "Co-fundador da Ectolab · Epicon" },
+    { quote: "Encontrei uma instituição que organiza experiência, linguagem e registro. Isso mudou minha forma de estudar os fenômenos ectoplásmicos.", autor: "ECTOLAB", role: "Pesquisa institucional" },
+    { quote: "O Princípio da Descrença, quando aplicado com método, transforma curiosidade em investigação e experiência em responsabilidade.", autor: "ECTOLAB", role: "Pesquisa institucional" },
     { quote: "A dinâmica interassistencial exige preparo, cooperação e atenção ao detalhe. É nesse conjunto que a pesquisa começa a ganhar forma.", autor: "Marta Olinda", role: "Voluntária · 16 anos de campo" },
   ];
   return (
@@ -588,11 +588,11 @@ function Newsletter() {
             <div>
               <div className="eyebrow"><span className="dot"></span>BOLETIM MENSAL</div>
               <h2 className="h1" style={{ marginTop: 16, color: "var(--white)" }}>
-                Receba <strong style={{ color: "var(--orange)", fontWeight: 700 }}>O Parafato</strong>, todo mês.
+                Receba <strong style={{ color: "var(--orange)", fontWeight: 700 }}>novidades da Ectolab</strong>, todo mês.
               </h2>
               <p className="lede" style={{ marginTop: 12, color: "rgba(255,255,255,0.78)" }}>
                 Resumo de pesquisa, calendário de dinâmicas, artigos e novos verbetes.
-                4.200 leitores em 47 países.
+                conteúdos, agenda e publicações institucionais.
               </p>
             </div>
             <form className="newsletter-form" onSubmit={(e) => e.preventDefault()}>
