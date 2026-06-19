@@ -469,6 +469,119 @@
 }
 @media (max-width: 900px) { .post-grid { grid-template-columns: 1fr; } .post-toc { position: static; } }
 
+.wp-post-layout {
+  display: grid;
+  grid-template-columns: minmax(180px, 220px) minmax(0, 860px) minmax(220px, 280px);
+  gap: clamp(24px, 3vw, 40px);
+  align-items: start;
+}
+.wp-post-layout .wp-post-body {
+  width: 100%;
+  min-width: 0;
+}
+.wp-post-sidebar {
+  position: sticky;
+  top: 104px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.wp-post-sidebar__box {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  padding: 18px;
+}
+.wp-post-sidebar__box h3 {
+  margin: 0 0 14px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--blue);
+}
+.wp-post-sidebar__links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.wp-post-sidebar__links a {
+  display: block;
+  color: var(--ink);
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+}
+.wp-post-sidebar__links a:hover {
+  color: var(--blue);
+  border-color: var(--blue-soft2);
+}
+.wp-post-sidebar__links span {
+  display: block;
+  margin-top: 3px;
+  font-family: var(--mono);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.wp-post-sidebar__cta {
+  background: var(--ink);
+  color: var(--white);
+  border-color: var(--ink);
+}
+.wp-post-sidebar__cta h3 {
+  color: var(--gold);
+}
+.wp-post-sidebar__cta p {
+  margin: 0 0 14px;
+  font-size: 13.5px;
+  line-height: 1.55;
+  color: rgba(255,255,255,0.74);
+}
+.wp-post-sidebar__cta .btn {
+  width: 100%;
+  justify-content: center;
+  padding: 10px 14px;
+  font-size: 13px;
+}
+.wp-post-tags {
+  grid-column: 2;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 32px;
+}
+@media (max-width: 1180px) {
+  .wp-post-layout {
+    grid-template-columns: minmax(0, 1fr) minmax(220px, 280px);
+  }
+  .wp-post-sidebar--left {
+    grid-column: 1 / -1;
+    position: static;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .wp-post-tags { grid-column: 1 / -1; }
+}
+@media (max-width: 900px) {
+  .wp-post-layout {
+    grid-template-columns: 1fr;
+  }
+  .wp-post-sidebar {
+    position: static;
+  }
+  .wp-post-sidebar--left {
+    grid-template-columns: 1fr;
+  }
+  .wp-post-tags {
+    grid-column: 1;
+  }
+}
+
 .post-cta-card {
   margin: 48px 0;
   padding: 32px;
