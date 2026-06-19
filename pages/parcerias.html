@@ -15,7 +15,7 @@
        PARCERIAS — local styles
        ============================================================ */
 
-    /* Hero with researcher photo placeholder */
+    /* Hero with campus photo */
     .parc-hero {
       background: var(--paper);
       position: relative;
@@ -36,34 +36,36 @@
       position: relative;
       overflow: hidden;
       margin-bottom: -1px;
-      background-image:
-        repeating-linear-gradient(135deg, transparent 0 22px, rgba(240,160,48,0.08) 22px 23px),
-        radial-gradient(circle at 30% 30%, rgba(31,135,168,0.45) 0%, transparent 55%);
+    }
+    .parc-hero__viz img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    .parc-hero__viz::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(180deg, rgba(5,36,45,0.15) 0%, rgba(5,36,45,0.28) 100%),
+        linear-gradient(135deg, rgba(5,36,45,0.12), rgba(240,160,48,0.08));
+      pointer-events: none;
     }
     .parc-hero__viz .corner {
       position: absolute;
+      z-index: 1;
       font-family: var(--mono);
       font-size: 10px;
       letter-spacing: 0.16em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.6);
+      color: rgba(255,255,255,0.82);
+      text-shadow: 0 1px 8px rgba(0,0,0,0.35);
     }
     .parc-hero__viz .tl { top: 18px; left: 18px; }
     .parc-hero__viz .tr { top: 18px; right: 18px; }
     .parc-hero__viz .br { bottom: 18px; right: 18px; }
     .parc-hero__viz .bl { bottom: 18px; left: 18px; color: var(--gold); }
-    .parc-hero__viz::after {
-      content: "ESPAÇO DE PESQUISA  ·  CAMPUS ECTOLAB  ·  FOZ DO IGUAÇU";
-      position: absolute;
-      left: 50%; top: 50%;
-      transform: translate(-50%, -50%) rotate(-90deg);
-      transform-origin: center;
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.3em;
-      color: rgba(255,255,255,0.55);
-      white-space: nowrap;
-    }
     @media (max-width: 900px) {
       .parc-hero__grid { grid-template-columns: 1fr; gap: 32px; }
       .parc-hero__viz { aspect-ratio: 4 / 3; }
@@ -181,7 +183,7 @@
       color: rgba(255,255,255,0.65);
       margin-top: 10px;
     }
-    /* Origins list */
+    /* Verbetes list */
     .geo-list {
       list-style: none;
       padding: 0;
@@ -193,10 +195,10 @@
     }
     .geo-list li {
       display: grid;
-      grid-template-columns: 56px 1fr auto;
+      grid-template-columns: 44px 1fr;
       align-items: center;
       gap: 16px;
-      padding: 14px 0;
+      padding: 10px 0;
       border-bottom: 1px solid rgba(255,255,255,0.12);
       font-family: var(--mono);
       font-size: 13px;
@@ -210,25 +212,9 @@
     .geo-list .name {
       color: var(--white);
       font-family: var(--display);
-      font-size: 16px;
+      font-size: 14.5px;
       letter-spacing: -0.005em;
       font-weight: 500;
-    }
-    .geo-list .count {
-      color: rgba(255,255,255,0.7);
-      font-variant-numeric: tabular-nums;
-    }
-    .geo-list li.intl .name::after {
-      content: "INTL";
-      font-family: var(--mono);
-      font-size: 9.5px;
-      letter-spacing: 0.16em;
-      color: var(--gold);
-      margin-left: 10px;
-      padding: 2px 6px;
-      border: 1px solid var(--gold);
-      border-radius: 2px;
-      vertical-align: 2px;
     }
     @media (max-width: 900px) { .geo-panel__grid { grid-template-columns: 1fr; gap: 32px; } }
 
@@ -570,18 +556,19 @@
             </div>
 
             <dl class="meta-grid" style="margin-top:56px;max-width:560px">
-              <div><dt>Pesquisadores recebidos</dt><dd>184 desde 2008</dd></div>
+              <div><dt>Pesquisadores recebidos</dt><dd>+10</dd></div>
               <div><dt>Origem</dt><dd>BR · FR · USA</dd></div>
-              <div><dt>Livros publicados</dt><dd>11 títulos</dd></div>
-              <div><dt>Verbetes científicos</dt><dd>247 publicados</dd></div>
+              <div><dt>Livros publicados</dt><dd>5 títulos</dd></div>
+              <div><dt>Verbetes científicos</dt><dd>47 publicados</dd></div>
             </dl>
           </div>
 
           <div class="parc-hero__viz">
+            <img src="/imagens/sede-ectolab-pesquisa.jpg" alt="Sede e laboratório de pesquisa da Ectolab em Foz do Iguaçu" loading="eager" />
             <span class="corner tl">ECTOLAB · CAMPUS</span>
             <span class="corner tr">25° 32′ S · 54° 35′ W</span>
             <span class="corner bl">★ ESPAÇO DE PESQUISA</span>
-            <span class="corner br">FOTO · A INSERIR</span>
+            <span class="corner br">LABORATÓRIO ECTOLAB</span>
           </div>
         </div>
       </div>
@@ -608,12 +595,12 @@
         <div class="infra-list">
           <div class="infra-item">
             <div class="infra-item__num">01 &nbsp;/&nbsp; ACERVO</div>
-            <h3>Biblioteca especializada em parafenômenos</h3>
-            <p>Mais de 4.200 títulos catalogados em conscienciologia, parapsicologia, neurociência da consciência, anatomia sutil, ectoplasmia e literatura correlata. Acervo aberto a pesquisadores hospedados.</p>
+            <h3>Holociclo, incubadora de autores</h3>
+            <p>Megalaboratório técnico-científico do CEAEC voltado à produção de conhecimento sobre a consciência. Reúne lexicoteca, hemeroteca, encicloteca e coleções de apoio à escrita, pesquisa e sistematização de ideias.</p>
             <div class="infra-item__tags">
-              <span class="infra-tag">4.200 títulos</span>
-              <span class="infra-tag">PT · EN · ES · FR</span>
-              <span class="infra-tag">Empréstimo local</span>
+              <span class="infra-tag">Lexicoteca</span>
+              <span class="infra-tag">Hemeroteca</span>
+              <span class="infra-tag">Produção autoral</span>
             </div>
           </div>
 
@@ -641,23 +628,23 @@
 
           <div class="infra-item">
             <div class="infra-item__num">04 &nbsp;/&nbsp; HOSPEDAGEM</div>
-            <h3>Alojamento no campus, para estadas longas</h3>
-            <p>Quartos individuais a 90 segundos da biblioteca e dos salões de Campo. Pensamos para estadas de 1 a 12 semanas, com cozinha compartilhada, sala de leitura silenciosa e acesso 24h ao acervo.</p>
+            <h3>Hospedagem Village</h3>
+            <p>Ambiente otimizado para repouso, localizado internamente no Centro de Altos Estudos da Conscienciologia e rodeado por ecossistema bioenergético com fauna e flora local, propício à autoexperimentação de sinaléticas energéticas.</p>
             <div class="infra-item__tags">
-              <span class="infra-tag">12 quartos</span>
-              <span class="infra-tag">1–12 semanas</span>
-              <span class="infra-tag">Subsídio integral</span>
+              <span class="infra-tag">Quartos triplos</span>
+              <span class="infra-tag">Toalete privativo</span>
+              <span class="infra-tag">Suporte à estadia</span>
             </div>
           </div>
 
           <div class="infra-item">
-            <div class="infra-item__num">05 &nbsp;/&nbsp; ACERVO DE RELATOS</div>
-            <h3>Base de relatos paraperceptivos anonimizados</h3>
-            <p>Mais de 11.300 relatos paraperceptivos coletados desde 2003, anonimizados e indexados por tipo de fenômeno, ano e localidade. Disponível sob acordo de pesquisa e cláusula de confidencialidade.</p>
+            <div class="infra-item__num">05 &nbsp;/&nbsp; HOLOTECA</div>
+            <h3>Megacentro dos artefatos do saber</h3>
+            <p>Ambiente cultural do CEAEC destinado à pesquisa e exposição de artefatos do saber, reunindo objetos, livros, coleções, registros, filmes, moedas, selos, fotos e materiais de diferentes áreas do conhecimento.</p>
             <div class="infra-item__tags">
-              <span class="infra-tag">11.300+ relatos</span>
-              <span class="infra-tag">Indexado</span>
-              <span class="infra-tag">Sob acordo</span>
+              <span class="infra-tag">900.000+ itens</span>
+              <span class="infra-tag">276 coleções</span>
+              <span class="infra-tag">Visitação pública</span>
             </div>
           </div>
 
@@ -767,7 +754,6 @@
                 <span class="contrib__year">2014</span>
               </div>
               <p>Caracterização do <em>locus</em> bioenergético em que se dá a entrega ectoplásmica durante a paracirurgia — espaço funcional entre tecido biológico denso e camada bioplásmica.</p>
-              <div class="contrib__refs"><strong>Refs.:</strong> 6 verbetes encicl. &nbsp;·&nbsp; 2 livros &nbsp;·&nbsp; cit. em 11 instituições</div>
             </div>
           </article>
 
@@ -778,8 +764,7 @@
                 <h3>Mapeamento dos Sinais e Sintomas da Ectoplasmia</h3>
                 <span class="contrib__year">2016</span>
               </div>
-              <p>Quadro semiológico com 84 sinais e sintomas observáveis em paracirurgiandos durante e após sessão de Campo — desde marcadores autonômicos até manifestações paraperceptivas tardias.</p>
-              <div class="contrib__refs"><strong>Refs.:</strong> 84 sinais catalogados &nbsp;·&nbsp; 3 livros &nbsp;·&nbsp; protocolo aberto</div>
+              <p>Quadro semiológico com sinais e sintomas observáveis em paracirurgiandos durante e após sessão de Campo — desde marcadores autonômicos até manifestações paraperceptivas tardias.</p>
             </div>
           </article>
 
@@ -790,8 +775,7 @@
                 <h3>Interação com o Sistema Nervoso Autônomo</h3>
                 <span class="contrib__year">2019</span>
               </div>
-              <p>Hipótese, com correlatos mensuráveis, de que a paracirurgia atua sobre o ramo parassimpático antes de qualquer manifestação visível — vagotonia mensurada por HRV e termografia regional durante o Campo.</p>
-              <div class="contrib__refs"><strong>Refs.:</strong> n = 412 sessões &nbsp;·&nbsp; paper em revisão &nbsp;·&nbsp; replicado por Ectolab-FR</div>
+              <p>Hipótese, com correlatos mensuráveis, de que a paracirurgia atua sobre o ramo parassimpático antes de qualquer manifestação visível — incluindo variações autonômicas e termográficas durante o Campo.</p>
             </div>
           </article>
 
@@ -802,8 +786,7 @@
                 <h3>Síndrome Ectoplásmica</h3>
                 <span class="contrib__year">2021</span>
               </div>
-              <p>Conjunto sindrômico que descreve o quadro de quem produz ectoplasma sem ter consciência da função — fadiga adrenal, hipersensibilidade somática, padrão específico de sono e marcadores psíquicos correlatos.</p>
-              <div class="contrib__refs"><strong>Refs.:</strong> 73 casos clínicos &nbsp;·&nbsp; livro 2023 &nbsp;·&nbsp; em estudo USA</div>
+              <p>Conjunto sindrômico que descreve o quadro de quem produz ectoplasma sem ter consciência da função — fadiga, hipersensibilidade somática, alterações no sono e marcadores psíquicos correlatos.</p>
             </div>
           </article>
 
@@ -811,11 +794,10 @@
             <div class="contrib__code">CONCEITO &middot; 05</div>
             <div class="contrib__body">
               <div class="contrib__head">
-                <h3>Bioenergética da Entrega Ectoplásmica</h3>
+                <h3>Parafisiologia da Doação de Ectoplasmia</h3>
                 <span class="contrib__year">2022</span>
               </div>
-              <p>Modelo de quatro fases para o ciclo de doação ectoplásmica: convocação, dissociação, entrega e recomposição. Cada fase tem assinatura autonômica e parapsíquica distinta.</p>
-              <div class="contrib__refs"><strong>Refs.:</strong> 4 fases &middot; 12 marcadores &nbsp;·&nbsp; ensinado no PROEP</div>
+              <p>Modelo para compreender a doação ectoplásmica como processo parafisiológico: mobilização, exteriorização, sustentação assistencial e recomposição do doador após o trabalho de campo.</p>
             </div>
           </article>
 
@@ -823,11 +805,32 @@
             <div class="contrib__code">CONCEITO &middot; 06</div>
             <div class="contrib__body">
               <div class="contrib__head">
-                <h3>Protocolo de Recomposição Pós-Campo</h3>
+                <h3>Descarga Ectoplásmica</h3>
                 <span class="contrib__year">2024</span>
               </div>
-              <p>Sequência de 11 passos para a recuperação bioenergética do paracirurgião nas primeiras 72 horas após Campo extenso — desenvolvido a partir do mapeamento de 7 anos de descompensações pós-trabalho.</p>
-              <div class="contrib__refs"><strong>Refs.:</strong> 11 passos &nbsp;·&nbsp; 72h &nbsp;·&nbsp; adotado em 4 instituições</div>
+              <p>Descrição do processo de liberação, drenagem e reorganização das energias densas após atividades de campo, favorecendo a recomposição bioenergética e a homeostase do ectoplasta.</p>
+            </div>
+          </article>
+
+          <article class="contrib">
+            <div class="contrib__code">CONCEITO &middot; 07</div>
+            <div class="contrib__body">
+              <div class="contrib__head">
+                <h3>Elo Interdimensional</h3>
+                <span class="contrib__year">2025</span>
+              </div>
+              <p>O ectoplasma é compreendido como elemento semi-material capaz de facilitar a aproximação entre dimensões, favorecendo a ocorrência de fenômenos parapsíquicos de diferentes tipos e gêneros.</p>
+            </div>
+          </article>
+
+          <article class="contrib">
+            <div class="contrib__code">CONCEITO &middot; 08</div>
+            <div class="contrib__body">
+              <div class="contrib__head">
+                <h3>Relação entre Holossoma e Assistência Paracirúrgica</h3>
+                <span class="contrib__year">2026</span>
+              </div>
+              <p>A DIP surgiu da DIH, Dinâmica Interassistencial Holossomática, com foco na assistência pelo holossoma. A continuidade da pesquisa evidenciou posteriormente o campo específico da assistência paracirúrgica.</p>
             </div>
           </article>
         </div>
