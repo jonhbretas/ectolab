@@ -13,8 +13,8 @@ import ReactDOM from 'react-dom/client';
 const PROTOCOLO_PASSOS = [
   { n: "01", t: "A Solicitação", d: "O assistido preenche o formulário detalhando sua necessidade. O prazo limite é toda sexta-feira às 12h30." },
   { n: "02", t: "O Preparo", d: "Instruções específicas de dieta leve, repouso e mentalização para criar o acoplamento energético necessário." },
-  { n: "03", t: "A Sessão (DIP)", d: "Atividade grupal de 2 horas em espaço otimizado por voluntários ectoplastas e amparadores técnicos." },
-  { n: "04", t: "O Relatório", d: "Após o atendimento, o assistido envia suas percepções, que são fundamentais para o registro da pesquisa." }
+  { n: "03", t: "A Dinâmica", d: "Atividade grupal de 2 horas em espaço otimizado por voluntários ectoplastas e amparadores técnicos." },
+  { n: "04", t: "O Sistema", d: "Após o atendimento, o assistido envia suas percepções para o sistema da DIP, fundamentais para o registro da pesquisa." }
 ];
 
 const EQUIPE_FUNCOES = [
@@ -114,7 +114,7 @@ function EntendaSeccao() {
             <h2 className="h1" style={{ marginTop: 16 }}>Protocolo Rigoroso.</h2>
             <p className="lede" style={{ marginTop: 20 }}>
               Não trabalhamos com misticismo. A paracirurgia segue um protocolo técnico 
-              desenvolvido ao longo de décadas de pesquisa laboratorial.
+              desenvolvido ao longo de décadas de pesquisa laboratorial e de campo.
             </p>
           </div>
           <div className="grid g2 gap-24">
@@ -144,9 +144,9 @@ function ComoFunciona() {
               <p>
                 A Dinâmica Interassistencial da Paracirurgia é uma atividade grupal, semanal, 
                 que ocorre em espaço físico tecnicamente otimizado pelo sinergismo voluntários 
-                ectoplastas – amparadores técnicos em ectoplasmia paracirúrgica. Atualmente, 
-                é realizada semanalmente na cidade de Foz do Iguaçu e mensalmente nas cidades 
-                de São Paulo e Curitiba.
+                ectoplastas – amparadores técnicos em ectoplasmia paracirúrgica. Realizada 
+                nas cidades de Foz do Iguaçu, Curitiba, São Paulo, Florianópolis, Brasília e 
+                Rio de Janeiro. Realizada também em 2 países: Alemanha e Portugal.
               </p>
               <p>
                 Sentados em cadeiras dispostas em 2 (duas) elipses concêntricas, os participantes 
@@ -208,7 +208,7 @@ function ComoParticipar() {
           <div className="eyebrow"><span className="dot"></span>INSCRIÇÕES E ACESSO</div>
           <h2 className="h2" style={{ marginTop: 16 }}>Como participar?</h2>
           <p className="lede" style={{ marginTop: 16, maxWidth: 800 }}>
-            Atualmente, a Dinâmica Interassistencial da Paracirurgia é realizada semanalmente na cidade de Foz do Iguaçu e mensalmente nas cidades de São Paulo e Curitiba.
+            A Dinâmica Interassistencial da Paracirurgia é realizada nas cidades de Foz do Iguaçu, Curitiba, São Paulo, Florianópolis, Brasília e Rio de Janeiro. Realizada também em 2 países: Alemanha e Portugal.
           </p>
         </div>
         <div className="grid g3 gap-24">
