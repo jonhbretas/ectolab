@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laboratório de Paracirurgia · Ectolab</title>
+  <meta name="description" content="Laboratório presencial de Paracirurgia da Ectolab: experimento individual de 1h30 sob agendamento, na sede em Foz do Iguaçu." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/inner.css" />
+  <style>
+    .lab-page { background: var(--paper); }
+    .lab-hero { padding: clamp(56px, 7vw, 96px) 0 clamp(48px, 6vw, 78px); border-bottom: 1px solid var(--line); background: linear-gradient(180deg, var(--paper), #f8fbfb); }
+    .lab-hero__grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr); gap: clamp(36px, 6vw, 76px); align-items: end; }
+    .lab-hero .h-display { font-size: clamp(52px, 7vw, 96px); line-height: .94; max-width: 820px; }
+    .lab-hero .lede { max-width: 650px; margin-top: 24px; }
+    .lab-card { background: var(--ink); color: var(--paper); border-radius: var(--r-md); overflow: hidden; box-shadow: 0 28px 64px -40px rgba(8,34,43,.7); }
+    .lab-card img { width: 100%; aspect-ratio: 4 / 2.35; object-fit: cover; display: block; opacity: .88; }
+    .lab-card__body { padding: 28px; }
+    .lab-card__body p { margin: 12px 0 0; color: rgba(255,255,255,.75); line-height: 1.65; }
+    .lab-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .lab-info { display: grid; grid-template-columns: repeat(4, 1fr); border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; margin-top: 42px; background: var(--white); }
+    .lab-info div { padding: 18px 20px; border-right: 1px solid var(--line); }
+    .lab-info div:last-child { border-right: 0; }
+    .lab-info dt { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+    .lab-info dd { margin: 6px 0 0; font-family: var(--serif); font-size: 21px; color: var(--ink); }
+    .lab-layout { display: grid; grid-template-columns: minmax(0, .72fr) minmax(300px, .28fr); gap: clamp(30px, 5vw, 64px); align-items: start; }
+    .lab-section-head { margin-bottom: 26px; }
+    .lab-section-head p { color: var(--ink-2); line-height: 1.7; max-width: 720px; }
+    .lab-panel { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); padding: clamp(28px, 4vw, 42px); }
+    .lab-panel + .lab-panel { margin-top: 18px; }
+    .lab-panel h2, .lab-panel h3 { font-family: var(--display); letter-spacing: -.02em; line-height: 1.05; margin: 0 0 18px; }
+    .lab-panel p { color: var(--ink-2); line-height: 1.7; margin: 0; }
+    .lab-list { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 12px; }
+    .lab-list li { position: relative; padding-left: 24px; color: var(--ink-2); line-height: 1.55; }
+    .lab-list li::before { content: ""; position: absolute; left: 0; top: .48em; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); }
+    .lab-side { position: sticky; top: 100px; display: grid; gap: 18px; }
+    .lab-side .lab-panel { padding: 24px; }
+    .quote-panel { background: var(--ink); color: var(--paper); border-radius: var(--r-md); padding: clamp(30px, 4vw, 48px); }
+    .quote-panel blockquote { margin: 0; font-family: var(--serif); font-size: clamp(24px, 3vw, 38px); line-height: 1.18; letter-spacing: -.015em; }
+    .quote-panel cite { display: block; margin-top: 20px; font-family: var(--mono); font-size: 11px; letter-spacing: .14em; text-transform: uppercase; color: var(--gold); font-style: normal; }
+    @media (max-width: 960px) { .lab-hero__grid, .lab-layout { grid-template-columns: 1fr; } .lab-side { position: relative; top: auto; } .lab-info { grid-template-columns: repeat(2,1fr); } .lab-info div { border-bottom: 1px solid var(--line); } }
+    @media (max-width: 620px) { .lab-info { grid-template-columns: 1fr; } .lab-info div { border-right: 0; } }
+  </style>
+</head>
+<body data-active="atividades">
+  <div id="__header"></div>
+
+  <main class="lab-page">
+    <section class="lab-hero">
+      <div class="wrap">
+        <div class="breadcrumb"><a href="/index.html">Ectolab</a><span class="sep">◆</span><a href="/pages/atividades.html">Atividades</a><span class="sep">◆</span><span>Laboratório de Paracirurgia</span></div>
+        <div class="lab-hero__grid">
+          <div>
+            <span class="eyebrow">Presencial · sob agendamento</span>
+            <h1 class="h-display">Laboratório de Paracirurgia.</h1>
+            <p class="lede">Experimento individual de 1h30, realizado na sede da Ectolab, com 1 hora de experimento e 30 minutos para preenchimento das parapercepções.</p>
+            <div class="lab-actions">
+              <a class="btn btn-orange" href="https://ectolab.org/loja/" target="_blank" rel="noreferrer">Ir para a loja <span class="arrow">↗</span></a>
+              <a class="btn btn-ghost" href="#agendamento">Informações de agendamento</a>
+            </div>
+            <dl class="lab-info">
+              <div><dt>Duração</dt><dd>1h30</dd></div>
+              <div><dt>Experimento</dt><dd>1 hora</dd></div>
+              <div><dt>Registro</dt><dd>30 min</dd></div>
+              <div><dt>Valor</dt><dd>R$ 40</dd></div>
+            </dl>
+          </div>
+          <aside class="lab-card">
+            <img src="/imagens/sede-ectolab-pesquisa.jpg" alt="Sede da Ectolab em Foz do Iguaçu" />
+            <div class="lab-card__body">
+              <span class="eyebrow">Sede Ectolab</span>
+              <p>Rua da Cosmoética, 1635, sala 12, Bairro Cognópolis, Foz do Iguaçu (PR).</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap lab-layout">
+        <div>
+          <article class="lab-panel">
+            <div class="lab-section-head">
+              <span class="eyebrow">Objetivo</span>
+              <h2 class="h2">O que o laboratório pretende?</h2>
+            </div>
+            <p>Proporcionar ambiente otimizado para experimento individual, favorecendo a auto-observação, o registro técnico das parapercepções e a qualificação da experiência paracirúrgica pessoal.</p>
+          </article>
+
+          <article class="lab-panel">
+            <h3>Pré-requisitos</h3>
+            <ul class="lab-list">
+              <li>Ser tenepessista.</li>
+              <li>Ser voluntário da Conscienciologia.</li>
+            </ul>
+          </article>
+
+          <article class="lab-panel" id="agendamento">
+            <h3>Informações importantes</h3>
+            <ul class="lab-list">
+              <li>Local: Sede da Ectolab, Rua da Cosmoética, 1635, sala 12, Bairro Cognópolis, Foz do Iguaçu (PR).</li>
+              <li>Valor: R$ 40.</li>
+              <li>Após a compra, é necessário fazer agendamento prévio com a equipe responsável pelo laboratório.</li>
+              <li>WhatsApp: +55 (41) 99885-2257.</li>
+              <li>E-mail: <a href="mailto:bioenergologia@ectolab.org">bioenergologia@ectolab.org</a>.</li>
+            </ul>
+            <div class="lab-actions">
+              <a class="btn btn-orange" href="https://ectolab.org/loja/" target="_blank" rel="noreferrer">Quero fazer esse laboratório <span class="arrow">↗</span></a>
+            </div>
+          </article>
+        </div>
+
+        <aside class="lab-side">
+          <div class="lab-panel">
+            <span class="eyebrow">Formato</span>
+            <ul class="lab-list">
+              <li>Atendimento individual.</li>
+              <li>Ambiente presencial.</li>
+              <li>Compra e agendamento prévio.</li>
+            </ul>
+          </div>
+          <div class="quote-panel">
+            <blockquote>A interação paracirurgia-megafraternidade deflagra a tendência evolutiva de a consciência mais homeostática interessar-se pela interassistência fraterna.</blockquote>
+            <cite>Verbete Interação Paracirurgia-Megafraternidade</cite>
+          </div>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <div id="__footer"></div>
+  <script type="module" src="/assets/chrome.js"></script>
+</body>
+</html>

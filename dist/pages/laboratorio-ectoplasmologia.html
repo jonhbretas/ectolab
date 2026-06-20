@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laboratório Conscienciológico de Ectoplasmologia · Ectolab</title>
+  <meta name="description" content="Laboratório Conscienciológico de Ectoplasmologia: pesquisas experimentais em ectoplasmia, heteropesquisa, autopesquisa, instalações e linhas de pesquisa." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/inner.css" />
+  <style>
+    .lab-page { background: var(--paper); }
+    .lab-hero { padding: clamp(56px, 7vw, 96px) 0 clamp(48px, 6vw, 78px); border-bottom: 1px solid var(--line); background: linear-gradient(180deg, var(--paper), #f8fbfb); }
+    .lab-hero__grid { display: grid; grid-template-columns: minmax(0, 1.14fr) minmax(320px, .86fr); gap: clamp(36px, 6vw, 76px); align-items: end; }
+    .lab-hero .h-display { font-size: clamp(46px, 6.6vw, 88px); line-height: .96; max-width: 880px; }
+    .lab-hero .lede { max-width: 690px; margin-top: 24px; }
+    .lab-card { background: var(--ink); color: var(--paper); border-radius: var(--r-md); overflow: hidden; box-shadow: 0 28px 64px -40px rgba(8,34,43,.7); }
+    .lab-card img { width: 100%; aspect-ratio: 4 / 2.35; object-fit: cover; display: block; opacity: .88; }
+    .lab-card__body { padding: 28px; }
+    .lab-card__body p { margin: 12px 0 0; color: rgba(255,255,255,.75); line-height: 1.65; }
+    .lab-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .lab-info { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; margin-top: 42px; background: var(--white); }
+    .lab-info div { padding: 18px 20px; border-right: 1px solid var(--line); }
+    .lab-info div:last-child { border-right: 0; }
+    .lab-info dt { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+    .lab-info dd { margin: 6px 0 0; font-family: var(--serif); font-size: 21px; color: var(--ink); }
+    .lab-section-head { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 30px; }
+    .lab-section-head p { max-width: 580px; color: var(--ink-2); line-height: 1.65; margin: 0; }
+    .lab-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+    .lab-panel { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); padding: clamp(28px, 4vw, 42px); }
+    .lab-panel.dark { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .lab-panel h2, .lab-panel h3 { font-family: var(--display); letter-spacing: -.02em; line-height: 1.05; margin: 0 0 18px; }
+    .lab-panel p { color: var(--ink-2); line-height: 1.7; margin: 0; }
+    .lab-panel.dark p { color: rgba(255,255,255,.76); }
+    .lab-list { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 12px; }
+    .lab-list li { position: relative; padding-left: 24px; color: var(--ink-2); line-height: 1.55; }
+    .lab-panel.dark .lab-list li { color: rgba(255,255,255,.78); }
+    .lab-list li::before { content: ""; position: absolute; left: 0; top: .48em; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); }
+    .facility-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; }
+    .facility-grid div { background: var(--white); padding: 24px; min-height: 130px; display: flex; flex-direction: column; justify-content: space-between; }
+    .facility-grid span { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--orange-2); }
+    .facility-grid strong { font-family: var(--display); font-size: 22px; letter-spacing: -.015em; color: var(--ink); }
+    @media (max-width: 980px) { .lab-hero__grid, .lab-grid, .research-grid { grid-template-columns: 1fr; } .lab-section-head { display: block; } .lab-section-head p { margin-top: 14px; } .lab-info { grid-template-columns: 1fr; } .lab-info div { border-right: 0; border-bottom: 1px solid var(--line); } .lab-info div:last-child { border-bottom: 0; } .facility-grid { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 620px) { .facility-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body data-active="atividades">
+  <div id="__header"></div>
+
+  <main class="lab-page">
+    <section class="lab-hero">
+      <div class="wrap">
+        <div class="breadcrumb"><a href="/index.html">Ectolab</a><span class="sep">◆</span><a href="/pages/atividades.html">Atividades</a><span class="sep">◆</span><span>Laboratório de Ectoplasmologia</span></div>
+        <div class="lab-hero__grid">
+          <div>
+            <span class="eyebrow">Pesquisa experimental</span>
+            <h1 class="h-display">Laboratório Conscienciológico de Ectoplasmologia.</h1>
+            <p class="lede">Laboratório de pesquisas experimentais em ectoplasmia, voltado para heteropesquisa, autopesquisa e aprofundamento técnico da ectoplastia pessoal.</p>
+            <div class="lab-actions">
+              <a class="btn btn-orange" href="#linhas">Ver linhas de pesquisa</a>
+              <a class="btn btn-ghost" href="/pages/parcerias.html">Propor pesquisa</a>
+            </div>
+            <dl class="lab-info">
+              <div><dt>Natureza</dt><dd>Experimental</dd></div>
+              <div><dt>Foco</dt><dd>Ectoplasmia</dd></div>
+              <div><dt>Local</dt><dd>Campus CEAEC</dd></div>
+            </dl>
+          </div>
+          <aside class="lab-card">
+            <img src="/imagens/sede-ectolab-pesquisa.jpg" alt="Ambiente de pesquisa da Ectolab" />
+            <div class="lab-card__body">
+              <span class="eyebrow">Foz do Iguaçu</span>
+              <p>Ambiente em prédio isolado, cercado de vegetação, no campus do CEAEC.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="lab-section-head">
+          <div>
+            <span class="eyebrow">Objetivos</span>
+            <h2 class="h2">Pesquisa e autopesquisa em ectoplasmia.</h2>
+          </div>
+          <p>O laboratório reúne condições para estudos experimentais com indivíduos ectoplastas ou grupos de ectoplastas, seguindo metodologia científica previamente estabelecida.</p>
+        </div>
+
+        <div class="lab-grid">
+          <article class="lab-panel dark">
+            <h3>Heteropesquisa</h3>
+            <p>Realizar pesquisas experimentais relacionadas à ectoplasmia com indivíduos ectoplastas ou grupos de ectoplastas, seguindo metodologia científica previamente estabelecida.</p>
+          </article>
+          <article class="lab-panel">
+            <h3>Autopesquisa</h3>
+            <p>Funcionar ao modo de laboratório de autopesquisa, visando o estudo e aprofundamento da ectoplastia pessoal.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="wrap">
+        <div class="lab-section-head">
+          <div>
+            <span class="eyebrow">Instalações</span>
+            <h2 class="h2">Ambiente preparado para pesquisa.</h2>
+          </div>
+          <p>O Laboratório de Ectoplasmologia dispõe de estrutura para experimentos, registros, consulta e atividades de apoio à pesquisa.</p>
+        </div>
+        <div class="facility-grid">
+          <div><span>01</span><strong>Sala de aula</strong></div>
+          <div><span>02</span><strong>Ambiente com macas para experimentos</strong></div>
+          <div><span>03</span><strong>Banheiro e apoio operacional</strong></div>
+          <div><span>04</span><strong>Sala de registros e biblioteca especializada</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="linhas">
+      <div class="wrap">
+        <div class="lab-section-head">
+          <div>
+            <span class="eyebrow">Linhas de pesquisa</span>
+            <h2 class="h2">Três frentes de investigação.</h2>
+          </div>
+        </div>
+        <div class="research-grid">
+          <article class="lab-panel">
+            <h3>Ectoplasmia básica</h3>
+            <ul class="lab-list">
+              <li>Estudo da origem, composição e manifestação da substância ectoplasma.</li>
+              <li>Desenvolvimento de sensores de bioenergia.</li>
+            </ul>
+          </article>
+          <article class="lab-panel">
+            <h3>Ectoplasmia aplicada</h3>
+            <ul class="lab-list">
+              <li>Investigação dos efeitos e aplicações da ectoplasmia.</li>
+              <li>Medição de alterações físicas no campo ectoplásmico.</li>
+              <li>Utilização assistencial da ectoplasmia na paracirurgia.</li>
+            </ul>
+          </article>
+          <article class="lab-panel">
+            <h3>Fisiologia e parafisiologia do ectoplasta</h3>
+            <ul class="lab-list">
+              <li>Estudo da fisiologia do indivíduo ectoplasta.</li>
+              <li>Medição de parâmetros clínicos durante a produção do fenômeno.</li>
+              <li>Estudo das parapercepções no campo ectoplásmico.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="__footer"></div>
+  <script type="module" src="/assets/chrome.js"></script>
+</body>
+</html>

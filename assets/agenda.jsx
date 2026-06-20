@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { eventos } from './agenda-data.js';
 
-/* Agrupa eventos por mês+ano mantendo a ordem de inserção */
 function agruparPorMes(lista) {
   const map = new Map();
   lista.forEach((e) => {
@@ -13,65 +12,60 @@ function agruparPorMes(lista) {
   return [...map.entries()].map(([label, events]) => ({ label, events }));
 }
 
-/* Classe CSS da tag baseada no tipo */
-function tagClass(tipo) {
-  if (tipo.includes("IMERSÃO") || tipo.includes("CURSO")) return "dark";
-  if (tipo.includes("SIMPÓSIO"))                           return "gold";
-  return "";
-}
-
-function TagEvento({ tipo, gratuito }) {
-  return (
-    <>
-      <span className={`tag ${tagClass(tipo)}`.trim()}>{tipo}</span>
-      {gratuito && (
-        <span className="tag" style={{ background: "var(--teal-soft)", color: "var(--teal)", borderColor: "var(--blue-soft2)" }}>
-          GRATUITO
-        </span>
-      )}
-    </>
-  );
+function tagStyle(tipo) {
+  if (tipo.includes("IMERSÃO") || tipo.includes("CURSO")) return { background: "var(--ink)", color: "var(--paper)", borderColor: "var(--ink)" };
+  if (tipo.includes("SIMPÓSIO")) return { background: "var(--gold)", color: "var(--ink)", borderColor: "var(--gold-2)" };
+  return {};
 }
 
 function EventoRow({ e }) {
   return (
-    <a href={e.href} className="agenda-row">
-      <div className="agenda-row__date">
-        <strong>{e.dia}</strong>
-        <span>{e.mes}</span>
+    <article className="timeline-event">
+      <div className="agenda-date">
+        <span className="agenda-date__dia">{e.dia}</span>
+        <span className="agenda-date__mes">{e.mes} {e.ano}</span>
       </div>
 
-      <div className="agenda-row__body">
-        <div className="agenda-row__top">
-          <TagEvento tipo={e.tipo} gratuito={e.gratuito} />
+      <div>
+        <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 10 }}>
+          <span className="tag" style={tagStyle(e.tipo)}>{e.tipo}</span>
+          {e.gratuito && (
+            <span className="tag" style={{ background: "var(--teal-soft)", color: "var(--teal)", borderColor: "var(--blue-soft2)" }}>
+              GRATUITO
+            </span>
+          )}
         </div>
-        <h3 className="agenda-row__titulo">{e.titulo}</h3>
-        <div className="agenda-row__meta">
-          {e.local   && <span>{e.local}</span>}
-          {e.horario && <span>{e.horario}{e.detalhe ? ` · ${e.detalhe}` : ""}</span>}
+        <h3 style={{ margin: "0 0 8px", fontSize: 20, fontWeight: 600, letterSpacing: "-0.02em", lineHeight: 1.2 }}>
+          {e.titulo}
+        </h3>
+        <p style={{ margin: 0, fontFamily: "var(--mono)", fontSize: 12, letterSpacing: "0.04em", color: "var(--ink-3)", lineHeight: 1.6 }}>
+          {[e.local, e.horario, e.detalhe].filter(Boolean).join(" · ")}
+        </p>
+        <div className="agenda-event-foot">
+          <a href={e.href} className="link-arrow">
+            {e.gratuito ? "Detalhes →" : "Inscrições →"}
+          </a>
+          {!e.gratuito && (
+            <span className="agenda-price">
+              {e.preco}{e.precoExtra ? ` · ${e.precoExtra}` : ""}
+            </span>
+          )}
         </div>
       </div>
-
-      <div className="agenda-row__side">
-        <span className="agenda-row__price">{e.preco}</span>
-        {e.precoExtra && <span className="agenda-row__sub">{e.precoExtra}</span>}
-        <span className="link-arrow">{e.gratuito ? "Detalhes →" : "Inscrições →"}</span>
-      </div>
-    </a>
+    </article>
   );
 }
 
-function MesBloco({ label, events }) {
+function MesBloco({ label, events, first }) {
   return (
-    <div className="agenda-month-block">
-      <div className="agenda-month-head">
-        <span className="agenda-month-label">{label}</span>
-        <span className="agenda-month-count">
+    <div style={{ marginBottom: 0 }}>
+      <div className={`agenda-sep${first ? " agenda-sep--first" : ""}`}>
+        <span className="agenda-sep__label">{label}</span>
+        <span className="agenda-sep__count">
           {events.length} {events.length === 1 ? "atividade" : "atividades"}
         </span>
       </div>
-      <div className="agenda-timeline">
-        <div className="agenda-rail"></div>
+      <div className="timeline">
         {events.map((e, i) => <EventoRow key={i} e={e} />)}
       </div>
     </div>
@@ -83,7 +77,6 @@ function AgendaPage() {
 
   return (
     <main>
-      {/* ── Hero ───────────────────────────────────────── */}
       <section className="page-hero">
         <div className="wrap">
           <div className="breadcrumb">
@@ -116,11 +109,10 @@ function AgendaPage() {
         </div>
       </section>
 
-      {/* ── Timeline ───────────────────────────────────── */}
       <section className="section">
         <div className="wrap">
           {grupos.map((g, i) => (
-            <MesBloco key={i} label={g.label} events={g.events} />
+            <MesBloco key={i} label={g.label} events={g.events} first={i === 0} />
           ))}
 
           <div style={{ marginTop: 8, paddingTop: 40, borderTop: "1px solid var(--line)", textAlign: "center" }}>
@@ -134,7 +126,6 @@ function AgendaPage() {
         </div>
       </section>
 
-      {/* ── CTA ────────────────────────────────────────── */}
       <section className="cta-band">
         <div className="wrap cta-band__inner">
           <h2>

@@ -65,8 +65,15 @@
       label: "Atividades", 
       href: P + "pages/atividades.html",
       dropdown: [
-        { cat: "Atendimentos Gratuitos", links: [
-          { label: "Orientação Gratuita (OGB)", href: P + "pages/orientacao-gratuita.html" }
+        { cat: "Laboratórios", links: [
+          { label: "Laboratório de Paracirurgia", href: P + "pages/laboratorio-paracirurgia.html" },
+          { label: "Espaço Bioenergologia", href: P + "pages/bioenergologia.html" },
+          { label: "Laboratório de Ectoplasmologia", href: P + "pages/laboratorio-ectoplasmologia.html" }
+        ]},
+        { cat: "Gratuitos", links: [
+          { label: "Blog", href: P + "pages/blog.html" },
+          { label: "OGB", href: P + "pages/orientacao-gratuita.html" },
+          { label: "Diálogos Online", href: "https://www.youtube.com/playlist?list=PLpz4qwgYZyP3SxfEenlleSpxgqYMaVUhb", target: "_blank" }
         ]},
         { cat: "Eventos & Consultoria", links: [
           { label: "Agenda Completa", href: P + "pages/agenda.html" },
@@ -104,7 +111,6 @@
       ]
     },
     { id: "blog",          label: "Blog",            href: P + "pages/blog.html" },
-    { id: "apoie",         label: "Apoie",           href: P + "pages/apoie.html" },
   ];
 
   const navHTML = navItems
@@ -190,6 +196,13 @@
             </ul>
           </div>
         </div>
+        <div class="footer-apoie">
+          <div class="footer-apoie__text">
+            <span class="footer-apoie__label">Apoie a Ectolab</span>
+            <span class="footer-apoie__sub">Pesquisa e interassistência sustentadas por voluntários. Sua contribuição mantém tudo isso vivo.</span>
+          </div>
+          <a href="${P}pages/apoie.html" class="btn btn-orange btn-sm">Saiba como apoiar <span class="arrow">→</span></a>
+        </div>
         <div class="copy">
           <span>© 2013–2026 Ectolab. Todos os direitos reservados.</span>
           <span>Foz do Iguaçu · Paraná · Brasil &nbsp;◆&nbsp; 25° 32′ S · 54° 35′ W</span>
@@ -226,7 +239,13 @@
       "Ciclo Vital do Ectoplasta": "Ectoplast Life Cycle",
       "Raízes da Ectoplasmia": "Roots of Ectoplasmy",
       "Atividades": "Activities",
-      "Atendimentos Gratuitos": "Free Services",
+      "Laboratórios": "Laboratories",
+      "Laboratório de Paracirurgia": "Parasurgery Laboratory",
+      "Espaço Bioenergologia": "Bioenergology Space",
+      "Laboratório de Ectoplasmologia": "Ectoplasmology Laboratory",
+      "Gratuitos": "Free",
+      "OGB": "OGB",
+      "Diálogos Online": "Online Dialogues",
       "Orientação Gratuita (OGB)": "Free Bioenergetic Guidance (OGB)",
       "Eventos & Consultoria": "Events & Consulting",
       "Fórum Internacional (Online)": "International Forum (Online)",

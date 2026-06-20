@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Espaço Bioenergologia · Ectolab</title>
+  <meta name="description" content="Espaço Bioenergologia da Ectolab: ambiente otimizado para avaliação da homeostase do energossoma, orientação gratuita e preceptoria em ectoplasmia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/inner.css" />
+  <style>
+    .lab-page { background: var(--paper); }
+    .lab-hero { padding: clamp(56px, 7vw, 96px) 0 clamp(48px, 6vw, 78px); border-bottom: 1px solid var(--line); background: linear-gradient(180deg, var(--paper), #f8fbfb); }
+    .lab-hero__grid { display: grid; grid-template-columns: minmax(0, 1.12fr) minmax(320px, .88fr); gap: clamp(36px, 6vw, 76px); align-items: end; }
+    .lab-hero .h-display { font-size: clamp(52px, 7vw, 96px); line-height: .94; max-width: 840px; }
+    .lab-hero .lede { max-width: 690px; margin-top: 24px; }
+    .lab-card { background: var(--ink); color: var(--paper); border-radius: var(--r-md); overflow: hidden; box-shadow: 0 28px 64px -40px rgba(8,34,43,.7); }
+    .lab-card img { width: 100%; aspect-ratio: 4 / 2.35; object-fit: cover; display: block; opacity: .88; }
+    .lab-card__body { padding: 28px; }
+    .lab-card__body p { margin: 12px 0 0; color: rgba(255,255,255,.75); line-height: 1.65; }
+    .lab-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .lab-info { display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; margin-top: 42px; background: var(--white); }
+    .lab-info div { padding: 18px 20px; border-right: 1px solid var(--line); }
+    .lab-info div:last-child { border-right: 0; }
+    .lab-info dt { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+    .lab-info dd { margin: 6px 0 0; font-family: var(--serif); font-size: 21px; color: var(--ink); }
+    .lab-section-head { display: flex; justify-content: space-between; align-items: end; gap: 28px; margin-bottom: 30px; }
+    .lab-section-head p { max-width: 560px; color: var(--ink-2); line-height: 1.65; margin: 0; }
+    .lab-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .lab-panel { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); padding: clamp(28px, 4vw, 42px); }
+    .lab-panel.dark { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+    .lab-panel h2, .lab-panel h3 { font-family: var(--display); letter-spacing: -.02em; line-height: 1.05; margin: 0 0 18px; }
+    .lab-panel p { color: var(--ink-2); line-height: 1.7; margin: 0; }
+    .lab-panel.dark p { color: rgba(255,255,255,.76); }
+    .lab-list { list-style: none; padding: 0; margin: 18px 0 0; display: grid; gap: 12px; }
+    .lab-list li { position: relative; padding-left: 24px; color: var(--ink-2); line-height: 1.55; }
+    .lab-panel.dark .lab-list li { color: rgba(255,255,255,.78); }
+    .lab-list li::before { content: ""; position: absolute; left: 0; top: .48em; width: 10px; height: 10px; border-radius: 50%; background: var(--gold); }
+    .contact-strip { display: grid; grid-template-columns: repeat(2,1fr); gap: 1px; background: var(--line); border: 1px solid var(--line); border-radius: var(--r-sm); overflow: hidden; margin-top: 24px; }
+    .contact-strip div { background: var(--white); padding: 18px 20px; }
+    .contact-strip dt { font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase; color: var(--ink-3); }
+    .contact-strip dd { margin: 6px 0 0; color: var(--ink); font-weight: 600; }
+    @media (max-width: 900px) { .lab-hero__grid, .lab-grid { grid-template-columns: 1fr; } .lab-section-head { display: block; } .lab-section-head p { margin-top: 14px; } .lab-info { grid-template-columns: 1fr; } .lab-info div { border-right: 0; border-bottom: 1px solid var(--line); } .lab-info div:last-child { border-bottom: 0; } }
+    @media (max-width: 620px) { .contact-strip { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body data-active="atividades">
+  <div id="__header"></div>
+
+  <main class="lab-page">
+    <section class="lab-hero">
+      <div class="wrap">
+        <div class="breadcrumb"><a href="/index.html">Ectolab</a><span class="sep">◆</span><a href="/pages/atividades.html">Atividades</a><span class="sep">◆</span><span>Bioenergologia</span></div>
+        <div class="lab-hero__grid">
+          <div>
+            <span class="eyebrow">Espaço Bioenergologia</span>
+            <h1 class="h-display">Avaliação e orientação bioenergética.</h1>
+            <p class="lede">Bioenergologia, de origem no idioma Grego, bio = vida, energo = energia, logos = estudo, pode ser definida como o estudo das diferentes formas de energias existentes na natureza e que vitalizam os seres vivos.</p>
+            <div class="lab-actions">
+              <a class="btn btn-orange" href="#orientacao">Orientação gratuita</a>
+              <a class="btn btn-ghost" href="#preceptoria">Preceptoria</a>
+            </div>
+            <dl class="lab-info">
+              <div><dt>Modalidade</dt><dd>Presencial ou online</dd></div>
+              <div><dt>Contato</dt><dd>WhatsApp + e-mail</dd></div>
+              <div><dt>Preceptoria</dt><dd>Até 2 horas</dd></div>
+            </dl>
+          </div>
+          <aside class="lab-card">
+            <img src="/imagens/sede-ectolab-pesquisa.jpg" alt="Ambiente da Ectolab em Foz do Iguaçu" />
+            <div class="lab-card__body">
+              <span class="eyebrow">Ambiente otimizado</span>
+              <p>Combinação de instrumentos e técnicas energéticas para avaliar a condição de homeostase do energossoma.</p>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="lab-section-head">
+          <div>
+            <span class="eyebrow">Finalidade</span>
+            <h2 class="h2">O que é o Espaço Bioenergologia?</h2>
+          </div>
+          <p>Um ambiente otimizado para fomentar a ectoplasmia pessoal, apoiar a profilaxia da síndrome ectoplásmica e aprofundar a assimilação energética interassistencial homeostática.</p>
+        </div>
+
+        <div class="lab-grid">
+          <article class="lab-panel">
+            <h3>Objetivos do espaço</h3>
+            <ul class="lab-list">
+              <li>Fomentar a ectoplasmia pessoal.</li>
+              <li>Realizar a profilaxia da síndrome ectoplásmica.</li>
+              <li>Promover desbloqueios parapsíquicos de diversas etiologias.</li>
+              <li>Aprofundar a assimilação energética interassistencial homeostática.</li>
+            </ul>
+          </article>
+
+          <article class="lab-panel dark" id="orientacao">
+            <span class="eyebrow">Atendimento individual</span>
+            <h3>Orientação Gratuita em Bioenergologia</h3>
+            <p>A orientação visa esclarecer dúvidas quanto ao processo parapsíquico e da ectoplasmia.</p>
+            <ul class="lab-list">
+              <li>Prestar esclarecimentos sobre parapsiquismo e ectoplasmia.</li>
+              <li>Verificar o nível de equilíbrio holossomático individual.</li>
+              <li>Indicar atividades auxiliares ao equilíbrio energético pessoal.</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="wrap">
+        <div class="lab-grid">
+          <article class="lab-panel" id="preceptoria">
+            <span class="eyebrow">Ectoplasmia pessoal</span>
+            <h2>Preceptoria em Ectoplasmia</h2>
+            <p>A Preceptoria em Ectoplasmia orienta o parapsíquico ectoplasta quanto aos aspectos diagnósticos, terapêuticos e profiláticos para aprimoramento e qualificação da ectoplasmia interassistencial pessoal. Consulte valores e datas na loja.</p>
+            <ul class="lab-list">
+              <li>Avaliar condições somáticas e energéticas relacionadas à ectoplasmia.</li>
+              <li>Propor ações para o desenvolvimento da ectoplasmia interassistencial.</li>
+              <li>Oferecer diagnóstico da síndrome ectoplásmica.</li>
+              <li>Atividade sem pré-requisito.</li>
+              <li>Carga horária: até 2 horas.</li>
+            </ul>
+            <div class="lab-actions">
+              <a class="btn btn-orange" href="https://ectolab.org/loja/" target="_blank" rel="noreferrer">Consultar loja <span class="arrow">↗</span></a>
+            </div>
+          </article>
+
+          <aside class="lab-panel">
+            <span class="eyebrow">Informações e agendamento</span>
+            <h2>Fale com a equipe.</h2>
+            <p>As orientações gratuitas em Bioenergologia podem ser realizadas por videoconferência ou presencialmente.</p>
+            <dl class="contact-strip">
+              <div>
+                <dt>E-mail</dt>
+                <dd><a href="mailto:bioenergologia@ectolab.org">bioenergologia@ectolab.org</a></dd>
+              </div>
+              <div>
+                <dt>WhatsApp</dt>
+                <dd><a href="https://wa.me/5545991011407" target="_blank" rel="noreferrer">(45) 99101-1407</a></dd>
+              </div>
+            </dl>
+            <div class="lab-actions">
+              <a class="btn btn-ghost" href="/pages/orientacao-gratuita.html">Ver página da OGB</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="__footer"></div>
+  <script type="module" src="/assets/chrome.js"></script>
+</body>
+</html>
