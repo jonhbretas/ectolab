@@ -53,6 +53,10 @@ function dateSlash(value) {
   return `${String(d.getUTCDate()).padStart(2, '0')}/${String(d.getUTCMonth() + 1).padStart(2, '0')}/${d.getUTCFullYear()}`;
 }
 
+function postHref(post) {
+  return `/blog/${escapeHtml(post.slug)}.html`;
+}
+
 function readPosts() {
   if (!fs.existsSync(contentDir)) return [];
 
@@ -89,8 +93,8 @@ function renderFeatured(post) {
   return `    <section class="section">
       <div class="wrap">
         <div class="blog-featured">
-          <a href="/blog/${escapeHtml(post.slug)}/" class="blog-featured__viz">${post.coverImage ? `<img src="${escapeHtml(post.coverImage)}" alt="${escapeHtml(post.title)}" loading="eager" />` : '<span class="specimen">BLOG</span>'}</a>
-          <a href="/blog/${escapeHtml(post.slug)}/" class="blog-featured__body" style="text-decoration:none;color:inherit">
+          <a href="${postHref(post)}" class="blog-featured__viz">${post.coverImage ? `<img src="${escapeHtml(post.coverImage)}" alt="${escapeHtml(post.title)}" loading="eager" />` : '<span class="specimen">BLOG</span>'}</a>
+          <a href="${postHref(post)}" class="blog-featured__body" style="text-decoration:none;color:inherit">
             <div style="display:flex;gap:8px"><span class="tag gold">${escapeHtml(post.category || 'Blog')}</span><span class="tag ghost">${dateLabel(post.date)}</span></div>
             <h2>${escapeHtml(post.title)}</h2>
             <p>${escapeHtml(excerpt(post))}</p>
@@ -102,7 +106,7 @@ function renderFeatured(post) {
 }
 
 function renderCard(post) {
-  return `          <a href="/blog/${escapeHtml(post.slug)}/" class="blog-card">
+  return `          <a href="${postHref(post)}" class="blog-card">
             ${renderImage(post, 'blog-card__viz')}
             <div style="display:flex;gap:8px;flex-wrap:wrap">
               <span class="tag">${escapeHtml(post.category || 'Blog')}</span>
@@ -271,7 +275,7 @@ function rightSidebar(post, posts) {
   const related = posts
     .filter((item) => item.slug !== post.slug)
     .slice(0, 5)
-    .map((item) => `<a href="/blog/${escapeHtml(item.slug)}/">${escapeHtml(item.title)}<span>${dateLabel(item.date)}</span></a>`)
+    .map((item) => `<a href="${postHref(item)}">${escapeHtml(item.title)}<span>${dateLabel(item.date)}</span></a>`)
     .join('\n              ');
 
   return `        <aside class="wp-post-sidebar wp-post-sidebar--right" aria-label="Outros posts do blog">
@@ -346,11 +350,14 @@ function writePostPages(posts) {
     const html = renderPostPage(post, posts);
     const legacyDir = path.join(publicDir, post.slug);
     const blogDir = path.join(publicDir, 'blog', post.slug);
+    const blogHtmlPath = path.join(publicDir, 'blog', `${post.slug}.html`);
 
     fs.mkdirSync(legacyDir, { recursive: true });
     fs.mkdirSync(blogDir, { recursive: true });
+    fs.mkdirSync(path.dirname(blogHtmlPath), { recursive: true });
     fs.writeFileSync(path.join(legacyDir, 'index.html'), html);
     fs.writeFileSync(path.join(blogDir, 'index.html'), html);
+    fs.writeFileSync(blogHtmlPath, html);
   });
 }
 
