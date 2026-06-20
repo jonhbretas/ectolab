@@ -173,7 +173,8 @@ export default defineConfig({
         conscienciologia: resolve(__dirname, 'pages/conscienciologia.html'),
         blog: resolve(__dirname, 'pages/blog.html'),
         blogPost: resolve(__dirname, 'pages/blog-post.html'),
-        parcerias: resolve(__dirname, 'pages/parcerias.html')
+        parcerias: resolve(__dirname, 'pages/parcerias.html'),
+        agenda: resolve(__dirname, 'pages/agenda.html')
       }
     }
   }

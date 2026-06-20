@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Apoie a Ectolab · Programa Ectolab Interassistencial</title>
+  <meta name="description" content="Programa Ectolab Interassistencial: contribuições mensais para apoiar a manutenção da estrutura da Ectolab e fortalecer o trabalho interassistencial." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/inner.css" />
+  <style>
+    .support-page { background: var(--paper); }
+    .support-hero {
+      padding: clamp(58px, 7vw, 104px) 0 clamp(50px, 6vw, 86px);
+      border-bottom: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 78% 18%, rgba(240,160,48,0.18), transparent 34%),
+        linear-gradient(180deg, var(--paper), #f8fbfb);
+      overflow: hidden;
+    }
+    .support-hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 0.9fr);
+      gap: clamp(36px, 6vw, 80px);
+      align-items: end;
+    }
+    .support-hero .h-display {
+      font-size: clamp(54px, 7vw, 104px);
+      line-height: 0.94;
+      max-width: 780px;
+    }
+    .support-hero .lede {
+      max-width: 650px;
+      margin-top: 26px;
+    }
+    .support-note {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: var(--r-md);
+      padding: clamp(28px, 4vw, 42px);
+      box-shadow: 0 28px 64px -40px rgba(8,34,43,0.65);
+    }
+    .support-note .eyebrow { color: var(--gold); }
+    .support-note p {
+      margin: 14px 0 0;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.65;
+    }
+    .support-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 30px;
+    }
+    .support-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border: 1px solid var(--line);
+      border-radius: var(--r-sm);
+      overflow: hidden;
+      margin-top: 40px;
+      max-width: 720px;
+      background: var(--white);
+    }
+    .support-strip div {
+      padding: 18px 20px;
+      border-right: 1px solid var(--line);
+    }
+    .support-strip div:last-child { border-right: 0; }
+    .support-strip dt {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink-3);
+    }
+    .support-strip dd {
+      margin: 6px 0 0;
+      font-family: var(--serif);
+      font-size: 21px;
+      color: var(--ink);
+    }
+    .support-section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 28px;
+      margin-bottom: 34px;
+    }
+    .support-section-head p {
+      max-width: 520px;
+      color: var(--ink-2);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .plan-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+    .plan-grid.featured {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 22px;
+    }
+    .plan-card {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      padding: 28px;
+      display: flex;
+      flex-direction: column;
+      min-height: 300px;
+      transition: transform 0.18s ease, border-color 0.18s ease, box-shadow 0.18s ease;
+    }
+    .plan-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(8,34,43,0.35);
+      box-shadow: 0 18px 40px -32px rgba(8,34,43,0.6);
+    }
+    .plan-card.is-featured {
+      min-height: 420px;
+      background:
+        linear-gradient(180deg, rgba(240,160,48,0.08), transparent 45%),
+        var(--white);
+      border-color: rgba(225,137,10,0.35);
+    }
+    .plan-card__label {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--orange-2);
+    }
+    .plan-card h2,
+    .plan-card h3 {
+      font-family: var(--display);
+      font-size: clamp(24px, 2.2vw, 34px);
+      line-height: 1;
+      letter-spacing: -0.02em;
+      margin: 16px 0 0;
+    }
+    .plan-card__price {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+      margin-top: 22px;
+      color: var(--ink);
+    }
+    .plan-card__price strong {
+      font-family: var(--display);
+      font-size: clamp(42px, 4.8vw, 66px);
+      letter-spacing: -0.04em;
+      line-height: 0.92;
+    }
+    .plan-card__price span {
+      color: var(--ink-3);
+      font-size: 14px;
+    }
+    .plan-card p {
+      color: var(--ink-2);
+      line-height: 1.58;
+      margin: 18px 0 0;
+    }
+    .plan-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      display: grid;
+      gap: 11px;
+      color: var(--ink-2);
+      font-size: 15px;
+    }
+    .plan-card li {
+      position: relative;
+      padding-left: 24px;
+      line-height: 1.45;
+    }
+    .plan-card li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.48em;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--gold);
+      box-shadow: inset 0 0 0 2px rgba(255,255,255,0.65);
+    }
+    .plan-card .btn {
+      margin-top: auto;
+      align-self: flex-start;
+    }
+    .impact-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: clamp(28px, 5vw, 64px);
+      align-items: start;
+    }
+    .impact-panel {
+      background: var(--ink);
+      color: var(--paper);
+      border-radius: var(--r-md);
+      padding: clamp(30px, 4vw, 50px);
+      position: sticky;
+      top: 100px;
+    }
+    .impact-panel .eyebrow { color: var(--gold); }
+    .impact-panel p {
+      color: rgba(255,255,255,0.75);
+      line-height: 1.7;
+    }
+    .faq-list {
+      border-top: 1px solid var(--line);
+    }
+    .faq-item {
+      display: grid;
+      grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+      gap: 28px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .faq-item h3 {
+      margin: 0;
+      font-family: var(--display);
+      font-size: 21px;
+      line-height: 1.15;
+      letter-spacing: -0.01em;
+    }
+    .faq-item p {
+      margin: 0;
+      color: var(--ink-2);
+      line-height: 1.65;
+    }
+    .support-cta {
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      padding: clamp(30px, 5vw, 56px);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) auto;
+      gap: 30px;
+      align-items: center;
+    }
+    @media (max-width: 980px) {
+      .support-hero__grid,
+      .impact-grid,
+      .support-cta { grid-template-columns: 1fr; }
+      .impact-panel { position: relative; top: auto; }
+      .plan-grid,
+      .plan-grid.featured { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 680px) {
+      .support-section-head { display: block; }
+      .support-section-head p { margin-top: 14px; }
+      .support-strip { grid-template-columns: 1fr; }
+      .support-strip div { border-right: 0; border-bottom: 1px solid var(--line); }
+      .support-strip div:last-child { border-bottom: 0; }
+      .faq-item { grid-template-columns: 1fr; gap: 12px; }
+    }
+  </style>
+</head>
+<body data-active="apoie">
+  <div id="__header"></div>
+
+  <main class="support-page">
+    <section class="support-hero">
+      <div class="wrap">
+        <div class="breadcrumb">
+          <a href="/index.html">Ectolab</a><span class="sep">◆</span><span>Programa Interassistencial</span>
+        </div>
+        <div class="support-hero__grid">
+          <div>
+            <span class="eyebrow">Programa Ectolab Interassistencial</span>
+            <h1 class="h-display">Apoie a manutenção da Ectolab.</h1>
+            <p class="lede">
+              Uma forma simples de contribuir mensalmente para a sustentabilidade do laboratório,
+              das instalações e das atividades interassistenciais mantidas por voluntários.
+            </p>
+            <div class="support-actions">
+              <a class="btn btn-orange" href="#planos">Ver planos <span class="arrow">→</span></a>
+              <a class="btn btn-ghost" href="#duvidas">Tirar dúvidas</a>
+            </div>
+            <dl class="support-strip">
+              <div>
+                <dt>Instituição</dt>
+                <dd>Sem fins lucrativos</dd>
+              </div>
+              <div>
+                <dt>Trabalho</dt>
+                <dd>Voluntário</dd>
+              </div>
+              <div>
+                <dt>Recorrência</dt>
+                <dd>Mensal</dd>
+              </div>
+            </dl>
+          </div>
+          <aside class="support-note">
+            <span class="eyebrow">Atenção</span>
+            <p>
+              A Ectolab é uma instituição sem fins lucrativos, sustentada pelo esforço
+              e dedicação de voluntários não remunerados.
+            </p>
+            <p>
+              Os recursos arrecadados pelo programa são integralmente investidos na
+              manutenção das instalações da Ectolab e na continuidade do trabalho
+              interassistencial.
+            </p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="planos">
+      <div class="wrap">
+        <div class="support-section-head">
+          <div>
+            <span class="eyebrow">Contribuições mensais</span>
+            <h2 class="h2">Escolha uma forma de apoiar.</h2>
+          </div>
+          <p>
+            Ao fazer parte do programa, você poderá ter acesso a cursos exclusivos,
+            lives, aulas e outros benefícios conforme o plano escolhido.
+          </p>
+        </div>
+
+        <div class="plan-grid" aria-label="Planos mensais básicos">
+          <article class="plan-card">
+            <span class="plan-card__label">Mensal 30</span>
+            <h3>Contribuição essencial</h3>
+            <div class="plan-card__price"><strong>R$30</strong><span>/ mês</span></div>
+            <p>Contribuição mensal recorrente para ajudar na manutenção do trabalho interassistencial.</p>
+            <a class="btn btn-ghost" href="https://ectolab.org/product/mensal-30/" target="_blank" rel="noreferrer">Assinar <span class="arrow">↗</span></a>
+          </article>
+
+          <article class="plan-card">
+            <span class="plan-card__label">Mensal 40</span>
+            <h3>Contribuição contínua</h3>
+            <div class="plan-card__price"><strong>R$40</strong><span>/ mês</span></div>
+            <p>Contribuição mensal recorrente para fortalecer a sustentabilidade da instituição.</p>
+            <a class="btn btn-ghost" href="https://ectolab.org/product/mensal-40/" target="_blank" rel="noreferrer">Assinar <span class="arrow">↗</span></a>
+          </article>
+
+          <article class="plan-card">
+            <span class="plan-card__label">Mensal 50</span>
+            <h3>Contribuição ampliada</h3>
+            <div class="plan-card__price"><strong>R$50</strong><span>/ mês</span></div>
+            <p>Contribuição mensal recorrente para apoiar a manutenção das instalações da Ectolab.</p>
+            <a class="btn btn-ghost" href="https://ectolab.org/product/mensal-50/" target="_blank" rel="noreferrer">Assinar <span class="arrow">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="wrap">
+        <div class="support-section-head">
+          <div>
+            <span class="eyebrow">Planos com benefícios</span>
+            <h2 class="h2">Apoio mensal com acesso ampliado.</h2>
+          </div>
+          <p>
+            Benefícios e descontos podem variar conforme disponibilidade, agenda e regras
+            de cada curso ou atividade.
+          </p>
+        </div>
+
+        <div class="plan-grid featured" aria-label="Planos mensais com benefícios">
+          <article class="plan-card is-featured">
+            <span class="plan-card__label">Plano Mini-Peça</span>
+            <h3>Para quem quer acompanhar e contribuir.</h3>
+            <div class="plan-card__price"><strong>R$80</strong><span>/ mês</span></div>
+            <p>Contribuição mensal recorrente. Benefícios em desenvolvimento.</p>
+            <ul>
+              <li>Cursos gravados</li>
+              <li>Até 5% de desconto em qualquer evento pago</li>
+              <li>01 Laboratório de Paracirurgia no mês</li>
+            </ul>
+            <a class="btn btn-orange" href="https://ectolab.org/cart/?add-to-cart=1861&quantity=1" target="_blank" rel="noreferrer">Assinar <span class="arrow">↗</span></a>
+          </article>
+
+          <article class="plan-card is-featured">
+            <span class="plan-card__label">Plano Amparador</span>
+            <h3>Para sustentar de forma mais robusta.</h3>
+            <div class="plan-card__price"><strong>R$180</strong><span>/ mês</span></div>
+            <p>Contribuição mensal recorrente com acesso a mais atividades e descontos.</p>
+            <ul>
+              <li>Mensal da DIP</li>
+              <li>Cursos gravados</li>
+              <li>Até 5% de desconto em qualquer evento pago</li>
+              <li>02 Laboratórios de Paracirurgia no mês</li>
+              <li>Até 15% de desconto em cursos e eventos</li>
+              <li>40% de desconto em oficinas</li>
+            </ul>
+            <a class="btn btn-orange" href="https://ectolab.org/cart/?add-to-cart=1849&quantity=1" target="_blank" rel="noreferrer">Assinar <span class="arrow">↗</span></a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="duvidas">
+      <div class="wrap impact-grid">
+        <aside class="impact-panel">
+          <span class="eyebrow">Destino dos recursos</span>
+          <h2 class="h2" style="color:var(--white);margin-top:14px">Estrutura, continuidade e assistência.</h2>
+          <p>
+            Os recursos do Programa Ectolab Interassistencial são direcionados para
+            a manutenção da estrutura da Ectolab e para a sustentabilidade do trabalho
+            interassistencial.
+          </p>
+          <a class="btn btn-gold" href="#planos">Contribuir agora <span class="arrow">→</span></a>
+        </aside>
+
+        <div>
+          <span class="eyebrow">Dúvidas frequentes</span>
+          <h2 class="h2">Como funciona o programa.</h2>
+          <div class="faq-list" style="margin-top:30px">
+            <article class="faq-item">
+              <h3>Como acessar os cursos gravados?</h3>
+              <p>
+                Os cursos gravados devem ser acessados pela plataforma
+                <a href="https://ead.conscienciologia.org.br/" target="_blank" rel="noreferrer">ead.conscienciologia.org.br</a>,
+                usando o mesmo e-mail cadastrado na assinatura do plano de recorrência.
+              </p>
+            </article>
+
+            <article class="faq-item">
+              <h3>Como funciona o desconto em cursos?</h3>
+              <p>
+                Cada curso pode ter uma tabela própria de desconto conforme o plano
+                de assinatura. Para confirmar o percentual aplicável, consulte o financeiro.
+              </p>
+            </article>
+
+            <article class="faq-item">
+              <h3>Não sou voluntário da Ectolab, posso participar?</h3>
+              <p>
+                Sim. Qualquer ajuda na sustentabilidade do trabalho interassistencial
+                é bem-vinda, fortalece o vínculo com a instituição e ajuda na expansão
+                da assistência.
+              </p>
+            </article>
+
+            <article class="faq-item">
+              <h3>Não sabe como acessar sua conta?</h3>
+              <p>
+                Você pode acessar sua conta em
+                <a href="https://ectolab.org/my-account/" target="_blank" rel="noreferrer">ectolab.org/my-account</a>.
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-sm bg-paper">
+      <div class="wrap">
+        <div class="support-cta">
+          <div>
+            <span class="eyebrow">Contribuição recorrente</span>
+            <h2 class="h2">Sua ajuda mantém o laboratório em movimento.</h2>
+            <p class="lede" style="margin-bottom:0">
+              Escolha um plano mensal e participe da sustentação das atividades da Ectolab.
+            </p>
+          </div>
+          <a class="btn btn-orange" href="#planos">Ver planos <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="__footer"></div>
+
+  <script type="module" src="/assets/chrome.js"></script>
+</body>
+</html>

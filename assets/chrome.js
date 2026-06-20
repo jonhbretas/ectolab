@@ -94,7 +94,8 @@
           { label: "Quem Somos & CGC", href: P + "pages/quem-somos.html" },
           { label: "Nossa História", href: P + "pages/historia.html" },
           { label: "Contato e Sede", href: P + "pages/contato.html" },
-          { label: "Parcerias de Pesquisa", href: P + "pages/parcerias.html" }
+          { label: "Parcerias de Pesquisa", href: P + "pages/parcerias.html" },
+          { label: "Apoie a Ectolab", href: P + "pages/apoie.html" }
         ]},
         { cat: "Acervo de Pesquisa", links: [
           { label: "Base: Conscienciologia", href: P + "pages/conscienciologia.html" },
@@ -103,6 +104,7 @@
       ]
     },
     { id: "blog",          label: "Blog",            href: P + "pages/blog.html" },
+    { id: "apoie",         label: "Apoie",           href: P + "pages/apoie.html" },
   ];
 
   const navHTML = navItems
@@ -244,10 +246,12 @@
       "Nossa História": "Our History",
       "Contato e Sede": "Contact and Headquarters",
       "Parcerias de Pesquisa": "Research Partnerships",
+      "Apoie a Ectolab": "Support Ectolab",
       "Acervo de Pesquisa": "Research Collection",
       "Base: Conscienciologia": "Foundation: Conscientiology",
       "Materiais Publicados & FAQ": "Published Materials & FAQ",
       "Blog": "Blog",
+      "Apoie": "Support",
       "Solicitar paracirurgia": "Request parasurgery",
       "Pesquisa": "Research",
       "Ciência & Ectoplasmologia": "Science & Ectoplasmology",

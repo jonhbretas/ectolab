@@ -8,6 +8,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="../assets/inner.css" />
   <style>
     /* ============================================================
        PARCERIAS — local styles
@@ -18,22 +20,24 @@
       background: var(--paper);
       position: relative;
       overflow: hidden;
-      padding: clamp(56px, 7vw, 96px) 0 0;
+      padding: clamp(42px, 6vw, 76px) 0 clamp(42px, 5vw, 68px);
       border-bottom: 1px solid var(--line);
     }
     .parc-hero__grid {
       display: grid;
-      grid-template-columns: 1.25fr 1fr;
-      gap: 64px;
-      align-items: end;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+      gap: clamp(36px, 5vw, 64px);
+      align-items: start;
     }
     .parc-hero__viz {
-      aspect-ratio: 5 / 6;
+      aspect-ratio: 4 / 3.35;
+      max-height: 520px;
       background: var(--ink);
-      border-radius: var(--r-md) var(--r-md) 0 0;
+      border-radius: var(--r-md);
       position: relative;
       overflow: hidden;
-      margin-bottom: -1px;
+      margin-top: 28px;
+      box-shadow: 0 24px 54px -30px rgba(8,34,43,0.45);
     }
     .parc-hero__viz img {
       width: 100%;
@@ -64,9 +68,25 @@
     .parc-hero__viz .tr { top: 18px; right: 18px; }
     .parc-hero__viz .br { bottom: 18px; right: 18px; }
     .parc-hero__viz .bl { bottom: 18px; left: 18px; color: var(--gold); }
+    .parc-hero__copy {
+      padding-bottom: 0;
+      max-width: 660px;
+    }
+    .parc-hero__copy .h-display {
+      font-size: clamp(52px, 7vw, 92px);
+      line-height: 0.94;
+    }
+    .parc-hero__copy .lede {
+      max-width: 540px;
+      font-size: clamp(17px, 1.35vw, 20px);
+    }
+    .parc-hero__meta {
+      margin-top: 36px;
+      max-width: 560px;
+    }
     @media (max-width: 900px) {
       .parc-hero__grid { grid-template-columns: 1fr; gap: 32px; }
-      .parc-hero__viz { aspect-ratio: 4 / 3; }
+      .parc-hero__viz { aspect-ratio: 4 / 3; margin-top: 0; }
     }
 
     /* Infrastructure list */
@@ -580,28 +600,6 @@
     }
     @media (max-width: 900px) { .sec-head { grid-template-columns: 1fr; gap: 16px; } }
   </style>
-
-  <link rel="canonical" href="https://ectolab.vercel.app/pages/parcerias.html" />
-  <link rel="alternate" hreflang="pt-BR" href="https://ectolab.vercel.app/pages/parcerias.html" />
-  <link rel="alternate" hreflang="x-default" href="https://ectolab.vercel.app/pages/parcerias.html" />
-  <link rel="icon" href="/favicon.png" type="image/png" />
-  <link rel="manifest" href="/site.webmanifest" />
-  <meta name="theme-color" content="#0f5d73" />
-  <meta property="og:type" content="website" />
-  <meta property="og:site_name" content="Ectolab" />
-  <meta property="og:locale" content="pt_BR" />
-  <meta property="og:title" content="Parcerias &amp; Pesquisa · Ectolab" />
-  <meta property="og:description" content="Acervo de pesquisa da Ectolab com obras, conceitos, protocolos e publicações sobre ectoplasmia, paracirurgia, estado vibracional e interstício celular." />
-  <meta property="og:url" content="https://ectolab.vercel.app/pages/parcerias.html" />
-  <meta property="og:image" content="https://ectolab.vercel.app/logo.webp" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Parcerias &amp; Pesquisa · Ectolab" />
-  <meta name="twitter:description" content="Acervo de pesquisa da Ectolab com obras, conceitos, protocolos e publicações sobre ectoplasmia, paracirurgia, estado vibracional e interstício celular." />
-  <meta name="twitter:image" content="https://ectolab.vercel.app/logo.webp" />
-  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":["Organization","LocalBusiness"],"@id":"https://ectolab.vercel.app/#organization","name":"Ectolab","legalName":"Associação Internacional de Pesquisa Laboratorial em Paracirurgia e Ectoplasmia","url":"https://ectolab.vercel.app","logo":"https://ectolab.vercel.app/logo.webp","foundingDate":"2013","email":"contato@ectolab.org","address":{"@type":"PostalAddress","streetAddress":"Rua da Cosmoética, 1635 – sala 12","addressLocality":"Foz do Iguaçu","addressRegion":"PR","postalCode":"85853-755","addressCountry":"BR"},"areaServed":["BR","PT","ES"],"knowsAbout":["ectoplasmia","ectoplasma","paracirurgia","conscienciologia","parafenomenos"]},{"@type":"WebSite","@id":"https://ectolab.vercel.app/#website","url":"https://ectolab.vercel.app","name":"Ectolab","inLanguage":"pt-BR","publisher":{"@id":"https://ectolab.vercel.app/#organization"}},{"@type":"WebPage","@id":"https://ectolab.vercel.app/pages/parcerias.html#webpage","url":"https://ectolab.vercel.app/pages/parcerias.html","name":"Parcerias &amp; Pesquisa · Ectolab","description":"Acervo de pesquisa da Ectolab com obras, conceitos, protocolos e publicações sobre ectoplasmia, paracirurgia, estado vibracional e interstício celular.","inLanguage":"pt-BR","isPartOf":{"@id":"https://ectolab.vercel.app/#website"},"about":{"@id":"https://ectolab.vercel.app/#organization"}}]}</script>
-  <script type="module" crossorigin src="/assets/chrome-5RtolnOL.js"></script>
-  <link rel="stylesheet" crossorigin href="/assets/chrome-CCyZ7KFM.css">
-  <link rel="stylesheet" crossorigin href="/assets/inner-CdMuERq2.css">
 </head>
 <body data-active="">
   <div id="__header"></div>
@@ -618,22 +616,22 @@
         </div>
 
         <div class="parc-hero__grid">
-          <div style="padding-bottom: clamp(40px, 5vw, 72px)">
+          <div class="parc-hero__copy">
             <div class="eyebrow"><span class="dot"></span>PARCERIAS &nbsp;·&nbsp; PESQUISA HOSPEDADA &nbsp;·&nbsp; CAMPUS FOZ</div>
             <h1 class="h-display" style="margin-top:24px">
               Um <strong style="color:var(--blue);font-weight:700">espaço</strong><br />
               feito para quem<br />
               vem <em style="font-style:italic;color:var(--orange-2);font-weight:500">pesquisar.</em>
             </h1>
-            <p class="lede" style="margin-top:32px;max-width:580px">
-              A Ectolab é, antes de qualquer coisa, um laboratório. Quem chega aqui para investigar ectoplasma, paracirurgia ou parafenômenos da consciência encontra acervo, infraestrutura, equipe e protocolos já calibrados para o trabalho de pesquisa — não precisa começar do zero.
+            <p class="lede" style="margin-top:28px">
+              A Ectolab oferece ambiente laboratorial, acervo e protocolos para pesquisas em ectoplasmia, paracirurgia e parafenômenos da consciência. O campus facilita logística, observação de campo e articulação com voluntários da Conscienciologia.
             </p>
-            <div class="flex gap-12" style="margin-top:36px;flex-wrap:wrap">
+            <div class="flex gap-12" style="margin-top:28px;flex-wrap:wrap">
               <a href="#hospedar" class="btn btn-orange">Quero pesquisar aqui <span class="arrow">→</span></a>
               <a href="#contribuicoes" class="btn btn-ghost">Ver contribuições científicas</a>
             </div>
 
-            <dl class="meta-grid" style="margin-top:56px;max-width:560px">
+            <dl class="meta-grid parc-hero__meta">
               <div><dt>Pesquisadores recebidos</dt><dd>+10</dd></div>
               <div><dt>Origem</dt><dd>BR · FR · USA</dd></div>
               <div><dt>Livros publicados</dt><dd>5 títulos</dd></div>
@@ -666,7 +664,7 @@
             </h2>
           </div>
           <p>
-            O campus da Ectolab foi pensado, ao longo de 23 anos, para sustentar pesquisa de longa duração: tem acervo especializado, salas, instrumentos de campo, supervisão metodológica e hospedagem no mesmo perímetro. Quem chega para investigar não perde tempo montando estrutura — entra direto na pesquisa.
+            O campus da Ectolab concentra acervo especializado, salas, instrumentos de campo, protocolos e hospedagem no mesmo perímetro. A pesquisa não é gratuita por princípio, mas fica logisticamente otimizada por acontecer dentro do campus e contar com ambiente já estruturado.
           </p>
         </div>
 
@@ -689,18 +687,18 @@
             <div class="infra-item__tags">
               <span class="infra-tag">410 Campos</span>
               <span class="infra-tag">Protocolo Ectolab</span>
-              <span class="infra-tag">Equipe titular</span>
+              <span class="infra-tag">Voluntariado</span>
             </div>
           </div>
 
           <div class="infra-item">
             <div class="infra-item__num">03 &nbsp;/&nbsp; SUPERVISÃO</div>
             <h3>Reuniões metodológicas semanais</h3>
-            <p>Toda quarta-feira, a equipe-titular se reúne para revisar hipóteses, discutir achados e ajustar protocolos. Pesquisadores hospedados são convidados a apresentar seus recortes e receber leitura crítica entre pares.</p>
+            <p>A Ectolab pode apoiar a leitura crítica de hipóteses, recortes e protocolos, conforme disponibilidade voluntária. Também pode ajudar na articulação de pessoas interessadas em contribuir com a pesquisa.</p>
             <div class="infra-item__tags">
-              <span class="infra-tag">Semanal · 4h</span>
+              <span class="infra-tag">Apoio metodológico</span>
               <span class="infra-tag">Peer review</span>
-              <span class="infra-tag">Sigilo de dados</span>
+              <span class="infra-tag">Rede voluntária</span>
             </div>
           </div>
 
@@ -787,52 +785,52 @@
               </div>
 
               <ul class="geo-list" data-verbete-list>
-              <li><span class="code">01</span><span class="name">Ectoplasma</span></li>
-              <li><span class="code">02</span><span class="name">Paracirurgia</span></li>
-              <li><span class="code">03</span><span class="name">Síndrome ectoplásmica</span></li>
-              <li><span class="code">04</span><span class="name">Dinâmica Interassistencial de Paracirurgia</span></li>
-              <li><span class="code">05</span><span class="name">Parapercepciograma</span></li>
-              <li><span class="code">06</span><span class="name">Efeito da Ectoplasmia</span></li>
-              <li><span class="code">07</span><span class="name">Jovem ectoplasta</span></li>
-              <li><span class="code">08</span><span class="name">Assunção da Autoectoplasmia</span></li>
-              <li><span class="code">09</span><span class="name">Autocognição Parapsíquica Ectoplásmica</span></li>
-              <li><span class="code">10</span><span class="name">Autogestão Ectoplásmica</span></li>
-              <li><span class="code">11</span><span class="name">Autoimunidade Pensênica do Ectoplasta</span></li>
-              <li><span class="code">12</span><span class="name">Automotivação Gesconográfica do Ectoplasta</span></li>
-              <li><span class="code">13</span><span class="name">Conscin Ectoplasta</span></li>
-              <li><span class="code">14</span><span class="name">Docente Ectoplasta</span></li>
-              <li><span class="code">15</span><span class="name">Ectoplasmia Autocurativa</span></li>
-              <li><span class="code">16</span><span class="name">Ectoplasmia na Autodefesa Energética</span></li>
-              <li><span class="code">17</span><span class="name">Efeito da Ortopensenidade na Autoectoplasmia</span></li>
-              <li><span class="code">18</span><span class="name">Estimulação Parapsíquica Ectoplásmica</span></li>
-              <li><span class="code">19</span><span class="name">Fitoectoplasma</span></li>
-              <li><span class="code">20</span><span class="name">Ginoectoplasma</span></li>
-              <li><span class="code">21</span><span class="name">Holosfera Paracirúrgica</span></li>
-              <li><span class="code">22</span><span class="name">Interação Ectoplasmia-Clarividência</span></li>
-              <li><span class="code">23</span><span class="name">Pedido de Paracirurgia</span></li>
-              <li><span class="code">24</span><span class="name">Potencial Ectoplásmico Interassistencial</span></li>
-              <li><span class="code">25</span><span class="name">Proexista Ectoplasta</span></li>
-              <li><span class="code">26</span><span class="name">Zooectoplasma</span></li>
-              <li><span class="code">27</span><span class="name">Autorganização do Ectoplasta</span></li>
-              <li><span class="code">28</span><span class="name">Desintoxicação Energossomática do Ectoplasta</span></li>
-              <li><span class="code">29</span><span class="name">Ectoplasta Desassediador</span></li>
-              <li><span class="code">30</span><span class="name">Inversor Ectoplasta</span></li>
-              <li><span class="code">31</span><span class="name">Parassegurança do Ectoplasta</span></li>
-              <li><span class="code">32</span><span class="name">Saúde Consciencial do Ectoplasta</span></li>
-              <li><span class="code">33</span><span class="name">Tenepessista Ectoplasta</span></li>
-              <li><span class="code">34</span><span class="name">Ectoplasmia Interassistencial</span></li>
-              <li><span class="code">35</span><span class="name">Efeito Paciológico da Ectoplasmia</span></li>
-              <li><span class="code">36</span><span class="name">Grafoectoplasmia</span></li>
-              <li><span class="code">37</span><span class="name">Interação Ectoplasmia-Arco Voltaico Craniochacral</span></li>
-              <li><span class="code">38</span><span class="name">Laboratório Conscienciológico da Ectoplasmia</span></li>
-              <li><span class="code">39</span><span class="name">Requinte da Ectoplasmia</span></li>
-              <li><span class="code">40</span><span class="name">Sinalética da Ectoplasmia</span></li>
-              <li><span class="code">41</span><span class="name">Interação Paracirurgia-Megafraternidade</span></li>
-              <li><span class="code">42</span><span class="name">Interação Parapercepção Ectoplásmica-Paracirurgia</span></li>
-              <li><span class="code">43</span><span class="name">Rede Interassistencial da Paracirurgia a Distância</span></li>
-              <li><span class="code">44</span><span class="name">Sintoma em Paracirurgia</span></li>
-              <li><span class="code">45</span><span class="name">Autodisponibilidade Ectoplásmica</span></li>
-              <li><span class="code">46</span><span class="name">Ectoplasmologia</span></li>
+                <li><span class="code">01</span><span class="name">Ectoplasma</span></li>
+                <li><span class="code">02</span><span class="name">Paracirurgia</span></li>
+                <li><span class="code">03</span><span class="name">Síndrome ectoplásmica</span></li>
+                <li><span class="code">04</span><span class="name">Dinâmica Interassistencial de Paracirurgia</span></li>
+                <li><span class="code">05</span><span class="name">Parapercepciograma</span></li>
+                <li><span class="code">06</span><span class="name">Efeito da Ectoplasmia</span></li>
+                <li><span class="code">07</span><span class="name">Jovem ectoplasta</span></li>
+                <li><span class="code">08</span><span class="name">Assunção da Autoectoplasmia</span></li>
+                <li><span class="code">09</span><span class="name">Autocognição Parapsíquica Ectoplásmica</span></li>
+                <li><span class="code">10</span><span class="name">Autogestão Ectoplásmica</span></li>
+                <li><span class="code">11</span><span class="name">Autoimunidade Pensênica do Ectoplasta</span></li>
+                <li><span class="code">12</span><span class="name">Automotivação Gesconográfica do Ectoplasta</span></li>
+                <li><span class="code">13</span><span class="name">Conscin Ectoplasta</span></li>
+                <li><span class="code">14</span><span class="name">Docente Ectoplasta</span></li>
+                <li><span class="code">15</span><span class="name">Ectoplasmia Autocurativa</span></li>
+                <li><span class="code">16</span><span class="name">Ectoplasmia na Autodefesa Energética</span></li>
+                <li><span class="code">17</span><span class="name">Efeito da Ortopensenidade na Autoectoplasmia</span></li>
+                <li><span class="code">18</span><span class="name">Estimulação Parapsíquica Ectoplásmica</span></li>
+                <li><span class="code">19</span><span class="name">Fitoectoplasma</span></li>
+                <li><span class="code">20</span><span class="name">Ginoectoplasma</span></li>
+                <li><span class="code">21</span><span class="name">Holosfera Paracirúrgica</span></li>
+                <li><span class="code">22</span><span class="name">Interação Ectoplasmia-Clarividência</span></li>
+                <li><span class="code">23</span><span class="name">Pedido de Paracirurgia</span></li>
+                <li><span class="code">24</span><span class="name">Potencial Ectoplásmico Interassistencial</span></li>
+                <li><span class="code">25</span><span class="name">Proexista Ectoplasta</span></li>
+                <li><span class="code">26</span><span class="name">Zooectoplasma</span></li>
+                <li><span class="code">27</span><span class="name">Autorganização do Ectoplasta</span></li>
+                <li><span class="code">28</span><span class="name">Desintoxicação Energossomática do Ectoplasta</span></li>
+                <li><span class="code">29</span><span class="name">Ectoplasta Desassediador</span></li>
+                <li><span class="code">30</span><span class="name">Inversor Ectoplasta</span></li>
+                <li><span class="code">31</span><span class="name">Parassegurança do Ectoplasta</span></li>
+                <li><span class="code">32</span><span class="name">Saúde Consciencial do Ectoplasta</span></li>
+                <li><span class="code">33</span><span class="name">Tenepessista Ectoplasta</span></li>
+                <li><span class="code">34</span><span class="name">Ectoplasmia Interassistencial</span></li>
+                <li><span class="code">35</span><span class="name">Efeito Paciológico da Ectoplasmia</span></li>
+                <li><span class="code">36</span><span class="name">Grafoectoplasmia</span></li>
+                <li><span class="code">37</span><span class="name">Interação Ectoplasmia-Arco Voltaico Craniochacral</span></li>
+                <li><span class="code">38</span><span class="name">Laboratório Conscienciológico da Ectoplasmia</span></li>
+                <li><span class="code">39</span><span class="name">Requinte da Ectoplasmia</span></li>
+                <li><span class="code">40</span><span class="name">Sinalética da Ectoplasmia</span></li>
+                <li><span class="code">41</span><span class="name">Interação Paracirurgia-Megafraternidade</span></li>
+                <li><span class="code">42</span><span class="name">Interação Parapercepção Ectoplásmica-Paracirurgia</span></li>
+                <li><span class="code">43</span><span class="name">Rede Interassistencial da Paracirurgia a Distância</span></li>
+                <li><span class="code">44</span><span class="name">Sintoma em Paracirurgia</span></li>
+                <li><span class="code">45</span><span class="name">Autodisponibilidade Ectoplásmica</span></li>
+                <li><span class="code">46</span><span class="name">Ectoplasmologia</span></li>
                 <li style="border-bottom:none"><span class="code">47</span><span class="name">Ectoplasmólogo</span></li>
               </ul>
             </div>
@@ -1049,7 +1047,7 @@
               para quem deseja <em>investigar.</em>
             </h2>
             <p>
-              Se você é pesquisador, profissional de saúde, mestrando, doutorando ou pós-doutorando e tem um projeto que dialoga com ectoplasma, paracirurgia ou parafenômenos da consciência — escreva pra gente. Avaliamos cada projeto com seriedade e respondemos em até 14 dias.
+              Se você é pesquisador, profissional de saúde, mestrando, doutorando ou pós-doutorando e tem um projeto que dialoga com ectoplasma, paracirurgia ou parafenômenos da consciência — escreva pra gente. Avaliamos possibilidades de uso do laboratório, acesso ao campus e articulação voluntária caso a caso.
             </p>
             <div class="researcher-cta__buttons">
               <a href="/cdn-cgi/l/email-protection#7707120406021e041637121403181b161559180510480402151d1214034a27051807180403165713125707120406021e0416" class="btn btn-orange"><span class="__cf_email__" data-cfemail="5626332527233f253716333522393a373478392431">[email&#160;protected]</span> <span class="arrow">→</span></a>
@@ -1059,9 +1057,9 @@
 
           <ol class="researcher-cta__steps" aria-label="Como propor uma pesquisa">
             <li><span class="step-num">01</span><span>Envie um <em style="font-style:italic;color:var(--gold)">resumo de 2 páginas</em> com hipótese, recorte e cronograma de campo.</span></li>
-            <li><span class="step-num">02</span><span>Em até 14 dias, a equipe-titular devolve leitura crítica e propõe encaixe possível.</span></li>
-            <li><span class="step-num">03</span><span>Combinamos uma <em style="font-style:italic;color:var(--gold)">estada de 1 a 12 semanas</em> com acesso a acervo, Campos e supervisão.</span></li>
-            <li><span class="step-num">04</span><span>Pesquisa hospedada é, por princípio, <em style="font-style:italic;color:var(--gold)">gratuita</em> e custeada pela instituição.</span></li>
+            <li><span class="step-num">02</span><span>Avaliamos aderência ao laboratório, disponibilidade de agenda e necessidade de apoio metodológico.</span></li>
+            <li><span class="step-num">03</span><span>Combinamos uma <em style="font-style:italic;color:var(--gold)">estada compatível</em> com acesso a acervo, campus e atividades aplicáveis ao projeto.</span></li>
+            <li><span class="step-num">04</span><span>Custos de viagem, estadia e operação são definidos caso a caso; o campus ajuda a otimizar estrutura, logística e rede voluntária.</span></li>
           </ol>
         </div>
       </div>
@@ -1085,5 +1083,6 @@
       next.addEventListener("click", () => slide(1));
     })();
   </script>
+  <script type="module" src="/assets/chrome.js"></script>
 </body>
 </html>

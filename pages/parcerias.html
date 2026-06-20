@@ -20,22 +20,24 @@
       background: var(--paper);
       position: relative;
       overflow: hidden;
-      padding: clamp(56px, 7vw, 96px) 0 0;
+      padding: clamp(42px, 6vw, 76px) 0 clamp(42px, 5vw, 68px);
       border-bottom: 1px solid var(--line);
     }
     .parc-hero__grid {
       display: grid;
-      grid-template-columns: 1.25fr 1fr;
-      gap: 64px;
-      align-items: stretch;
+      grid-template-columns: minmax(0, 1.12fr) minmax(320px, 0.88fr);
+      gap: clamp(36px, 5vw, 64px);
+      align-items: start;
     }
     .parc-hero__viz {
-      min-height: 480px;
+      aspect-ratio: 4 / 3.35;
+      max-height: 520px;
       background: var(--ink);
-      border-radius: var(--r-md) var(--r-md) 0 0;
+      border-radius: var(--r-md);
       position: relative;
       overflow: hidden;
-      margin-bottom: -1px;
+      margin-top: 28px;
+      box-shadow: 0 24px 54px -30px rgba(8,34,43,0.45);
     }
     .parc-hero__viz img {
       width: 100%;
@@ -66,9 +68,25 @@
     .parc-hero__viz .tr { top: 18px; right: 18px; }
     .parc-hero__viz .br { bottom: 18px; right: 18px; }
     .parc-hero__viz .bl { bottom: 18px; left: 18px; color: var(--gold); }
+    .parc-hero__copy {
+      padding-bottom: 0;
+      max-width: 660px;
+    }
+    .parc-hero__copy .h-display {
+      font-size: clamp(52px, 7vw, 92px);
+      line-height: 0.94;
+    }
+    .parc-hero__copy .lede {
+      max-width: 540px;
+      font-size: clamp(17px, 1.35vw, 20px);
+    }
+    .parc-hero__meta {
+      margin-top: 36px;
+      max-width: 560px;
+    }
     @media (max-width: 900px) {
       .parc-hero__grid { grid-template-columns: 1fr; gap: 32px; }
-      .parc-hero__viz { aspect-ratio: 4 / 3; }
+      .parc-hero__viz { aspect-ratio: 4 / 3; margin-top: 0; }
     }
 
     /* Infrastructure list */
@@ -598,22 +616,22 @@
         </div>
 
         <div class="parc-hero__grid">
-          <div style="padding-bottom: clamp(40px, 5vw, 72px)">
+          <div class="parc-hero__copy">
             <div class="eyebrow"><span class="dot"></span>PARCERIAS &nbsp;·&nbsp; PESQUISA HOSPEDADA &nbsp;·&nbsp; CAMPUS FOZ</div>
             <h1 class="h-display" style="margin-top:24px">
               Um <strong style="color:var(--blue);font-weight:700">espaço</strong><br />
               feito para quem<br />
               vem <em style="font-style:italic;color:var(--orange-2);font-weight:500">pesquisar.</em>
             </h1>
-            <p class="lede" style="margin-top:32px;max-width:580px">
-              A Ectolab é, antes de qualquer coisa, um laboratório. Quem chega aqui para investigar ectoplasma, paracirurgia ou parafenômenos da consciência encontra acervo, infraestrutura, equipe e protocolos já calibrados para o trabalho de pesquisa — não precisa começar do zero.
+            <p class="lede" style="margin-top:28px">
+              A Ectolab oferece ambiente laboratorial, acervo e protocolos para pesquisas em ectoplasmia, paracirurgia e parafenômenos da consciência. O campus facilita logística, observação de campo e articulação com voluntários da Conscienciologia.
             </p>
-            <div class="flex gap-12" style="margin-top:36px;flex-wrap:wrap">
+            <div class="flex gap-12" style="margin-top:28px;flex-wrap:wrap">
               <a href="#hospedar" class="btn btn-orange">Quero pesquisar aqui <span class="arrow">→</span></a>
               <a href="#contribuicoes" class="btn btn-ghost">Ver contribuições científicas</a>
             </div>
 
-            <dl class="meta-grid" style="margin-top:56px;max-width:560px">
+            <dl class="meta-grid parc-hero__meta">
               <div><dt>Pesquisadores recebidos</dt><dd>+10</dd></div>
               <div><dt>Origem</dt><dd>BR · FR · USA</dd></div>
               <div><dt>Livros publicados</dt><dd>5 títulos</dd></div>
@@ -646,7 +664,7 @@
             </h2>
           </div>
           <p>
-            O campus da Ectolab foi pensado, ao longo de 23 anos, para sustentar pesquisa de longa duração: tem acervo especializado, salas, instrumentos de campo, supervisão metodológica e hospedagem no mesmo perímetro. Quem chega para investigar não perde tempo montando estrutura — entra direto na pesquisa.
+            O campus da Ectolab concentra acervo especializado, salas, instrumentos de campo, protocolos e hospedagem no mesmo perímetro. A pesquisa não é gratuita por princípio, mas fica logisticamente otimizada por acontecer dentro do campus e contar com ambiente já estruturado.
           </p>
         </div>
 
@@ -669,18 +687,18 @@
             <div class="infra-item__tags">
               <span class="infra-tag">410 Campos</span>
               <span class="infra-tag">Protocolo Ectolab</span>
-              <span class="infra-tag">Equipe titular</span>
+              <span class="infra-tag">Voluntariado</span>
             </div>
           </div>
 
           <div class="infra-item">
             <div class="infra-item__num">03 &nbsp;/&nbsp; SUPERVISÃO</div>
             <h3>Reuniões metodológicas semanais</h3>
-            <p>Toda quarta-feira, a equipe-titular se reúne para revisar hipóteses, discutir achados e ajustar protocolos. Pesquisadores hospedados são convidados a apresentar seus recortes e receber leitura crítica entre pares.</p>
+            <p>A Ectolab pode apoiar a leitura crítica de hipóteses, recortes e protocolos, conforme disponibilidade voluntária. Também pode ajudar na articulação de pessoas interessadas em contribuir com a pesquisa.</p>
             <div class="infra-item__tags">
-              <span class="infra-tag">Semanal · 4h</span>
+              <span class="infra-tag">Apoio metodológico</span>
               <span class="infra-tag">Peer review</span>
-              <span class="infra-tag">Sigilo de dados</span>
+              <span class="infra-tag">Rede voluntária</span>
             </div>
           </div>
 
@@ -1029,7 +1047,7 @@
               para quem deseja <em>investigar.</em>
             </h2>
             <p>
-              Se você é pesquisador, profissional de saúde, mestrando, doutorando ou pós-doutorando e tem um projeto que dialoga com ectoplasma, paracirurgia ou parafenômenos da consciência — escreva pra gente. Avaliamos cada projeto com seriedade e respondemos em até 14 dias.
+              Se você é pesquisador, profissional de saúde, mestrando, doutorando ou pós-doutorando e tem um projeto que dialoga com ectoplasma, paracirurgia ou parafenômenos da consciência — escreva pra gente. Avaliamos possibilidades de uso do laboratório, acesso ao campus e articulação voluntária caso a caso.
             </p>
             <div class="researcher-cta__buttons">
               <a href="/cdn-cgi/l/email-protection#7707120406021e041637121403181b161559180510480402151d1214034a27051807180403165713125707120406021e0416" class="btn btn-orange"><span class="__cf_email__" data-cfemail="5626332527233f253716333522393a373478392431">[email&#160;protected]</span> <span class="arrow">→</span></a>
@@ -1039,9 +1057,9 @@
 
           <ol class="researcher-cta__steps" aria-label="Como propor uma pesquisa">
             <li><span class="step-num">01</span><span>Envie um <em style="font-style:italic;color:var(--gold)">resumo de 2 páginas</em> com hipótese, recorte e cronograma de campo.</span></li>
-            <li><span class="step-num">02</span><span>Em até 14 dias, a equipe-titular devolve leitura crítica e propõe encaixe possível.</span></li>
-            <li><span class="step-num">03</span><span>Combinamos uma <em style="font-style:italic;color:var(--gold)">estada de 1 a 12 semanas</em> com acesso a acervo, Campos e supervisão.</span></li>
-            <li><span class="step-num">04</span><span>Pesquisa hospedada é, por princípio, <em style="font-style:italic;color:var(--gold)">gratuita</em> e custeada pela instituição.</span></li>
+            <li><span class="step-num">02</span><span>Avaliamos aderência ao laboratório, disponibilidade de agenda e necessidade de apoio metodológico.</span></li>
+            <li><span class="step-num">03</span><span>Combinamos uma <em style="font-style:italic;color:var(--gold)">estada compatível</em> com acesso a acervo, campus e atividades aplicáveis ao projeto.</span></li>
+            <li><span class="step-num">04</span><span>Custos de viagem, estadia e operação são definidos caso a caso; o campus ajuda a otimizar estrutura, logística e rede voluntária.</span></li>
           </ol>
         </div>
       </div>

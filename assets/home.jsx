@@ -1,5 +1,6 @@
 ﻿import React, { useState, useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
+import { eventos as todosEventos } from './agenda-data.js';
 
 /* ============================================================
    HERO VARIATIONS
@@ -412,12 +413,7 @@ function CursosDestaque() {
 }
 
 function ProximosEventos() {
-  const eventos = [
-    { dia: "22", mes: "JUN", titulo: "Tertúlia — Ectoplasma e Mediunidade Brasileira", tipo: "TERTÚLIA · GRATUITO", local: "Online · Zoom + YouTube", href: "pages/atividades.html" },
-    { dia: "05", mes: "JUL", titulo: "IECTO — Imersão em Ectoplasmia · Turma 2026.2", tipo: "CURSO · IMERSÃO", local: "Sede Foz · Laboratório 03", href: "pages/curso-imersao.html" },
-    { dia: "11", mes: "JUL", titulo: "Tertúlia — O Parácorpo: anatomia e função na paracirurgia", tipo: "TERTÚLIA · GRATUITO", local: "Online · Zoom + YouTube", href: "pages/atividades.html" },
-    { dia: "05", mes: "AGO", titulo: "III Simpósio Ectolab — Paracirurgia e Saúde Integrativa", tipo: "SIMPÓSIO · INTERNACIONAL", local: "Sede Foz + Online · 3 dias", href: "pages/atividades.html" },
-  ];
+  const proximos = todosEventos.slice(0, 4); // mostra os 4 primeiros de agenda-data.js
   return (
     <section className="prox-eventos">
       <div className="wrap">
@@ -426,14 +422,14 @@ function ProximosEventos() {
           <a href="pages/agenda.html" className="link-arrow">Ver agenda completa →</a>
         </div>
         <div className="prox-eventos__rail">
-          {eventos.map((e, i) => (
+          {proximos.map((e, i) => (
             <a href={e.href} key={i} className="prox-evento">
               <div className="prox-evento__date">
                 <strong>{e.dia}</strong>
                 <span>{e.mes}</span>
               </div>
               <div className="prox-evento__body">
-                <span className="specimen prox-evento__tipo">{e.tipo}</span>
+                <span className="specimen prox-evento__tipo">{e.tipo}{e.gratuito ? " · GRATUITO" : ""}</span>
                 <span className="h4 prox-evento__titulo">{e.titulo}</span>
                 <span className="prox-evento__local">{e.local}</span>
               </div>
