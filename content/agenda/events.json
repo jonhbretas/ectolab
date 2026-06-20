@@ -1,12 +1,12 @@
 {
   "months": [
     {
-      "year": "2056",
+      "year": "2026",
       "month": "jan",
       "monthLabel": "Janeiro",
       "events": [
         {
-          "title": "Campo Paracirúrgico Público — Edição 402",
+          "title": "TEST Campo Paracirúrgico Público — Edição 402",
           "date": "2026-01-15",
           "day": "15",
           "weekday": "QUA",
@@ -25,7 +25,7 @@
           "featuredCategory": ""
         },
         {
-          "title": "Abertura do ciclo 2026 — o que é paracirurgia?",
+          "title": "TEST Abertura do ciclo 2026 — o que é paracirurgia?",
           "date": "2026-01-23",
           "day": "23",
           "weekday": "SEX",
@@ -42,7 +42,7 @@
           "featured": false
         },
         {
-          "title": "Campo Paracirúrgico Público — Edição 403",
+          "title": "TEST Campo Paracirúrgico Público — Edição 403",
           "date": "2026-01-29",
           "day": "29",
           "weekday": "QUA",
