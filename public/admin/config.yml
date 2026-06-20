@@ -4,7 +4,7 @@ backend:
   name: github
   repo: jonhbretas/ectolab
   branch: main
-  base_url: https://sveltia-cms-auth.jonathanbretas.workers.dev
+  base_url: https://sveltia-cms-auth-ectolab.jonathanbretas.workers.dev
   auth_methods:
     - oauth
 
