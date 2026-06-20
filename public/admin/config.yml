@@ -1,0 +1,80 @@
+# yaml-language-server: $schema=https://unpkg.com/@sveltia/cms/schema/sveltia-cms.json
+
+backend:
+  name: github
+  repo: owner/repository
+  branch: main
+
+media_folder: public/uploads
+public_folder: /uploads
+
+collections:
+  - name: blog
+    label: Blog
+    label_singular: Post
+    folder: content/blog
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { name: title, label: Titulo, widget: string }
+      - { name: slug, label: Slug, widget: string }
+      - { name: description, label: Descricao, widget: text, required: false }
+      - { name: date, label: Data, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+      - { name: author, label: Autor, widget: string, default: ECTOLAB }
+      - { name: category, label: Categoria, widget: string }
+      - { name: tags, label: Tags, widget: list, required: false }
+      - { name: coverImage, label: Imagem de capa, widget: image, required: false }
+      - { name: published, label: Publicado, widget: boolean, default: true }
+      - { name: featured, label: Destaque, widget: boolean, default: false }
+      - name: body
+        label: Conteudo HTML
+        widget: markdown
+        hint: "Pode colar HTML completo otimizado aqui. O gerador preserva o HTML dentro do corpo do post."
+
+  - name: agenda
+    label: Agenda
+    files:
+      - name: events
+        label: Eventos por mes
+        file: content/agenda/events.json
+        fields:
+          - name: months
+            label: Meses com atividades
+            widget: list
+            label_singular: Mes
+            summary: "{{year}} · {{monthLabel}}"
+            collapsed: auto
+            minimize_collapsed: false
+            hint: "Cadastre somente os meses que tiverem atividades. Meses sem eventos nao precisam existir e nao aparecem na pagina."
+            fields:
+              - { name: year, label: Ano, widget: string }
+              - { name: month, label: Mes curto, widget: select, options: ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"] }
+              - { name: monthLabel, label: Mes, widget: string }
+              - name: events
+                label: Eventos deste mes
+                label_singular: Evento
+                widget: list
+                summary: "{{day}}/{{month}} · {{title}}"
+                collapsed: true
+                minimize_collapsed: false
+                max: 20
+                hint: "Adicione ate 20 eventos neste mes. Cada evento tem seu proprio link e texto de botao/link."
+                fields:
+                  - { name: title, label: Titulo, widget: string }
+                  - { name: date, label: Data, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+                  - { name: day, label: Dia, widget: string }
+                  - { name: weekday, label: Dia da semana, widget: string }
+                  - { name: category, label: Categoria, widget: select, options: ["campo", "tertulia", "curso", "simposio"] }
+                  - { name: tag, label: Etiqueta, widget: string }
+                  - { name: description, label: Descricao, widget: text }
+                  - { name: location, label: Local, widget: string, required: false }
+                  - { name: time, label: Horario, widget: string, required: false }
+                  - { name: price, label: Preco, widget: string }
+                  - { name: free, label: Gratuito, widget: boolean, default: false }
+                  - { name: status, label: Status, widget: string }
+                  - { name: href, label: Link, widget: string, default: /pages/atividades.html }
+                  - { name: buttonLabel, label: Texto do botao/link, widget: string, default: Ver detalhes }
+                  - { name: featured, label: Destaque, widget: boolean, default: false }
+                  - { name: featuredStyle, label: Estilo do destaque, widget: select, required: false, options: ["default", "dark", "gold"] }
+                  - { name: featuredDate, label: Data no destaque, widget: string, required: false }
+                  - { name: featuredCategory, label: Categoria no destaque, widget: string, required: false }

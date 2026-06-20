@@ -1,154 +1,20 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Qualificação dos pensenes do ectoplasta · Ectolab</title>
-  <meta name="description" content="Imagem ilustrativa qualificação dos pensenes do ectoplasta O que é Ectoplasmia e quem é o Ectoplasta? A ectoplasmia é um tipo de energia semimaterial , de aparência..." />
-  <link rel="canonical" href="https://ectolab.vercel.app/qualificacao-dos-pensenes-do-ectoplasta/" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Qualificação dos pensenes do ectoplasta · Ectolab" />
-  <meta property="og:description" content="Imagem ilustrativa qualificação dos pensenes do ectoplasta O que é Ectoplasmia e quem é o Ectoplasta? A ectoplasmia é um tipo de energia semimaterial , de aparência..." />
-  <meta property="og:url" content="https://ectolab.vercel.app/qualificacao-dos-pensenes-do-ectoplasta/" />
-  <meta property="og:image" content="https://ectolab.vercel.app/wp-content/uploads/2025/09/Qualificacao-dos-Pensenes-do-Ectoplasta-1.png" />
-  <meta property="article:published_time" content="2025-09-22" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/styles.css" />
-  <link rel="stylesheet" href="/assets/inner.css" />
-  <style>
-    .post-hero {
-      background: linear-gradient(180deg, var(--paper) 0%, var(--white) 100%);
-      padding-bottom: clamp(44px, 7vw, 76px);
-    }
-    .post-hero h1 {
-      max-width: 980px;
-    }
-    .wp-post-cover {
-      aspect-ratio: 16 / 9;
-      border-radius: var(--r-md);
-      overflow: hidden;
-      background: var(--paper-2);
-      margin: 36px auto 0;
-      max-width: 1080px;
-      border: 1px solid var(--line);
-      box-shadow: 0 18px 50px -28px rgba(8, 34, 43, .45);
-    }
-    .wp-post-cover img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .wp-post-body {
-      max-width: 860px;
-      margin: 0 auto;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: var(--r-md);
-      padding: clamp(28px, 5vw, 56px);
-      box-shadow: 0 18px 50px -32px rgba(8, 34, 43, .34);
-    }
-    .wp-post-body > h1:first-child {
-      display: none;
-    }
-    .wp-post-body h2 {
-      margin-top: 44px;
-      padding-top: 8px;
-      border-top: 1px solid var(--line);
-    }
-    .wp-post-body h3,
-    .wp-post-body h4 {
-      margin-top: 32px;
-    }
-    .wp-post-body p,
-    .wp-post-body li {
-      font-size: 17px;
-      line-height: 1.75;
-    }
-    .wp-post-body ul,
-    .wp-post-body ol {
-      padding-left: 1.4em;
-    }
-    .wp-post-body a {
-      color: var(--blue);
-      border-bottom: 1px solid var(--blue-soft2);
-    }
-    .wp-post-body blockquote {
-      margin: 32px 0;
-      padding: 24px;
-      background: var(--paper);
-      border-left: 4px solid var(--orange);
-      border-radius: 0 var(--r-md) var(--r-md) 0;
-    }
-    .wp-caption {
-      margin: 36px 0;
-      padding: 12px;
-      background: var(--paper);
-      border-radius: var(--r-md);
-      color: var(--ink-3);
-      font-size: 13px;
-      text-align: center;
-    }
-    .wp-caption img {
-      margin: 0 auto 8px;
-      border-radius: var(--r-sm);
-    }
-    .wp-post-body img {
-      border-radius: var(--r-md);
-      margin: 28px auto;
-      height: auto;
-    }
-    .wp-post-body iframe {
-      max-width: 100%;
-    }
-    @media (max-width: 720px) {
-      .wp-post-body {
-        border-left: 0;
-        border-right: 0;
-        border-radius: 0;
-      }
-    }  </style>
-</head>
-<body data-active="blog">
-  <div id="__header"></div>
-  <main>
-    <section class="post-hero">
-      <div class="wrap">
-        <div class="breadcrumb"><a href="/index.html">Ectolab</a><span class="sep">◆</span><a href="/pages/blog.html">Blog</a><span class="sep">◆</span><span>Autoqualificação</span></div>
-        <div class="eyebrow" style="justify-content:center;display:flex;margin-top:32px"><span class="dot"></span>Autoqualificação</div>
-        <h1>Qualificação dos pensenes do ectoplasta</h1>
-        <div class="post-meta"><span>ECTOLAB</span><span class="sep">◆</span><time datetime="2025-09-22">22/09/2025</time></div>
-        <div class="wp-post-cover"><img src="/wp-content/uploads/2025/09/Qualificacao-dos-Pensenes-do-Ectoplasta-1.png" alt="Qualificação dos pensenes do ectoplasta" loading="eager" /></div>
-      </div>
-    </section>
-    <section class="section bg-white" style="padding-top:56px">
-      <div class="wrap wp-post-layout">
-        <aside class="wp-post-sidebar wp-post-sidebar--left" aria-label="Cursos e atividades Ectolab">
-          <div class="wp-post-sidebar__box wp-post-sidebar__cta">
-            <h3>Atendimento gratuito</h3>
-            <p>Receba orientacao bioenergetica e conheca caminhos de estudo na Ectolab.</p>
-            <a href="/pages/orientacao-gratuita.html" class="btn btn-gold">Ver OGB <span class="arrow">→</span></a>
-          </div>
-          <div class="wp-post-sidebar__box">
-            <h3>Cursos e trilhas</h3>
-            <div class="wp-post-sidebar__links">
-              <a href="/pages/cursos.html">Cursos Ectolab<span>Presenciais, online e campo</span></a>
-              <a href="/pages/curso-eppi.html">EPPI<span>Ectoplasmia e paracirurgia</span></a>
-              <a href="/pages/curso-campo.html">Campo Paracirurgico<span>Vivencia assistencial</span></a>
-              <a href="/pages/trilha.html">Trilha do Saber<span>Formacao progressiva</span></a>
-            </div>
-          </div>
-          <div class="wp-post-sidebar__box">
-            <h3>Atividades</h3>
-            <div class="wp-post-sidebar__links">
-              <a href="/pages/curso.html?id=preceptoria">Preceptoria em Ectoplasmia<span>Acompanhamento tecnico</span></a>
-              <a href="/pages/dinamica.html">DIP<span>Dinamicas interassistenciais</span></a>
-              <a href="/pages/rede.html">Rede Invisivel<span>Atendimento a distancia</span></a>
-            </div>
-          </div>
-        </aside>
-        <article class="prose wp-post-body">
+---
+title: Qualificação dos pensenes do ectoplasta
+slug: qualificacao-dos-pensenes-do-ectoplasta
+description: >-
+  Imagem ilustrativa qualificação dos pensenes do ectoplasta O que é Ectoplasmia
+  e quem é o Ectoplasta? A ectoplasmia é um tipo de energia semimaterial , de
+  aparência leitosa e qu...
+date: '2025-09-22'
+author: ECTOLAB
+category: Autoqualificação
+tags:
+  - Autoqualificação
+coverImage: /wp-content/uploads/2025/09/Qualificacao-dos-Pensenes-do-Ectoplasta-1.png
+published: true
+featured: false
+---
+
 <figure class="wp-caption"><img class="size-medium wp-image-3261" src="/wp-content/uploads/2025/09/Qualificacao-dos-Pensenes-do-Ectoplasta-1-600x400.png" alt="Imagem ilustrativa qualificação dos pensenes do ectoplasta" width="600" height="400" /> Imagem ilustrativa qualificação dos pensenes do ectoplasta</figure>
 <p align="justify"><span style="font-family: Times New Roman, serif;"><span style="font-size: x-large;"><b>O que é Ectoplasmia e quem é o Ectoplasta?
 </b></span></span><span style="font-family: Times New Roman, serif;">
@@ -156,7 +22,9 @@ A ectoplasmia é um tipo de </span><span style="font-family: Times New Roman, se
 <p align="justify"><span style="font-family: Times New Roman, serif;">Pessoa predisposta à doação desse tipo de energia é denominada </span><span style="font-family: Times New Roman, serif;"><i>ectoplasta</i></span><span style="font-family: Times New Roman, serif;">.</span></p>
 <p align="justify"><span style="font-family: Times New Roman, serif;">O ectoplasta tem a capacidade de exteriorizar energias de modo positivo às pessoas ao seu redor e os ambientes que frequenta. Para que essa exteriorização de energias seja realmente benéfica, é essencial empregar pensamentos e sentimentos equilibrados e investir continuamente na qualificação dos próprios </span><span style="font-family: Times New Roman, serif;"><b>pensamentos</b></span><span style="font-family: Times New Roman, serif;">, </span><span style="font-family: Times New Roman, serif;"><b>sentimentos</b></span><span style="font-family: Times New Roman, serif;"> e </span><span style="font-family: Times New Roman, serif;"><b>energias</b></span><span style="font-family: Times New Roman, serif;"> (pensenes), garantindo padrões energéticos saudáveis e autoconscientes.</span></p>
 <p align="justify"><span style="font-family: Times New Roman, serif;"><span style="font-size: x-large;"><b>A importância da Qualificação dos Pensenes</b></span></span></p>
-<p align="justify"><span style="font-family: Times New Roman, serif;">A energia ectoplásmica não se limita a uma manifestação neutra: ela é impregnada de pensamentos e sentimentos, cuja qualidade depende da maturidade, intencionalidade e do nível de cosmoética do indivíduo (Leite e Vicenzi, 2019, p. 20). </span></p><ul>
+<p align="justify"><span style="font-family: Times New Roman, serif;">A energia ectoplásmica não se limita a uma manifestação neutra: ela é impregnada de pensamentos e sentimentos, cuja qualidade depende da maturidade, intencionalidade e do nível de cosmoética do indivíduo (Leite e Vicenzi, 2019, p. 20). </span></p>
+
+<ul>
  	<li>
 <p align="justify"><span style="font-family: Times New Roman, serif;"><b>Equilíbrio</b></span><span style="font-family: Times New Roman, serif;">: a exteriorização da energia tende a ser benéfica, podendo favorecer o ambiente e as pessoas ao redor; se houver </span></p>
 </li>
@@ -166,7 +34,9 @@ A ectoplasmia é um tipo de </span><span style="font-family: Times New Roman, se
 </ul>
 <p align="justify"><span style="font-family: Times New Roman, serif;">A condição homeostática da ectoplasmia caracteriza-se por harmonia e organização, promovendo estabilização nos ambientes sociais e contribuindo para o bem-estar ou mesmo para a recuperação de estados debilitados de saúde (Cardozo, 2018, p. 9.300). Alcançar esse estado exige dedicação à autopesquisa, reforçando que a prática consciente do ectoplasta depende do investimento contínuo no desenvolvimento pessoal, energético e cosmoético.</span></p>
 <p align="justify"><span style="font-family: Times New Roman, serif;"><span style="font-size: x-large;"><b>Como melhorarmos nossos pensenes?</b></span></span></p>
-<p align="justify"><span style="font-family: Times New Roman, serif;">A consciência se manifesta por meio de diferentes corpos ou veículos: </span></p><ol>
+<p align="justify"><span style="font-family: Times New Roman, serif;">A consciência se manifesta por meio de diferentes corpos ou veículos: </span></p>
+
+<ol>
  	<li>
 <p align="justify"><strong><span style="font-family: Times New Roman, serif;">Soma (corpo físico).</span></strong></p>
 </li>
@@ -185,7 +55,9 @@ A ectoplasmia é um tipo de </span><span style="font-family: Times New Roman, se
 <p align="justify"><span style="font-family: Times New Roman, serif;">Por outro lado, uma abordagem </span><span style="font-family: Times New Roman, serif;"><b>mística</b></span><span style="font-family: Times New Roman, serif;">, </span><span style="font-family: Times New Roman, serif;"><b>mítica</b></span><span style="font-family: Times New Roman, serif;"> ou </span><span style="font-family: Times New Roman, serif;"><b>religiosa</b></span><span style="font-family: Times New Roman, serif;"> também não é eficaz para a melhoria integral da consciência. Nessas posturas, geralmente ocorre a </span><span style="font-family: Times New Roman, serif;"><b>terceirização evolutiva</b></span><span style="font-family: Times New Roman, serif;">, quando a pessoa transfere sua responsabilidade evolutiva a entidades, objetos, símbolos ou seres, ou ainda deixa de empregar </span><span style="font-family: Times New Roman, serif;"><b>métodos e instrumentos científicos</b></span><span style="font-family: Times New Roman, serif;"> capazes de sustentar sua autopesquisa. </span></p>
 <p align="justify"><span style="font-family: Times New Roman, serif;">Sob a ótica da Conscienciologia, a evolução é um processo pessoal e intransferível: </span><span style="font-family: Times New Roman, serif;"><i>a responsabilidade pela qualificação pessoal é exclusivamente nossa!</i></span></p>
 <p align="justify"><span style="font-family: Times New Roman, serif;"><span style="font-size: x-large;"><i><b>Autopesquisa : Autopensenes e Heteropensenes</b></i></span></span></p>
-<p align="justify"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Ao priorizar a autopesquisa, é essencial distinguir:</span></span></p><ul>
+<p align="justify"><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Ao priorizar a autopesquisa, é essencial distinguir:</span></span></p>
+
+<ul>
  	<li>
 <p align="justify"><strong><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">Autopensenes:</span></span></strong><b> </b><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;">pensamentos, sentimentos e energias pessoais.</span></span></p>
 </li>
@@ -204,8 +76,10 @@ A ectoplasmia é um tipo de </span><span style="font-family: Times New Roman, se
 <p align="justify"><span style="font-family: Times New Roman, serif;"><span style="font-size: x-large;"><b>Qual técnica podemos utilizar para melhoria dos pensenes do ectoplasta?</b></span></span></p>
 <span style="font-family: Times New Roman, serif;">A literatura conscienciológica apresenta diversas técnicas para a qualificação da pensenidade, incluindo abordagens relacionadas à </span><span style="font-family: Times New Roman, serif;"><b>consciencioterapia</b></span><span style="font-family: Times New Roman, serif;"> e à </span><span style="font-family: Times New Roman, serif;"><b>consciênciometria</b></span><span style="font-family: Times New Roman, serif;">. Neste artigo, vamos focar na</span><span style="font-family: Times New Roman, serif;"><i> Técnica de Autoavaliação do Pensene-Padrão.
 </i></span><span style="font-family: Times New Roman, serif;"><span style="font-size: medium;"><i><b>
-Técnica de Autoavaliação do Pensene-Padrão</b></i></span></span><p><a name="_GoBack"></a> <span style="font-family: Times New Roman, serif;"><i>
-</i></span><span style="font-family: Times New Roman, serif;"> Essa técnica é uma das ferramenta prática que ajuda a observar e aprimorar os padrões de </span><span style="font-family: Times New Roman, serif;"><b>pensamentos, sentimentos e energias </b></span><span style="font-family: Times New Roman, serif;">(BATTISTELLA, 2013, p. 525). Voltada para a qualificação da autopensenidade. Ela pode ser aplicada em três fases:</span></p>
+Técnica de Autoavaliação do Pensene-Padrão</b></i></span></span>
+
+<a name="_GoBack"></a> <span style="font-family: Times New Roman, serif;"><i>
+</i></span><span style="font-family: Times New Roman, serif;"> Essa técnica é uma das ferramenta prática que ajuda a observar e aprimorar os padrões de </span><span style="font-family: Times New Roman, serif;"><b>pensamentos, sentimentos e energias </b></span><span style="font-family: Times New Roman, serif;">(BATTISTELLA, 2013, p. 525). Voltada para a qualificação da autopensenidade. Ela pode ser aplicada em três fases:</span>
 <ul>
  	<li>
 <p align="justify"><span style="font-family: Times New Roman, serif;"><b>Anotações:</b></span><span style="font-family: Times New Roman, serif;"> Durante um período de 30 dias registre os pensenes principais ou aqueles que mais chamaram atenção, destacando situações em que a pensenidade se mostrou mais organizada ou desorganizada.</span></p>
@@ -227,7 +101,10 @@ Técnica de Autoavaliação do Pensene-Padrão</b></i></span></span><p><a name="
 <p align="justify"><span style="font-family: Times New Roman, serif;"><span style="font-size: x-large;"><b>Considerações finais</b></span></span></p>
 <p align="justify"><span style="font-family: Times New Roman, serif;">A qualificação da autopensenidade do ectoplasta é um </span><span style="font-family: Times New Roman, serif;"><b>processo contínuo</b></span><span style="font-family: Times New Roman, serif;"> que envolve </span><span style="font-family: Times New Roman, serif;"><b>autopesquisa</b></span><span style="font-family: Times New Roman, serif;">, </span><span style="font-family: Times New Roman, serif;"><b>consciência energética</b></span><span style="font-family: Times New Roman, serif;"> e </span><span style="font-family: Times New Roman, serif;"><b>responsabilidade pessoal</b></span><span style="font-family: Times New Roman, serif;">. A prática consciente da ectoplasmia e a </span><span style="font-family: Times New Roman, serif;"><b>observação sistemática dos próprios pensenes</b></span><span style="font-family: Times New Roman, serif;"> permitem distinguir entre influências internas e externas, favorecendo um padrão de pensamentos, sentimentos e energias mais equilibrado.</span></p>
 <p align="justify"><span style="font-family: Times New Roman, serif;">Ferramentas como o </span><span style="font-family: Times New Roman, serif;"><b>holopensenograma</b></span><span style="font-family: Times New Roman, serif;"> e técnicas como </span><span style="font-family: Times New Roman, serif;"><i>a autoavaliação do pensene-padrão</i></span><span style="font-family: Times New Roman, serif;"> são essenciais para esse trabalho, oferecendo métodos estruturados para </span><span style="font-family: Times New Roman, serif;"><b>mapear</b></span><span style="font-family: Times New Roman, serif;">, </span><span style="font-family: Times New Roman, serif;"><b>analisar</b></span><span style="font-family: Times New Roman, serif;"> e </span><span style="font-family: Times New Roman, serif;"><b>aprimorar</b></span><span style="font-family: Times New Roman, serif;"> a dinâmica pessoal da consciência. Complementarmente, o uso do </span><span style="font-family: Times New Roman, serif;"><b>estado vibracional</b></span><span style="font-family: Times New Roman, serif;"> (EV) e da </span><span style="font-family: Times New Roman, serif;"><b>desassim</b></span><span style="font-family: Times New Roman, serif;"> contribui para a desassimilação de energias acumuladas antagônicas, promovendo equilíbrio pessoal na vida humana.</span></p>
-<p align="justify"><span style="font-family: Times New Roman, serif;">Por fim, a qualificação da autopensenidade </span><span style="font-family: Times New Roman, serif;"><b>não é apenas um exercício teórico</b></span><span style="font-family: Times New Roman, serif;">: trata-se de um processo prático e contínuo, que exige </span><span style="font-family: Times New Roman, serif;"><b>disciplina</b></span><span style="font-family: Times New Roman, serif;">, </span><span style="font-family: Times New Roman, serif;"><b>reflexão</b></span><span style="font-family: Times New Roman, serif;"> e </span><span style="font-family: Times New Roman, serif;"><b>aplicação</b></span><span style="font-family: Times New Roman, serif;"> diária. Ao investir nesse desenvolvimento integral, o ectoplasta fortalece sua capacidade de exteriorizar energias de modo positivo, beneficiando a si mesmo, os ambientes que frequenta e as pessoas ao seu redor.</span></p><figure class="wp-caption"><img class="wp-image-3262" src="/wp-content/uploads/2025/09/AutorPaulo-e1758759969934-280x280.jpeg" alt="Autor: Paulo Battistella" width="102" height="100" /> Autor: Paulo Battistella</figure>
+<p align="justify"><span style="font-family: Times New Roman, serif;">Por fim, a qualificação da autopensenidade </span><span style="font-family: Times New Roman, serif;"><b>não é apenas um exercício teórico</b></span><span style="font-family: Times New Roman, serif;">: trata-se de um processo prático e contínuo, que exige </span><span style="font-family: Times New Roman, serif;"><b>disciplina</b></span><span style="font-family: Times New Roman, serif;">, </span><span style="font-family: Times New Roman, serif;"><b>reflexão</b></span><span style="font-family: Times New Roman, serif;"> e </span><span style="font-family: Times New Roman, serif;"><b>aplicação</b></span><span style="font-family: Times New Roman, serif;"> diária. Ao investir nesse desenvolvimento integral, o ectoplasta fortalece sua capacidade de exteriorizar energias de modo positivo, beneficiando a si mesmo, os ambientes que frequenta e as pessoas ao seu redor.</span></p>
+
+
+<figure class="wp-caption"><img class="wp-image-3262" src="/wp-content/uploads/2025/09/AutorPaulo-e1758759969934-280x280.jpeg" alt="Autor: Paulo Battistella" width="102" height="100" /> Autor: Paulo Battistella</figure>
 <p align="justify"><span style="font-family: Times New Roman, serif;"><strong>Contato:</strong> </span><span style="color: #0563c1;"><u><a href="mailto:paulo.eduardo.battistella@gmail.com"><span style="font-family: Times New Roman, serif;">paulo.eduardo.battistella@gmail.com</span></a></u></span></p>
 <span style="font-family: Times New Roman, serif;">Paulo, atua profissionalmente como </span><span style="font-family: Times New Roman, serif;"><i>software engineer,</i></span><span style="font-family: Times New Roman, serif;"> é </span><span style="font-family: Times New Roman, serif;">bacharel, mestre e doutor em Ciência da Computação. Voluntário na Conscienciologia desde 2006, docente de Conscienciologia desde 2007, aplico a técnica da invéxis desde 2005, tenepessista desde 2011. Atualmente voluntário da Associação Internacional de Pesquisa Laboratorial em Ectoplasmia e Paracirurgia (ECTOLAB). </span>
 <p align="justify"><span style="font-family: Times New Roman, serif;"><b>Referências:</b></span></p>
@@ -246,23 +123,3 @@ Técnica de Autoavaliação do Pensene-Padrão</b></i></span></span><p><a name="
           <hr />
           <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/qualificacao-dos-pensenes-do-ectoplasta/">https://ectolab.org/qualificacao-dos-pensenes-do-ectoplasta/</a></p>
           <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
-        </article>
-        <aside class="wp-post-sidebar wp-post-sidebar--right" aria-label="Outros posts do blog">
-          <div class="wp-post-sidebar__box">
-            <h3>Outros posts</h3>
-            <div class="wp-post-sidebar__links">
-              <a href="/blog/tecnica-arco-voltaico-craniochacral-e-paracirurgia/">A Técnica Arco Voltaico Craniochacral e Paracirurgia<span>26 OUT 2025</span></a>
-              <a href="/blog/saude-energetica-o-que-e-como-desenvolver/">Saúde Energética: O que é ? Como desenvolver ?<span>22 JUN 2025</span></a>
-              <a href="/blog/estado-vibracional-e-saude-energetica/">Estado Vibracional: Autoconhecimento e Saúde Energética<span>09 JUN 2025</span></a>
-              <a href="/blog/paracirurgia-ectoplasmia/">Paracirurgia e Ectoplasmia: Qual a relação com o ECTOLAB?<span>01 MAI 2025</span></a>
-              <a href="/blog/sindrome-ectoplasmica-causas-sintomas-e-tratamentos/">Síndrome Ectoplásmica: Causas, Sintomas e Tratamentos<span>19 MAR 2025</span></a>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-  </main>
-  <div id="__footer"></div>
-  <script src="/assets/chrome.js"></script>
-</body>
-</html>

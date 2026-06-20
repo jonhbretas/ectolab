@@ -1,153 +1,20 @@
-<!doctype html>
-<html lang="pt-BR">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Motivação do Ectoplasta · Ectolab</title>
-  <meta name="description" content="Motivação Ectoplásmica: Este blog post foi feito baseado no Diálogos Online da Motivação do Ectoplasta, assista na íntegra o diálogo ao lado:..." />
-  <link rel="canonical" href="https://ectolab.vercel.app/motivacao-do-ectoplasta/" />
-  <meta property="og:type" content="article" />
-  <meta property="og:title" content="Motivação do Ectoplasta · Ectolab" />
-  <meta property="og:description" content="Motivação Ectoplásmica: Este blog post foi feito baseado no Diálogos Online da Motivação do Ectoplasta, assista na íntegra o diálogo ao lado:..." />
-  <meta property="og:url" content="https://ectolab.vercel.app/motivacao-do-ectoplasta/" />
-  <meta property="article:published_time" content="2024-05-13" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="/assets/styles.css" />
-  <link rel="stylesheet" href="/assets/inner.css" />
-  <style>
-    .post-hero {
-      background: linear-gradient(180deg, var(--paper) 0%, var(--white) 100%);
-      padding-bottom: clamp(44px, 7vw, 76px);
-    }
-    .post-hero h1 {
-      max-width: 980px;
-    }
-    .wp-post-cover {
-      aspect-ratio: 16 / 9;
-      border-radius: var(--r-md);
-      overflow: hidden;
-      background: var(--paper-2);
-      margin: 36px auto 0;
-      max-width: 1080px;
-      border: 1px solid var(--line);
-      box-shadow: 0 18px 50px -28px rgba(8, 34, 43, .45);
-    }
-    .wp-post-cover img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-    .wp-post-body {
-      max-width: 860px;
-      margin: 0 auto;
-      background: var(--white);
-      border: 1px solid var(--line);
-      border-radius: var(--r-md);
-      padding: clamp(28px, 5vw, 56px);
-      box-shadow: 0 18px 50px -32px rgba(8, 34, 43, .34);
-    }
-    .wp-post-body > h1:first-child {
-      display: none;
-    }
-    .wp-post-body h2 {
-      margin-top: 44px;
-      padding-top: 8px;
-      border-top: 1px solid var(--line);
-    }
-    .wp-post-body h3,
-    .wp-post-body h4 {
-      margin-top: 32px;
-    }
-    .wp-post-body p,
-    .wp-post-body li {
-      font-size: 17px;
-      line-height: 1.75;
-    }
-    .wp-post-body ul,
-    .wp-post-body ol {
-      padding-left: 1.4em;
-    }
-    .wp-post-body a {
-      color: var(--blue);
-      border-bottom: 1px solid var(--blue-soft2);
-    }
-    .wp-post-body blockquote {
-      margin: 32px 0;
-      padding: 24px;
-      background: var(--paper);
-      border-left: 4px solid var(--orange);
-      border-radius: 0 var(--r-md) var(--r-md) 0;
-    }
-    .wp-caption {
-      margin: 36px 0;
-      padding: 12px;
-      background: var(--paper);
-      border-radius: var(--r-md);
-      color: var(--ink-3);
-      font-size: 13px;
-      text-align: center;
-    }
-    .wp-caption img {
-      margin: 0 auto 8px;
-      border-radius: var(--r-sm);
-    }
-    .wp-post-body img {
-      border-radius: var(--r-md);
-      margin: 28px auto;
-      height: auto;
-    }
-    .wp-post-body iframe {
-      max-width: 100%;
-    }
-    @media (max-width: 720px) {
-      .wp-post-body {
-        border-left: 0;
-        border-right: 0;
-        border-radius: 0;
-      }
-    }  </style>
-</head>
-<body data-active="blog">
-  <div id="__header"></div>
-  <main>
-    <section class="post-hero">
-      <div class="wrap">
-        <div class="breadcrumb"><a href="/index.html">Ectolab</a><span class="sep">◆</span><a href="/pages/blog.html">Blog</a><span class="sep">◆</span><span>Sem categoria</span></div>
-        <div class="eyebrow" style="justify-content:center;display:flex;margin-top:32px"><span class="dot"></span>Sem categoria</div>
-        <h1>Motivação do Ectoplasta</h1>
-        <div class="post-meta"><span>Ectolab</span><span class="sep">◆</span><time datetime="2024-05-13">13/05/2024</time></div>
+---
+title: Motivação do Ectoplasta
+slug: motivacao-do-ectoplasta
+description: >-
+  Motivação Ectoplásmica: Este blog post foi feito baseado no Diálogos Online da
+  Motivação do Ectoplasta, assista na íntegra o diálogo ao lado:
+  https://www.youtube.com/watch?v=L7a...
+date: '2024-05-13'
+author: Ectolab
+category: Sem categoria
+tags:
+  - Sem categoria
+coverImage: ''
+published: true
+featured: false
+---
 
-      </div>
-    </section>
-    <section class="section bg-white" style="padding-top:56px">
-      <div class="wrap wp-post-layout">
-        <aside class="wp-post-sidebar wp-post-sidebar--left" aria-label="Cursos e atividades Ectolab">
-          <div class="wp-post-sidebar__box wp-post-sidebar__cta">
-            <h3>Atendimento gratuito</h3>
-            <p>Receba orientacao bioenergetica e conheca caminhos de estudo na Ectolab.</p>
-            <a href="/pages/orientacao-gratuita.html" class="btn btn-gold">Ver OGB <span class="arrow">→</span></a>
-          </div>
-          <div class="wp-post-sidebar__box">
-            <h3>Cursos e trilhas</h3>
-            <div class="wp-post-sidebar__links">
-              <a href="/pages/cursos.html">Cursos Ectolab<span>Presenciais, online e campo</span></a>
-              <a href="/pages/curso-eppi.html">EPPI<span>Ectoplasmia e paracirurgia</span></a>
-              <a href="/pages/curso-campo.html">Campo Paracirurgico<span>Vivencia assistencial</span></a>
-              <a href="/pages/trilha.html">Trilha do Saber<span>Formacao progressiva</span></a>
-            </div>
-          </div>
-          <div class="wp-post-sidebar__box">
-            <h3>Atividades</h3>
-            <div class="wp-post-sidebar__links">
-              <a href="/pages/curso.html?id=preceptoria">Preceptoria em Ectoplasmia<span>Acompanhamento tecnico</span></a>
-              <a href="/pages/dinamica.html">DIP<span>Dinamicas interassistenciais</span></a>
-              <a href="/pages/rede.html">Rede Invisivel<span>Atendimento a distancia</span></a>
-            </div>
-          </div>
-        </aside>
-        <article class="prose wp-post-body">
 <h2 data-sourcepos="1:1-1:113">Motivação Ectoplásmica:</h2>
 Este blog post foi feito baseado no Diálogos Online da Motivação do Ectoplasta, assista na íntegra o diálogo ao lado: <a href="https://www.youtube.com/watch?v=L7a301kGubI">https://www.youtube.com/watch?v=L7a301kGubI</a>
 <p data-sourcepos="5:1-5:15"><strong>Introdução:</strong></p>
@@ -161,7 +28,9 @@ Este blog post foi feito baseado no Diálogos Online da Motivação do Ectoplast
 <p data-sourcepos="17:1-17:41"><strong>Desenvolver a Motivação Ectoplásmica:</strong></p>
 <p data-sourcepos="19:1-19:285">A boa notícia é que a <strong>motivação ectoplásmica</strong>, assim como a <strong>motivação intrínseca</strong>, pode ser <strong>desenvolvida e aprimorada</strong> ao longo da vida. Através de estratégias eficazes, você pode despertar essa força interior e transformá-la em seu guia para o sucesso e a realização pessoal.</p>
 <p data-sourcepos="36:1-36:161"><strong>Vídeo Sugerido:</strong> "Como Encontrar a Sua Motivação" por Brené Brown (<a class="traceable-link" href="https://www.youtube.com/watch?v=vMn3xL3xDoI" target="_blank" rel="noopener noreferrer">https://www.youtube.com/watch?v=vMn3xL3xDoI</a>)</p>
-<p data-sourcepos="21:1-21:18"><strong>Algumas dicas:</strong></p><ul data-sourcepos="23:1-29:0">
+<p data-sourcepos="21:1-21:18"><strong>Algumas dicas:</strong></p>
+
+<ul data-sourcepos="23:1-29:0">
  	<li data-sourcepos="23:1-23:306"><strong>Descubra seus motivadores intrínsecos:</strong> Reflita sobre o que te inspira e te motiva naturalmente, sem a necessidade de recompensas externas. Você se sente motivado a aprender um novo idioma por prazer em conhecer novas culturas? Ou se sente motivado a praticar um esporte pelo desafio e pela superação?</li>
  	<li data-sourcepos="24:1-24:338"><strong>Defina metas desafiadoras e significativas:</strong> Sonhe grande, mas com objetivos que te motivem intrinsecamente e te conectem com seus valores e propósitos. Por exemplo, em vez de simplesmente "perder peso", defina a meta de "adotar um estilo de vida mais saudável para ter mais energia e disposição para as minhas atividades favoritas".</li>
  	<li data-sourcepos="25:1-25:354"><strong>Cultive a autonomia:</strong> Busque ter controle sobre suas ações e decisões, aumentando sua sensação de responsabilidade e liberdade. No trabalho, busque oportunidades para participar de projetos que te permitam tomar decisões e ter autonomia sobre seu trabalho. Na vida pessoal, organize seu tempo de forma a ter controle sobre suas atividades e hobbies.</li>
@@ -170,7 +39,9 @@ Este blog post foi feito baseado no Diálogos Online da Motivação do Ectoplast
  	<li data-sourcepos="28:1-29:0"><strong>Encontre um propósito em suas atividades:</strong> Reflita sobre o significado e o impacto de suas ações, conectando-as com seus valores e objetivos maiores. Ao praticar um esporte, por exemplo, reflita sobre como essa atividade te ajuda a ser mais saudável, disciplinado e resiliente.</li>
 </ul>
 <p data-sourcepos="30:1-30:42"><strong>Fortalecendo a Motivação Ectoplásmica:</strong></p>
-<p data-sourcepos="32:1-32:111">Além das dicas acima, existem outras ferramentas que podem te ajudar a <strong>fortalecer a motivação ectoplásmica</strong>:</p><ul data-sourcepos="34:1-36:230">
+<p data-sourcepos="32:1-32:111">Além das dicas acima, existem outras ferramentas que podem te ajudar a <strong>fortalecer a motivação ectoplásmica</strong>:</p>
+
+<ul data-sourcepos="34:1-36:230">
  	<li data-sourcepos="34:1-34:277"><strong>Visualização:</strong> Imagine-se alcançando seus objetivos com sucesso, criando uma imagem mental vívida e positiva. Visualize-se alcançando a linha de chegada de uma maratona, defendendo seu projeto em uma reunião de trabalho ou realizando uma apresentação impecável em público.</li>
  	<li data-sourcepos="35:1-35:239"><strong>Afirmações positivas:</strong> Repita frases motivadoras para si mesmo, reforçando seus valores e crenças. Crie frases como "Eu sou capaz de alcançar meus objetivos", "Eu tenho tudo que preciso para ter sucesso" ou "Eu acredito em mim mesmo".</li>
  	<li data-sourcepos="36:1-36:230"><strong>Gratidão:</strong> Pratique a gratidão pelas coisas boas da sua vida, aumentando seu senso de felicidade e bem-estar. Anote em um diário três coisas pelas quais você é grato todos os dias, ou simplesmente reflita sobre as coisas boas</li>
@@ -178,13 +49,17 @@ Este blog post foi feito baseado no Diálogos Online da Motivação do Ectoplast
 <p data-sourcepos="3:1-3:14"><strong>Conclusão:</strong></p>
 <p data-sourcepos="5:1-5:364">A <strong>motivação ectoplásmica</strong>, assim como a <strong>motivação intrínseca</strong>, é a força motriz que nos impulsiona a alcançar nossos objetivos e realizar nossos sonhos. Ao compreender os mecanismos por trás dessa força interior e aplicar as estratégias adequadas, você pode desbloquear seu potencial máximo e traçar o caminho para o sucesso duradouro e a realização pessoal.</p>
 <p data-sourcepos="7:1-7:284">Lembre-se: a jornada para desenvolver a <strong>motivação ectoplásmica</strong> é um processo contínuo de autoconhecimento, desenvolvimento pessoal e superação de desafios. Abrace essa jornada com entusiasmo e persistência, e você estará no caminho certo para alcançar seus sonhos mais ambiciosos.</p>
-<p data-sourcepos="9:1-9:24"><strong>Recursos Adicionais:</strong></p><ul data-sourcepos="11:1-15:0">
+<p data-sourcepos="9:1-9:24"><strong>Recursos Adicionais:</strong></p>
+
+<ul data-sourcepos="11:1-15:0">
  	<li data-sourcepos="11:1-11:216"><strong>Artigo Científico:</strong> "Intrinsic Motivation: A New Direction in Research" por Edward L. Deci e Richard M. Ryan (<a class="traceable-link" href="https://onlinelibrary.wiley.com/journal/14676494" target="_blank" rel="noopener noreferrer">https://onlinelibrary.wiley.com/journal/14676494</a>)</li>
  	<li data-sourcepos="12:1-12:242"><strong>Livro:</strong> "Drive: The Surprising Truth About What Motivates Us" por Daniel H. Pink (<a class="traceable-link" href="https://www.amazon.com/Drive-Surprising-Truth-About-Motivates/dp/1786891700" target="_blank" rel="noopener noreferrer">https://www.amazon.com/Drive-Surprising-Truth-About-Motivates/dp/1786891700</a>)</li>
  	<li data-sourcepos="13:1-13:217"><strong>Livro:</strong> "Mindset: The New Psychology of Success" por Carol S. Dweck (<a class="traceable-link" href="https://www.amazon.com/Mindset-Psychology-Carol-S-Dweck/dp/1400062756" target="_blank" rel="noopener noreferrer">https://www.amazon.com/Mindset-Psychology-Carol-S-Dweck/dp/1400062756</a>)</li>
  	<li data-sourcepos="14:1-15:0"><strong>Livro:</strong> "The 7 Habits of Highly Effective People" por Stephen R. Covey (<a class="traceable-link" href="https://www.amazon.com/Habits-Highly-Effective-People-Powerful/dp/0743269519" target="_blank" rel="noopener noreferrer">https://www.amazon.com/Habits-Highly-Effective-People-Powerful/dp/0743269519</a>)</li>
 </ul>
-<p data-sourcepos="16:1-16:14"><strong>Lembre-se:</strong></p><ul data-sourcepos="18:1-21:0">
+<p data-sourcepos="16:1-16:14"><strong>Lembre-se:</strong></p>
+
+<ul data-sourcepos="18:1-21:0">
  	<li data-sourcepos="18:1-18:118">A <strong>motivação ectoplásmica</strong> é impulsionada por fatores como <strong>autonomia, competência, relacionamento e propósito</strong>.</li>
  	<li data-sourcepos="19:1-19:370">Você pode desenvolver a <strong>motivação ectoplásmica</strong> através de estratégias como <strong>descobrir seus motivadores intrínsecos, definir metas desafiadoras e significativas, cultivar a autonomia, desenvolver suas habilidades, conectar-se com outras pessoas, encontrar um propósito em suas atividades, praticar a visualização, usar afirmações positivas e cultivar a gratidão</strong>.</li>
  	<li data-sourcepos="20:1-21:0">A jornada para desenvolver a <strong>motivação ectoplásmica</strong> é um processo contínuo de autoconhecimento, desenvolvimento pessoal e superação de desafios.</li>
@@ -193,23 +68,3 @@ Este blog post foi feito baseado no Diálogos Online da Motivação do Ectoplast
           <hr />
           <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/motivacao-do-ectoplasta/">https://ectolab.org/motivacao-do-ectoplasta/</a></p>
           <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
-        </article>
-        <aside class="wp-post-sidebar wp-post-sidebar--right" aria-label="Outros posts do blog">
-          <div class="wp-post-sidebar__box">
-            <h3>Outros posts</h3>
-            <div class="wp-post-sidebar__links">
-              <a href="/blog/tecnica-arco-voltaico-craniochacral-e-paracirurgia/">A Técnica Arco Voltaico Craniochacral e Paracirurgia<span>26 OUT 2025</span></a>
-              <a href="/blog/qualificacao-dos-pensenes-do-ectoplasta/">Qualificação dos pensenes do ectoplasta<span>22 SET 2025</span></a>
-              <a href="/blog/saude-energetica-o-que-e-como-desenvolver/">Saúde Energética: O que é ? Como desenvolver ?<span>22 JUN 2025</span></a>
-              <a href="/blog/estado-vibracional-e-saude-energetica/">Estado Vibracional: Autoconhecimento e Saúde Energética<span>09 JUN 2025</span></a>
-              <a href="/blog/paracirurgia-ectoplasmia/">Paracirurgia e Ectoplasmia: Qual a relação com o ECTOLAB?<span>01 MAI 2025</span></a>
-            </div>
-          </div>
-        </aside>
-      </div>
-    </section>
-  </main>
-  <div id="__footer"></div>
-  <script src="/assets/chrome.js"></script>
-</body>
-</html>
