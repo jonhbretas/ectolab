@@ -19,6 +19,7 @@
   const logoHTML = `<img src="${logoPath}" alt="Logo Ectolab" class="brand-img" />`;
 
   const navItems = [
+    { id: "agenda",        label: "Agenda",          href: P + "pages/agenda.html" },
     { 
       id: "paracirurgia",  
       label: "Paracirurgia",    
@@ -219,6 +220,7 @@
   const I18N_TEXT = {
     EN: {
       "Paracirurgia": "Parasurgery",
+      "Agenda": "Schedule",
       "O que é a Paracirurgia": "What Parasurgery Is",
       "Solicitar Paracirurgia ↗": "Request Parasurgery ↗",
       "Painel de Pedidos": "Request Dashboard",
