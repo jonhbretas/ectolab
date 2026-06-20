@@ -65,14 +65,9 @@
       label: "Atividades", 
       href: P + "pages/atividades.html",
       dropdown: [
-        { cat: "Laboratórios", links: [
-          { label: "Laboratório de Paracirurgia", href: P + "pages/laboratorio-paracirurgia.html" },
-          { label: "Espaço Bioenergologia", href: P + "pages/bioenergologia.html" },
-          { label: "Laboratório de Ectoplasmologia", href: P + "pages/laboratorio-ectoplasmologia.html" }
-        ]},
         { cat: "Gratuitos", links: [
           { label: "Blog", href: P + "pages/blog.html" },
-          { label: "OGB", href: P + "pages/orientacao-gratuita.html" },
+          { label: "OGB - Orientação Gratuita em Bioenergologia", href: P + "pages/orientacao-gratuita.html" },
           { label: "Diálogos Online", href: "https://www.youtube.com/playlist?list=PLpz4qwgYZyP3SxfEenlleSpxgqYMaVUhb", target: "_blank" }
         ]},
         { cat: "Eventos & Consultoria", links: [
@@ -103,6 +98,11 @@
           { label: "Contato e Sede", href: P + "pages/contato.html" },
           { label: "Parcerias de Pesquisa", href: P + "pages/parcerias.html" },
           { label: "Apoie a Ectolab", href: P + "pages/apoie.html" }
+        ]},
+        { cat: "Laboratórios", links: [
+          { label: "Laboratório de Paracirurgia", href: P + "pages/laboratorio-paracirurgia.html" },
+          { label: "Espaço Bioenergologia", href: P + "pages/bioenergologia.html" },
+          { label: "Laboratório de Ectoplasmologia", href: P + "pages/laboratorio-ectoplasmologia.html" }
         ]},
         { cat: "Acervo de Pesquisa", links: [
           { label: "Base: Conscienciologia", href: P + "pages/conscienciologia.html" },
@@ -244,7 +244,7 @@
       "Espaço Bioenergologia": "Bioenergology Space",
       "Laboratório de Ectoplasmologia": "Ectoplasmology Laboratory",
       "Gratuitos": "Free",
-      "OGB": "OGB",
+      "OGB - Orientação Gratuita em Bioenergologia": "OGB - Free Bioenergology Guidance",
       "Diálogos Online": "Online Dialogues",
       "Orientação Gratuita (OGB)": "Free Bioenergetic Guidance (OGB)",
       "Eventos & Consultoria": "Events & Consulting",
