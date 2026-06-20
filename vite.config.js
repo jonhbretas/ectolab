@@ -174,6 +174,7 @@ export default defineConfig({
         blog: resolve(__dirname, 'pages/blog.html'),
         blogPost: resolve(__dirname, 'pages/blog-post.html'),
         parcerias: resolve(__dirname, 'pages/parcerias.html'),
+        apoie: resolve(__dirname, 'pages/apoie.html'),
         agenda: resolve(__dirname, 'pages/agenda.html')
       }
     }
