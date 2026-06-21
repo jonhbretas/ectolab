@@ -19,6 +19,26 @@
       "featuredStyle": "",
       "featuredDate": "",
       "featuredCategory": ""
+    },
+    {
+      "model": "proep",
+      "title": "Turma de Junho",
+      "category": "curso-presencial",
+      "date": "2026-06-26",
+      "durationDays": 2,
+      "href": "",
+      "description": "",
+      "location": "Lab. Ectoplasmologia - CEAEC",
+      "time": "Sexta 14h – 22h | Sábado 08h – 17h30  |  Domingo 08h – 17h",
+      "tag": "Programa Presencial",
+      "price": "R$1000",
+      "free": false,
+      "status": "Vagas preenchidas",
+      "buttonLabel": "Ver detalhes",
+      "featured": false,
+      "featuredStyle": "",
+      "featuredDate": "",
+      "featuredCategory": ""
     }
   ]
 }
