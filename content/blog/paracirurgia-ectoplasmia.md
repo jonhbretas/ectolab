@@ -13,6 +13,14 @@ tags:
 coverImage: /wp-content/uploads/2025/03/Ectoplasma_dna-1-scaled-e1747311974553.jpg
 published: true
 featured: false
+bodyImages:
+  - label: WhatsApp Image 2024 04 30 at 23.00.33 533x400
+    originalPath: >-
+      /wp-content/uploads/2024/05/WhatsApp-Image-2024-04-30-at-23.00.33-533x400.jpeg
+    image: >-
+      /wp-content/uploads/2024/05/WhatsApp-Image-2024-04-30-at-23.00.33-533x400.jpeg
+    alt: voluntarios ectolab
+    notes: Preferir WEBP otimizado para melhor desempenho.
 ---
 
 <h1><b>Paracirurgia e Ectoplasmia: Qual a relação com o ECTOLAB?</b></h1>

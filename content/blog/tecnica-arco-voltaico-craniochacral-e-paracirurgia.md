@@ -13,6 +13,19 @@ tags:
 coverImage: /wp-content/uploads/2025/10/CapaBlogPostEctolab-e1761668242714.png
 published: true
 featured: true
+bodyImages:
+  - label: IlustracaoArcoVoltaicoCraniochacral 267x400
+    originalPath: >-
+      /wp-content/uploads/2025/10/IlustracaoArcoVoltaicoCraniochacral--267x400.png
+    image: >-
+      /wp-content/uploads/2025/10/IlustracaoArcoVoltaicoCraniochacral--267x400.png
+    alt: Ilustração Arco Voltaico Craniochacral
+    notes: Preferir WEBP otimizado para melhor desempenho.
+  - label: Autora Simone Zanella 280x280
+    originalPath: /wp-content/uploads/2025/10/Autora_Simone_Zanella-280x280.jpeg
+    image: /wp-content/uploads/2025/10/Autora_Simone_Zanella-280x280.jpeg
+    alt: Autora_Simone_Zanella.
+    notes: Preferir WEBP otimizado para melhor desempenho.
 ---
 
 <h1 align="justify"><span style="font-family: Times New Roman, serif;"><span style="font-size: large;"><b>A Técnica do </b></span></span><span style="font-family: Times New Roman, serif;"><span style="font-size: large;"><b>Arco Voltaico Craniochacral e a Paracirurgia</b></span></span></h1>

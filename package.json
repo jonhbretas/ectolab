@@ -7,9 +7,10 @@
   "scripts": {
     "dev": "vite",
     "sync:images": "node scripts/sync-site-images.mjs",
+    "sync:blog-images": "node scripts/sync-blog-images.mjs",
     "generate:content": "node scripts/generate-content.mjs",
     "apply:images": "node scripts/apply-site-images.mjs",
-    "build": "npm run sync:images && npm run generate:content && vite build && npm run apply:images",
+    "build": "npm run sync:blog-images && npm run sync:images && npm run generate:content && vite build && npm run apply:images",
     "preview": "vite preview"
   },
   "dependencies": {

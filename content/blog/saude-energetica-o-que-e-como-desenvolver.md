@@ -13,6 +13,24 @@ tags:
 coverImage: /wp-content/uploads/2025/03/Ectoplasma_Dna-2-scaled-e1751148815147.jpg
 published: true
 featured: false
+bodyImages:
+  - label: saude energetica e1751150395371 800x363
+    originalPath: /wp-content/uploads/2025/06/saude-energetica-e1751150395371-800x363.png
+    image: /wp-content/uploads/2025/06/saude-energetica-e1751150395371-800x363.png
+    alt: saúde energética imagem representativa
+    notes: Preferir WEBP otimizado para melhor desempenho.
+  - label: homem mantendo asana enquanto os pontos chakra estao alinhados 600x400
+    originalPath: >-
+      /wp-content/uploads/2025/06/homem-mantendo-asana-enquanto-os-pontos-chakra-estao-alinhados-600x400.jpg
+    image: >-
+      /wp-content/uploads/2025/06/homem-mantendo-asana-enquanto-os-pontos-chakra-estao-alinhados-600x400.jpg
+    alt: homem-pontos-chakra-estao-alinhados
+    notes: Preferir WEBP otimizado para melhor desempenho.
+  - label: Ana Paula Prado 300x400
+    originalPath: /wp-content/uploads/2025/06/Ana-Paula-Prado-300x400.jpeg
+    image: /wp-content/uploads/2025/06/Ana-Paula-Prado-300x400.jpeg
+    alt: ''
+    notes: Preferir WEBP otimizado para melhor desempenho.
 ---
 
 <h1><b>Saúde Energética: O que é ? Como desenvolver ?</b></h1>

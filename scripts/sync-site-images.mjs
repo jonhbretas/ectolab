@@ -8,6 +8,8 @@ const imagePattern = /(?:"|')(?<quoted>\/[^"']+\.(?:png|jpe?g|webp|gif|svg))(?:"
 const ignoredPrefixes = ['/assets/', '/uploads/'];
 const ignoredFiles = new Set([
   'content/site/images.json',
+  'pages/blog.html',
+  'pages/blog-post.html',
 ]);
 
 function walk(dir) {
@@ -82,6 +84,7 @@ const grouped = new Map();
 files.forEach((file) => {
   const rel = path.relative(root, file).replace(/\\/g, '/');
   if (ignoredFiles.has(rel)) return;
+  if (rel.startsWith('content/blog/')) return;
 
   const text = fs.readFileSync(file, 'utf8');
   for (const match of text.matchAll(imagePattern)) {

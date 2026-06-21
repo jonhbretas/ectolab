@@ -13,6 +13,19 @@ tags:
 coverImage: /wp-content/uploads/2025/03/Ectoplasma_Dna-2-scaled-e1751148815147.jpg
 published: true
 featured: false
+bodyImages:
+  - label: Holossoma 711x400
+    originalPath: /wp-content/uploads/2025/03/Holossoma-711x400.jpg
+    image: /wp-content/uploads/2025/03/Holossoma-711x400.jpg
+    alt: representação ilustrativa do holossoma
+    notes: Preferir WEBP otimizado para melhor desempenho.
+  - label: Sistema nervoso central Simpatico Parassimpatico 548x400
+    originalPath: >-
+      /wp-content/uploads/2025/03/Sistema-nervoso-central-Simpatico-Parassimpatico-548x400.jpg
+    image: >-
+      /wp-content/uploads/2025/03/Sistema-nervoso-central-Simpatico-Parassimpatico-548x400.jpg
+    alt: Sistema Nervoso Simpático & Parassimpático
+    notes: Preferir WEBP otimizado para melhor desempenho.
 ---
 
 <h1 data-pm-slice="1 3 []"><strong>Síndrome Ectoplásmica: Causas, Sintomas e Tratamentos</strong></h1>

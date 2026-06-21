@@ -13,6 +13,17 @@ tags:
 coverImage: ''
 published: true
 featured: false
+bodyImages:
+  - label: chacras vortices de energia holossoma
+    originalPath: /wp-content/uploads/2024/12/chacras-vortices-de-energia-holossoma.jpg
+    image: /wp-content/uploads/2024/12/chacras-vortices-de-energia-holossoma.jpg
+    alt: ''
+    notes: Preferir WEBP otimizado para melhor desempenho.
+  - label: holossoma chacras corpos veiculos
+    originalPath: /wp-content/uploads/2024/12/holossoma-chacras-corpos-veiculos.jpg
+    image: /wp-content/uploads/2024/12/holossoma-chacras-corpos-veiculos.jpg
+    alt: ''
+    notes: Preferir WEBP otimizado para melhor desempenho.
 ---
 
 <h1><strong>O Manual Completo dos Chacras(Chakras):</strong> Desde o Fundamental até o Avançado</h1>

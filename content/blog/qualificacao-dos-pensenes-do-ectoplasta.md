@@ -13,6 +13,19 @@ tags:
 coverImage: /wp-content/uploads/2025/09/Qualificacao-dos-Pensenes-do-Ectoplasta-1.png
 published: true
 featured: false
+bodyImages:
+  - label: Qualificacao dos Pensenes do Ectoplasta 1 600x400
+    originalPath: >-
+      /wp-content/uploads/2025/09/Qualificacao-dos-Pensenes-do-Ectoplasta-1-600x400.png
+    image: >-
+      /wp-content/uploads/2025/09/Qualificacao-dos-Pensenes-do-Ectoplasta-1-600x400.png
+    alt: Imagem ilustrativa qualificação dos pensenes do ectoplasta
+    notes: Preferir WEBP otimizado para melhor desempenho.
+  - label: AutorPaulo e1758759969934 280x280
+    originalPath: /wp-content/uploads/2025/09/AutorPaulo-e1758759969934-280x280.jpeg
+    image: /wp-content/uploads/2025/09/AutorPaulo-e1758759969934-280x280.jpeg
+    alt: 'Autor: Paulo Battistella'
+    notes: Preferir WEBP otimizado para melhor desempenho.
 ---
 
 <figure class="wp-caption"><img class="size-medium wp-image-3261" src="/wp-content/uploads/2025/09/Qualificacao-dos-Pensenes-do-Ectoplasta-1-600x400.png" alt="Imagem ilustrativa qualificação dos pensenes do ectoplasta" width="600" height="400" /> Imagem ilustrativa qualificação dos pensenes do ectoplasta</figure>

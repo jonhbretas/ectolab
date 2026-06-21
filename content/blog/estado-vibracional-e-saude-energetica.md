@@ -13,6 +13,17 @@ tags:
 coverImage: /wp-content/uploads/2025/03/ectoplasma_dna-e1749683147117.jpg
 published: true
 featured: false
+bodyImages:
+  - label: atencaoPlenaEquilibrioEnergetico 267x400
+    originalPath: /wp-content/uploads/2025/06/atencaoPlenaEquilibrioEnergetico-267x400.png
+    image: /wp-content/uploads/2025/06/atencaoPlenaEquilibrioEnergetico-267x400.png
+    alt: figura ilustrativa atenção plena e equilibrio dos chackras
+    notes: Preferir WEBP otimizado para melhor desempenho.
+  - label: Ana Paula Prado 300x400
+    originalPath: /wp-content/uploads/2025/06/Ana-Paula-Prado-300x400.jpeg
+    image: /wp-content/uploads/2025/06/Ana-Paula-Prado-300x400.jpeg
+    alt: ''
+    notes: Preferir WEBP otimizado para melhor desempenho.
 ---
 
 <h1><b>Estado Vibracional: A Paratecnologia do Autoconhecimento e da Saúde Energética</b></h1>

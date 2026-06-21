@@ -33,6 +33,20 @@ function stripHtml(value = '') {
     .trim();
 }
 
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function applyBodyImageReplacements(html, post) {
+  let nextHtml = html;
+  (post.bodyImages || []).forEach((image) => {
+    if (!image?.originalPath || !image?.image || image.originalPath === image.image) return;
+    nextHtml = nextHtml.replace(new RegExp(escapeRegExp(image.originalPath), 'g'), image.image);
+  });
+
+  return nextHtml;
+}
+
 function excerpt(post) {
   const raw = post.description || stripHtml(post.body);
   if (raw.length <= 170) return raw;
@@ -289,7 +303,7 @@ function rightSidebar(post, posts) {
 }
 
 function renderPostPage(post, posts) {
-  const bodyHtml = marked.parse(post.body || '');
+  const bodyHtml = applyBodyImageReplacements(marked.parse(post.body || ''), post);
   const description = excerpt(post);
   const cover = post.coverImage
     ? `        <div class="wp-post-cover"><img src="${escapeHtml(post.coverImage)}" alt="${escapeHtml(post.title)}" loading="eager" /></div>`

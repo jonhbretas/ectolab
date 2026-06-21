@@ -13,6 +13,14 @@ tags:
 coverImage: ''
 published: true
 featured: false
+bodyImages:
+  - label: ai generated 8582218 640
+    originalPath: /wp-content/uploads/2024/05/ai-generated-8582218_640.png
+    image: /wp-content/uploads/2024/05/ai-generated-8582218_640.png
+    alt: >-
+      Motivação Ectoplásmica: Autoconhecimento, Autopesquisa, ectoplasta,
+      consciencilogia. 
+    notes: Preferir WEBP otimizado para melhor desempenho.
 ---
 
 <h2 data-sourcepos="1:1-1:113">Motivação Ectoplásmica:</h2>

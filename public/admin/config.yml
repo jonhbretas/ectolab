@@ -29,8 +29,8 @@ collections:
             collapsed: auto
             hint: "Cada grupo representa uma pagina, pasta ou area global do site. Troque a imagem no campo 'Imagem substituta'. Recomendacao: envie arquivos WEBP otimizados para melhorar o desempenho."
             fields:
-              - { name: page, label: Pagina ou area, widget: string }
-              - { name: folder, label: Pasta interna sugerida, widget: string, hint: "Use esta pasta como referencia ao enviar imagens. Ex.: uploads/site-images/pages/blog." }
+              - { name: page, label: Pagina ou area, widget: hidden }
+              - { name: folder, label: Pasta interna sugerida, widget: hidden }
               - name: images
                 label: Imagens desta pagina/pasta
                 widget: list
@@ -38,8 +38,8 @@ collections:
                 summary: "{{label}}"
                 collapsed: true
                 fields:
-                  - { name: label, label: Nome da imagem, widget: string }
-                  - { name: originalPath, label: Caminho atual no site, widget: string, hint: "Referencia tecnica usada pelo build. Evite alterar, a menos que a imagem original tenha mudado no codigo." }
+                  - { name: label, label: Nome da imagem, widget: hidden }
+                  - { name: originalPath, label: Caminho atual no site, widget: hidden }
                   - { name: image, label: Imagem substituta, widget: image, hint: "Preferir WEBP. Para manter a imagem atual, deixe igual ao caminho atual." }
                   - { name: alt, label: Texto alternativo, widget: string, required: false }
                   - { name: notes, label: Observacoes, widget: text, required: false, default: "Preferir WEBP otimizado para melhor desempenho." }
@@ -48,6 +48,8 @@ collections:
     label: Blog
     label_singular: Post
     folder: content/blog
+    media_folder: public/uploads/blog
+    public_folder: /uploads/blog
     create: true
     slug: "{{slug}}"
     fields:
@@ -59,6 +61,20 @@ collections:
       - { name: category, label: Categoria, widget: string }
       - { name: tags, label: Tags, widget: list, required: false }
       - { name: coverImage, label: Imagem de capa, widget: image, required: false }
+      - name: bodyImages
+        label: Imagens internas do post
+        widget: list
+        required: false
+        label_singular: Imagem
+        summary: "{{label}}"
+        collapsed: true
+        hint: "Use para trocar imagens que aparecem dentro do corpo do artigo. Recomendacao: envie WEBP otimizado."
+        fields:
+          - { name: label, label: Nome da imagem, widget: hidden }
+          - { name: originalPath, label: Caminho atual no artigo, widget: hidden }
+          - { name: image, label: Imagem substituta, widget: image, hint: "Preferir WEBP. Para manter a imagem atual, deixe igual ao caminho atual." }
+          - { name: alt, label: Texto alternativo, widget: string, required: false }
+          - { name: notes, label: Observacoes, widget: text, required: false, default: "Preferir WEBP otimizado para melhor desempenho." }
       - { name: published, label: Publicado, widget: boolean, default: true }
       - { name: featured, label: Destaque, widget: boolean, default: false }
       - name: body
