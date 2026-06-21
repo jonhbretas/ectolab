@@ -1,6 +1,46 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { relative, resolve } from 'path';
+import { copyFileSync, mkdirSync, readFileSync } from 'fs';
+
+/**
+ * Assets "crus" referenciados por caminho absoluto /assets/... nas páginas
+ * estáticas geradas em public/ (que o Vite serve verbatim, sem processar).
+ *
+ * Fonte única = pasta assets/. Não há mais cópias em public/assets.
+ *  - DEV:   serve estes arquivos direto de assets/ com o Content-Type correto
+ *           (o Vite, por padrão, entregaria o .css como módulo JS, o que quebra
+ *           o <link rel="stylesheet"> das páginas geradas).
+ *  - BUILD: copia os arquivos para dist/assets (os bundles hasheados não cobrem
+ *           os caminhos absolutos /assets/...).
+ */
+const RAW_ASSETS = {
+  'chrome.js': 'text/javascript',
+  'styles.css': 'text/css',
+  'inner.css': 'text/css',
+};
+function rawAssets() {
+  return {
+    name: 'ectolab-raw-assets',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        const match = (req.url || '').match(/^\/assets\/([^/?#]+)$/);
+        const file = match && match[1];
+        if (!file || !(file in RAW_ASSETS)) return next();
+        res.setHeader('Content-Type', RAW_ASSETS[file]);
+        res.setHeader('Cache-Control', 'no-cache');
+        res.end(readFileSync(resolve(__dirname, 'assets', file)));
+      });
+    },
+    closeBundle() {
+      const outDir = resolve(__dirname, 'dist', 'assets');
+      mkdirSync(outDir, { recursive: true });
+      for (const file of Object.keys(RAW_ASSETS)) {
+        copyFileSync(resolve(__dirname, 'assets', file), resolve(outDir, file));
+      }
+    },
+  };
+}
 
 const SITE_URL = 'https://ectolab.org';
 const SITE_NAME = 'Ectolab';
@@ -145,7 +185,7 @@ function seoPlugin() {
  * no navegador. Isso reduz o tamanho da página e aumenta a velocidade.
  */
 export default defineConfig({
-  plugins: [react(), seoPlugin()],
+  plugins: [react(), seoPlugin(), rawAssets()],
   build: {
     rollupOptions: {
       // CENTRAL DE PÁGINAS (Build):

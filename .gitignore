@@ -2,3 +2,6 @@
 dist/
 node_modules/.vite/
 .env
+
+# Duplicata gerada no build — a fonte unica e a pasta assets/
+public/assets/
