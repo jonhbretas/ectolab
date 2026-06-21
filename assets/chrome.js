@@ -20,6 +20,7 @@
 
   const navItems = [
     { id: "agenda",        label: "Agenda",          href: P + "pages/agenda.html" },
+    { id: "sistema",       label: "Sistema ↗",       href: "https://dip-ectolab.org.br/login", target: "_blank" },
     { 
       id: "paracirurgia",  
       label: "Paracirurgia",    
@@ -28,8 +29,13 @@
         { cat: "Assistência", links: [
           { label: "O que é a Paracirurgia", href: P + "pages/paracirurgia.html" },
           { label: "Solicitar Paracirurgia ↗", href: "https://dip-ectolab.org.br/pedido-paracirurgia", target: "_blank" },
-          { label: "Painel de Pedidos", href: P + "pages/painel-pedidos-paracirurgia.html" },
-          { label: "Rede Invisível (À Distância)", href: P + "pages/rede.html" }
+          { label: "Enviar Relatório do Pedido ↗", href: "https://dip-ectolab.org.br/pedido-paracirurgia/historico", target: "_blank" },
+          { label: "Painel de Pedidos", href: P + "pages/painel-pedidos-paracirurgia.html" }
+        ]},
+        { cat: "Rede de Paracirurgia", links: [
+          { label: "Sobre a Rede Invisível", href: P + "pages/rede.html" },
+          { label: "Cadastro na Rede", href: P + "pages/rede-cadastro.html" },
+          { label: "Relatório da Rede", href: P + "pages/rede-relatorio.html" }
         ]}
       ]
     },
@@ -130,7 +136,7 @@
           </div>
         `;
       }
-      return `<div class="nav-item"><a href="${n.href}" class="${active === n.id ? "active" : ""}">${n.label}</a></div>`;
+      return `<div class="nav-item"><a href="${n.href}" class="${active === n.id ? "active" : ""}" ${n.target ? `target="${n.target}" rel="noreferrer"` : ""}>${n.label}</a></div>`;
     })
     .join("");
 
@@ -141,6 +147,7 @@
           ${logoHTML}
         </a>
         <nav class="nav">${navHTML}</nav>
+        <a href="https://dip-ectolab.org.br/login" target="_blank" rel="noreferrer" class="btn btn-system btn-sm header-cta header-cta-system">Acessar sistema <span class="arrow">↗</span></a>
         <a href="${P}pages/parcerias.html" class="btn btn-parcerias btn-sm header-cta">Parcerias de Pesquisa</a>
         <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange btn-sm header-cta">Solicitar paracirurgia <span class="arrow">↗</span></a>
         <div class="lang-switch" role="group" aria-label="Idioma">
@@ -221,10 +228,15 @@
     EN: {
       "Paracirurgia": "Parasurgery",
       "Agenda": "Schedule",
+      "Sistema ↗": "System ↗",
       "O que é a Paracirurgia": "What Parasurgery Is",
       "Solicitar Paracirurgia ↗": "Request Parasurgery ↗",
+      "Enviar Relatório do Pedido ↗": "Submit Request Report ↗",
       "Painel de Pedidos": "Request Dashboard",
-      "Rede Invisível (À Distância)": "Invisible Network (Remote)",
+      "Rede de Paracirurgia": "Parasurgery Network",
+      "Sobre a Rede Invisível": "About the Invisible Network",
+      "Cadastro na Rede": "Network Registration",
+      "Relatório da Rede": "Network Report",
       "Trilha": "Pathway",
       "Cursos": "Courses",
       "Cursos de Campo": "Field Courses",
@@ -273,6 +285,7 @@
       "Materiais Publicados & FAQ": "Published Materials & FAQ",
       "Blog": "Blog",
       "Apoie": "Support",
+      "Acessar sistema": "Access system",
       "Solicitar paracirurgia": "Request parasurgery",
       "Pesquisa": "Research",
       "Ciência & Ectoplasmologia": "Science & Ectoplasmology",

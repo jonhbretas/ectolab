@@ -435,7 +435,18 @@ p { margin: 0 0 1em; }
 
 .btn-sm { padding: 10px 16px; font-size: 13.5px; }
 .header-cta { box-shadow: 0 6px 18px -6px rgba(240,160,48,0.5); }
+.header-cta-system { box-shadow: 0 8px 22px -8px rgba(21,83,102,0.65); }
 @media (max-width: 1100px) { .header-cta { display: none; } }
+
+.btn-system {
+  background: var(--teal);
+  color: var(--white);
+  font-weight: 700;
+}
+.btn-system:hover {
+  background: var(--teal-2);
+  color: var(--white);
+}
 
 .btn-ghost {
   background: transparent;

@@ -6,7 +6,7 @@ function App() {
     <section className="section bg-white" style={{ paddingTop: '80px', paddingBottom: '64px' }}>
       <div className="wrap">
         <div className="breadcrumb" style={{ marginBottom: 24, fontSize: 13, color: 'var(--ink-3)' }}>
-          <a href="/pages/atividades.html" style={{ textDecoration: 'underline' }}>Atividades</a> / Rede Interassistencial
+          <a href="/pages/paracirurgia.html" style={{ textDecoration: 'underline' }}>Paracirurgia</a> / Rede de Paracirurgia
         </div>
         <div className="grid g2 gap-48">
           <div>
@@ -19,9 +19,16 @@ function App() {
             </p>
             
             <div className="prose" style={{ marginTop: 40, marginLeft: 0 }}>
+              <h3>Objetivos</h3>
+              <ol>
+                <li><strong>Intermissivo:</strong> Atender ao compromisso assumido no curso intermissivo de contribuir grupalmente com os trabalhos das reurbanizações.</li>
+                <li><strong>Assistenciologia:</strong> Fortalecer o holopensene das auto e heteropesquisas no contexto da Assistenciologia.</li>
+                <li><strong>Integração:</strong> Integrar tenepessistas veteranos num contexto macro de interassistência multidimensional.</li>
+              </ol>
+
               <h3>Critérios para Participação</h3>
               <ul>
-                <li><strong>Tenepessismo Veterano:</strong> Ter 3 anos de atividade (acoplamento profundo).</li>
+                <li><strong>Tenepessismo Veterano:</strong> Tenepessista com 3 anos de atividade, ficando a decisão a cargo do próprio praticante.</li>
                 <li><strong>Dupla evolutiva:</strong> Preferencialmente ter dupla evolutiva (evitação da carência afetiva).</li>
                 <li><strong>Experiência de Campo:</strong> Ter participado presencialmente de no mínimo três DIPs.</li>
                 <li><strong>Persistência:</strong> Manter rotina de participação à distância na dinâmica.</li>
@@ -41,7 +48,7 @@ function App() {
             <div className="glass-teal" style={{ padding: 32, position: 'sticky', top: 100, borderRadius: 'var(--r-lg)' }}>
               <h3 className="h3" style={{ color: 'var(--white)', marginBottom: 24 }}>Participe</h3>
               <p style={{ fontSize: 14.5, color: 'rgba(255,255,255,0.8)' }}>
-                Tenepessistas interessados devem submeter sua aplicação. Após o envio, a coordenação da Ectolab fará contato para confirmar o credenciamento.
+                Tenepessistas interessados devem fazer o cadastro no formulário próprio. Após o envio, a equipe da Ectolab fará contato para confirmar a participação como assistente a distância.
               </p>
               <div className="col gap-16" style={{ margin: '24px 0' }}>
                 <div className="flex between" style={{ borderBottom: '1px dashed rgba(255,255,255,0.2)', paddingBottom: 12 }}>
@@ -57,8 +64,8 @@ function App() {
                   <span style={{ fontSize: 14.5, color: 'var(--white)' }}>Gratuito</span>
                 </div>
               </div>
-              <a href="mailto:contato@ectolab.org" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center', marginBottom: 12 }}>Solicitar Cadastro <span className="arrow">→</span></a>
-              <a href="mailto:contato@ectolab.org" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center', color: 'var(--white)', borderColor: 'rgba(255,255,255,0.4)' }}>Enviar Relatório <span className="arrow">→</span></a>
+              <a href="/pages/rede-cadastro.html" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center', marginBottom: 12 }}>Cadastro na Rede <span className="arrow">→</span></a>
+              <a href="/pages/rede-relatorio.html" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center', color: 'var(--white)', borderColor: 'rgba(255,255,255,0.4)' }}>Enviar Relatório <span className="arrow">→</span></a>
             </div>
           </div>
         </div>

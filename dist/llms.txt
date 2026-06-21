@@ -8,7 +8,7 @@ Ectolab is an international research association focused on laboratory study of 
 - Legal description: Associacao Internacional de Pesquisa Laboratorial em Paracirurgia e Ectoplasmia
 - Founded: 2013
 - Location: Foz do Iguacu, Parana, Brazil
-- Site: https://ectolab.vercel.app/
+- Site: https://ectolab.org/
 - Contact: contato@ectolab.org
 
 ## Main Topics
@@ -20,13 +20,13 @@ Ectolab is an international research association focused on laboratory study of 
 
 ## Key Pages
 
-- Home: https://ectolab.vercel.app/
-- Paracirurgia: https://ectolab.vercel.app/pages/paracirurgia.html
-- Trilha do Saber: https://ectolab.vercel.app/pages/trilha.html
-- Cursos: https://ectolab.vercel.app/pages/cursos.html
-- Atividades: https://ectolab.vercel.app/pages/atividades.html
-- Quem somos: https://ectolab.vercel.app/pages/quem-somos.html
-- Contato: https://ectolab.vercel.app/pages/contato.html
+- Home: https://ectolab.org/
+- Paracirurgia: https://ectolab.org/pages/paracirurgia.html
+- Trilha do Saber: https://ectolab.org/pages/trilha.html
+- Cursos: https://ectolab.org/pages/cursos.html
+- Atividades: https://ectolab.org/pages/atividades.html
+- Quem somos: https://ectolab.org/pages/quem-somos.html
+- Contato: https://ectolab.org/pages/contato.html
 
 ## Crawling Guidance
 

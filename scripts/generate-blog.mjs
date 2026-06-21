@@ -7,7 +7,7 @@ const root = process.cwd();
 const contentDir = path.join(root, 'content', 'blog');
 const blogPagePath = path.join(root, 'pages', 'blog.html');
 const publicDir = path.join(root, 'public');
-const siteUrl = 'https://ectolab.vercel.app';
+const siteUrl = 'https://ectolab.org';
 const startMarker = '<!-- CMS BLOG LIST START -->';
 const endMarker = '<!-- CMS BLOG LIST END -->';
 
@@ -54,7 +54,7 @@ function dateSlash(value) {
 }
 
 function postHref(post) {
-  return `/blog/${escapeHtml(post.slug)}.html`;
+  return `/${escapeHtml(post.slug)}/`;
 }
 
 function readPosts() {
