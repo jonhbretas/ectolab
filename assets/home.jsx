@@ -56,7 +56,7 @@ function HeroConservadora() {
           </aside>
         </div>
 
-        <div className="quadrant">
+        <div className="quadrant h-scroll">
           <div className="quadrant__cell">
             <span className="specimen">I.</span>
             <h3 className="h3">Pesquisar</h3>
@@ -109,7 +109,7 @@ function HeroEquilibrada() {
           </a>
         </div>
 
-        <div className="quadrant">
+        <div className="quadrant h-scroll">
           <div className="quadrant__cell">
             <span className="specimen">I.</span>
             <h3 className="h3">Pesquisar</h3>
@@ -272,7 +272,7 @@ function OQueFazemos() {
           </div>
         </div>
 
-        <div className="ofaz-grid">
+        <div className="ofaz-grid h-scroll">
           {cells.map((c) => (
             <a href={c.link} key={c.num} className="ofaz">
               <div className="ofaz__num mono">/{c.num}</div>
@@ -389,7 +389,7 @@ function CursosDestaque() {
           <a href="pages/cursos.html" className="btn btn-ghost hide-mobile">Ver todos os cursos →</a>
         </div>
 
-        <div className="cursos-grid">
+        <div className="cursos-grid h-scroll">
           {cursos.map((c, i) => (
             <a href={c.link} key={c.sigla} className="curso-card" style={{ "--bg": c.color }}>
               <div className="curso-card__viz">
@@ -552,7 +552,7 @@ function Glossario() {
             </h2>
           </div>
         </div>
-        <div className="glossario-grid">
+        <div className="glossario-grid h-scroll">
           {terms.map((t, i) => (
             <div className="gloss" key={i}>
               <span className="specimen">VERBETE Nº {String(i + 1).padStart(2, "0")}</span>
@@ -625,7 +625,7 @@ function Depoimentos() {
     <section className="section depo">
       <div className="wrap">
         <div className="eyebrow"><span className="dot"></span>VOZES DA ECTOLAB</div>
-        <div className="depo-grid">
+        <div className="depo-grid h-scroll">
           {ts.map((t, i) => (
             <figure key={i} className="depo-card">
               <span className="aster" style={{ fontSize: 32 }}>*</span>

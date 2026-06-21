@@ -978,3 +978,43 @@
 .tweak-opt:hover { border-color: var(--ink); }
 .tweak-opt.on { background: var(--ink); color: var(--white); border-color: var(--ink); }
 .tweak-opt.on .specimen { color: var(--gold); }
+
+/* ============================================================
+   CARROSSEL HORIZONTAL (mobile) — .h-scroll
+   No celular, grids viram trilho horizontal com scroll-snap: mostra o
+   card atual + uma fatia do próximo, deixando claro que há mais conteúdo
+   e encurtando bastante a home. Vale para: quadrant, ofaz-grid,
+   cursos-grid, glossario-grid e depo-grid.
+   ============================================================ */
+@media (max-width: 700px) {
+  .h-scroll {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 14px;
+    overflow-x: auto;
+    overflow-y: hidden;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    /* sangra até as bordas da tela e reinsere o 1º card no gutter */
+    margin-left: calc(var(--gutter) * -1);
+    margin-right: calc(var(--gutter) * -1);
+    padding: 6px var(--gutter) 18px;
+    scroll-padding-left: var(--gutter);
+    /* esconde a barra de rolagem */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  .h-scroll::-webkit-scrollbar { display: none; }
+
+  .h-scroll > * {
+    flex: 0 0 80%;          /* card atual ocupa 80%, o próximo "espia" ~20% */
+    scroll-snap-align: start;
+    min-height: 0;          /* deixa a altura seguir o conteúdo */
+  }
+  /* o último card ganha respiro à direita para o snap encostar na borda */
+  .h-scroll > *:last-child { margin-right: var(--gutter); }
+}
+
+@media (max-width: 420px) {
+  .h-scroll > * { flex-basis: 85%; }
+}
