@@ -316,7 +316,7 @@ function normalizeEvent(rawEvent, monthGroup = {}, models = new Map(), eventType
     location: event.location || '',
     time: event.time || '',
     price,
-    students: event.students || event.studentCount || '',
+    vacancies: event.vacancies || event.students || event.studentCount || '',
     free: Boolean(event.free || String(price).toLowerCase().includes('gratuito')),
     status,
     href: event.href || '/pages/atividades.html',
@@ -395,12 +395,12 @@ function renderRow(event) {
   const priceClass = event.free ? 'price free' : 'price';
   const buttonLabel = event.buttonLabel || 'Ver detalhes';
   const rowDate = formatRowDate(event);
-  const students = event.students ? `<span class="students">${escapeHtml(event.students)}</span>` : '';
+  const vacancies = event.vacancies ? `<span class="vacancies">${escapeHtml(event.vacancies)}</span>` : '';
 
   return `          <a class="agenda-row${rowPast}" data-cat="${escapeHtml(event.category)}" data-month="${escapeHtml(event.month)}" href="${escapeHtml(event.href || '/pages/atividades.html')}">
             <div class="agenda-row__date"><strong>${escapeHtml(rowDate.day)}</strong><span>${escapeHtml(rowDate.weekday)}</span></div>
             <div class="agenda-row__body">
-              <div class="agenda-row__labels"><span class="agenda-tag ${escapeHtml(event.category)}">${escapeHtml(event.tag)}</span><span class="${stateClass}">${escapeHtml(event.status)}</span></div>
+              <div class="agenda-row__labels"><span class="agenda-tag ${escapeHtml(event.category)}">${escapeHtml(event.tag)}</span><span class="${stateClass}">${escapeHtml(event.status)}</span>${vacancies}</div>
               <h3>${escapeHtml(event.title)}</h3>
               <p>${escapeHtml(event.description)}</p>
             </div>
@@ -408,7 +408,7 @@ function renderRow(event) {
               <span><span class="ico">◆</span> ${escapeHtml(event.location || '')}</span>
               <span><span class="ico">◆</span> ${escapeHtml(event.time || '')}</span>
             </div>
-            <div class="agenda-row__status"><span class="${priceClass}">${escapeHtml(event.price)}</span>${students}</div>
+            <div class="agenda-row__status"><span class="${priceClass}">${escapeHtml(event.price)}</span></div>
             <span class="agenda-row__arr" aria-label="${escapeHtml(buttonLabel)}" title="${escapeHtml(buttonLabel)}">→</span>
           </a>`;
 }

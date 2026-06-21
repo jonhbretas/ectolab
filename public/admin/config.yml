@@ -145,7 +145,7 @@ collections:
                   - { label: Inscrições Abertas, value: Inscrições Abertas }
                   - { label: Vagas preenchidas, value: Vagas preenchidas }
                   - { label: Realizado, value: Realizado }
-              - { name: students, label: Quantidade de alunos padrao, widget: string, required: false, hint: "Ex.: 20 alunos, Ate 30 alunos, Turma reduzida." }
+              - { name: vacancies, label: Vagas do evento padrao, widget: string, required: false, hint: "Ex.: 20 vagas, Ate 30 vagas, Turma reduzida." }
               - { name: description, label: Descricao padrao, widget: text, required: false }
               - { name: location, label: Local padrao, widget: string, required: false }
               - { name: time, label: Horario/duracao padrao, widget: string, required: false }
@@ -228,7 +228,7 @@ collections:
                   - { label: Inscrições Abertas, value: Inscrições Abertas }
                   - { label: Vagas preenchidas, value: Vagas preenchidas }
                   - { label: Realizado, value: Realizado }
-              - { name: students, label: Quantidade de alunos, widget: string, required: false, hint: "Ex.: 20 alunos, Ate 30 alunos, Turma reduzida. Se usar modelo, deixe vazio para herdar o padrao." }
+              - { name: vacancies, label: Vagas do evento, widget: string, required: false, hint: "Ex.: 20 vagas, Ate 30 vagas, Turma reduzida. Se usar modelo, deixe vazio para herdar o padrao." }
               - { name: price, label: Preco, widget: string, required: false, default: "" }
               - { name: free, label: Gratuito, widget: boolean, default: false, required: false }
               - { name: buttonLabel, label: Texto do botao/link, widget: string, required: false, default: Ver detalhes }

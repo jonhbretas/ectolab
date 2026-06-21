@@ -66,7 +66,7 @@
       "price": "R$ 1.000",
       "free": false,
       "status": "Inscrições Abertas",
-      "students": "Turma reduzida",
+      "vacancies": "Turma reduzida",
       "href": "/pages/curso-proep.html",
       "buttonLabel": "Inscrever-se",
       "durationDays": 2,

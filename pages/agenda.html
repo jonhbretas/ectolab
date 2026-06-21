@@ -361,14 +361,8 @@
       font-variant-numeric: tabular-nums;
     }
     .agenda-row__status .price.free { color: var(--teal); }
-    .agenda-row__status .students {
-      font-family: var(--mono);
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--ink-3);
-    }
-    .agenda-row__labels .state {
+    .agenda-row__labels .state,
+    .agenda-row__labels .vacancies {
       font-family: var(--mono);
       font-size: 10px;
       letter-spacing: 0.12em;
@@ -381,6 +375,11 @@
       border-radius: 999px;
       border: 1px solid var(--line-2);
       background: rgba(255,255,255,0.68);
+    }
+    .agenda-row__labels .vacancies {
+      color: var(--teal);
+      border-color: var(--teal-soft2);
+      background: rgba(31,135,168,0.08);
     }
     .agenda-row__labels .state.open {
       color: var(--orange-2);
@@ -664,7 +663,7 @@
 
         <!-- CMS AGENDA EVENTS START -->
         <!-- ============ JUNHO 2026 ============ -->
-        <div class="month-block is-past" data-year="2026" data-month="jun" id="m-jun">
+        <div class="month-block" data-year="2026" data-month="jun" id="m-jun">
           <div class="month-head">
             <h2>Junho</h2><span class="yr">2026</span>
             <span class="mcount"><b>0</b> atividades</span>
@@ -682,6 +681,20 @@
             </div>
             <div class="agenda-row__status"><span class="price free">Consultar</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
+          </a>
+          <a class="agenda-row" data-cat="programa" data-month="jun" href="/pages/curso-proep.html">
+            <div class="agenda-row__date"><strong>26–28</strong><span>SEX–DOM</span></div>
+            <div class="agenda-row__body">
+              <div class="agenda-row__labels"><span class="agenda-tag programa">Programa · PROEP</span><span class="state closed">Vagas preenchidas</span><span class="vacancies">Turma reduzida</span></div>
+              <h3>PROEP - Programa de Estimulação Parapsíquica Ectoplásmica · Turma de Junho</h3>
+              <p>Atividade conscienciológica teática e aprofundada, com foco na estimulação lúcida do parapsiquismo ectoplásmico.</p>
+            </div>
+            <div class="agenda-row__meta">
+              <span><span class="ico">◆</span> Foz do Iguaçu - PR · CEAEC</span>
+              <span><span class="ico">◆</span> Sexta, sábado e domingo</span>
+            </div>
+            <div class="agenda-row__status"><span class="price">R$ 1.000</span></div>
+            <span class="agenda-row__arr" aria-label="Inscrever-se" title="Inscrever-se">→</span>
           </a>
         </div>
 <!-- CMS AGENDA EVENTS END -->
