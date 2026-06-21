@@ -25,6 +25,21 @@ const monthNames = {
   nov: 'Novembro',
   dez: 'Dezembro',
 };
+const weekdayNames = ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB'];
+const categoryLabels = {
+  palestra: 'Palestra',
+  oficina: 'Oficina',
+  'curso-campo': 'Curso de Campo',
+  'curso-hibrido': 'Curso Híbrido',
+  'curso-presencial': 'Curso Presencial',
+  'curso-online': 'Curso Online',
+  verbete: 'Verbete',
+  artigo: 'Artigo',
+  simposio: 'Simpósio',
+  forum: 'Fórum',
+  dinamica: 'Dinâmica',
+  encontro: 'Encontro',
+};
 
 function escapeHtml(value = '') {
   return String(value)
@@ -37,6 +52,55 @@ function escapeHtml(value = '') {
 
 function dateValue(event) {
   return new Date(`${event.date}T00:00:00Z`);
+}
+
+function dateParts(value) {
+  const isoDate = String(value || '').slice(0, 10);
+  const match = isoDate.match(/^(\d{4})-(\d{2})-(\d{2})$/);
+  if (!match) return null;
+
+  const [, year, monthNumber, day] = match;
+  const monthIndex = Number(monthNumber) - 1;
+  const date = new Date(Date.UTC(Number(year), monthIndex, Number(day)));
+
+  return {
+    year,
+    month: monthOrder[monthIndex],
+    monthLabel: monthNames[monthOrder[monthIndex]],
+    day,
+    weekday: weekdayNames[date.getUTCDay()],
+  };
+}
+
+function formatFeaturedDate(value) {
+  const parts = dateParts(value);
+  if (!parts) return value || '';
+  return `${parts.day} ${parts.month.toUpperCase()} ${parts.year}`;
+}
+
+function normalizeEvent(event, monthGroup = {}) {
+  const parts = dateParts(event.date) || {};
+  const category = event.category || 'palestra';
+  const price = event.price || (event.free ? 'Gratuito' : '');
+
+  return {
+    ...event,
+    year: parts.year || event.year || monthGroup.year,
+    month: parts.month || event.month || monthGroup.month,
+    monthLabel: parts.monthLabel || event.monthLabel || monthGroup.monthLabel,
+    day: parts.day || event.day || '',
+    weekday: parts.weekday || event.weekday || '',
+    category,
+    tag: event.tag || categoryLabels[category] || category,
+    description: event.description || '',
+    location: event.location || '',
+    time: event.time || '',
+    price,
+    free: Boolean(event.free || String(price).toLowerCase().includes('gratuito')),
+    status: event.status || 'Inscrições abertas',
+    href: event.href || '/pages/atividades.html',
+    buttonLabel: event.buttonLabel || event.ctaLabel || 'Ver detalhes',
+  };
 }
 
 function isPast(event) {
@@ -54,18 +118,14 @@ function readEvents() {
     return parsed.months
       .flatMap((monthGroup) => {
         const events = Array.isArray(monthGroup.events) ? monthGroup.events : [];
-        return events.map((event) => ({
-          ...event,
-          year: event.year || monthGroup.year,
-          month: event.month || monthGroup.month,
-          monthLabel: event.monthLabel || monthGroup.monthLabel,
-        }));
+        return events.map((event) => normalizeEvent(event, monthGroup));
       })
       .filter((event) => event.title && event.date)
       .sort((a, b) => dateValue(a) - dateValue(b));
   }
 
   return (parsed.events || [])
+    .map((event) => normalizeEvent(event))
     .filter((event) => event.title && event.date)
     .slice()
     .sort((a, b) => dateValue(a) - dateValue(b));
@@ -80,7 +140,7 @@ ${featured.map((event) => {
             <div class="feat__top"><span class="feat__year">${escapeHtml(event.year)}</span><span class="feat__cat">${escapeHtml(event.featuredCategory || event.tag)}</span></div>
             <h3>${escapeHtml(event.title)}</h3>
             <p>${escapeHtml(event.description)}</p>
-            <div class="feat__foot"><span class="feat__date">${escapeHtml(event.featuredDate || event.date)}</span><span class="feat__go">Ver na agenda</span></div>
+            <div class="feat__foot"><span class="feat__date">${escapeHtml(event.featuredDate || formatFeaturedDate(event.date))}</span><span class="feat__go">Ver na agenda</span></div>
           </button>`;
   }).join('\n')}
 ${featuredEnd}`;
@@ -90,7 +150,7 @@ function renderRow(event) {
   const rowPast = isPast(event) ? ' is-past' : '';
   const stateClass = isPast(event) ? 'state' : 'state open';
   const priceClass = event.free ? 'price free' : 'price';
-  const buttonLabel = event.buttonLabel || event.ctaLabel || 'Ver detalhes';
+  const buttonLabel = event.buttonLabel || 'Ver detalhes';
 
   return `          <a class="agenda-row${rowPast}" data-cat="${escapeHtml(event.category)}" data-month="${escapeHtml(event.month)}" href="${escapeHtml(event.href || '/pages/atividades.html')}">
             <div class="agenda-row__date"><strong>${escapeHtml(event.day)}</strong><span>${escapeHtml(event.weekday)}</span></div>

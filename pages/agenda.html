@@ -17,10 +17,18 @@
 
     /* Category accent colors */
     :root {
-      --c-campo:    var(--orange);
-      --c-tertulia: var(--teal-glow);
-      --c-curso:    var(--teal-2);
+      --c-palestra: var(--teal-glow);
+      --c-oficina: var(--orange);
+      --c-curso-campo: var(--teal-2);
+      --c-curso-hibrido: var(--teal);
+      --c-curso-presencial: var(--ink);
+      --c-curso-online: var(--teal-glow2);
+      --c-verbete: var(--orange-2);
+      --c-artigo: var(--ink-3);
       --c-simposio: var(--gold-2);
+      --c-forum: var(--orange-soft2);
+      --c-dinamica: var(--orange);
+      --c-encontro: var(--teal-soft2);
     }
 
     /* ---------- Sticky control bar ---------- */
@@ -81,10 +89,18 @@
       flex: none;
     }
     .cat-chip[data-cat="all"] .dot { background: linear-gradient(135deg, var(--orange), var(--teal-glow)); }
-    .cat-chip[data-cat="campo"] .dot { background: var(--c-campo); }
-    .cat-chip[data-cat="tertulia"] .dot { background: var(--c-tertulia); }
-    .cat-chip[data-cat="curso"] .dot { background: var(--c-curso); }
+    .cat-chip[data-cat="palestra"] .dot { background: var(--c-palestra); }
+    .cat-chip[data-cat="oficina"] .dot { background: var(--c-oficina); }
+    .cat-chip[data-cat="curso-campo"] .dot { background: var(--c-curso-campo); }
+    .cat-chip[data-cat="curso-hibrido"] .dot { background: var(--c-curso-hibrido); }
+    .cat-chip[data-cat="curso-presencial"] .dot { background: var(--c-curso-presencial); }
+    .cat-chip[data-cat="curso-online"] .dot { background: var(--c-curso-online); }
+    .cat-chip[data-cat="verbete"] .dot { background: var(--c-verbete); }
+    .cat-chip[data-cat="artigo"] .dot { background: var(--c-artigo); }
     .cat-chip[data-cat="simposio"] .dot { background: var(--c-simposio); }
+    .cat-chip[data-cat="forum"] .dot { background: var(--c-forum); }
+    .cat-chip[data-cat="dinamica"] .dot { background: var(--c-dinamica); }
+    .cat-chip[data-cat="encontro"] .dot { background: var(--c-encontro); }
     .cat-chip .count {
       font-family: var(--mono);
       font-size: 11px;
@@ -228,10 +244,18 @@
       border-left-color: var(--ink);
     }
     .agenda-row[hidden] { display: none; }
-    .agenda-row[data-cat="campo"]    { border-left-color: var(--c-campo); }
-    .agenda-row[data-cat="tertulia"] { border-left-color: var(--c-tertulia); }
-    .agenda-row[data-cat="curso"]    { border-left-color: var(--c-curso); }
+    .agenda-row[data-cat="palestra"] { border-left-color: var(--c-palestra); }
+    .agenda-row[data-cat="oficina"] { border-left-color: var(--c-oficina); }
+    .agenda-row[data-cat="curso-campo"] { border-left-color: var(--c-curso-campo); }
+    .agenda-row[data-cat="curso-hibrido"] { border-left-color: var(--c-curso-hibrido); }
+    .agenda-row[data-cat="curso-presencial"] { border-left-color: var(--c-curso-presencial); }
+    .agenda-row[data-cat="curso-online"] { border-left-color: var(--c-curso-online); }
+    .agenda-row[data-cat="verbete"] { border-left-color: var(--c-verbete); }
+    .agenda-row[data-cat="artigo"] { border-left-color: var(--c-artigo); }
     .agenda-row[data-cat="simposio"] { border-left-color: var(--c-simposio); }
+    .agenda-row[data-cat="forum"] { border-left-color: var(--c-forum); }
+    .agenda-row[data-cat="dinamica"] { border-left-color: var(--c-dinamica); }
+    .agenda-row[data-cat="encontro"] { border-left-color: var(--c-encontro); }
 
     .agenda-row__date {
       display: flex;
@@ -270,13 +294,15 @@
       border: 1px solid;
       font-weight: 500;
     }
-    .agenda-tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; }
-    .agenda-tag.campo    { color: var(--orange-2); border-color: var(--orange-soft2); background: rgba(240,160,48,0.08); }
-    .agenda-tag.campo::before { background: var(--c-campo); }
-    .agenda-tag.tertulia { color: var(--teal); border-color: var(--teal-soft2); background: rgba(31,135,168,0.08); }
-    .agenda-tag.tertulia::before { background: var(--c-tertulia); }
-    .agenda-tag.curso    { color: var(--white); border-color: var(--teal-2); background: var(--teal-2); }
-    .agenda-tag.curso::before { background: var(--orange); }
+    .agenda-tag::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+    .agenda-tag { color: var(--teal); border-color: var(--teal-soft2); background: rgba(31,135,168,0.08); }
+    .agenda-tag.oficina,
+    .agenda-tag.dinamica,
+    .agenda-tag.verbete { color: var(--orange-2); border-color: var(--orange-soft2); background: rgba(240,160,48,0.08); }
+    .agenda-tag.curso-campo,
+    .agenda-tag.curso-hibrido,
+    .agenda-tag.curso-presencial,
+    .agenda-tag.curso-online { color: var(--white); border-color: var(--teal-2); background: var(--teal-2); }
     .agenda-tag.simposio { color: var(--ink); border-color: var(--gold-soft2); background: var(--gold-soft); }
     .agenda-tag.simposio::before { background: var(--c-simposio); }
 
@@ -566,10 +592,18 @@
             <span class="controls-label">Categoria</span>
             <div class="cat-chips" id="catChips" role="group" aria-label="Filtrar por categoria">
               <button class="cat-chip on" data-cat="all"><span class="dot"></span>Tudo <span class="count">0</span></button>
-              <button class="cat-chip" data-cat="campo"><span class="dot"></span>Campos <span class="count">0</span></button>
-              <button class="cat-chip" data-cat="tertulia"><span class="dot"></span>Tertúlias <span class="count">0</span></button>
-              <button class="cat-chip" data-cat="curso"><span class="dot"></span>Cursos &amp; imersões <span class="count">0</span></button>
+              <button class="cat-chip" data-cat="palestra"><span class="dot"></span>Palestras <span class="count">0</span></button>
+              <button class="cat-chip" data-cat="oficina"><span class="dot"></span>Oficinas <span class="count">0</span></button>
+              <button class="cat-chip" data-cat="curso-campo"><span class="dot"></span>Campo <span class="count">0</span></button>
+              <button class="cat-chip" data-cat="curso-hibrido"><span class="dot"></span>Híbrido <span class="count">0</span></button>
+              <button class="cat-chip" data-cat="curso-presencial"><span class="dot"></span>Presencial <span class="count">0</span></button>
+              <button class="cat-chip" data-cat="curso-online"><span class="dot"></span>Online <span class="count">0</span></button>
+              <button class="cat-chip" data-cat="verbete"><span class="dot"></span>Verbetes <span class="count">0</span></button>
+              <button class="cat-chip" data-cat="artigo"><span class="dot"></span>Artigos <span class="count">0</span></button>
               <button class="cat-chip" data-cat="simposio"><span class="dot"></span>Simpósios <span class="count">0</span></button>
+              <button class="cat-chip" data-cat="forum"><span class="dot"></span>Fóruns <span class="count">0</span></button>
+              <button class="cat-chip" data-cat="dinamica"><span class="dot"></span>Dinâmicas <span class="count">0</span></button>
+              <button class="cat-chip" data-cat="encontro"><span class="dot"></span>Encontros <span class="count">0</span></button>
             </div>
           </div>
 
@@ -608,266 +642,16 @@
       <div class="wrap" id="agenda">
 
         <!-- CMS AGENDA EVENTS START -->
-        <!-- ============ JANEIRO 2026 ============ -->
-        <div class="month-block is-past" data-year="2026" data-month="jan" id="m-jan">
-          <div class="month-head">
-            <h2>Janeiro</h2><span class="yr">2026</span>
-            <span class="mcount"><b>0</b> atividades</span>
-          </div>
-          <a class="agenda-row is-past" data-cat="campo" data-month="jan" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>15</strong><span>QUA</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
-              <h3>TEST Campo Paracirúrgico Público — Edição 402</h3>
-              <p>Primeiro Campo aberto do ano. Acolhimento, centramento e roda de relatos.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório A</span>
-              <span><span class="ico">◆</span> 19h30 — 22h00</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-          <a class="agenda-row is-past" data-cat="tertulia" data-month="jan" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>23</strong><span>SEX</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag tertulia">Tertúlia · Online</span>
-              <h3>TEST Abertura do ciclo 2026 — o que é paracirurgia?</h3>
-              <p>Tertúlia inaugural com panorama do que a Ectolab investiga e como participar.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Online · Zoom + YouTube</span>
-              <span><span class="ico">◆</span> 20h00 — 21h30</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-          <a class="agenda-row is-past" data-cat="campo" data-month="jan" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>29</strong><span>QUA</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
-              <h3>TEST Campo Paracirúrgico Público — Edição 403</h3>
-              <p>Segundo Campo quinzenal do mês, aberto ao público sem inscrição prévia.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório A</span>
-              <span><span class="ico">◆</span> 19h30 — 22h00</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-        </div>
-
-        <!-- ============ FEVEREIRO 2026 ============ -->
-        <div class="month-block is-past" data-year="2026" data-month="fev" id="m-fev">
-          <div class="month-head">
-            <h2>Fevereiro</h2><span class="yr">2026</span>
-            <span class="mcount"><b>0</b> atividades</span>
-          </div>
-          <a class="agenda-row is-past" data-cat="campo" data-month="fev" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>12</strong><span>QUA</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
-              <h3>Campo Paracirúrgico Público — Edição 404</h3>
-              <p>Campo aberto com a equipe titular. Observação direta do trabalho de campo.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório A</span>
-              <span><span class="ico">◆</span> 19h30 — 22h00</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-          <a class="agenda-row is-past" data-cat="curso" data-month="fev" href="/pages/cursos.html">
-            <div class="agenda-row__date"><strong>20</strong><span>SEX</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag curso">Curso · DIP</span>
-              <h3>DIP — Dinâmica Interassistencial da Paracirurgia · Turma 2026.1</h3>
-              <p>Quatro encontros para quem está começando. Vocabulário, bioenergia e relatos.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Online + presencial</span>
-              <span><span class="ico">◆</span> 8h · 4 encontros</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-          <a class="agenda-row is-past" data-cat="campo" data-month="fev" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>26</strong><span>QUA</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
-              <h3>Campo Paracirúrgico Público — Edição 405</h3>
-              <p>Encerramento do ciclo de fevereiro com roda de conversa estendida.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório A</span>
-              <span><span class="ico">◆</span> 19h30 — 22h00</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-        </div>
-
-        <!-- ============ MARÇO 2026 ============ -->
-        <div class="month-block is-past" data-year="2026" data-month="mar" id="m-mar">
-          <div class="month-head">
-            <h2>Março</h2><span class="yr">2026</span>
-            <span class="mcount"><b>0</b> atividades</span>
-          </div>
-          <a class="agenda-row is-past" data-cat="campo" data-month="mar" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>12</strong><span>QUA</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
-              <h3>Campo Paracirúrgico Público — Edição 406</h3>
-              <p>Campo quinzenal aberto. Recepção a quem chega pela primeira vez.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório A</span>
-              <span><span class="ico">◆</span> 19h30 — 22h00</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-          <a class="agenda-row is-past" data-cat="tertulia" data-month="mar" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>14</strong><span>SEX</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag tertulia">Tertúlia · Online</span>
-              <h3>O parácorpo: anatomia e função na paracirurgia</h3>
-              <p>Com Prof. R. Caldeira. Como descrevemos a anatomia sutil em pesquisa.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Online · Zoom + YouTube</span>
-              <span><span class="ico">◆</span> 20h00 — 21h30</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-          <a class="agenda-row is-past" data-cat="campo" data-month="mar" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>26</strong><span>QUA</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
-              <h3>Campo Paracirúrgico Público — Edição 407</h3>
-              <p>Segundo Campo do mês com foco em parapercepção dos observadores.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório A</span>
-              <span><span class="ico">◆</span> 19h30 — 22h00</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-        </div>
-
-        <!-- ============ ABRIL 2026 ============ -->
-        <div class="month-block is-past" data-year="2026" data-month="abr" id="m-abr">
-          <div class="month-head">
-            <h2>Abril</h2><span class="yr">2026</span>
-            <span class="mcount"><b>0</b> atividades</span>
-          </div>
-          <a class="agenda-row is-past" data-cat="campo" data-month="abr" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>09</strong><span>QUA</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
-              <h3>Campo Paracirúrgico Público — Edição 408</h3>
-              <p>Campo aberto. Equipe central conduz; observadores acompanham e registram.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório A</span>
-              <span><span class="ico">◆</span> 19h30 — 22h00</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-          <a class="agenda-row is-past" data-cat="tertulia" data-month="abr" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>18</strong><span>SEX</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag tertulia">Tertúlia · Online</span>
-              <h3>Bioenergética e parapercepção: fundamentos práticos</h3>
-              <p>Exercícios introdutórios de mobilização de energia e leitura do ambiente.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Online · Zoom + YouTube</span>
-              <span><span class="ico">◆</span> 20h00 — 21h30</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-          <a class="agenda-row is-past" data-cat="campo" data-month="abr" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>23</strong><span>QUA</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
-              <h3>Campo Paracirúrgico Público — Edição 409</h3>
-              <p>Campo quinzenal aberto ao público, sem inscrição prévia.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório A</span>
-              <span><span class="ico">◆</span> 19h30 — 22h00</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-        </div>
-
-        <!-- ============ MAIO 2026 ============ -->
-        <div class="month-block is-past" data-year="2026" data-month="mai" id="m-mai">
-          <div class="month-head">
-            <h2>Maio</h2><span class="yr">2026</span>
-            <span class="mcount"><b>0</b> atividades</span>
-          </div>
-          <a class="agenda-row is-past" data-cat="campo" data-month="mai" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>14</strong><span>QUA</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
-              <h3>Campo Paracirúrgico Público — Edição 410</h3>
-              <p>Campo aberto. Acolhimento a iniciantes e conversa com a equipe ao final.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório A</span>
-              <span><span class="ico">◆</span> 19h30 — 22h00</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-          <a class="agenda-row is-past" data-cat="curso" data-month="mai" href="/pages/cursos.html">
-            <div class="agenda-row__date"><strong>16</strong><span>SEX</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag curso">Imersão · IECTO</span>
-              <h3>IECTO — Imersão em Ectoplasmia · Turma 2026.1</h3>
-              <p>Sete dias dedicados ao ectoplasma — percepção, modulação e ética.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Sede Foz · Laboratório 03</span>
-              <span><span class="ico">◆</span> 7 dias · 56h</span>
-            </div>
-            <div class="agenda-row__status"><span class="price">R$ 2.240</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Inscrever-se" title="Inscrever-se">→</span>
-          </a>
-          <a class="agenda-row is-past" data-cat="campo" data-month="mai" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>28</strong><span>QUA</span></div>
-            <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
-              <h3>Campo Paracirúrgico Público — Edição 411</h3>
-              <p>Encerramento do ciclo de maio com roda de relatos ampliada.</p>
-            </div>
-            <div class="agenda-row__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório A</span>
-              <span><span class="ico">◆</span> 19h30 — 22h00</span>
-            </div>
-            <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
-            <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
-          </a>
-        </div>
-
         <!-- ============ JUNHO 2026 ============ -->
         <div class="month-block" data-year="2026" data-month="jun" id="m-jun">
           <div class="month-head">
             <h2>Junho</h2><span class="yr">2026</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row is-past" data-cat="campo" data-month="jun" href="/pages/atividades.html">
-            <div class="agenda-row__date"><strong>14</strong><span>SÁB</span></div>
+          <a class="agenda-row is-past" data-cat="dinamica" data-month="jun" href="/pages/atividades.html">
+            <div class="agenda-row__date"><strong>14</strong><span>DOM</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
+              <span class="agenda-tag dinamica">Campo · Gratuito</span>
               <h3>Campo Paracirúrgico Público — Edição 412</h3>
               <p>Campo aberto sem inscrição prévia. Recepção a quem chega pela primeira vez.</p>
             </div>
@@ -878,10 +662,10 @@
             <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state">Realizado</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="tertulia" data-month="jun" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="palestra" data-month="jun" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>22</strong><span>SEG</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag tertulia">Tertúlia · Online</span>
+              <span class="agenda-tag palestra">Tertúlia · Online</span>
               <h3>Ectoplasma e mediunidade brasileira: distinções e pontes</h3>
               <p>Com Dra. Lívia Ferraz. Onde a pesquisa ectoplásmica encontra a tradição mediúnica.</p>
             </div>
@@ -892,10 +676,10 @@
             <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state open">Inscrições abertas</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="campo" data-month="jun" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="dinamica" data-month="jun" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>28</strong><span>DOM</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
+              <span class="agenda-tag dinamica">Campo · Gratuito</span>
               <h3>Campo Paracirúrgico Público — Edição 413</h3>
               <p>Segundo Campo de junho. Observação direta do trabalho da equipe titular.</p>
             </div>
@@ -914,10 +698,10 @@
             <h2>Julho</h2><span class="yr">2026</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row" data-cat="curso" data-month="jul" href="/pages/curso-proep.html">
+          <a class="agenda-row" data-cat="curso-presencial" data-month="jul" href="/pages/curso-proep.html">
             <div class="agenda-row__date"><strong>05</strong><span>DOM</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag curso">Imersão · IECTO</span>
+              <span class="agenda-tag curso-presencial">Imersão · IECTO</span>
               <h3>IECTO — Imersão em Ectoplasmia · Turma 2026.2</h3>
               <p>Sete dias de imersão dedicados ao ectoplasma. Preparatório clássico para o PROEP.</p>
             </div>
@@ -928,10 +712,10 @@
             <div class="agenda-row__status"><span class="price">R$ 2.240</span><span class="state open">Inscrições abertas</span></div>
             <span class="agenda-row__arr" aria-label="Inscrever-se" title="Inscrever-se">→</span>
           </a>
-          <a class="agenda-row" data-cat="tertulia" data-month="jul" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="palestra" data-month="jul" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>11</strong><span>SÁB</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag tertulia">Tertúlia · Online</span>
+              <span class="agenda-tag palestra">Tertúlia · Online</span>
               <h3>O parácorpo: anatomia e função na paracirurgia</h3>
               <p>Com Prof. R. Caldeira. Repetição temática a pedido do público.</p>
             </div>
@@ -942,10 +726,10 @@
             <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state open">Inscrições abertas</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="curso" data-month="jul" href="/pages/cursos.html">
+          <a class="agenda-row" data-cat="curso-presencial" data-month="jul" href="/pages/cursos.html">
             <div class="agenda-row__date"><strong>22</strong><span>QUA</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag curso">Imersão · EPPI</span>
+              <span class="agenda-tag curso-presencial">Imersão · EPPI</span>
               <h3>EPPI — Ectoplasmia Projetiva Paracirúrgica Interassistencial</h3>
               <p>Imersão de 5 dias dedicada à projeção da consciência. Pré-requisito: DIP completo.</p>
             </div>
@@ -978,10 +762,10 @@
             <div class="agenda-row__status"><span class="price">R$ 480 · est. 240</span><span class="state open">Inscrições abertas</span></div>
             <span class="agenda-row__arr" aria-label="Inscrever-se" title="Inscrever-se">→</span>
           </a>
-          <a class="agenda-row" data-cat="campo" data-month="ago" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="dinamica" data-month="ago" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>12</strong><span>QUA</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
+              <span class="agenda-tag dinamica">Campo · Gratuito</span>
               <h3>Campo Paracirúrgico Público — Edição 415</h3>
               <p>Campo aberto retomando a agenda quinzenal após o simpósio.</p>
             </div>
@@ -992,10 +776,10 @@
             <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state open">Sem inscrição</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="tertulia" data-month="ago" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="palestra" data-month="ago" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>22</strong><span>SÁB</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag tertulia">Tertúlia · Online</span>
+              <span class="agenda-tag palestra">Tertúlia · Online</span>
               <h3>Ectoplasmia comparada: o que mudou em 23 anos de campo</h3>
               <p>Retrospectiva metodológica a partir do acervo de relatos da instituição.</p>
             </div>
@@ -1014,10 +798,10 @@
             <h2>Setembro</h2><span class="yr">2026</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row" data-cat="campo" data-month="set" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="dinamica" data-month="set" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>09</strong><span>QUA</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
+              <span class="agenda-tag dinamica">Campo · Gratuito</span>
               <h3>Campo Paracirúrgico Público — Edição 416</h3>
               <p>Campo aberto ao público. Acolhimento, trabalho de equipe e conversa final.</p>
             </div>
@@ -1028,10 +812,10 @@
             <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state open">Sem inscrição</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="tertulia" data-month="set" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="palestra" data-month="set" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>19</strong><span>SÁB</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag tertulia">Tertúlia · Online</span>
+              <span class="agenda-tag palestra">Tertúlia · Online</span>
               <h3>Síndrome ectoplásmica: reconhecer e acompanhar</h3>
               <p>Quadro de quem produz ectoplasma sem ter consciência da função.</p>
             </div>
@@ -1042,10 +826,10 @@
             <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state open">Inscrições abertas</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="campo" data-month="set" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="dinamica" data-month="set" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>23</strong><span>QUA</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
+              <span class="agenda-tag dinamica">Campo · Gratuito</span>
               <h3>Campo Paracirúrgico Público — Edição 417</h3>
               <p>Segundo Campo do mês, com foco na escuta dos observadores de primeira vez.</p>
             </div>
@@ -1064,10 +848,10 @@
             <h2>Outubro</h2><span class="yr">2026</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row" data-cat="curso" data-month="out" href="/pages/cursos.html">
+          <a class="agenda-row" data-cat="curso-presencial" data-month="out" href="/pages/cursos.html">
             <div class="agenda-row__date"><strong>03</strong><span>SÁB</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag curso">Curso · DIP</span>
+              <span class="agenda-tag curso-presencial">Curso · DIP</span>
               <h3>DIP — Dinâmica Interassistencial da Paracirurgia · Turma 2026.3</h3>
               <p>Última turma do ano do curso introdutório. Online ou presencial.</p>
             </div>
@@ -1078,10 +862,10 @@
             <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state open">Inscrições abertas</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="campo" data-month="out" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="dinamica" data-month="out" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>14</strong><span>QUA</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
+              <span class="agenda-tag dinamica">Campo · Gratuito</span>
               <h3>Campo Paracirúrgico Público — Edição 418</h3>
               <p>Campo aberto quinzenal. Observação direta do trabalho da equipe titular.</p>
             </div>
@@ -1092,10 +876,10 @@
             <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state open">Sem inscrição</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="tertulia" data-month="out" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="palestra" data-month="out" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>24</strong><span>SÁB</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag tertulia">Tertúlia · Online</span>
+              <span class="agenda-tag palestra">Tertúlia · Online</span>
               <h3>Recomposição pós-campo: cuidando do paracirurgião</h3>
               <p>Protocolo de recuperação bioenergética nas primeiras 72 horas após Campo extenso.</p>
             </div>
@@ -1114,10 +898,10 @@
             <h2>Novembro</h2><span class="yr">2026</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row" data-cat="campo" data-month="nov" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="dinamica" data-month="nov" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>11</strong><span>QUA</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
+              <span class="agenda-tag dinamica">Campo · Gratuito</span>
               <h3>Campo Paracirúrgico Público — Edição 419</h3>
               <p>Campo aberto ao público. Acolhimento e roda de relatos ao final.</p>
             </div>
@@ -1128,10 +912,10 @@
             <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state open">Sem inscrição</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="curso" data-month="nov" href="/pages/curso-proep.html">
+          <a class="agenda-row" data-cat="curso-presencial" data-month="nov" href="/pages/curso-proep.html">
             <div class="agenda-row__date"><strong>14</strong><span>SÁB</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag curso">Curso · PROEP</span>
+              <span class="agenda-tag curso-presencial">Curso · PROEP</span>
               <h3>PROEP — abertura de inscrições · Turma 2027</h3>
               <p>Formação avançada de 18 meses em 6 módulos. Forma o paracirurgião pesquisador.</p>
             </div>
@@ -1142,10 +926,10 @@
             <div class="agenda-row__status"><span class="price">R$ 320/mês</span><span class="state open">Inscrições abertas</span></div>
             <span class="agenda-row__arr" aria-label="Inscrever-se" title="Inscrever-se">→</span>
           </a>
-          <a class="agenda-row" data-cat="tertulia" data-month="nov" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="palestra" data-month="nov" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>21</strong><span>SÁB</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag tertulia">Tertúlia · Online</span>
+              <span class="agenda-tag palestra">Tertúlia · Online</span>
               <h3>Anais Ectolab: 23 anos de pesquisa de campo</h3>
               <p>Lançamento dos Anais 2003–2025 e leitura dos principais achados do período.</p>
             </div>
@@ -1164,10 +948,10 @@
             <h2>Dezembro</h2><span class="yr">2026</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row" data-cat="campo" data-month="dez" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="dinamica" data-month="dez" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>09</strong><span>QUA</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
+              <span class="agenda-tag dinamica">Campo · Gratuito</span>
               <h3>Campo Paracirúrgico Público — Edição 420 · encerramento</h3>
               <p>Último Campo público do ano, com balanço aberto do ciclo de 2026.</p>
             </div>
@@ -1178,10 +962,10 @@
             <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state open">Sem inscrição</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="tertulia" data-month="dez" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="palestra" data-month="dez" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>12</strong><span>SÁB</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag tertulia">Tertúlia · Híbrida</span>
+              <span class="agenda-tag palestra">Tertúlia · Híbrida</span>
               <h3>Tertúlia de encerramento + confraternização</h3>
               <p>Encerramento do ano com a comunidade. Online e presencial na sede.</p>
             </div>
@@ -1192,10 +976,10 @@
             <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state open">Inscrições abertas</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="curso" data-month="dez" href="/pages/cursos.html">
+          <a class="agenda-row" data-cat="curso-presencial" data-month="dez" href="/pages/cursos.html">
             <div class="agenda-row__date"><strong>19</strong><span>SÁB</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag curso">Imersão · Retiro</span>
+              <span class="agenda-tag curso-presencial">Imersão · Retiro</span>
               <h3>Retiro de fim de ano — recomposição e planejamento</h3>
               <p>Imersão opcional de 3 dias para voluntários e equipe. Descanso e calibragem.</p>
             </div>
@@ -1214,10 +998,10 @@
             <h2>Janeiro</h2><span class="yr">2027</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row" data-cat="campo" data-month="jan" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="dinamica" data-month="jan" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>13</strong><span>QUA</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
+              <span class="agenda-tag dinamica">Campo · Gratuito</span>
               <h3>Campo Paracirúrgico Público — Edição 421</h3>
               <p>Primeiro Campo aberto de 2027. Acolhimento a quem chega pela primeira vez.</p>
             </div>
@@ -1228,10 +1012,10 @@
             <div class="agenda-row__status"><span class="price free">Gratuito</span><span class="state open">Sem inscrição</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="tertulia" data-month="jan" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="palestra" data-month="jan" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>22</strong><span>SEX</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag tertulia">Tertúlia · Online</span>
+              <span class="agenda-tag palestra">Tertúlia · Online</span>
               <h3>Abertura do ciclo 2027 — o ano de pesquisa pela frente</h3>
               <p>Tertúlia inaugural com o panorama das linhas de investigação do ano.</p>
             </div>
@@ -1250,10 +1034,10 @@
             <h2>Fevereiro</h2><span class="yr">2027</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row" data-cat="curso" data-month="fev" href="/pages/curso-proep.html">
+          <a class="agenda-row" data-cat="curso-presencial" data-month="fev" href="/pages/curso-proep.html">
             <div class="agenda-row__date"><strong>06</strong><span>SÁB</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag curso">Curso · PROEP</span>
+              <span class="agenda-tag curso-presencial">Curso · PROEP</span>
               <h3>PROEP — início da Turma 2027</h3>
               <p>Formação avançada de 18 meses em 6 módulos. Forma o paracirurgião pesquisador.</p>
             </div>
@@ -1264,10 +1048,10 @@
             <div class="agenda-row__status"><span class="price">R$ 320/mês</span><span class="state open">Inscrições abertas</span></div>
             <span class="agenda-row__arr" aria-label="Inscrever-se" title="Inscrever-se">→</span>
           </a>
-          <a class="agenda-row" data-cat="campo" data-month="fev" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="dinamica" data-month="fev" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>10</strong><span>QUA</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
+              <span class="agenda-tag dinamica">Campo · Gratuito</span>
               <h3>Campo Paracirúrgico Público — Edição 423</h3>
               <p>Campo aberto quinzenal. Observação direta do trabalho da equipe titular.</p>
             </div>
@@ -1286,10 +1070,10 @@
             <h2>Março</h2><span class="yr">2027</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row" data-cat="curso" data-month="mar" href="/pages/cursos.html">
+          <a class="agenda-row" data-cat="curso-presencial" data-month="mar" href="/pages/cursos.html">
             <div class="agenda-row__date"><strong>06</strong><span>SÁB</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag curso">Imersão · IECTO</span>
+              <span class="agenda-tag curso-presencial">Imersão · IECTO</span>
               <h3>IECTO — Imersão em Ectoplasmia · Turma 2027.1</h3>
               <p>Sete dias dedicados ao ectoplasma — percepção, modulação e ética.</p>
             </div>
@@ -1300,10 +1084,10 @@
             <div class="agenda-row__status"><span class="price">R$ 2.240</span><span class="state open">Inscrições abertas</span></div>
             <span class="agenda-row__arr" aria-label="Inscrever-se" title="Inscrever-se">→</span>
           </a>
-          <a class="agenda-row" data-cat="campo" data-month="mar" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="dinamica" data-month="mar" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>17</strong><span>QUA</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag campo">Campo · Gratuito</span>
+              <span class="agenda-tag dinamica">Campo · Gratuito</span>
               <h3>Campo Paracirúrgico Público — Edição 425</h3>
               <p>Campo aberto ao público. Acolhimento, trabalho de equipe e conversa final.</p>
             </div>
@@ -1336,10 +1120,10 @@
             <div class="agenda-row__status"><span class="price">R$ 520 · est. 260</span><span class="state open">Chamada aberta</span></div>
             <span class="agenda-row__arr" aria-label="Inscrever-se" title="Inscrever-se">→</span>
           </a>
-          <a class="agenda-row" data-cat="tertulia" data-month="abr" href="/pages/atividades.html">
+          <a class="agenda-row" data-cat="palestra" data-month="abr" href="/pages/atividades.html">
             <div class="agenda-row__date"><strong>24</strong><span>SÁB</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag tertulia">Tertúlia · Online</span>
+              <span class="agenda-tag palestra">Tertúlia · Online</span>
               <h3>Novas fronteiras da ectoplasmia: o que vem pela frente</h3>
               <p>Desdobramentos de pesquisa apresentados logo após o simpósio internacional.</p>
             </div>
@@ -1406,7 +1190,7 @@
       });
 
       function recomputeCounts() {
-        const catCounts = { all: 0, campo: 0, tertulia: 0, curso: 0, simposio: 0 };
+        const catCounts = { all: 0 };
         const monthCounts = {};
         monthBlocks.forEach(b => {
           if (b.dataset.year !== state.year) return;

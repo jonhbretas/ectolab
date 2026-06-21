@@ -38,46 +38,47 @@ collections:
     label: Agenda
     files:
       - name: events
-        label: Eventos por mes
+        label: Eventos
         file: content/agenda/events.json
         fields:
-          - name: months
-            label: Meses com atividades
+          - name: events
+            label: Eventos
             widget: list
-            label_singular: Mes
-            summary: "{{year}} · {{monthLabel}}"
+            label_singular: Evento
+            summary: "{{date}} · {{title}}"
             collapsed: auto
             minimize_collapsed: false
-            hint: "Cadastre somente os meses que tiverem atividades. Meses sem eventos nao precisam existir e nao aparecem na pagina."
+            max: 200
+            hint: "Cadastro simplificado: informe titulo, tipo de evento, data e link. O site calcula automaticamente dia, dia da semana, mes e ano."
             fields:
-              - { name: year, label: Ano, widget: string }
-              - { name: month, label: Mes curto, widget: select, options: ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"] }
-              - { name: monthLabel, label: Mes, widget: string }
-              - name: events
-                label: Eventos deste mes
-                label_singular: Evento
-                widget: list
-                summary: "{{day}}/{{month}} · {{title}}"
-                collapsed: true
-                minimize_collapsed: false
-                max: 20
-                hint: "Adicione ate 20 eventos neste mes. Cada evento tem seu proprio link e texto de botao/link."
-                fields:
-                  - { name: title, label: Titulo, widget: string }
-                  - { name: date, label: Data, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
-                  - { name: day, label: Dia, widget: string }
-                  - { name: weekday, label: Dia da semana, widget: string }
-                  - { name: category, label: Categoria, widget: select, options: ["campo", "tertulia", "curso", "simposio"] }
-                  - { name: tag, label: Etiqueta, widget: string }
-                  - { name: description, label: Descricao, widget: text }
-                  - { name: location, label: Local, widget: string, required: false }
-                  - { name: time, label: Horario, widget: string, required: false }
-                  - { name: price, label: Preco, widget: string }
-                  - { name: free, label: Gratuito, widget: boolean, default: false }
-                  - { name: status, label: Status, widget: string }
-                  - { name: href, label: Link, widget: string, default: /pages/atividades.html }
-                  - { name: buttonLabel, label: Texto do botao/link, widget: string, default: Ver detalhes }
-                  - { name: featured, label: Destaque, widget: boolean, default: false }
-                  - { name: featuredStyle, label: Estilo do destaque, widget: select, required: false, options: ["default", "dark", "gold"] }
-                  - { name: featuredDate, label: Data no destaque, widget: string, required: false }
-                  - { name: featuredCategory, label: Categoria no destaque, widget: string, required: false }
+              - { name: title, label: Nome do evento, widget: string }
+              - name: category
+                label: Tipo de evento
+                widget: select
+                options:
+                  - { label: Palestra, value: palestra }
+                  - { label: Oficina, value: oficina }
+                  - { label: Curso de Campo, value: curso-campo }
+                  - { label: Curso Híbrido, value: curso-hibrido }
+                  - { label: Curso Presencial, value: curso-presencial }
+                  - { label: Curso Online, value: curso-online }
+                  - { label: Verbete, value: verbete }
+                  - { label: Artigo, value: artigo }
+                  - { label: Simpósio, value: simposio }
+                  - { label: Fórum, value: forum }
+                  - { label: Dinâmica, value: dinamica }
+                  - { label: Encontro, value: encontro }
+              - { name: date, label: Data, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+              - { name: href, label: Link, widget: string, default: /pages/atividades.html }
+              - { name: description, label: Descricao, widget: text, required: false }
+              - { name: location, label: Local, widget: string, required: false }
+              - { name: time, label: Horario, widget: string, required: false }
+              - { name: tag, label: Etiqueta exibida, widget: string, required: false, hint: "Opcional. Se ficar vazio, o site usa o tipo de evento." }
+              - { name: price, label: Preco, widget: string, required: false, default: "" }
+              - { name: free, label: Gratuito, widget: boolean, default: false, required: false }
+              - { name: status, label: Status, widget: string, required: false, default: Inscrições abertas }
+              - { name: buttonLabel, label: Texto do botao/link, widget: string, required: false, default: Ver detalhes }
+              - { name: featured, label: Destaque, widget: boolean, default: false, required: false }
+              - { name: featuredStyle, label: Estilo do destaque, widget: select, required: false, options: ["default", "dark", "gold"] }
+              - { name: featuredDate, label: Data no destaque, widget: string, required: false, hint: "Opcional. Se ficar vazio, o site formata a data automaticamente." }
+              - { name: featuredCategory, label: Categoria no destaque, widget: string, required: false }
