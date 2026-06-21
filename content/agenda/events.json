@@ -1,6 +1,26 @@
 {
   "events": [
     {
+      "model": "oficina",
+      "title": "OFICINA DE ECTOPLASMOLOGIA",
+      "category": "oficina",
+      "date": "2026-06-11",
+      "durationDays": null,
+      "href": "https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/",
+      "description": "Oficina presencial gratuita, sem pré-requisito.",
+      "location": "Avenida Rio Branco, 380, sala 602, centro, Florianópolis, SC.",
+      "time": "19h30 às 21h30",
+      "tag": "",
+      "price": "",
+      "free": true,
+      "status": "Realizado",
+      "buttonLabel": "Ver detalhes",
+      "featured": false,
+      "featuredStyle": "",
+      "featuredDate": "",
+      "featuredCategory": ""
+    },
+    {
       "title": "Campo Paracirúrgico Público — Edição 412",
       "date": "2026-06-14",
       "category": "dinamica",
