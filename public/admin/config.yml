@@ -131,6 +131,7 @@ collections:
                 options:
                   - { label: Em breve, value: Em breve }
                   - { label: Inscrições Abertas, value: Inscrições Abertas }
+                  - { label: Vagas preenchidas, value: Vagas preenchidas }
                   - { label: Realizado, value: Realizado }
               - { name: href, label: Link da pagina no site, widget: string, required: false, default: /pages/atividades.html, hint: "Pagina interna usada automaticamente pelos eventos deste modelo. Ex.: /pages/curso-proep.html, /pages/dinamica.html ou /pages/blog.html." }
               - { name: buttonLabel, label: Texto do botao/link padrao, widget: string, required: false, default: Ver detalhes }
@@ -207,6 +208,7 @@ collections:
                 options:
                   - { label: Em breve, value: Em breve }
                   - { label: Inscrições Abertas, value: Inscrições Abertas }
+                  - { label: Vagas preenchidas, value: Vagas preenchidas }
                   - { label: Realizado, value: Realizado }
               - { name: buttonLabel, label: Texto do botao/link, widget: string, required: false, default: Ver detalhes }
               - { name: featured, label: Destaque, widget: boolean, default: false, required: false }

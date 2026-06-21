@@ -366,6 +366,14 @@
       content: ""; width: 6px; height: 6px; border-radius: 50%;
       background: #59c98a; box-shadow: 0 0 0 3px rgba(89,201,138,0.2);
     }
+    .agenda-row__status .state.closed {
+      color: var(--blue);
+      display: inline-flex; align-items: center; gap: 6px;
+    }
+    .agenda-row__status .state.closed::before {
+      content: ""; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--blue); box-shadow: 0 0 0 3px rgba(45,72,88,0.14);
+    }
 
     .agenda-row__arr {
       font-size: 20px;

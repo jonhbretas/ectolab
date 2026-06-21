@@ -174,6 +174,15 @@ function normalizeStatus(value) {
   const status = String(value || '').trim().toLowerCase();
   if (!status) return 'Em breve';
   if (status.includes('realizado')) return 'Realizado';
+  if (
+    status.includes('vagas preenchidas') ||
+    status.includes('vaga preenchida') ||
+    status.includes('vagas fechadas') ||
+    status.includes('vaga fechada') ||
+    status.includes('esgotad') ||
+    status.includes('lotad') ||
+    status.includes('sem vagas')
+  ) return 'Vagas preenchidas';
   if (status.includes('breve') || status.includes('programado') || status.includes('disponivel') || status.includes('disponível') || status.includes('publicado')) return 'Em breve';
   if (status.includes('inscri') || status.includes('sem inscrição') || status.includes('sem inscricao') || status.includes('vaga') || status.includes('chamada')) return 'Inscrições Abertas';
 
@@ -318,7 +327,7 @@ ${featuredEnd}`;
 
 function renderRow(event) {
   const rowPast = isPast(event) ? ' is-past' : '';
-  const stateClass = event.status === 'Inscrições Abertas' ? 'state open' : 'state';
+  const stateClass = event.status === 'Inscrições Abertas' ? 'state open' : event.status === 'Vagas preenchidas' ? 'state closed' : 'state';
   const priceClass = event.free ? 'price free' : 'price';
   const buttonLabel = event.buttonLabel || 'Ver detalhes';
   const rowDate = formatRowDate(event);
