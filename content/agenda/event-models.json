@@ -3,6 +3,8 @@
     {
       "id": "dip",
       "label": "DIP - Dinâmica Interassistencial de Paracirurgia",
+      "acronym": "DIP",
+      "fullName": "Dinâmica Interassistencial da Paracirurgia",
       "title": "DIP - Dinâmica Interassistencial de Paracirurgia",
       "category": "dinamica",
       "tag": "DIP · Presencial",
@@ -14,13 +16,13 @@
       "status": "Inscrições Abertas",
       "href": "/pages/dinamica.html",
       "buttonLabel": "Inscrever-se",
-      "durationDays": 0,
-      "acronym": "DIP",
-      "fullName": "Dinâmica Interassistencial da Paracirurgia"
+      "durationDays": 0
     },
     {
       "id": "campo-paracirurgico",
       "label": "Campo Paracirúrgico",
+      "acronym": "CIP",
+      "fullName": "Campo Interassistencial Paracirúrgico",
       "title": "CIP - Campo Interassistencial Paracirúrgico",
       "category": "curso-campo",
       "tag": "Campo · Presencial",
@@ -32,13 +34,13 @@
       "status": "Inscrições Abertas",
       "href": "/pages/curso-campo.html",
       "buttonLabel": "Consultar próximas turmas",
-      "durationDays": 2,
-      "acronym": "CIP",
-      "fullName": "Campo Interassistencial Paracirúrgico"
+      "durationDays": 2
     },
     {
       "id": "curso-dip",
       "label": "Curso DIP",
+      "acronym": "DIP",
+      "fullName": "Dinâmica Interassistencial da Paracirurgia",
       "title": "DIP - Dinâmica Interassistencial da Paracirurgia",
       "category": "curso-presencial",
       "tag": "Curso · DIP",
@@ -50,32 +52,31 @@
       "status": "Inscrições Abertas",
       "href": "/pages/cursos.html",
       "buttonLabel": "Ver detalhes",
-      "durationDays": 0,
-      "acronym": "DIP",
-      "fullName": "Dinâmica Interassistencial da Paracirurgia"
+      "durationDays": 0
     },
     {
       "id": "proep",
       "label": "PROEP",
+      "acronym": "PROEP",
+      "fullName": "Programa de Estimulação Parapsíquica Ectoplásmica",
       "title": "PROEP - Programa de Estimulação Parapsíquica Ectoplásmica",
-      "category": "programa",
-      "tag": "Programa · PROEP",
+      "category": "curso-presencial",
+      "tag": "Programa· PROEP",
       "description": "Atividade conscienciológica teática e aprofundada, com foco na estimulação lúcida do parapsiquismo ectoplásmico.",
-      "location": "Foz do Iguaçu - PR · CEAEC",
+      "location": "Lab de Ectoplasmologia - CEAEC",
       "time": "Sexta, sábado e domingo",
       "price": "R$ 1.000",
       "free": false,
       "status": "Inscrições Abertas",
-      "students": "Turma reduzida",
       "href": "/pages/curso-proep.html",
       "buttonLabel": "Inscrever-se",
-      "durationDays": 2,
-      "acronym": "PROEP",
-      "fullName": "Programa de Estimulação Parapsíquica Ectoplásmica"
+      "durationDays": 2
     },
     {
       "id": "iecto-imersao",
       "label": "Imersão em Ectoplasmia / IECTO",
+      "acronym": "IECTO",
+      "fullName": "Imersão em Ectoplasmia",
       "title": "IECTO - Imersão em Ectoplasmia",
       "category": "curso-presencial",
       "tag": "Imersão · IECTO",
@@ -87,13 +88,13 @@
       "status": "Inscrições Abertas",
       "href": "/pages/curso-imersao.html",
       "buttonLabel": "Inscrever-se",
-      "durationDays": 6,
-      "acronym": "IECTO",
-      "fullName": "Imersão em Ectoplasmia"
+      "durationDays": 6
     },
     {
       "id": "eppi",
       "label": "EPPI",
+      "acronym": "EPPI",
+      "fullName": "Ectoplasmia Projetiva Paracirúrgica Interassistencial",
       "title": "EPPI - Ectoplasmia Projetiva Paracirúrgica Interassistencial",
       "category": "curso-campo",
       "tag": "Imersão · EPPI",
@@ -105,13 +106,13 @@
       "status": "Inscrições Abertas",
       "href": "/pages/curso-eppi.html",
       "buttonLabel": "Consultar próximas turmas",
-      "durationDays": 2,
-      "acronym": "EPPI",
-      "fullName": "Ectoplasmia Projetiva Paracirúrgica Interassistencial"
+      "durationDays": 2
     },
     {
       "id": "ectoplasmia-interassistencial",
       "label": "Ectoplasmia Interassistencial",
+      "acronym": "EI",
+      "fullName": "Ectoplasmia Interassistencial",
       "title": "EI - Ectoplasmia Interassistencial",
       "category": "curso-online",
       "tag": "Curso · Online",
@@ -123,13 +124,13 @@
       "status": "Em breve",
       "href": "/pages/curso-ectoplasmia-interassistencial.html",
       "buttonLabel": "Ver curso",
-      "durationDays": 0,
-      "acronym": "EI",
-      "fullName": "Ectoplasmia Interassistencial"
+      "durationDays": 0
     },
     {
       "id": "ectoplasmia-protetiva",
       "label": "Ectoplasmia Protetiva",
+      "acronym": "EP",
+      "fullName": "Ectoplasmia Protetiva",
       "title": "EP - Ectoplasmia Protetiva",
       "category": "curso-presencial",
       "tag": "Curso · Presencial",
@@ -141,13 +142,13 @@
       "status": "Inscrições Abertas",
       "href": "/pages/curso-ectoplasmia-protetiva.html",
       "buttonLabel": "Inscrever-se",
-      "durationDays": 1,
-      "acronym": "EP",
-      "fullName": "Ectoplasmia Protetiva"
+      "durationDays": 1
     },
     {
       "id": "palestra-tertulia",
       "label": "Palestra / Tertúlia",
+      "acronym": "TERT",
+      "fullName": "Tertúlia Ectolab",
       "title": "TERT - Tertúlia Ectolab",
       "category": "palestra",
       "tag": "Palestra · Online",
@@ -159,13 +160,13 @@
       "status": "Inscrições Abertas",
       "href": "/pages/materiais.html",
       "buttonLabel": "Ver detalhes",
-      "durationDays": 0,
-      "acronym": "TERT",
-      "fullName": "Tertúlia Ectolab"
+      "durationDays": 0
     },
     {
       "id": "simposio",
       "label": "Simpósio Ectolab",
+      "acronym": "SIMP",
+      "fullName": "Simpósio Ectolab",
       "title": "SIMP - Simpósio Ectolab",
       "category": "simposio",
       "tag": "Simpósio · Internacional",
@@ -177,13 +178,13 @@
       "status": "Inscrições Abertas",
       "href": "/pages/atividades.html",
       "buttonLabel": "Inscrever-se",
-      "durationDays": 2,
-      "acronym": "SIMP",
-      "fullName": "Simpósio Ectolab"
+      "durationDays": 2
     },
     {
       "id": "oficina",
       "label": "Oficina",
+      "acronym": "OFIC",
+      "fullName": "Oficina Ectolab",
       "title": "OFIC - Oficina Ectolab",
       "category": "oficina",
       "tag": "Oficina",
@@ -195,13 +196,13 @@
       "status": "Inscrições Abertas",
       "href": "/pages/cursos.html",
       "buttonLabel": "Ver detalhes",
-      "durationDays": 0,
-      "acronym": "OFIC",
-      "fullName": "Oficina Ectolab"
+      "durationDays": 0
     },
     {
       "id": "verbete",
       "label": "Verbete",
+      "acronym": "VERB",
+      "fullName": "Verbete",
       "title": "VERB - Verbete",
       "category": "verbete",
       "tag": "Verbete",
@@ -213,13 +214,13 @@
       "status": "Em breve",
       "href": "/pages/materiais.html",
       "buttonLabel": "Ver detalhes",
-      "durationDays": 0,
-      "acronym": "VERB",
-      "fullName": "Verbete"
+      "durationDays": 0
     },
     {
       "id": "artigo",
       "label": "Artigo",
+      "acronym": "ART",
+      "fullName": "Artigo Ectolab",
       "title": "ART - Artigo Ectolab",
       "category": "artigo",
       "tag": "Artigo",
@@ -231,13 +232,13 @@
       "status": "Em breve",
       "href": "/pages/blog.html",
       "buttonLabel": "Ler artigo",
-      "durationDays": 0,
-      "acronym": "ART",
-      "fullName": "Artigo Ectolab"
+      "durationDays": 0
     },
     {
       "id": "forum",
       "label": "Fórum",
+      "acronym": "FORUM",
+      "fullName": "Fórum Ectolab",
       "title": "FORUM - Fórum Ectolab",
       "category": "forum",
       "tag": "Fórum",
@@ -249,13 +250,13 @@
       "status": "Inscrições Abertas",
       "href": "/pages/curso.html?id=forum",
       "buttonLabel": "Ver detalhes",
-      "durationDays": 0,
-      "acronym": "FORUM",
-      "fullName": "Fórum Ectolab"
+      "durationDays": 0
     },
     {
       "id": "encontro",
       "label": "Encontro",
+      "acronym": "ENC",
+      "fullName": "Encontro Ectolab",
       "title": "ENC - Encontro Ectolab",
       "category": "encontro",
       "tag": "Encontro",
@@ -267,9 +268,7 @@
       "status": "Em breve",
       "href": "/pages/atividades.html",
       "buttonLabel": "Ver detalhes",
-      "durationDays": 0,
-      "acronym": "ENC",
-      "fullName": "Encontro Ectolab"
+      "durationDays": 0
     }
   ]
 }
