@@ -11,15 +11,17 @@
       "time": "19h00 - 22h00",
       "price": "Consultar",
       "free": false,
-      "status": "Inscrições abertas",
+      "status": "Inscrições Abertas",
       "href": "/pages/dinamica.html",
       "buttonLabel": "Inscrever-se",
-      "durationDays": 0
+      "durationDays": 0,
+      "acronym": "DIP",
+      "fullName": "Dinâmica Interassistencial da Paracirurgia"
     },
     {
       "id": "campo-paracirurgico",
       "label": "Campo Paracirúrgico",
-      "title": "Campo Interassistencial Paracirúrgico",
+      "title": "CIP - Campo Interassistencial Paracirúrgico",
       "category": "curso-campo",
       "tag": "Campo · Presencial",
       "description": "Imersão dedicada ao reequilíbrio bioenergético e ao desenvolvimento da ectoplasmia interassistencial.",
@@ -27,10 +29,12 @@
       "time": "Sexta, sábado e domingo",
       "price": "Consultar",
       "free": false,
-      "status": "Inscrições abertas",
+      "status": "Inscrições Abertas",
       "href": "/pages/curso-campo.html",
       "buttonLabel": "Consultar próximas turmas",
-      "durationDays": 2
+      "durationDays": 2,
+      "acronym": "CIP",
+      "fullName": "Campo Interassistencial Paracirúrgico"
     },
     {
       "id": "curso-dip",
@@ -43,10 +47,12 @@
       "time": "4 encontros",
       "price": "Gratuito",
       "free": true,
-      "status": "Inscrições abertas",
+      "status": "Inscrições Abertas",
       "href": "/pages/cursos.html",
       "buttonLabel": "Ver detalhes",
-      "durationDays": 0
+      "durationDays": 0,
+      "acronym": "DIP",
+      "fullName": "Dinâmica Interassistencial da Paracirurgia"
     },
     {
       "id": "proep",
@@ -59,10 +65,12 @@
       "time": "Sexta, sábado e domingo",
       "price": "R$ 1.000",
       "free": false,
-      "status": "Inscrições abertas",
+      "status": "Inscrições Abertas",
       "href": "/pages/curso-proep.html",
       "buttonLabel": "Inscrever-se",
-      "durationDays": 2
+      "durationDays": 2,
+      "acronym": "PROEP",
+      "fullName": "Programa de Estimulação Parapsíquica Ectoplásmica"
     },
     {
       "id": "iecto-imersao",
@@ -75,10 +83,12 @@
       "time": "7 dias",
       "price": "Consultar",
       "free": false,
-      "status": "Inscrições abertas",
+      "status": "Inscrições Abertas",
       "href": "/pages/curso-imersao.html",
       "buttonLabel": "Inscrever-se",
-      "durationDays": 6
+      "durationDays": 6,
+      "acronym": "IECTO",
+      "fullName": "Imersão em Ectoplasmia"
     },
     {
       "id": "eppi",
@@ -91,15 +101,17 @@
       "time": "Sexta, sábado e domingo",
       "price": "Consultar",
       "free": false,
-      "status": "Inscrições abertas",
+      "status": "Inscrições Abertas",
       "href": "/pages/curso-eppi.html",
       "buttonLabel": "Consultar próximas turmas",
-      "durationDays": 2
+      "durationDays": 2,
+      "acronym": "EPPI",
+      "fullName": "Ectoplasmia Projetiva Paracirúrgica Interassistencial"
     },
     {
       "id": "ectoplasmia-interassistencial",
       "label": "Ectoplasmia Interassistencial",
-      "title": "Ectoplasmia Interassistencial",
+      "title": "EI - Ectoplasmia Interassistencial",
       "category": "curso-online",
       "tag": "Curso · Online",
       "description": "Curso gravado sobre os fundamentos da assistência com ectoplasma, bioenergologia, paraterapêutica e pesquisa.",
@@ -107,15 +119,17 @@
       "time": "Acesso imediato",
       "price": "Consultar",
       "free": false,
-      "status": "Disponível",
+      "status": "Em breve",
       "href": "/pages/curso-ectoplasmia-interassistencial.html",
       "buttonLabel": "Ver curso",
-      "durationDays": 0
+      "durationDays": 0,
+      "acronym": "EI",
+      "fullName": "Ectoplasmia Interassistencial"
     },
     {
       "id": "ectoplasmia-protetiva",
       "label": "Ectoplasmia Protetiva",
-      "title": "Ectoplasmia Protetiva",
+      "title": "EP - Ectoplasmia Protetiva",
       "category": "curso-presencial",
       "tag": "Curso · Presencial",
       "description": "Curso para conhecer situações adversas ou traumáticas que um ectoplasta pode vivenciar e estudar medidas profiláticas.",
@@ -123,15 +137,17 @@
       "time": "Sábado e domingo",
       "price": "R$ 600",
       "free": false,
-      "status": "Inscrições abertas",
+      "status": "Inscrições Abertas",
       "href": "/pages/curso-ectoplasmia-protetiva.html",
       "buttonLabel": "Inscrever-se",
-      "durationDays": 1
+      "durationDays": 1,
+      "acronym": "EP",
+      "fullName": "Ectoplasmia Protetiva"
     },
     {
       "id": "palestra-tertulia",
       "label": "Palestra / Tertúlia",
-      "title": "Palestra Ectolab",
+      "title": "TERT - Tertúlia Ectolab",
       "category": "palestra",
       "tag": "Palestra · Online",
       "description": "Encontro aberto para estudo, debate e aprofundamento em ectoplasmia, paracirurgia e temas conscienciológicos.",
@@ -139,15 +155,17 @@
       "time": "20h00 - 21h30",
       "price": "Gratuito",
       "free": true,
-      "status": "Inscrições abertas",
-      "href": "/pages/atividades.html",
+      "status": "Inscrições Abertas",
+      "href": "/pages/materiais.html",
       "buttonLabel": "Ver detalhes",
-      "durationDays": 0
+      "durationDays": 0,
+      "acronym": "TERT",
+      "fullName": "Tertúlia Ectolab"
     },
     {
       "id": "simposio",
       "label": "Simpósio Ectolab",
-      "title": "Simpósio Ectolab",
+      "title": "SIMP - Simpósio Ectolab",
       "category": "simposio",
       "tag": "Simpósio · Internacional",
       "description": "Evento científico com palestras, debates e apresentação de pesquisas sobre ectoplasmia, paracirurgia e saúde integrativa.",
@@ -155,15 +173,17 @@
       "time": "3 dias",
       "price": "Consultar",
       "free": false,
-      "status": "Inscrições abertas",
+      "status": "Inscrições Abertas",
       "href": "/pages/atividades.html",
       "buttonLabel": "Inscrever-se",
-      "durationDays": 2
+      "durationDays": 2,
+      "acronym": "SIMP",
+      "fullName": "Simpósio Ectolab"
     },
     {
       "id": "oficina",
       "label": "Oficina",
-      "title": "Oficina Ectolab",
+      "title": "OFIC - Oficina Ectolab",
       "category": "oficina",
       "tag": "Oficina",
       "description": "Atividade prática orientada para desenvolvimento técnico, autopesquisa e aplicação de ferramentas bioenergéticas.",
@@ -171,15 +191,17 @@
       "time": "Consultar",
       "price": "Consultar",
       "free": false,
-      "status": "Inscrições abertas",
-      "href": "/pages/atividades.html",
+      "status": "Inscrições Abertas",
+      "href": "/pages/cursos.html",
       "buttonLabel": "Ver detalhes",
-      "durationDays": 0
+      "durationDays": 0,
+      "acronym": "OFIC",
+      "fullName": "Oficina Ectolab"
     },
     {
       "id": "verbete",
       "label": "Verbete",
-      "title": "Verbete",
+      "title": "VERB - Verbete",
       "category": "verbete",
       "tag": "Verbete",
       "description": "Atividade dedicada ao estudo, apresentação ou debate de verbetes relacionados à pesquisa conscienciológica.",
@@ -187,15 +209,17 @@
       "time": "Consultar",
       "price": "Gratuito",
       "free": true,
-      "status": "Programado",
+      "status": "Em breve",
       "href": "/pages/materiais.html",
       "buttonLabel": "Ver detalhes",
-      "durationDays": 0
+      "durationDays": 0,
+      "acronym": "VERB",
+      "fullName": "Verbete"
     },
     {
       "id": "artigo",
       "label": "Artigo",
-      "title": "Artigo Ectolab",
+      "title": "ART - Artigo Ectolab",
       "category": "artigo",
       "tag": "Artigo",
       "description": "Publicação de conteúdo técnico, artigo ou material de pesquisa da Ectolab.",
@@ -203,15 +227,17 @@
       "time": "Publicação online",
       "price": "Gratuito",
       "free": true,
-      "status": "Publicado",
+      "status": "Em breve",
       "href": "/pages/blog.html",
       "buttonLabel": "Ler artigo",
-      "durationDays": 0
+      "durationDays": 0,
+      "acronym": "ART",
+      "fullName": "Artigo Ectolab"
     },
     {
       "id": "forum",
       "label": "Fórum",
-      "title": "Fórum Ectolab",
+      "title": "FORUM - Fórum Ectolab",
       "category": "forum",
       "tag": "Fórum",
       "description": "Encontro para debate, troca de experiências e aprofundamento coletivo em temas de pesquisa da Ectolab.",
@@ -219,15 +245,17 @@
       "time": "Consultar",
       "price": "Consultar",
       "free": false,
-      "status": "Inscrições abertas",
-      "href": "/pages/atividades.html",
+      "status": "Inscrições Abertas",
+      "href": "/pages/curso.html?id=forum",
       "buttonLabel": "Ver detalhes",
-      "durationDays": 0
+      "durationDays": 0,
+      "acronym": "FORUM",
+      "fullName": "Fórum Ectolab"
     },
     {
       "id": "encontro",
       "label": "Encontro",
-      "title": "Encontro Ectolab",
+      "title": "ENC - Encontro Ectolab",
       "category": "encontro",
       "tag": "Encontro",
       "description": "Encontro da comunidade Ectolab para integração, estudo e alinhamento de atividades.",
@@ -235,10 +263,12 @@
       "time": "Consultar",
       "price": "Consultar",
       "free": false,
-      "status": "Programado",
+      "status": "Em breve",
       "href": "/pages/atividades.html",
       "buttonLabel": "Ver detalhes",
-      "durationDays": 0
+      "durationDays": 0,
+      "acronym": "ENC",
+      "fullName": "Encontro Ectolab"
     }
   ]
 }

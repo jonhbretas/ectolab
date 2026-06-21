@@ -55,8 +55,17 @@ function dateValue(event) {
   return new Date(`${event.date}T00:00:00Z`);
 }
 
+function todayUtc() {
+  const now = new Date();
+  return new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
+}
+
 function hasValue(value) {
   return value !== undefined && value !== null && value !== '';
+}
+
+function escapeRegExp(value) {
+  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
 }
 
 function readEventModels() {
@@ -161,15 +170,89 @@ function formatRowDate(event) {
   };
 }
 
+function normalizeStatus(value) {
+  const status = String(value || '').trim().toLowerCase();
+  if (!status) return 'Em breve';
+  if (status.includes('realizado')) return 'Realizado';
+  if (status.includes('breve') || status.includes('programado') || status.includes('disponivel') || status.includes('disponível') || status.includes('publicado')) return 'Em breve';
+  if (status.includes('inscri') || status.includes('sem inscrição') || status.includes('sem inscricao') || status.includes('vaga') || status.includes('chamada')) return 'Inscrições Abertas';
+
+  return 'Inscrições Abertas';
+}
+
+function statusForEvent(event) {
+  const range = eventDateRange(event);
+  if (range && range.end.date < todayUtc()) return 'Realizado';
+
+  return normalizeStatus(event.status);
+}
+
+function standardTitle(event) {
+  if (event.acronym && event.fullName) return `${event.acronym} - ${event.fullName}`;
+  return event.title || '';
+}
+
+function titleComplement(event, base) {
+  let complement = String(event.title || '').trim();
+  if (!complement || !base) return complement;
+
+  const acronym = String(event.acronym || '').trim();
+  const fullName = String(event.fullName || '').trim();
+  complement = complement
+    .replace(new RegExp(`^${escapeRegExp(base)}\\s*[·:–—-]?\\s*`, 'i'), '')
+    .trim();
+
+  if (acronym && fullName) {
+    complement = complement
+      .replace(new RegExp(`^${escapeRegExp(acronym)}\\s*[–—-]\\s*${escapeRegExp(fullName)}\\s*[·:–—-]?\\s*`, 'i'), '')
+      .replace(new RegExp(`^${escapeRegExp(acronym)}\\s*[–—-]\\s*`, 'i'), '')
+      .replace(new RegExp(`^${escapeRegExp(fullName)}\\s*[·:–—-]?\\s*`, 'i'), '')
+      .trim();
+  }
+
+  if (event.model === 'dip') {
+    complement = complement.replace(/^Campo Paracirúrgico Público\s*[–—-]\s*/i, '').trim();
+  }
+
+  if (event.model === 'palestra-tertulia') {
+    complement = complement
+      .replace(/^Tertúlia\s*[·:–—-]?\s*/i, '')
+      .replace(/^de\s+/i, '')
+      .trim();
+  }
+
+  if (event.model === 'simposio') {
+    complement = complement
+      .replace(/^([IVXLCDM]+)\s+Simpósio Ectolab\s*[–—-]\s*/i, '$1 - ')
+      .replace(/^([IVXLCDM]+)\s+Simpósio Ectolab\s*/i, '$1 ')
+      .trim();
+  }
+
+  return complement;
+}
+
+function displayTitle(event) {
+  const base = standardTitle(event);
+  const complement = titleComplement(event, base);
+
+  if (!base) return complement;
+  if (!complement || complement === base) return base;
+  if (complement.toLowerCase().startsWith(base.toLowerCase())) return complement;
+
+  return `${base} · ${complement}`;
+}
+
 function normalizeEvent(rawEvent, monthGroup = {}, models = new Map()) {
   const event = applyEventModel(rawEvent, models);
   const parts = dateParts(event.date) || {};
   const category = event.category || 'palestra';
   const price = event.price || (event.free ? 'Gratuito' : '');
   const duration = durationDays(event.durationDays);
+  const status = statusForEvent({ ...event, durationDays: duration });
 
   return {
     ...event,
+    title: displayTitle(event),
     year: parts.year || event.year || monthGroup.year,
     month: parts.month || event.month || monthGroup.month,
     monthLabel: parts.monthLabel || event.monthLabel || monthGroup.monthLabel,
@@ -183,7 +266,7 @@ function normalizeEvent(rawEvent, monthGroup = {}, models = new Map()) {
     time: event.time || '',
     price,
     free: Boolean(event.free || String(price).toLowerCase().includes('gratuito')),
-    status: event.status || 'Inscrições abertas',
+    status,
     href: event.href || '/pages/atividades.html',
     buttonLabel: event.buttonLabel || event.ctaLabel || 'Ver detalhes',
   };
@@ -235,7 +318,7 @@ ${featuredEnd}`;
 
 function renderRow(event) {
   const rowPast = isPast(event) ? ' is-past' : '';
-  const stateClass = isPast(event) ? 'state' : 'state open';
+  const stateClass = event.status === 'Inscrições Abertas' ? 'state open' : 'state';
   const priceClass = event.free ? 'price free' : 'price';
   const buttonLabel = event.buttonLabel || 'Ver detalhes';
   const rowDate = formatRowDate(event);

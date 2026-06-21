@@ -98,7 +98,9 @@ collections:
             fields:
               - { name: id, label: ID interno, widget: string, hint: "Use letras minusculas, numeros e hifen. Ex.: proep, dip, simposio." }
               - { name: label, label: Nome no CMS, widget: string }
-              - { name: title, label: Titulo padrao, widget: string }
+              - { name: acronym, label: Sigla, widget: string, required: false, hint: "Ex.: DIP, PROEP, EPPI. O site usa a sigla junto com o nome completo." }
+              - { name: fullName, label: Nome completo, widget: string, required: false, hint: "Ex.: Dinâmica Interassistencial da Paracirurgia." }
+              - { name: title, label: Titulo padrao, widget: string, required: false, hint: "Opcional. Se sigla e nome completo estiverem preenchidos, o site monta o titulo automaticamente." }
               - name: category
                 label: Tipo de evento padrao
                 widget: select
@@ -121,8 +123,16 @@ collections:
               - { name: time, label: Horario/duracao padrao, widget: string, required: false }
               - { name: price, label: Preco padrao, widget: string, required: false }
               - { name: free, label: Gratuito por padrao, widget: boolean, default: false, required: false }
-              - { name: status, label: Status padrao, widget: string, required: false, default: Inscrições abertas }
-              - { name: href, label: Link padrao, widget: string, required: false, default: /pages/atividades.html }
+              - name: status
+                label: Status padrao
+                widget: select
+                required: false
+                default: Em breve
+                options:
+                  - { label: Em breve, value: Em breve }
+                  - { label: Inscrições Abertas, value: Inscrições Abertas }
+                  - { label: Realizado, value: Realizado }
+              - { name: href, label: Link da pagina no site, widget: string, required: false, default: /pages/atividades.html, hint: "Pagina interna usada automaticamente pelos eventos deste modelo. Ex.: /pages/curso-proep.html, /pages/dinamica.html ou /pages/blog.html." }
               - { name: buttonLabel, label: Texto do botao/link padrao, widget: string, required: false, default: Ver detalhes }
               - { name: durationDays, label: Dias para frente padrao, widget: number, value_type: int, min: 0, required: false }
       - name: events
@@ -160,7 +170,7 @@ collections:
                   - { label: Artigo, value: artigo }
                   - { label: Fórum, value: forum }
                   - { label: Encontro, value: encontro }
-              - { name: title, label: Nome do evento, widget: string, required: false, hint: "Opcional quando um modelo foi escolhido. Preencha apenas para mudar o titulo daquela data/turma." }
+              - { name: title, label: Complemento do titulo, widget: string, required: false, hint: "Opcional. Com modelo selecionado, o site ja usa SIGLA - nome completo. Preencha aqui apenas complemento, como Turma 2027, Edicao 412 ou tema especifico." }
               - name: category
                 label: Tipo de evento
                 widget: select
@@ -181,14 +191,23 @@ collections:
                   - { label: Encontro, value: encontro }
               - { name: date, label: Data de inicio, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
               - { name: durationDays, label: Dias para frente, widget: number, value_type: int, min: 0, required: false, hint: "Opcional quando um modelo foi escolhido. Use 0 para evento de um dia. Ex.: inicio 01/01 + 2 dias termina em 03/01." }
-              - { name: href, label: Link, widget: string, default: /pages/atividades.html }
+              - { name: href, label: Link especifico deste evento, widget: string, required: false, hint: "Opcional. Deixe vazio para usar automaticamente o link da pagina definido no modelo." }
               - { name: description, label: Descricao, widget: text, required: false }
               - { name: location, label: Local, widget: string, required: false }
               - { name: time, label: Horario, widget: string, required: false }
               - { name: tag, label: Etiqueta exibida, widget: string, required: false, hint: "Opcional. Se ficar vazio, o site usa o tipo de evento." }
               - { name: price, label: Preco, widget: string, required: false, default: "" }
               - { name: free, label: Gratuito, widget: boolean, default: false, required: false }
-              - { name: status, label: Status, widget: string, required: false, default: Inscrições abertas }
+              - name: status
+                label: Status
+                widget: select
+                required: false
+                default: Em breve
+                hint: "Se a data final do evento ja passou, o site mostra Realizado automaticamente."
+                options:
+                  - { label: Em breve, value: Em breve }
+                  - { label: Inscrições Abertas, value: Inscrições Abertas }
+                  - { label: Realizado, value: Realizado }
               - { name: buttonLabel, label: Texto do botao/link, widget: string, required: false, default: Ver detalhes }
               - { name: featured, label: Destaque, widget: boolean, default: false, required: false }
               - { name: featuredStyle, label: Estilo do destaque, widget: select, required: false, options: ["default", "dark", "gold"] }
