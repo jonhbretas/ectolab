@@ -140,6 +140,30 @@
     })
     .join("");
 
+  // Mobile drawer nav (accordion)
+  const mobileNavHTML = navItems.map(n => {
+    if (n.dropdown) {
+      const id = `mnav-${n.id}`;
+      const groups = n.dropdown.map(d => `
+        <div class="mnav-group">
+          <span class="mnav-cat">${d.cat}</span>
+          ${d.links.map(l => `<a href="${l.href}" class="mnav-link"${l.target ? ` target="${l.target}" rel="noreferrer"` : ""}>${l.label}</a>`).join("")}
+        </div>`).join("");
+      return `
+        <div class="mnav-item has-sub">
+          <div class="mnav-row">
+            <a href="${n.href}" class="mnav-label">${n.label}</a>
+            <button class="mnav-expander" aria-expanded="false" data-target="${id}">▾</button>
+          </div>
+          <div class="mnav-sub" id="${id}">${groups}</div>
+        </div>`;
+    }
+    return `
+      <div class="mnav-item">
+        <a href="${n.href}" class="mnav-label"${n.target ? ` target="${n.target}" rel="noreferrer"` : ""}>${n.label}</a>
+      </div>`;
+  }).join("");
+
   const header = `
     <header class="site-header">
       <div class="wrap site-header__inner">
@@ -155,8 +179,32 @@
           <button data-lang="EN" class="${lang === "EN" ? "on" : ""}">EN</button>
           <button data-lang="ES" class="${lang === "ES" ? "on" : ""}">ES</button>
         </div>
+        <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+          <span class="nav-toggle__bar"></span>
+        </button>
       </div>
-    </header>`;
+    </header>
+    <div class="nav-overlay" id="navOverlay"></div>
+    <div class="nav-drawer" id="navDrawer" aria-hidden="true">
+      <div class="nav-drawer__header">
+        <a href="${P}index.html" class="brand">
+          <img src="${logoPath}" alt="Ectolab" class="brand-img" />
+        </a>
+        <button class="nav-drawer__close" id="navClose" aria-label="Fechar menu">✕</button>
+      </div>
+      <nav class="mnav">${mobileNavHTML}</nav>
+      <div class="nav-drawer__ctas">
+        <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange" style="width:100%;justify-content:center">Solicitar paracirurgia <span class="arrow">↗</span></a>
+        <a href="https://dip-ectolab.org.br/login" target="_blank" rel="noreferrer" class="btn btn-system" style="width:100%;justify-content:center">Acessar sistema <span class="arrow">↗</span></a>
+        <div class="lang-switch" role="group" aria-label="Idioma" style="justify-content:center;margin-top:4px">
+          <button data-lang="PT" class="${lang === "PT" ? "on" : ""}">PT</button>
+          <button data-lang="EN" class="${lang === "EN" ? "on" : ""}">EN</button>
+          <button data-lang="ES" class="${lang === "ES" ? "on" : ""}">ES</button>
+        </div>
+      </div>
+    </div>`;
 
   const footer = `
     <footer class="site-footer">
@@ -485,4 +533,61 @@
   });
   document.body.setAttribute("data-lang", lang);
   applyTranslations(lang);
+
+  // --- Mobile menu ---
+  const navToggleBtn = document.querySelector(".nav-toggle");
+  const navDrawerEl  = document.getElementById("navDrawer");
+  const navCloseBtn  = document.getElementById("navClose");
+  const navOverlayEl = document.getElementById("navOverlay");
+
+  function openMobileMenu() {
+    if (!navDrawerEl) return;
+    navDrawerEl.classList.add("is-open");
+    navDrawerEl.setAttribute("aria-hidden", "false");
+    if (navOverlayEl) navOverlayEl.classList.add("is-open");
+    if (navToggleBtn) navToggleBtn.setAttribute("aria-expanded", "true");
+    document.body.style.overflow = "hidden";
+  }
+  function closeMobileMenu() {
+    if (!navDrawerEl) return;
+    navDrawerEl.classList.remove("is-open");
+    navDrawerEl.setAttribute("aria-hidden", "true");
+    if (navOverlayEl) navOverlayEl.classList.remove("is-open");
+    if (navToggleBtn) navToggleBtn.setAttribute("aria-expanded", "false");
+    document.body.style.overflow = "";
+  }
+
+  if (navToggleBtn) {
+    navToggleBtn.addEventListener("click", () => {
+      navDrawerEl && navDrawerEl.classList.contains("is-open") ? closeMobileMenu() : openMobileMenu();
+    });
+  }
+  if (navCloseBtn)  navCloseBtn.addEventListener("click", closeMobileMenu);
+  if (navOverlayEl) navOverlayEl.addEventListener("click", closeMobileMenu);
+
+  // Close drawer when a link inside it is clicked
+  if (navDrawerEl) {
+    navDrawerEl.querySelectorAll("a[href]").forEach(a => {
+      a.addEventListener("click", closeMobileMenu);
+    });
+  }
+
+  // Accordion for mobile nav sub-menus
+  document.querySelectorAll(".mnav-expander").forEach(btn => {
+    btn.addEventListener("click", () => {
+      const sub = document.getElementById(btn.getAttribute("data-target"));
+      if (!sub) return;
+      const expanded = btn.getAttribute("aria-expanded") === "true";
+      btn.setAttribute("aria-expanded", String(!expanded));
+      sub.classList.toggle("is-open", !expanded);
+    });
+  });
+
+  // Sync lang-switch in drawer with the main one
+  document.querySelectorAll(".nav-drawer .lang-switch button").forEach(b => {
+    b.addEventListener("click", () => {
+      const v = b.getAttribute("data-lang");
+      document.querySelectorAll(".lang-switch button").forEach(x => x.classList.toggle("on", x.getAttribute("data-lang") === v));
+    });
+  });
 })();

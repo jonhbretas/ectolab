@@ -151,6 +151,9 @@
 @media (max-width: 900px) {
   .quadrant { grid-template-columns: 1fr 1fr; }
 }
+@media (max-width: 480px) {
+  .quadrant { grid-template-columns: 1fr; }
+}
 
 /* ============================================================
    HERO — OUSADA
@@ -224,8 +227,13 @@
 
 @media (max-width: 900px) {
   .hero--conservadora .hero-grid { grid-template-columns: 1fr; }
+  .hero-card { position: static; }
   .ousada-row2 { grid-template-columns: 1fr; gap: 32px; }
   .ousada-strip { grid-template-columns: 1fr 1fr; }
+}
+@media (max-width: 480px) {
+  .ousada-strip { grid-template-columns: 1fr; }
+  .ousada-display { font-size: clamp(56px, 18vw, 120px); }
 }
 
 /* ============================================================
@@ -578,7 +586,8 @@
   padding-top: 12px;
   border-top: 1px dashed var(--line);
 }
-@media (max-width: 900px) { .cursos-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .cursos-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .cursos-grid { grid-template-columns: 1fr; } }
 
 /* ============================================================
    AGENDA (eventos + blog list)
@@ -668,7 +677,8 @@
 .gloss__t { font-family: var(--display); font-size: 28px; font-weight: 700; margin: 6px 0 4px; letter-spacing: -0.025em; color: var(--blue); }
 .gloss__d { font-size: 14.5px; color: var(--ink-2); line-height: 1.55; flex: 1; }
 .gloss__aka { font-size: 11px; color: var(--ink-3); letter-spacing: 0.04em; padding-top: 12px; border-top: 1px dashed var(--line); }
-@media (max-width: 900px) { .glossario-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .glossario-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .glossario-grid { grid-template-columns: 1fr; } }
 
 /* ============================================================
    FAQ
@@ -700,7 +710,7 @@
   padding: 24px 0;
   cursor: pointer;
   font-family: var(--display);
-  font-size: 21px;
+  font-size: clamp(16px, 2vw, 21px);
   font-weight: 600;
   color: var(--ink);
   letter-spacing: -0.02em;
@@ -722,6 +732,10 @@
   color: var(--ink-2);
   line-height: 1.65;
   max-width: 720px;
+}
+@media (max-width: 540px) {
+  .faq-a { padding-left: 20px; }
+  .faq-q { gap: 12px; padding: 18px 0; }
 }
 
 /* ============================================================
@@ -769,7 +783,8 @@
   letter-spacing: -0.015em;
   color: var(--ink);
 }
-@media (max-width: 900px) { .depo-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .depo-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .depo-grid { grid-template-columns: 1fr; } }
 
 /* ============================================================
    NEWSLETTER
@@ -906,7 +921,7 @@
   position: fixed;
   right: 20px;
   bottom: 20px;
-  width: 320px;
+  width: min(320px, calc(100vw - 32px));
   background: var(--white);
   border: 1px solid var(--ink);
   border-radius: var(--r-md);
