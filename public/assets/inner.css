@@ -192,9 +192,15 @@
 }
 .curso-row__arr { font-size: 22px; color: var(--ink-3); text-align: right; }
 
+@media (max-width: 1024px) {
+  .curso-row { grid-template-columns: 80px 1fr 140px 56px; gap: 20px; }
+  .curso-row__meta { display: none; }
+}
 @media (max-width: 900px) {
-  .curso-row { grid-template-columns: 1fr; gap: 12px; padding: 24px 0; }
+  .curso-row { grid-template-columns: 1fr; gap: 8px; padding: 24px 0; }
   .curso-row:hover { padding-left: 0; }
+  .curso-row__meta { display: flex; }
+  .curso-row__arr { text-align: left; }
 }
 
 /* Curso detail */
@@ -283,7 +289,10 @@
   gap: 48px;
   align-items: start;
 }
-@media (max-width: 900px) { .curso-detail-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) {
+  .curso-detail-grid { grid-template-columns: 1fr; }
+  .curso-aside { position: static; }
+}
 
 /* ============================================================
    ATIVIDADES / EVENTOS
@@ -399,7 +408,8 @@
 .blog-card__viz .specimen { position: relative; z-index: 1; background: var(--paper); padding: 6px 10px; border: 1px solid var(--line); }
 .blog-card h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; margin: 0; line-height: 1.18; letter-spacing: -0.005em; }
 .blog-card__meta { display: flex; justify-content: space-between; font-family: var(--mono); font-size: 11px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--ink-3); margin-top: auto; }
-@media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .blog-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .blog-grid { grid-template-columns: 1fr; } }
 
 .blog-filters {
   display: flex;
@@ -628,6 +638,76 @@
 .pessoa .specimen { color: var(--blue); }
 .pessoa p { font-size: 13.5px; color: var(--ink-2); margin: 0; line-height: 1.55; }
 @media (max-width: 900px) { .equipe-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 480px) { .equipe-grid { grid-template-columns: 1fr 1fr; } }
+
+/* ============================================================
+   AGENDA — Timeline page
+   ============================================================ */
+.agenda-sep {
+  display: flex;
+  align-items: baseline;
+  gap: 16px;
+  padding: 48px 0 0;
+  border-top: 2px solid var(--ink);
+  margin-bottom: 0;
+}
+.agenda-sep--first {
+  padding-top: 0;
+  border-top: none;
+}
+.agenda-sep__label {
+  font-family: var(--display);
+  font-size: 20px;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+}
+.agenda-sep__count {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.agenda-date {
+  display: flex;
+  flex-direction: column;
+  padding-top: 4px;
+}
+.agenda-date__dia {
+  font-family: var(--serif);
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: -0.02em;
+  color: var(--blue);
+  line-height: 1;
+}
+.agenda-date__mes {
+  font-family: var(--mono);
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-top: 6px;
+}
+.agenda-event-foot {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  margin-top: 16px;
+  flex-wrap: wrap;
+}
+.agenda-price {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--blue);
+  letter-spacing: 0.04em;
+}
+@media (max-width: 700px) {
+  .agenda-date__dia { font-size: 36px; }
+  .timeline-event { grid-template-columns: 80px 1fr; gap: 24px; }
+}
 
 /* ============================================================
    HISTÓRIA — Timeline
@@ -765,7 +845,8 @@
 .parafato h3 { font-family: var(--serif); font-size: 22px; font-weight: 500; margin: 0; letter-spacing: -0.005em; line-height: 1.2; }
 .parafato p { font-size: 14.5px; color: var(--ink-2); line-height: 1.6; margin: 0; flex: 1; }
 .parafato__foot { font-family: var(--mono); font-size: 11px; letter-spacing: 0.1em; color: var(--ink-3); padding-top: 14px; border-top: 1px dashed var(--line); }
-@media (max-width: 900px) { .parafato-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) { .parafato-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 540px) { .parafato-grid { grid-template-columns: 1fr; } }
 
 /* ============================================================
    CONSCIENCIOLOGIA — Diagram
@@ -815,3 +896,52 @@
 }
 .cta-band h2 { font-family: var(--serif); font-size: clamp(28px, 3vw, 44px); font-weight: 400; letter-spacing: -0.012em; color: var(--ink); margin: 0; max-width: 700px; }
 @media (max-width: 900px) { .cta-band__inner { flex-direction: column; align-items: flex-start; } }
+
+/* ============================================================
+   Melhorias de responsividade — tablet e mobile
+   ============================================================ */
+
+/* Blog featured: 1-col em mobile */
+@media (max-width: 540px) {
+  .blog-featured__viz { aspect-ratio: 16/9; }
+  .blog-featured__body h2 { font-size: clamp(26px, 6vw, 38px); }
+}
+
+/* Post CTA card — padding menor */
+@media (max-width: 480px) {
+  .post-cta-card { padding: 24px; gap: 20px; }
+}
+
+/* Agenda page — evento menor em mobile */
+@media (max-width: 540px) {
+  .evento { padding: 20px; }
+  .agenda-sep { padding: 32px 0 0; }
+}
+
+/* Trail step: leitura mais fácil no mobile */
+@media (max-width: 540px) {
+  .trail-step__body p { font-size: 15px; }
+}
+
+/* Curso hero: sigla menor em mobile */
+@media (max-width: 540px) {
+  .curso-hero__sigla { font-size: clamp(60px, 18vw, 120px); }
+  .curso-hero__grid { gap: 32px; }
+}
+
+/* Conscienciologia diagram */
+@media (max-width: 540px) {
+  .scia-diagram { padding: 20px; gap: 16px; }
+}
+
+/* Contato form no mobile */
+@media (max-width: 540px) {
+  .contato-grid { gap: 32px; }
+  .contato-info { padding: 20px; }
+}
+
+/* Meta grid dentro do page-hero em mobile */
+@media (max-width: 540px) {
+  .meta-grid { grid-template-columns: 1fr; }
+  .meta-grid dd { font-size: 18px; }
+}

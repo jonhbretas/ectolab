@@ -515,8 +515,8 @@ function EventosBlog() {
             <ul className="agenda agenda--blog">
               {posts.map((p, i) => (
                 <li key={i} onClick={() => { window.location.href = p.href; }}>
-                  <span className="tag" style={{ marginRight: 12, flex: "none" }}>{p.tag}</span>
-                  <span className="col" style={{ flex: 1, gap: 4 }}>
+                  <span className="col" style={{ flex: 1, gap: 6 }}>
+                    <span className="tag" style={{ alignSelf: "flex-start" }}>{p.tag}</span>
                     <span className="h4">{p.titulo}</span>
                     <span className="muted" style={{ fontSize: 13 }}>{p.autor} &middot; {p.data}</span>
                   </span>
