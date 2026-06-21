@@ -20,8 +20,7 @@
 
   const navItems = [
     { id: "agenda",        label: "Agenda",          href: P + "pages/agenda.html" },
-    { id: "sistema",       label: "Sistema ↗",       href: "https://dip-ectolab.org.br/login", target: "_blank" },
-    { 
+    {
       id: "paracirurgia",  
       label: "Paracirurgia",    
       href: P + "pages/paracirurgia.html",

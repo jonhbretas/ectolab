@@ -289,7 +289,10 @@
   gap: 48px;
   align-items: start;
 }
-@media (max-width: 900px) { .curso-detail-grid { grid-template-columns: 1fr; } }
+@media (max-width: 900px) {
+  .curso-detail-grid { grid-template-columns: 1fr; }
+  .curso-aside { position: static; }
+}
 
 /* ============================================================
    ATIVIDADES / EVENTOS

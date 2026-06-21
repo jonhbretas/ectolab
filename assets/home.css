@@ -408,9 +408,11 @@
 .ofaz__text { color: var(--ink-2); font-size: 14.5px; flex: 1; line-height: 1.55; }
 
 @media (max-width: 900px) {
+  .ofaz-grid { grid-template-columns: 1fr 1fr; gap: 12px; }
+  .ofaz { min-height: 0; padding: 26px 22px; }
+}
+@media (max-width: 540px) {
   .ofaz-grid { grid-template-columns: 1fr; }
-  .ofaz { border-right: none; min-height: 0; padding: 28px 0; }
-  .ofaz:hover { padding-left: 0; }
 }
 
 /* ============================================================
