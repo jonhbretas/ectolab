@@ -585,7 +585,7 @@ function FAQ() {
     <section className="section faq">
       <div className="wrap">
         <div className="grid g2 gap-48" style={{ alignItems: "start" }}>
-          <div style={{ position: "sticky", top: 100 }}>
+          <div className="faq-left">
             <div className="eyebrow"><span className="dot"></span>VISITANTE DE PRIMEIRA VEZ</div>
             <h2 className="h1" style={{ marginTop: 16 }}>
               Cinco perguntas que <strong style={{ color: "var(--teal)", fontWeight: 700 }}>todo mundo</strong> faz.

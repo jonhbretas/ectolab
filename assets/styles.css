@@ -732,7 +732,6 @@ p { margin: 0 0 1em; }
   .g2, .g3, .g4 { grid-template-columns: 1fr; }
   .site-footer .grid { grid-template-columns: 1fr 1fr; }
   .nav { display: none; }
-  .nav-toggle { display: flex; }
   .hide-mobile { display: none !important; }
 }
 
@@ -981,4 +980,9 @@ p { margin: 0 0 1em; }
   display: flex;
   justify-content: center;
   margin-top: 4px;
+}
+
+/* Ativa o hambúrguer no mobile — DEVE ficar após .nav-toggle { display: none } */
+@media (max-width: 900px) {
+  .nav-toggle { display: flex; }
 }

@@ -464,7 +464,10 @@
 .manifesto-grid a { color: var(--white); border-bottom: 1px solid var(--gold); }
 .manifesto-grid a:hover { color: var(--gold); }
 .manifesto-grid .link-arrow { color: var(--gold); border-color: var(--gold); }
-@media (max-width: 900px) { .manifesto-grid { grid-template-columns: 1fr; gap: 32px; } }
+@media (max-width: 900px) {
+  .manifesto-grid { grid-template-columns: 1fr; gap: 32px; }
+  .manifesto-grid .manifesto-left { position: static; }
+}
 
 /* ============================================================
    TRILHA MINI
@@ -506,7 +509,20 @@
 }
 .trilha-step:hover .trilha-step__bullet { background: var(--gold); color: var(--ink); border-color: var(--gold-2); }
 .trilha-step__body p { font-size: 14.5px; color: var(--ink-2); line-height: 1.55; }
-@media (max-width: 900px) { .trilha-grid { grid-template-columns: 1fr; gap: 24px; } .trilha-line { display: none; } }
+@media (max-width: 900px) {
+  .trilha-grid { grid-template-columns: 1fr; gap: 0; }
+  .trilha-line { display: none; }
+  .trilha-step {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .trilha-step:last-child { border-bottom: none; }
+  .trilha-step__bullet { flex-shrink: 0; width: 48px; height: 48px; font-size: 12px; }
+  .trilha-step__body { padding-top: 12px; }
+}
 
 /* ============================================================
    CURSOS DESTAQUE
@@ -684,6 +700,7 @@
    FAQ
    ============================================================ */
 .faq { background: transparent; }
+.faq-left { position: sticky; top: 100px; }
 .faq-list { display: flex; flex-direction: column; gap: 10px; }
 .faq-item {
   background: rgba(255,255,255,0.7);
@@ -732,6 +749,9 @@
   color: var(--ink-2);
   line-height: 1.65;
   max-width: 720px;
+}
+@media (max-width: 900px) {
+  .faq-left { position: static; }
 }
 @media (max-width: 540px) {
   .faq-a { padding-left: 20px; }
