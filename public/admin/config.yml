@@ -12,6 +12,38 @@ media_folder: public/uploads
 public_folder: /uploads
 
 collections:
+  - name: site_images
+    label: Imagens do site
+    media_folder: public/uploads/site-images
+    public_folder: /uploads/site-images
+    files:
+      - name: images
+        label: Todas as imagens
+        file: content/site/images.json
+        fields:
+          - name: pages
+            label: Paginas e pastas
+            widget: list
+            label_singular: Pagina/Pasta
+            summary: "{{page}}"
+            collapsed: auto
+            hint: "Cada grupo representa uma pagina, pasta ou area global do site. Troque a imagem no campo 'Imagem substituta'. Recomendacao: envie arquivos WEBP otimizados para melhorar o desempenho."
+            fields:
+              - { name: page, label: Pagina ou area, widget: string }
+              - { name: folder, label: Pasta interna sugerida, widget: string, hint: "Use esta pasta como referencia ao enviar imagens. Ex.: uploads/site-images/pages/blog." }
+              - name: images
+                label: Imagens desta pagina/pasta
+                widget: list
+                label_singular: Imagem
+                summary: "{{label}}"
+                collapsed: true
+                fields:
+                  - { name: label, label: Nome da imagem, widget: string }
+                  - { name: originalPath, label: Caminho atual no site, widget: string, hint: "Referencia tecnica usada pelo build. Evite alterar, a menos que a imagem original tenha mudado no codigo." }
+                  - { name: image, label: Imagem substituta, widget: image, hint: "Preferir WEBP. Para manter a imagem atual, deixe igual ao caminho atual." }
+                  - { name: alt, label: Texto alternativo, widget: string, required: false }
+                  - { name: notes, label: Observacoes, widget: text, required: false, default: "Preferir WEBP otimizado para melhor desempenho." }
+
   - name: blog
     label: Blog
     label_singular: Post

@@ -6,8 +6,10 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "sync:images": "node scripts/sync-site-images.mjs",
     "generate:content": "node scripts/generate-content.mjs",
-    "build": "npm run generate:content && vite build",
+    "apply:images": "node scripts/apply-site-images.mjs",
+    "build": "npm run sync:images && npm run generate:content && vite build && npm run apply:images",
     "preview": "vite preview"
   },
   "dependencies": {
