@@ -2,8 +2,9 @@
   "events": [
     {
       "model": "oficina",
-      "title": "OFICINA DE ECTOPLASMOLOGIA",
+      "title": "Oficina de Ectoplasmologia",
       "category": "oficina",
+      "categoryCustom": "",
       "date": "2026-06-11",
       "durationDays": null,
       "href": "https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/",
@@ -22,7 +23,7 @@
     },
     {
       "model": "proep",
-      "title": "",
+      "title": "Programa de Estimulação Parapsíquica Ectoplásmica",
       "category": "",
       "categoryCustom": "",
       "date": "2026-06-26",
@@ -44,7 +45,7 @@
     },
     {
       "model": "oficina",
-      "title": "",
+      "title": "Oficina de Ectoplasmologia",
       "category": "",
       "categoryCustom": "",
       "date": "2026-07-09",
