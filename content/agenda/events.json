@@ -6,7 +6,7 @@
       "monthLabel": "Janeiro",
       "events": [
         {
-          "title": "Campo Paracirúrgico Público — Edição 402",
+          "title": "TEST Campo Paracirúrgico Público — Edição 402",
           "date": "2026-01-15",
           "day": "15",
           "weekday": "QUA",
@@ -19,11 +19,13 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
+          "buttonLabel": "Ver detalhes",
           "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "featuredDate": "",
+          "featuredCategory": ""
         },
         {
-          "title": "Abertura do ciclo 2026 — o que é paracirurgia?",
+          "title": "TEST Abertura do ciclo 2026 — o que é paracirurgia?",
           "date": "2026-01-23",
           "day": "23",
           "weekday": "SEX",
@@ -36,11 +38,11 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
-          "title": "Campo Paracirúrgico Público — Edição 403",
+          "title": "TEST Campo Paracirúrgico Público — Edição 403",
           "date": "2026-01-29",
           "day": "29",
           "weekday": "QUA",
@@ -53,8 +55,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -77,8 +79,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "DIP — Dinâmica Interassistencial da Paracirurgia · Turma 2026.1",
@@ -94,8 +96,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/cursos.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Campo Paracirúrgico Público — Edição 405",
@@ -111,8 +113,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -135,8 +137,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "O parácorpo: anatomia e função na paracirurgia",
@@ -152,8 +154,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Campo Paracirúrgico Público — Edição 407",
@@ -169,8 +171,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -193,8 +195,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Bioenergética e parapercepção: fundamentos práticos",
@@ -210,8 +212,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Campo Paracirúrgico Público — Edição 409",
@@ -227,8 +229,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -251,8 +253,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "IECTO — Imersão em Ectoplasmia · Turma 2026.1",
@@ -268,8 +270,8 @@
           "free": false,
           "status": "Realizado",
           "href": "/pages/cursos.html",
-          "featured": false,
-          "buttonLabel": "Inscrever-se"
+          "buttonLabel": "Inscrever-se",
+          "featured": false
         },
         {
           "title": "Campo Paracirúrgico Público — Edição 411",
@@ -285,8 +287,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -309,8 +311,8 @@
           "free": true,
           "status": "Realizado",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Ectoplasma e mediunidade brasileira: distinções e pontes",
@@ -326,8 +328,8 @@
           "free": true,
           "status": "Inscrições abertas",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Campo Paracirúrgico Público — Edição 413",
@@ -343,8 +345,8 @@
           "free": true,
           "status": "Sem inscrição",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -367,8 +369,8 @@
           "free": false,
           "status": "Inscrições abertas",
           "href": "/pages/curso-proep.html",
-          "featured": false,
-          "buttonLabel": "Inscrever-se"
+          "buttonLabel": "Inscrever-se",
+          "featured": false
         },
         {
           "title": "O parácorpo: anatomia e função na paracirurgia",
@@ -384,8 +386,8 @@
           "free": true,
           "status": "Inscrições abertas",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "EPPI — Ectoplasmia Projetiva Paracirúrgica Interassistencial",
@@ -401,8 +403,8 @@
           "free": false,
           "status": "Inscrições abertas",
           "href": "/pages/cursos.html",
-          "featured": false,
-          "buttonLabel": "Inscrever-se"
+          "buttonLabel": "Inscrever-se",
+          "featured": false
         }
       ]
     },
@@ -425,11 +427,11 @@
           "free": false,
           "status": "Inscrições abertas",
           "href": "/pages/atividades.html",
+          "buttonLabel": "Inscrever-se",
           "featured": true,
           "featuredStyle": "dark",
           "featuredDate": "05–07 AGO 2026",
-          "featuredCategory": "Simpósio · Intl",
-          "buttonLabel": "Inscrever-se"
+          "featuredCategory": "Simpósio · Intl"
         },
         {
           "title": "Campo Paracirúrgico Público — Edição 415",
@@ -445,8 +447,8 @@
           "free": true,
           "status": "Sem inscrição",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Ectoplasmia comparada: o que mudou em 23 anos de campo",
@@ -462,8 +464,8 @@
           "free": true,
           "status": "Inscrições abertas",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -486,8 +488,8 @@
           "free": true,
           "status": "Sem inscrição",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Síndrome ectoplásmica: reconhecer e acompanhar",
@@ -503,8 +505,8 @@
           "free": true,
           "status": "Inscrições abertas",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Campo Paracirúrgico Público — Edição 417",
@@ -520,8 +522,8 @@
           "free": true,
           "status": "Sem inscrição",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -544,8 +546,8 @@
           "free": true,
           "status": "Inscrições abertas",
           "href": "/pages/cursos.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Campo Paracirúrgico Público — Edição 418",
@@ -561,8 +563,8 @@
           "free": true,
           "status": "Sem inscrição",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Recomposição pós-campo: cuidando do paracirurgião",
@@ -578,8 +580,8 @@
           "free": true,
           "status": "Inscrições abertas",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -602,8 +604,8 @@
           "free": true,
           "status": "Sem inscrição",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "PROEP — abertura de inscrições · Turma 2027",
@@ -619,8 +621,8 @@
           "free": false,
           "status": "Inscrições abertas",
           "href": "/pages/curso-proep.html",
-          "featured": false,
-          "buttonLabel": "Inscrever-se"
+          "buttonLabel": "Inscrever-se",
+          "featured": false
         },
         {
           "title": "Anais Ectolab: 23 anos de pesquisa de campo",
@@ -636,8 +638,8 @@
           "free": true,
           "status": "Inscrições abertas",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -660,8 +662,8 @@
           "free": true,
           "status": "Sem inscrição",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Tertúlia de encerramento + confraternização",
@@ -677,8 +679,8 @@
           "free": true,
           "status": "Inscrições abertas",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Retiro de fim de ano — recomposição e planejamento",
@@ -694,8 +696,8 @@
           "free": false,
           "status": "Vagas limitadas",
           "href": "/pages/cursos.html",
-          "featured": false,
-          "buttonLabel": "Inscrever-se"
+          "buttonLabel": "Inscrever-se",
+          "featured": false
         }
       ]
     },
@@ -718,8 +720,8 @@
           "free": true,
           "status": "Sem inscrição",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         },
         {
           "title": "Abertura do ciclo 2027 — o ano de pesquisa pela frente",
@@ -735,8 +737,8 @@
           "free": true,
           "status": "Inscrições abertas",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -759,11 +761,11 @@
           "free": false,
           "status": "Inscrições abertas",
           "href": "/pages/curso-proep.html",
+          "buttonLabel": "Inscrever-se",
           "featured": true,
           "featuredStyle": "default",
           "featuredDate": "INÍCIO FEV 2027",
-          "featuredCategory": "Curso · PROEP",
-          "buttonLabel": "Inscrever-se"
+          "featuredCategory": "Curso · PROEP"
         },
         {
           "title": "Campo Paracirúrgico Público — Edição 423",
@@ -779,8 +781,8 @@
           "free": true,
           "status": "Sem inscrição",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -803,8 +805,8 @@
           "free": false,
           "status": "Inscrições abertas",
           "href": "/pages/cursos.html",
-          "featured": false,
-          "buttonLabel": "Inscrever-se"
+          "buttonLabel": "Inscrever-se",
+          "featured": false
         },
         {
           "title": "Campo Paracirúrgico Público — Edição 425",
@@ -820,8 +822,8 @@
           "free": true,
           "status": "Sem inscrição",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     },
@@ -844,11 +846,11 @@
           "free": false,
           "status": "Chamada aberta",
           "href": "/pages/atividades.html",
+          "buttonLabel": "Inscrever-se",
           "featured": true,
           "featuredStyle": "gold",
           "featuredDate": "14–16 ABR 2027",
-          "featuredCategory": "Simpósio · Intl",
-          "buttonLabel": "Inscrever-se"
+          "featuredCategory": "Simpósio · Intl"
         },
         {
           "title": "Novas fronteiras da ectoplasmia: o que vem pela frente",
@@ -864,8 +866,8 @@
           "free": true,
           "status": "Inscrições abertas",
           "href": "/pages/atividades.html",
-          "featured": false,
-          "buttonLabel": "Ver detalhes"
+          "buttonLabel": "Ver detalhes",
+          "featured": false
         }
       ]
     }
