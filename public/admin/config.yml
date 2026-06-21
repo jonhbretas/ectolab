@@ -37,23 +37,22 @@ collections:
   - name: agenda
     label: Agenda
     files:
-      - name: events
-        label: Eventos
-        file: content/agenda/events.json
+      - name: event_models
+        label: Modelos de eventos
+        file: content/agenda/event-models.json
         fields:
-          - name: events
-            label: Eventos
+          - name: models
+            label: Modelos
             widget: list
-            label_singular: Evento
-            summary: "{{date}} · {{title}}"
-            collapsed: auto
-            minimize_collapsed: false
-            max: 200
-            hint: "Cadastro simplificado: informe titulo, tipo de evento, data e link. O site calcula automaticamente dia, dia da semana, mes e ano."
+            label_singular: Modelo
+            summary: "{{label}}"
+            collapsed: true
             fields:
-              - { name: title, label: Nome do evento, widget: string }
+              - { name: id, label: ID interno, widget: string, hint: "Use letras minusculas, numeros e hifen. Ex.: proep, dip, simposio." }
+              - { name: label, label: Nome no CMS, widget: string }
+              - { name: title, label: Titulo padrao, widget: string }
               - name: category
-                label: Tipo de evento
+                label: Tipo de evento padrao
                 widget: select
                 options:
                   - { label: Palestra, value: palestra }
@@ -68,7 +67,72 @@ collections:
                   - { label: Fórum, value: forum }
                   - { label: Dinâmica, value: dinamica }
                   - { label: Encontro, value: encontro }
-              - { name: date, label: Data, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+              - { name: tag, label: Etiqueta padrao, widget: string, required: false }
+              - { name: description, label: Descricao padrao, widget: text, required: false }
+              - { name: location, label: Local padrao, widget: string, required: false }
+              - { name: time, label: Horario/duracao padrao, widget: string, required: false }
+              - { name: price, label: Preco padrao, widget: string, required: false }
+              - { name: free, label: Gratuito por padrao, widget: boolean, default: false, required: false }
+              - { name: status, label: Status padrao, widget: string, required: false, default: Inscrições abertas }
+              - { name: href, label: Link padrao, widget: string, required: false, default: /pages/atividades.html }
+              - { name: buttonLabel, label: Texto do botao/link padrao, widget: string, required: false, default: Ver detalhes }
+              - { name: durationDays, label: Dias para frente padrao, widget: number, value_type: int, min: 0, required: false }
+      - name: events
+        label: Eventos
+        file: content/agenda/events.json
+        fields:
+          - name: events
+            label: Eventos
+            widget: list
+            label_singular: Evento
+            summary: "{{date}} · {{title}}"
+            collapsed: auto
+            minimize_collapsed: false
+            max: 200
+            hint: "Cadastro simplificado: informe titulo, tipo de evento, data de inicio, quantos dias o evento segue para frente e link. O site calcula automaticamente dia, dia da semana, mes, ano e data final."
+            fields:
+              - name: model
+                label: Modelo do evento
+                widget: select
+                required: false
+                hint: "Escolha um modelo para preencher automaticamente titulo, tipo, descricao, link, duracao e demais padroes. Os campos abaixo so precisam ser preenchidos quando algo mudar."
+                options:
+                  - { label: DIP - Dinâmica Interassistencial da Paracirurgia, value: dip }
+                  - { label: Campo Paracirúrgico, value: campo-paracirurgico }
+                  - { label: Curso DIP, value: curso-dip }
+                  - { label: PROEP, value: proep }
+                  - { label: Imersão em Ectoplasmia / IECTO, value: iecto-imersao }
+                  - { label: EPPI, value: eppi }
+                  - { label: Ectoplasmia Interassistencial, value: ectoplasmia-interassistencial }
+                  - { label: Ectoplasmia Protetiva, value: ectoplasmia-protetiva }
+                  - { label: Palestra / Tertúlia, value: palestra-tertulia }
+                  - { label: Simpósio Ectolab, value: simposio }
+                  - { label: Oficina, value: oficina }
+                  - { label: Verbete, value: verbete }
+                  - { label: Artigo, value: artigo }
+                  - { label: Fórum, value: forum }
+                  - { label: Encontro, value: encontro }
+              - { name: title, label: Nome do evento, widget: string, required: false, hint: "Opcional quando um modelo foi escolhido. Preencha apenas para mudar o titulo daquela data/turma." }
+              - name: category
+                label: Tipo de evento
+                widget: select
+                required: false
+                hint: "Opcional quando um modelo foi escolhido. Preencha apenas se quiser substituir o tipo padrao do modelo."
+                options:
+                  - { label: Palestra, value: palestra }
+                  - { label: Oficina, value: oficina }
+                  - { label: Curso de Campo, value: curso-campo }
+                  - { label: Curso Híbrido, value: curso-hibrido }
+                  - { label: Curso Presencial, value: curso-presencial }
+                  - { label: Curso Online, value: curso-online }
+                  - { label: Verbete, value: verbete }
+                  - { label: Artigo, value: artigo }
+                  - { label: Simpósio, value: simposio }
+                  - { label: Fórum, value: forum }
+                  - { label: Dinâmica, value: dinamica }
+                  - { label: Encontro, value: encontro }
+              - { name: date, label: Data de inicio, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
+              - { name: durationDays, label: Dias para frente, widget: number, value_type: int, min: 0, required: false, hint: "Opcional quando um modelo foi escolhido. Use 0 para evento de um dia. Ex.: inicio 01/01 + 2 dias termina em 03/01." }
               - { name: href, label: Link, widget: string, default: /pages/atividades.html }
               - { name: description, label: Descricao, widget: text, required: false }
               - { name: location, label: Local, widget: string, required: false }
@@ -80,5 +144,5 @@ collections:
               - { name: buttonLabel, label: Texto do botao/link, widget: string, required: false, default: Ver detalhes }
               - { name: featured, label: Destaque, widget: boolean, default: false, required: false }
               - { name: featuredStyle, label: Estilo do destaque, widget: select, required: false, options: ["default", "dark", "gold"] }
-              - { name: featuredDate, label: Data no destaque, widget: string, required: false, hint: "Opcional. Se ficar vazio, o site formata a data automaticamente." }
+              - { name: featuredDate, label: Data no destaque, widget: string, required: false, hint: "Opcional. Se ficar vazio, o site formata a data automaticamente usando a data de inicio e os dias para frente." }
               - { name: featuredCategory, label: Categoria no destaque, widget: string, required: false }

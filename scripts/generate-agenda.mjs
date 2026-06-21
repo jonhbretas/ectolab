@@ -4,6 +4,7 @@ import path from 'node:path';
 const root = process.cwd();
 const agendaPagePath = path.join(root, 'pages', 'agenda.html');
 const eventsPath = path.join(root, 'content', 'agenda', 'events.json');
+const eventModelsPath = path.join(root, 'content', 'agenda', 'event-models.json');
 
 const eventsStart = '<!-- CMS AGENDA EVENTS START -->';
 const eventsEnd = '<!-- CMS AGENDA EVENTS END -->';
@@ -54,6 +55,40 @@ function dateValue(event) {
   return new Date(`${event.date}T00:00:00Z`);
 }
 
+function hasValue(value) {
+  return value !== undefined && value !== null && value !== '';
+}
+
+function readEventModels() {
+  if (!fs.existsSync(eventModelsPath)) return new Map();
+
+  const parsed = JSON.parse(fs.readFileSync(eventModelsPath, 'utf8'));
+  const models = new Map();
+  (parsed.models || []).forEach((model) => {
+    if (model.id) models.set(model.id, model);
+  });
+
+  return models;
+}
+
+function applyEventModel(event, models) {
+  const model = models.get(event.model);
+  if (!model) return event;
+
+  const merged = { ...model };
+  Object.entries(event).forEach(([key, value]) => {
+    if (hasValue(value)) merged[key] = value;
+  });
+
+  return merged;
+}
+
+function addDays(date, days) {
+  const next = new Date(date);
+  next.setUTCDate(next.getUTCDate() + days);
+  return next;
+}
+
 function dateParts(value) {
   const isoDate = String(value || '').slice(0, 10);
   const match = isoDate.match(/^(\d{4})-(\d{2})-(\d{2})$/);
@@ -69,19 +104,69 @@ function dateParts(value) {
     monthLabel: monthNames[monthOrder[monthIndex]],
     day,
     weekday: weekdayNames[date.getUTCDay()],
+    date,
   };
 }
 
-function formatFeaturedDate(value) {
-  const parts = dateParts(value);
-  if (!parts) return value || '';
-  return `${parts.day} ${parts.month.toUpperCase()} ${parts.year}`;
+function datePartsFromDate(date) {
+  const month = monthOrder[date.getUTCMonth()];
+  return {
+    year: String(date.getUTCFullYear()),
+    month,
+    monthLabel: monthNames[month],
+    day: String(date.getUTCDate()).padStart(2, '0'),
+    weekday: weekdayNames[date.getUTCDay()],
+    date,
+  };
 }
 
-function normalizeEvent(event, monthGroup = {}) {
+function durationDays(value) {
+  const duration = Number.parseInt(value, 10);
+  return Number.isFinite(duration) && duration > 0 ? duration : 0;
+}
+
+function eventDateRange(event) {
+  const start = dateParts(event.date);
+  if (!start) return null;
+
+  const duration = durationDays(event.durationDays);
+  const end = duration > 0 ? datePartsFromDate(addDays(start.date, duration)) : start;
+
+  return { start, end, duration };
+}
+
+function formatFeaturedDate(event) {
+  const range = eventDateRange(event);
+  if (!range) return event.date || '';
+
+  const { start, end, duration } = range;
+  if (duration === 0) return `${start.day} ${start.month.toUpperCase()} ${start.year}`;
+  if (start.year === end.year && start.month === end.month) {
+    return `${start.day}–${end.day} ${start.month.toUpperCase()} ${start.year}`;
+  }
+
+  return `${start.day} ${start.month.toUpperCase()} ${start.year}–${end.day} ${end.month.toUpperCase()} ${end.year}`;
+}
+
+function formatRowDate(event) {
+  const range = eventDateRange(event);
+  if (!range) return { day: event.day || '', weekday: event.weekday || '' };
+
+  const { start, end, duration } = range;
+  if (duration === 0) return { day: start.day, weekday: start.weekday };
+
+  return {
+    day: `${start.day}–${end.day}`,
+    weekday: `${start.weekday}–${end.weekday}`,
+  };
+}
+
+function normalizeEvent(rawEvent, monthGroup = {}, models = new Map()) {
+  const event = applyEventModel(rawEvent, models);
   const parts = dateParts(event.date) || {};
   const category = event.category || 'palestra';
   const price = event.price || (event.free ? 'Gratuito' : '');
+  const duration = durationDays(event.durationDays);
 
   return {
     ...event,
@@ -90,6 +175,7 @@ function normalizeEvent(event, monthGroup = {}) {
     monthLabel: parts.monthLabel || event.monthLabel || monthGroup.monthLabel,
     day: parts.day || event.day || '',
     weekday: parts.weekday || event.weekday || '',
+    durationDays: duration,
     category,
     tag: event.tag || categoryLabels[category] || category,
     description: event.description || '',
@@ -113,19 +199,20 @@ function monthId(year, month) {
 
 function readEvents() {
   const parsed = JSON.parse(fs.readFileSync(eventsPath, 'utf8'));
+  const models = readEventModels();
 
   if (Array.isArray(parsed.months)) {
     return parsed.months
       .flatMap((monthGroup) => {
         const events = Array.isArray(monthGroup.events) ? monthGroup.events : [];
-        return events.map((event) => normalizeEvent(event, monthGroup));
+        return events.map((event) => normalizeEvent(event, monthGroup, models));
       })
       .filter((event) => event.title && event.date)
       .sort((a, b) => dateValue(a) - dateValue(b));
   }
 
   return (parsed.events || [])
-    .map((event) => normalizeEvent(event))
+    .map((event) => normalizeEvent(event, {}, models))
     .filter((event) => event.title && event.date)
     .slice()
     .sort((a, b) => dateValue(a) - dateValue(b));
@@ -140,7 +227,7 @@ ${featured.map((event) => {
             <div class="feat__top"><span class="feat__year">${escapeHtml(event.year)}</span><span class="feat__cat">${escapeHtml(event.featuredCategory || event.tag)}</span></div>
             <h3>${escapeHtml(event.title)}</h3>
             <p>${escapeHtml(event.description)}</p>
-            <div class="feat__foot"><span class="feat__date">${escapeHtml(event.featuredDate || formatFeaturedDate(event.date))}</span><span class="feat__go">Ver na agenda</span></div>
+            <div class="feat__foot"><span class="feat__date">${escapeHtml(event.featuredDate || formatFeaturedDate(event))}</span><span class="feat__go">Ver na agenda</span></div>
           </button>`;
   }).join('\n')}
 ${featuredEnd}`;
@@ -151,9 +238,10 @@ function renderRow(event) {
   const stateClass = isPast(event) ? 'state' : 'state open';
   const priceClass = event.free ? 'price free' : 'price';
   const buttonLabel = event.buttonLabel || 'Ver detalhes';
+  const rowDate = formatRowDate(event);
 
   return `          <a class="agenda-row${rowPast}" data-cat="${escapeHtml(event.category)}" data-month="${escapeHtml(event.month)}" href="${escapeHtml(event.href || '/pages/atividades.html')}">
-            <div class="agenda-row__date"><strong>${escapeHtml(event.day)}</strong><span>${escapeHtml(event.weekday)}</span></div>
+            <div class="agenda-row__date"><strong>${escapeHtml(rowDate.day)}</strong><span>${escapeHtml(rowDate.weekday)}</span></div>
             <div class="agenda-row__body">
               <span class="agenda-tag ${escapeHtml(event.category)}">${escapeHtml(event.tag)}</span>
               <h3>${escapeHtml(event.title)}</h3>
