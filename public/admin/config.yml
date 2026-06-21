@@ -85,6 +85,21 @@ collections:
   - name: agenda
     label: Agenda
     files:
+      - name: event_types
+        label: Tipos de eventos
+        file: content/agenda/event-types.json
+        fields:
+          - name: types
+            label: Tipos
+            widget: list
+            label_singular: Tipo
+            summary: "{{label}}"
+            collapsed: false
+            hint: "Cadastre aqui os tipos usados na agenda. O campo Valor deve ser simples, sem acentos, em minusculo e com hifen. Ex.: programa, curso-online, semana-verbetes."
+            fields:
+              - { name: value, label: Valor interno, widget: string, hint: "Ex.: programa, oficina, curso-online. Use letras minusculas e hifen." }
+              - { name: label, label: Nome singular, widget: string, hint: "Ex.: Programa." }
+              - { name: plural, label: Nome no filtro, widget: string, required: false, hint: "Ex.: Programas. Se ficar vazio, usa o nome singular." }
       - name: event_models
         label: Modelos de eventos
         file: content/agenda/event-models.json
@@ -107,6 +122,7 @@ collections:
                 options:
                   - { label: Palestra, value: palestra }
                   - { label: Oficina, value: oficina }
+                  - { label: Programa, value: programa }
                   - { label: Curso de Campo, value: curso-campo }
                   - { label: Curso Híbrido, value: curso-hibrido }
                   - { label: Curso Presencial, value: curso-presencial }
@@ -117,12 +133,8 @@ collections:
                   - { label: Fórum, value: forum }
                   - { label: Dinâmica, value: dinamica }
                   - { label: Encontro, value: encontro }
+              - { name: categoryCustom, label: Tipo personalizado padrao, widget: string, required: false, hint: "Use apenas quando o tipo ainda nao existir na lista. Ex.: Semana de Verbetes. O site cria o filtro automaticamente." }
               - { name: tag, label: Etiqueta padrao, widget: string, required: false }
-              - { name: description, label: Descricao padrao, widget: text, required: false }
-              - { name: location, label: Local padrao, widget: string, required: false }
-              - { name: time, label: Horario/duracao padrao, widget: string, required: false }
-              - { name: price, label: Preco padrao, widget: string, required: false }
-              - { name: free, label: Gratuito por padrao, widget: boolean, default: false, required: false }
               - name: status
                 label: Status padrao
                 widget: select
@@ -133,6 +145,12 @@ collections:
                   - { label: Inscrições Abertas, value: Inscrições Abertas }
                   - { label: Vagas preenchidas, value: Vagas preenchidas }
                   - { label: Realizado, value: Realizado }
+              - { name: students, label: Quantidade de alunos padrao, widget: string, required: false, hint: "Ex.: 20 alunos, Ate 30 alunos, Turma reduzida." }
+              - { name: description, label: Descricao padrao, widget: text, required: false }
+              - { name: location, label: Local padrao, widget: string, required: false }
+              - { name: time, label: Horario/duracao padrao, widget: string, required: false }
+              - { name: price, label: Preco padrao, widget: string, required: false }
+              - { name: free, label: Gratuito por padrao, widget: boolean, default: false, required: false }
               - { name: href, label: Link da pagina no site, widget: string, required: false, default: /pages/atividades.html, hint: "Pagina interna usada automaticamente pelos eventos deste modelo. Ex.: /pages/curso-proep.html, /pages/dinamica.html ou /pages/blog.html." }
               - { name: buttonLabel, label: Texto do botao/link padrao, widget: string, required: false, default: Ver detalhes }
               - { name: durationDays, label: Dias para frente padrao, widget: number, value_type: int, min: 0, required: false }
@@ -180,6 +198,7 @@ collections:
                 options:
                   - { label: Palestra, value: palestra }
                   - { label: Oficina, value: oficina }
+                  - { label: Programa, value: programa }
                   - { label: Curso de Campo, value: curso-campo }
                   - { label: Curso Híbrido, value: curso-hibrido }
                   - { label: Curso Presencial, value: curso-presencial }
@@ -190,6 +209,7 @@ collections:
                   - { label: Fórum, value: forum }
                   - { label: Dinâmica, value: dinamica }
                   - { label: Encontro, value: encontro }
+              - { name: categoryCustom, label: Tipo personalizado, widget: string, required: false, hint: "Use quando o tipo desejado ainda nao existir na lista acima. Ex.: Semana de Verbetes. Este texto aparece no evento e vira filtro automaticamente." }
               - { name: date, label: Data de inicio, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
               - { name: durationDays, label: Dias para frente, widget: number, value_type: int, min: 0, required: false, hint: "Opcional quando um modelo foi escolhido. Use 0 para evento de um dia. Ex.: inicio 01/01 + 2 dias termina em 03/01." }
               - { name: href, label: Link especifico deste evento, widget: string, required: false, hint: "Opcional. Deixe vazio para usar automaticamente o link da pagina definido no modelo." }
@@ -197,8 +217,6 @@ collections:
               - { name: location, label: Local, widget: string, required: false }
               - { name: time, label: Horario, widget: string, required: false }
               - { name: tag, label: Etiqueta exibida, widget: string, required: false, hint: "Opcional. Se ficar vazio, o site usa o tipo de evento." }
-              - { name: price, label: Preco, widget: string, required: false, default: "" }
-              - { name: free, label: Gratuito, widget: boolean, default: false, required: false }
               - name: status
                 label: Status
                 widget: select
@@ -210,6 +228,9 @@ collections:
                   - { label: Inscrições Abertas, value: Inscrições Abertas }
                   - { label: Vagas preenchidas, value: Vagas preenchidas }
                   - { label: Realizado, value: Realizado }
+              - { name: students, label: Quantidade de alunos, widget: string, required: false, hint: "Ex.: 20 alunos, Ate 30 alunos, Turma reduzida. Se usar modelo, deixe vazio para herdar o padrao." }
+              - { name: price, label: Preco, widget: string, required: false, default: "" }
+              - { name: free, label: Gratuito, widget: boolean, default: false, required: false }
               - { name: buttonLabel, label: Texto do botao/link, widget: string, required: false, default: Ver detalhes }
               - { name: featured, label: Destaque, widget: boolean, default: false, required: false }
               - { name: featuredStyle, label: Estilo do destaque, widget: select, required: false, options: ["default", "dark", "gold"] }

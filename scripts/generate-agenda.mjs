@@ -5,6 +5,7 @@ const root = process.cwd();
 const agendaPagePath = path.join(root, 'pages', 'agenda.html');
 const eventsPath = path.join(root, 'content', 'agenda', 'events.json');
 const eventModelsPath = path.join(root, 'content', 'agenda', 'event-models.json');
+const eventTypesPath = path.join(root, 'content', 'agenda', 'event-types.json');
 
 const eventsStart = '<!-- CMS AGENDA EVENTS START -->';
 const eventsEnd = '<!-- CMS AGENDA EVENTS END -->';
@@ -27,20 +28,21 @@ const monthNames = {
   dez: 'Dezembro',
 };
 const weekdayNames = ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB'];
-const categoryLabels = {
-  palestra: 'Palestra',
-  oficina: 'Oficina',
-  'curso-campo': 'Curso de Campo',
-  'curso-hibrido': 'Curso Híbrido',
-  'curso-presencial': 'Curso Presencial',
-  'curso-online': 'Curso Online',
-  verbete: 'Verbete',
-  artigo: 'Artigo',
-  simposio: 'Simpósio',
-  forum: 'Fórum',
-  dinamica: 'Dinâmica',
-  encontro: 'Encontro',
-};
+const defaultEventTypes = [
+  { value: 'palestra', label: 'Palestra', plural: 'Palestras' },
+  { value: 'oficina', label: 'Oficina', plural: 'Oficinas' },
+  { value: 'programa', label: 'Programa', plural: 'Programas' },
+  { value: 'curso-campo', label: 'Curso de Campo', plural: 'Cursos de Campo' },
+  { value: 'curso-hibrido', label: 'Curso Híbrido', plural: 'Cursos Híbridos' },
+  { value: 'curso-presencial', label: 'Curso Presencial', plural: 'Cursos Presenciais' },
+  { value: 'curso-online', label: 'Curso Online', plural: 'Cursos Online' },
+  { value: 'verbete', label: 'Verbete', plural: 'Verbetes' },
+  { value: 'artigo', label: 'Artigo', plural: 'Artigos' },
+  { value: 'simposio', label: 'Simpósio', plural: 'Simpósios' },
+  { value: 'forum', label: 'Fórum', plural: 'Fóruns' },
+  { value: 'dinamica', label: 'Dinâmica', plural: 'Dinâmicas' },
+  { value: 'encontro', label: 'Encontro', plural: 'Encontros' },
+];
 
 function escapeHtml(value = '') {
   return String(value)
@@ -66,6 +68,43 @@ function hasValue(value) {
 
 function escapeRegExp(value) {
   return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+}
+
+function slugify(value) {
+  const slug = String(value || '')
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-+|-+$/g, '');
+
+  return slug || 'evento';
+}
+
+function readEventTypes() {
+  let parsed = { types: defaultEventTypes };
+  if (fs.existsSync(eventTypesPath)) {
+    parsed = JSON.parse(fs.readFileSync(eventTypesPath, 'utf8'));
+  }
+
+  const byValue = new Map();
+  const types = [];
+
+  [...(parsed.types || []), ...defaultEventTypes].forEach((type) => {
+    const label = String(type.label || type.value || '').trim();
+    const value = slugify(type.value || label);
+    if (!label || byValue.has(value)) return;
+
+    const normalized = {
+      value,
+      label,
+      plural: String(type.plural || label).trim(),
+    };
+    byValue.set(value, normalized);
+    types.push(normalized);
+  });
+
+  return { types, byValue };
 }
 
 function readEventModels() {
@@ -251,10 +290,12 @@ function displayTitle(event) {
   return `${base} · ${complement}`;
 }
 
-function normalizeEvent(rawEvent, monthGroup = {}, models = new Map()) {
+function normalizeEvent(rawEvent, monthGroup = {}, models = new Map(), eventTypes = readEventTypes()) {
   const event = applyEventModel(rawEvent, models);
   const parts = dateParts(event.date) || {};
-  const category = event.category || 'palestra';
+  const customCategory = String(event.categoryCustom || '').trim();
+  const category = customCategory ? slugify(customCategory) : event.category || 'palestra';
+  const categoryLabel = customCategory || eventTypes.byValue.get(category)?.label || category;
   const price = event.price || (event.free ? 'Gratuito' : '');
   const duration = durationDays(event.durationDays);
   const status = statusForEvent({ ...event, durationDays: duration });
@@ -269,11 +310,13 @@ function normalizeEvent(rawEvent, monthGroup = {}, models = new Map()) {
     weekday: parts.weekday || event.weekday || '',
     durationDays: duration,
     category,
-    tag: event.tag || categoryLabels[category] || category,
+    categoryCustom: customCategory,
+    tag: event.tag || categoryLabel,
     description: event.description || '',
     location: event.location || '',
     time: event.time || '',
     price,
+    students: event.students || event.studentCount || '',
     free: Boolean(event.free || String(price).toLowerCase().includes('gratuito')),
     status,
     href: event.href || '/pages/atividades.html',
@@ -289,7 +332,7 @@ function monthId(year, month) {
   return year === '2026' ? `m-${month}` : `m${String(year).slice(2)}-${month}`;
 }
 
-function readEvents() {
+function readEvents(eventTypes) {
   const parsed = JSON.parse(fs.readFileSync(eventsPath, 'utf8'));
   const models = readEventModels();
 
@@ -297,14 +340,14 @@ function readEvents() {
     return parsed.months
       .flatMap((monthGroup) => {
         const events = Array.isArray(monthGroup.events) ? monthGroup.events : [];
-        return events.map((event) => normalizeEvent(event, monthGroup, models));
+        return events.map((event) => normalizeEvent(event, monthGroup, models, eventTypes));
       })
       .filter((event) => event.title && event.date)
       .sort((a, b) => dateValue(a) - dateValue(b));
   }
 
   return (parsed.events || [])
-    .map((event) => normalizeEvent(event, {}, models))
+    .map((event) => normalizeEvent(event, {}, models, eventTypes))
     .filter((event) => event.title && event.date)
     .slice()
     .sort((a, b) => dateValue(a) - dateValue(b));
@@ -325,17 +368,39 @@ ${featured.map((event) => {
 ${featuredEnd}`;
 }
 
+function renderCategoryControls(eventTypes, events) {
+  const usedCategories = new Map();
+  events.forEach((event) => {
+    if (!event.category || usedCategories.has(event.category)) return;
+    usedCategories.set(event.category, {
+      value: event.category,
+      label: event.categoryCustom || eventTypes.byValue.get(event.category)?.plural || eventTypes.byValue.get(event.category)?.label || event.tag || event.category,
+    });
+  });
+
+  const controls = [
+    ...eventTypes.types.map((type) => ({ value: type.value, label: type.plural || type.label })),
+    ...[...usedCategories.values()].filter((type) => !eventTypes.byValue.has(type.value)),
+  ];
+
+  return `<!-- CMS AGENDA CATEGORIES START -->
+              <button class="cat-chip on" data-cat="all"><span class="dot"></span>Tudo <span class="count">0</span></button>
+${controls.map((type) => `              <button class="cat-chip" data-cat="${escapeHtml(type.value)}"><span class="dot"></span>${escapeHtml(type.label)} <span class="count">0</span></button>`).join('\n')}
+<!-- CMS AGENDA CATEGORIES END -->`;
+}
+
 function renderRow(event) {
   const rowPast = isPast(event) ? ' is-past' : '';
   const stateClass = event.status === 'Inscrições Abertas' ? 'state open' : event.status === 'Vagas preenchidas' ? 'state closed' : 'state';
   const priceClass = event.free ? 'price free' : 'price';
   const buttonLabel = event.buttonLabel || 'Ver detalhes';
   const rowDate = formatRowDate(event);
+  const students = event.students ? `<span class="students">${escapeHtml(event.students)}</span>` : '';
 
   return `          <a class="agenda-row${rowPast}" data-cat="${escapeHtml(event.category)}" data-month="${escapeHtml(event.month)}" href="${escapeHtml(event.href || '/pages/atividades.html')}">
             <div class="agenda-row__date"><strong>${escapeHtml(rowDate.day)}</strong><span>${escapeHtml(rowDate.weekday)}</span></div>
             <div class="agenda-row__body">
-              <span class="agenda-tag ${escapeHtml(event.category)}">${escapeHtml(event.tag)}</span>
+              <div class="agenda-row__labels"><span class="agenda-tag ${escapeHtml(event.category)}">${escapeHtml(event.tag)}</span><span class="${stateClass}">${escapeHtml(event.status)}</span></div>
               <h3>${escapeHtml(event.title)}</h3>
               <p>${escapeHtml(event.description)}</p>
             </div>
@@ -343,7 +408,7 @@ function renderRow(event) {
               <span><span class="ico">◆</span> ${escapeHtml(event.location || '')}</span>
               <span><span class="ico">◆</span> ${escapeHtml(event.time || '')}</span>
             </div>
-            <div class="agenda-row__status"><span class="${priceClass}">${escapeHtml(event.price)}</span><span class="${stateClass}">${escapeHtml(event.status)}</span></div>
+            <div class="agenda-row__status"><span class="${priceClass}">${escapeHtml(event.price)}</span>${students}</div>
             <span class="agenda-row__arr" aria-label="${escapeHtml(buttonLabel)}" title="${escapeHtml(buttonLabel)}">→</span>
           </a>`;
 }
@@ -385,10 +450,11 @@ ${keys.map((key) => {
 ${eventsEnd}`;
 }
 
-function updatePage(events) {
+function updatePage(events, eventTypes) {
   let html = fs.readFileSync(agendaPagePath, 'utf8');
   const featuredHtml = renderFeatured(events);
   const eventsHtml = renderEvents(events);
+  const categoryControlsHtml = renderCategoryControls(eventTypes, events);
 
   if (html.includes(featuredStart) && html.includes(featuredEnd)) {
     html = html.replace(new RegExp(`${featuredStart}[\\s\\S]*?${featuredEnd}`), featuredHtml);
@@ -408,14 +474,24 @@ function updatePage(events) {
     );
   }
 
+  if (html.includes('<!-- CMS AGENDA CATEGORIES START -->') && html.includes('<!-- CMS AGENDA CATEGORIES END -->')) {
+    html = html.replace(/<!-- CMS AGENDA CATEGORIES START -->[\s\S]*?<!-- CMS AGENDA CATEGORIES END -->/, categoryControlsHtml);
+  } else {
+    html = html.replace(
+      /(<div class="cat-chips" id="catChips" role="group" aria-label="Filtrar por categoria">\s*)[\s\S]*?(\s*<\/div>\s*<\/div>\s*<div class="controls-row">\s*<span class="controls-label">Mês<\/span>)/,
+      `$1${categoryControlsHtml}\n$2`
+    );
+  }
+
   fs.writeFileSync(agendaPagePath, html);
 }
 
-const events = readEvents();
+const eventTypes = readEventTypes();
+const events = readEvents(eventTypes);
 
 if (events.length === 0) {
   throw new Error('No events found in content/agenda/events.json.');
 }
 
-updatePage(events);
+updatePage(events, eventTypes);
 console.log(`Generated agenda page with ${events.length} events.`);

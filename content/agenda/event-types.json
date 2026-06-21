@@ -1,0 +1,17 @@
+{
+  "types": [
+    { "value": "palestra", "label": "Palestra", "plural": "Palestras" },
+    { "value": "oficina", "label": "Oficina", "plural": "Oficinas" },
+    { "value": "programa", "label": "Programa", "plural": "Programas" },
+    { "value": "curso-campo", "label": "Curso de Campo", "plural": "Cursos de Campo" },
+    { "value": "curso-hibrido", "label": "Curso Híbrido", "plural": "Cursos Híbridos" },
+    { "value": "curso-presencial", "label": "Curso Presencial", "plural": "Cursos Presenciais" },
+    { "value": "curso-online", "label": "Curso Online", "plural": "Cursos Online" },
+    { "value": "verbete", "label": "Verbete", "plural": "Verbetes" },
+    { "value": "artigo", "label": "Artigo", "plural": "Artigos" },
+    { "value": "simposio", "label": "Simpósio", "plural": "Simpósios" },
+    { "value": "forum", "label": "Fórum", "plural": "Fóruns" },
+    { "value": "dinamica", "label": "Dinâmica", "plural": "Dinâmicas" },
+    { "value": "encontro", "label": "Encontro", "plural": "Encontros" }
+  ]
+}
