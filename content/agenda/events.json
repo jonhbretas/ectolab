@@ -65,6 +65,28 @@
       "featuredStyle": "",
       "featuredDate": "",
       "featuredCategory": ""
+    },
+    {
+      "model": "dip",
+      "title": "Duas Décadas da DIP - 6 Elipes e 12 Epicons - Gratuita",
+      "category": "",
+      "categoryCustom": "",
+      "date": "2026-07-10",
+      "durationDays": null,
+      "href": "",
+      "description": "Atenção: As vagas são estritamente limitadas a 200 pessoas e serão garantidas por ordem de inscrição. Devido à gratuidade e à importância do marco de 2 décadas, esperamos que as vagas se esgotem rapidamente.",
+      "location": "Hotel Interludium",
+      "time": "17:00",
+      "tag": "",
+      "status": "Inscrições Abertas",
+      "students": "Até 250 participantes",
+      "price": "",
+      "free": true,
+      "buttonLabel": "Ver detalhes",
+      "featured": false,
+      "featuredStyle": "gold",
+      "featuredDate": "",
+      "featuredCategory": ""
     }
   ]
 }
