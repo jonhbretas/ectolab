@@ -14,14 +14,14 @@ function HeroConservadora() {
           <div className="hero-left">
             <div className="eyebrow">
               <span className="dot"></span>
-              ECTOLAB &nbsp;·&nbsp; ASSOCIAÇÃO INTERNACIONAL DE PESQUISA EM ECTOPLASMIA E PARACIRURGIA
+              ECTOLAB &nbsp;·&nbsp; ASSOCIAÇÃO INTERNACIONAL DE PESQUISA LABORATORIAL EM ECTOPLASMIA E PARACIRURGIA
             </div>
             <h1 className="h-display" style={{ marginTop: 24 }}>
               Pesquisa técnica<br />
-              <em>em fenômenos ectoplásmicos</em>.
+              <em>em fenômenos ectoplásmicos</em>
             </h1>
             <p className="lede" style={{ maxWidth: 620, marginTop: 28 }}>
-              A Ectolab é a Associação Internacional de Pesquisa em Ectoplasmia e Paracirurgia.
+              A Ectolab é a Associação Internacional de Pesquisa Laboratorial em Ectoplasmia e Paracirurgia.
               Investigamos o ectoplasma, a paracirurgia e os fenômenos ectoplásmicos com método,
               registro técnico e compromisso interassistencial.
             </p>
@@ -36,15 +36,15 @@ function HeroConservadora() {
           </div>
           <aside className="hero-card">
             <div className="hero-card__top">
-              <span className="specimen">FICHA Nº 01 / INSTITUCIONAL</span>
+              <span className="specimen">FICHA INSTITUCIONAL</span>
               <span className="specimen">2026</span>
             </div>
             <div className="hero-card__title">
               Resumo&nbsp;<span className="aster">*</span>&nbsp;ECTOLAB
             </div>
             <dl className="hero-card__list">
-              <div><dt>Natureza</dt><dd>Associação internacional de pesquisa, sem fins lucrativos</dd></div>
-              <div><dt>Especialidades</dt><dd>Ectoplasmologia &middot; Paracirurgia &middot; Bioenergologia</dd></div>
+              <div><dt>Natureza</dt><dd>Associação internacional de pesquisa, sem fins lucrativos.</dd></div>
+              <div><dt>Especialidades</dt><dd>Ectoplasmologia &middot; Paracirurgia </dd></div>
               <div><dt>Base científica</dt><dd>Conscienciologia (W. Vieira, 1981)</dd></div>
               <div><dt>Princípio</dt><dd>Descrença lúcida, experimentação pessoal e registro crítico</dd></div>
               <div><dt>Sede</dt><dd>Foz do Iguaçu, Paraná &middot; BR</dd></div>
@@ -70,7 +70,7 @@ function HeroConservadora() {
           <div className="quadrant__cell">
             <span className="specimen">III.</span>
             <h3 className="h3">Assistir</h3>
-            <p>Dinâmicas em Brasília, Curitiba, Foz do Iguaçu, São Paulo, Rio de Janeiro, Florianópolis, Portugal e Alemanha.</p>
+            <p>Interassistência através de Pesquisa, Dinâmicas Parapsíquicas, Cursos e Laboratórios.</p>
           </div>
           <div className="quadrant__cell">
             <span className="specimen">IV.</span>
@@ -89,14 +89,14 @@ function HeroEquilibrada() {
       <div className="wrap">
         <div className="eyebrow center-eye">
           <span className="dot"></span>
-          ECTOLAB &nbsp;·&nbsp; ASSOCIAÇÃO INTERNACIONAL DE PESQUISA EM ECTOPLASMIA E PARACIRURGIA &nbsp;·&nbsp; EST. 2013
+          ECTOLAB &nbsp;·&nbsp; ASSOCIAÇÃO INTERNACIONAL DE PESQUISA LABORATORIAL EM ECTOPLASMIA E PARACIRURGIA &nbsp;·&nbsp; EST. 2013
         </div>
         <h1 className="h-display center-title">
           Pesquisa em ectoplasmia,<br />
           <strong style={{ color: "var(--teal)", fontWeight: 700 }}>paracirurgia e interassistência</strong>.
         </h1>
         <p className="lede center-lede">
-          A Ectolab é a Associação Internacional de Pesquisa em Ectoplasmia e Paracirurgia.
+          A Ectolab é a Associação Internacional de Pesquisa Laboratorial em Ectoplasmia e Paracirurgia.
           Desenvolvemos investigação técnica e experimental sobre fenômenos ectoplásmicos,
           formação de voluntários e práticas interassistenciais.
         </p>
@@ -196,13 +196,10 @@ function PrincipioDescrenca() {
             <div>
               <h2 className="descrenca-h2">Princípio da Descrença</h2>
               <p className="descrenca-lede">
-                Toda informação deve ser submetida à experimentação pessoal, ao registro
-                disciplinado e à análise crítica.
+                <i>"Não acredite em nada, nem mesmo no que lhe informarem aqui. Experimente. Tenha suas experiências pessoais."</i>
               </p>
               <p className="descrenca-body">
-                Este princípio orienta a postura pesquisística da Ectolab: observar com honestidade,
-                registrar com método, comparar evidências e revisar conclusões. Ele atravessa cursos,
-                dinâmicas de paracirurgia, artigos e relatórios institucionais.
+                O Princípio da Descrença é a premissa central da Conscienciologia, uma proposta filosófica que orienta a não aceitar nenhuma ideia de forma dogmática, mística ou cega.
               </p>
             </div>
           </div>
@@ -256,7 +253,7 @@ function OQueFazemos() {
   const cells = [
     { num: "01", title: "Pesquisa", text: "Investigação técnica sobre ectoplasmia, consciência, interações energéticas e efeitos interassistenciais observáveis.", link: "pages/parcerias.html" },
     { num: "02", title: "Cursos", text: "Cursos e imersões que conectam estudo, observação, prática orientada e retribuição pela docência.", link: "pages/cursos.html" },
-    { num: "03", title: "Paracirurgia", text: "Dinâmicas em Brasília, Curitiba, Foz do Iguaçu, São Paulo, Rio de Janeiro, Florianópolis, Portugal e Alemanha.", link: "pages/paracirurgia.html" },
+    { num: "03", title: "Paracirurgia", text: "Dinâmicas em 8 cidades e 3 Países. Laboratório de Paracirurgia replicável para qualquer Campus Conscienciológico.", link: "pages/paracirurgia.html" },
     { num: "04", title: "Qualificação", text: "Formação de voluntários, parcerias institucionais, produção científica e continuidade de pesquisa.", link: "pages/atividades.html" },
   ];
   return (
@@ -539,10 +536,13 @@ function EventosBlog() {
 
 function Glossario() {
   const terms = [
-    { t: "Ectoplasma", d: "Hipótese de substância ou energia semimaterial associada a manifestações observadas em fenômenos ectoplásmicos.", aka: "do gr. ektós (fora) + plásma (forma)" },
-    { t: "Paracirurgia", d: "Prática interassistencial de base energética, conduzida com preparo, equipe, protocolo e registro pós-atendimento.", aka: "para- + cirurgia" },
-    { t: "Interassistência", d: "Relação de auxílio mútuo em que assistência, aprendizagem e responsabilidade caminham juntas.", aka: "inter- + assistência" },
-    { t: "Pesquisa", d: "Postura técnica de observar, registrar, comparar, revisar e transformar experiência em conhecimento comunicável.", aka: "método + evidência + revisão" },
+    { t: "Ectoplasma", d: "Substância ou energia semimaterial exteriorizada pela consciência, associada a fenômenos parapsíquicos de materialização e efeitos físicos.", aka: "do gr. ektós (fora) + plásma (forma)" },
+
+{ t: "Ectoplasmia", d: "Conjunto de práticas interassistenciais fundamentadas na exteriorização lúcida e controlada do ectoplasma com finalidade assistencial e paraterapêutica.", aka: "ectoplasma + -ia (processo, ação)" },
+
+{ t: "Ectoplasta", d: "Consciência capaz de produzir e exteriorizar ectoplasma de modo lúcido, atuando em atividades interassistenciais energéticas.", aka: "ectoplasma + -sta (agente, executor)" },
+
+{ t: "Ectoplastia", d: "Processo técnico de utilização do ectoplasma na recomposição, modelagem ou intervenção energética em estruturas somáticas ou extrafísicas.", aka: "ectoplasma + plastia (modelagem, formação)" },
   ];
   return (
     <section className="section glossario">
@@ -558,7 +558,7 @@ function Glossario() {
         <div className="glossario-grid h-scroll">
           {terms.map((t, i) => (
             <div className="gloss" key={i}>
-              <span className="specimen">VERBETE Nº {String(i + 1).padStart(2, "0")}</span>
+              <span className="specimen">Termo Nº {String(i + 1).padStart(2, "0")}</span>
               <h3 className="serif gloss__t">{t.t}</h3>
               <p className="gloss__d">{t.d}</p>
               <p className="mono gloss__aka">{t.aka}</p>
