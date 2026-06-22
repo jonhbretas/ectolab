@@ -173,7 +173,6 @@
           ${logoHTML}
         </a>
         <nav class="nav">${navHTML}</nav>
-        <a href="https://dip-ectolab.org.br/login" target="_blank" rel="noreferrer" class="btn btn-system btn-sm header-cta header-cta-system">Acessar sistema <span class="arrow">↗</span></a>
         <a href="${P}pages/parcerias.html" class="btn btn-parcerias btn-sm header-cta">Parcerias de Pesquisa</a>
         <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange btn-sm header-cta">Solicitar paracirurgia <span class="arrow">↗</span></a>
         <div class="lang-switch" role="group" aria-label="Idioma">
@@ -199,7 +198,6 @@
       <nav class="mnav">${mobileNavHTML}</nav>
       <div class="nav-drawer__ctas">
         <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange" style="width:100%;justify-content:center">Solicitar paracirurgia <span class="arrow">↗</span></a>
-        <a href="https://dip-ectolab.org.br/login" target="_blank" rel="noreferrer" class="btn btn-system" style="width:100%;justify-content:center">Acessar sistema <span class="arrow">↗</span></a>
         <div class="lang-switch" role="group" aria-label="Idioma" style="justify-content:center;margin-top:4px">
           <button data-lang="PT" class="${lang === "PT" ? "on" : ""}">PT</button>
           <button data-lang="EN" class="${lang === "EN" ? "on" : ""}">EN</button>
