@@ -10,71 +10,74 @@ function App() {
         </div>
         <div className="grid g2 gap-48">
           <div>
-            <div className="eyebrow"><span className="dot"></span>CURSO PRESENCIAL INÉDITO &nbsp;·&nbsp; SOMENTE 40 VAGAS</div>
+            <div className="eyebrow"><span className="dot"></span>ONLINE AO VIVO &nbsp;·&nbsp; TRADUÇÃO SIMULTÂNEA</div>
             <h1 className="h1" style={{ marginTop: 16 }}>
               Ectoplasmia Protetiva.
             </h1>
             <p className="lede" style={{ marginTop: 24 }}>
-              Permitir ao aluno conhecer e identificar as situações adversas ou traumáticas que um ectoplasta pode vivenciar, colocando em risco a proéxis e a própria vida.
+              A ectoplasmia como fator multidimensional de risco ou proteção. Como fenômenos parapsíquicos
+              e energias podem interferir na programação existencial — e o que fazer a respeito.
             </p>
-            
+
             <div className="prose" style={{ marginTop: 40, marginLeft: 0 }}>
-              <h3>O que o curso pretende?</h3>
-              <p>Apresentar a hipótese de que é possível tomarmos decisões profiláticas e conhecer melhor os fenômenos parapsíquicos, principalmente os protetivos.</p>
-              
+              <h3>Sobre o Curso</h3>
+              <p>
+                Curso sobre a ectoplasmia como fator multidimensional de risco ou proteção. Aborda como fenômenos
+                parapsíquicos e energias podem interferir na programação existencial, destacando ações profiláticas,
+                holopensene pessoal e atitudes multidimensionais para proteção individual e coletiva.
+              </p>
+
               <h3>Objetivos</h3>
               <ul>
-                <li>Conceituar a Ectoplasmia Protetiva.</li>
-                <li>Apresentar os fatores de riscos e protetivos.</li>
-                <li>Estudos de casos práticos.</li>
-                <li>Cobaiagem assistencial.</li>
-                <li>Instalação de Campo Ectoplásmico.</li>
+                <li>Apresentar o conceito de ectoplasmia protetiva.</li>
+                <li>Abordar situações em que o ectoplasma pode ser fator de risco.</li>
+                <li>Apontar situações em que o ectoplasma pode ser fator protetivo.</li>
+                <li>Apresentar estudos de caso.</li>
+                <li>Trabalhar o conceito de ectoplasta cobaia.</li>
+                <li>Indicar ações profiláticas para proteção individual e coletiva.</li>
               </ul>
+
+              <h3>Formato e Acesso</h3>
+              <p>
+                Curso ao vivo (online síncrono) com replay disponível por <strong>30 dias</strong> após a
+                realização. Tradução simultânea para <strong>espanhol e inglês</strong> incluída.
+              </p>
             </div>
 
             <blockquote style={{ marginTop: 40, padding: 24, background: 'var(--paper-2)', borderLeft: '4px solid var(--orange)', borderRadius: '0 var(--r-md) var(--r-md) 0' }}>
               <p style={{ margin: 0, fontStyle: 'italic', color: 'var(--ink)' }}>
-                "Quando o ectoplasma pode ser perigoso e quando pode ser protetivo? Hipótese: vai depender dos efeitos que ele gera em cada caso específico."
+                "Quando o ectoplasma pode ser perigoso e quando pode ser protetivo? Vai depender dos efeitos que ele gera em cada caso específico."
               </p>
               <cite className="specimen" style={{ display: 'block', marginTop: 12, color: 'var(--ink-3)' }}>— Live Diálogos Online: Ectoplasmia Protetiva</cite>
             </blockquote>
-
-            <div style={{ marginTop: 48 }}>
-              <h3 className="h4" style={{ marginBottom: 16 }}>Depoimentos sobre o tema:</h3>
-              <div className="col gap-12">
-                {[
-                  { a: "Kaka Amui", t: "Muito bom! Parabéns aos idealizadores e ao professor Loche que trouxe muitas casuísticas interessantes." },
-                  { a: "Gabriel Dorcino", t: "Muito bom!! Show!!" },
-                  { a: "Kelly Lopes", t: "Parabéns Loche. Muito interessante!!!" }
-                ].map((d, i) => (
-                  <div key={i} className="glass" style={{ padding: '16px 20px', borderRadius: 'var(--r-md)' }}>
-                    <p style={{ margin: '0 0 8px', fontSize: 15, color: 'var(--ink-2)' }}>"{d.t}"</p>
-                    <span className="specimen">— {d.a}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
           </div>
-          
+
           <div>
             <div className="glass-teal" style={{ padding: 32, position: 'sticky', top: 100, borderRadius: 'var(--r-lg)' }}>
               <h3 className="h3" style={{ color: 'var(--white)', marginBottom: 24 }}>Informações</h3>
               <div className="col gap-16">
                 {[
-                  ['Modalidade', 'Presencial (Apenas 40 vagas)'],
-                  ['Data', '22 e 23 de outubro'],
-                  ['Horários', 'Sáb 9h–17h30 | Dom 8h30–17h'],
-                  ['Local', 'Auditorium – CEAEC'],
-                  ['Professores', 'Laênio Loche e Marcelo Silva'],
-                  ['Valor', 'R$ 600,00 (Até 10x)']
+                  ['Modalidade', 'Online ao vivo (síncrono)'],
+                  ['Replay', 'Disponível por 30 dias'],
+                  ['Tradução', 'Espanhol e inglês'],
+                  ['Professores', 'Laênio Loche, Celeste Silveira, Máris Polo Paz, André Shataloff, Myriam Sanches e Lucas Rinaldi'],
+                  ['Investimento', 'R$ 150,00'],
                 ].map(([k, v]) => (
-                  <div key={k} className="flex between" style={{ borderBottom: '1px dashed rgba(255,255,255,0.2)', paddingBottom: 12 }}>
-                    <span className="specimen" style={{ color: 'var(--gold)' }}>{k}</span>
-                    <span style={{ fontSize: 14.5, textAlign: 'right', maxWidth: '60%', color: 'var(--white)' }}>{v}</span>
+                  <div key={k} style={{ borderBottom: '1px dashed rgba(255,255,255,0.2)', paddingBottom: 12 }}>
+                    <span className="specimen" style={{ color: 'var(--gold)', display: 'block', marginBottom: 4 }}>{k}</span>
+                    <span style={{ fontSize: 14.5, color: 'var(--white)' }}>{v}</span>
                   </div>
                 ))}
               </div>
-              <a href="https://loja.ectolab.org" target="_blank" rel="noreferrer" className="btn btn-gold" style={{ marginTop: 32, width: '100%', justifyContent: 'center' }}>Quero fazer minha inscrição <span className="arrow">→</span></a>
+              <a
+                href="https://store.conscienciologia.org.br/sku/304395/"
+                target="_blank"
+                rel="noreferrer"
+                className="btn btn-gold"
+                style={{ marginTop: 32, width: '100%', justifyContent: 'center' }}
+              >
+                Fazer minha inscrição <span className="arrow">↗</span>
+              </a>
             </div>
           </div>
         </div>
@@ -82,4 +85,5 @@ function App() {
     </section>
   );
 }
+
 ReactDOM.createRoot(document.getElementById("app")).render(<App />);
