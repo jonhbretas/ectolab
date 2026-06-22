@@ -6,6 +6,7 @@ const agendaPagePath = path.join(root, 'pages', 'agenda.html');
 const eventsPath = path.join(root, 'content', 'agenda', 'events.json');
 const eventModelsPath = path.join(root, 'content', 'agenda', 'event-models.json');
 const eventTypesPath = path.join(root, 'content', 'agenda', 'event-types.json');
+const agendaDataPath = path.join(root, 'assets', 'agenda-data.js');
 
 const eventsStart = '<!-- CMS AGENDA EVENTS START -->';
 const eventsEnd = '<!-- CMS AGENDA EVENTS END -->';
@@ -486,6 +487,50 @@ function updatePage(events, eventTypes) {
   fs.writeFileSync(agendaPagePath, html);
 }
 
+// ─── Geração do agenda-data.js (usado pelo React na Home e Agenda) ───────────
+//
+// Campos de controle nos eventos do CMS (events.json):
+//   pinHome   : true/false  — aparece na seção "Próximas Atividades" da Home
+//   homeOrdem : número      — posição na tira da Home (menor = primeiro)
+//   tituloHome: string      — título curto para exibição na Home (opcional)
+//   tipoHome  : string      — label de tipo para a Home (ex: "TERTÚLIA", "CURSO · IMERSÃO")
+//   detalhe   : string      — linha complementar exibida nos cards (opcional)
+//   precoExtra: string      — preço secundário (ex: "estudante R$ 240") (opcional)
+//
+function generateAgendaDataFile(events) {
+  const mapped = events.map((event) => ({
+    dia:       String(event.day || '').padStart(2, '0'),
+    mes:       (event.month || '').toUpperCase(),
+    mesNome:   (event.monthLabel || '').toUpperCase(),
+    ano:       event.year || '',
+    titulo:    event.tituloHome || event.title || '',
+    tipo:      event.tipoHome || event.tag || '',
+    gratuito:  Boolean(event.free),
+    local:     event.location || '',
+    horario:   event.time || '',
+    detalhe:   event.detalhe || null,
+    href:      event.href || '/pages/atividades.html',
+    preco:     event.price || '',
+    precoExtra: event.precoExtra || null,
+    status:    event.status || '',
+    pinHome:   Boolean(event.pinHome),
+    homeOrdem: typeof event.homeOrdem === 'number' ? event.homeOrdem : 999,
+  }));
+
+  const header = [
+    '// AUTO-GERADO por scripts/generate-agenda.mjs — não edite manualmente.',
+    '// Para atualizar: edite content/agenda/events.json e execute npm run generate:content',
+    '//',
+    '// Controle da Home via campos no CMS:',
+    '//   pinHome   — true/false: exibir na seção "Próximas Atividades"',
+    '//   homeOrdem — número: ordem de exibição (menor = primeiro)',
+    '//   tituloHome — título curto para a Home (opcional)',
+    '//   tipoHome  — label de tipo para a Home (opcional)',
+  ].join('\n');
+
+  fs.writeFileSync(agendaDataPath, `${header}\n\nexport const eventos = ${JSON.stringify(mapped, null, 2)};\n`);
+}
+
 const eventTypes = readEventTypes();
 const events = readEvents(eventTypes);
 
@@ -495,3 +540,6 @@ if (events.length === 0) {
 
 updatePage(events, eventTypes);
 console.log(`Generated agenda page with ${events.length} events.`);
+
+generateAgendaDataFile(events);
+console.log(`Generated agenda-data.js with ${events.length} events (${events.filter(e => e.pinHome).length} pinned to home).`);

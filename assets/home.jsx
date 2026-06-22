@@ -413,7 +413,10 @@ function CursosDestaque() {
 }
 
 function ProximosEventos() {
-  const proximos = todosEventos.slice(0, 4); // mostra os 4 primeiros de agenda-data.js
+  const proximos = todosEventos
+    .filter(e => e.pinHome)
+    .sort((a, b) => (a.homeOrdem || 999) - (b.homeOrdem || 999))
+    .slice(0, 4);
   return (
     <section className="prox-eventos">
       <div className="wrap">
