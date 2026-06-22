@@ -114,7 +114,7 @@
       "price": "R$1500",
       "free": false,
       "buttonLabel": "Ver detalhes",
-      "featured": false,
+      "featured": true,
       "featuredStyle": "gold",
       "featuredDate": "",
       "featuredCategory": ""
