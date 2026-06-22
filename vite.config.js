@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { relative, resolve } from 'path';
-import { copyFileSync, mkdirSync, readFileSync } from 'fs';
+import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { spawnSync } from 'child_process';
 
 /**
  * Assets "crus" referenciados por caminho absoluto /assets/... nas páginas
@@ -179,13 +180,69 @@ function seoPlugin() {
   };
 }
 
+// ─── Admin Plugin (dev only) ─────────────────────────────────────────────────
+// Expõe duas rotas durante o "npm run dev":
+//   GET  /api/admin/events  → lê content/agenda/events.json
+//   POST /api/admin/events  → salva events.json e regenera agenda-data.js
+function adminPlugin() {
+  const eventsFilePath    = resolve(__dirname, 'content', 'agenda', 'events.json');
+  const generateScriptPath = resolve(__dirname, 'scripts', 'generate-agenda.mjs');
+
+  return {
+    name: 'ectolab-admin',
+    configureServer(server) {
+      server.middlewares.use((req, res, next) => {
+        const url = (req.url || '').split('?')[0];
+
+        // GET /api/admin/events
+        if (url === '/api/admin/events' && req.method === 'GET') {
+          res.setHeader('Content-Type', 'application/json; charset=utf-8');
+          res.setHeader('Cache-Control', 'no-cache');
+          res.end(readFileSync(eventsFilePath, 'utf8'));
+          return;
+        }
+
+        // POST /api/admin/events  — salva JSON + regenera agenda-data.js
+        if (url === '/api/admin/events' && req.method === 'POST') {
+          let body = '';
+          req.on('data', chunk => { body += chunk; });
+          req.on('end', () => {
+            res.setHeader('Content-Type', 'application/json; charset=utf-8');
+            try {
+              const parsed = JSON.parse(body);
+              writeFileSync(eventsFilePath, JSON.stringify(parsed, null, 2) + '\n');
+              const result = spawnSync(process.execPath, [generateScriptPath], {
+                cwd: __dirname,
+                encoding: 'utf8',
+              });
+              const ok = result.status === 0;
+              res.statusCode = ok ? 200 : 500;
+              res.end(JSON.stringify({
+                ok,
+                log: (result.stdout || '').trim(),
+                error: ok ? null : (result.stderr || 'Erro ao regenerar agenda-data.js').trim(),
+              }));
+            } catch (e) {
+              res.statusCode = 400;
+              res.end(JSON.stringify({ ok: false, error: e.message }));
+            }
+          });
+          return;
+        }
+
+        next();
+      });
+    },
+  };
+}
+
 /**
  * @fileoverview Configuração Global do Vite.
  * Compila o React previamente, removendo a necessidade do Babel Standalone
  * no navegador. Isso reduz o tamanho da página e aumenta a velocidade.
  */
 export default defineConfig({
-  plugins: [react(), seoPlugin(), rawAssets()],
+  plugins: [react(), seoPlugin(), rawAssets(), adminPlugin()],
   build: {
     rollupOptions: {
       // CENTRAL DE PÁGINAS (Build):

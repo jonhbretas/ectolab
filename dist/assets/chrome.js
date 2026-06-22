@@ -42,30 +42,34 @@
       ]
     },
     { id: "trilha",        label: "Trilha",          href: P + "pages/trilha.html" },
-    { 
-      id: "cursos", 
-      label: "Cursos", 
+    {
+      id: "cursos",
+      label: "Cursos",
       href: P + "pages/cursos.html",
       dropdown: [
         { cat: "Cursos de Campo", links: [
+          { label: "Imersão em Ectoplasmia", href: P + "pages/curso-imersao.html" },
           { label: "EPPI", href: P + "pages/curso-eppi.html" },
-          { label: "Campo Paracirúrgico", href: P + "pages/curso-campo.html" },
-          { label: "Imersão em Ectoplasmia", href: P + "pages/curso-imersao.html" }
+          { label: "Campo Paracirúrgico", href: P + "pages/curso-campo.html" }
         ]},
         { cat: "Presenciais", links: [
           { label: "PROEP", href: P + "pages/curso-proep.html" },
+          { label: "Fitoectoplasmia Interassistencial", href: P + "pages/cursos.html#presenciais" }
+        ]},
+        { cat: "Gravados (Online)", links: [
+          { label: "Ectoplasmia Interassistencial", href: P + "pages/curso-ectoplasmia-interassistencial.html" },
           { label: "Ectoplasmia Protetiva", href: P + "pages/curso-ectoplasmia-protetiva.html" },
-          { label: "Fitoectoplasmia", href: P + "pages/cursos.html#presenciais" },
+          { label: "Quadro Sinóptico Parapesquisístico", href: P + "pages/curso-quadro-sinoptico.html" },
+          { label: "Aplicação Prática da Ectoplasmia", href: P + "pages/curso.html?id=aplicacao" },
+          { label: "Ciclo Vital do Ectoplasta", href: P + "pages/curso.html?id=ciclo" },
+          { label: "Raízes da Ectoplasmia", href: P + "pages/curso.html?id=raizes" }
         ]},
         { cat: "Online (Ao Vivo / Síncrono)", links: [
           { label: "Auto-organização Bioenergética", href: P + "pages/curso.html?id=auto-org" },
           { label: "Qualificação dos Pensenes", href: P + "pages/curso.html?id=qualificacao" }
         ]},
-        { cat: "Gravados (Online)", links: [
-          { label: "Ectoplasmia Interassistencial", href: P + "pages/curso-ectoplasmia-interassistencial.html" },
-          { label: "Aplicação Prática da Ectoplasmia", href: P + "pages/curso.html?id=aplicacao" },
-          { label: "Ciclo Vital do Ectoplasta", href: P + "pages/curso.html?id=ciclo" },
-          { label: "Raízes da Ectoplasmia", href: P + "pages/curso.html?id=raizes" }
+        { cat: "Oficina", links: [
+          { label: "Oficina de Ectoplasmologia", href: P + "pages/oficina-ectoplasmologia.html" }
         ]}
       ]
     },
@@ -297,9 +301,14 @@
       "Qualificação dos Pensenes": "Thosene Qualification",
       "Gravados (Online)": "Recorded (Online)",
       "Ectoplasmia Interassistencial": "Interassistantial Ectoplasmy",
+      "Ectoplasmia Protetiva": "Protective Ectoplasmy",
+      "Quadro Sinóptico Parapesquisístico": "Pararesearch Synoptic Table",
       "Aplicação Prática da Ectoplasmia": "Practical Application of Ectoplasmy",
       "Ciclo Vital do Ectoplasta": "Ectoplast Life Cycle",
       "Raízes da Ectoplasmia": "Roots of Ectoplasmy",
+      "Fitoectoplasmia Interassistencial": "Interassistantial Phytoectoplasmy",
+      "Oficina": "Workshop",
+      "Oficina de Ectoplasmologia": "Ectoplasmology Workshop",
       "Atividades": "Activities",
       "Laboratórios": "Laboratories",
       "Laboratório de Paracirurgia": "Parasurgery Laboratory",
@@ -498,9 +507,14 @@
       "Qualificação dos Pensenes": "Cualificación de los Pensenes",
       "Gravados (Online)": "Grabados (en línea)",
       "Ectoplasmia Interassistencial": "Ectoplasmia Interasistencial",
+      "Ectoplasmia Protetiva": "Ectoplasmia Protectora",
+      "Quadro Sinóptico Parapesquisístico": "Cuadro Sinóptico Parainvestigativo",
       "Aplicação Prática da Ectoplasmia": "Aplicación Práctica de la Ectoplasmia",
       "Ciclo Vital do Ectoplasta": "Ciclo Vital del Ectoplasta",
       "Raízes da Ectoplasmia": "Raíces de la Ectoplasmia",
+      "Fitoectoplasmia Interassistencial": "Fitoectoplasmia Interasistencial",
+      "Oficina": "Taller",
+      "Oficina de Ectoplasmologia": "Taller de Ectoplasmología",
       "Atividades": "Actividades",
       "Laboratórios": "Laboratorios",
       "Laboratório de Paracirurgia": "Laboratorio de Paracirugía",
