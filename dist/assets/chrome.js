@@ -20,7 +20,6 @@
 
   const navItems = [
     { id: "agenda",        label: "Agenda",          href: P + "pages/agenda.html" },
-    { id: "sistema",       label: "Sistema ↗",       href: "https://dip-ectolab.org.br/login", target: "_blank" },
     {
       id: "paracirurgia",  
       label: "Paracirurgia",    
@@ -36,6 +35,9 @@
           { label: "Sobre a Rede Invisível", href: P + "pages/rede.html" },
           { label: "Cadastro na Rede", href: P + "pages/rede-cadastro.html" },
           { label: "Relatório da Rede", href: P + "pages/rede-relatorio.html" }
+        ]},
+        { cat: "Sistema", links: [
+          { label: "Acessar Sistema ↗", href: "https://dip-ectolab.org.br/login", target: "_blank" }
         ]}
       ]
     },

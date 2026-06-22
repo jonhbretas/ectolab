@@ -116,6 +116,7 @@
       color: var(--white);
     }
     .cat-chip.on .count { color: rgba(255,255,255,0.6); }
+    .cat-chip[hidden] { display: none; }
 
     /* Month pills */
     .month-pills {
@@ -764,7 +765,9 @@
         });
         catChips.forEach(c => {
           const el = c.querySelector('.count');
-          if (el) el.textContent = catCounts[c.dataset.cat] || 0;
+          const n = catCounts[c.dataset.cat] || 0;
+          if (el) el.textContent = n;
+          c.hidden = c.dataset.cat !== 'all' && n === 0;
         });
         const past = pastMonths[state.year] || [];
         monthPills.forEach(p => {
@@ -810,8 +813,10 @@
       function setYear(year) {
         state.year = year;
         state.month = 'all';
+        state.cat = 'all';
         yearTabs.forEach(x => x.classList.toggle('on', x.dataset.year === year));
         monthPills.forEach(x => x.classList.toggle('on', x.dataset.month === 'all'));
+        catChips.forEach(x => x.classList.toggle('on', x.dataset.cat === 'all'));
         recomputeCounts();
         apply();
       }

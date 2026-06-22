@@ -997,7 +997,7 @@ p { margin: 0 0 1em; }
   .nav-toggle { display: flex; }
   /* Header compacto: logo à esquerda, idioma + hambúrguer à direita.
      Sem isto o excesso de gap empurra o hambúrguer para fora da tela. */
-  .site-header__inner { gap: 10px; }
+  .site-header__inner { gap: 10px; padding-left: var(--gutter); padding-right: var(--gutter); }
   .lang-switch { margin-left: auto; }
   .lang-switch button { padding: 6px 8px; }
   .brand-img { height: 34px; }

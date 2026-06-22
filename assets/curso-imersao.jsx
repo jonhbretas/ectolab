@@ -63,7 +63,10 @@ function App() {
                     </div>
                   ))}
                 </div>
-                <a href="#" className="btn btn-primary" style={{ marginTop: 32, width: '100%', justifyContent: 'center' }}>Quero me inscrever <span className="arrow">→</span></a>
+                <div className="col gap-12" style={{ marginTop: 32 }}>
+                  <a href="#" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Participar Presencial <span className="arrow">→</span></a>
+                  <a href="#" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>Participar Online <span className="arrow">→</span></a>
+                </div>
               </div>
             </div>
           </div>
