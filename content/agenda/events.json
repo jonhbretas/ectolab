@@ -197,6 +197,28 @@
       "featuredStyle": "gold",
       "featuredDate": "",
       "featuredCategory": ""
+    },
+    {
+      "model": "proep",
+      "title": "Programa de Estimulação Parapsíquica Ectoplásmica",
+      "category": "",
+      "categoryCustom": "",
+      "date": "2026-08-07",
+      "durationDays": 2,
+      "href": "",
+      "description": "",
+      "location": "",
+      "time": "",
+      "tag": "",
+      "status": "Inscrições Abertas",
+      "students": "",
+      "price": "",
+      "free": false,
+      "buttonLabel": "Ver detalhes",
+      "featured": false,
+      "featuredStyle": "",
+      "featuredDate": "",
+      "featuredCategory": ""
     }
   ]
 }
