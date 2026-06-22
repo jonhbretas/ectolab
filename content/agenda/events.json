@@ -219,6 +219,28 @@
       "featuredStyle": "",
       "featuredDate": "",
       "featuredCategory": ""
+    },
+    {
+      "model": "oficina",
+      "title": "Oficina de Ectoplasmologia",
+      "category": "",
+      "categoryCustom": "",
+      "date": "2026-08-13",
+      "durationDays": null,
+      "href": "",
+      "description": "",
+      "location": "",
+      "time": "",
+      "tag": "",
+      "status": "Inscrições Abertas",
+      "students": "Até 20 Alunos",
+      "price": "",
+      "free": true,
+      "buttonLabel": "Ver detalhes",
+      "featured": false,
+      "featuredStyle": "",
+      "featuredDate": "",
+      "featuredCategory": ""
     }
   ]
 }
