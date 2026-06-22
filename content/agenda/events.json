@@ -96,6 +96,28 @@
       "tituloHome": "III Simpósio Ectolab — Paracirurgia e Saúde Integrativa",
       "precoExtra": "estudante R$ 240",
       "detalhe": "14 palestrantes · 7 países"
+    },
+    {
+      "model": "iecto-imersao",
+      "title": "",
+      "category": "",
+      "categoryCustom": "",
+      "date": "2027-03-19",
+      "durationDays": 2,
+      "href": "",
+      "description": "",
+      "location": "Discernimentum, Foz do Iguaçu",
+      "time": "",
+      "tag": "Híbrido",
+      "status": "Inscrições Abertas",
+      "vacancies": "Até 40 Alunos",
+      "price": "R$1500",
+      "free": false,
+      "buttonLabel": "Ver detalhes",
+      "featured": false,
+      "featuredStyle": "gold",
+      "featuredDate": "",
+      "featuredCategory": ""
     }
   ]
 }
