@@ -119,7 +119,7 @@ function App() {
                   <div key={k} className="flex between" style={{ borderBottom: '1px dashed rgba(255,255,255,0.2)', paddingBottom: 12 }}><span className="specimen" style={{ color: 'var(--gold)' }}>{k}</span><span style={{ fontSize: 14.5, color: 'var(--white)', textAlign: 'right', maxWidth: 180 }}>{v}</span></div>
                 ))}
               </div>
-              <a href="https://loja.ectolab.org" target="_blank" className="btn btn-gold" style={{ marginTop: 32, width: '100%', justifyContent: 'center' }}>Garantir Vaga <span className="arrow">→</span></a>
+              <a href="https://store.conscienciologia.org.br/product-brand/ectolab/" target="_blank" className="btn btn-gold" style={{ marginTop: 32, width: '100%', justifyContent: 'center' }}>Garantir Vaga <span className="arrow">→</span></a>
             </div>
           </div>
         </div>

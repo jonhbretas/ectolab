@@ -76,7 +76,7 @@ function App() {
                   </div>
                 ))}
               </div>
-              <a href="https://loja.ectolab.org" target="_blank" rel="noreferrer" className="btn btn-gold" style={{ marginTop: 32, width: '100%', justifyContent: 'center' }}>
+              <a href="https://store.conscienciologia.org.br/product/ectoplasmia-interassistencial-23-09/" target="_blank" rel="noreferrer" className="btn btn-gold" style={{ marginTop: 32, width: '100%', justifyContent: 'center' }}>
                 Adquirir Curso <span className="arrow">→</span>
               </a>
             </div>

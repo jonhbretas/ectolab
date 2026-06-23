@@ -129,7 +129,7 @@ function App() {
                   </div>
                 )}
                 
-                <a href={data.link ? `https://${data.link}` : "https://loja.ectolab.org"} target="_blank" className="btn btn-gold" style={{ marginTop: 32, width: '100%', justifyContent: 'center' }}>
+                <a href={data.link ? `https://${data.link}` : "https://store.conscienciologia.org.br/product-brand/ectolab/"} target="_blank" className="btn btn-gold" style={{ marginTop: 32, width: '100%', justifyContent: 'center' }}>
                   Quero fazer minha inscrição <span className="arrow">→</span>
                 </a>
               </div>

@@ -52,7 +52,7 @@ function App() {
                 </p>
                 <div className="col gap-16" style={{ borderTop: '1px solid rgba(0,0,0,0.1)', paddingTop: 24 }}>
                   {[
-                    ['Modalidade', 'Presencial Hoteleiro'],
+                    ['Modalidade', 'Híbrida (Presencial e Online)'],
                     ['Duração', '27 Horas'],
                     ['Dias', 'Sexta, Sábado e Domingo'],
                     ['Vagas', 'Limitadas a capacidade do Hotel']
@@ -64,8 +64,8 @@ function App() {
                   ))}
                 </div>
                 <div className="col gap-12" style={{ marginTop: 32 }}>
-                  <a href="#" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Participar Presencial <span className="arrow">→</span></a>
-                  <a href="#" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>Participar Online <span className="arrow">→</span></a>
+                  <a href="https://store.conscienciologia.org.br/sku/311521/" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Participar Presencial <span className="arrow">→</span></a>
+                  <a href="https://store.conscienciologia.org.br/sku/311520/" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>Participar Online <span className="arrow">→</span></a>
                 </div>
               </div>
             </div>

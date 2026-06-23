@@ -79,7 +79,7 @@ function App() {
                     </div>
                   ))}
                 </div>
-                <a href="#" className="btn btn-gold" style={{ marginTop: 32, width: '100%', justifyContent: 'center' }}>Quero fazer minha inscrição <span className="arrow">→</span></a>
+                <a href="https://store.conscienciologia.org.br/loja/ectolab/?s=programa+de+estimula%C3%A7%C3%A3o+para" className="btn btn-gold" style={{ marginTop: 32, width: '100%', justifyContent: 'center' }}>Quero fazer minha inscrição <span className="arrow">→</span></a>
               </div>
             </div>
           </div>
