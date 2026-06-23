@@ -88,7 +88,7 @@
           { label: "Fórum Internacional (Online)", href: P + "pages/curso.html?id=forum" },
           { label: "Preceptoria em Ectoplasmia", href: P + "pages/curso.html?id=preceptoria" }
         ]},
-        { cat: "Dinâmicas (DIP)", links: [
+        { cat: "Dinâmicas (DIP)", href: P + "pages/dinamicas.html", links: [
           { label: "Foz do Iguaçu (Sede)", href: P + "pages/dinamica.html?loc=foz" },
           { label: "São Paulo", href: P + "pages/dinamica.html?loc=sp" },
           { label: "Rio de Janeiro", href: P + "pages/dinamica.html?loc=rj" },
@@ -131,7 +131,7 @@
       if (n.dropdown) {
         const dropGroups = n.dropdown.map(d => `
           <div class="nav-drop-group">
-            <span class="nav-drop-cat">${d.cat}</span>
+            ${d.href ? `<a href="${d.href}" class="nav-drop-cat nav-drop-cat--link">${d.cat}</a>` : `<span class="nav-drop-cat">${d.cat}</span>`}
             ${d.links.map(l => `<a href="${l.href}" ${l.target ? `target="${l.target}" rel="noreferrer"` : ""}>${l.label}</a>`).join("")}
           </div>
         `).join("");
@@ -152,7 +152,7 @@
       const id = `mnav-${n.id}`;
       const groups = n.dropdown.map(d => `
         <div class="mnav-group">
-          <span class="mnav-cat">${d.cat}</span>
+          ${d.href ? `<a href="${d.href}" class="mnav-cat mnav-cat--link">${d.cat}</a>` : `<span class="mnav-cat">${d.cat}</span>`}
           ${d.links.map(l => `<a href="${l.href}" class="mnav-link"${l.target ? ` target="${l.target}" rel="noreferrer"` : ""}>${l.label}</a>`).join("")}
         </div>`).join("");
       return `

@@ -258,6 +258,7 @@ export default defineConfig({
         cursoProep: resolve(__dirname, 'pages/curso-proep.html'),
         orientacao: resolve(__dirname, 'pages/orientacao-gratuita.html'),
         dinamica: resolve(__dirname, 'pages/dinamica.html'),
+        dinamicas: resolve(__dirname, 'pages/dinamicas.html'),
         cursoEctoplasmiaInterassistencial: resolve(__dirname, 'pages/curso-ectoplasmia-interassistencial.html'),
         cursoEctoplasmiaProtetiva: resolve(__dirname, 'pages/curso-ectoplasmia-protetiva.html'),
         curso: resolve(__dirname, 'pages/curso.html'),

@@ -100,10 +100,10 @@ function AgendaPage() {
               </p>
             </div>
             <dl className="meta-grid">
-              <div><dt>Campos públicos</dt><dd>Quartas · 19h30</dd></div>
-              <div><dt>Tertúlias</dt><dd>Sextas · 20h</dd></div>
-              <div><dt>Sede</dt><dd>Foz do Iguaçu</dd></div>
-              <div><dt>Online</dt><dd>Zoom + YouTube</dd></div>
+              <div><dt>Dinâmicas </dt><dd>Quartas · 19h30</dd></div>
+              <div><dt>Verbetes</dt><dd>Sextas · 20h</dd></div>
+              <div><dt>Cursos</dt><dd>Foz do Iguaçu</dd></div>
+              <div><dt>Oficinas</dt><dd>Zoom + YouTube</dd></div>
             </dl>
           </div>
         </div>
@@ -117,7 +117,7 @@ function AgendaPage() {
 
           <div style={{ marginTop: 8, paddingTop: 40, borderTop: "1px solid var(--line)", textAlign: "center" }}>
             <p className="lede" style={{ marginBottom: 24, color: "var(--ink-2)" }}>
-              Agenda em atualização contínua — novos campos e tertúlias são confirmados mensalmente.
+              Agenda em atualização contínua — novas atividades são confirmadas mensalmente.
             </p>
             <a href="/pages/atividades.html" className="btn btn-ghost">
               Ver também: Campos Paracirúrgicos regulares →

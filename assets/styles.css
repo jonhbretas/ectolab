@@ -373,6 +373,16 @@ p { margin: 0 0 1em; }
   transition: color 0.15s;
 }
 .nav-drop-group a:hover { color: var(--blue); }
+.nav-drop-group a.nav-drop-cat--link {
+  color: var(--blue);
+  font-size: 10px;
+  padding: 0 0 6px;
+  transition: color 0.15s, border-color 0.15s;
+}
+.nav-drop-group a.nav-drop-cat--link:hover {
+  color: var(--teal);
+  border-bottom-color: var(--teal);
+}
 
 .lang-switch {
   display: flex;
@@ -966,6 +976,12 @@ p { margin: 0 0 1em; }
   margin-bottom: 8px;
   font-weight: 600;
 }
+a.mnav-cat--link {
+  text-decoration: none;
+  border-bottom: 1px dashed var(--line);
+  padding-bottom: 8px;
+}
+a.mnav-cat--link:hover { color: var(--teal-2); }
 .mnav-link {
   display: block;
   color: var(--ink-2);
