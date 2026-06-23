@@ -61,6 +61,19 @@
       ]
     },
     {
+      "page": "Página / contato",
+      "folder": "pages/contato",
+      "images": [
+        {
+          "label": "sede ectolab pesquisa",
+          "originalPath": "/imagens/sede-ectolab-pesquisa.jpg",
+          "image": "/imagens/sede-ectolab-pesquisa.jpg",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        }
+      ]
+    },
+    {
       "page": "Página / laboratorio-ectoplasmologia",
       "folder": "pages/laboratorio-ectoplasmologia",
       "images": [

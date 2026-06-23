@@ -95,8 +95,8 @@ function AgendaPage() {
               </h1>
               <p className="lede" style={{ marginTop: 24, maxWidth: 560 }}>
                 Campos paracirúrgicos, tertúlias, imersões e simpósios.
-                Muitas atividades são gratuitas e abertas ao público —
-                venha observar antes de decidir aprofundar.
+                Consulte as próximas atividades e escolha o melhor caminho
+                para começar ou aprofundar.
               </p>
             </div>
             <dl className="meta-grid">

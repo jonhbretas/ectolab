@@ -886,24 +886,20 @@
   position: relative;
   overflow: hidden;
 }
+.contato-info__viz img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
 .contato-info__viz::before {
   content: "";
   position: absolute;
   inset: 0;
-  background-image:
-    linear-gradient(to right, rgba(240,160,48,0.2) 1px, transparent 1px),
-    linear-gradient(to bottom, rgba(240,160,48,0.2) 1px, transparent 1px);
-  background-size: 28px 28px;
+  background: linear-gradient(180deg, rgba(8,34,43,0.08), rgba(8,34,43,0.28));
 }
 .contato-info__viz::after {
-  content: "";
-  position: absolute;
-  width: 24px; height: 24px;
-  background: var(--gold);
-  border-radius: 50%;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
-  box-shadow: 0 0 0 8px rgba(240,160,48,0.3), 0 0 0 20px rgba(240,160,48,0.15);
+  content: none;
 }
 .contato-info__viz .pin-label {
   position: absolute;
@@ -1003,7 +999,15 @@
   gap: 32px;
 }
 .cta-band h2 { font-family: var(--serif); font-size: clamp(28px, 3vw, 44px); font-weight: 400; letter-spacing: -0.012em; color: var(--ink); margin: 0; max-width: 700px; }
+.cta-band__actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 10px;
+  max-width: 430px;
+}
 @media (max-width: 900px) { .cta-band__inner { flex-direction: column; align-items: flex-start; } }
+@media (max-width: 900px) { .cta-band__actions { justify-content: flex-start; max-width: none; } }
 
 /* ============================================================
    Melhorias de responsividade — tablet e mobile
