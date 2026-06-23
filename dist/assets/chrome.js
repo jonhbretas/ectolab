@@ -118,6 +118,7 @@
           { label: "Laboratório de Ectoplasmologia", href: P + "pages/laboratorio-ectoplasmologia.html" }
         ]},
         { cat: "Acervo de Pesquisa", links: [
+          { label: "Livro Ectoplasma", href: P + "pages/ectoplasma-livro.html" },
           { label: "Base: Conscienciologia", href: P + "pages/conscienciologia.html" },
           { label: "Materiais Publicados & FAQ", href: P + "pages/materiais.html" }
         ]}
@@ -339,6 +340,7 @@
       "Apoie a Ectolab": "Support Ectolab",
       "Acervo de Pesquisa": "Research Collection",
       "Base: Conscienciologia": "Foundation: Conscientiology",
+      "Livro Ectoplasma": "Ectoplasm Book",
       "Materiais Publicados & FAQ": "Published Materials & FAQ",
       "Blog": "Blog",
       "Apoie": "Support",
@@ -545,6 +547,7 @@
       "Apoie a Ectolab": "Apoye a Ectolab",
       "Acervo de Pesquisa": "Acervo de Investigación",
       "Base: Conscienciologia": "Base: Concienciología",
+      "Livro Ectoplasma": "Libro Ectoplasma",
       "Materiais Publicados & FAQ": "Materiales Publicados y FAQ",
       "Blog": "Blog",
       "Apoie": "Apoye",

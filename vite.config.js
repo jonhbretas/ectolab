@@ -3,6 +3,7 @@ import react from '@vitejs/plugin-react';
 import { relative, resolve } from 'path';
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { spawnSync } from 'child_process';
+import { BOOK, FAQ_LIVRO, FAQ_TEMA } from './assets/ectoplasma-data.js';
 
 /**
  * Assets "crus" referenciados por caminho absoluto /assets/... nas páginas
@@ -137,6 +138,59 @@ function seoPlugin() {
           ]
         };
 
+        // Schema específico do livro Ectoplasma (Book + FAQPage) para
+        // ranqueamento nas buscas por "livro sobre ectoplasma/ectoplasmia".
+        if (pathname === '/pages/ectoplasma-livro.html') {
+          schema['@graph'].push(
+            {
+              '@type': 'Book',
+              '@id': `${canonical}#book`,
+              name: `${BOOK.title}: ${BOOK.subtitle}`,
+              alternateName: 'Ectoplasm',
+              inLanguage: ['pt-BR', 'en'],
+              isbn: BOOK.isbn13,
+              numberOfPages: BOOK.pages,
+              bookFormat: 'https://schema.org/Paperback',
+              bookEdition: BOOK.edition,
+              datePublished: BOOK.year,
+              description: BOOK.synopsis,
+              image,
+              url: canonical,
+              about: ['ectoplasma', 'ectoplasmia', 'efeitos físicos', 'metapsíquica', 'fenômenos ectoplásmicos', 'paracirurgia', 'parapsiquismo'],
+              author: { '@id': `${SITE_URL}/#organization` },
+              publisher: { '@id': `${SITE_URL}/#organization` },
+              mainEntityOfPage: { '@id': `${canonical}#webpage` },
+              offers: [
+                {
+                  '@type': 'Offer',
+                  url: BOOK.shopcons,
+                  priceCurrency: 'BRL',
+                  availability: 'https://schema.org/InStock',
+                  itemCondition: 'https://schema.org/NewCondition',
+                  seller: { '@type': 'Organization', name: 'ShopCons' }
+                },
+                {
+                  '@type': 'Offer',
+                  url: BOOK.amazon,
+                  priceCurrency: 'USD',
+                  availability: BOOK.amazonAvailable ? 'https://schema.org/InStock' : 'https://schema.org/PreOrder',
+                  seller: { '@type': 'Organization', name: 'Amazon' },
+                  name: 'E-book (English edition)'
+                }
+              ]
+            },
+            {
+              '@type': 'FAQPage',
+              '@id': `${canonical}#faq`,
+              mainEntity: [...FAQ_LIVRO, ...FAQ_TEMA].map((f) => ({
+                '@type': 'Question',
+                name: f.q,
+                acceptedAnswer: { '@type': 'Answer', text: f.a }
+              }))
+            }
+          );
+        }
+
         const extraHead = `
   <link rel="canonical" href="${canonical}" />
   <link rel="alternate" hreflang="pt-BR" href="${canonical}" />
@@ -270,6 +324,7 @@ export default defineConfig({
         laboratorioEctoplasmologia: resolve(__dirname, 'pages/laboratorio-ectoplasmologia.html'),
         painelPedidosParacirurgia: resolve(__dirname, 'pages/painel-pedidos-paracirurgia.html'),
         materiais: resolve(__dirname, 'pages/materiais.html'),
+        ectoplasmaLivro: resolve(__dirname, 'pages/ectoplasma-livro.html'),
         trilha: resolve(__dirname, 'pages/trilha.html'),
         historia: resolve(__dirname, 'pages/historia.html'),
         contato: resolve(__dirname, 'pages/contato.html'),
