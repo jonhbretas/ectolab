@@ -33,26 +33,27 @@ function EventRow({ ev, index, onChange }) {
         <span className="admin-row__model">{ev.model || ev.category || '—'}</span>
       </div>
 
-      <label className="admin-check" title="Exibir na seção Próximas Atividades da Home">
+      <label className="admin-check" title="Fixar na seção Próximas Atividades da Home">
         <input
           type="checkbox"
           checked={Boolean(ev.pinHome)}
           onChange={e => onChange(index, 'pinHome', e.target.checked)}
         />
-        <span style={{ fontSize: 12, color: 'var(--ink-2)' }}>Home</span>
+        <span style={{ fontSize: 12, color: 'var(--ink-2)' }}>Destaque na home</span>
       </label>
 
       <div className="admin-order">
         <input
           type="number"
           min="1"
-          max="99"
+          max="5"
           value={ev.homeOrdem ?? ''}
           placeholder="—"
           disabled={!ev.pinHome}
-          title="Ordem de exibição na Home (menor = primeiro)"
+          title="Ordem de exibição na Home, de 1 a 5 (menor = primeiro)"
           onChange={e => {
-            const v = e.target.value === '' ? null : Math.max(1, parseInt(e.target.value) || 1);
+            const parsed = parseInt(e.target.value, 10) || 1;
+            const v = e.target.value === '' ? null : Math.min(5, Math.max(1, parsed));
             onChange(index, 'homeOrdem', v);
           }}
         />

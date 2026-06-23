@@ -232,7 +232,9 @@ collections:
               - { name: price, label: Preco, widget: string, required: false, default: "" }
               - { name: free, label: Gratuito, widget: boolean, default: false, required: false }
               - { name: buttonLabel, label: Texto do botao/link, widget: string, required: false, default: Ver detalhes }
-              - { name: featured, label: Destaque, widget: boolean, default: false, required: false }
+              - { name: featured, label: Destaque na agenda, widget: boolean, default: false, required: false, hint: "Aparece na seção de destaques da pagina de agenda e tambem entra na Home." }
               - { name: featuredStyle, label: Estilo do destaque, widget: select, required: false, options: ["default", "dark", "gold"] }
               - { name: featuredDate, label: Data no destaque, widget: string, required: false, hint: "Opcional. Se ficar vazio, o site formata a data automaticamente usando a data de inicio e os dias para frente." }
               - { name: featuredCategory, label: Categoria no destaque, widget: string, required: false }
+              - { name: pinHome, label: Destaque na home, widget: boolean, default: false, required: false, hint: "Fixa este evento na seção Proximas Atividades da Home." }
+              - { name: homeOrdem, label: Ordem na home (1 a 5), widget: number, value_type: int, min: 1, max: 5, required: false, hint: "Use junto com Destaque na home. Menor numero aparece primeiro." }

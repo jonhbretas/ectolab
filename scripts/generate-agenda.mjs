@@ -490,8 +490,9 @@ function updatePage(events, eventTypes) {
 // ─── Geração do agenda-data.js (usado pelo React na Home e Agenda) ───────────
 //
 // Campos de controle nos eventos do CMS (events.json):
-//   pinHome   : true/false  — aparece na seção "Próximas Atividades" da Home
-//   homeOrdem : número      — posição na tira da Home (menor = primeiro)
+//   featured  : true/false  — aparece na seção "Destaques" da Agenda e entra na Home
+//   pinHome   : true/false  — fixa o evento na seção "Próximas Atividades" da Home
+//   homeOrdem : número      — posição na Home, de 1 a 5 (menor = primeiro)
 //   tituloHome: string      — título curto para exibição na Home (opcional)
 //   tipoHome  : string      — label de tipo para a Home (ex: "TERTÚLIA", "CURSO · IMERSÃO")
 //   detalhe   : string      — linha complementar exibida nos cards (opcional)
@@ -499,6 +500,8 @@ function updatePage(events, eventTypes) {
 //
 function generateAgendaDataFile(events) {
   const mapped = events.map((event) => ({
+    date:      event.date || '',
+    durationDays: event.durationDays || 0,
     dia:       String(event.day || '').padStart(2, '0'),
     mes:       (event.month || '').toUpperCase(),
     mesNome:   (event.monthLabel || '').toUpperCase(),
@@ -513,6 +516,7 @@ function generateAgendaDataFile(events) {
     preco:     event.price || '',
     precoExtra: event.precoExtra || null,
     status:    event.status || '',
+    featured:  Boolean(event.featured),
     pinHome:   Boolean(event.pinHome),
     homeOrdem: typeof event.homeOrdem === 'number' ? event.homeOrdem : 999,
   }));
@@ -522,8 +526,9 @@ function generateAgendaDataFile(events) {
     '// Para atualizar: edite content/agenda/events.json e execute npm run generate:content',
     '//',
     '// Controle da Home via campos no CMS:',
-    '//   pinHome   — true/false: exibir na seção "Próximas Atividades"',
-    '//   homeOrdem — número: ordem de exibição (menor = primeiro)',
+    '//   featured  — true/false: destaque da Agenda, também entra na Home',
+    '//   pinHome   — true/false: fixar na seção "Próximas Atividades"',
+    '//   homeOrdem — número de 1 a 5: ordem dos fixados na Home',
     '//   tituloHome — título curto para a Home (opcional)',
     '//   tipoHome  — label de tipo para a Home (opcional)',
   ].join('\n');
@@ -542,4 +547,4 @@ updatePage(events, eventTypes);
 console.log(`Generated agenda page with ${events.length} events.`);
 
 generateAgendaDataFile(events);
-console.log(`Generated agenda-data.js with ${events.length} events (${events.filter(e => e.pinHome).length} pinned to home).`);
+console.log(`Generated agenda-data.js with ${events.length} events (${events.filter(e => e.pinHome).length} pinned to home, ${events.filter(e => e.featured).length} featured).`);

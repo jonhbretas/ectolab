@@ -2,13 +2,16 @@
 // Para atualizar: edite content/agenda/events.json e execute npm run generate:content
 //
 // Controle da Home via campos no CMS:
-//   pinHome   — true/false: exibir na seção "Próximas Atividades"
-//   homeOrdem — número: ordem de exibição (menor = primeiro)
+//   featured  — true/false: destaque da Agenda, também entra na Home
+//   pinHome   — true/false: fixar na seção "Próximas Atividades"
+//   homeOrdem — número de 1 a 5: ordem dos fixados na Home
 //   tituloHome — título curto para a Home (opcional)
 //   tipoHome  — label de tipo para a Home (opcional)
 
 export const eventos = [
   {
+    "date": "2026-06-11",
+    "durationDays": 0,
     "dia": "11",
     "mes": "JUN",
     "mesNome": "JUNHO",
@@ -23,10 +26,13 @@ export const eventos = [
     "preco": "Consultar",
     "precoExtra": null,
     "status": "Realizado",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-06-26",
+    "durationDays": 2,
     "dia": "26",
     "mes": "JUN",
     "mesNome": "JUNHO",
@@ -41,10 +47,13 @@ export const eventos = [
     "preco": "R$ 1.000",
     "precoExtra": null,
     "status": "Vagas preenchidas",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-07-09",
+    "durationDays": 0,
     "dia": "09",
     "mes": "JUL",
     "mesNome": "JULHO",
@@ -59,10 +68,13 @@ export const eventos = [
     "preco": "Consultar",
     "precoExtra": null,
     "status": "Inscrições Abertas",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-07-10",
+    "durationDays": 0,
     "dia": "10",
     "mes": "JUL",
     "mesNome": "JULHO",
@@ -77,10 +89,13 @@ export const eventos = [
     "preco": "Consultar",
     "precoExtra": null,
     "status": "Inscrições Abertas",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-07-11",
+    "durationDays": 0,
     "dia": "11",
     "mes": "JUL",
     "mesNome": "JULHO",
@@ -95,10 +110,13 @@ export const eventos = [
     "preco": "Gratuito",
     "precoExtra": null,
     "status": "Em breve",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-07-12",
+    "durationDays": 0,
     "dia": "12",
     "mes": "JUL",
     "mesNome": "JULHO",
@@ -113,10 +131,13 @@ export const eventos = [
     "preco": "Gratuito",
     "precoExtra": null,
     "status": "Em breve",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-07-13",
+    "durationDays": 0,
     "dia": "13",
     "mes": "JUL",
     "mesNome": "JULHO",
@@ -131,10 +152,13 @@ export const eventos = [
     "preco": "Gratuito",
     "precoExtra": null,
     "status": "Em breve",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-07-14",
+    "durationDays": 0,
     "dia": "14",
     "mes": "JUL",
     "mesNome": "JULHO",
@@ -149,10 +173,13 @@ export const eventos = [
     "preco": "Gratuito",
     "precoExtra": null,
     "status": "Em breve",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-07-15",
+    "durationDays": 0,
     "dia": "15",
     "mes": "JUL",
     "mesNome": "JULHO",
@@ -167,10 +194,13 @@ export const eventos = [
     "preco": "Gratuito",
     "precoExtra": null,
     "status": "Em breve",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-08-07",
+    "durationDays": 2,
     "dia": "07",
     "mes": "AGO",
     "mesNome": "AGOSTO",
@@ -185,10 +215,13 @@ export const eventos = [
     "preco": "R$ 1.000",
     "precoExtra": null,
     "status": "Inscrições Abertas",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-08-13",
+    "durationDays": 0,
     "dia": "13",
     "mes": "AGO",
     "mesNome": "AGOSTO",
@@ -203,10 +236,13 @@ export const eventos = [
     "preco": "Consultar",
     "precoExtra": null,
     "status": "Inscrições Abertas",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-09-10",
+    "durationDays": 0,
     "dia": "10",
     "mes": "SET",
     "mesNome": "SETEMBRO",
@@ -221,10 +257,13 @@ export const eventos = [
     "preco": "Consultar",
     "precoExtra": null,
     "status": "Inscrições Abertas",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-09-11",
+    "durationDays": 2,
     "dia": "11",
     "mes": "SET",
     "mesNome": "SETEMBRO",
@@ -239,10 +278,13 @@ export const eventos = [
     "preco": "Consultar",
     "precoExtra": null,
     "status": "Inscrições Abertas",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-09-18",
+    "durationDays": 2,
     "dia": "18",
     "mes": "SET",
     "mesNome": "SETEMBRO",
@@ -257,10 +299,13 @@ export const eventos = [
     "preco": "R$ 1.000",
     "precoExtra": null,
     "status": "Inscrições Abertas",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-10-09",
+    "durationDays": 0,
     "dia": "09",
     "mes": "OUT",
     "mesNome": "OUTUBRO",
@@ -275,10 +320,13 @@ export const eventos = [
     "preco": "Consultar",
     "precoExtra": null,
     "status": "Inscrições Abertas",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-10-09",
+    "durationDays": 2,
     "dia": "09",
     "mes": "OUT",
     "mesNome": "OUTUBRO",
@@ -293,10 +341,13 @@ export const eventos = [
     "preco": "R$ 1.000",
     "precoExtra": null,
     "status": "Inscrições Abertas",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-11-12",
+    "durationDays": 0,
     "dia": "12",
     "mes": "NOV",
     "mesNome": "NOVEMBRO",
@@ -311,10 +362,13 @@ export const eventos = [
     "preco": "Consultar",
     "precoExtra": null,
     "status": "Inscrições Abertas",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   },
   {
+    "date": "2026-11-20",
+    "durationDays": 2,
     "dia": "20",
     "mes": "NOV",
     "mesNome": "NOVEMBRO",
@@ -329,6 +383,7 @@ export const eventos = [
     "preco": "R$ 1.000",
     "precoExtra": null,
     "status": "Inscrições Abertas",
+    "featured": false,
     "pinHome": false,
     "homeOrdem": 999
   }

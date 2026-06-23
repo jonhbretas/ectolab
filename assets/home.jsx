@@ -409,11 +409,70 @@ function CursosDestaque() {
   );
 }
 
+function parseEventDate(value) {
+  if (!value) return null;
+  const [year, month, day] = String(value).split("-").map(Number);
+  if (!year || !month || !day) return null;
+  return new Date(year, month - 1, day);
+}
+
+function eventEndDate(event) {
+  const start = parseEventDate(event.date);
+  if (!start) return null;
+
+  const duration = Math.max(0, Number(event.durationDays) || 0);
+  const end = new Date(start);
+  end.setDate(end.getDate() + duration);
+  return end;
+}
+
+function isUpcomingEvent(event) {
+  if (String(event.status || "").toLowerCase().includes("realizado")) return false;
+
+  const end = eventEndDate(event);
+  if (!end) return true;
+
+  const today = new Date();
+  today.setHours(0, 0, 0, 0);
+  return end >= today;
+}
+
+function homeOrder(event) {
+  const order = Number(event.homeOrdem);
+  return Number.isFinite(order) && order >= 1 && order <= 5 ? order : 999;
+}
+
+function selectHomeEvents(events) {
+  const seen = new Set();
+  const upcoming = events.filter(isUpcomingEvent);
+  const candidates = [...upcoming.filter(e => e.pinHome), ...upcoming.filter(e => e.featured), ...upcoming];
+
+  return candidates
+    .filter(event => {
+      const key = `${event.date || ""}|${event.href || ""}|${event.titulo || ""}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .sort((a, b) => {
+      const aPinned = Boolean(a.pinHome);
+      const bPinned = Boolean(b.pinHome);
+      if (aPinned !== bPinned) return aPinned ? -1 : 1;
+
+      if (aPinned && homeOrder(a) !== homeOrder(b)) return homeOrder(a) - homeOrder(b);
+
+      const aFeatured = Boolean(a.featured);
+      const bFeatured = Boolean(b.featured);
+      if (aFeatured !== bFeatured) return aFeatured ? -1 : 1;
+
+      return (parseEventDate(a.date)?.getTime() || 0) - (parseEventDate(b.date)?.getTime() || 0);
+    })
+    .slice(0, 5);
+}
+
 function ProximosEventos() {
-  const proximos = todosEventos
-    .filter(e => e.pinHome)
-    .sort((a, b) => (a.homeOrdem || 999) - (b.homeOrdem || 999))
-    .slice(0, 4);
+  const proximos = selectHomeEvents(todosEventos);
+
   return (
     <section className="prox-eventos">
       <div className="wrap">
