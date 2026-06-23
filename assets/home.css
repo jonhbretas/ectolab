@@ -495,10 +495,9 @@
 .trilha-step {
   text-decoration: none;
   color: inherit;
-  display: grid;
-  grid-template-columns: 56px minmax(0, 1fr);
-  align-items: start;
-  gap: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 .trilha-step__bullet {
   width: 56px;
@@ -526,6 +525,7 @@
   .trilha-grid { grid-template-columns: 1fr; gap: 0; }
   .trilha-line { display: none; }
   .trilha-step {
+    display: grid;
     grid-template-columns: 48px minmax(0, 1fr);
     align-items: start;
     gap: 16px;

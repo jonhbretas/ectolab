@@ -169,5 +169,4 @@ Materiais de Apoio: Lives sobre chacras, ectoplasmia, e Interstício Celular do 
 
 &nbsp;
           <hr />
-          <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/o-guia-definitivo-sobre-chacras-do-basico-ao-avancado/">https://ectolab.org/o-guia-definitivo-sobre-chacras-do-basico-ao-avancado/</a></p>
-          <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
+<p><a href="/pages/blog.html">← Voltar ao blog</a></p>

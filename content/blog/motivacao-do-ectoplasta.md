@@ -74,5 +74,4 @@ Este blog post foi feito baseado no Diálogos Online da Motivação do Ectoplast
 </ul>
 <p data-sourcepos="22:1-22:116"><strong>Com dedicação e persistência, você pode alcançar seu potencial máximo.</strong></p>
           <hr />
-          <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/motivacao-do-ectoplasta/">https://ectolab.org/motivacao-do-ectoplasta/</a></p>
-          <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
+<p><a href="/pages/blog.html">← Voltar ao blog</a></p>

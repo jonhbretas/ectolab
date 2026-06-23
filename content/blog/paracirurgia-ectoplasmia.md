@@ -64,5 +64,4 @@ bodyImages:
 
 <iframe src="//www.youtube.com/embed/19WpWHbXDeA" width="560" height="314" allowfullscreen="allowfullscreen"></iframe>
           <hr />
-          <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/paracirurgia-ectoplasmia/">https://ectolab.org/paracirurgia-ectoplasmia/</a></p>
-          <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
+<p><a href="/pages/blog.html">← Voltar ao blog</a></p>

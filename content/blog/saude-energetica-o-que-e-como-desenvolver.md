@@ -76,5 +76,4 @@ Ana é formada em Enfermagem, pós-graduada em Acupuntura Tradicional Chinesa e 
 <h3><b>Assista o vídeo complementar:</b></h3>
 <iframe src="//www.youtube.com/embed/FLnVbcnlU5c" width="560" height="314" allowfullscreen="allowfullscreen"></iframe>
           <hr />
-          <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/saude-energetica-o-que-e-como-desenvolver/">https://ectolab.org/saude-energetica-o-que-e-como-desenvolver/</a></p>
-          <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
+<p><a href="/pages/blog.html">← Voltar ao blog</a></p>

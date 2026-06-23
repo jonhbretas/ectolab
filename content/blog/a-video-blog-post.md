@@ -31,5 +31,4 @@ Assista ao trailer:
 
 [embed]https://youtu.be/PqpnpPAaA48[/embed]
           <hr />
-          <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/a-video-blog-post/">https://ectolab.org/a-video-blog-post/</a></p>
-          <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
+<p><a href="/pages/blog.html">← Voltar ao blog</a></p>

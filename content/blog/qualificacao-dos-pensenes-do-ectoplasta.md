@@ -134,5 +134,4 @@ Técnica de Autoavaliação do Pensene-Padrão</b></i></span></span>
 <p align="justify"><iframe src="//www.youtube.com/embed/gbaJDv4w0lg" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></p>
 <p align="justify"></p>
           <hr />
-          <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/qualificacao-dos-pensenes-do-ectoplasta/">https://ectolab.org/qualificacao-dos-pensenes-do-ectoplasta/</a></p>
-          <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
+<p><a href="/pages/blog.html">← Voltar ao blog</a></p>

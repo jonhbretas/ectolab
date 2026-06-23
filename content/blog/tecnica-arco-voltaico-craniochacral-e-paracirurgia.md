@@ -126,5 +126,4 @@ bodyImages:
 </li>
 </ol>
           <hr />
-          <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/tecnica-arco-voltaico-craniochacral-e-paracirurgia/">https://ectolab.org/tecnica-arco-voltaico-craniochacral-e-paracirurgia/</a></p>
-          <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
+<p><a href="/pages/blog.html">← Voltar ao blog</a></p>

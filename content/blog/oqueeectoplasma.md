@@ -31,5 +31,4 @@ featured: false
 <p>&nbsp;</p>
 
           <hr />
-          <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/oqueeectoplasma/">https://ectolab.org/oqueeectoplasma/</a></p>
-          <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
+<p><a href="/pages/blog.html">← Voltar ao blog</a></p>

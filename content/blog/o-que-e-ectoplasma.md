@@ -151,5 +151,4 @@ No tocante às características do ectoplasma destaca-se a sua "essência plást
 &nbsp;
 <h3></h3>
           <hr />
-          <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/o-que-e-ectoplasma/">https://ectolab.org/o-que-e-ectoplasma/</a></p>
-          <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
+<p><a href="/pages/blog.html">← Voltar ao blog</a></p>

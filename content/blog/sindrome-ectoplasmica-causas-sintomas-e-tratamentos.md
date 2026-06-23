@@ -186,5 +186,4 @@ Assista os vídeos complementares
 
 <a href="https://www.youtube.com/watch?v=bQwSHql6YcY"><iframe src="//www.youtube.com/embed/bQwSHql6YcY" width="560" height="314" allowfullscreen="allowfullscreen"></iframe></a>
           <hr />
-          <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/sindrome-ectoplasmica-causas-sintomas-e-tratamentos/">https://ectolab.org/sindrome-ectoplasmica-causas-sintomas-e-tratamentos/</a></p>
-          <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
+<p><a href="/pages/blog.html">← Voltar ao blog</a></p>

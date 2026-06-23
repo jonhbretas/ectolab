@@ -114,5 +114,4 @@ Ana é formada em Enfermagem, pós-graduada em Acupuntura Tradicional Chinesa e 
 
 &nbsp;
           <hr />
-          <p><strong>URL original preservada:</strong> <a href="https://ectolab.org/estado-vibracional-e-saude-energetica/">https://ectolab.org/estado-vibracional-e-saude-energetica/</a></p>
-          <p><a href="/pages/blog.html">← Voltar ao blog</a></p>
+<p><a href="/pages/blog.html">← Voltar ao blog</a></p>
