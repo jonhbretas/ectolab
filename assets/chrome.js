@@ -181,9 +181,9 @@
         </a>
         <nav class="nav">${navHTML}</nav>
         <div class="header-actions" aria-label="Ações rápidas">
-          <a href="${P}pages/parcerias.html" class="header-action ${active === "parcerias" ? "active" : ""}">Parcerias</a>
-          <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="header-action header-action--accent">Paracirurgia</a>
-          <a href="${P}pages/tenepes.html" class="header-action ${active === "tenepes" ? "active" : ""}">Tenepes</a>
+          <a href="${P}pages/parcerias.html" class="btn btn-parcerias btn-sm">Parcerias</a>
+          <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange btn-sm">Paracirurgia</a>
+          <a href="${P}pages/tenepes.html" class="btn btn-ghost btn-sm">Tenepes</a>
         </div>
         <select class="lang-select" aria-label="Idioma">
           <option value="PT" ${lang === "PT" ? "selected" : ""}>PT</option>
