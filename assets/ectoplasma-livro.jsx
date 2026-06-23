@@ -4,6 +4,7 @@ import { BOOK, FAQ_LIVRO, FAQ_TEMA } from './ectoplasma-data.js';
 
 const SPECS = [
   ['Título', `${BOOK.title}: ${BOOK.subtitle}`],
+  ['Organizadores', BOOK.authors.join(' & ')],
   ['Editora', BOOK.publisher],
   ['Ano de publicação', BOOK.year],
   ['Edição', BOOK.edition],
@@ -60,7 +61,31 @@ function App() {
           <div className="breadcrumb" style={{ marginBottom: 24, fontSize: 13, color: 'var(--ink-3)' }}>
             <a href="/pages/materiais.html" style={{ textDecoration: 'underline' }}>Materiais</a> / Livro Ectoplasma
           </div>
-          <div className="grid g2 gap-48">
+          <div className="grid g2 gap-48" style={{ alignItems: 'center' }}>
+            {/* Capas do livro */}
+            <div className="flex center" style={{ gap: 24, flexWrap: 'wrap', justifyContent: 'center' }}>
+              <figure style={{ margin: 0, textAlign: 'center' }}>
+                <img
+                  src={BOOK.coverPt}
+                  alt="Capa do livro Ectoplasma: Panorama Contemporâneo das Pesquisas sobre Ectoplasmia, da Ectolab"
+                  width="320" height="453" loading="eager"
+                  style={{ width: 'min(280px, 70vw)', height: 'auto', borderRadius: 'var(--r-sm)', boxShadow: '0 24px 48px -16px rgba(15,93,115,0.45)' }}
+                />
+                <figcaption className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', marginTop: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>Edição em português</figcaption>
+              </figure>
+              <figure style={{ margin: 0, textAlign: 'center' }}>
+                <img
+                  src={BOOK.coverEn}
+                  alt="Cover of the book Ectoplasm: A Contemporary Panorama of the Research on Ectoplasmy, by Ectolab"
+                  width="320" height="453" loading="lazy"
+                  onError={(e) => { e.currentTarget.closest('figure').style.display = 'none'; }}
+                  style={{ width: 'min(220px, 56vw)', height: 'auto', borderRadius: 'var(--r-sm)', boxShadow: '0 18px 40px -16px rgba(15,93,115,0.35)' }}
+                />
+                <figcaption className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', marginTop: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>English e-book edition</figcaption>
+              </figure>
+            </div>
+
+            {/* Texto + CTAs */}
             <div>
               <div className="eyebrow"><span className="dot"></span>GESCON PRINCIPAL DA ECTOLAB</div>
               <h1 className="h-display" style={{ marginTop: 20 }}>
@@ -68,6 +93,9 @@ function App() {
               </h1>
               <p className="lede" style={{ marginTop: 12, fontWeight: 500 }}>
                 {BOOK.subtitle}
+              </p>
+              <p className="mono" style={{ fontSize: 13, color: 'var(--ink-3)', marginTop: 10 }}>
+                Org. {BOOK.authors.join(' & ')}
               </p>
               <p style={{ marginTop: 24, fontSize: 16.5, color: 'var(--ink-2)', lineHeight: 1.7 }}>
                 {BOOK.synopsis}
@@ -86,23 +114,18 @@ function App() {
                 Versão física em português pela ShopCons · E-book em inglês pela Amazon
               </p>
             </div>
+          </div>
 
-            {/* Ficha técnica */}
-            <div>
-              <div className="glass-teal" style={{ padding: 32, borderRadius: 'var(--r-lg)', position: 'sticky', top: 100 }}>
-                <h2 className="h4" style={{ color: 'var(--white)', marginBottom: 20 }}>Ficha técnica</h2>
-                <div className="col gap-12">
-                  {SPECS.map(([label, val]) => (
-                    <div key={label} className="flex between" style={{ borderBottom: '1px dashed rgba(255,255,255,0.2)', paddingBottom: 12, gap: 16, alignItems: 'baseline' }}>
-                      <span style={{ fontFamily: 'var(--mono)', fontSize: 12, fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--gold)', flex: 'none' }}>{label}</span>
-                      <span style={{ fontSize: 14, color: 'var(--white)', textAlign: 'right', wordBreak: 'break-word' }}>{val}</span>
-                    </div>
-                  ))}
+          {/* Ficha técnica */}
+          <div className="glass-teal" style={{ padding: 32, borderRadius: 'var(--r-lg)', marginTop: 56 }}>
+            <h2 className="h4" style={{ color: 'var(--white)', marginBottom: 24 }}>Ficha técnica</h2>
+            <div className="grid g2 gap-24">
+              {SPECS.map(([label, val]) => (
+                <div key={label} className="flex between" style={{ borderBottom: '1px dashed rgba(255,255,255,0.2)', paddingBottom: 12, gap: 16, alignItems: 'baseline' }}>
+                  <span style={{ fontFamily: 'var(--mono)', fontSize: 12, fontWeight: 600, letterSpacing: '0.06em', textTransform: 'uppercase', color: 'var(--gold)', flex: 'none' }}>{label}</span>
+                  <span style={{ fontSize: 14, color: 'var(--white)', textAlign: 'right', wordBreak: 'break-word' }}>{val}</span>
                 </div>
-                <a href={BOOK.shopcons} target="_blank" rel="noreferrer" className="btn btn-gold" style={{ marginTop: 28, width: '100%', justifyContent: 'center' }}>
-                  Comprar na ShopCons <span className="arrow">↗</span>
-                </a>
-              </div>
+              ))}
             </div>
           </div>
         </div>

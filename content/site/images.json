@@ -1,6 +1,26 @@
 {
   "pages": [
     {
+      "page": "Componente / ectoplasma-data",
+      "folder": "components/ectoplasma-data",
+      "images": [
+        {
+          "label": "ectoplasma book en ectolab",
+          "originalPath": "/livros/ectoplasma-book-en-ectolab.jpg",
+          "image": "/livros/ectoplasma-book-en-ectolab.jpg",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        },
+        {
+          "label": "ectoplasma livro ectolab",
+          "originalPath": "/livros/ectoplasma-livro-ectolab.jpg",
+          "image": "/livros/ectoplasma-livro-ectolab.jpg",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        }
+      ]
+    },
+    {
       "page": "Global / Logo e navegação",
       "folder": "global",
       "images": [

@@ -154,10 +154,10 @@ function seoPlugin() {
               bookEdition: BOOK.edition,
               datePublished: BOOK.year,
               description: BOOK.synopsis,
-              image,
+              image: `${SITE_URL}${BOOK.coverPt}`,
               url: canonical,
               about: ['ectoplasma', 'ectoplasmia', 'efeitos físicos', 'metapsíquica', 'fenômenos ectoplásmicos', 'paracirurgia', 'parapsiquismo'],
-              author: { '@id': `${SITE_URL}/#organization` },
+              author: BOOK.authors.map((name) => ({ '@type': 'Person', name })),
               publisher: { '@id': `${SITE_URL}/#organization` },
               mainEntityOfPage: { '@id': `${canonical}#webpage` },
               offers: [
