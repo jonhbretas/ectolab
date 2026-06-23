@@ -366,10 +366,42 @@ function PorOndeComecar() {
 
 function CursosDestaque() {
   const cursos = [
-    { sigla: "PROEP", nome: "Programa Exclusivo Presencial em Foz", duracao: "Presencial", nivel: "Avançado", preco: "04 Alunos por Turma", color: "var(--teal-soft)", link: "pages/curso-proep.html" },
-    { sigla: "IMERSÃO", nome: "Imersão em Ectoplasmia 2027", duracao: "Prática intensiva", nivel: "Campo de pesquisa", preco: "Vagas limitadas", color: "var(--teal-soft)", link: "pages/curso-imersao.html" },
-    { sigla: "GRAVADO", nome: "Ectoplasmia Interassistencial", duracao: "Módulos gravados", nivel: "EaD", preco: "Acesso imediato", color: "var(--orange-soft)", link: "pages/curso-ectoplasmia-interassistencial.html" },
-    { sigla: "PARCERIA", nome: "Materializações Interassistenciais", duracao: "Curso temático", nivel: "Aprofundamento", preco: "Em breve", color: "var(--paper-2)", link: "pages/cursos.html" },
+    {
+      sigla: "PROEP",
+      nome: "Programa Exclusivo Presencial em Foz",
+      duracao: "Presencial",
+      nivel: "Avançado",
+      preco: "04 Alunos por Turma",
+      image: "/imagens/proep.webp",
+      link: "pages/curso-proep.html",
+    },
+    {
+      sigla: "IMERSÃO",
+      nome: "Imersão em Ectoplasmia 2027",
+      duracao: "Prática intensiva",
+      nivel: "Campo de pesquisa",
+      preco: "Vagas limitadas",
+      image: "/imagens/imersao-em-ectoplasmia-parambulatorial.webp",
+      link: "pages/curso-imersao.html",
+    },
+    {
+      sigla: "GRAVADO",
+      nome: "Ectoplasmia Interassistencial",
+      duracao: "Módulos gravados",
+      nivel: "EaD",
+      preco: "Acesso imediato",
+      image: "/imagens/ectoplasmia-interassistencial.webp",
+      link: "pages/curso-ectoplasmia-interassistencial.html",
+    },
+    {
+      sigla: "PARCERIA",
+      nome: "Materializações Interassistenciais",
+      duracao: "Curso temático",
+      nivel: "Aprofundamento",
+      preco: "Em breve",
+      image: "/imagens/materializacoes-interassistenciais.webp",
+      link: "pages/cursos.html",
+    },
   ];
   return (
     <section className="section" style={{ background: "var(--white)" }}>
@@ -388,10 +420,9 @@ function CursosDestaque() {
 
         <div className="cursos-grid h-scroll">
           {cursos.map((c, i) => (
-            <a href={c.link} key={c.sigla} className="curso-card" style={{ "--bg": c.color }}>
+            <a href={c.link} key={c.sigla} className="curso-card">
               <div className="curso-card__viz">
-                <span className="curso-card__sigla">{c.sigla}</span>
-                <span className="specimen curso-card__lvl">{c.nivel}</span>
+                <img src={c.image} alt={`Capa do curso ${c.nome}`} loading="lazy" />
               </div>
               <div className="curso-card__body">
                 <h3 className="h3">{c.nome}</h3>

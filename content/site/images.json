@@ -21,6 +21,40 @@
       ]
     },
     {
+      "page": "Componente / home",
+      "folder": "components/home",
+      "images": [
+        {
+          "label": "ectoplasmia interassistencial",
+          "originalPath": "/imagens/ectoplasmia-interassistencial.webp",
+          "image": "/imagens/ectoplasmia-interassistencial.webp",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        },
+        {
+          "label": "imersao em ectoplasmia parambulatorial",
+          "originalPath": "/imagens/imersao-em-ectoplasmia-parambulatorial.webp",
+          "image": "/imagens/imersao-em-ectoplasmia-parambulatorial.webp",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        },
+        {
+          "label": "materializacoes interassistenciais",
+          "originalPath": "/imagens/materializacoes-interassistenciais.webp",
+          "image": "/imagens/materializacoes-interassistenciais.webp",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        },
+        {
+          "label": "proep",
+          "originalPath": "/imagens/proep.webp",
+          "image": "/imagens/proep.webp",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        }
+      ]
+    },
+    {
       "page": "Global / Logo e navegação",
       "folder": "global",
       "images": [
