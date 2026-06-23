@@ -16,6 +16,7 @@
   // --- 2. Central de Navegação (Criação de Novas Páginas) ---
   // Para registrar uma NOVA PÁGINA no menu do site, basta inserir o objeto abaixo.
   const logoPath = "/logo.webp";
+  const logoWhitePath = "/logo-branca-ectolab.png";
   const logoHTML = `<img src="${logoPath}" alt="Logo Ectolab" class="brand-img" />`;
 
   const navItems = [
@@ -81,6 +82,7 @@
         { cat: "Gratuitos", links: [
           { label: "Blog", href: P + "pages/blog.html" },
           { label: "OGB - Orientação Gratuita em Bioenergologia", href: P + "pages/orientacao-gratuita.html" },
+          { label: "Pedido de Tenepes", href: P + "pages/tenepes.html" },
           { label: "Diálogos Online", href: "https://www.youtube.com/playlist?list=PLpz4qwgYZyP3SxfEenlleSpxgqYMaVUhb", target: "_blank" }
         ]},
         { cat: "Eventos & Consultoria", links: [
@@ -178,13 +180,16 @@
           ${logoHTML}
         </a>
         <nav class="nav">${navHTML}</nav>
-        <a href="${P}pages/parcerias.html" class="btn btn-parcerias btn-sm header-cta">Parcerias de Pesquisa</a>
-        <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange btn-sm header-cta">Solicitar paracirurgia <span class="arrow">↗</span></a>
-        <div class="lang-switch" role="group" aria-label="Idioma">
-          <button data-lang="PT" class="${lang === "PT" ? "on" : ""}">PT</button>
-          <button data-lang="EN" class="${lang === "EN" ? "on" : ""}">EN</button>
-          <button data-lang="ES" class="${lang === "ES" ? "on" : ""}">ES</button>
+        <div class="header-actions" aria-label="Ações rápidas">
+          <a href="${P}pages/parcerias.html" class="header-action ${active === "parcerias" ? "active" : ""}">Parcerias</a>
+          <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="header-action header-action--accent">Paracirurgia</a>
+          <a href="${P}pages/tenepes.html" class="header-action ${active === "tenepes" ? "active" : ""}">Tenepes</a>
         </div>
+        <select class="lang-select" aria-label="Idioma">
+          <option value="PT" ${lang === "PT" ? "selected" : ""}>PT</option>
+          <option value="EN" ${lang === "EN" ? "selected" : ""}>EN</option>
+          <option value="ES" ${lang === "ES" ? "selected" : ""}>ES</option>
+        </select>
         <button class="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
           <span class="nav-toggle__bar"></span>
           <span class="nav-toggle__bar"></span>
@@ -202,12 +207,16 @@
       </div>
       <nav class="mnav">${mobileNavHTML}</nav>
       <div class="nav-drawer__ctas">
-        <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange" style="width:100%;justify-content:center">Solicitar paracirurgia <span class="arrow">↗</span></a>
-        <div class="lang-switch" role="group" aria-label="Idioma" style="justify-content:center;margin-top:4px">
-          <button data-lang="PT" class="${lang === "PT" ? "on" : ""}">PT</button>
-          <button data-lang="EN" class="${lang === "EN" ? "on" : ""}">EN</button>
-          <button data-lang="ES" class="${lang === "ES" ? "on" : ""}">ES</button>
+        <div class="drawer-action-grid">
+          <a href="${P}pages/parcerias.html" class="btn btn-ghost btn-sm">Parcerias</a>
+          <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange btn-sm">Paracirurgia <span class="arrow">↗</span></a>
+          <a href="${P}pages/tenepes.html" class="btn btn-ghost btn-sm">Tenepes</a>
         </div>
+        <select class="lang-select" aria-label="Idioma" style="width:100%">
+          <option value="PT" ${lang === "PT" ? "selected" : ""}>Português</option>
+          <option value="EN" ${lang === "EN" ? "selected" : ""}>English</option>
+          <option value="ES" ${lang === "ES" ? "selected" : ""}>Español</option>
+        </select>
       </div>
     </div>`;
 
@@ -217,7 +226,7 @@
         <div class="grid">
           <div>
             <div class="flex center gap-12" style="margin-bottom:18px">
-              <img src="${logoPath}" alt="Ectolab" style="height:36px;width:auto;filter:brightness(0) invert(1)" />
+              <img src="${logoWhitePath}" alt="Ectolab" style="height:36px;width:auto" />
             </div>
             <p style="font-size:14px;line-height:1.6;opacity:0.78;max-width:300px">
               Associação Internacional de Pesquisa Laboratorial em Paracirurgia e Ectoplasmia.
@@ -315,6 +324,7 @@
       "Laboratório de Ectoplasmologia": "Ectoplasmology Laboratory",
       "Gratuitos": "Free",
       "OGB - Orientação Gratuita em Bioenergologia": "OGB - Free Bioenergology Guidance",
+      "Pedido de Tenepes": "Tenepes Request",
       "Diálogos Online": "Online Dialogues",
       "Orientação Gratuita (OGB)": "Free Bioenergetic Guidance (OGB)",
       "Eventos & Consultoria": "Events & Consulting",
@@ -335,6 +345,8 @@
       "Nossa História": "Our History",
       "Contato e Sede": "Contact and Headquarters",
       "Parcerias de Pesquisa": "Research Partnerships",
+      "Parcerias": "Partnerships",
+      "Tenepes": "Tenepes",
       "Apoie a Ectolab": "Support Ectolab",
       "Acervo de Pesquisa": "Research Collection",
       "Base: Conscienciologia": "Foundation: Conscientiology",
@@ -344,6 +356,7 @@
       "Apoie": "Support",
       "Acessar sistema": "Access system",
       "Solicitar paracirurgia": "Request parasurgery",
+      "Paracirurgia": "Parasurgery",
       "Pesquisa": "Research",
       "Ciência & Ectoplasmologia": "Science & Ectoplasmology",
       "Quem somos · CGC": "Who we are · GCE",
@@ -522,6 +535,7 @@
       "Laboratório de Ectoplasmologia": "Laboratorio de Ectoplasmología",
       "Gratuitos": "Gratuitos",
       "OGB - Orientação Gratuita em Bioenergologia": "OGB - Orientación Gratuita en Bioenergología",
+      "Pedido de Tenepes": "Solicitud de Tenepes",
       "Diálogos Online": "Diálogos en Línea",
       "Orientação Gratuita (OGB)": "Orientación Gratuita (OGB)",
       "Eventos & Consultoria": "Eventos y Consultoría",
@@ -542,6 +556,8 @@
       "Nossa História": "Nuestra Historia",
       "Contato e Sede": "Contacto y Sede",
       "Parcerias de Pesquisa": "Alianzas de Investigación",
+      "Parcerias": "Alianzas",
+      "Tenepes": "Tenepes",
       "Apoie a Ectolab": "Apoye a Ectolab",
       "Acervo de Pesquisa": "Acervo de Investigación",
       "Base: Conscienciologia": "Base: Concienciología",
@@ -551,6 +567,7 @@
       "Apoie": "Apoye",
       "Acessar sistema": "Acceder al sistema",
       "Solicitar paracirurgia": "Solicitar paracirugía",
+      "Paracirurgia": "Paracirugía",
       "Pesquisa": "Investigación",
       "Ciência & Ectoplasmologia": "Ciencia y Ectoplasmología",
       "Quem somos · CGC": "Quiénes somos · CGC",
@@ -728,21 +745,30 @@
   });
   observer.observe(document.body, { childList: true, subtree: true });
 
-  // Language switch
-  document.querySelectorAll(".lang-switch button").forEach((b) => {
-    b.addEventListener("click", () => {
-      const v = b.getAttribute("data-lang");
-      localStorage.setItem("ecto_lang", v);
-      document.body.setAttribute("data-lang", v);
-      document.querySelectorAll(".lang-switch button").forEach((x) => x.classList.toggle("on", x.getAttribute("data-lang") === v));
-      // swap text on elements with [data-i18n]
-      document.querySelectorAll("[data-i18n]").forEach((el) => {
-        const key = el.getAttribute("data-i18n");
-        const dict = window.__I18N__ && window.__I18N__[key];
-        if (dict && dict[v]) el.innerHTML = dict[v];
-      });
-      applyTranslations(v);
+  function setLanguage(v) {
+    localStorage.setItem("ecto_lang", v);
+    document.body.setAttribute("data-lang", v);
+    document.querySelectorAll(".lang-select").forEach((select) => {
+      select.value = v;
     });
+    document.querySelectorAll(".lang-switch button").forEach((x) => {
+      x.classList.toggle("on", x.getAttribute("data-lang") === v);
+    });
+    // swap text on elements with [data-i18n]
+    document.querySelectorAll("[data-i18n]").forEach((el) => {
+      const key = el.getAttribute("data-i18n");
+      const dict = window.__I18N__ && window.__I18N__[key];
+      if (dict && dict[v]) el.innerHTML = dict[v];
+    });
+    applyTranslations(v);
+  }
+
+  // Language switch
+  document.querySelectorAll(".lang-select").forEach((select) => {
+    select.addEventListener("change", () => setLanguage(select.value));
+  });
+  document.querySelectorAll(".lang-switch button").forEach((b) => {
+    b.addEventListener("click", () => setLanguage(b.getAttribute("data-lang")));
   });
   document.body.setAttribute("data-lang", lang);
   applyTranslations(lang);
@@ -796,11 +822,4 @@
     });
   });
 
-  // Sync lang-switch in drawer with the main one
-  document.querySelectorAll(".nav-drawer .lang-switch button").forEach(b => {
-    b.addEventListener("click", () => {
-      const v = b.getAttribute("data-lang");
-      document.querySelectorAll(".lang-switch button").forEach(x => x.classList.toggle("on", x.getAttribute("data-lang") === v));
-    });
-  });
 })();

@@ -328,6 +328,7 @@ export default defineConfig({
         trilha: resolve(__dirname, 'pages/trilha.html'),
         historia: resolve(__dirname, 'pages/historia.html'),
         contato: resolve(__dirname, 'pages/contato.html'),
+        tenepes: resolve(__dirname, 'pages/tenepes.html'),
         conscienciologia: resolve(__dirname, 'pages/conscienciologia.html'),
         blog: resolve(__dirname, 'pages/blog.html'),
         blogPost: resolve(__dirname, 'pages/blog-post.html'),

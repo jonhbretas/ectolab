@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pedido de Tenepes · Ectolab</title>
+  <meta name="description" content="Solicite Tenepes para si ou para outra pessoa e entenda como funciona a tarefa energética pessoal na abordagem da Conscienciologia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="../assets/styles.css" />
+  <link rel="stylesheet" href="../assets/inner.css" />
+  <style>
+    .tenepes-actions {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .tenepes-action {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      padding: 22px;
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      background: var(--white);
+      color: inherit;
+      text-decoration: none;
+      transition: border-color 0.18s, transform 0.18s;
+    }
+    .tenepes-action:hover {
+      border-color: var(--teal);
+      transform: translateY(-2px);
+    }
+    .tenepes-action strong {
+      color: var(--teal);
+      font-size: 18px;
+    }
+    .tenepes-action span {
+      color: var(--ink-2);
+      font-size: 14px;
+      line-height: 1.5;
+    }
+    .tenepes-steps {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+      margin-top: 32px;
+    }
+    .tenepes-step {
+      padding: 20px;
+      background: var(--white);
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+    }
+    .tenepes-step .num {
+      display: inline-flex;
+      width: 32px;
+      height: 32px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--ink);
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+    .tenepes-form {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--r-md);
+      background: var(--white);
+      box-shadow: 0 18px 40px -34px rgba(33,42,44,0.55);
+    }
+    .tenepes-form iframe {
+      display: block;
+      width: 100%;
+      min-height: 1538px;
+      border: 0;
+    }
+    @media (max-width: 900px) {
+      .tenepes-actions,
+      .tenepes-steps { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body data-active="tenepes">
+  <div id="__header"></div>
+
+  <main>
+    <section class="page-hero">
+      <div class="wrap">
+        <div class="breadcrumb">
+          <a href="../index.html">Ectolab</a><span class="sep">◆</span>
+          <a href="atividades.html">Atividades</a><span class="sep">◆</span>
+          <span>Pedido de Tenepes</span>
+        </div>
+        <div class="page-hero__inner">
+          <div>
+            <div class="eyebrow"><span class="dot"></span>ASSISTÊNCIA ENERGÉTICA · GRATUITA</div>
+            <h1 class="h-display" style="margin-top:24px">
+              Pedido de <strong style="color:var(--blue);font-weight:700">Tenepes</strong>.
+            </h1>
+            <p class="lede" style="margin-top:24px;max-width:680px">
+              Clique no botão conforme a natureza da solicitação, informe-se sobre a prática e preencha o formulário com atenção.
+            </p>
+            <div class="tenepes-actions">
+              <a class="tenepes-action" href="http://ectolab.org/site/tenepes-para-mim-mesmoa/" target="_blank" rel="noreferrer">
+                <strong>Pedir Tenepes para mim mesmo(a)</strong>
+                <span>Use esta opção quando o pedido for para você.</span>
+              </a>
+              <a class="tenepes-action" href="https://ectolab.org/tenepes-para-outra-pessoa/" target="_blank" rel="noreferrer">
+                <strong>Pedir Tenepes para outra pessoa</strong>
+                <span>Use esta opção quando desejar solicitar assistência para outra consciência.</span>
+              </a>
+            </div>
+          </div>
+          <dl class="meta-grid">
+            <div><dt>Natureza</dt><dd>Gratuita</dd></div>
+            <div><dt>Modalidade</dt><dd>À distância</dd></div>
+            <div><dt>Base</dt><dd>Conscienciologia</dd></div>
+            <div><dt>Privacidade</dt><dd>LGPD</dd></div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white">
+      <div class="wrap">
+        <div class="tenepes-steps">
+          <div class="tenepes-step">
+            <span class="num">01</span>
+            <h3 class="h4">Informe-se</h3>
+            <p>Leia o que é e como funciona a Tenepes antes de registrar o pedido.</p>
+          </div>
+          <div class="tenepes-step">
+            <span class="num">02</span>
+            <h3 class="h4">Escolha a natureza</h3>
+            <p>Clique no botão correspondente: pedido para si ou para outra pessoa.</p>
+          </div>
+          <div class="tenepes-step">
+            <span class="num">03</span>
+            <h3 class="h4">Preencha o formulário</h3>
+            <p>Informe os dados solicitados com cuidado e clareza.</p>
+          </div>
+          <div class="tenepes-step">
+            <span class="num">04</span>
+            <h3 class="h4">Revise antes de enviar</h3>
+            <p>A Ectolab atua de acordo com a LGPD e não repassa dados a terceiros.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="curso-detail-grid">
+          <div class="prose" style="margin-left:0">
+            <h2>O que é Tenepes?</h2>
+            <p>Tenepes é o nome dado para a tarefa energética pessoal. Essa tarefa consiste em doar energias, ao modo de “passes para o escuro”, visando assistir a consciências intra e extrafísicas.</p>
+            <p>Esta doação é realizada diariamente pelo praticante, em horário regular, de forma anônima e gratuita, em conjunto com amparador extrafísico de função. Esta é uma técnica baseada na Conscienciologia.</p>
+            <p>A técnica foi proposta pelo pesquisador Waldo Vieira na década de 90 e seus procedimentos foram sistematizados com o livro <em>Manual da Tenepes</em>. <a href="https://editares.org.br/livro/manual-da-tenepes-3a-ed/" target="_blank" rel="noreferrer">Clique aqui para baixar o manual</a>.</p>
+
+            <h2>Como ocorre a Tenepes?</h2>
+            <p>Em ambiente próprio e otimizado para a prática, o tenepessista realiza a exteriorização de energias ao solicitante, acompanhado pelo amparador extrafísico de função e/ou demais consciências extrafísicas, intrafísicas ou projetadas envolvidas na assistência.</p>
+            <p>A prática de exteriorização de energias dura cerca de 50 minutos, visando auxiliar por meio do esclarecimento e exemplarismo das energias do tenepessista.</p>
+          </div>
+          <aside class="curso-aside">
+            <h3 class="h3" style="margin-top:0">Antes de enviar</h3>
+            <ul style="padding-left:18px;margin:16px 0 0;color:var(--ink-2);line-height:1.7">
+              <li>Escolha o formulário adequado à solicitação.</li>
+              <li>Confira todos os dados antes do envio.</li>
+              <li>Os dados compartilhados não são repassados a terceiros.</li>
+              <li>Em caso de dúvida, escreva para <a href="mailto:contato@ectolab.org">contato@ectolab.org</a>.</li>
+            </ul>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-white" id="formulario">
+      <div class="wrap">
+        <div style="max-width:880px;margin:0 auto 32px;text-align:center">
+          <div class="eyebrow"><span class="dot"></span>FORMULÁRIO</div>
+          <h2 class="h1" style="margin-top:16px">Pedido de Tenepes.</h2>
+          <p class="lede" style="margin-top:16px">
+            Preencha o formulário abaixo e revise as informações antes de enviar.
+          </p>
+        </div>
+        <div class="tenepes-form">
+          <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeC6bF1TGBBaXRs-H2yKzeTxCvbfiWHlTQdiKuykrxq2532Fw/viewform?embedded=true" width="640" height="1538" frameborder="0" marginheight="0" marginwidth="0">Carregando...</iframe>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="__footer"></div>
+  <script type="module" src="/assets/chrome.js"></script>
+</body>
+</html>

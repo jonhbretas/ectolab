@@ -37,6 +37,13 @@
           "image": "/logo.webp",
           "alt": "",
           "notes": "Preferir WEBP otimizado para melhor desempenho."
+        },
+        {
+          "label": "Logo",
+          "originalPath": "/logo-branca-ectolab.png",
+          "image": "/logo-branca-ectolab.png",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
         }
       ]
     },

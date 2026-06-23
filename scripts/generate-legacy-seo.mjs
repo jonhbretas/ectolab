@@ -22,6 +22,7 @@ const staticPages = [
   ['/pages/rede-cadastro.html', '2026-06-20', '0.4'],
   ['/pages/rede-relatorio.html', '2026-06-20', '0.4'],
   ['/pages/orientacao-gratuita.html', '2026-05-20', '0.6'],
+  ['/pages/tenepes.html', '2026-06-22', '0.7'],
   ['/pages/laboratorio-paracirurgia.html', '2026-06-20', '0.6'],
   ['/pages/bioenergologia.html', '2026-06-20', '0.6'],
   ['/pages/laboratorio-ectoplasmologia.html', '2026-06-20', '0.6'],
