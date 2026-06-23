@@ -232,8 +232,8 @@
               Associação Internacional de Pesquisa Laboratorial em Paracirurgia e Ectoplasmia.
               Fundada em 2013, com sede em Foz do Iguaçu, Brasil.
             </p>
-            <p class="mono" style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--orange);margin-top:24px">
-              CNPJ &nbsp;18.782.858/0001-10 &nbsp;&middot;&nbsp; Inst. Conscienciocêntrica
+            <p class="mono" style="font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,255,255,0.62);margin-top:24px">
+              CNPJ &nbsp;18.782.858/0001-10
             </p>
           </div>
           <div>

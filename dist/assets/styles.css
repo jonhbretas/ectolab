@@ -684,6 +684,14 @@ p { margin: 0 0 1em; }
   line-height: 1.5;
   max-width: 480px;
 }
+.site-footer .footer-apoie .btn-orange {
+  color: var(--white);
+  opacity: 1;
+}
+.site-footer .footer-apoie .btn-orange:hover {
+  color: var(--white);
+  opacity: 1;
+}
 @media (max-width: 600px) {
   .footer-apoie { flex-direction: column; align-items: flex-start; }
 }
