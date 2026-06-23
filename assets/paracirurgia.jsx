@@ -46,8 +46,8 @@ function HeroParacirurgia() {
           CIÊNCIA & ASSISTÊNCIA &nbsp;·&nbsp; ECTOPLASMOLOGIA
         </div>
         <h1 className="h-display" style={{ marginTop: 24 }}>
-          Paracirurgia: <br />
-          <strong style={{ color: "var(--teal)", fontWeight: 700 }}>saúde multidimensional</strong>.
+          O que é <br />
+          <strong style={{ color: "var(--teal)", fontWeight: 700 }}>Paracirurgia</strong>?
         </h1>
         <div className="grid g2 gap-48" style={{ marginTop: 28, alignItems: 'start' }}>
           <p className="lede">
@@ -223,14 +223,14 @@ function ComoParticipar() {
             <span className="specimen">MODALIDADE 02</span>
             <h3 className="h3" style={{ margin: '16px 0' }}>Doador ou Acoplador Presencial</h3>
             <p style={{ fontSize: '14.5px', color: 'var(--ink-2)' }}>Quem deseja exercer seu parapsiquismo de forma assistencial. Inscrição via loja. O valor custeia aluguel da sala, materiais, logística dos Epicons e financiamento de pesquisas científicas.</p>
-            <a href="https://loja.ectolab.org" target="_blank" className="link-arrow" style={{ color: 'var(--orange)', borderColor: 'var(--orange)', marginTop: 'auto', alignSelf: 'flex-start' }}>Loja Ectolab →</a>
+            <a href="/pages/dinamicas.html" target="_blank" className="link-arrow" style={{ color: 'var(--orange)', borderColor: 'var(--orange)', marginTop: 'auto', alignSelf: 'flex-start' }}>Verificar Localidades →</a>
           </div>
 
           <div className="card" style={{ padding: '32px' }}>
             <span className="specimen">MODALIDADE 03</span>
             <h3 className="h3" style={{ margin: '16px 0' }}>Doador à Distância</h3>
             <p style={{ fontSize: '14.5px', color: 'var(--ink-2)' }}>Para tenepessistas veteranos (+3 anos) ou experientes em acoplamento. Inscrição gratuita como membro da Rede Interassistencial à Distância para participar da sua própria residência.</p>
-            <a href="#" className="link-arrow" style={{ marginTop: 'auto', alignSelf: 'flex-start' }}>Cadastrar na Rede →</a>
+            <a href="/pages/rede.html" target="_blank" className="link-arrow" style={{ marginTop: 'auto', alignSelf: 'flex-start' }}>Cadastrar na Rede →</a>
           </div>
         </div>
         
@@ -289,7 +289,7 @@ function FormularioSolicitacao() {
 function FAQParacirurgia() {
   const items = [
     { q: "A Paracirurgia substitui o tratamento médico?", a: "Não. É uma técnica complementar. Recomendamos enfaticamente que o assistido nunca interrompa tratamentos médicos convencionais." },
-    { q: "Existe algum custo?", a: "Não. Todas as atividades assistenciais da Ectolab são gratuitas, realizadas por voluntários." },
+    { q: "Existe algum custo?", a: "Depende. A participação na condição de assistido é gratuita, não havendo qualquer custo envolvido. Contudo, a participação como assistente, na modalidade presencial, implica contribuição financeira, em função das despesas operacionais, tais como aluguel do espaço, energia elétrica, internet e demais custos diretos e indiretos necessários à manutenção das atividades." },
     { q: "Posso solicitar para outra pessoa?", a: "Sim, é possível solicitar para terceiros (familiares, amigos) e até para animais de estimação, desde que haja um responsável pelo preparo do ambiente." },
     { q: "Como saberei se fui atendido?", a: "O atendimento ocorre no fim de semana. O 'feedback' é a sua própria percepção e a melhora dos sintomas, que deve ser registrada no relatório." }
   ];

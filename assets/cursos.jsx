@@ -208,12 +208,12 @@ function App() {
         <div className="wrap">
           <div className="eyebrow"><span className="dot"></span>FORMAÇÃO PESQUISÍSTICA</div>
           <h1 className="h-display" style={{ marginTop: 24 }}>
-            Cursos &amp; <br />
+            Cursos e <br />
             <strong style={{ color: 'var(--teal)', fontWeight: 700 }}>Programas</strong>.
           </h1>
           <p className="lede" style={{ maxWidth: 720, marginTop: 28 }}>
-            Desenvolva seu parapsiquismo de forma técnica, teática e fundamentada no Princípio da Descrença.
-            Nossos cursos abrangem desde introdução online até imersões e laboratórios de campo presencial.
+            Desenvolva seu parapsiquismo em uma abordagem técnica, teática e fundamentada no Princípio da Descrença.
+            Nossos cursos abrangem desde introdução online até imersões e laboratórios individuais e grupais.
           </p>
 
           {/* Destaques */}
@@ -235,7 +235,7 @@ function App() {
             <div style={{ display: 'flex', alignItems: 'center', gap: 16 }}>
               <span className="tag dark">Gratuito</span>
               <span style={{ fontSize: 15, color: 'var(--ink)' }}>
-                <strong>Oficina de Ectoplasmologia</strong> — Presencial em Florianópolis, quintas-feiras das 19h30 às 21h30.
+                <strong>Oficina de Ectoplasmologia</strong> — Presencial em Florianópolis, consulte datas e horários.
               </span>
             </div>
             <a href="/pages/oficina-ectoplasmologia.html" className="btn btn-sm" style={{ whiteSpace: 'nowrap' }}>

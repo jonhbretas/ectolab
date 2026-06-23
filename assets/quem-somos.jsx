@@ -56,8 +56,8 @@ function HeroQuemSomos() {
           FUNDADA EM 14 DE JULHO DE 2013
         </div>
         <h1 className="h-display" style={{ marginTop: 24 }}>
-          Sobre a <br />
-          <strong style={{ color: "var(--teal)", fontWeight: 700 }}>se torna técnica</strong>.
+          Ectolab
+          <strong style={{ color: "var(--teal)", fontWeight: 700 }}>.</strong>
         </h1>
         <div className="grid g2 gap-48" style={{ marginTop: 28, alignItems: 'start' }}>
           <div className="col gap-16">
@@ -65,7 +65,7 @@ function HeroQuemSomos() {
               A Ectolab (Associação Internacional de Pesquisa Laboratorial em Ectoplasmia e Paracirurgia) foi fundada em 14 de julho de 2013 e visa a profissionalização das pesquisas em Ectoplasmia e Paracirurgia, temas muito falados porém com pouco material técnico a respeito.
             </p>
             <p style={{ fontSize: '17px', color: 'var(--ink-2)' }}>
-              Realiza pesquisas sobres estes temas há quase uma década através da Dinâmica Interassistencial da Paracirurgia (DIP).
+              Realiza pesquisas sobres estes temas há quase duas décadas através da Dinâmica Interassistencial da Paracirurgia (DIP).
             </p>
           </div>
           <div className="col gap-16">
@@ -86,7 +86,7 @@ function Missao() {
         <div className="grid g2 gap-48 center">
           <div className="eyebrow"><span className="dot"></span>NOSSA MISSÃO</div>
           <h2 className="h2 serif" style={{ color: 'var(--teal)' }}>
-            Estudar, pesquisar e desenvolver Metodologia de pesquisa parapsíquica em Ectoplasmia e Paracirurgia, 
+            Estudar, pesquisar e desenvolver metodologia de pesquisa parapsíquica em Ectoplasmia e Paracirurgia, 
             contribuindo para a promoção da interassistencialidade multidimensional.
           </h2>
         </div>

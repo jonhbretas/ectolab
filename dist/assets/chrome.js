@@ -248,12 +248,10 @@
           <div>
             <h5>Contato</h5>
             <ul>
-              <li><a href="${P}pages/contato.html">Ver Local</a></li>
-              <li>Av. Paraná, 1230 · Foz do Iguaçu, PR</li>
-              <li>Telefone: +55 (45) 3025-XXXX</li>
-              <li><a href="mailto:contato@ectolab.org">contato@ectolab.org</a></li>
-              <li><a href="#">Newsletter</a></li>
-              <li><a href="#">Imprensa</a></li>
+              <li><strong>Sede</strong><br><a href="${P}pages/contato.html">Foz do Iguaçu</a></li>
+              <li><strong>WhatsApp</strong><br><a href="https://wa.me/5545991011407" target="_blank" rel="noreferrer">+55 (45) 99101-1407</a></li>
+              <li><strong>E-mail</strong><br><a href="mailto:contato@ectolab.org">contato@ectolab.org</a></li>
+              <li><strong>Doações</strong><br><a href="mailto:financeiro@ectolab.org">financeiro@ectolab.org</a></li>
             </ul>
           </div>
         </div>
