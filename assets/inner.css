@@ -123,26 +123,50 @@
   background: var(--white);
   display: flex; align-items: center; justify-content: center;
   font-family: var(--mono);
-  font-size: 14px;
-  font-weight: 500;
+  font-size: 18px;
+  font-weight: 600;
   z-index: 2;
   position: relative;
   margin-left: 16px;
+  box-shadow: 0 6px 18px -10px rgba(8,34,43,0.5);
 }
 .trail-step__bullet.gold { background: var(--gold); border-color: var(--gold-2); }
 .trail-step__bullet.dark { background: var(--ink); color: var(--gold); border-color: var(--ink); }
 
 .trail-step__body { display: grid; grid-template-columns: 1.4fr 1fr; gap: 40px; align-items: start; }
-.trail-step h2 { font-family: var(--serif); font-size: clamp(28px, 2.6vw, 40px); font-weight: 400; letter-spacing: -0.012em; margin: 0 0 12px; line-height: 1.08; }
+.trail-step h2 { font-family: var(--serif); font-size: clamp(28px, 2.6vw, 40px); font-weight: 400; letter-spacing: -0.012em; margin: 0 0 14px; line-height: 1.12; }
 .trail-step .stage {
+  display: inline-block;
   font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.14em;
+  font-size: 12px;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
   color: var(--blue);
-  margin-bottom: 14px;
+  background: var(--blue-soft);
+  border: 1px solid var(--blue-soft2);
+  padding: 6px 14px;
+  border-radius: 999px;
+  margin-bottom: 16px;
 }
-.trail-step p { font-size: 16px; color: var(--ink-2); line-height: 1.65; }
+.trail-step p { font-size: 17px; color: var(--ink-2); line-height: 1.72; max-width: 64ch; }
+
+/* Lista de itens dentro de cada etapa — linhas legíveis e escaneáveis */
+.trail-list {
+  list-style: none;
+  padding: 0;
+  margin: 22px 0 0;
+  display: flex;
+  flex-direction: column;
+  font-size: 16px;
+  color: var(--ink-2);
+  line-height: 1.6;
+}
+.trail-list li {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+}
+.trail-list li:first-child { padding-top: 0; }
+.trail-list li:last-child { border-bottom: none; padding-bottom: 0; }
 .trail-step__side {
   background: linear-gradient(145deg, var(--white) 0%, #fff8e9 100%);
   border: 1px solid rgba(240,160,48,0.55);
@@ -181,8 +205,8 @@
 .trail-step__side div:nth-child(4n+4) { border-left: 4px solid var(--ink); }
 .trail-step__side dt {
   font-family: var(--mono);
-  font-size: 11px;
-  letter-spacing: 0.1em;
+  font-size: 12px;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--ink-3);
 }
@@ -194,9 +218,10 @@
 .trail-step__side dd {
   margin: 0;
   color: var(--ink);
-  font-size: 15px;
+  font-size: 16px;
   font-weight: 700;
   text-align: right;
+  line-height: 1.4;
 }
 
 .acronym-tip {
@@ -1032,7 +1057,9 @@
 
 /* Trail step: leitura mais fácil no mobile */
 @media (max-width: 540px) {
-  .trail-step__body p { font-size: 15px; }
+  .trail-step__body p { font-size: 16px; }
+  .trail-list { font-size: 15px; }
+  .trail-step h2 { font-size: clamp(24px, 7vw, 30px); }
 }
 
 /* Curso hero: sigla menor em mobile */
