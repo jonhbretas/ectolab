@@ -13,14 +13,14 @@
       "time": "19h30 às 21h30",
       "tag": "",
       "status": "Realizado",
-      "students": "",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": ""
     },
     {
       "model": "proep",
@@ -35,14 +35,14 @@
       "time": "",
       "tag": "",
       "status": "Vagas preenchidas",
-      "students": "",
       "price": "",
       "free": false,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": ""
     },
     {
       "model": "oficina",
@@ -51,20 +51,20 @@
       "categoryCustom": "",
       "date": "2026-07-09",
       "durationDays": null,
-      "href": "",
+      "href": "https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/",
       "description": "",
       "location": "",
       "time": "",
       "tag": "",
       "status": "Inscrições Abertas",
-      "students": "Até 20 Alunos",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": "Até 20 Alunos"
     },
     {
       "model": "dip",
@@ -79,14 +79,14 @@
       "time": "17:00",
       "tag": "",
       "status": "Inscrições Abertas",
-      "students": "Até 250 participantes",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "gold",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": "Até 250 participantes"
     },
     {
       "model": "verbete",
@@ -101,14 +101,14 @@
       "time": "12:30",
       "tag": "",
       "status": "Em breve",
-      "students": "",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "gold",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": ""
     },
     {
       "model": "verbete",
@@ -123,14 +123,14 @@
       "time": "12:30",
       "tag": "",
       "status": "Em breve",
-      "students": "",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "gold",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": ""
     },
     {
       "model": "verbete",
@@ -145,14 +145,14 @@
       "time": "12:30",
       "tag": "",
       "status": "Em breve",
-      "students": "",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "gold",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": ""
     },
     {
       "model": "verbete",
@@ -167,14 +167,14 @@
       "time": "12:30",
       "tag": "",
       "status": "Em breve",
-      "students": "",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "gold",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": ""
     },
     {
       "model": "verbete",
@@ -189,14 +189,14 @@
       "time": "12:30",
       "tag": "",
       "status": "Em breve",
-      "students": "",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "gold",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": ""
     },
     {
       "model": "proep",
@@ -211,14 +211,14 @@
       "time": "",
       "tag": "",
       "status": "Inscrições Abertas",
-      "students": "",
       "price": "",
       "free": false,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": ""
     },
     {
       "model": "oficina",
@@ -227,20 +227,20 @@
       "categoryCustom": "",
       "date": "2026-08-13",
       "durationDays": null,
-      "href": "",
+      "href": "https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/",
       "description": "",
       "location": "",
       "time": "",
       "tag": "",
       "status": "Inscrições Abertas",
-      "students": "Até 20 Alunos",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": "Até 20 Alunos"
     },
     {
       "model": "oficina",
@@ -249,20 +249,20 @@
       "categoryCustom": "",
       "date": "2026-09-10",
       "durationDays": null,
-      "href": "",
+      "href": "https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/",
       "description": "",
       "location": "",
       "time": "",
       "tag": "",
       "status": "Inscrições Abertas",
-      "students": "Até 20 Alunos",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": "Até 20 Alunos"
     },
     {
       "model": "encontro",
@@ -277,14 +277,14 @@
       "time": "",
       "tag": "Exclusivo para Voluntários",
       "status": "Inscrições Abertas",
-      "students": "",
       "price": "",
       "free": false,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "dark",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": ""
     },
     {
       "model": "proep",
@@ -299,14 +299,14 @@
       "time": "",
       "tag": "",
       "status": "Inscrições Abertas",
-      "students": "",
       "price": "",
       "free": false,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": ""
     },
     {
       "model": "oficina",
@@ -315,20 +315,20 @@
       "categoryCustom": "",
       "date": "2026-10-09",
       "durationDays": null,
-      "href": "",
+      "href": "https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/",
       "description": "",
       "location": "",
       "time": "",
       "tag": "",
       "status": "Inscrições Abertas",
-      "students": "Até 20 Alunos",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": "Até 20 Alunos"
     },
     {
       "model": "proep",
@@ -343,14 +343,14 @@
       "time": "",
       "tag": "",
       "status": "Inscrições Abertas",
-      "students": "",
       "price": "",
       "free": false,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": ""
     },
     {
       "model": "oficina",
@@ -359,20 +359,20 @@
       "categoryCustom": "",
       "date": "2026-11-12",
       "durationDays": null,
-      "href": "",
+      "href": "https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/",
       "description": "",
       "location": "",
       "time": "",
       "tag": "",
       "status": "Inscrições Abertas",
-      "students": "Até 20 Alunos",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": "Até 20 Alunos"
     },
     {
       "model": "proep",
@@ -387,14 +387,14 @@
       "time": "",
       "tag": "",
       "status": "Inscrições Abertas",
-      "students": "",
       "price": "",
       "free": false,
       "buttonLabel": "Ver detalhes",
       "featured": false,
       "featuredStyle": "",
       "featuredDate": "",
-      "featuredCategory": ""
+      "featuredCategory": "",
+      "students": ""
     }
   ]
 }
