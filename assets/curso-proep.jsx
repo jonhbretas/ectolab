@@ -23,7 +23,7 @@ function App() {
               <div className="prose" style={{ marginTop: 40, marginLeft: 0 }}>
                 <h3>Proposta Didático-Vivencial</h3>
                 <p>
-                  A metodologia do PROEP combina atividades teóricas, vivências práticas, uso de tecnologia aplicada à autopesquisa e momentos de preceptoria individual. O cronograma é organizado para favorecer a mobilização energética contínua, o aprofundamento autoinvestigativo e o reequilíbrio holossomático.
+                  A metodologia do PROEP combina atividades teóricas, vivências práticas, uso de tecnologia aplicada à autopesquisa e momentos de preceptoria orientação individual. O cronograma é organizado para favorecer a mobilização energética contínua, o aprofundamento autoinvestigativo e o reequilíbrio holossomático.
                 </p>
                 
                 <h3>Objetivos</h3>
@@ -40,23 +40,28 @@ function App() {
                 <h4>Sexta-feira – Abertura e Avaliação Inicial</h4>
                 <ul>
                   <li>Mobilização Básica das Energias (MBE)</li>
-                  <li>Fundamentos da ectoplasmologia e autoavaliação holossomática</li>
-                  <li>Aplicação de experimentos de eletrosomatografia</li>
-                  <li>Encaminhamento para dinâmica interassistencial de Paracirurgia</li>
+                  <li>Aplicação de experimentos laboratoriais de eletrosomatografia</li>
+                  <li>Fundamentos da Ectoplasmologia e autoavaliação holossomática</li>
+                  <li>Encaminhamento para Dinâmica interassistencial de Paracirurgia</li>
                 </ul>
                 
                 <h4>Sábado – Autopesquisa e Intervenções Energéticas</h4>
                 <ul>
                   <li>Oficina do Parapercepciograma (com notebook)</li>
                   <li>Ectoplasmologia Avançada e uso do energodispêndiograma</li>
-                  <li>Estímulos com fotoestimulador e estimulação vagal auricular</li>
+                  <li>Autoavaliação holossomática</li>
+                  <li>Estímulos com fotoestimulador</li>
+                  <li>Fotoestimulação e estimulação vagal auricular</li>
                   <li>Oficina Mentalsomática I</li>
+                  <li>Técnicas energéticas</li>
                 </ul>
 
                 <h4>Domingo – Integração, Debate e Preceptoria</h4>
                 <ul>
-                  <li>Oficina Mentalsomática II e Oficina de Ectoplasmologia</li>
+                  <li>Oficina Mentalsomática e Oficina de Ectoplasmologia</li>
+                  <li>Oficina de Ectoplasmologia</li>
                   <li>Nova experimentação de eletrosomatografia</li>
+                  <li>Reverificação de experimentos laboratoriais</li>
                   <li>Debate grupal e feedback individual</li>
                 </ul>
               </div>
@@ -69,8 +74,8 @@ function App() {
                     ['Modalidade', 'Presencial (Apenas 4 vagas)'],
                     ['Dias', 'Sexta, Sábado e Domingo'],
                     ['Horários', 'Sex 14h-22h | Sáb 08h-17h30 | Dom 08h-17h'],
-                    ['Local', 'Lab de Ectoplasmologia – CEAEC'],
-                    ['Equipe', '2 professores, 1 monitor, suporte médico'],
+                    ['Local', 'Espaço Bioenergologia – CEAEC'],
+                    ['Equipe', '2 professores e 2 monitores'],
                     ['Valor', 'R$1.000 (Até 10x sem Juros)']
                   ].map(([k, v]) => (
                     <div key={k} className="flex between" style={{ borderBottom: '1px dashed rgba(255,255,255,0.2)', paddingBottom: 12 }}>
