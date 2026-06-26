@@ -395,6 +395,30 @@
       "featuredDate": "",
       "featuredCategory": "",
       "students": ""
+    },
+    {
+      "model": "",
+      "title": "Materializações Interassistenciais",
+      "category": "curso-hibrido",
+      "categoryCustom": "Curso em Parceria",
+      "date": "2026-10-31",
+      "durationDays": 1,
+      "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/",
+      "description": "Você já refletiu sobre as suas materializações interassistenciais?",
+      "location": "Híbrido - Foz do Iguaçu",
+      "time": "09:00 às 17:00",
+      "tag": "",
+      "status": "Inscrições Abertas",
+      "vacancies": "",
+      "price": "R$500",
+      "free": false,
+      "buttonLabel": "Ver detalhes",
+      "featured": true,
+      "featuredStyle": "",
+      "featuredDate": "",
+      "featuredCategory": "",
+      "pinHome": false,
+      "homeOrdem": null
     }
   ]
 }
