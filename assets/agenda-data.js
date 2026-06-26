@@ -362,6 +362,28 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "date": "2026-10-31",
+    "durationDays": 1,
+    "dia": "31",
+    "mes": "OUT",
+    "mesNome": "OUTUBRO",
+    "ano": "2026",
+    "titulo": "Materializações Interassistenciais",
+    "tipo": "Curso em Parceria",
+    "gratuito": false,
+    "local": "Híbrido - Foz do Iguaçu",
+    "horario": "09:00 às 17:00",
+    "detalhe": null,
+    "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/",
+    "preco": "R$500",
+    "precoExtra": null,
+    "modalidades": [],
+    "status": "Inscrições Abertas",
+    "featured": true,
+    "pinHome": false,
+    "homeOrdem": 999
+  },
+  {
     "date": "2026-11-12",
     "durationDays": 0,
     "dia": "12",
