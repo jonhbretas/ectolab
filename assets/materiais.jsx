@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 
 const ARTIGOS = [
@@ -19,6 +19,18 @@ const ARTIGOS = [
     subtitulo: 'Artigo',
     href: 'https://ectolab.org/wp-content/uploads/2022/05/Sindrome-do-Godot.pdf',
     resumo: 'Descrição e caracterização da Síndrome de Godot a partir de parafatos observados na Dinâmica Interassistencial Holossomática.'
+  },
+  {
+    titulo: 'Síndrome Ectoplásmica',
+    subtitulo: 'Revista Semina Paracientifica',
+    href: 'http://www.ceaec.org/index.php/conscientia/article/view/1560',
+    resumo: 'Artigo publicado na revista Semina Paracientifica abordando a síndrome ectoplásmica, suas características e implicações.'
+  },
+  {
+    titulo: 'Experimento da Energização na Cebola',
+    subtitulo: 'Revista Interparadigmas',
+    href: 'https://www.interparadigmas.org.br/wp-content/uploads/2017/03/Interparadigmas-03-N-03-Fonseca-et-allPortugu%C3%AAs.pdf',
+    resumo: 'Experimento de energização em cebolas demonstrando efeitos bioenergéticos, publicado na revista Interparadigmas.'
   }
 ];
 
@@ -68,13 +80,6 @@ const VERBETES = [
   { t: 'Tenepessista ectoplasta', pdf: 'https://ectolab.org/wp-content/uploads/2022/05/TENEPESSISTA-ECTOPLASTA.pdf', video: 'https://www.youtube.com/watch?v=13LNHXK0yaI' }
 ];
 
-const FAQS = [
-  { q: 'Posso solicitar uma paracirurgia para quem está no hospital?', a: 'Sim. Nesses casos, um parente ou responsável deve preencher o formulário e sintonizar mentalmente durante o horário do campo vibracional, servindo de ponte.' },
-  { q: 'Posso me alimentar antes da Paracirurgia?', a: 'Pode sim. Cerca de 2h antes, faça um lanche leve e ingira pouco líquido, evitando cafeína, chá ou estimulantes. Ao final, poderá fazer outro lanche leve.' },
-  { q: 'Preciso crer em algo para fazer a paracirurgia?', a: 'Não. A paracirurgia atua de forma energética, baseada na doação e aplicação de ectoplasma. Funciona independente de crença ou religião.' },
-  { q: 'É possível pedir cirurgia para meu animal de estimação?', a: 'Sim. Para animais, solicitamos que o tutor responsável repouse ao lado do animal, acariciando ou mantendo conexão afetuosa no horário da intervenção.' }
-];
-
 function LinkButton({ href, children }) {
   return (
     <a href={href} target="_blank" rel="noreferrer" className="link-arrow" style={{ fontSize: 13 }}>
@@ -84,19 +89,16 @@ function LinkButton({ href, children }) {
 }
 
 function App() {
-  const [open, setOpen] = useState(0);
-
   return (
     <section className="section bg-white" style={{ paddingTop: '80px', paddingBottom: '64px' }}>
       <div className="wrap">
-        <div className="eyebrow"><span className="dot"></span>ACERVO DE PESQUISA & FAQ</div>
+        <div className="eyebrow"><span className="dot"></span>ACERVO DE PESQUISA</div>
         <h1 className="h-display" style={{ marginTop: 24 }}>Materiais Publicados.</h1>
         <p className="lede" style={{ marginTop: 24, marginBottom: 48, maxWidth: 760 }}>
           Conteúdos para estudar ectoplasmia, paracirurgia e temas correlatos: artigos, playlists, palestras e verbetes disponíveis para leitura e download.
         </p>
 
-        <div className="grid g2 gap-48" style={{ alignItems: 'start' }}>
-          <div className="col gap-32">
+        <div className="col gap-32">
             <div className="card" style={{ padding: 32 }}>
               <h2 className="h3" style={{ color: 'var(--teal)' }}>Artigos</h2>
               <div className="col gap-16" style={{ marginTop: 20 }}>
@@ -150,32 +152,6 @@ function App() {
               </div>
             </div>
           </div>
-
-          <div>
-            <div className="glass-teal" style={{ padding: 32, borderRadius: 'var(--r-lg)', position: 'sticky', top: 96 }}>
-              <h2 className="h2" style={{ color: 'var(--white)' }}>Perguntas Frequentes</h2>
-              <p style={{ fontSize: 14.5, color: 'rgba(255,255,255,0.8)', marginTop: 8, marginBottom: 24 }}>
-                Tem alguma dúvida que não consta? Escreva para <a href="mailto:contato@ectolab.org" style={{ color: 'var(--gold)', textDecoration: 'underline' }}>contato@ectolab.org</a>.
-              </p>
-
-              <div className="col gap-12">
-                {FAQS.map((item, i) => (
-                  <div key={i} className="card" style={{ cursor: 'pointer', background: 'transparent', borderColor: open === i ? 'var(--gold)' : 'rgba(255,255,255,0.2)' }} onClick={() => setOpen(open === i ? -1 : i)}>
-                    <div className="flex between center" style={{ padding: '16px 20px', gap: 16 }}>
-                      <h3 className="h4" style={{ color: open === i ? 'var(--gold)' : 'var(--white)', fontSize: 15 }}>{item.q}</h3>
-                      <span className="mono" style={{ fontSize: 20, color: 'var(--white)' }}>{open === i ? '-' : '+'}</span>
-                    </div>
-                    {open === i && (
-                      <div style={{ padding: '0 20px 20px', color: 'rgba(255,255,255,0.9)', fontSize: 14, lineHeight: 1.6 }}>
-                        {item.a}
-                      </div>
-                    )}
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </section>
   );

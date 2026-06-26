@@ -288,10 +288,14 @@ function FormularioSolicitacao() {
 
 function FAQParacirurgia() {
   const items = [
-    { q: "A Paracirurgia substitui o tratamento médico?", a: "Não. É uma técnica complementar. Recomendamos enfaticamente que o assistido nunca interrompa tratamentos médicos convencionais." },
+    { q: "A paracirurgia substitui o tratamento médico?", a: "Não. É uma técnica complementar. Recomendamos enfaticamente que o assistido nunca interrompa tratamentos médicos convencionais." },
     { q: "Existe algum custo?", a: "Depende. A participação na condição de assistido é gratuita, não havendo qualquer custo envolvido. Contudo, a participação como assistente, na modalidade presencial, implica contribuição financeira, em função das despesas operacionais, tais como aluguel do espaço, energia elétrica, internet e demais custos diretos e indiretos necessários à manutenção das atividades." },
     { q: "Posso solicitar para outra pessoa?", a: "Sim, é possível solicitar para terceiros (familiares, amigos) e até para animais de estimação, desde que haja um responsável pelo preparo do ambiente." },
-    { q: "Como saberei se fui atendido?", a: "O atendimento ocorre no fim de semana. O 'feedback' é a sua própria percepção e a melhora dos sintomas, que deve ser registrada no relatório." }
+    { q: "Como saberei se fui atendido?", a: "O atendimento ocorre no fim de semana. O 'feedback' é a sua própria percepção e a melhora dos sintomas, que deve ser registrada no relatório." },
+    { q: "Posso solicitar uma paracirurgia para quem está no hospital?", a: "Sim. Nesses casos, um parente ou responsável deve preencher o formulário e sintonizar mentalmente durante o horário do campo vibracional, servindo de ponte." },
+    { q: "Posso me alimentar antes da paracirurgia?", a: "Pode sim. Cerca de 2h antes, faça um lanche leve e ingira pouco líquido, evitando cafeína, chá ou estimulantes. Ao final, poderá fazer outro lanche leve." },
+    { q: "Preciso crer em algo para fazer a paracirurgia?", a: "Não. A paracirurgia atua de forma energética, baseada na doação e aplicação de ectoplasma. Funciona independente de crença ou religião." },
+    { q: "É possível pedir paracirurgia para meu animal de estimação?", a: "Sim. Para animais, solicitamos que o tutor responsável repouse ao lado do animal, acariciando ou mantendo conexão afetuosa no horário da intervenção." }
   ];
 
   const [open, setOpen] = useState(0);
