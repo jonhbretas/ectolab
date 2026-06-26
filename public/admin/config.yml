@@ -152,7 +152,20 @@ collections:
               - { name: price, label: Preco padrao, widget: string, required: false }
               - { name: free, label: Gratuito por padrao, widget: boolean, default: false, required: false }
               - { name: href, label: Link da pagina no site, widget: string, required: false, default: /pages/atividades.html, hint: "Pagina interna usada automaticamente pelos eventos deste modelo. Ex.: /pages/curso-proep.html, /pages/dinamica.html ou /pages/blog.html." }
-              - { name: buttonLabel, label: Texto do botao/link padrao, widget: string, required: false, default: Ver detalhes }
+- { name: buttonLabel, label: Texto do botao/link padrao, widget: string, required: false, default: Ver detalhes }
+              - name: modalidades
+                label: Modalidades hibridas (presencial + online)
+                widget: list
+                required: false
+                label_singular: Modalidade
+                summary: "{{label}} · {{price}}"
+                collapsed: true
+                hint: "Use quando o evento tiver duas modalidades de inscricao (ex.: presencial e online), cada uma com seu proprio preco e link. Deixe vazio para usar um unico link/preco."
+                fields:
+                  - { name: label, label: Nome da modalidade, widget: string, hint: "Ex.: Presencial, Online." }
+                  - { name: price, label: Preco desta modalidade, widget: string, required: false, hint: "Ex.: R$ 180,00." }
+                  - { name: href, label: Link de inscricao, widget: string, required: false, hint: "URL da pagina de inscricao desta modalidade." }
+                  - { name: buttonLabel, label: Texto do botao, widget: string, required: false, default: Inscrever-se, hint: "Ex.: Inscrever presencial, Inscrever online." }
               - { name: durationDays, label: Dias para frente padrao, widget: number, value_type: int, min: 0, required: false }
       - name: events
         label: Eventos
@@ -231,7 +244,20 @@ collections:
               - { name: vacancies, label: Vagas do evento, widget: string, required: false, hint: "Ex.: 20 vagas, Ate 30 vagas, Turma reduzida. Se usar modelo, deixe vazio para herdar o padrao." }
               - { name: price, label: Preco, widget: string, required: false, default: "" }
               - { name: free, label: Gratuito, widget: boolean, default: false, required: false }
-              - { name: buttonLabel, label: Texto do botao/link, widget: string, required: false, default: Ver detalhes }
+- { name: buttonLabel, label: Texto do botao/link, widget: string, required: false, default: Ver detalhes }
+              - name: modalidades
+                label: Modalidades hibridas (presencial + online)
+                widget: list
+                required: false
+                label_singular: Modalidade
+                summary: "{{label}} · {{price}}"
+                collapsed: true
+                hint: "Use quando o evento tiver duas modalidades de inscricao (ex.: presencial e online), cada uma com seu proprio preco e link. Deixe vazio para usar um unico link/preco."
+                fields:
+                  - { name: label, label: Nome da modalidade, widget: string, hint: "Ex.: Presencial, Online." }
+                  - { name: price, label: Preco desta modalidade, widget: string, required: false, hint: "Ex.: R$ 180,00." }
+                  - { name: href, label: Link de inscricao, widget: string, required: false, hint: "URL da pagina de inscricao desta modalidade." }
+                  - { name: buttonLabel, label: Texto do botao, widget: string, required: false, default: Inscrever-se, hint: "Ex.: Inscrever presencial, Inscrever online." }
               - { name: featured, label: Destaque na agenda, widget: boolean, default: false, required: false, hint: "Aparece na seção de destaques da pagina de agenda e tambem entra na Home." }
               - { name: featuredStyle, label: Estilo do destaque, widget: select, required: false, options: ["default", "dark", "gold"] }
               - { name: featuredDate, label: Data no destaque, widget: string, required: false, hint: "Opcional. Se ficar vazio, o site formata a data automaticamente usando a data de inicio e os dias para frente." }

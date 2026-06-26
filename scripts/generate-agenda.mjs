@@ -291,13 +291,29 @@ function displayTitle(event) {
   return `${base} · ${complement}`;
 }
 
+function normalizeModalidades(event) {
+  const list = Array.isArray(event.modalidades) ? event.modalidades : [];
+  const clean = list
+    .map((m) => ({
+      label: String(m.label || '').trim(),
+      price: String(m.price || '').trim(),
+      href: String(m.href || '').trim(),
+      buttonLabel: String(m.buttonLabel || m.label || 'Inscrever-se').trim(),
+    }))
+    .filter((m) => m.label || m.href || m.price);
+  return clean.length >= 2 ? clean : [];
+}
+
 function normalizeEvent(rawEvent, monthGroup = {}, models = new Map(), eventTypes = readEventTypes()) {
   const event = applyEventModel(rawEvent, models);
   const parts = dateParts(event.date) || {};
   const customCategory = String(event.categoryCustom || '').trim();
   const category = customCategory ? slugify(customCategory) : event.category || 'palestra';
   const categoryLabel = customCategory || eventTypes.byValue.get(category)?.label || category;
-  const price = event.price || (event.free ? 'Gratuito' : '');
+  const modalidades = normalizeModalidades(event);
+  const price = modalidades.length
+    ? modalidades.map((m) => m.price).filter(Boolean).join(' · ')
+    : (event.price || (event.free ? 'Gratuito' : ''));
   const duration = durationDays(event.durationDays);
   const status = statusForEvent({ ...event, durationDays: duration });
 
@@ -317,6 +333,7 @@ function normalizeEvent(rawEvent, monthGroup = {}, models = new Map(), eventType
     location: event.location || '',
     time: event.time || '',
     price,
+    modalidades,
     vacancies: event.vacancies || event.students || event.studentCount || '',
     free: Boolean(event.free || String(price).toLowerCase().includes('gratuito')),
     status,
@@ -397,6 +414,34 @@ function renderRow(event) {
   const buttonLabel = event.buttonLabel || 'Ver detalhes';
   const rowDate = formatRowDate(event);
   const vacancies = event.vacancies ? `<span class="vacancies">${escapeHtml(event.vacancies)}</span>` : '';
+  const hasModalidades = event.modalidades && event.modalidades.length >= 2;
+
+  if (hasModalidades) {
+    const modalidadesHtml = event.modalidades.map((m) => {
+      const btnLabel = m.buttonLabel || m.label || 'Inscrever-se';
+      return `              <a href="${escapeHtml(m.href || event.href || '/pages/atividades.html')}" class="agenda-modal-btn">
+                <span class="agenda-modal-btn__label">${escapeHtml(btnLabel)}</span>
+                <span class="agenda-modal-btn__price">${escapeHtml(m.price || '')}</span>
+                <span class="agenda-modal-btn__arrow">→</span>
+              </a>`;
+    }).join('\n');
+
+    return `          <div class="agenda-row agenda-row--multi${rowPast}" data-cat="${escapeHtml(event.category)}" data-month="${escapeHtml(event.month)}">
+            <div class="agenda-row__date"><strong>${escapeHtml(rowDate.day)}</strong><span>${escapeHtml(rowDate.weekday)}</span></div>
+            <div class="agenda-row__body">
+              <div class="agenda-row__labels"><span class="agenda-tag ${escapeHtml(event.category)}">${escapeHtml(event.tag)}</span><span class="${stateClass}">${escapeHtml(event.status)}</span>${vacancies}</div>
+              <h3>${escapeHtml(event.title)}</h3>
+              <p>${escapeHtml(event.description)}</p>
+            </div>
+            <div class="agenda-row__meta">
+              <span><span class="ico">◆</span> ${escapeHtml(event.location || '')}</span>
+              <span><span class="ico">◆</span> ${escapeHtml(event.time || '')}</span>
+            </div>
+            <div class="agenda-row__status agenda-row__status--multi">
+${modalidadesHtml}
+            </div>
+          </div>`;
+  }
 
   return `          <a class="agenda-row${rowPast}" data-cat="${escapeHtml(event.category)}" data-month="${escapeHtml(event.month)}" href="${escapeHtml(event.href || '/pages/atividades.html')}">
             <div class="agenda-row__date"><strong>${escapeHtml(rowDate.day)}</strong><span>${escapeHtml(rowDate.weekday)}</span></div>
@@ -499,7 +544,7 @@ function updatePage(events, eventTypes) {
 //   precoExtra: string      — preço secundário (ex: "estudante R$ 240") (opcional)
 //
 function generateAgendaDataFile(events) {
-  const mapped = events.map((event) => ({
+const mapped = events.map((event) => ({
     date:      event.date || '',
     durationDays: event.durationDays || 0,
     dia:       String(event.day || '').padStart(2, '0'),
@@ -515,6 +560,12 @@ function generateAgendaDataFile(events) {
     href:      event.href || '/pages/atividades.html',
     preco:     event.price || '',
     precoExtra: event.precoExtra || null,
+    modalidades: (event.modalidades || []).map((m) => ({
+      label:       m.label || '',
+      price:       m.price || '',
+      href:        m.href || '',
+      buttonLabel: m.buttonLabel || m.label || 'Inscrever-se',
+    })),
     status:    event.status || '',
     featured:  Boolean(event.featured),
     pinHome:   Boolean(event.pinHome),

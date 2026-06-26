@@ -409,6 +409,63 @@
     }
     .agenda-row:hover .agenda-row__arr { transform: translateX(4px); color: var(--blue); }
 
+    /* ---------- Multi-modalidade (presencial + online) ---------- */
+    .agenda-row--multi { cursor: default; }
+    .agenda-row--multi:hover { padding-left: 18px; border-left-color: var(--line-2); }
+    .agenda-row__status--multi {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      align-items: stretch;
+    }
+    .agenda-modal-btn {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 14px;
+      border-radius: var(--r-sm);
+      border: 1px solid var(--line-2);
+      background: var(--white);
+      text-decoration: none;
+      transition: border-color 0.15s, background 0.15s, transform 0.15s;
+      font-family: var(--sans);
+    }
+    .agenda-modal-btn:hover {
+      border-color: var(--ink);
+      background: var(--paper);
+      transform: translateX(3px);
+    }
+    .agenda-modal-btn__label {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink);
+      flex: 1;
+      white-space: nowrap;
+    }
+    .agenda-modal-btn__price {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: var(--blue);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+    .agenda-modal-btn__arrow {
+      font-size: 14px;
+      color: var(--ink-3);
+      transition: transform 0.18s;
+    }
+    .agenda-modal-btn:hover .agenda-modal-btn__arrow {
+      transform: translateX(3px);
+      color: var(--blue);
+    }
+    @media (max-width: 1080px) {
+      .agenda-row--multi .agenda-row__status--multi { grid-column: 2 / 4; flex-direction: row; flex-wrap: wrap; gap: 10px; }
+      .agenda-modal-btn { flex: 1; min-width: 160px; }
+    }
+    @media (max-width: 720px) {
+      .agenda-row--multi .agenda-row__status--multi { grid-column: 1 / 3; flex-direction: column; }
+    }
+
     /* Past events */
     .agenda-row.is-past { opacity: 0.62; }
     .agenda-row.is-past:hover { opacity: 1; }
@@ -705,7 +762,7 @@
             <h2>Julho</h2><span class="yr">2026</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row" data-cat="oficina" data-month="jul" href="/pages/cursos.html">
+          <a class="agenda-row" data-cat="oficina" data-month="jul" href="https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/">
             <div class="agenda-row__date"><strong>09</strong><span>QUI</span></div>
             <div class="agenda-row__body">
               <div class="agenda-row__labels"><span class="agenda-tag oficina">Oficina</span><span class="state open">Inscrições Abertas</span><span class="vacancies">Até 20 Alunos</span></div>
@@ -825,7 +882,7 @@
             <div class="agenda-row__status"><span class="price">R$ 1.000</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="oficina" data-month="ago" href="/pages/cursos.html">
+          <a class="agenda-row" data-cat="oficina" data-month="ago" href="https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/">
             <div class="agenda-row__date"><strong>13</strong><span>QUI</span></div>
             <div class="agenda-row__body">
               <div class="agenda-row__labels"><span class="agenda-tag oficina">Oficina</span><span class="state open">Inscrições Abertas</span><span class="vacancies">Até 20 Alunos</span></div>
@@ -847,7 +904,7 @@
             <h2>Setembro</h2><span class="yr">2026</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row" data-cat="oficina" data-month="set" href="/pages/cursos.html">
+          <a class="agenda-row" data-cat="oficina" data-month="set" href="https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/">
             <div class="agenda-row__date"><strong>10</strong><span>QUI</span></div>
             <div class="agenda-row__body">
               <div class="agenda-row__labels"><span class="agenda-tag oficina">Oficina</span><span class="state open">Inscrições Abertas</span><span class="vacancies">Até 20 Alunos</span></div>
@@ -897,7 +954,7 @@
             <h2>Outubro</h2><span class="yr">2026</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row" data-cat="oficina" data-month="out" href="/pages/cursos.html">
+          <a class="agenda-row" data-cat="oficina" data-month="out" href="https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/">
             <div class="agenda-row__date"><strong>09</strong><span>SEX</span></div>
             <div class="agenda-row__body">
               <div class="agenda-row__labels"><span class="agenda-tag oficina">Oficina</span><span class="state open">Inscrições Abertas</span><span class="vacancies">Até 20 Alunos</span></div>
@@ -933,7 +990,7 @@
             <h2>Novembro</h2><span class="yr">2026</span>
             <span class="mcount"><b>0</b> atividades</span>
           </div>
-          <a class="agenda-row" data-cat="oficina" data-month="nov" href="/pages/cursos.html">
+          <a class="agenda-row" data-cat="oficina" data-month="nov" href="https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/">
             <div class="agenda-row__date"><strong>12</strong><span>QUI</span></div>
             <div class="agenda-row__body">
               <div class="agenda-row__labels"><span class="agenda-tag oficina">Oficina</span><span class="state open">Inscrições Abertas</span><span class="vacancies">Até 20 Alunos</span></div>
