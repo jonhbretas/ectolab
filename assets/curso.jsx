@@ -7,7 +7,7 @@ const CURSOS_DB = {
     title: "Auto-organização Bioenergética",
     desc: "Objetiva instrumentalizar o aluno para o alcance da homeostase bioenergética, por meio da identificação dos focos de desperdício de energias no cotidiano.",
     obj: ["Caracterizar a relação do aluno com seu corpo físico, energético, emocional e mental.", "Identificar hábitos e posturas no cotidiano e o respectivo desempenho energético.", "Elaborar ações visando alcançar a homeostase bioenergética."],
-    info: [["Data", "Consulte a agenda"], ["Horário", "9h–12h | 14h–17h"], ["Modalidade", "Síncrono (Zoom)"], ["Professores", "P. Franco, F. Fernandes, C. Silveira, S. Zanella"], ["Valor", "R$ 150,00"]],
+    info: [["Data", "Consulte a agenda"], ["Horário", "9h–12h | 14h–17h"], ["Modalidade", "Síncrono (Zoom) ou Presencial"], ["Professores", "Equipe docente da Ectolab"], ["Valor", "R$ 180,00"]],
     verbete: "Questionologia. Você já se conscientizou quanto à importância da lucidez e desenvolvimento do atributo da autorganização evolutiva? — Verbete Auto-organização Consciencial",
     depoimentos: [
       { a: "Magda Carvalho", t: "Muito bom! Super aplicável." },
