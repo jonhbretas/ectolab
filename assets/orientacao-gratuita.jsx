@@ -24,6 +24,13 @@ function App() {
                 <li>Verificar o nível de equilíbrio holossomático individual.</li>
                 <li>Indicar atividades auxiliares ao equilíbrio energético pessoal.</li>
               </ul>
+              <h3 style={{ marginTop: 32 }}>Informações adicionais</h3>
+              <ul>
+                <li>Intervalo mínimo de 6 meses para nova participação.</li>
+                <li>E-mail automático de registro do agendamento.</li>
+                <li>Remarcações e cancelamentos com antecedência.</li>
+                <li>Contato da equipe próximo à data agendada.</li>
+              </ul>
               <div className="tag soft" style={{ marginTop: 16 }}>Atividade sem pré-requisito</div>
             </div>
           </div>
@@ -36,8 +43,8 @@ function App() {
                   <span className="specimen" style={{ color: 'var(--gold)' }}>Modalidade</span>
                   <span style={{ fontSize: 14.5, color: 'var(--white)' }}>Online</span>
                 </div>
-                <div className="flex between" style={{ borderBottom: '1px dashed rgba(255,255,255,0.2)', paddingBottom: 12 }}><span className="specimen" style={{ color: 'var(--gold)' }}>Data / Horário</span><span style={{ fontSize: 14.5, color: 'var(--white)', textAlign: 'right' }}>Disponibilidade da Preceptora</span></div>
-                <div className="flex between" style={{ borderBottom: '1px dashed rgba(255,255,255,0.2)', paddingBottom: 12 }}><span className="specimen" style={{ color: 'var(--gold)' }}>Preceptora</span><span style={{ fontSize: 14.5, color: 'var(--white)' }}>Ana Paula do Prado</span></div>
+                <div className="flex between" style={{ borderBottom: '1px dashed rgba(255,255,255,0.2)', paddingBottom: 12 }}><span className="specimen" style={{ color: 'var(--gold)' }}>Data / Horário</span><span style={{ fontSize: 14.5, color: 'var(--white)', textAlign: 'right' }}>Quartas às 19h<br />Sábados às 9h</span></div>
+                <div className="flex between" style={{ borderBottom: '1px dashed rgba(255,255,255,0.2)', paddingBottom: 12 }}><span className="specimen" style={{ color: 'var(--gold)' }}>Professores</span><span style={{ fontSize: 14.5, color: 'var(--white)' }}>Equipe docente da Ectolab</span></div>
                 <div className="flex between" style={{ borderBottom: '1px dashed rgba(255,255,255,0.2)', paddingBottom: 12 }}><span className="specimen" style={{ color: 'var(--gold)' }}>Valor</span><span style={{ fontSize: 14.5, color: 'var(--white)' }}>Gratuito</span></div>
               </div>
               <a href="https://cal.com/ectolab/60min" target="_blank" className="btn btn-gold" style={{ width: '100%', justifyContent: 'center' }}>
