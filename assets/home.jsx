@@ -327,9 +327,9 @@ function Manifesto() {
 function PorOndeComecar() {
   const steps = [
     { n: "01", title: "Entenda o Vocabulário", text: "Conceitos essenciais sobre ectoplasmia, paracirurgia, interassistência e investigação da consciência.", link: "pages/conscienciologia.html", time: "Entenda" },
-    { n: "02", title: "Participe de uma DIP", text: "Formação de entrada para organizar linguagem, postura pesquisística e bases da prática interassistencial.", link: "pages/cursos.html", time: "Experimente" },
+    { n: "02", title: "Participe de uma DIP", text: "Formação de entrada para organizar linguagem, postura pesquisística e bases da prática interassistencial.", link: "pages/dinamica.html", time: "Experimente" },
     { n: "03", title: "Faça um Curso", text: "Aprofundamento técnico em fenômenos ectoplásmicos, registro de experiência e qualificação energética.", link: "pages/cursos.html", time: "Desenvolva" },
-    { n: "04", title: "Imersão Ectoplásmica", text: "Participação em curso de campo imersivo com observação, assistência e pesquisa aplicada.", link: "pages/atividades.html", time: "Aprofunde" },
+    { n: "04", title: "Imersão Ectoplásmica", text: "Participação em curso de campo imersivo com observação, assistência e pesquisa aplicada.", link: "pages/curso-imersao.html", time: "Aprofunde" },
   ];
   return (
     <section className="section trilha-mini">
@@ -339,7 +339,7 @@ function PorOndeComecar() {
             <div className="eyebrow"><span className="dot"></span>POR ONDE COMEÇAR</div>
             <h2 className="h1" style={{ marginTop: 16 }}>A Trilha do Saber, em 4 passos.</h2>
           </div>
-          <a href="pages/trilha.html" className="btn btn-ghost hide-mobile">Ver Trilha do Saber completa →</a>
+          <a href="pages/trilha.html" className="btn btn-ghost btn-sm hide-mobile" style={{ alignSelf: "center" }}>Ver trilha →</a>
         </div>
 
         <div className="trilha-rail">
