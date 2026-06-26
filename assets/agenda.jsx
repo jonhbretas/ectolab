@@ -19,6 +19,7 @@ function tagStyle(tipo) {
 }
 
 function EventoRow({ e }) {
+  const hasModalidades = e.modalidades && e.modalidades.length >= 2;
   return (
     <article className="timeline-event">
       <div className="agenda-date">
@@ -41,16 +42,27 @@ function EventoRow({ e }) {
         <p style={{ margin: 0, fontFamily: "var(--mono)", fontSize: 12, letterSpacing: "0.04em", color: "var(--ink-3)", lineHeight: 1.6 }}>
           {[e.local, e.horario, e.detalhe].filter(Boolean).join(" · ")}
         </p>
-        <div className="agenda-event-foot">
-          <a href={e.href} className="link-arrow">
-            {e.gratuito ? "Detalhes →" : "Inscrições →"}
-          </a>
-          {!e.gratuito && (
-            <span className="agenda-price">
-              {e.preco}{e.precoExtra ? ` · ${e.precoExtra}` : ""}
-            </span>
-          )}
-        </div>
+        {hasModalidades ? (
+          <div className="agenda-event-foot" style={{ flexDirection: "column", alignItems: "stretch", gap: 8 }}>
+            {e.modalidades.map((m, i) => (
+              <a key={i} href={m.href || e.href} className="link-arrow" style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
+                <span>{m.buttonLabel || m.label} →</span>
+                {m.price && <span className="agenda-price" style={{ position: "static" }}>{m.price}</span>}
+              </a>
+            ))}
+          </div>
+        ) : (
+          <div className="agenda-event-foot">
+            <a href={e.href} className="link-arrow">
+              {e.gratuito ? "Detalhes →" : "Inscrições →"}
+            </a>
+            {!e.gratuito && (
+              <span className="agenda-price">
+                {e.preco}{e.precoExtra ? ` · ${e.precoExtra}` : ""}
+              </span>
+            )}
+          </div>
+        )}
       </div>
     </article>
   );

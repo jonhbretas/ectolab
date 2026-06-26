@@ -99,59 +99,59 @@ function App() {
         </p>
 
         <div className="col gap-32">
-            <div className="card" style={{ padding: 32 }}>
-              <h2 className="h3" style={{ color: 'var(--teal)' }}>Artigos</h2>
-              <div className="col gap-16" style={{ marginTop: 20 }}>
-                {ARTIGOS.map(item => (
-                  <article key={item.titulo} className="glass" style={{ padding: 20, borderRadius: 'var(--r-md)' }}>
-                    <span className="specimen">{item.subtitulo}</span>
-                    <h3 className="h4" style={{ marginTop: 8, color: 'var(--ink)' }}>{item.titulo}</h3>
-                    <p style={{ fontSize: 14.5, color: 'var(--ink-2)', lineHeight: 1.6 }}>{item.resumo}</p>
-                    <LinkButton href={item.href}>Baixar PDF</LinkButton>
-                  </article>
-                ))}
-              </div>
-            </div>
-
-            <div className="card" style={{ padding: 32, background: 'var(--paper)' }}>
-              <h2 className="h3" style={{ color: 'var(--teal)' }}>Lives e palestras</h2>
-              <div className="grid g3 gap-16" style={{ marginTop: 20 }}>
-                {LIVES.map(item => (
-                  <article key={item.titulo} className="card" style={{ padding: 20, background: 'var(--white)' }}>
-                    <span className="tag soft" style={{ alignSelf: 'start' }}>{item.tag}</span>
-                    <h3 className="h4" style={{ marginTop: 14 }}>{item.titulo}</h3>
-                    <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55 }}>{item.info}</p>
-                    <LinkButton href={item.href}>Acessar</LinkButton>
-                  </article>
-                ))}
-              </div>
-            </div>
-
-            <div className="card" style={{ padding: 32 }}>
-              <div className="flex between center gap-16" style={{ marginBottom: 20 }}>
-                <div>
-                  <h2 className="h3" style={{ color: 'var(--teal)' }}>Lista de Verbetes</h2>
-                  <p style={{ fontSize: 14.5, color: 'var(--ink-2)', marginTop: 8 }}>
-                    Verbetes disponíveis para download, com tertúlias relacionadas quando houver link.
-                  </p>
-                </div>
-                <span className="tag gold">{VERBETES.length} verbetes</span>
-              </div>
-
-              <div className="grid g2 gap-12">
-                {VERBETES.map((item, index) => (
-                  <article key={item.t} className="glass" style={{ padding: '16px 18px', borderRadius: 'var(--r-md)' }}>
-                    <span className="specimen">{String(index + 1).padStart(2, '0')}</span>
-                    <h3 className="h4" style={{ marginTop: 6, fontSize: 16 }}>{item.t}</h3>
-                    <div className="flex gap-12" style={{ marginTop: 12, flexWrap: 'wrap' }}>
-                      <LinkButton href={item.pdf}>PDF</LinkButton>
-                      {item.video && <LinkButton href={item.video}>Tertúlia</LinkButton>}
-                    </div>
-                  </article>
-                ))}
-              </div>
+          <div className="card" style={{ padding: 32 }}>
+            <h2 className="h3" style={{ color: 'var(--teal)' }}>Artigos</h2>
+            <div className="col gap-16" style={{ marginTop: 20 }}>
+              {ARTIGOS.map(item => (
+                <article key={item.titulo} className="glass" style={{ padding: 20, borderRadius: 'var(--r-md)' }}>
+                  <span className="specimen">{item.subtitulo}</span>
+                  <h3 className="h4" style={{ marginTop: 8, color: 'var(--ink)' }}>{item.titulo}</h3>
+                  <p style={{ fontSize: 14.5, color: 'var(--ink-2)', lineHeight: 1.6 }}>{item.resumo}</p>
+                  <LinkButton href={item.href}>Baixar PDF</LinkButton>
+                </article>
+              ))}
             </div>
           </div>
+
+          <div className="card" style={{ padding: 32, background: 'var(--paper)' }}>
+            <h2 className="h3" style={{ color: 'var(--teal)' }}>Lives e palestras</h2>
+            <div className="grid g3 gap-16" style={{ marginTop: 20 }}>
+              {LIVES.map(item => (
+                <article key={item.titulo} className="card" style={{ padding: 20, background: 'var(--white)' }}>
+                  <span className="tag soft" style={{ alignSelf: 'start' }}>{item.tag}</span>
+                  <h3 className="h4" style={{ marginTop: 14 }}>{item.titulo}</h3>
+                  <p style={{ fontSize: 14, color: 'var(--ink-2)', lineHeight: 1.55 }}>{item.info}</p>
+                  <LinkButton href={item.href}>Acessar</LinkButton>
+                </article>
+              ))}
+            </div>
+          </div>
+
+          <div className="card" style={{ padding: 32 }}>
+            <div className="flex between center gap-16" style={{ marginBottom: 20 }}>
+              <div>
+                <h2 className="h3" style={{ color: 'var(--teal)' }}>Lista de Verbetes</h2>
+                <p style={{ fontSize: 14.5, color: 'var(--ink-2)', marginTop: 8 }}>
+                  Verbetes disponíveis para download, com tertúlias relacionadas quando houver link.
+                </p>
+              </div>
+              <span className="tag gold">{VERBETES.length} verbetes</span>
+            </div>
+
+            <div className="grid g2 gap-12">
+              {VERBETES.map((item, index) => (
+                <article key={item.t} className="glass" style={{ padding: '16px 18px', borderRadius: 'var(--r-md)' }}>
+                  <span className="specimen">{String(index + 1).padStart(2, '0')}</span>
+                  <h3 className="h4" style={{ marginTop: 6, fontSize: 16 }}>{item.t}</h3>
+                  <div className="flex gap-12" style={{ marginTop: 12, flexWrap: 'wrap' }}>
+                    <LinkButton href={item.pdf}>PDF</LinkButton>
+                    {item.video && <LinkButton href={item.video}>Tertúlia</LinkButton>}
+                  </div>
+                </article>
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

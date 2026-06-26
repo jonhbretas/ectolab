@@ -288,7 +288,8 @@
     EN: {
       "Paracirurgia": "Parasurgery",
       "Agenda": "Schedule",
-      "Sistema ↗": "System ↗",
+      "Sistema": "System",
+      "Acessar Sistema ↗": "Access System ↗",
       "O que é a Paracirurgia": "What Parasurgery Is",
       "Solicitar Paracirurgia ↗": "Request Parasurgery ↗",
       "Enviar Relatório do Pedido ↗": "Submit Request Report ↗",
@@ -499,7 +500,8 @@
     ES: {
       "Paracirurgia": "Paracirugía",
       "Agenda": "Agenda",
-      "Sistema ↗": "Sistema ↗",
+      "Sistema": "Sistema",
+      "Acessar Sistema ↗": "Acceder al Sistema ↗",
       "O que é a Paracirurgia": "Qué es la Paracirugía",
       "Solicitar Paracirurgia ↗": "Solicitar Paracirugía ↗",
       "Enviar Relatório do Pedido ↗": "Enviar Informe de la Solicitud ↗",

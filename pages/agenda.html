@@ -410,8 +410,8 @@
     .agenda-row:hover .agenda-row__arr { transform: translateX(4px); color: var(--blue); }
 
     /* ---------- Multi-modalidade (presencial + online) ---------- */
-    .agenda-row--multi { cursor: default; }
-    .agenda-row--multi:hover { padding-left: 18px; border-left-color: var(--line-2); }
+    .agenda-row--multi { cursor: default; grid-template-columns: 86px 1fr 200px 200px; }
+    .agenda-row--multi:hover { padding-left: 18px; border-left-color: var(--line-2); background: transparent; }
     .agenda-row__status--multi {
       display: flex;
       flex-direction: column;
