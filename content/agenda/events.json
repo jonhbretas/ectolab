@@ -400,7 +400,7 @@
       "model": "",
       "title": "Materializações Interassistenciais",
       "category": "curso-hibrido",
-      "categoryCustom": "Curso em Parceria",
+      "categoryCustom": "Parceria ICTENEPES",
       "date": "2026-10-31",
       "durationDays": 1,
       "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/",
@@ -431,7 +431,7 @@
       "featuredStyle": "",
       "featuredDate": "",
       "featuredCategory": "",
-      "pinHome": false,
+      "pinHome": true,
       "homeOrdem": null
     }
   ]
