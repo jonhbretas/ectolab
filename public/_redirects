@@ -1,0 +1,158 @@
+# ============================================================
+# Redirecionamentos 301 do site antigo (WordPress/WooCommerce)
+# para as páginas correspondentes do novo site Ectolab.
+# As regras mais específicas devem vir antes das genéricas.
+# ============================================================
+
+# ---- Páginas institucionais / sobre ----
+/pages/about/                       /pages/quem-somos.html              301
+/quem-somos/                        /pages/quem-somos.html              301
+/pages/our-stores/                  /pages/contato.html                 301
+/nosso-cgc/                         /pages/quem-somos.html              301
+/o-que-e/                           /pages/blog.html                    301
+
+# ---- Contato ----
+/pages/contact/                     /pages/contato.html                 301
+
+# ---- FAQ ----
+/pages/faq/                         /pages/paracirurgia.html            301
+/perguntas-frequentes/              /pages/paracirurgia.html            301
+
+# ---- Home / páginas genéricas antigas ----
+/pages/                             /index.html                         301
+/pages/portfolio/                   /pages/paracirurgia.html            301
+/pages/maintenance/                 /index.html                         301
+/pages/left-sidebar/                /index.html                         301
+/pagina-exemplo/                    /index.html                         301
+/home-alternativa/                  /index.html                         301
+
+# ---- Blog ----
+/blog/                              /pages/blog.html                    301
+/blog-posts/                        /pages/blog.html                    301
+
+# ---- Materiais ----
+/materiais-publicados/              /pages/materiais.html               301
+/materiais-gratuitos/               /pages/materiais.html               301
+
+# ---- Conscienciologia ----
+/conscienciologia/                  /pages/conscienciologia.html        301
+/ectoplasmologia/                   /pages/paracirurgia.html            301
+
+# ---- Atividades / Agenda ----
+/atividades/                        /pages/atividades.html              301
+/agenda/                            /pages/agenda.html                  301
+/publicar-um-evento/                /pages/agenda.html                  301
+/painel-do-evento/                  /pages/agenda.html                  301
+/submit-organizer-form/             /pages/agenda.html                  301
+/organizer-dashboard/               /pages/agenda.html                  301
+/submit-venue-form/                 /pages/agenda.html                  301
+
+# ---- Bioenergologia / OGB / Preceptoria ----
+/bioenergologia/                    /pages/bioenergologia.html          301
+/orientacao-gratuita-em-bioenergologia/ /pages/orientacao-gratuita.html 301
+/preceptoria-em-ectoplasmia/        /pages/bioenergologia.html          301
+/ogb/                               /pages/orientacao-gratuita.html     301
+
+# ---- Laboratórios ----
+/laboratorio-de-paracirurgia/               /pages/laboratorio-paracirurgia.html        301
+/laboratorio-de-paracirurgia-biowell/       /pages/laboratorio-paracirurgia.html        301
+/laboratorio-de-paracirurgia-biowell-preceptoria/ /pages/bioenergologia.html            301
+/laboratorio/                               /pages/laboratorio-paracirurgia.html        301
+
+# ---- Cursos ----
+/cursos/                                            /pages/cursos.html                          301
+/curso-ectoplasmia-protetiva/                       /pages/curso-ectoplasmia-protetiva.html     301
+/curso-auto-organizacao-bioenergetica/              /pages/curso.html                           301
+/ectoplasmia-interassistencial/                     /pages/curso-ectoplasmia-interassistencial.html 301
+/eppi/                                              /pages/curso-eppi.html                      301
+/eppi-ectoplasmia-projetiva-paracirurgica-ectoplasmica-interassistencial/ /pages/curso-eppi.html 301
+/campo-interassistencial-paracirurgico/             /pages/curso-campo.html                     301
+/imersao-em-ectoplasmia/                            /pages/curso-imersao.html                   301
+/imersao-em-ectoplasmia-parambulatorial-2026/       /pages/curso-imersao.html                   301
+/programa-de-estimulacao-parapsiquica-proep/        /pages/curso-proep.html                     301
+
+# ---- Eventos / Fóruns / DINÂMICAS / DIP ----
+/i-forum-internacional-de-ectoplasmologia-e-paracirurgia/   /pages/paracirurgia.html    301
+/1-forum-internacional-de-ectoplasmologia-e-paracirurgia/   /pages/paracirurgia.html    301
+/forum-de-ectoplasmologia-e-paracirurgia/                   /pages/paracirurgia.html    301
+/dinamica-interassistencial-da-paracirurgia-sao-paulo/      /pages/dinamica.html        301
+/dip-em-curitiba-parana/                                    /pages/dinamica.html        301
+/dip-em-foz-do-iguacu/                                      /pages/dinamica.html        301
+/dip-em-florianopolis/                                      /pages/dinamica.html        301
+/dip-em-portugal/                                           /pages/dinamica.html        301
+/dip-na-alemanha/                                           /pages/dinamica.html        301
+/dip-no-rio-de-janeiro-rj/                                  /pages/dinamica.html        301
+/dip-em-brasilia-distrito-federal/                          /pages/dinamica.html        301
+
+# ---- Solicitações / Pedidos de Paracirurgia ----
+/solicitacao-de-paracirurgia/           /pages/paracirurgia.html        301
+/solicitacao-para-mim-mesmoa/           /pages/paracirurgia.html        301
+/solicitacao-para-outra-pessoa/         /pages/paracirurgia.html        301
+/pedidos-de-paracirurgia-teste/         /pages/paracirurgia.html        301
+/pedido-cadastrado-com-sucesso/         /pages/paracirurgia.html        301
+/pedido-cadastrado-com-sucesso-2/       /pages/paracirurgia.html        301
+/pedido-erro-2/                         /pages/paracirurgia.html        301
+/pedido-de-paracirurgia-pessoal/        /pages/paracirurgia.html        301
+/pedido-paracirurgia-terceiros/         /pages/paracirurgia.html        301
+/pontoacoes-do-pedido-de-paracirurgia/  /pages/paracirurgia.html        301
+/preparo-paracirurgia/                  /pages/paracirurgia.html        301
+/assistente-a-distancia-criterios/      /pages/paracirurgia.html        301
+
+# ---- TENEPES ----
+/pedido-de-tenepes/             /pages/tenepes.html     301
+/tenepes-para-mim-mesmoa/       /pages/tenepes.html     301
+/tenepes-para-outra-pessoa/     /pages/tenepes.html     301
+
+# ---- Relatório pós-paracirurgia ----
+/relatorio-apos-paracirurgia/   /pages/rede-relatorio.html      301
+
+# ---- Associação / Planos / Login / Conta ----
+/planos/                        /pages/apoie.html       301
+/login/                         /pages/apoie.html       301
+/conta-de-associacao/           /pages/apoie.html       301
+/conta-de-associacao/*          /pages/apoie.html       301
+/my-account/                    /pages/apoie.html       301
+
+# ---- Loja WooCommerce (não existe mais) ----
+/loja/                  /pages/cursos.html      301
+/products/              /pages/cursos.html      301
+/product-categories/    /pages/cursos.html      301
+/cart/                  /pages/cursos.html      301
+/checkout/              /pages/cursos.html      301
+
+# ---- Blog posts antigos sem página equivalente ----
+/1100-2/                                            /pages/blog.html    301
+/1272-2/                                            /pages/blog.html    301
+/aplicacao-pratica-da-ectoplasmia/                  /pages/blog.html    301
+/raizes-da-ectoplasmia/                             /pages/blog.html    301
+/ciclo-vital-do-ectoplasta/                         /pages/blog.html    301
+
+# ---- Newsletter / rascunhos / privacidade ----
+/newsletter-ectolab/            /index.html     301
+/politica-de-privacidade-2/     /index.html     301
+/rascunho-automatico/           /index.html     301
+/rascunho-automatico-2/         /index.html     301
+
+# ---- Páginas de template/shortcode antigas (evitar 404) ----
+/sliders/               /index.html     301
+/map/                   /index.html     301
+/buttons/               /index.html     301
+/titles-dividers/       /index.html     301
+/icon-box/              /index.html     301
+/sharefollow-icons/     /index.html     301
+/message-box/           /index.html     301
+/track-order/           /index.html     301
+/lightbox/              /index.html     301
+/banner-grid/           /index.html     301
+/sections/              /index.html     301
+/image-box/             /index.html     301
+/banner/                /index.html     301
+/typography/            /index.html     301
+/rows-columns/          /index.html     301
+/images/                /index.html     301
+/scroll-to/             /index.html     301
+/galleries/             /index.html     301
+/video-button/          /index.html     301
+/video/                 /index.html     301
+/demos/                 /index.html     301
+/pages/size-chart/      /index.html     301
