@@ -19,6 +19,18 @@ function App() {
                 Um final de semana imersivo no holopensene de ectoplasmologia e paracirurgia. 
                 São 27 horas de atividades contínuas em ambiente hoteleiro, acompanhando as pesquisas mais recentes da especialidade.
               </p>
+
+              <div style={{ marginTop: 32, position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: 'var(--r-lg)', border: '1px solid var(--line)' }}>
+                <iframe
+                  src="https://www.youtube.com/embed/WaA5YOiluhM?si=xz0VqBacwinCx57b"
+                  title="Imersão em Ectoplasmia Parambulatorial"
+                  frameBorder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  allowFullScreen
+                  style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
+                />
+              </div>
               
               <div className="prose" style={{ marginTop: 40, marginLeft: 0 }}>
                 <h3>Atividades da Imersão</h3>

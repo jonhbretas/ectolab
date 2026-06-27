@@ -458,5 +458,41 @@ export const eventos = [
     "featured": false,
     "pinHome": false,
     "homeOrdem": 999
+  },
+  {
+    "slug": "2027-03-19-parambulatorial",
+    "date": "2027-03-19",
+    "durationDays": 2,
+    "dia": "19",
+    "mes": "MAR",
+    "mesNome": "MARÇO",
+    "ano": "2027",
+    "titulo": "IECTO - Imersão em Ectoplasmia · Parambulatorial",
+    "tipo": "Imersão · Parambulatorial",
+    "gratuito": false,
+    "local": "Discernimentum - Foz do Iguaçu - PR",
+    "horario": "3",
+    "detalhe": null,
+    "href": "https://store.conscienciologia.org.br/sku/311521/",
+    "preco": "R$1500 · R$800",
+    "precoExtra": null,
+    "modalidades": [
+      {
+        "label": "Presencial",
+        "price": "R$1500",
+        "href": "https://store.conscienciologia.org.br/sku/311521/",
+        "buttonLabel": "Presencial"
+      },
+      {
+        "label": "Online",
+        "price": "R$800",
+        "href": "https://store.conscienciologia.org.br/sku/311520/",
+        "buttonLabel": "Online"
+      }
+    ],
+    "status": "Inscrições Abertas",
+    "featured": true,
+    "pinHome": true,
+    "homeOrdem": 999
   }
 ];
