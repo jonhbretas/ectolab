@@ -418,13 +418,13 @@
           "label": "Presencial",
           "price": "R$500",
           "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/",
-          "buttonLabel": "Inscrever-se"
+          "buttonLabel": "Presencial"
         },
         {
           "label": "Online",
           "price": "R$450",
           "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-online/",
-          "buttonLabel": "Inscrever-se"
+          "buttonLabel": "Online"
         }
       ],
       "featured": true,
