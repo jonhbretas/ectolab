@@ -10,6 +10,7 @@
 
 export const eventos = [
   {
+    "slug": "2026-06-11-oficina-de-ectoplasmologia",
     "date": "2026-06-11",
     "durationDays": 0,
     "dia": "11",
@@ -32,6 +33,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-06-26-programa-de-estimulacao-parapsiquica-ectoplasmica",
     "date": "2026-06-26",
     "durationDays": 2,
     "dia": "26",
@@ -54,6 +56,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-07-09-oficina-de-ectoplasmologia",
     "date": "2026-07-09",
     "durationDays": 0,
     "dia": "09",
@@ -76,6 +79,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-07-10-duas-decadas-da-dip-6-elipes-e-12-epicons-gratuita",
     "date": "2026-07-10",
     "durationDays": 0,
     "dia": "10",
@@ -98,6 +102,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-07-11-descablagem-paracirurgica",
     "date": "2026-07-11",
     "durationDays": 0,
     "dia": "11",
@@ -120,6 +125,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-07-12-sinergismo-volicao-ectoplasmia",
     "date": "2026-07-12",
     "durationDays": 0,
     "dia": "12",
@@ -142,6 +148,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-07-13-campo-bioenergetico-paracirurgico",
     "date": "2026-07-13",
     "durationDays": 0,
     "dia": "13",
@@ -164,6 +171,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-07-14-energizador-lucido",
     "date": "2026-07-14",
     "durationDays": 0,
     "dia": "14",
@@ -186,6 +194,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-07-15-sedentarismo-ectoplasmico",
     "date": "2026-07-15",
     "durationDays": 0,
     "dia": "15",
@@ -208,6 +217,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-08-07-programa-de-estimulacao-parapsiquica-ectoplasmica",
     "date": "2026-08-07",
     "durationDays": 2,
     "dia": "07",
@@ -230,6 +240,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-08-13-oficina-de-ectoplasmologia",
     "date": "2026-08-13",
     "durationDays": 0,
     "dia": "13",
@@ -252,6 +263,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-09-10-oficina-de-ectoplasmologia",
     "date": "2026-09-10",
     "durationDays": 0,
     "dia": "10",
@@ -274,6 +286,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-09-11-encontro-de-voluntarios",
     "date": "2026-09-11",
     "durationDays": 2,
     "dia": "11",
@@ -296,6 +309,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-09-18-programa-de-estimulacao-parapsiquica-ectoplasmica",
     "date": "2026-09-18",
     "durationDays": 2,
     "dia": "18",
@@ -318,6 +332,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-10-09-oficina-de-ectoplasmologia",
     "date": "2026-10-09",
     "durationDays": 0,
     "dia": "09",
@@ -340,6 +355,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-10-09-programa-de-estimulacao-parapsiquica-ectoplasmica",
     "date": "2026-10-09",
     "durationDays": 2,
     "dia": "09",
@@ -362,6 +378,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-10-31-materializacoes-interassistenciais",
     "date": "2026-10-31",
     "durationDays": 1,
     "dia": "31",
@@ -384,6 +401,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-11-12-oficina-de-ectoplasmologia",
     "date": "2026-11-12",
     "durationDays": 0,
     "dia": "12",
@@ -406,6 +424,7 @@ export const eventos = [
     "homeOrdem": 999
   },
   {
+    "slug": "2026-11-20-programa-de-estimulacao-parapsiquica-ectoplasmica",
     "date": "2026-11-20",
     "durationDays": 2,
     "dia": "20",

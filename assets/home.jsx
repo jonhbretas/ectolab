@@ -513,7 +513,7 @@ function ProximosEventos() {
         </div>
         <div className="prox-eventos__rail">
           {proximos.map((e, i) => (
-            <a href={e.href} key={i} className="prox-evento">
+            <a href={`pages/agenda.html?focus=${e.slug || ''}`} key={i} className="prox-evento">
               <div className="prox-evento__date">
                 <strong>{e.dia}</strong>
                 <span>{e.mes}</span>

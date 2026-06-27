@@ -304,6 +304,11 @@ function normalizeModalidades(event) {
   return clean.length >= 2 ? clean : [];
 }
 
+function eventSlug(event) {
+  const base = `${event.date || ''}-${event.title || ''}`;
+  return slugify(base);
+}
+
 function normalizeEvent(rawEvent, monthGroup = {}, models = new Map(), eventTypes = readEventTypes()) {
   const event = applyEventModel(rawEvent, models);
   const parts = dateParts(event.date) || {};
@@ -319,6 +324,7 @@ function normalizeEvent(rawEvent, monthGroup = {}, models = new Map(), eventType
 
   return {
     ...event,
+    slug: eventSlug(event),
     title: displayTitle(event),
     year: parts.year || event.year || monthGroup.year,
     month: parts.month || event.month || monthGroup.month,
@@ -426,7 +432,7 @@ function renderRow(event) {
               </a>`;
     }).join('\n');
 
-    return `          <div class="agenda-row agenda-row--multi${rowPast}" data-cat="${escapeHtml(event.category)}" data-month="${escapeHtml(event.month)}">
+    return `          <div class="agenda-row agenda-row--multi${rowPast}" data-cat="${escapeHtml(event.category)}" data-month="${escapeHtml(event.month)}" data-slug="${escapeHtml(event.slug)}">
             <div class="agenda-row__date"><strong>${escapeHtml(rowDate.day)}</strong><span>${escapeHtml(rowDate.weekday)}</span></div>
             <div class="agenda-row__body">
               <div class="agenda-row__labels"><span class="agenda-tag ${escapeHtml(event.category)}">${escapeHtml(event.tag)}</span><span class="${stateClass}">${escapeHtml(event.status)}</span>${vacancies}</div>
@@ -443,7 +449,7 @@ ${modalidadesHtml}
           </div>`;
   }
 
-  return `          <a class="agenda-row${rowPast}" data-cat="${escapeHtml(event.category)}" data-month="${escapeHtml(event.month)}" href="${escapeHtml(event.href || '/pages/atividades.html')}">
+  return `          <a class="agenda-row${rowPast}" data-cat="${escapeHtml(event.category)}" data-month="${escapeHtml(event.month)}" data-slug="${escapeHtml(event.slug)}" href="${escapeHtml(event.href || '/pages/atividades.html')}">
             <div class="agenda-row__date"><strong>${escapeHtml(rowDate.day)}</strong><span>${escapeHtml(rowDate.weekday)}</span></div>
             <div class="agenda-row__body">
               <div class="agenda-row__labels"><span class="agenda-tag ${escapeHtml(event.category)}">${escapeHtml(event.tag)}</span><span class="${stateClass}">${escapeHtml(event.status)}</span>${vacancies}</div>
@@ -545,6 +551,7 @@ function updatePage(events, eventTypes) {
 //
 function generateAgendaDataFile(events) {
 const mapped = events.map((event) => ({
+    slug:      event.slug || '',
     date:      event.date || '',
     durationDays: event.durationDays || 0,
     dia:       String(event.day || '').padStart(2, '0'),

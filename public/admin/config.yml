@@ -124,7 +124,7 @@ collections:
                   - { label: Oficina, value: oficina }
                   - { label: Programa, value: programa }
                   - { label: Curso de Campo, value: curso-campo }
-                  - { label: Curso Híbrido, value: curso-hibrido }
+                  - { label: Curso Híbrido (libera Modalidades), value: curso-hibrido }
                   - { label: Curso Presencial, value: curso-presencial }
                   - { label: Curso Online, value: curso-online }
                   - { label: Verbete, value: verbete }
@@ -160,13 +160,14 @@ collections:
                 label_singular: Modalidade
                 summary: "{{label}} · {{price}}"
                 collapsed: true
-                hint: "Use quando o evento tiver duas modalidades de inscricao (ex.: presencial e online), cada uma com seu proprio preco e link. Deixe vazio para usar um unico link/preco."
+                condition: { field: category, value: curso-hibrido }
+                hint: "So aparece quando o Tipo de evento e Curso Hibrido. Cadastre uma modalidade para cada opcao de inscricao (ex.: Presencial e Online), cada uma com seu proprio preco e link. Deixe vazio para usar um unico link/preco."
                 fields:
                   - { name: label, label: Nome da modalidade, widget: string, hint: "Ex.: Presencial, Online." }
                   - { name: price, label: Preco desta modalidade, widget: string, required: false, hint: "Ex.: R$ 180,00." }
                   - { name: href, label: Link de inscricao, widget: string, required: false, hint: "URL da pagina de inscricao desta modalidade." }
                   - { name: buttonLabel, label: Texto do botao, widget: string, required: false, default: Inscrever-se, hint: "Ex.: Inscrever presencial, Inscrever online." }
-              - { name: durationDays, label: Dias para frente padrao, widget: number, value_type: int, min: 0, required: false }
+              - { name: durationDays, label: Dias para frente padrao, widget: number, value_type: int, min: 0, required: false, hint: "Quantos dias o evento dura a partir da data de inicio. Use 0 para evento de um dia. Ex.: inicio 01/01 + 2 dias termina em 03/01." }
       - name: events
         label: Eventos
         file: content/agenda/events.json
@@ -179,13 +180,13 @@ collections:
             collapsed: auto
             minimize_collapsed: false
             max: 200
-            hint: "Cadastro simplificado: informe titulo, tipo de evento, data de inicio, quantos dias o evento segue para frente e link. O site calcula automaticamente dia, dia da semana, mes, ano e data final."
+            hint: "Como cadastrar um evento: 1) Escolha um Modelo (preenche tudo automaticamente). 2) Informe a Data de inicio. 3) Se quiser, ajuste os campos abaixo. O site calcula dia da semana, mes, ano e data final sozinho. Se o evento tem preco diferente para presencial e online, escolha Tipo de evento = Curso Hibrido para liberar o campo Modalidades."
             fields:
               - name: model
-                label: Modelo do evento
+                label: "1. Modelo do evento (preenche tudo automaticamente)"
                 widget: select
                 required: false
-                hint: "Escolha um modelo para preencher automaticamente titulo, tipo, descricao, link, duracao e demais padroes. Os campos abaixo so precisam ser preenchidos quando algo mudar."
+                hint: "Escolha um modelo para preencher automaticamente titulo, tipo, descricao, link, duracao e demais padroes. Os campos abaixo so precisam ser preenchidos quando algo mudar do padrao."
                 options:
                   - { label: DIP - Dinâmica Interassistencial da Paracirurgia, value: dip }
                   - { label: Campo Paracirúrgico, value: campo-paracirurgico }
@@ -202,18 +203,18 @@ collections:
                   - { label: Artigo, value: artigo }
                   - { label: Fórum, value: forum }
                   - { label: Encontro, value: encontro }
-              - { name: title, label: Complemento do titulo, widget: string, required: false, hint: "Opcional. Com modelo selecionado, o site ja usa SIGLA - nome completo. Preencha aqui apenas complemento, como Turma 2027, Edicao 412 ou tema especifico." }
+              - { name: title, label: "2. Complemento do titulo (opcional)", widget: string, required: false, hint: "Com modelo selecionado, o site ja usa SIGLA - nome completo. Preencha aqui apenas um complemento, como Turma 2027, Edicao 412 ou tema especifico." }
               - name: category
-                label: Tipo de evento
+                label: "3. Tipo de evento"
                 widget: select
                 required: false
-                hint: "Opcional quando um modelo foi escolhido. Preencha apenas se quiser substituir o tipo padrao do modelo."
+                hint: "Opcional quando um modelo foi escolhido. Preencha apenas se quiser substituir o tipo padrao do modelo. IMPORTANTE: escolha Curso Hibrido se o evento tiver precos e links diferentes para presencial e online — isso libera o campo Modalidades mais abaixo."
                 options:
                   - { label: Palestra, value: palestra }
                   - { label: Oficina, value: oficina }
                   - { label: Programa, value: programa }
                   - { label: Curso de Campo, value: curso-campo }
-                  - { label: Curso Híbrido, value: curso-hibrido }
+                  - { label: Curso Híbrido (libera Modalidades), value: curso-hibrido }
                   - { label: Curso Presencial, value: curso-presencial }
                   - { label: Curso Online, value: curso-online }
                   - { label: Verbete, value: verbete }
@@ -223,28 +224,28 @@ collections:
                   - { label: Dinâmica, value: dinamica }
                   - { label: Encontro, value: encontro }
               - { name: categoryCustom, label: Tipo personalizado, widget: string, required: false, hint: "Use quando o tipo desejado ainda nao existir na lista acima. Ex.: Semana de Verbetes. Este texto aparece no evento e vira filtro automaticamente." }
-              - { name: date, label: Data de inicio, widget: datetime, date_format: "YYYY-MM-DD", time_format: false }
-              - { name: durationDays, label: Dias para frente, widget: number, value_type: int, min: 0, required: false, hint: "Opcional quando um modelo foi escolhido. Use 0 para evento de um dia. Ex.: inicio 01/01 + 2 dias termina em 03/01." }
-              - { name: href, label: Link especifico deste evento, widget: string, required: false, hint: "Opcional. Deixe vazio para usar automaticamente o link da pagina definido no modelo." }
-              - { name: description, label: Descricao, widget: text, required: false }
-              - { name: location, label: Local, widget: string, required: false }
-              - { name: time, label: Horario, widget: string, required: false }
+              - { name: date, label: "4. Data de inicio", widget: datetime, date_format: "YYYY-MM-DD", time_format: false, hint: "Data em que o evento comeca. O site calcula o dia da semana automaticamente." }
+              - { name: durationDays, label: "5. Duracao em dias", widget: number, value_type: int, min: 0, required: false, hint: "Quantos dias o evento dura a partir da data de inicio. Use 0 para evento de um dia. Ex.: inicio 01/01 + 2 dias termina em 03/01." }
+              - { name: href, label: Link do evento, widget: string, required: false, hint: "Para onde o botao do evento leva. Opcional: deixe vazio para usar o link padrao do modelo. Ex.: /pages/curso-proep.html ou https://orthocognitivus.org/loja/..." }
+              - { name: description, label: Descricao curta, widget: text, required: false, hint: "Texto que aparece sob o titulo do evento na agenda. Ex.: Atividade pratica orientada para desenvolvimento tecnico." }
+              - { name: location, label: Local, widget: string, required: false, hint: "Onde o evento acontece. Ex.: Foz do Iguaçu - PR · CEAEC." }
+              - { name: time, label: Horario, widget: string, required: false, hint: "Horario ou formato. Ex.: 19h30 as 21h30, Sexta, sabado e domingo." }
               - { name: tag, label: Etiqueta exibida, widget: string, required: false, hint: "Opcional. Se ficar vazio, o site usa o tipo de evento." }
               - name: status
                 label: Status
                 widget: select
                 required: false
                 default: Em breve
-                hint: "Se a data final do evento ja passou, o site mostra Realizado automaticamente."
+                hint: "Se a data final do evento ja passou, o site mostra Realizado automaticamente, nao importa o que voce escolher aqui."
                 options:
                   - { label: Em breve, value: Em breve }
                   - { label: Inscrições Abertas, value: Inscrições Abertas }
                   - { label: Vagas preenchidas, value: Vagas preenchidas }
                   - { label: Realizado, value: Realizado }
-              - { name: vacancies, label: Vagas do evento, widget: string, required: false, hint: "Ex.: 20 vagas, Ate 30 vagas, Turma reduzida. Se usar modelo, deixe vazio para herdar o padrao." }
-              - { name: price, label: Preco, widget: string, required: false, default: "" }
-              - { name: free, label: Gratuito, widget: boolean, default: false, required: false }
-              - { name: buttonLabel, label: Texto do botao/link, widget: string, required: false, default: Ver detalhes }
+              - { name: vacancies, label: Vagas, widget: string, required: false, hint: "Texto curto sobre disponibilidade. Ex.: 20 vagas, Ate 30 vagas, Turma reduzida. Se usar modelo, deixe vazio para herdar o padrao." }
+              - { name: price, label: Preco, widget: string, required: false, default: "", hint: "Preco exibido no card. Ex.: R$ 1.000, Gratuito. Se usar Modalidades (Curso Hibrido), este campo e ignorado — o site usa os precos de cada modalidade." }
+              - { name: free, label: Evento gratuito, widget: boolean, default: false, required: false, hint: "Marque sim se o evento for gratuito. O site mostra a etiqueta GRATUITO no card." }
+              - { name: buttonLabel, label: Texto do botao, widget: string, required: false, default: Ver detalhes, hint: "Texto que aparece no botao do evento. Ex.: Ver detalhes, Inscrever-se, Saiba mais." }
               - name: modalidades
                 label: Modalidades hibridas (presencial + online)
                 widget: list
@@ -252,15 +253,16 @@ collections:
                 label_singular: Modalidade
                 summary: "{{label}} · {{price}}"
                 collapsed: true
-                hint: "Use quando o evento tiver duas modalidades de inscricao (ex.: presencial e online), cada uma com seu proprio preco e link. Deixe vazio para usar um unico link/preco."
+                condition: { field: category, value: curso-hibrido }
+                hint: "Este campo so aparece quando o Tipo de evento (campo 3) e Curso Hibrido. Cadastre uma modalidade para cada opcao de inscricao (ex.: Presencial e Online), cada uma com seu proprio preco e link de inscricao. O site mostra um botao para cada modalidade."
                 fields:
                   - { name: label, label: Nome da modalidade, widget: string, hint: "Ex.: Presencial, Online." }
                   - { name: price, label: Preco desta modalidade, widget: string, required: false, hint: "Ex.: R$ 180,00." }
                   - { name: href, label: Link de inscricao, widget: string, required: false, hint: "URL da pagina de inscricao desta modalidade." }
                   - { name: buttonLabel, label: Texto do botao, widget: string, required: false, default: Inscrever-se, hint: "Ex.: Inscrever presencial, Inscrever online." }
-              - { name: featured, label: Destaque na agenda, widget: boolean, default: false, required: false, hint: "Aparece na seção de destaques da pagina de agenda e tambem entra na Home." }
-              - { name: featuredStyle, label: Estilo do destaque, widget: select, required: false, options: ["default", "dark", "gold"] }
-              - { name: featuredDate, label: Data no destaque, widget: string, required: false, hint: "Opcional. Se ficar vazio, o site formata a data automaticamente usando a data de inicio e os dias para frente." }
-              - { name: featuredCategory, label: Categoria no destaque, widget: string, required: false }
-              - { name: pinHome, label: Destaque na home, widget: boolean, default: false, required: false, hint: "Fixa este evento na seção Proximas Atividades da Home." }
-              - { name: homeOrdem, label: Ordem na home (1 a 5), widget: number, value_type: int, min: 1, max: 5, required: false, hint: "Use junto com Destaque na home. Menor numero aparece primeiro." }
+              - { name: featured, label: Destaque na agenda, widget: boolean, default: false, required: false, hint: "Marque sim para destacar este evento na secao Principais Eventos da pagina de agenda. Ele tambem entra automaticamente na Home." }
+              - { name: featuredStyle, label: Estilo do destaque, widget: select, required: false, default: default, hint: "Aparencia do card de destaque. Default = claro, Dark = fundo escuro, Gold = destaque dourado.", options: ["default", "dark", "gold"] }
+              - { name: featuredDate, label: Data no destaque, widget: string, required: false, hint: "Opcional. Texto personalizado para a data no card de destaque. Se ficar vazio, o site formata a data automaticamente." }
+              - { name: featuredCategory, label: Categoria no destaque, widget: string, required: false, hint: "Opcional. Texto personalizado para a categoria no card de destaque. Se ficar vazio, o site usa o tipo do evento." }
+              - { name: pinHome, label: Fixar na home, widget: boolean, default: false, required: false, hint: "Marque sim para fixar este evento na secao Proximas Atividades da Home. Use junto com Ordem na home para controlar a posicao." }
+              - { name: homeOrdem, label: Ordem na home (1 a 5), widget: number, value_type: int, min: 1, max: 5, required: false, hint: "Posicao do evento na Home. Menor numero aparece primeiro. Use junto com Fixar na home. Ex.: 1 = primeiro, 5 = quinto." }
