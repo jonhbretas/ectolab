@@ -8,5 +8,52 @@
 </head>
 <body>
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
+  <script>
+    // Rola ate o novo item quando um botao "Add" e clicado em uma lista do CMS.
+    // O Sveltia CMS adiciona o item no fim da lista mas nao rola a tela automaticamente,
+    // o que pode dar a impressao de bug. Este script corrige esse comportamento.
+    (function () {
+      function looksLikeAddButton(el) {
+        if (!el || el.nodeType !== 1) return false;
+        var text = (el.textContent || el.innerText || '').trim().toLowerCase();
+        var cls = (el.className || '').toString().toLowerCase();
+        return text === 'add' || /\badd\b/.test(cls) || /fab/.test(cls) ||
+               (text.indexOf('adicionar') !== -1) || (text.indexOf('novo') !== -1);
+      }
+
+      function scrollToListEnd(container) {
+        if (!container) return;
+        var last = container.lastElementChild;
+        if (last && last.scrollIntoView) {
+          last.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+      }
+
+      document.addEventListener('click', function (e) {
+        var target = e.target;
+        if (!looksLikeAddButton(target)) {
+          // Verifica ancestrais (o clique pode pegar um filho do botao)
+          var up = target;
+          for (var i = 0; i < 4 && up; i++) {
+            if (looksLikeAddButton(up)) { target = up; break; }
+            up = up.parentElement;
+          }
+          if (!looksLikeAddButton(target)) return;
+        }
+
+        // Encontra o container de lista mais proximo (pai/avo do botao)
+        var container = target.closest('[class*="list"], [class*="field-array"], [class*="array-field"], [role="list"]');
+        if (!container) {
+          // Fallback: sobe ate achar um container que tenha varios filhos semelhantes
+          container = target.parentElement;
+          while (container && container.children.length < 2) container = container.parentElement;
+        }
+        if (!container) return;
+
+        // Espera o novo item ser renderizado pelo Sveltia CMS
+        setTimeout(function () { scrollToListEnd(container); }, 500);
+      }, true);
+    })();
+  </script>
 </body>
 </html>

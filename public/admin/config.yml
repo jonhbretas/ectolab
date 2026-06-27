@@ -177,7 +177,7 @@ collections:
             widget: list
             label_singular: Evento
             summary: "{{date}} · {{title}}"
-            collapsed: auto
+            collapsed: true
             minimize_collapsed: false
             max: 200
             hint: "Como cadastrar um evento: 1) Escolha um Modelo (preenche tudo automaticamente). 2) Informe a Data de inicio. 3) Se quiser, ajuste os campos abaixo. O site calcula dia da semana, mes, ano e data final sozinho. Se o evento tem preco diferente para presencial e online, escolha Tipo de evento = Curso Hibrido para liberar o campo Modalidades."
