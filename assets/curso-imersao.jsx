@@ -52,7 +52,7 @@ function App() {
 
               <div style={{ marginTop: 32, position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: 'var(--r-lg)', border: '1px solid var(--line)' }}>
                 <iframe
-                  src="https://www.youtube.com/embed/GQDDAOP392U?si=MQSd5MkxtPJru4ZB"
+                  src="https://www.youtube.com/embed/jcD9CuhR1L0?si=4lycleLunHr_5-vT"
                   title="Imersão em Ectoplasmia Parambulatorial"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -115,55 +115,29 @@ function App() {
             </div>
           </div>
 
-          {/* Timeline vertical */}
-          <div style={{ marginTop: 48, position: 'relative', maxWidth: 760, margin: '48px auto 0' }}>
-            {/* Linha vertical */}
-            <div style={{
-              position: 'absolute',
-              left: '23px',
-              top: '24px',
-              bottom: '24px',
-              width: '2px',
-              background: 'linear-gradient(to bottom, var(--teal-glow), var(--orange))',
-            }} />
-            {pilares.map((p, i) => (
+          {/* Cards dos pilares */}
+          <div className="grid g2 gap-24" style={{ marginTop: 40 }}>
+            {pilares.map((p) => (
               <div key={p.num} style={{
-                display: 'grid',
-                gridTemplateColumns: '48px 1fr',
-                gap: 24,
-                paddingBottom: i < pilares.length - 1 ? 36 : 0,
-                position: 'relative',
+                padding: '28px 26px',
+                border: '1px solid var(--line)',
+                borderRadius: 'var(--r-md)',
+                background: 'var(--white)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 12,
               }}>
-                {/* Bullet */}
-                <div style={{
-                  width: 48,
-                  height: 48,
-                  borderRadius: '50%',
-                  background: 'var(--white)',
-                  border: '2px solid var(--teal)',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontFamily: 'var(--mono)',
-                  fontSize: 14,
-                  fontWeight: 600,
-                  color: 'var(--teal)',
-                  zIndex: 1,
-                  flexShrink: 0,
-                }}>
-                  {p.num}
+                <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
+                  <span className="mono" style={{
+                    fontSize: 13,
+                    fontWeight: 600,
+                    color: 'var(--teal)',
+                    letterSpacing: '0.04em',
+                  }}>/{p.num}</span>
+                  <span className="specimen" style={{ color: 'var(--orange-2)' }}>{p.destaque}</span>
                 </div>
-                {/* Conteúdo */}
-                <div style={{
-                  background: 'var(--white)',
-                  border: '1px solid var(--line)',
-                  borderRadius: 'var(--r-md)',
-                  padding: '22px 24px',
-                }}>
-                  <span className="specimen" style={{ color: 'var(--orange-2)', display: 'block', marginBottom: 8 }}>{p.destaque}</span>
-                  <h3 className="h3" style={{ fontSize: 19, marginBottom: 8, lineHeight: 1.25 }}>{p.titulo}</h3>
-                  <p style={{ fontSize: 15, color: 'var(--ink-2)', lineHeight: 1.6, margin: 0 }}>{p.texto}</p>
-                </div>
+                <h3 className="h3" style={{ fontSize: 19, lineHeight: 1.2, margin: 0 }}>{p.titulo}</h3>
+                <p style={{ fontSize: 15, color: 'var(--ink-2)', lineHeight: 1.6, margin: 0 }}>{p.texto}</p>
               </div>
             ))}
           </div>
