@@ -12,18 +12,18 @@ function App() {
   ];
 
   const pilares = [
-    { num: 'I', titulo: 'Pesquisa na quinta-feira voluntariada', texto: 'Antes do curso, os voluntários realizam pesquisas práticas. Os professores analisam os parapercepciogramas e os dados de condutibilidade elétrica coletados com o Vega Teste.' },
-    { num: 'II', titulo: 'Neoconceitos em Ectoplasmologia e Paracirurgiologia', texto: 'Apresentação de novos conceitos desenvolvidos pela pesquisa da Ectolab, conectando ectoplasmia, paracirurgia e a fisiologia do interstício celular.' },
-    { num: 'III', titulo: 'Criticidade Parapsíquica e Cientificidade', texto: 'Desenvolvimento da postura pesquisística: observar, registrar, comparar e revisar. Cada vivência vira dado, cada dado vira evidência.' },
-    { num: 'IV', titulo: 'Parafisiologia e Interação TENEPES-Ectoplasmia-Parambulatorial', texto: 'Estudo da hipótese do ectoplasma como líquido intersticial em estado plasmático funcional e sua conexão com o trabalho parambulatorial durante o sono.' },
+    { num: '01', titulo: 'Pesquisa na quinta-feira voluntariada', texto: 'Antes do curso, no dia 18 de março, os voluntários realizam pesquisas práticas mediante agendamento. Os professores analisam os parapercepciogramas e os dados de condutibilidade elétrica coletados com o Vega Teste.', destaque: '18 Mar · Pesquisa' },
+    { num: '02', titulo: 'Neoconceitos em Ectoplasmologia e Paracirurgiologia', texto: 'Apresentação de novos conceitos desenvolvidos pela pesquisa da Ectolab, conectando ectoplasmia, paracirurgia e a fisiologia do interstício celular.', destaque: 'Neoconceitos' },
+    { num: '03', titulo: 'Criticidade Parapsíquica e Cientificidade', texto: 'Desenvolvimento da postura pesquisística: observar, registrar, comparar e revisar. Cada vivência vira dado, cada dado vira evidência.', destaque: 'Criticidade' },
+    { num: '04', titulo: 'Parafisiologia e Interação TENEPES-Ectoplasmia-Parambulatorial', texto: 'Estudo da hipótese do ectoplasma como líquido intersticial em estado plasmático funcional e sua conexão com o trabalho parambulatorial durante o sono.', destaque: 'Parafisiologia' },
   ];
 
-  const metodologia = [
-    { time: '03:04', titulo: 'Histórico das Pesquisas', texto: 'A cronologia dos estudos iniciados em 2012, da transição de testes com eletroencefalografia e termografia para o Vega Teste, equipamento alemão eficaz em captar alterações na condutibilidade elétrica do corpo durante fenômenos parapsíquicos.' },
-    { time: '08:16', titulo: 'Sistema Energético e o Interstício', texto: 'A correlação entre os meridianos da Medicina Tradicional Chinesa e a região do interstício celular. A malha dinâmica que interconecta todas as células e como a vontade altera a arquitetura de colágeno.' },
-    { time: '14:15', titulo: 'Metodologia Científica e Resultados', texto: 'Estudos randomizados com grupo controle, onde a mobilização de energia pelos voluntários apresentou variações significativas na condutibilidade elétrica, validando a eficácia da medição.' },
-    { time: '46:12', titulo: 'Hipótese da Origem do Ectoplasma', texto: 'A hipótese de que o ectoplasma seria o líquido intersticial passando por um processo semelhante à eletrólise, mudando de estado líquido para plasmático funcional, sob organização do campo energético da consciência.' },
-    { time: '51:00', titulo: 'Assistência e Parambulatório', texto: 'A natureza organizadora do ectoplasma conectada à prática da assistência: como o parambulatório atua reorganizando ambientes e consciências em desequilíbrio.' },
+  const marcos = [
+    { titulo: 'Histórico das Pesquisas', texto: 'A cronologia dos estudos iniciados em 2012, da transição de testes com eletroencefalografia e termografia para o Vega Teste, equipamento alemão eficaz em captar alterações na condutibilidade elétrica do corpo durante fenômenos parapsíquicos.' },
+    { titulo: 'Sistema Energético e o Interstício', texto: 'A correlação entre os meridianos da Medicina Tradicional Chinesa e a região do interstício celular. A malha dinâmica que interconecta todas as células e como a vontade altera a arquitetura de colágeno.' },
+    { titulo: 'Metodologia Científica e Resultados', texto: 'Estudos randomizados com grupo controle, onde a mobilização de energia pelos voluntários apresentou variações significativas na condutibilidade elétrica, validando a eficácia da medição.' },
+    { titulo: 'Hipótese da Origem do Ectoplasma', texto: 'A hipótese de que o ectoplasma seria o líquido intersticial passando por um processo semelhante à eletrólise, mudando de estado líquido para plasmático funcional, sob organização do campo energético da consciência.' },
+    { titulo: 'Assistência e Parambulatório', texto: 'A natureza organizadora do ectoplasma conectada à prática da assistência: como o parambulatório atua reorganizando ambientes e consciências em desequilíbrio.' },
   ];
 
   const diferencas = [
@@ -52,7 +52,7 @@ function App() {
 
               <div style={{ marginTop: 32, position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: 'var(--r-lg)', border: '1px solid var(--line)' }}>
                 <iframe
-                  src="https://www.youtube.com/embed/jcD9CuhR1L0?si=4lycleLunHr_5-vT"
+                  src="https://www.youtube.com/embed/GQDDAOP392U?si=MQSd5MkxtPJru4ZB"
                   title="Imersão em Ectoplasmia Parambulatorial"
                   frameBorder="0"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -61,10 +61,6 @@ function App() {
                   style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%', border: 'none' }}
                 />
               </div>
-
-              <p style={{ marginTop: 16, fontSize: 13, color: 'var(--ink-3)', fontFamily: 'var(--mono)' }}>
-                Live com o professor Ismael Pinheiro · Mediadora: Ana Paula
-              </p>
             </div>
 
             {/* ===== SIDEBAR INSCRIÇÃO ===== */}
@@ -79,10 +75,9 @@ function App() {
                 <div className="col gap-16" style={{ borderTop: '1px solid rgba(0,0,0,0.1)', paddingTop: 24 }}>
                   {[
                     ['Modalidade', 'Híbrida (Presencial e Online)'],
-                    ['Formato', 'Parambulatorial'],
+                    ['Data', '19, 20 e 21 de Março de 2027'],
                     ['Duração', '27 Horas'],
-                    ['Dias', 'Sexta, Sábado e Domingo'],
-                    ['Vagas', 'Limitadas a capacidade do Hotel'],
+                    ['Vagas', 'Até 80 Alunos'],
                   ].map(([k, v]) => (
                     <div key={k} className="flex between" style={{ borderBottom: '1px dashed rgba(0,0,0,0.1)', paddingBottom: 12 }}>
                       <span className="specimen" style={{ color: 'var(--ink-2)' }}>{k}</span>
@@ -90,7 +85,12 @@ function App() {
                     </div>
                   ))}
                 </div>
-                <div className="col gap-12" style={{ marginTop: 32 }}>
+                <div className="col gap-16" style={{ marginTop: 20, padding: '14px 16px', background: 'rgba(255,255,255,0.55)', borderRadius: 'var(--r-sm)', border: '1px dashed rgba(0,0,0,0.12)' }}>
+                  <p style={{ fontSize: 13, color: 'var(--ink-2)', lineHeight: 1.5, margin: 0 }}>
+                    <strong style={{ color: 'var(--ink)' }}>18 de Março</strong> — Pesquisa não obrigatória, mediante agendamento. Exclusivo para alunos do curso na modalidade presencial.
+                  </p>
+                </div>
+                <div className="col gap-12" style={{ marginTop: 24 }}>
                   <a href="https://store.conscienciologia.org.br/sku/311521/" className="btn btn-primary" style={{ width: '100%', justifyContent: 'center' }}>Participar Presencial <span className="arrow">→</span></a>
                   <a href="https://store.conscienciologia.org.br/sku/311520/" className="btn btn-ghost" style={{ width: '100%', justifyContent: 'center' }}>Participar Online <span className="arrow">→</span></a>
                 </div>
@@ -100,7 +100,7 @@ function App() {
         </div>
       </section>
 
-      {/* ===== PILARES DA IMERSÃO ===== */}
+      {/* ===== PILARES DA IMERSÃO (timeline visual) ===== */}
       <section className="section" style={{ background: 'var(--paper)' }}>
         <div className="wrap">
           <div className="section-head">
@@ -114,12 +114,56 @@ function App() {
               </p>
             </div>
           </div>
-          <div className="ofaz-grid h-scroll" style={{ marginTop: 40 }}>
-            {pilares.map((p) => (
-              <div className="ofaz" key={p.num}>
-                <div className="ofaz__num mono">/{p.num}</div>
-                <h3 className="h3 ofaz__title">{p.titulo}</h3>
-                <p className="ofaz__text">{p.texto}</p>
+
+          {/* Timeline vertical */}
+          <div style={{ marginTop: 48, position: 'relative', maxWidth: 760, margin: '48px auto 0' }}>
+            {/* Linha vertical */}
+            <div style={{
+              position: 'absolute',
+              left: '23px',
+              top: '24px',
+              bottom: '24px',
+              width: '2px',
+              background: 'linear-gradient(to bottom, var(--teal-glow), var(--orange))',
+            }} />
+            {pilares.map((p, i) => (
+              <div key={p.num} style={{
+                display: 'grid',
+                gridTemplateColumns: '48px 1fr',
+                gap: 24,
+                paddingBottom: i < pilares.length - 1 ? 36 : 0,
+                position: 'relative',
+              }}>
+                {/* Bullet */}
+                <div style={{
+                  width: 48,
+                  height: 48,
+                  borderRadius: '50%',
+                  background: 'var(--white)',
+                  border: '2px solid var(--teal)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  fontFamily: 'var(--mono)',
+                  fontSize: 14,
+                  fontWeight: 600,
+                  color: 'var(--teal)',
+                  zIndex: 1,
+                  flexShrink: 0,
+                }}>
+                  {p.num}
+                </div>
+                {/* Conteúdo */}
+                <div style={{
+                  background: 'var(--white)',
+                  border: '1px solid var(--line)',
+                  borderRadius: 'var(--r-md)',
+                  padding: '22px 24px',
+                }}>
+                  <span className="specimen" style={{ color: 'var(--orange-2)', display: 'block', marginBottom: 8 }}>{p.destaque}</span>
+                  <h3 className="h3" style={{ fontSize: 19, marginBottom: 8, lineHeight: 1.25 }}>{p.titulo}</h3>
+                  <p style={{ fontSize: 15, color: 'var(--ink-2)', lineHeight: 1.6, margin: 0 }}>{p.texto}</p>
+                </div>
               </div>
             ))}
           </div>
@@ -157,7 +201,7 @@ function App() {
         </div>
       </section>
 
-      {/* ===== PESQUISA E PARAFISIOLOGIA (vídeo Ismael) ===== */}
+      {/* ===== PESQUISA E PARAFISIOLOGIA (vídeo) ===== */}
       <section className="section" style={{ background: 'var(--teal-3)', color: 'var(--white)' }}>
         <div className="wrap">
           <div className="grid g2 gap-48" style={{ alignItems: 'center' }}>
@@ -184,8 +228,8 @@ function App() {
             </div>
             <div style={{ position: 'relative', paddingBottom: '56.25%', height: 0, overflow: 'hidden', borderRadius: 'var(--r-lg)' }}>
               <iframe
-                src="https://www.youtube.com/embed/jcD9CuhR1L0?si=4lycleLunHr_5-vT"
-                title="Pesquisa e Parafisiologia — Prof. Ismael Pinheiro"
+                src="https://www.youtube.com/embed/GQDDAOP392U?si=MQSd5MkxtPJru4ZB"
+                title="Pesquisa e Parafisiologia"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 referrerPolicy="strict-origin-when-cross-origin"
@@ -197,42 +241,38 @@ function App() {
         </div>
       </section>
 
-      {/* ===== TIMELINE DA PESQUISA ===== */}
+      {/* ===== MARCOS DA PESQUISA (cards) ===== */}
       <section className="section" style={{ background: 'var(--paper)' }}>
         <div className="wrap">
           <div className="section-head">
             <div>
-              <div className="eyebrow"><span className="dot"></span>LINEAR DA PESQUISA &nbsp;·&nbsp; LIVE COM ISMAEL PINHEIRO</div>
+              <div className="eyebrow"><span className="dot"></span>MARCOS DA PESQUISA</div>
               <h2 className="h1" style={{ marginTop: 16, maxWidth: 760 }}>
                 Os marcos da investigação <strong style={{ color: 'var(--teal)', fontWeight: 700 }}>em ectoplasmia</strong>.
               </h2>
             </div>
           </div>
-          <div style={{ marginTop: 40, display: 'flex', flexDirection: 'column', gap: 0 }}>
-            {metodologia.map((m, i) => (
+          <div className="grid g3 gap-24" style={{ marginTop: 40 }}>
+            {marcos.map((m, i) => (
               <div key={i} style={{
-                display: 'grid',
-                gridTemplateColumns: '90px 1fr',
-                gap: 24,
-                padding: '24px 0',
-                borderBottom: i < metodologia.length - 1 ? '1px solid var(--line)' : 'none',
-                alignItems: 'start',
+                padding: '28px 24px',
+                border: '1px solid var(--line)',
+                borderRadius: 'var(--r-md)',
+                background: 'var(--white)',
+                display: 'flex',
+                flexDirection: 'column',
+                gap: 12,
+                position: 'relative',
               }}>
-                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'flex-start' }}>
-                  <span className="mono" style={{
-                    fontSize: 14,
-                    fontWeight: 600,
-                    color: 'var(--teal)',
-                    background: 'var(--white)',
-                    border: '1px solid var(--line)',
-                    borderRadius: 'var(--r-sm)',
-                    padding: '6px 10px',
-                  }}>{m.time}</span>
-                </div>
-                <div>
-                  <h3 className="h3" style={{ fontSize: 19, marginBottom: 8 }}>{m.titulo}</h3>
-                  <p style={{ fontSize: 15, color: 'var(--ink-2)', lineHeight: 1.6, margin: 0, maxWidth: 680 }}>{m.texto}</p>
-                </div>
+                <span className="mono" style={{
+                  fontSize: 11,
+                  fontWeight: 600,
+                  color: 'var(--orange-2)',
+                  letterSpacing: '0.1em',
+                  textTransform: 'uppercase',
+                }}>Marco {String(i + 1).padStart(2, '0')}</span>
+                <h3 className="h3" style={{ fontSize: 18, lineHeight: 1.2 }}>{m.titulo}</h3>
+                <p style={{ fontSize: 14.5, color: 'var(--ink-2)', lineHeight: 1.6, margin: 0 }}>{m.texto}</p>
               </div>
             ))}
           </div>
