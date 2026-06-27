@@ -1055,3 +1055,201 @@ a.mnav-cat--link:hover { color: var(--teal-2); }
   [style*="position: sticky"],
   [style*="position:sticky"] { position: static !important; }
 }
+
+/* ============================================================
+   POPUP — Acervo Gratuito (+30 livros de Conscienciologia)
+   Cartão discreto no canto que abre o formulário ao clicar.
+   ============================================================ */
+
+.books-pop {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 9000;
+  width: min(360px, calc(100vw - 32px));
+  background: var(--white);
+  border: 1px solid var(--line);
+  border-radius: var(--r-lg);
+  box-shadow: 0 18px 50px -20px rgba(8, 34, 43, 0.35),
+              0 4px 12px -6px rgba(8, 34, 43, 0.15);
+  padding: 22px 22px 20px;
+  font-family: var(--sans);
+  opacity: 0;
+  transform: translateY(24px) scale(0.98);
+  pointer-events: none;
+  transition: opacity 0.4s ease,
+              transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.books-pop.is-in {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  pointer-events: auto;
+}
+
+.books-pop__close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: var(--ink-3);
+  font-size: 16px;
+  line-height: 1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  transition: background 0.18s, color 0.18s;
+}
+.books-pop__close:hover {
+  background: var(--paper);
+  color: var(--ink);
+}
+
+.books-pop__icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, var(--teal-soft), var(--orange-soft));
+  display: grid;
+  place-items: center;
+  margin-bottom: 14px;
+  color: var(--teal);
+}
+.books-pop__icon svg { width: 22px; height: 22px; }
+
+.books-pop__eyebrow {
+  display: flex;
+  align-items: center;
+  font-family: var(--mono);
+  font-size: 10.5px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--teal);
+  margin-bottom: 8px;
+}
+.books-pop__eyebrow .dot {
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  background: var(--orange);
+  margin-right: 8px;
+  border-radius: 50%;
+}
+.books-pop__title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0 0 8px;
+}
+.books-pop__desc {
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--ink-3);
+  margin: 0 0 18px;
+}
+
+.books-pop__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 18px;
+  border-radius: 999px;
+  background: var(--orange);
+  color: var(--ink);
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, transform 0.18s;
+}
+.books-pop__btn:hover {
+  background: var(--orange-2);
+  color: var(--white);
+  transform: translateY(-1px);
+}
+
+/* Estado formulário (modal centrado com iframe) */
+.books-pop.is-form {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  right: auto;
+  bottom: auto;
+  width: min(560px, calc(100vw - 24px));
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  padding: 0;
+  transform: translate(-50%, -50%) scale(0.98);
+}
+.books-pop.is-form.is-in {
+  transform: translate(-50%, -50%) scale(1);
+}
+.books-pop__form-head {
+  padding: 20px 22px 14px;
+  border-bottom: 1px solid var(--line);
+  position: relative;
+}
+.books-pop__form-head .books-pop__close {
+  top: 16px;
+  right: 16px;
+}
+.books-pop__form-title {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: 17px;
+  letter-spacing: -0.02em;
+  color: var(--ink);
+  margin: 0;
+}
+.books-pop__form-sub {
+  font-size: 13px;
+  color: var(--ink-3);
+  margin: 4px 0 0;
+}
+.books-pop__iframe {
+  width: 100%;
+  height: 660px;
+  border: none;
+  background: var(--white);
+  display: block;
+}
+
+/* Backdrop quando o formulário está aberto */
+.books-pop__backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 8999;
+  background: rgba(8, 34, 43, 0.45);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+.books-pop__backdrop.is-in {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+@media (max-width: 480px) {
+  .books-pop {
+    right: 12px;
+    bottom: 12px;
+    width: calc(100vw - 24px);
+    padding: 18px 18px 16px;
+  }
+  .books-pop.is-form {
+    width: calc(100vw - 16px);
+    max-height: calc(100vh - 16px);
+  }
+  .books-pop__iframe { height: 560px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .books-pop,
+  .books-pop__backdrop { transition: opacity 0.2s ease; }
+}

@@ -824,4 +824,109 @@
     });
   });
 
+  // --- Popup: Acervo Gratuito (+30 livros de Conscienciologia) ---
+  // Cartão discreto após 10s de navegação. Ao clicar no botão, abre o
+  // formulário (iframe Lahar). Fechar salva a decisão e silencia por 7 dias.
+  (function initBooksPopup() {
+    const STORAGE_KEY = "ecto_books_pop";
+    const COOLDOWN_MS = 7 * 24 * 60 * 60 * 1000; // 7 dias
+    const DELAY_MS = 10000; // 10s
+    const FORM_SRC = "https://forms.lahar.com.br/formularios-externos/acessa/cadastreseeganhe30livrosempdf-vbtgBxFI5TcEyYNKZ4Lz";
+
+    // Não exibir no admin/CMS nem em iframes (pré-visualizações)
+    if (/\/admin($|\/)/i.test(location.pathname)) return;
+    if (window.top !== window.self) return;
+
+    let last = 0;
+    try { last = parseInt(localStorage.getItem(STORAGE_KEY) || "0", 10) || 0; } catch (e) {}
+    if (last && (Date.now() - last) < COOLDOWN_MS) return; // ainda em cooldown
+
+    const ICON_SVG = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>';
+
+    const offerHTML =
+      '<button class="books-pop__close" aria-label="Fechar" type="button">✕</button>' +
+      '<div class="books-pop__icon" aria-hidden="true">' + ICON_SVG + '</div>' +
+      '<div class="books-pop__eyebrow"><span class="dot"></span>Acervo gratuito</div>' +
+      '<h3 class="books-pop__title" id="booksPopTitle">+30 livros de Conscienciologia</h3>' +
+      '<p class="books-pop__desc">Baixe o acervo completo em PDF e aprofunde seus estudos sobre a consciência e a ectoplasmia.</p>' +
+      '<button class="books-pop__btn" type="button">Quero receber os livros <span aria-hidden="true">→</span></button>';
+
+    const formHTML =
+      '<div class="books-pop__form-head">' +
+        '<button class="books-pop__close" aria-label="Fechar" type="button">✕</button>' +
+        '<div class="books-pop__eyebrow"><span class="dot"></span>Acervo gratuito</div>' +
+        '<h3 class="books-pop__form-title" id="booksPopTitle">Cadastre-se e ganhe +30 livros em PDF</h3>' +
+        '<p class="books-pop__form-sub">Preencha os dados e enviaremos o acervo para seu e-mail.</p>' +
+      '</div>' +
+      '<iframe class="books-pop__iframe" title="Formex Cadastre-se e ganhe +30 livros em pdf!" name="iframe_formex_lahar" src="' + FORM_SRC + '" frameborder="0" allowtransparency="true" style="background:none;border:none">Seu navegador não possui suporte para iframes.</iframe>';
+
+    function saveDismiss() {
+      try { localStorage.setItem(STORAGE_KEY, String(Date.now())); } catch (e) {}
+    }
+
+    let pop, backdrop, escHandler;
+
+    function teardown() {
+      if (escHandler) document.removeEventListener("keydown", escHandler);
+      if (backdrop && backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
+      if (pop && pop.parentNode) pop.parentNode.removeChild(pop);
+      document.body.style.overflow = "";
+      pop = backdrop = escHandler = null;
+    }
+
+    function hide() {
+      if (!pop) return;
+      pop.classList.remove("is-in");
+      pop.classList.remove("is-form");
+      if (backdrop) backdrop.classList.remove("is-in");
+      document.body.style.overflow = "";
+      saveDismiss();
+      setTimeout(teardown, 450);
+    }
+
+    function openForm() {
+      if (!pop) return;
+      pop.classList.add("is-form");
+      if (backdrop) {
+        backdrop.classList.add("is-in");
+        backdrop.setAttribute("aria-hidden", "false");
+      }
+      document.body.style.overflow = "hidden";
+      pop.innerHTML = formHTML;
+      pop.setAttribute("aria-modal", "true");
+      const close2 = pop.querySelector(".books-pop__close");
+      if (close2) close2.addEventListener("click", hide);
+      saveDismiss(); // não perturbar novamente após engajar
+    }
+
+    function build() {
+      backdrop = document.createElement("div");
+      backdrop.className = "books-pop__backdrop";
+      backdrop.setAttribute("aria-hidden", "true");
+
+      pop = document.createElement("div");
+      pop.className = "books-pop";
+      pop.setAttribute("role", "dialog");
+      pop.setAttribute("aria-modal", "false");
+      pop.setAttribute("aria-labelledby", "booksPopTitle");
+      pop.innerHTML = offerHTML;
+
+      document.body.appendChild(backdrop);
+      document.body.appendChild(pop);
+
+      pop.querySelector(".books-pop__close").addEventListener("click", hide);
+      pop.querySelector(".books-pop__btn").addEventListener("click", openForm);
+      backdrop.addEventListener("click", () => { if (pop.classList.contains("is-form")) hide(); });
+
+      escHandler = (e) => {
+        if (e.key === "Escape" && pop && (pop.classList.contains("is-in") || pop.classList.contains("is-form"))) hide();
+      };
+      document.addEventListener("keydown", escHandler);
+
+      requestAnimationFrame(() => pop.classList.add("is-in"));
+    }
+
+    setTimeout(build, DELAY_MS);
+  })();
+
 })();
