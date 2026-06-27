@@ -11,9 +11,9 @@ function App() {
           </div>
           <div className="grid g2 gap-48">
             <div>
-              <div className="eyebrow"><span className="dot"></span>MARATONA ECTOPLÁSMICA &nbsp;·&nbsp; 27 HORAS</div>
+              <div className="eyebrow"><span className="dot"></span>MARATONA ECTOPLÁSMICA &nbsp;·&nbsp; 27 HORAS &nbsp;·&nbsp; PARAMBULATORIAL</div>
               <h1 className="h1" style={{ marginTop: 16 }}>
-                Imersão em Ectoplasmia.
+                Imersão em Ectoplasmia <span style={{ color: 'var(--orange)', fontWeight: 700 }}>Parambulatorial</span>.
               </h1>
               <p className="lede" style={{ marginTop: 24 }}>
                 Um final de semana imersivo no holopensene de ectoplasmologia e paracirurgia. 
@@ -44,7 +44,7 @@ function App() {
             </div>
             <div>
               <div className="glass-orange" style={{ padding: 32, position: 'sticky', top: 100, borderRadius: 'var(--r-lg)' }}>
-                <span className="tag dark" style={{ marginBottom: 16 }}>O desperto antecipa</span>
+                <span className="tag dark" style={{ marginBottom: 16 }}>Parambulatorial · O desperto antecipa</span>
                 <h3 className="h3" style={{ color: 'var(--ink)', marginBottom: 16 }}>Garantir Vaga com Desconto</h3>
                 <p style={{ fontSize: 14.5, color: 'var(--ink-2)', marginBottom: 24, lineHeight: 1.6 }}>
                   Aproveite nossos lotes promocionais para adquirir sua vaga com desconto. 
@@ -53,6 +53,7 @@ function App() {
                 <div className="col gap-16" style={{ borderTop: '1px solid rgba(0,0,0,0.1)', paddingTop: 24 }}>
                   {[
                     ['Modalidade', 'Híbrida (Presencial e Online)'],
+                    ['Formato', 'Parambulatorial'],
                     ['Duração', '27 Horas'],
                     ['Dias', 'Sexta, Sábado e Domingo'],
                     ['Vagas', 'Limitadas a capacidade do Hotel']
