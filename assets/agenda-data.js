@@ -386,18 +386,31 @@ export const eventos = [
     "mesNome": "OUTUBRO",
     "ano": "2026",
     "titulo": "Materializações Interassistenciais",
-    "tipo": "Curso em Parceria",
+    "tipo": "Parceria ICTENEPES",
     "gratuito": false,
     "local": "Híbrido - Foz do Iguaçu",
     "horario": "09:00 às 17:00",
     "detalhe": null,
     "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/",
-    "preco": "R$500",
+    "preco": "R$500 · R$450",
     "precoExtra": null,
-    "modalidades": [],
+    "modalidades": [
+      {
+        "label": "Presencial",
+        "price": "R$500",
+        "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/",
+        "buttonLabel": "Presencial"
+      },
+      {
+        "label": "Online",
+        "price": "R$450",
+        "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-online/",
+        "buttonLabel": "Online"
+      }
+    ],
     "status": "Inscrições Abertas",
     "featured": true,
-    "pinHome": false,
+    "pinHome": true,
     "homeOrdem": 999
   },
   {

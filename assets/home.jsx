@@ -473,59 +473,97 @@ function homeOrder(event) {
   return Number.isFinite(order) && order >= 1 && order <= 5 ? order : 999;
 }
 
-function selectHomeEvents(events) {
-  const seen = new Set();
-  const upcoming = events.filter(isUpcomingEvent);
-  const candidates = [...upcoming.filter(e => e.pinHome), ...upcoming.filter(e => e.featured), ...upcoming];
+function eventKey(event) {
+  return `${event.date || ""}|${event.href || ""}|${event.titulo || ""}`;
+}
 
-  return candidates
-    .filter(event => {
-      const key = `${event.date || ""}|${event.href || ""}|${event.titulo || ""}`;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    })
+function selectHomeEvents(events) {
+  const upcoming = events.filter(isUpcomingEvent);
+
+  const destaques = [...upcoming.filter(e => e.pinHome), ...upcoming.filter(e => e.featured && !e.pinHome)]
     .sort((a, b) => {
       const aPinned = Boolean(a.pinHome);
       const bPinned = Boolean(b.pinHome);
       if (aPinned !== bPinned) return aPinned ? -1 : 1;
-
       if (aPinned && homeOrder(a) !== homeOrder(b)) return homeOrder(a) - homeOrder(b);
-
-      const aFeatured = Boolean(a.featured);
-      const bFeatured = Boolean(b.featured);
-      if (aFeatured !== bFeatured) return aFeatured ? -1 : 1;
-
       return (parseEventDate(a.date)?.getTime() || 0) - (parseEventDate(b.date)?.getTime() || 0);
     })
+    .slice(0, 3);
+
+  const destaqueKeys = new Set(destaques.map(eventKey));
+
+  const proximos = upcoming
+    .filter(e => !destaqueKeys.has(eventKey(e)))
+    .sort((a, b) => (parseEventDate(a.date)?.getTime() || 0) - (parseEventDate(b.date)?.getTime() || 0))
     .slice(0, 5);
+
+  return { destaques, proximos };
+}
+
+function formatDateRange(event) {
+  const start = parseEventDate(event.date);
+  if (!start) return "";
+  const duration = Math.max(0, Number(event.durationDays) || 0);
+  if (duration === 0) return `${event.dia} ${event.mes} ${event.ano}`;
+  const end = new Date(start);
+  end.setDate(end.getDate() + duration);
+  const endDay = String(end.getDate()).padStart(2, "0");
+  const endMes = end.toLocaleDateString("pt-BR", { month: "short" }).replace(".", "").toUpperCase();
+  if (start.getMonth() === end.getMonth()) {
+    return `${event.dia}–${endDay} ${event.mes} ${event.ano}`;
+  }
+  return `${event.dia} ${event.mes} – ${endDay} ${endMes} ${event.ano}`;
 }
 
 function ProximosEventos() {
-  const proximos = selectHomeEvents(todosEventos);
+  const { destaques, proximos } = selectHomeEvents(todosEventos);
 
   return (
     <section className="prox-eventos">
       <div className="wrap">
-        <div className="prox-eventos__head">
-          <div className="eyebrow"><span className="dot"></span>PRÓXIMAS ATIVIDADES</div>
-          <a href="pages/agenda.html" className="link-arrow">Ver agenda completa →</a>
-        </div>
-        <div className="prox-eventos__rail">
-          {proximos.map((e, i) => (
-            <a href={`pages/agenda.html?focus=${e.slug || ''}`} key={i} className="prox-evento">
-              <div className="prox-evento__date">
-                <strong>{e.dia}</strong>
-                <span>{e.mes}</span>
-              </div>
-              <div className="prox-evento__body">
-                <span className="specimen prox-evento__tipo">{e.tipo}{e.gratuito ? " · GRATUITO" : ""}</span>
-                <span className="h4 prox-evento__titulo">{e.titulo}</span>
-                <span className="prox-evento__local">{e.local}</span>
-              </div>
-              <span className="agenda__arr">→</span>
-            </a>
-          ))}
+        {destaques.length > 0 && (
+          <div className="home-destaques">
+            <div className="prox-eventos__head">
+              <div className="eyebrow"><span className="dot"></span>DESTAQUES &nbsp;·&nbsp; NÃO PERCA</div>
+              <a href="pages/agenda.html" className="link-arrow">Ver agenda completa →</a>
+            </div>
+            <div className="home-destaques__grid">
+              {destaques.map((e, i) => (
+                <a href={`pages/agenda.html?focus=${e.slug || ''}`} key={i} className="home-feat">
+                  <div className="home-feat__top">
+                    <span className="home-feat__date">{formatDateRange(e)}</span>
+                    <span className="home-feat__cat">{e.tipo}</span>
+                  </div>
+                  <h3 className="home-feat__title">{e.titulo}</h3>
+                  <p className="home-feat__local">{e.local}</p>
+                  <span className="home-feat__go">Ver na agenda →</span>
+                </a>
+              ))}
+            </div>
+          </div>
+        )}
+
+        <div className="home-proximos">
+          <div className="prox-eventos__head">
+            <div className="eyebrow"><span className="dot"></span>PRÓXIMAS ATIVIDADES</div>
+            <a href="pages/agenda.html" className="link-arrow">Ver agenda completa →</a>
+          </div>
+          <div className="prox-eventos__rail">
+            {proximos.map((e, i) => (
+              <a href={`pages/agenda.html?focus=${e.slug || ''}`} key={i} className="prox-evento">
+                <div className="prox-evento__date">
+                  <strong>{e.dia}</strong>
+                  <span>{e.mes}</span>
+                </div>
+                <div className="prox-evento__body">
+                  <span className="specimen prox-evento__tipo">{e.tipo}{e.gratuito ? " · GRATUITO" : ""}</span>
+                  <span className="h4 prox-evento__titulo">{e.titulo}</span>
+                  <span className="prox-evento__local">{e.local}</span>
+                </div>
+                <span className="agenda__arr">→</span>
+              </a>
+            ))}
+          </div>
         </div>
       </div>
     </section>
