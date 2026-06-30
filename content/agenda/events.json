@@ -79,13 +79,16 @@
       "time": "17:00",
       "tag": "",
       "status": "Inscrições Abertas",
+      "vacancies": "",
       "price": "",
       "free": true,
       "buttonLabel": "Ver detalhes",
-      "featured": false,
+      "featured": true,
       "featuredStyle": "gold",
       "featuredDate": "",
       "featuredCategory": "",
+      "pinHome": true,
+      "homeOrdem": 1,
       "students": "Até 250 participantes"
     },
     {
