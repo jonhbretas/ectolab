@@ -31,6 +31,19 @@ function App() {
     { titulo: 'Parambulatório', texto: 'Trabalho realizado durante o sono (projeção lúcida), onde a consciência atua como num consultório extrafísico. Exige maior domínio do psicossoma e profundidade no esclarecimento (Tares).' },
   ];
 
+  const galeriaDestaques = [
+    { src: '/images/imersao/imersao14-equipe.webp', titulo: 'Equipe de Voluntários', texto: 'A imersão só acontece graças ao trabalho dedicado de até 30 voluntários que mobilizam energias, apoiam a logística e sustentam o campo bioenergético durante as 27 horas.' },
+    { src: '/images/imersao/imersao15-professores.webp', titulo: 'Corpo de Professores', texto: 'Pesquisadores e especialistas conduzem debates, oficinas e vivências, conectando teoria e prática em ectoplasmologia e paracirurgiologia.' },
+  ];
+
+  const galeriaMasonry = [
+    { src: '/images/imersao/imersao08.webp', legenda: 'Vivência em ambiente hoteleiro' },
+    { src: '/images/imersao/imersao10.webp', legenda: 'Oficinas e debates' },
+    { src: '/images/imersao/imersao11.webp', legenda: 'Pesquisa com Vega Teste' },
+    { src: '/images/imersao/imersao12.webp', legenda: 'Atividades coletivas' },
+    { src: '/images/imersao/imersao13.webp', legenda: 'Fitoectoplasma ao ar livre' },
+  ];
+
   return (
     <>
       {/* ===== HERO ===== */}
@@ -248,6 +261,78 @@ function App() {
                 <h3 className="h3" style={{ fontSize: 18, lineHeight: 1.2 }}>{m.titulo}</h3>
                 <p style={{ fontSize: 14.5, color: 'var(--ink-2)', lineHeight: 1.6, margin: 0 }}>{m.texto}</p>
               </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ===== GALERIA (destaques + masonry) ===== */}
+      <section className="section" style={{ background: 'var(--white)' }}>
+        <div className="wrap">
+          <div className="section-head">
+            <div>
+              <div className="eyebrow"><span className="dot"></span>GALERIA &nbsp;·&nbsp; EDIÇÕES ANTERIORES</div>
+              <h2 className="h1" style={{ marginTop: 16, maxWidth: 760 }}>
+                A imersão em <strong style={{ color: 'var(--orange)', fontWeight: 700 }}>imagens</strong>.
+              </h2>
+              <p className="lede" style={{ marginTop: 12, maxWidth: 680 }}>
+                Momentos das últimas edições: pesquisa, vivências e o trabalho coletivo de voluntários e professores.
+              </p>
+            </div>
+          </div>
+
+          {/* Destaques: equipe + professores */}
+          <div className="grid g2 gap-24" style={{ marginTop: 40 }}>
+            {galeriaDestaques.map((g) => (
+              <figure key={g.src} style={{
+                position: 'relative',
+                margin: 0,
+                borderRadius: 'var(--r-lg)',
+                overflow: 'hidden',
+                border: '1px solid var(--line)',
+                background: 'var(--paper)',
+                aspectRatio: '4 / 3',
+              }}>
+                <img src={g.src} alt={g.titulo} loading="lazy" style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }} />
+                <figcaption style={{
+                  position: 'absolute',
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  padding: '20px 22px',
+                  background: 'linear-gradient(to top, rgba(21,83,102,0.92), rgba(21,83,102,0))',
+                  color: 'var(--white)',
+                }}>
+                  <span className="specimen" style={{ color: 'var(--orange-soft)', display: 'block', marginBottom: 6 }}>{g.titulo}</span>
+                  <p style={{ fontSize: 14, lineHeight: 1.5, margin: 0, color: 'rgba(255,255,255,0.88)' }}>{g.texto}</p>
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+
+          {/* Masonry das demais */}
+          <div style={{ marginTop: 24, columns: '3 260px', columnGap: 24 }}>
+            {galeriaMasonry.map((g) => (
+              <figure key={g.src} style={{
+                breakInside: 'avoid',
+                margin: '0 0 24px',
+                borderRadius: 'var(--r-md)',
+                overflow: 'hidden',
+                border: '1px solid var(--line)',
+                background: 'var(--paper)',
+                position: 'relative',
+              }}>
+                <img src={g.src} alt={g.legenda} loading="lazy" style={{ width: '100%', height: 'auto', display: 'block' }} />
+                <figcaption style={{
+                  padding: '10px 14px',
+                  fontSize: 12.5,
+                  color: 'var(--ink-2)',
+                  background: 'var(--white)',
+                  borderBottom: '2px solid var(--orange)',
+                }}>
+                  {g.legenda}
+                </figcaption>
+              </figure>
             ))}
           </div>
         </div>

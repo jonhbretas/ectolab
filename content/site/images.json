@@ -1,6 +1,61 @@
 {
   "pages": [
     {
+      "page": "Componente / curso-imersao",
+      "folder": "components/curso-imersao",
+      "images": [
+        {
+          "label": "imersao08",
+          "originalPath": "/images/imersao/imersao08.webp",
+          "image": "/images/imersao/imersao08.webp",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        },
+        {
+          "label": "imersao10",
+          "originalPath": "/images/imersao/imersao10.webp",
+          "image": "/images/imersao/imersao10.webp",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        },
+        {
+          "label": "imersao11",
+          "originalPath": "/images/imersao/imersao11.webp",
+          "image": "/images/imersao/imersao11.webp",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        },
+        {
+          "label": "imersao12",
+          "originalPath": "/images/imersao/imersao12.webp",
+          "image": "/images/imersao/imersao12.webp",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        },
+        {
+          "label": "imersao13",
+          "originalPath": "/images/imersao/imersao13.webp",
+          "image": "/images/imersao/imersao13.webp",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        },
+        {
+          "label": "imersao14 equipe",
+          "originalPath": "/images/imersao/imersao14-equipe.webp",
+          "image": "/images/imersao/imersao14-equipe.webp",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        },
+        {
+          "label": "imersao15 professores",
+          "originalPath": "/images/imersao/imersao15-professores.webp",
+          "image": "/images/imersao/imersao15-professores.webp",
+          "alt": "",
+          "notes": "Preferir WEBP otimizado para melhor desempenho."
+        }
+      ]
+    },
+    {
       "page": "Componente / ectoplasma-data",
       "folder": "components/ectoplasma-data",
       "images": [
