@@ -602,6 +602,46 @@
     .feat.dark::before { content:""; position:absolute; top:-120px; right:-120px; width:300px; height:300px; background: radial-gradient(circle, var(--orange) 0%, transparent 60%); opacity:0.16; pointer-events:none; }
     .feat.gold { background: linear-gradient(160deg, #fbf2dd, #f3e3bf); border-color: var(--gold-soft2); }
     .feat.gold .feat__cat { color: var(--orange-2); }
+
+    /* ---------- Destaque HIGHLIGHT (chamativo, animado) ---------- */
+    .feat.highlight {
+      border: none;
+      background: var(--white);
+      animation: featPulse 2.6s ease-in-out infinite;
+    }
+    .feat.highlight > * { position: relative; z-index: 1; }
+    /* fundo em movimento (wash de cor suave) */
+    .feat.highlight::before {
+      content: ""; position: absolute; inset: 0; z-index: 0; pointer-events: none;
+      background: linear-gradient(120deg, rgba(240,160,48,0.14), rgba(31,135,168,0.12), rgba(240,160,48,0.14));
+      background-size: 220% 220%;
+      animation: featWash 5.5s ease infinite;
+    }
+    /* borda em degradê que muda de cor girando ao redor do card */
+    .feat.highlight::after {
+      content: ""; position: absolute; inset: 0; z-index: 2; pointer-events: none;
+      border-radius: inherit; padding: 2px;
+      background: linear-gradient(120deg, var(--orange), var(--teal-glow), var(--orange-2), var(--teal-glow2), var(--orange));
+      background-size: 300% 300%;
+      animation: featBorder 4s linear infinite;
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+      mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      mask-composite: exclude;
+    }
+    .feat.highlight .feat__cat { color: var(--orange-2); }
+    .feat.highlight .feat__date { color: var(--orange-2); }
+    .feat.highlight:hover { transform: translateY(-3px); box-shadow: 0 22px 48px -16px rgba(240,160,48,0.55); }
+    @keyframes featBorder { 0% { background-position: 0% 50%; } 100% { background-position: 300% 50%; } }
+    @keyframes featWash { 0% { background-position: 0% 0%; } 50% { background-position: 100% 100%; } 100% { background-position: 0% 0%; } }
+    @keyframes featPulse {
+      0%, 100% { box-shadow: 0 10px 30px -18px rgba(240,160,48,0.55); }
+      50% { box-shadow: 0 16px 46px -14px rgba(240,160,48,0.9); }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .feat.highlight, .feat.highlight::before, .feat.highlight::after { animation: none; }
+      .feat.highlight::after { background: var(--orange); }
+    }
     @media (max-width: 960px) { .feat-grid { grid-template-columns: 1fr; } }
   </style>
 </head>
@@ -654,6 +694,12 @@
         </div>
         <div class="feat-grid">
           <!-- CMS AGENDA FEATURED START -->
+          <button type="button" class="feat highlight" data-year="2026" data-month="jul">
+            <div class="feat__top"><span class="feat__year">2026</span><span class="feat__cat">DIP · Presencial</span></div>
+            <h3>DIP - Dinâmica Interassistencial da Paracirurgia · Duas Décadas da DIP - 6 Elipes e 12 Epicons - Gratuita</h3>
+            <p>Atenção: As vagas são estritamente limitadas a 200 pessoas e serão garantidas por ordem de inscrição. Devido à gratuidade e à importância do marco de 2 décadas, esperamos que as vagas se esgotem rapidamente.</p>
+            <div class="feat__foot"><span class="feat__date">10 JUL 2026</span><span class="feat__go">Ver na agenda</span></div>
+          </button>
           <button type="button" class="feat" data-year="2026" data-month="out">
             <div class="feat__top"><span class="feat__year">2026</span><span class="feat__cat">Parceria ICTENEPES</span></div>
             <h3>Materializações Interassistenciais</h3>
@@ -747,7 +793,7 @@
 
         <!-- CMS AGENDA EVENTS START -->
         <!-- ============ JUNHO 2026 ============ -->
-        <div class="month-block" data-year="2026" data-month="jun" id="m-jun">
+        <div class="month-block is-past" data-year="2026" data-month="jun" id="m-jun">
           <div class="month-head">
             <h2>Junho</h2><span class="yr">2026</span>
             <span class="mcount"><b>0</b> atividades</span>
@@ -766,10 +812,10 @@
             <div class="agenda-row__status"><span class="price free">Consultar</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="programa" data-month="jun" data-slug="2026-06-26-programa-de-estimulacao-parapsiquica-ectoplasmica" href="/pages/curso-proep.html">
+          <a class="agenda-row is-past" data-cat="programa" data-month="jun" data-slug="2026-06-26-programa-de-estimulacao-parapsiquica-ectoplasmica" href="/pages/curso-proep.html">
             <div class="agenda-row__date"><strong>26–28</strong><span>SEX–DOM</span></div>
             <div class="agenda-row__body">
-              <div class="agenda-row__labels"><span class="agenda-tag programa">Programa · PROEP</span><span class="state closed">Vagas preenchidas</span><span class="vacancies">Turma reduzida</span></div>
+              <div class="agenda-row__labels"><span class="agenda-tag programa">Programa · PROEP</span><span class="state">Realizado</span><span class="vacancies">Turma reduzida</span></div>
               <h3>PROEP - Programa de Estimulação Parapsíquica Ectoplásmica</h3>
               <p>Atividade conscienciológica teática e aprofundada, com foco na estimulação lúcida do parapsiquismo ectoplásmico.</p>
             </div>
@@ -802,7 +848,7 @@
             <div class="agenda-row__status"><span class="price free">Consultar</span></div>
             <span class="agenda-row__arr" aria-label="Ver detalhes" title="Ver detalhes">→</span>
           </a>
-          <a class="agenda-row" data-cat="dinamica" data-month="jul" data-slug="2026-07-10-duas-decadas-da-dip-6-elipes-e-12-epicons-gratuita" href="/pages/dinamica.html">
+          <a class="agenda-row" data-cat="dinamica" data-month="jul" data-slug="2026-07-10-duas-decadas-da-dip-6-elipes-e-12-epicons-gratuita" href="https://www.sympla.com.br/evento/dinamica-interassistencial-de-paracirurgia-2-decadas-dinamica-comemorativa-gratuita/3356504">
             <div class="agenda-row__date"><strong>10</strong><span>SEX</span></div>
             <div class="agenda-row__body">
               <div class="agenda-row__labels"><span class="agenda-tag dinamica">DIP · Presencial</span><span class="state open">Inscrições Abertas</span><span class="vacancies">Até 250 participantes</span></div>

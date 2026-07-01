@@ -900,6 +900,8 @@
     }
 
     function build() {
+      // Não sobrepor o pop-up de divulgação (modal central), se estiver aberto.
+      if (document.querySelector(".ecto-modal")) return;
       backdrop = document.createElement("div");
       backdrop.className = "books-pop__backdrop";
       backdrop.setAttribute("aria-hidden", "true");
@@ -927,6 +929,113 @@
     }
 
     setTimeout(build, DELAY_MS);
+  })();
+
+  // --- Pop-up de divulgação (modal central, configurável no CMS) ---
+  // Lê /popup.json (editável em content → Pop-up de divulgação). Se estiver
+  // ativo, exibe um modal centralizado com fundo escurecido. Três modos:
+  // "texto", "imagem" ou "imagem-texto". Fechar silencia pelo período de
+  // cooldown; se o conteúdo mudar, o pop-up volta a aparecer.
+  (function initAnnouncePopup() {
+    if (/\/admin($|\/)/i.test(location.pathname)) return;
+    if (window.top !== window.self) return;
+
+    const STORAGE_KEY = "ecto_announce_pop";
+
+    function esc(s) {
+      return String(s == null ? "" : s).replace(/[&<>"']/g, (c) =>
+        ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c])
+      );
+    }
+
+    fetch("/popup.json", { cache: "no-cache" })
+      .then((r) => (r.ok ? r.json() : null))
+      .then((cfg) => {
+        if (!cfg || !cfg.active) return;
+
+        const hasImg = !!(cfg.image && String(cfg.image).trim());
+        let mode = cfg.displayMode || "texto";
+        // Se o modo pede imagem mas não há uma, cai para texto (ou aborta).
+        if ((mode === "imagem" || mode === "imagem-texto") && !hasImg) {
+          if (!cfg.title && !cfg.text) return;
+          mode = "texto";
+        }
+        if (mode === "texto" && !cfg.title && !cfg.text) return;
+
+        const version = [cfg.title, cfg.text, cfg.image, cfg.buttonHref].join("|");
+        const cooldownMs = Math.max(0, Number(cfg.cooldownDays) || 0) * 86400000;
+        try {
+          const saved = JSON.parse(localStorage.getItem(STORAGE_KEY) || "null");
+          if (saved && saved.v === version && cooldownMs && Date.now() - saved.t < cooldownMs) return;
+        } catch (e) {}
+
+        const delay = Math.max(0, Number(cfg.delaySeconds) || 0) * 1000;
+        setTimeout(() => build(cfg, mode, hasImg, version), delay);
+      })
+      .catch(() => {});
+
+    function build(cfg, mode, hasImg, version) {
+      const backdrop = document.createElement("div");
+      backdrop.className = "ecto-modal__backdrop";
+
+      const modal = document.createElement("div");
+      modal.className = "ecto-modal ecto-modal--" + mode;
+      modal.setAttribute("role", "dialog");
+      modal.setAttribute("aria-modal", "true");
+      if (cfg.title) modal.setAttribute("aria-label", cfg.title);
+
+      const href = cfg.buttonHref ? esc(cfg.buttonHref) : "";
+      const imgAlt = esc(cfg.imageAlt || cfg.title || "");
+      let html = '<button class="ecto-modal__close" type="button" aria-label="Fechar">✕</button>';
+
+      if (mode === "imagem") {
+        const img = '<img class="ecto-modal__img" src="' + esc(cfg.image) + '" alt="' + imgAlt + '" />';
+        html += href
+          ? '<a class="ecto-modal__imglink" href="' + href + '" target="_blank" rel="noopener">' + img + "</a>"
+          : img;
+      } else {
+        if (mode === "imagem-texto" && hasImg) {
+          html += '<div class="ecto-modal__media"><img class="ecto-modal__img" src="' + esc(cfg.image) + '" alt="' + imgAlt + '" /></div>';
+        }
+        html += '<div class="ecto-modal__body">';
+        if (cfg.eyebrow) html += '<div class="ecto-modal__eyebrow"><span class="dot"></span>' + esc(cfg.eyebrow) + "</div>";
+        if (cfg.title) html += '<h2 class="ecto-modal__title">' + esc(cfg.title) + "</h2>";
+        if (cfg.text) html += '<p class="ecto-modal__text">' + esc(cfg.text) + "</p>";
+        if (href) html += '<a class="ecto-modal__btn" href="' + href + '" target="_blank" rel="noopener">' + esc(cfg.buttonLabel || "Saiba mais") + ' <span aria-hidden="true">→</span></a>';
+        html += "</div>";
+      }
+      modal.innerHTML = html;
+
+      function remember() {
+        try { localStorage.setItem(STORAGE_KEY, JSON.stringify({ v: version, t: Date.now() })); } catch (e) {}
+      }
+      function dismiss() {
+        modal.classList.remove("is-in");
+        backdrop.classList.remove("is-in");
+        document.body.style.overflow = "";
+        remember();
+        setTimeout(() => {
+          if (backdrop.parentNode) backdrop.parentNode.removeChild(backdrop);
+          if (modal.parentNode) modal.parentNode.removeChild(modal);
+          document.removeEventListener("keydown", onKey);
+        }, 340);
+      }
+      function onKey(e) { if (e.key === "Escape") dismiss(); }
+
+      document.body.appendChild(backdrop);
+      document.body.appendChild(modal);
+      modal.querySelector(".ecto-modal__close").addEventListener("click", dismiss);
+      backdrop.addEventListener("click", dismiss);
+      const cta = modal.querySelector(".ecto-modal__btn, .ecto-modal__imglink");
+      if (cta) cta.addEventListener("click", remember);
+      document.addEventListener("keydown", onKey);
+      document.body.style.overflow = "hidden";
+
+      requestAnimationFrame(() => {
+        backdrop.classList.add("is-in");
+        modal.classList.add("is-in");
+      });
+    }
   })();
 
 })();

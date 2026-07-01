@@ -575,6 +575,7 @@ const mapped = events.map((event) => ({
     })),
     status:    event.status || '',
     featured:  Boolean(event.featured),
+    featuredStyle: event.featuredStyle || '',
     pinHome:   Boolean(event.pinHome),
     homeOrdem: typeof event.homeOrdem === 'number' ? event.homeOrdem : 999,
   }));

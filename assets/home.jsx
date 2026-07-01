@@ -529,7 +529,7 @@ function ProximosEventos() {
             </div>
             <div className="home-destaques__grid">
               {destaques.map((e, i) => (
-                <a href={`pages/agenda.html?focus=${e.slug || ''}`} key={i} className="home-feat">
+                <a href={`pages/agenda.html?focus=${e.slug || ''}`} key={i} className={`home-feat${e.featuredStyle === 'highlight' ? ' highlight' : ''}`}>
                   <div className="home-feat__top">
                     <span className="home-feat__date">{formatDateRange(e)}</span>
                     <span className="home-feat__cat">{e.tipo}</span>

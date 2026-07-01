@@ -261,8 +261,37 @@ collections:
                   - { name: href, label: Link de inscricao, widget: string, required: false, hint: "URL da pagina de inscricao desta modalidade." }
                   - { name: buttonLabel, label: Texto do botao, widget: string, required: false, default: Inscrever-se, hint: "Ex.: Inscrever presencial, Inscrever online." }
               - { name: featured, label: Destaque na agenda, widget: boolean, default: false, required: false, hint: "Marque sim para destacar este evento na secao Principais Eventos da pagina de agenda. Ele tambem entra automaticamente na Home." }
-              - { name: featuredStyle, label: Estilo do destaque, widget: select, required: false, default: default, hint: "Aparencia do card de destaque. Default = claro, Dark = fundo escuro, Gold = destaque dourado.", options: ["default", "dark", "gold"] }
+              - { name: featuredStyle, label: Estilo do destaque, widget: select, required: false, default: default, hint: "Aparencia do card de destaque. Default = claro, Dark = fundo escuro, Gold = destaque dourado, Highlight = super chamativo com borda animada que muda de cor (use para o evento mais importante).", options: ["default", "dark", "gold", "highlight"] }
               - { name: featuredDate, label: Data no destaque, widget: string, required: false, hint: "Opcional. Texto personalizado para a data no card de destaque. Se ficar vazio, o site formata a data automaticamente." }
               - { name: featuredCategory, label: Categoria no destaque, widget: string, required: false, hint: "Opcional. Texto personalizado para a categoria no card de destaque. Se ficar vazio, o site usa o tipo do evento." }
               - { name: pinHome, label: Fixar na home, widget: boolean, default: false, required: false, hint: "Marque sim para fixar este evento na secao Proximas Atividades da Home. Use junto com Ordem na home para controlar a posicao." }
               - { name: homeOrdem, label: Ordem na home (1 a 5), widget: number, value_type: int, min: 1, max: 5, required: false, hint: "Posicao do evento na Home. Menor numero aparece primeiro. Use junto com Fixar na home. Ex.: 1 = primeiro, 5 = quinto." }
+
+  - name: popup
+    label: Pop-up de divulgação
+    files:
+      - name: popup
+        label: Pop-up (modal central)
+        file: public/popup.json
+        media_folder: public/uploads/popup
+        public_folder: /uploads/popup
+        fields:
+          - { name: active, label: Ativar pop-up, widget: boolean, default: false, hint: "Ligue para exibir o pop-up modal centralizado no site. Desligue para ocultar." }
+          - name: displayMode
+            label: O que exibir
+            widget: select
+            default: texto
+            hint: "Escolha se o pop-up mostra somente texto, somente imagem ou os dois."
+            options:
+              - { label: Somente texto, value: texto }
+              - { label: Imagem + texto, value: imagem-texto }
+              - { label: Somente imagem, value: imagem }
+          - { name: image, label: Imagem, widget: image, required: false, hint: "Usada nos modos 'Imagem + texto' e 'Somente imagem'. Preferir WEBP otimizado. No modo 'Somente imagem', o clique leva ao Link do botao." }
+          - { name: imageAlt, label: Texto alternativo da imagem, widget: string, required: false, hint: "Descreve a imagem para acessibilidade e buscadores." }
+          - { name: eyebrow, label: Etiqueta (linha pequena acima do titulo), widget: string, required: false, hint: "Ex.: Marco historico, Vagas abertas, Novidade." }
+          - { name: title, label: Titulo, widget: string, required: false }
+          - { name: text, label: Texto, widget: text, required: false }
+          - { name: buttonLabel, label: Texto do botao, widget: string, required: false, default: Saiba mais }
+          - { name: buttonHref, label: Link do botao, widget: string, required: false, hint: "Para onde o botao (ou a imagem, no modo Somente imagem) leva. Ex.: link de inscricao." }
+          - { name: cooldownDays, label: Dias sem repetir apos fechar, widget: number, value_type: int, default: 3, min: 0, required: false, hint: "Quantos dias aguardar antes de mostrar de novo para quem ja fechou. Se voce editar o conteudo, o pop-up volta a aparecer mesmo dentro desse prazo." }
+          - { name: delaySeconds, label: Segundos ate aparecer, widget: number, value_type: int, default: 2, min: 0, required: false, hint: "Tempo de espera apos abrir a pagina antes do pop-up surgir." }

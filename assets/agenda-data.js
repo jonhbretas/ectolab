@@ -29,6 +29,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Realizado",
     "featured": false,
+    "featuredStyle": "",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -50,8 +51,9 @@ export const eventos = [
     "preco": "R$ 1.000",
     "precoExtra": null,
     "modalidades": [],
-    "status": "Vagas preenchidas",
+    "status": "Realizado",
     "featured": false,
+    "featuredStyle": "",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -75,6 +77,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Inscrições Abertas",
     "featured": false,
+    "featuredStyle": "",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -92,14 +95,15 @@ export const eventos = [
     "local": "Hotel Interludium",
     "horario": "17:00",
     "detalhe": null,
-    "href": "/pages/dinamica.html",
+    "href": "https://www.sympla.com.br/evento/dinamica-interassistencial-de-paracirurgia-2-decadas-dinamica-comemorativa-gratuita/3356504",
     "preco": "Consultar",
     "precoExtra": null,
     "modalidades": [],
     "status": "Inscrições Abertas",
-    "featured": false,
-    "pinHome": false,
-    "homeOrdem": 999
+    "featured": true,
+    "featuredStyle": "highlight",
+    "pinHome": true,
+    "homeOrdem": 1
   },
   {
     "slug": "2026-07-11-descablagem-paracirurgica",
@@ -121,6 +125,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Em breve",
     "featured": false,
+    "featuredStyle": "gold",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -144,6 +149,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Em breve",
     "featured": false,
+    "featuredStyle": "gold",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -167,6 +173,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Em breve",
     "featured": false,
+    "featuredStyle": "gold",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -190,6 +197,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Em breve",
     "featured": false,
+    "featuredStyle": "gold",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -213,6 +221,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Em breve",
     "featured": false,
+    "featuredStyle": "gold",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -236,6 +245,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Inscrições Abertas",
     "featured": false,
+    "featuredStyle": "",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -259,6 +269,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Inscrições Abertas",
     "featured": false,
+    "featuredStyle": "",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -282,6 +293,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Inscrições Abertas",
     "featured": false,
+    "featuredStyle": "",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -305,6 +317,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Inscrições Abertas",
     "featured": false,
+    "featuredStyle": "dark",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -328,6 +341,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Inscrições Abertas",
     "featured": false,
+    "featuredStyle": "",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -351,6 +365,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Inscrições Abertas",
     "featured": false,
+    "featuredStyle": "",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -374,6 +389,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Inscrições Abertas",
     "featured": false,
+    "featuredStyle": "",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -410,6 +426,7 @@ export const eventos = [
     ],
     "status": "Inscrições Abertas",
     "featured": true,
+    "featuredStyle": "",
     "pinHome": true,
     "homeOrdem": 999
   },
@@ -433,6 +450,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Inscrições Abertas",
     "featured": false,
+    "featuredStyle": "",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -456,6 +474,7 @@ export const eventos = [
     "modalidades": [],
     "status": "Inscrições Abertas",
     "featured": false,
+    "featuredStyle": "",
     "pinHome": false,
     "homeOrdem": 999
   },
@@ -492,6 +511,7 @@ export const eventos = [
     ],
     "status": "Inscrições Abertas",
     "featured": true,
+    "featuredStyle": "default",
     "pinHome": true,
     "homeOrdem": 999
   }

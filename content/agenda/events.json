@@ -84,7 +84,7 @@
       "free": true,
       "buttonLabel": "Ver detalhes",
       "featured": true,
-      "featuredStyle": "gold",
+      "featuredStyle": "highlight",
       "featuredDate": "",
       "featuredCategory": "",
       "pinHome": true,
