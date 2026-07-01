@@ -582,26 +582,26 @@
       transition: transform 0.18s, border-color 0.18s, box-shadow 0.18s;
     }
     .feat:hover { transform: translateY(-3px); border-color: var(--ink); box-shadow: 0 18px 36px -18px rgba(8,34,43,0.25); }
-    .feat__top { display: flex; align-items: center; justify-content: space-between; }
-    .feat__year { font-family: var(--display); font-weight: 600; font-size: 15px; letter-spacing: 0.02em; color: var(--ink); }
-    .feat__cat { font-family: var(--mono); font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--ink-3); }
+    .feat__tags { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+    .feat__cat { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.1em; text-transform: uppercase; font-weight: 600; line-height: 1.4; color: var(--teal); background: var(--teal-soft); border: 1px solid var(--teal-soft2); padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
+    .feat__free { font-family: var(--mono); font-size: 9.5px; letter-spacing: 0.08em; text-transform: uppercase; font-weight: 600; line-height: 1.4; color: var(--orange-2); background: var(--orange-soft); border: 1px solid var(--orange-soft2); padding: 4px 10px; border-radius: 999px; white-space: nowrap; }
     .feat h3 { font-family: var(--display); font-weight: 600; font-size: 23px; line-height: 1.1; letter-spacing: -0.02em; margin: 0; text-wrap: balance; }
     .feat p { font-size: 13.5px; line-height: 1.5; color: var(--ink-2); margin: 0; }
-    .feat__foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; padding-top: 14px; border-top: 1px dashed var(--line); }
-    .feat__date { font-family: var(--mono); font-size: 11.5px; letter-spacing: 0.1em; color: var(--blue); font-weight: 600; }
-    .feat__go { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); }
+    .feat__foot { margin-top: auto; display: flex; align-items: center; justify-content: space-between; gap: 12px; padding-top: 14px; border-top: 1px dashed var(--line); }
+    .feat__date { display: inline-flex; align-items: center; gap: 8px; font-family: var(--mono); font-size: 13px; font-weight: 700; letter-spacing: 0.02em; color: var(--ink); font-variant-numeric: tabular-nums; }
+    .feat__date::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--orange); flex: none; }
+    .feat__go { font-family: var(--mono); font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--ink-3); white-space: nowrap; }
     .feat:hover .feat__go { color: var(--orange-2); }
     .feat.dark { background: linear-gradient(160deg, var(--teal-2), var(--teal-3)); border-color: var(--teal-3); color: var(--paper); }
-    .feat.dark h3, .feat.dark .feat__year { color: var(--white); }
+    .feat.dark h3 { color: var(--white); }
     .feat.dark p { color: rgba(255,255,255,0.78); }
-    .feat.dark .feat__cat { color: var(--orange); }
+    .feat.dark .feat__cat { color: var(--white); background: rgba(255,255,255,0.12); border-color: rgba(255,255,255,0.25); }
     .feat.dark .feat__foot { border-top-color: rgba(255,255,255,0.2); }
-    .feat.dark .feat__date { color: var(--orange); }
+    .feat.dark .feat__date { color: var(--white); }
     .feat.dark .feat__go { color: rgba(255,255,255,0.6); }
     .feat.dark:hover .feat__go { color: var(--orange); }
     .feat.dark::before { content:""; position:absolute; top:-120px; right:-120px; width:300px; height:300px; background: radial-gradient(circle, var(--orange) 0%, transparent 60%); opacity:0.16; pointer-events:none; }
     .feat.gold { background: linear-gradient(160deg, #fbf2dd, #f3e3bf); border-color: var(--gold-soft2); }
-    .feat.gold .feat__cat { color: var(--orange-2); }
 
     /* ---------- Destaque HIGHLIGHT (chamativo, animado) ---------- */
     .feat.highlight {
@@ -629,8 +629,6 @@
       mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
       mask-composite: exclude;
     }
-    .feat.highlight .feat__cat { color: var(--orange-2); }
-    .feat.highlight .feat__date { color: var(--orange-2); }
     .feat.highlight:hover { transform: translateY(-3px); box-shadow: 0 22px 48px -16px rgba(240,160,48,0.55); }
     @keyframes featBorder { 0% { background-position: 0% 50%; } 100% { background-position: 300% 50%; } }
     @keyframes featWash { 0% { background-position: 0% 0%; } 50% { background-position: 100% 100%; } 100% { background-position: 0% 0%; } }
@@ -695,22 +693,22 @@
         <div class="feat-grid">
           <!-- CMS AGENDA FEATURED START -->
           <button type="button" class="feat highlight" data-year="2026" data-month="jul">
-            <div class="feat__top"><span class="feat__year">2026</span><span class="feat__cat">DIP · Presencial</span></div>
+            <div class="feat__tags"><span class="feat__cat">DIP · Presencial</span><span class="feat__free">Gratuito</span></div>
             <h3>DIP - Dinâmica Interassistencial da Paracirurgia · Duas Décadas da DIP - 6 Elipes e 12 Epicons - Gratuita</h3>
             <p>Atenção: As vagas são estritamente limitadas a 200 pessoas e serão garantidas por ordem de inscrição. Devido à gratuidade e à importância do marco de 2 décadas, esperamos que as vagas se esgotem rapidamente.</p>
-            <div class="feat__foot"><span class="feat__date">10 JUL 2026</span><span class="feat__go">Ver na agenda</span></div>
+            <div class="feat__foot"><span class="feat__date">10 JUL 2026</span><span class="feat__go">Ver na agenda →</span></div>
           </button>
           <button type="button" class="feat" data-year="2026" data-month="out">
-            <div class="feat__top"><span class="feat__year">2026</span><span class="feat__cat">Parceria ICTENEPES</span></div>
+            <div class="feat__tags"><span class="feat__cat">Parceria ICTENEPES</span></div>
             <h3>Materializações Interassistenciais</h3>
             <p>Você já refletiu sobre as suas materializações interassistenciais?</p>
-            <div class="feat__foot"><span class="feat__date">31 OUT 2026–01 NOV 2026</span><span class="feat__go">Ver na agenda</span></div>
+            <div class="feat__foot"><span class="feat__date">31 OUT – 01 NOV 2026</span><span class="feat__go">Ver na agenda →</span></div>
           </button>
           <button type="button" class="feat" data-year="2027" data-month="mar">
-            <div class="feat__top"><span class="feat__year">2027</span><span class="feat__cat">Imersão · Parambulatorial</span></div>
+            <div class="feat__tags"><span class="feat__cat">Imersão · Parambulatorial</span></div>
             <h3>IECTO - Imersão em Ectoplasmia · Parambulatorial</h3>
             <p>Imersão em Ectoplasmia Parambulatorial</p>
-            <div class="feat__foot"><span class="feat__date">19–21 MAR 2027</span><span class="feat__go">Ver na agenda</span></div>
+            <div class="feat__foot"><span class="feat__date">19–21 MAR 2027</span><span class="feat__go">Ver na agenda →</span></div>
           </button>
 <!-- CMS AGENDA FEATURED END -->
         </div>

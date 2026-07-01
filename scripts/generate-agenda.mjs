@@ -193,8 +193,11 @@ function formatFeaturedDate(event) {
   if (start.year === end.year && start.month === end.month) {
     return `${start.day}–${end.day} ${start.month.toUpperCase()} ${start.year}`;
   }
+  if (start.year === end.year) {
+    return `${start.day} ${start.month.toUpperCase()} – ${end.day} ${end.month.toUpperCase()} ${start.year}`;
+  }
 
-  return `${start.day} ${start.month.toUpperCase()} ${start.year}–${end.day} ${end.month.toUpperCase()} ${end.year}`;
+  return `${start.day} ${start.month.toUpperCase()} ${start.year} – ${end.day} ${end.month.toUpperCase()} ${end.year}`;
 }
 
 function formatRowDate(event) {
@@ -382,11 +385,12 @@ function renderFeatured(events) {
   return `${featuredStart}
 ${featured.map((event) => {
     const style = event.featuredStyle && event.featuredStyle !== 'default' ? ` ${event.featuredStyle}` : '';
+    const freeTag = event.free ? '<span class="feat__free">Gratuito</span>' : '';
     return `          <button type="button" class="feat${escapeHtml(style)}" data-year="${escapeHtml(event.year)}" data-month="${escapeHtml(event.month)}">
-            <div class="feat__top"><span class="feat__year">${escapeHtml(event.year)}</span><span class="feat__cat">${escapeHtml(event.featuredCategory || event.tag)}</span></div>
+            <div class="feat__tags"><span class="feat__cat">${escapeHtml(event.featuredCategory || event.tag)}</span>${freeTag}</div>
             <h3>${escapeHtml(event.title)}</h3>
             <p>${escapeHtml(event.description)}</p>
-            <div class="feat__foot"><span class="feat__date">${escapeHtml(event.featuredDate || formatFeaturedDate(event))}</span><span class="feat__go">Ver na agenda</span></div>
+            <div class="feat__foot"><span class="feat__date">${escapeHtml(event.featuredDate || formatFeaturedDate(event))}</span><span class="feat__go">Ver na agenda →</span></div>
           </button>`;
   }).join('\n')}
 ${featuredEnd}`;
