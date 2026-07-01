@@ -530,12 +530,15 @@ function ProximosEventos() {
             <div className="home-destaques__grid">
               {destaques.map((e, i) => (
                 <a href={`pages/agenda.html?focus=${e.slug || ''}`} key={i} className={`home-feat${e.featuredStyle === 'highlight' ? ' highlight' : ''}`}>
-                  <div className="home-feat__top">
-                    <span className="home-feat__date">{formatDateRange(e)}</span>
-                    <span className="home-feat__cat">{e.tipo}</span>
+                  <div className="home-feat__tags">
+                    {e.tipo ? <span className="home-feat__cat">{e.tipo}</span> : null}
+                    {e.gratuito ? <span className="home-feat__free">Gratuito</span> : null}
                   </div>
                   <h3 className="home-feat__title">{e.titulo}</h3>
-                  <p className="home-feat__local">{e.local}</p>
+                  <div className="home-feat__when">
+                    <span className="home-feat__date">{formatDateRange(e)}</span>
+                    {e.local ? <span className="home-feat__local">{e.local}</span> : null}
+                  </div>
                   <span className="home-feat__go">Ver na agenda →</span>
                 </a>
               ))}
