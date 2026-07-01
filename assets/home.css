@@ -28,9 +28,17 @@
 
 .hero--conservadora .hero-grid {
   display: grid;
-  grid-template-columns: 1.5fr 1fr;
-  gap: 64px;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 56px;
   align-items: start;
+}
+/* Título proporcional ao layout de duas colunas — evita quebras gigantes
+   que dominavam a seção e desequilibravam com a ficha institucional. */
+.hero--conservadora .h-display {
+  font-size: clamp(38px, 4.6vw, 64px);
+  line-height: 1.03;
+  letter-spacing: -0.028em;
+  text-wrap: balance;
 }
 .hero--conservadora .h-display em {
   background: linear-gradient(90deg, var(--blue) 0%, var(--blue-glow) 100%);
@@ -44,12 +52,13 @@
   content: "";
   position: absolute;
   left: 0; right: 0;
-  bottom: 0.02em;
-  height: 8px;
+  bottom: 0.04em;
+  height: 6px;
   background: var(--gold);
   z-index: -1;
-  opacity: 0.6;
+  opacity: 0.55;
 }
+.hero--conservadora .hero-left .lede { margin-top: 24px; }
 
 .hero-card {
   background: rgba(255,255,255,0.55);
