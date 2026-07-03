@@ -89,9 +89,14 @@ https://www.ectolab.org/*  https://ectolab.org/:splat  301!
 /dip-em-portugal/                                           /pages/dinamica.html        301
 /dip-na-alemanha/                                           /pages/dinamica.html        301
 /dip-no-rio-de-janeiro-rj/                                  /pages/dinamica.html        301
+/dip-em-brasilia/                                           /pages/dinamica.html        301
 /dip-em-brasilia-distrito-federal/                          /pages/dinamica.html        301
 
 # ---- Solicitações / Pedidos de Paracirurgia ----
+/paracirurgia/                          /pages/paracirurgia.html        301
+/solicitacao/                           /pages/paracirurgia.html        301
+/assistente-a-distancia                 /pages/paracirurgia.html        301
+/assistente-a-distancia/                /pages/paracirurgia.html        301
 /solicitacao-de-paracirurgia/           /pages/paracirurgia.html        301
 /solicitacao-para-mim-mesmoa/           /pages/paracirurgia.html        301
 /solicitacao-para-outra-pessoa/         /pages/paracirurgia.html        301
@@ -140,6 +145,7 @@ https://www.ectolab.org/*  https://ectolab.org/:splat  301!
 
 # ---- Newsletter / rascunhos / privacidade ----
 /newsletter-ectolab/            /index.html     301
+/politica-de-privacidade/       /index.html     301
 /politica-de-privacidade-2/     /index.html     301
 /rascunho-automatico/           /index.html     301
 /rascunho-automatico-2/         /index.html     301
@@ -165,7 +171,7 @@ https://www.ectolab.org/*  https://ectolab.org/:splat  301!
 /galleries/             /index.html     301
 /video-button/          /index.html     301
 /video/                 /index.html     301
-/demos/                 /index.html     301
+/demos/*                /index.html     301
 /pages/size-chart/      /index.html     301
 
 # ---- Sub-domínio /site/ (demos antigos) ----
@@ -174,5 +180,18 @@ https://www.ectolab.org/*  https://ectolab.org/:splat  301!
 # ---- Arquivos .shtml (sistema legado externo) ----
 /*.shtml                /index.html     301
 
-# ---- Uploads WordPress (wp-content) ----
+# ---- Uploads WordPress (wp-content) e internals ----
 /wp-content/*           /index.html     301
+/wp-includes/*          /index.html     301
+
+# ---- WordPress tags e categories (taxonomias) ----
+/tag/*                  /pages/blog.html    301
+/category/*             /pages/blog.html    301
+/product-tag/*          /pages/cursos.html  301
+
+# ---- WooCommerce itens (featured_item) ----
+/featured_item/*        /pages/cursos.html  301
+
+# ---- Multilíngue antigo (/pt-br/ e /de/) ----
+/pt-br/*                /index.html     301
+/de/*                   /index.html     301
