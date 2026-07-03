@@ -1,10 +1,7 @@
 ---
-title: 'O Guia Definitivo Sobre Chacras: Do Básico ao Avançado'
+title: 'Chacras: O Que São, Quantos Existem e Onde Ficam no Corpo'
 slug: o-guia-definitivo-sobre-chacras-do-basico-ao-avancado
-description: >-
-  O Manual Completo dos Chacras(Chakras): Desde o Fundamental até o Avançado Os
-  chacras constituem um assunto intrigante que se manifesta em diversas
-  tradições espirituais e pesqu...
+description: 'Guia completo sobre chacras e chakras: o que são, quantos temos no corpo humano, onde ficam e como funcionam. Estudo aprofundado com perspectiva científica e conscienciológica.'
 date: '2024-12-03'
 author: ECTOLAB
 category: Conscienciologia

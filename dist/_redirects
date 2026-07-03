@@ -12,7 +12,7 @@ https://www.ectolab.org/*  https://ectolab.org/:splat  301!
 /quem-somos/                        /pages/quem-somos.html              301
 /pages/our-stores/                  /pages/contato.html                 301
 /nosso-cgc/                         /pages/quem-somos.html              301
-/o-que-e/                           /pages/blog.html                    301
+/o-que-e/                           /o-que-e-ectoplasma/                301
 
 # ---- Contato ----
 /pages/contact/                     /pages/contato.html                 301
@@ -181,8 +181,8 @@ https://www.ectolab.org/*  https://ectolab.org/:splat  301!
 /*.shtml                /index.html     301
 
 # ---- Uploads WordPress (wp-content) e internals ----
-/wp-content/*           /index.html     301
-/wp-includes/*          /index.html     301
+/wp-content/*           /pages/materiais.html   301
+/wp-includes/*          /index.html             301
 
 # ---- WordPress tags e categories (taxonomias) ----
 /tag/*                  /pages/blog.html    301

@@ -1,10 +1,7 @@
 ---
-title: O que é Ectoplasma?
+title: 'O que é Ectoplasma? Definição, Características e Pesquisas'
 slug: o-que-e-ectoplasma
-description: >-
-  O QUE É ECTOPLASMA? "O ectoplasma é o exsudato energético, semimaterial, de
-  características viscosa, leitosa, quase transparente, retrátil, contendo
-  propriedades químicas simila...
+description: 'Entenda o que é ectoplasma: substância energética semimaterial estudada pela ectoplasmologia. Saiba como é produzido, suas características, sintomas e relação com a paracirurgia.'
 date: '2023-05-15'
 author: Ectolab
 category: Conscienciologia
