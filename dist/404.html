@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="robots" content="noindex" />
+  <title>Página não encontrada · Ectolab</title>
+  <meta name="description" content="A página que você procura não foi encontrada. Volte para a Home ou explore a Trilha do Saber, os cursos e a agenda da Ectolab." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/inner.css" />
+  <style>
+    .nf { padding: clamp(64px, 10vw, 140px) 0; text-align: center; }
+    .nf__code { font-family: var(--mono); font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--orange-2); }
+    .nf h1 { font-family: var(--display); font-weight: 600; font-size: clamp(40px, 7vw, 88px); line-height: 0.98; letter-spacing: -0.03em; margin: 18px 0 0; }
+    .nf h1 em { font-style: normal; color: var(--teal); }
+    .nf p { max-width: 560px; margin: 22px auto 0; color: var(--ink-2); line-height: 1.65; font-size: 17px; }
+    .nf__actions { display: flex; flex-wrap: wrap; gap: 12px; justify-content: center; margin-top: 36px; }
+    .nf__links { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; max-width: 760px; margin: 48px auto 0; }
+    .nf__link { display: block; padding: 16px; border: 1px solid var(--line); border-radius: var(--r-md); background: var(--white); text-decoration: none; color: var(--ink); font-weight: 600; font-size: 14px; transition: border-color 0.18s, transform 0.18s; }
+    .nf__link:hover { border-color: var(--teal); transform: translateY(-2px); }
+    @media (max-width: 700px) { .nf__links { grid-template-columns: 1fr 1fr; } }
+  </style>
+</head>
+<body data-active="">
+  <div id="__header"></div>
+
+  <main>
+    <section class="nf">
+      <div class="wrap">
+        <div class="nf__code">Erro 404</div>
+        <h1>Esta página <em>não existe</em>.</h1>
+        <p>O endereço que você acessou pode ter mudado ou não existe mais. Use os caminhos abaixo para encontrar o que procura na Ectolab.</p>
+        <div class="nf__actions">
+          <a href="/index.html" class="btn btn-orange">Voltar para a Home <span class="arrow">→</span></a>
+          <a href="/pages/trilha.html" class="btn btn-ghost">Trilha do Saber</a>
+        </div>
+        <div class="nf__links">
+          <a href="/pages/cursos.html" class="nf__link">Cursos</a>
+          <a href="/pages/agenda.html" class="nf__link">Agenda</a>
+          <a href="/pages/paracirurgia.html" class="nf__link">Paracirurgia</a>
+          <a href="/pages/blog.html" class="nf__link">Blog</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div id="__footer"></div>
+  <script type="module" src="/assets/chrome.js"></script>
+</body>
+</html>

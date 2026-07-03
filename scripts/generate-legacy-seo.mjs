@@ -35,6 +35,13 @@ const staticPages = [
   ['/pages/curso-proep.html', '2026-05-20', '0.5'],
   ['/pages/curso-ectoplasmia-interassistencial.html', '2026-05-20', '0.5'],
   ['/pages/curso-ectoplasmia-protetiva.html', '2026-05-20', '0.5'],
+  ['/pages/agenda.html', '2026-06-30', '0.8'],
+  ['/pages/ectoplasma-livro.html', '2026-06-20', '0.7'],
+  ['/pages/dinamica.html', '2026-06-20', '0.6'],
+  ['/pages/dinamicas.html', '2026-06-20', '0.6'],
+  ['/pages/oficina-ectoplasmologia.html', '2026-06-20', '0.5'],
+  ['/pages/curso-quadro-sinoptico.html', '2026-06-20', '0.5'],
+  ['/pages/fatos-parafatos.html', '2026-06-20', '0.5'],
 ];
 
 const legacyPostLastmod = {
