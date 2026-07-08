@@ -145,8 +145,10 @@ https://www.ectolab.org/*  https://ectolab.org/:splat  301!
 
 # ---- Newsletter / rascunhos / privacidade ----
 /newsletter-ectolab/            /index.html     301
-/politica-de-privacidade/       /index.html     301
-/politica-de-privacidade-2/     /index.html     301
+/politica-de-privacidade/       /pages/politica-de-privacidade.html     301
+/politica-de-privacidade-2/     /pages/politica-de-privacidade.html     301
+/politica-de-privacidade        /pages/politica-de-privacidade.html     301
+/politica-de-privacidade-2      /pages/politica-de-privacidade.html     301
 /rascunho-automatico/           /index.html     301
 /rascunho-automatico-2/         /index.html     301
 

@@ -272,7 +272,7 @@
           <a href="${P}pages/apoie.html" class="btn btn-orange btn-sm">Saiba como apoiar <span class="arrow">→</span></a>
         </div>
         <div class="copy">
-          <span>© 2013–2026 Ectolab. Todos os direitos reservados.</span>
+          <span>© 2013–2026 Ectolab. Todos os direitos reservados. &nbsp;◆&nbsp; <a href="${P}pages/politica-de-privacidade.html">Política de Privacidade</a></span>
           <span>Foz do Iguaçu · Paraná · Brasil &nbsp;◆&nbsp; 25° 32′ S · 54° 35′ W</span>
         </div>
       </div>

@@ -42,6 +42,7 @@ const staticPages = [
   ['/pages/oficina-ectoplasmologia.html', '2026-06-20', '0.5'],
   ['/pages/curso-quadro-sinoptico.html', '2026-06-20', '0.5'],
   ['/pages/fatos-parafatos.html', '2026-06-20', '0.5'],
+  ['/pages/politica-de-privacidade.html', '2026-07-08', '0.3'],
 ];
 
 const legacyPostLastmod = {
