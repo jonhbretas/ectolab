@@ -30,7 +30,7 @@
           { label: "O que é a Paracirurgia", href: P + "pages/paracirurgia.html" },
           { label: "Solicitar Paracirurgia ↗", href: "https://dip-ectolab.org.br/pedido-paracirurgia", target: "_blank" },
           { label: "Enviar Relatório do Pedido ↗", href: "https://dip-ectolab.org.br/pedido-paracirurgia/historico", target: "_blank" },
-          { label: "Painel de Pedidos", href: P + "pages/painel-pedidos-paracirurgia.html" }
+          { label: "Pontuações ↗", href: "https://dip-ectolab.org.br/pedido-paracirurgia/pontuacoes", target: "_blank" }
         ]},
         { cat: "Rede de Paracirurgia", links: [
           { label: "Sobre a Rede Invisível", href: P + "pages/rede.html" },

@@ -164,10 +164,11 @@ function seoPlugin() {
                 {
                   '@type': 'Offer',
                   url: BOOK.shopcons,
+                  price: BOOK.priceBRLValue,
                   priceCurrency: 'BRL',
                   availability: 'https://schema.org/InStock',
                   itemCondition: 'https://schema.org/NewCondition',
-                  seller: { '@type': 'Organization', name: 'ShopCons' }
+                  seller: { '@type': 'Organization', name: BOOK.vendorPt }
                 },
                 {
                   '@type': 'Offer',

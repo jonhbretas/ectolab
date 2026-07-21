@@ -33,8 +33,11 @@ export const BOOK = {
   binding: 'Brochura',
   dimensions: '21,0 × 16,0 × 1,2 cm',
   weight: '360 g',
-  // Compra
+  // Compra — edição física (PT-BR)
   shopcons: 'https://www.shopcons.com.br/produto/ectoplasma-panorama-contemporaneo-das-pesquisas-sobre-ectoplasmia-2038',
+  vendorPt: 'Shopcons / Epígrafe',
+  priceBRL: 'R$ 55,00',
+  priceBRLValue: '55.00', // valor numérico p/ schema.org Offer
   // E-book em inglês (Amazon) — ATUALIZAR com o link real quando publicado.
   amazon: 'https://www.amazon.com/s?k=ectoplasm+ectolab+book',
   amazonAvailable: false,

@@ -18,6 +18,134 @@ const SPECS = [
   ['Código de barras', BOOK.barcode],
 ];
 
+const PT_FEATURES = [
+  '207 páginas, brochura, 21 × 16 cm',
+  'Edição impressa pela Editora Ectolab',
+  'Envio para todo o Brasil pela Shopcons / Epígrafe',
+  `ISBN ${BOOK.isbn13}`,
+];
+
+const EN_FEATURES = [
+  'Versão digital em inglês para leitura global',
+  'Leia em Kindle, tablet, celular ou desktop',
+  'Entrega imediata após a compra',
+  'Ideal para pesquisadores fora do Brasil',
+];
+
+/* ---------- Cartão de compra ---------- */
+function BuyCard({ badge, title, priceMain, priceSub, features, cta, dark }) {
+  return (
+    <div
+      className="card"
+      style={{
+        padding: 0,
+        borderRadius: 'var(--r-lg)',
+        boxShadow: '0 22px 60px -34px rgba(8,34,43,0.4)',
+      }}
+    >
+      <div style={{ padding: 'clamp(24px, 3vw, 34px)', display: 'flex', flexDirection: 'column', gap: 22, height: '100%' }}>
+        {/* Cabeçalho */}
+        <div className="flex between" style={{ gap: 16, alignItems: 'flex-start' }}>
+          <h3 className="h4" style={{ fontSize: 19 }}>{title}</h3>
+          <span
+            className="mono"
+            style={{
+              fontSize: 10.5,
+              letterSpacing: '0.12em',
+              textTransform: 'uppercase',
+              color: 'var(--ink-3)',
+              whiteSpace: 'nowrap',
+              paddingTop: 4,
+            }}
+          >
+            {badge}
+          </span>
+        </div>
+
+        <div style={{ height: 1, background: 'var(--line)' }} />
+
+        {/* Preço / nome */}
+        <div style={{ display: 'flex', alignItems: 'baseline', gap: 10 }}>
+          <span style={{ fontFamily: 'var(--display)', fontWeight: 600, fontSize: 'clamp(30px, 4vw, 40px)', color: 'var(--teal)', letterSpacing: '-0.02em' }}>
+            {priceMain}
+          </span>
+          {priceSub && (
+            <span className="mono" style={{ fontSize: 13, color: 'var(--ink-3)' }}>{priceSub}</span>
+          )}
+        </div>
+
+        {/* Diferenciais */}
+        <ul style={{ listStyle: 'none', padding: 0, margin: 0, display: 'flex', flexDirection: 'column', gap: 11 }}>
+          {features.map((f) => (
+            <li key={f} style={{ display: 'flex', gap: 12, alignItems: 'flex-start', fontSize: 14.5, color: 'var(--ink-2)', lineHeight: 1.5 }}>
+              <span style={{ color: 'var(--orange)', fontSize: 11, lineHeight: 1.6, flex: 'none' }}>◆</span>
+              <span>{f}</span>
+            </li>
+          ))}
+        </ul>
+
+        {/* CTA */}
+        <a
+          href={cta.href}
+          target="_blank"
+          rel="noreferrer"
+          className={dark ? 'btn btn-primary' : 'btn btn-orange'}
+          style={{ marginTop: 'auto', justifyContent: 'center', width: '100%' }}
+        >
+          {cta.label} <span className="arrow">→</span>
+        </a>
+      </div>
+    </div>
+  );
+}
+
+function PurchaseSection() {
+  return (
+    <section id="comprar" className="section-sm" style={{ background: 'var(--paper)', borderTop: '1px solid var(--line)', borderBottom: '1px solid var(--line)' }}>
+      <div className="wrap">
+        {/* Cabeçalho da seção */}
+        <div className="grid g2 gap-48" style={{ alignItems: 'end', marginBottom: 44 }}>
+          <div>
+            <div className="eyebrow"><span className="dot"></span>ONDE COMPRAR</div>
+            <h2 className="h2" style={{ marginTop: 18 }}>Duas edições,<br />dois idiomas.</h2>
+          </div>
+          <p style={{ fontSize: 16, color: 'var(--ink-2)', lineHeight: 1.7, margin: 0 }}>
+            A edição física em português é vendida pela <strong>{BOOK.vendorPt}</strong>. A versão em
+            inglês está disponível como <strong>e-book na Amazon</strong>, para leitores do mundo todo.
+          </p>
+        </div>
+
+        {/* Cartões */}
+        <div className="grid g2 gap-24" style={{ alignItems: 'stretch' }}>
+          <BuyCard
+            dark
+            title="Edição física — Português"
+            badge="PT-BR · Brochura"
+            priceMain={BOOK.priceBRL}
+            priceSub="à vista"
+            features={PT_FEATURES}
+            cta={{ label: 'Comprar na Shopcons', href: BOOK.shopcons }}
+          />
+          <BuyCard
+            title="E-book — English"
+            badge="EN · Kindle / E-book"
+            priceMain="Amazon"
+            priceSub="e-book"
+            features={EN_FEATURES}
+            cta={{ label: 'Comprar na Amazon', href: BOOK.amazon }}
+          />
+        </div>
+
+        {!BOOK.amazonAvailable && (
+          <p className="mono" style={{ fontSize: 12, color: 'var(--ink-3)', marginTop: 22, marginBottom: 0 }}>
+            ◆ O e-book em inglês está em processo de publicação na Amazon.
+          </p>
+        )}
+      </div>
+    </section>
+  );
+}
+
 function FaqItem({ item, isOpen, onToggle }) {
   return (
     <div
@@ -56,33 +184,45 @@ function App() {
   return (
     <>
       {/* Hero do livro */}
-      <section className="section bg-white" style={{ paddingTop: '80px', paddingBottom: '56px' }}>
+      <section className="section bg-white" style={{ background: 'var(--white)', paddingTop: '80px', paddingBottom: '64px' }}>
         <div className="wrap">
           <div className="breadcrumb" style={{ marginBottom: 24, fontSize: 13, color: 'var(--ink-3)' }}>
             <a href="/pages/materiais.html" style={{ textDecoration: 'underline' }}>Materiais</a> / Livro Ectoplasma
           </div>
           <div className="grid g2 gap-48" style={{ alignItems: 'center' }}>
-            {/* Capas do livro */}
-            <div className="flex center" style={{ gap: 24, flexWrap: 'wrap', justifyContent: 'center' }}>
-              <figure style={{ margin: 0, textAlign: 'center' }}>
-                <img
-                  src={BOOK.coverPt}
-                  alt="Capa do livro Ectoplasma: Panorama Contemporâneo das Pesquisas sobre Ectoplasmia, da Ectolab"
-                  width="320" height="453" loading="eager"
-                  style={{ width: 'min(280px, 70vw)', height: 'auto', borderRadius: 'var(--r-sm)', boxShadow: '0 24px 48px -16px rgba(15,93,115,0.45)' }}
-                />
-                <figcaption className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', marginTop: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>Edição em português</figcaption>
-              </figure>
-              <figure style={{ margin: 0, textAlign: 'center' }}>
-                <img
-                  src={BOOK.coverEn}
-                  alt="Cover of the book Ectoplasm: A Contemporary Panorama of the Research on Ectoplasmy, by Ectolab"
-                  width="320" height="453" loading="lazy"
-                  onError={(e) => { e.currentTarget.closest('figure').style.display = 'none'; }}
-                  style={{ width: 'min(220px, 56vw)', height: 'auto', borderRadius: 'var(--r-sm)', boxShadow: '0 18px 40px -16px rgba(15,93,115,0.35)' }}
-                />
-                <figcaption className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', marginTop: 12, letterSpacing: '0.06em', textTransform: 'uppercase' }}>English e-book edition</figcaption>
-              </figure>
+            {/* Capas do livro sobre painel decorativo */}
+            <div
+              style={{
+                position: 'relative',
+                borderRadius: 'var(--r-lg)',
+                padding: 'clamp(28px, 4vw, 48px)',
+                background: 'linear-gradient(150deg, var(--paper) 0%, var(--paper-2) 100%)',
+                border: '1px solid var(--line)',
+                overflow: 'hidden',
+              }}
+            >
+              <span aria-hidden="true" style={{ position: 'absolute', top: -60, right: -60, width: 200, height: 200, borderRadius: '50%', background: 'radial-gradient(circle, rgba(240,160,48,0.16), transparent 70%)' }} />
+              <div className="flex center" style={{ gap: 'clamp(18px, 3vw, 32px)', flexWrap: 'wrap', justifyContent: 'center', position: 'relative' }}>
+                <figure style={{ margin: 0, textAlign: 'center' }}>
+                  <img
+                    src={BOOK.coverPt}
+                    alt="Capa do livro Ectoplasma: Panorama Contemporâneo das Pesquisas sobre Ectoplasmia, da Ectolab"
+                    width="320" height="453" loading="eager" fetchpriority="high" decoding="async"
+                    style={{ width: 'min(260px, 62vw)', height: 'auto', borderRadius: 'var(--r-sm)', boxShadow: '0 30px 60px -18px rgba(8,34,43,0.55)' }}
+                  />
+                  <figcaption className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', marginTop: 14, letterSpacing: '0.06em', textTransform: 'uppercase' }}>Edição em português</figcaption>
+                </figure>
+                <figure style={{ margin: 0, textAlign: 'center' }}>
+                  <img
+                    src={BOOK.coverEn}
+                    alt="Cover of the book Ectoplasm: A Contemporary Panorama of the Research on Ectoplasmy, by Ectolab"
+                    width="320" height="453" loading="lazy" decoding="async"
+                    onError={(e) => { e.currentTarget.closest('figure').style.display = 'none'; }}
+                    style={{ width: 'min(200px, 50vw)', height: 'auto', borderRadius: 'var(--r-sm)', boxShadow: '0 22px 46px -18px rgba(8,34,43,0.4)' }}
+                  />
+                  <figcaption className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', marginTop: 14, letterSpacing: '0.06em', textTransform: 'uppercase' }}>English e-book edition</figcaption>
+                </figure>
+              </div>
             </div>
 
             {/* Texto + CTAs */}
@@ -103,21 +243,28 @@ function App() {
 
               {/* CTAs de compra */}
               <div className="flex" style={{ gap: 14, marginTop: 32, flexWrap: 'wrap' }}>
-                <a href={BOOK.shopcons} target="_blank" rel="noreferrer" className="btn btn-orange">
-                  Comprar versão física (PT) <span className="arrow">↗</span>
+                <a href="#comprar" className="btn btn-orange">
+                  Onde comprar <span className="arrow">↓</span>
                 </a>
-                <a href={BOOK.amazon} target="_blank" rel="noreferrer" className="btn btn-ghost">
-                  E-book em inglês (Amazon) <span className="arrow">↗</span>
+                <a href={BOOK.shopcons} target="_blank" rel="noreferrer" className="btn btn-ghost">
+                  Comprar versão física (PT) <span className="arrow">↗</span>
                 </a>
               </div>
               <p className="mono" style={{ fontSize: 12, color: 'var(--ink-3)', marginTop: 14 }}>
-                Versão física em português pela ShopCons · E-book em inglês pela Amazon
+                Versão física em português pela {BOOK.vendorPt} · E-book em inglês pela Amazon
               </p>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Ficha técnica */}
-          <div className="glass-teal" style={{ padding: 32, borderRadius: 'var(--r-lg)', marginTop: 56 }}>
+      {/* Onde comprar — duas edições */}
+      <PurchaseSection />
+
+      {/* Ficha técnica */}
+      <section className="section-sm bg-white" style={{ background: 'var(--white)' }}>
+        <div className="wrap">
+          <div className="glass-teal" style={{ padding: 'clamp(24px, 3vw, 36px)', borderRadius: 'var(--r-lg)' }}>
             <h2 className="h4" style={{ color: 'var(--white)', marginBottom: 24 }}>Ficha técnica</h2>
             <div className="grid g2 gap-24">
               {SPECS.map(([label, val]) => (
