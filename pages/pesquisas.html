@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="canonical" href="https://ectolab.org/pages/pesquisas.html" />
+  <title>Pesquisas em andamento · Ectolab</title>
+  <meta name="description" content="Conheça as pesquisas conscienciológicas da Ectolab, acompanhe o status de cada estudo e manifeste interesse quando houver recrutamento." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/inner.css" />
+  <style>
+    /* ---------- Hero ---------- */
+    .pesq-hero { padding: clamp(56px, 7vw, 92px) 0 clamp(40px, 5vw, 64px); border-bottom: 1px solid var(--line); background: linear-gradient(180deg, var(--paper), #f8fbfb); }
+    .pesq-hero__grid { display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(300px, .8fr); gap: clamp(32px, 5vw, 64px); align-items: center; }
+    .pesq-hero .h-display { font-size: clamp(40px, 5.4vw, 76px); line-height: .98; max-width: 760px; }
+    .pesq-hero .lede { max-width: 620px; margin-top: 22px; }
+    .pesq-hero__actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 28px; }
+    .pesq-panel { position: relative; overflow: hidden; border-radius: var(--r-lg); background: var(--ink); color: var(--paper); padding: 32px; box-shadow: 0 28px 64px -40px rgba(8,34,43,.7); }
+    .pesq-panel::before { content: ""; position: absolute; width: 320px; height: 320px; right: -130px; top: -90px; border-radius: 50%; background: radial-gradient(circle at 40% 40%, rgba(240,160,48,.85), transparent 66%); }
+    .pesq-panel__in { position: relative; z-index: 2; }
+    .pesq-panel h2 { font-family: var(--display); font-size: clamp(1.6rem, 2.4vw, 2.1rem); line-height: 1.06; letter-spacing: -.03em; margin: 10px 0 0; }
+    .pesq-panel p { color: #d9e7eb; margin: 14px 0 0; max-width: 34ch; }
+    .pesq-panel .eyebrow { color: var(--teal-glow2); }
+    .pesq-stats { margin-top: 24px; display: grid; grid-template-columns: repeat(3, 1fr); border: 1px solid rgba(255,255,255,.16); border-radius: 12px; overflow: hidden; }
+    .pesq-stats div { padding: 14px 12px; border-right: 1px solid rgba(255,255,255,.16); }
+    .pesq-stats div:last-child { border-right: 0; }
+    .pesq-stats strong { display: block; font-family: var(--display); font-size: 1.05rem; }
+    .pesq-stats span { display: block; margin-top: 4px; font-size: .66rem; color: #b8ced4; text-transform: uppercase; letter-spacing: .12em; }
+
+    /* ---------- Filters ---------- */
+    .pesq-filters { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 26px; }
+    .pesq-filter { border: 1px solid var(--line); color: var(--ink-2); background: rgba(255,255,255,.7); border-radius: 999px; padding: 9px 15px; cursor: pointer; font-family: var(--sans); font-weight: 600; font-size: .9rem; transition: all .16s ease; }
+    .pesq-filter:hover { border-color: var(--ink-3); }
+    .pesq-filter[aria-pressed="true"] { background: var(--ink); color: #fff; border-color: var(--ink); }
+
+    /* ---------- Grid + cards ---------- */
+    .pesq-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+    .pesq-card { display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--line); border-radius: var(--r-md); overflow: hidden; box-shadow: 0 10px 34px rgba(6,40,51,.05); transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease; }
+    .pesq-card:hover { transform: translateY(-4px); box-shadow: 0 20px 46px rgba(6,40,51,.10); border-color: var(--line-2); }
+    .pesq-card__media { position: relative; aspect-ratio: 16 / 10; background: linear-gradient(135deg, var(--teal-soft), var(--paper-2)); overflow: hidden; }
+    .pesq-card__media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+    .pesq-card__ph { position: absolute; inset: 0; display: grid; place-items: center; color: var(--teal); }
+    .pesq-card__ph span { font-family: var(--mono); font-weight: 600; font-size: 1.15rem; letter-spacing: .14em; opacity: .5; }
+    .pesq-card__code { position: absolute; top: 12px; right: 12px; background: rgba(255,255,255,.92); color: var(--ink-2); font-family: var(--mono); font-size: .68rem; letter-spacing: .1em; text-transform: uppercase; padding: 5px 9px; border-radius: 999px; }
+    .pesq-card__body { padding: 22px; display: flex; flex-direction: column; flex: 1; }
+    .pesq-status { display: inline-flex; align-items: center; gap: 7px; align-self: flex-start; border-radius: 999px; padding: 6px 11px; font-family: var(--mono); font-size: .68rem; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; }
+    .pesq-status::before { content: ""; width: 7px; height: 7px; border-radius: 50%; background: currentColor; }
+    .pesq-status.st-prep { background: var(--orange-soft); color: #8a5300; }
+    .pesq-status.st-open { background: #e4f6ec; color: #17714b; }
+    .pesq-status.st-done { background: #eef2f4; color: var(--ink-3); }
+    .pesq-note { margin: 9px 0 0; color: var(--ink-3); font-size: .82rem; font-weight: 600; }
+    .pesq-card h3 { font-family: var(--display); font-size: 1.32rem; line-height: 1.16; letter-spacing: -.02em; margin: 16px 0 10px; }
+    .pesq-card__summary { color: var(--ink-2); margin: 0; font-size: .95rem; line-height: 1.55; }
+    .pesq-researcher { display: flex; align-items: center; gap: 10px; margin-top: 16px; }
+    .pesq-researcher img { width: 34px; height: 34px; border-radius: 50%; object-fit: cover; flex: none; }
+    .pesq-researcher__ph { width: 34px; height: 34px; border-radius: 50%; flex: none; display: grid; place-items: center; background: var(--teal-soft); color: var(--teal); font-weight: 700; font-size: .85rem; }
+    .pesq-researcher b { font-size: .9rem; }
+    .pesq-researcher small { display: block; color: var(--ink-3); font-size: .74rem; }
+    .pesq-meta { display: grid; gap: 9px; margin: 20px 0; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+    .pesq-meta__row { display: grid; grid-template-columns: 84px 1fr; gap: 12px; font-size: .86rem; }
+    .pesq-meta__row span:first-child { color: var(--ink-3); }
+    .pesq-meta__row span:last-child { font-weight: 600; color: var(--ink); }
+    .pesq-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-bottom: 20px; }
+    .pesq-tag { border-radius: 999px; padding: 5px 10px; background: var(--paper); border: 1px solid var(--line); font-size: .74rem; color: var(--ink-2); }
+    .pesq-actions { margin-top: auto; display: grid; grid-template-columns: 1fr auto; gap: 10px; }
+    .pesq-actions .btn { width: 100%; padding-inline: 16px; }
+    .pesq-details-btn { width: 48px !important; padding: 0 !important; font-size: 1.1rem; }
+    .pesq-empty { display: none; padding: 26px; border: 1px dashed var(--line); border-radius: var(--r-md); background: rgba(255,255,255,.6); color: var(--ink-2); }
+    .pesq-empty.show { display: block; }
+
+    /* ---------- Como funciona ---------- */
+    .pesq-how { background: var(--ink); color: var(--paper); }
+    .pesq-how .eyebrow { color: var(--teal-glow2); }
+    .pesq-how .h2 { color: #fff; }
+    .pesq-how__lead { max-width: 560px; color: #c8dce2; margin: 0; }
+    .pesq-steps { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1px; background: rgba(255,255,255,.14); border: 1px solid rgba(255,255,255,.14); border-radius: var(--r-md); overflow: hidden; }
+    .pesq-step { padding: 26px; background: var(--ink); min-height: 210px; }
+    .pesq-step__n { display: inline-grid; place-items: center; width: 38px; height: 38px; border-radius: 50%; background: var(--orange); color: var(--ink); font-family: var(--display); font-weight: 700; }
+    .pesq-step h3 { font-family: var(--display); font-size: 1.18rem; margin: 20px 0 9px; letter-spacing: -.01em; }
+    .pesq-step p { margin: 0; color: #c8dce2; font-size: .94rem; line-height: 1.55; }
+
+    /* ---------- Ética + FAQ ---------- */
+    .pesq-ethics { display: grid; grid-template-columns: .9fr 1.1fr; gap: 24px; align-items: stretch; }
+    .pesq-ethics__copy { padding: clamp(28px, 4vw, 42px); background: var(--orange-soft); border-radius: var(--r-lg); }
+    .pesq-ethics__copy h2 { margin: 0; }
+    .pesq-ethics__card { padding: clamp(26px, 3vw, 34px); background: var(--white); border: 1px solid var(--line); border-radius: var(--r-lg); }
+    .pesq-check { list-style: none; padding: 0; margin: 0; display: grid; gap: 16px; }
+    .pesq-check li { display: grid; grid-template-columns: 26px 1fr; gap: 12px; align-items: start; }
+    .pesq-check__i { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center; background: #e4f6ec; color: #17714b; font-weight: 800; font-size: .8rem; }
+    .pesq-check strong { display: block; margin-bottom: 2px; }
+    .pesq-check span { color: var(--ink-2); font-size: .92rem; }
+    .pesq-faq details { background: var(--white); border: 1px solid var(--line); border-radius: var(--r-sm); margin-bottom: 12px; }
+    .pesq-faq summary { cursor: pointer; padding: 17px 20px; font-weight: 700; list-style: none; }
+    .pesq-faq summary::-webkit-details-marker { display: none; }
+    .pesq-faq details p { margin: 0; padding: 0 20px 18px; color: var(--ink-2); }
+
+    /* ---------- Modal + toast ---------- */
+    .pesq-overlay { position: fixed; inset: 0; z-index: 120; display: none; align-items: center; justify-content: center; padding: 18px; background: rgba(4,25,32,.6); backdrop-filter: blur(4px); }
+    .pesq-overlay.open { display: flex; }
+    .pesq-modal { width: min(620px, 100%); max-height: 92vh; overflow: auto; background: var(--white); border-radius: var(--r-lg); box-shadow: 0 30px 90px rgba(0,0,0,.32); }
+    .pesq-modal__head { padding: 26px 26px 18px; display: flex; justify-content: space-between; gap: 18px; border-bottom: 1px solid var(--line); }
+    .pesq-modal__head h2 { font-family: var(--display); font-size: 1.5rem; margin: 0; letter-spacing: -.02em; }
+    .pesq-modal__head p { margin: 6px 0 0; color: var(--ink-3); font-size: .9rem; }
+    .pesq-close { width: 40px; height: 40px; border: 1px solid var(--line); border-radius: 50%; background: #fff; cursor: pointer; font-size: 1.1rem; flex: none; }
+    .pesq-form { padding: 22px 26px 26px; }
+    .pesq-form__grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 15px; }
+    .pesq-field { display: grid; gap: 6px; }
+    .pesq-field.full { grid-column: 1 / -1; }
+    .pesq-form label { font-weight: 600; font-size: .88rem; }
+    .pesq-form input, .pesq-form textarea { width: 100%; border: 1px solid var(--line); border-radius: 10px; padding: 11px 12px; background: #fbfdfe; color: var(--ink); font: inherit; }
+    .pesq-form input:focus, .pesq-form textarea:focus { outline: none; border-color: var(--teal); box-shadow: 0 0 0 3px rgba(21,83,102,.12); }
+    .pesq-form textarea { min-height: 100px; resize: vertical; }
+    .pesq-consent { display: grid; grid-template-columns: auto 1fr; gap: 10px; align-items: start; margin-top: 14px; color: var(--ink-2); font-size: .86rem; }
+    .pesq-consent input { width: 18px; height: 18px; margin-top: 2px; }
+    .pesq-modal__actions { display: flex; justify-content: flex-end; gap: 10px; margin-top: 20px; }
+    .pesq-form__note { margin: 12px 0 0; font-size: .8rem; color: var(--ink-3); }
+    .pesq-toast { position: fixed; left: 50%; bottom: 24px; transform: translate(-50%, 160%); background: var(--ink); color: #fff; padding: 13px 18px; border-radius: 999px; box-shadow: 0 18px 50px rgba(6,40,51,.3); z-index: 130; transition: transform .25s ease; max-width: min(90vw, 460px); text-align: center; }
+    .pesq-toast.show { transform: translate(-50%, 0); }
+
+    @media (max-width: 980px) {
+      .pesq-hero__grid { grid-template-columns: 1fr; }
+      .pesq-grid { grid-template-columns: repeat(2, 1fr); }
+      .pesq-steps { grid-template-columns: repeat(2, 1fr); }
+      .pesq-ethics { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 640px) {
+      .pesq-grid, .pesq-steps { grid-template-columns: 1fr; }
+      .pesq-actions { grid-template-columns: 1fr; }
+      .pesq-details-btn { width: 100% !important; }
+      .pesq-form__grid { grid-template-columns: 1fr; }
+      .pesq-stats { grid-template-columns: 1fr; }
+      .pesq-stats div { border-right: 0; border-bottom: 1px solid rgba(255,255,255,.16); }
+      .pesq-stats div:last-child { border-bottom: 0; }
+    }
+  </style>
+</head>
+<body data-active="atividades">
+  <div id="__header"></div>
+
+  <main>
+    <!-- Hero -->
+    <section class="pesq-hero">
+      <div class="wrap">
+        <div class="breadcrumb"><a href="/index.html">Ectolab</a><span class="sep">◆</span><a href="/pages/laboratorio-ectoplasmologia.html">Laboratório de Ectoplasmologia</a><span class="sep">◆</span><span>Pesquisas</span></div>
+        <div class="pesq-hero__grid">
+          <div>
+            <span class="eyebrow"><span class="dot"></span>Pesquisa experimental · participação voluntária</span>
+            <h1 class="h-display" style="margin-top:18px">Pesquisas em andamento.</h1>
+            <p class="lede">Conheça os estudos da Ectolab, acompanhe o status de cada pesquisa e manifeste interesse quando houver recrutamento ou previsão de abertura.</p>
+            <div class="pesq-hero__actions">
+              <a class="btn btn-orange" href="#pesquisas">Ver pesquisas <span class="arrow">↓</span></a>
+              <a class="btn btn-ghost" href="#como-funciona">Como funciona</a>
+            </div>
+          </div>
+          <aside class="pesq-panel" aria-label="Resumo da participação">
+            <div class="pesq-panel__in">
+              <span class="eyebrow">Convite à participação</span>
+              <h2>Curiosidade, registro e colaboração.</h2>
+              <p>A manifestação de interesse não garante inclusão. Cada estudo possui critérios próprios e uma etapa de triagem.</p>
+              <div class="pesq-stats">
+                <div><strong>Voluntária</strong><span>Participação</span></div>
+                <div><strong>Clara</strong><span>Informação</span></div>
+                <div><strong>Protegida</strong><span>Privacidade</span></div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- Pesquisas (React) -->
+    <section class="section" id="pesquisas">
+      <div class="wrap">
+        <div class="lab-section-head" style="display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:30px;flex-wrap:wrap">
+          <div>
+            <span class="eyebrow"><span class="dot"></span>Status das pesquisas</span>
+            <h2 class="h2" style="margin-top:14px">Pesquisas Ectolab.</h2>
+          </div>
+          <p style="max-width:540px;color:var(--ink-2);margin:0">As pesquisas abaixo podem estar em preparação, com recrutamento aberto ou com coleta concluída. Cada card informa o status, a modalidade, o responsável e a próxima etapa prevista.</p>
+        </div>
+        <div id="pesquisas-app"></div>
+      </div>
+    </section>
+
+    <!-- Como funciona -->
+    <section class="pesq-how section" id="como-funciona">
+      <div class="wrap">
+        <div class="lab-section-head" style="display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:30px;flex-wrap:wrap">
+          <div>
+            <span class="eyebrow"><span class="dot"></span>Da manifestação de interesse à participação</span>
+            <h2 class="h2" style="margin-top:14px">Como funciona.</h2>
+          </div>
+          <p class="pesq-how__lead">Uma sequência curta e transparente ajuda o participante a entender o estudo antes de tomar qualquer decisão.</p>
+        </div>
+        <div class="pesq-steps">
+          <article class="pesq-step"><span class="pesq-step__n">1</span><h3>Escolha a pesquisa</h3><p>Leia o objetivo, o perfil procurado, o formato, a modalidade e o responsável.</p></article>
+          <article class="pesq-step"><span class="pesq-step__n">2</span><h3>Manifeste interesse</h3><p>Preencha seus dados básicos. A mensagem é encaminhada à equipe responsável.</p></article>
+          <article class="pesq-step"><span class="pesq-step__n">3</span><h3>Faça a triagem</h3><p>A equipe verifica os critérios e esclarece procedimentos e condições de participação.</p></article>
+          <article class="pesq-step"><span class="pesq-step__n">4</span><h3>Decida com informação</h3><p>A participação começa apenas após os esclarecimentos e o consentimento livre e informado.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ética -->
+    <section class="section" id="etica">
+      <div class="wrap pesq-ethics">
+        <div class="pesq-ethics__copy">
+          <span class="eyebrow"><span class="dot"></span>Participação responsável</span>
+          <h2 class="h2" style="margin-top:14px">Sua decisão vem antes da pesquisa.</h2>
+          <p style="color:var(--ink-2);margin-top:14px">Cada convite informa com clareza o que será feito, quais dados serão coletados e como o participante pode tirar dúvidas ou interromper sua participação.</p>
+        </div>
+        <div class="pesq-ethics__card">
+          <ul class="pesq-check">
+            <li><span class="pesq-check__i">✓</span><div><strong>Participação voluntária</strong><span>Manifestar interesse não cria obrigação de participar.</span></div></li>
+            <li><span class="pesq-check__i">✓</span><div><strong>Informação antes do consentimento</strong><span>Procedimentos, duração, critérios e contatos são apresentados previamente.</span></div></li>
+            <li><span class="pesq-check__i">✓</span><div><strong>Privacidade dos dados</strong><span>Coletamos apenas o necessário para o contato sobre a pesquisa.</span></div></li>
+            <li><span class="pesq-check__i">✓</span><div><strong>Direito de desistir</strong><span>O participante pode retirar o consentimento conforme as condições do estudo.</span></div></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section bg-white pesq-faq" style="background:var(--white)">
+      <div class="wrap" style="max-width:820px">
+        <span class="eyebrow"><span class="dot"></span>Dúvidas frequentes</span>
+        <h2 class="h2" style="margin-top:14px;margin-bottom:26px">Antes de participar.</h2>
+        <details><summary>Manifestar interesse garante uma vaga?</summary><p>Não. A equipe verifica os critérios de cada estudo e entra em contato para informar se a pessoa está elegível e se ainda existem vagas.</p></details>
+        <details><summary>Há algum custo para participar?</summary><p>As condições são descritas individualmente em cada pesquisa. Caso existam despesas, ressarcimentos ou outras condições, elas são informadas antes do consentimento.</p></details>
+        <details><summary>Posso desistir depois de começar?</summary><p>Sim. As condições de retirada constam nas informações do estudo e são explicadas pela equipe responsável.</p></details>
+      </div>
+    </section>
+  </main>
+
+  <div id="__footer"></div>
+
+  <script type="module" src="/assets/chrome.js"></script>
+  <script type="module" src="/assets/pesquisas.jsx"></script>
+</body>
+</html>

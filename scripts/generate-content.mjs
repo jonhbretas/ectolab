@@ -3,6 +3,7 @@ import { spawnSync } from 'node:child_process';
 const scripts = [
   'scripts/generate-blog.mjs',
   'scripts/generate-agenda.mjs',
+  'scripts/generate-pesquisas.mjs',
   'scripts/generate-legacy-seo.mjs',
 ];
 

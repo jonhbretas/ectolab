@@ -82,6 +82,49 @@ collections:
         widget: markdown
         hint: "Pode colar HTML completo otimizado aqui. O gerador preserva o HTML dentro do corpo do post."
 
+  - name: pesquisas
+    label: Pesquisas
+    label_singular: Pesquisa
+    folder: content/pesquisas
+    media_folder: public/uploads/pesquisas
+    public_folder: /uploads/pesquisas
+    create: true
+    slug: "{{slug}}"
+    summary: "{{title}}"
+    sortable_fields: [order, title, status]
+    fields:
+      - { name: title, label: Título da pesquisa, widget: string, hint: "Ex.: Análise da estimulação vagal e sintomas de ectoplasmia." }
+      - { name: slug, label: Slug (endereço interno), widget: string, hint: "Use letras minúsculas e hifens. Ex.: estimulacao-vagal-ectoplasmia." }
+      - { name: code, label: Código, widget: string, required: false, hint: "Opcional. Código curto exibido no card. Ex.: ECTO-01." }
+      - name: status
+        label: Status da pesquisa
+        widget: select
+        default: preparacao
+        options:
+          - { label: Em preparação, value: preparacao }
+          - { label: Recrutamento aberto, value: aberto }
+          - { label: Coleta concluída, value: concluida }
+      - { name: statusNote, label: Nota do status, widget: string, required: false, hint: "Linha curta abaixo do status. Ex.: Protocolo em ajustes · recrutamento em breve." }
+      - { name: researcher, label: Responsável (nome do pesquisador), widget: string, required: false }
+      - { name: coverImage, label: Imagem ou arte da pesquisa, widget: image, required: false, hint: "Imagem principal do card (foto do pesquisador trabalhando, arte ou tema). Preferir WEBP na proporção 16:10." }
+      - { name: researcherPhoto, label: Foto do pesquisador (retrato), widget: image, required: false, hint: "Opcional. Retrato do responsável, exibido junto ao nome." }
+      - { name: summary, label: Descrição / resumo, widget: text, hint: "Resumo curto da pesquisa, exibido no card." }
+      - { name: profile, label: Perfil procurado, widget: string, required: false, hint: "Ex.: Adultos interessados em autopesquisa da ectoplasmia." }
+      - name: modality
+        label: Modalidade
+        widget: select
+        required: false
+        options:
+          - { label: Presencial, value: Presencial }
+          - { label: Online, value: Online }
+          - { label: Híbrida, value: Híbrida }
+      - { name: format, label: Formato, widget: string, required: false, hint: "Ex.: Registros e questionários, Protocolo laboratorial." }
+      - { name: line, label: Linha de pesquisa, widget: string, required: false, hint: "Ex.: Fisiologia e parafisiologia do ectoplasta." }
+      - { name: tags, label: Tags, widget: list, required: false, hint: "Palavras-chave curtas exibidas no card. Ex.: HRV, Sintomas, Autopesquisa." }
+      - { name: details, label: Detalhes (texto do botão de detalhes), widget: text, required: false, hint: "Texto exibido quando a pessoa clica em detalhes. Ex.: critérios, rotina de registros, consentimento." }
+      - { name: order, label: Ordem de exibição, widget: number, value_type: int, required: false, default: 1, hint: "Menor número aparece primeiro." }
+      - { name: published, label: Publicada, widget: boolean, default: true, hint: "Desligue para ocultar a pesquisa do site sem apagá-la." }
+
   - name: agenda
     label: Agenda
     files:
