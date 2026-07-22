@@ -74,9 +74,6 @@ function metaRow(label, value) {
 }
 
 function renderCard(p) {
-  const showInterest = p.status !== 'concluida';
-  const interestLabel = p.status === 'preparacao' ? 'Quero ser avisado' : 'Manifestar interesse';
-
   const media = p.coverImage
     ? `<img src="${escapeHtml(p.coverImage)}" alt="Imagem da pesquisa ${escapeHtml(p.title)}" loading="lazy" decoding="async" />`
     : '<div class="pesq-card__ph"><span>Pesquisa Ectolab</span></div>';
@@ -93,11 +90,8 @@ function renderCard(p) {
   const tags = (p.tags && p.tags.length)
     ? `<div class="pesq-tags">${p.tags.map((t) => `<span class="pesq-tag">${escapeHtml(t)}</span>`).join('')}</div>`
     : '';
-  const interest = showInterest
-    ? `<button type="button" class="btn btn-orange pesq-interest" data-title="${escapeHtml(p.title)}" data-status="${escapeHtml(p.status)}">${escapeHtml(interestLabel)}</button>`
-    : '<span class="btn btn-ghost" aria-disabled="true" style="opacity:.7;cursor:default;pointer-events:none">Coleta concluída</span>';
   const details = p.details
-    ? `<button type="button" class="btn btn-ghost pesq-details-btn" aria-label="Ver detalhes da pesquisa" title="Ver detalhes" data-details="${escapeHtml(p.details)}">﹢</button>`
+    ? `<div class="pesq-actions"><button type="button" class="btn btn-ghost pesq-details-btn" data-details="${escapeHtml(p.details)}">Ver detalhes <span class="arrow">→</span></button></div>`
     : '';
 
   return `      <article class="pesq-card" data-status="${escapeHtml(p.status)}">
@@ -110,7 +104,7 @@ function renderCard(p) {
           ${researcher}
           ${meta}
           ${tags}
-          <div class="pesq-actions">${interest}${details}</div>
+          ${details}
         </div>
       </article>`;
 }
