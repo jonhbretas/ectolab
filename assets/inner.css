@@ -11,6 +11,15 @@
 .page-hero__inner { display: grid; grid-template-columns: 1.4fr 1fr; gap: 64px; align-items: end; }
 .page-hero__inner.center { grid-template-columns: 1fr; max-width: 920px; margin: 0 auto; text-align: center; }
 .page-hero__inner.center .meta-grid { margin-top: 40px; }
+/* Título proporcional ao layout de duas colunas do page-hero — mesma lógica
+   já adotada no hero da Home. Evita que o H1 gigante (clamp até 120px) domine
+   a metade esquerda e deixe a coluna direita com aparência de vazia. */
+.page-hero .h-display {
+  font-size: clamp(38px, 4.6vw, 64px);
+  line-height: 1.04;
+  letter-spacing: -0.028em;
+  text-wrap: balance;
+}
 .breadcrumb {
   font-family: var(--mono);
   font-size: 11px;
