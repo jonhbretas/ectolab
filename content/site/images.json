@@ -262,24 +262,24 @@
           "notes": "Imagem ilustrativa do passo 4. Preferir WEBP/PNG otimizado (proporção 16:10)."
         },
         {
-          "label": "Passo 5 - seção de relato",
+          "label": "Passo 5 - digitar e-mail",
           "originalPath": "/images/tutorial-relatorio-pedido/passo-5.svg",
           "image": "/images/tutorial-relatorio-pedido/passo-5.svg",
-          "alt": "Passo 5: seção de relato do pedido",
+          "alt": "Passo 5: campo para digitar o e-mail do pedido",
           "notes": "Imagem ilustrativa do passo 5. Preferir WEBP/PNG otimizado (proporção 16:10)."
         },
         {
-          "label": "Passo 6 - digitar e-mail",
+          "label": "Passo 6 - adicionar relato",
           "originalPath": "/images/tutorial-relatorio-pedido/passo-6.svg",
           "image": "/images/tutorial-relatorio-pedido/passo-6.svg",
-          "alt": "Passo 6: campo para digitar o e-mail do pedido",
+          "alt": "Passo 6: ícone para adicionar o relato do pedido",
           "notes": "Imagem ilustrativa do passo 6. Preferir WEBP/PNG otimizado (proporção 16:10)."
         },
         {
-          "label": "Passo 7 - adicionar relato",
+          "label": "Passo 7 - relatório detalhado da experiência",
           "originalPath": "/images/tutorial-relatorio-pedido/passo-7.svg",
           "image": "/images/tutorial-relatorio-pedido/passo-7.svg",
-          "alt": "Passo 7: ícone para adicionar o relato do pedido",
+          "alt": "Passo 7: preenchimento do relatório detalhado da experiência",
           "notes": "Imagem ilustrativa do passo 7. Preferir WEBP/PNG otimizado (proporção 16:10)."
         }
       ]
