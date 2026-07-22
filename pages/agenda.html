@@ -693,19 +693,13 @@
         </div>
         <div class="feat-grid">
           <!-- CMS AGENDA FEATURED START -->
-          <button type="button" class="feat highlight" data-year="2026" data-month="jul">
-            <div class="feat__tags"><span class="feat__cat">DIP · Presencial</span><span class="feat__free">Gratuito</span></div>
-            <h3>DIP - Dinâmica Interassistencial da Paracirurgia · Duas Décadas da DIP - 6 Elipes e 12 Epicons - Gratuita</h3>
-            <p>Atenção: As vagas são estritamente limitadas a 200 pessoas e serão garantidas por ordem de inscrição. Devido à gratuidade e à importância do marco de 2 décadas, esperamos que as vagas se esgotem rapidamente.</p>
-            <div class="feat__foot"><span class="feat__date">10 JUL 2026</span><span class="feat__go">Ver na agenda →</span></div>
-          </button>
-          <button type="button" class="feat" data-year="2026" data-month="out">
+          <button type="button" class="feat" data-year="2026" data-month="out" data-enddate="2026-11-01">
             <div class="feat__tags"><span class="feat__cat">Parceria ICTENEPES</span></div>
             <h3>Materializações Interassistenciais</h3>
             <p>Você já refletiu sobre as suas materializações interassistenciais?</p>
             <div class="feat__foot"><span class="feat__date">31 OUT – 01 NOV 2026</span><span class="feat__go">Ver na agenda →</span></div>
           </button>
-          <button type="button" class="feat" data-year="2027" data-month="mar">
+          <button type="button" class="feat" data-year="2027" data-month="mar" data-enddate="2027-03-21">
             <div class="feat__tags"><span class="feat__cat">Imersão · Parambulatorial</span></div>
             <h3>IECTO - Imersão em Ectoplasmia · Parambulatorial</h3>
             <p>Imersão em Ectoplasmia Parambulatorial</p>
@@ -1167,6 +1161,27 @@
       const monthPills = Array.from(document.querySelectorAll('.month-pill'));
       const yearTabs = Array.from(document.querySelectorAll('.year-tab'));
       const featBtns = Array.from(document.querySelectorAll('.feat'));
+
+      // Destaque: remove em runtime os eventos cuja data já passou (mesmo
+      // comportamento da Home). Se todos passarem, oculta a seção inteira.
+      (function () {
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
+        let visiveis = 0;
+        featBtns.forEach(function (btn) {
+          const iso = btn.getAttribute('data-enddate');
+          if (iso) {
+            const end = new Date(iso + 'T00:00:00');
+            if (!isNaN(end.getTime()) && end < today) { btn.style.display = 'none'; return; }
+          }
+          visiveis++;
+        });
+        if (visiveis === 0) {
+          const sec = document.querySelector('.destaques');
+          if (sec) sec.style.display = 'none';
+        }
+      })();
+
       const emptyState = document.getElementById('emptyState');
       const resetBtn = document.getElementById('resetBtn');
       const controls = document.getElementById('controls');

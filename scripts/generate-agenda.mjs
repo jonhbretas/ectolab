@@ -381,12 +381,15 @@ function readEvents(eventTypes) {
 }
 
 function renderFeatured(events) {
-  const featured = events.filter((event) => event.featured).slice(0, 3);
+  // Não destaca eventos cuja data já passou (mesmo critério da Home).
+  const featured = events.filter((event) => event.featured && !isPast(event)).slice(0, 3);
   return `${featuredStart}
 ${featured.map((event) => {
     const style = event.featuredStyle && event.featuredStyle !== 'default' ? ` ${event.featuredStyle}` : '';
     const freeTag = event.free ? '<span class="feat__free">Gratuito</span>' : '';
-    return `          <button type="button" class="feat${escapeHtml(style)}" data-year="${escapeHtml(event.year)}" data-month="${escapeHtml(event.month)}">
+    const range = eventDateRange(event);
+    const endIso = range ? range.end.date.toISOString().slice(0, 10) : '';
+    return `          <button type="button" class="feat${escapeHtml(style)}" data-year="${escapeHtml(event.year)}" data-month="${escapeHtml(event.month)}" data-enddate="${endIso}">
             <div class="feat__tags"><span class="feat__cat">${escapeHtml(event.featuredCategory || event.tag)}</span>${freeTag}</div>
             <h3>${escapeHtml(event.title)}</h3>
             <p>${escapeHtml(event.description)}</p>
