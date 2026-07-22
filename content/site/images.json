@@ -236,49 +236,49 @@
         {
           "label": "Passo 1 - acesso ao sistema",
           "originalPath": "/images/tutorial-relatorio-pedido/passo-1.svg",
-          "image": "/images/tutorial-relatorio-pedido/passo-1.svg",
+          "image": "uploads/site-images/WhatsApp Image 2026-07-21 at 22.08.54.jpeg",
           "alt": "Passo 1: acesso ao sistema de paracirurgia da Ectolab",
           "notes": "Imagem ilustrativa do passo 1. Preferir WEBP/PNG otimizado (proporção 16:10)."
         },
         {
           "label": "Passo 2 - login",
           "originalPath": "/images/tutorial-relatorio-pedido/passo-2.svg",
-          "image": "/images/tutorial-relatorio-pedido/passo-2.svg",
+          "image": "uploads/site-images/WhatsApp Image 2026-07-21 at 22.01.24.jpeg",
           "alt": "Passo 2: tela de login da conta no sistema",
           "notes": "Imagem ilustrativa do passo 2. Preferir WEBP/PNG otimizado (proporção 16:10)."
         },
         {
           "label": "Passo 3 - aba Pedidos de Paracirurgia",
           "originalPath": "/images/tutorial-relatorio-pedido/passo-3.svg",
-          "image": "/images/tutorial-relatorio-pedido/passo-3.svg",
+          "image": "uploads/site-images/WhatsApp Image 2026-07-21 at 21.59.55.jpeg",
           "alt": "Passo 3: aba de Pedidos de Paracirurgia no sistema",
           "notes": "Imagem ilustrativa do passo 3. Preferir WEBP/PNG otimizado (proporção 16:10)."
         },
         {
           "label": "Passo 4 - histórico de pedidos",
           "originalPath": "/images/tutorial-relatorio-pedido/passo-4.svg",
-          "image": "/images/tutorial-relatorio-pedido/passo-4.svg",
+          "image": "uploads/site-images/WhatsApp Image 2026-07-21 at 22.02.22.jpeg",
           "alt": "Passo 4: histórico de pedidos na tela",
           "notes": "Imagem ilustrativa do passo 4. Preferir WEBP/PNG otimizado (proporção 16:10)."
         },
         {
           "label": "Passo 5 - seção de relato",
           "originalPath": "/images/tutorial-relatorio-pedido/passo-5.svg",
-          "image": "/images/tutorial-relatorio-pedido/passo-5.svg",
+          "image": "uploads/site-images/WhatsApp Image 2026-07-21 at 22.05.02.jpeg",
           "alt": "Passo 5: seção de relato do pedido",
           "notes": "Imagem ilustrativa do passo 5. Preferir WEBP/PNG otimizado (proporção 16:10)."
         },
         {
           "label": "Passo 6 - digitar e-mail",
           "originalPath": "/images/tutorial-relatorio-pedido/passo-6.svg",
-          "image": "/images/tutorial-relatorio-pedido/passo-6.svg",
+          "image": "uploads/site-images/WhatsApp Image 2026-07-21 at 22.05.02.jpeg",
           "alt": "Passo 6: campo para digitar o e-mail do pedido",
           "notes": "Imagem ilustrativa do passo 6. Preferir WEBP/PNG otimizado (proporção 16:10)."
         },
         {
           "label": "Passo 7 - adicionar relato",
           "originalPath": "/images/tutorial-relatorio-pedido/passo-7.svg",
-          "image": "/images/tutorial-relatorio-pedido/passo-7.svg",
+          "image": "uploads/site-images/WhatsApp Image 2026-07-21 at 22.06.30.jpeg",
           "alt": "Passo 7: ícone para adicionar o relato do pedido",
           "notes": "Imagem ilustrativa do passo 7. Preferir WEBP/PNG otimizado (proporção 16:10)."
         }
