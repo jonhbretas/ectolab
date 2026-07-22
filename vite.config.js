@@ -4,6 +4,7 @@ import { relative, resolve } from 'path';
 import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
 import { spawnSync } from 'child_process';
 import { BOOK, FAQ_LIVRO, FAQ_TEMA } from './assets/ectoplasma-data.js';
+import { PESQUISAS } from './assets/pesquisas-data.js';
 
 /**
  * Assets "crus" referenciados por caminho absoluto /assets/... nas páginas
@@ -190,6 +191,40 @@ function seoPlugin() {
               }))
             }
           );
+        }
+
+        // Schema da página de Pesquisas (ItemList dos estudos) para indexação
+        // dos projetos de pesquisa da Ectolab.
+        if (pathname === '/pages/pesquisas.html' && Array.isArray(PESQUISAS) && PESQUISAS.length) {
+          const statusAvailability = {
+            preparacao: 'https://schema.org/PreOrder',
+            aberto: 'https://schema.org/InStock',
+            concluida: 'https://schema.org/SoldOut',
+          };
+          schema['@graph'].push({
+            '@type': 'ItemList',
+            '@id': `${canonical}#pesquisas`,
+            name: 'Pesquisas em andamento da Ectolab',
+            description,
+            numberOfItems: PESQUISAS.length,
+            itemListOrder: 'https://schema.org/ItemListOrderAscending',
+            isPartOf: { '@id': `${canonical}#webpage` },
+            itemListElement: PESQUISAS.map((p, i) => ({
+              '@type': 'ListItem',
+              position: i + 1,
+              item: {
+                '@type': 'CreativeWork',
+                name: p.title,
+                ...(p.summary ? { description: p.summary } : {}),
+                ...(p.line ? { about: p.line } : {}),
+                ...(p.researcher ? { creator: { '@type': 'Person', name: p.researcher } } : {}),
+                ...(p.coverImage ? { image: `${SITE_URL}${p.coverImage}` } : {}),
+                ...(p.tags && p.tags.length ? { keywords: p.tags.join(', ') } : {}),
+                creativeWorkStatus: statusAvailability[p.status] ? p.status : 'preparacao',
+                publisher: { '@id': `${SITE_URL}/#organization` },
+              },
+            })),
+          });
         }
 
         const extraHead = `

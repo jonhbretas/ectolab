@@ -3,16 +3,40 @@ import path from 'node:path';
 import matter from 'gray-matter';
 
 /**
- * Lê as pesquisas cadastradas no CMS (content/pesquisas/*.md) e gera
- * assets/pesquisas-data.js, consumido pelo React da página de Pesquisas
- * (assets/pesquisas.jsx). Segue o mesmo padrão do generate-agenda.
+ * Lê as pesquisas cadastradas no CMS (content/pesquisas/*.md) e:
+ *   1) injeta os cards renderizados (SSR) em pages/pesquisas.html, entre os
+ *      marcadores CMS PESQUISAS START/END — assim o conteúdo é indexável por
+ *      buscadores (não depende de JS no cliente);
+ *   2) gera assets/pesquisas-data.js, consumido pelo seoPlugin (vite.config.js)
+ *      para montar o JSON-LD (ItemList) da página.
+ * A interatividade (filtros, modal) é feita por JS vanilla dentro da página.
  */
 
 const root = process.cwd();
 const contentDir = path.join(root, 'content', 'pesquisas');
-const outPath = path.join(root, 'assets', 'pesquisas-data.js');
+const outDataPath = path.join(root, 'assets', 'pesquisas-data.js');
+const pagePath = path.join(root, 'pages', 'pesquisas.html');
+const START = '<!-- CMS PESQUISAS START -->';
+const END = '<!-- CMS PESQUISAS END -->';
 
 const STATUS = ['preparacao', 'aberto', 'concluida'];
+const STATUS_LABEL = { preparacao: 'Em preparação', aberto: 'Recrutamento aberto', concluida: 'Coleta concluída' };
+const STATUS_CLS = { preparacao: 'st-prep', aberto: 'st-open', concluida: 'st-done' };
+
+function escapeHtml(value = '') {
+  return String(value)
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;');
+}
+
+function initials(name) {
+  const parts = String(name || '').trim().split(/\s+/).filter(Boolean);
+  if (!parts.length) return '?';
+  return (parts[0][0] + (parts[1] ? parts[1][0] : '')).toUpperCase();
+}
 
 function readPesquisas() {
   if (!fs.existsSync(contentDir)) return [];
@@ -44,6 +68,53 @@ function readPesquisas() {
     .sort((a, b) => (a.order - b.order) || a.title.localeCompare(b.title, 'pt-BR'));
 }
 
+function metaRow(label, value) {
+  if (!value) return '';
+  return `<div class="pesq-meta__row"><span>${escapeHtml(label)}</span><span>${escapeHtml(value)}</span></div>`;
+}
+
+function renderCard(p) {
+  const showInterest = p.status !== 'concluida';
+  const interestLabel = p.status === 'preparacao' ? 'Quero ser avisado' : 'Manifestar interesse';
+
+  const media = p.coverImage
+    ? `<img src="${escapeHtml(p.coverImage)}" alt="Imagem da pesquisa ${escapeHtml(p.title)}" loading="lazy" decoding="async" />`
+    : '<div class="pesq-card__ph"><span>Pesquisa Ectolab</span></div>';
+  const codeBadge = p.code ? `<span class="pesq-card__code">${escapeHtml(p.code)}</span>` : '';
+  const note = p.statusNote ? `<p class="pesq-note">${escapeHtml(p.statusNote)}</p>` : '';
+  const summary = p.summary ? `<p class="pesq-card__summary">${escapeHtml(p.summary)}</p>` : '';
+  const researcher = p.researcher
+    ? `<div class="pesq-researcher">${p.researcherPhoto
+        ? `<img src="${escapeHtml(p.researcherPhoto)}" alt="Foto de ${escapeHtml(p.researcher)}" loading="lazy" decoding="async" />`
+        : `<span class="pesq-researcher__ph">${escapeHtml(initials(p.researcher))}</span>`}<span><b>${escapeHtml(p.researcher)}</b><small>Responsável</small></span></div>`
+    : '';
+  const rows = [metaRow('Perfil', p.profile), metaRow('Modalidade', p.modality), metaRow('Formato', p.format), metaRow('Linha', p.line)].filter(Boolean).join('');
+  const meta = rows ? `<div class="pesq-meta">${rows}</div>` : '';
+  const tags = (p.tags && p.tags.length)
+    ? `<div class="pesq-tags">${p.tags.map((t) => `<span class="pesq-tag">${escapeHtml(t)}</span>`).join('')}</div>`
+    : '';
+  const interest = showInterest
+    ? `<button type="button" class="btn btn-orange pesq-interest" data-title="${escapeHtml(p.title)}" data-status="${escapeHtml(p.status)}">${escapeHtml(interestLabel)}</button>`
+    : '<span class="btn btn-ghost" aria-disabled="true" style="opacity:.7;cursor:default;pointer-events:none">Coleta concluída</span>';
+  const details = p.details
+    ? `<button type="button" class="btn btn-ghost pesq-details-btn" aria-label="Ver detalhes da pesquisa" title="Ver detalhes" data-details="${escapeHtml(p.details)}">﹢</button>`
+    : '';
+
+  return `      <article class="pesq-card" data-status="${escapeHtml(p.status)}">
+        <div class="pesq-card__media">${media}${codeBadge}</div>
+        <div class="pesq-card__body">
+          <span class="pesq-status ${STATUS_CLS[p.status]}">${escapeHtml(STATUS_LABEL[p.status])}</span>
+          ${note}
+          <h3>${escapeHtml(p.title)}</h3>
+          ${summary}
+          ${researcher}
+          ${meta}
+          ${tags}
+          <div class="pesq-actions">${interest}${details}</div>
+        </div>
+      </article>`;
+}
+
 const pesquisas = readPesquisas();
 
 const header = [
@@ -51,6 +122,13 @@ const header = [
   '// Para atualizar: cadastre/edite as pesquisas no CMS (content/pesquisas/*.md)',
   '// e rode npm run generate:content (ou npm run build).',
 ].join('\n');
+fs.writeFileSync(outDataPath, `${header}\n\nexport const PESQUISAS = ${JSON.stringify(pesquisas, null, 2)};\n`);
 
-fs.writeFileSync(outPath, `${header}\n\nexport const PESQUISAS = ${JSON.stringify(pesquisas, null, 2)};\n`);
-console.log(`Generated pesquisas-data.js with ${pesquisas.length} pesquisas.`);
+if (fs.existsSync(pagePath) && fs.readFileSync(pagePath, 'utf8').includes(START)) {
+  let html = fs.readFileSync(pagePath, 'utf8');
+  const cards = pesquisas.map(renderCard).join('\n');
+  html = html.replace(new RegExp(`${START}[\\s\\S]*?${END}`), `${START}\n${cards}\n      ${END}`);
+  fs.writeFileSync(pagePath, html);
+}
+
+console.log(`Generated pesquisas-data.js and injected ${pesquisas.length} cards into pesquisas.html.`);

@@ -26,6 +26,7 @@ const staticPages = [
   ['/pages/laboratorio-paracirurgia.html', '2026-06-20', '0.6'],
   ['/pages/bioenergologia.html', '2026-06-20', '0.6'],
   ['/pages/laboratorio-ectoplasmologia.html', '2026-06-20', '0.6'],
+  ['/pages/pesquisas.html', '2026-07-22', '0.7'],
   ['/pages/contato.html', '2026-05-20', '0.6'],
   ['/pages/parcerias.html', '2026-05-20', '0.6'],
   ['/pages/apoie.html', '2026-06-20', '0.7'],
