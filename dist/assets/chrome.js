@@ -34,7 +34,7 @@
         ]},
         { cat: "Rede de Paracirurgia", links: [
           { label: "Sobre a Rede Invisível", href: P + "pages/rede.html" },
-          { label: "Cadastro na Rede", href: P + "pages/rede-cadastro.html" },
+          { label: "Cadastro na Rede ↗", href: "https://dip-ectolab.org.br/register", target: "_blank" },
           { label: "Relatório da Rede", href: P + "pages/rede-relatorio.html" }
         ]},
         { cat: "Sistema", links: [
@@ -296,7 +296,7 @@
       "Painel de Pedidos": "Request Dashboard",
       "Rede de Paracirurgia": "Parasurgery Network",
       "Sobre a Rede Invisível": "About the Invisible Network",
-      "Cadastro na Rede": "Network Registration",
+      "Cadastro na Rede ↗": "Network Registration ↗",
       "Relatório da Rede": "Network Report",
       "Trilha": "Pathway",
       "Cursos": "Courses",
@@ -508,7 +508,7 @@
       "Painel de Pedidos": "Panel de Solicitudes",
       "Rede de Paracirurgia": "Red de Paracirugía",
       "Sobre a Rede Invisível": "Sobre la Red Invisible",
-      "Cadastro na Rede": "Registro en la Red",
+      "Cadastro na Rede ↗": "Registro en la Red ↗",
       "Relatório da Rede": "Informe de la Red",
       "Trilha": "Ruta",
       "Cursos": "Cursos",
