@@ -13,7 +13,7 @@ export const BOOK = {
   // Capas (em public/livros). A capa em inglês some sozinha se o arquivo
   // ainda não existir — basta salvar o JPG no caminho indicado.
   coverPt: '/livros/ectoplasma-livro-ectolab.jpg',
-  coverEn: '/livros/ectoplasma-book-en-ectolab.jpeg',
+  coverEn: '/livros/ectoplasma-book-en-ectolab.png',
   // Sinopse oficial (também usada como meta description-base / og)
   synopsis:
     'O ectoplasma é descrito desde a Antiguidade embora permaneça pouco conhecido até os dias atuais. ' +

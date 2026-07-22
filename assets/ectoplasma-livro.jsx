@@ -207,8 +207,8 @@ function App() {
                   <img
                     src={BOOK.coverPt}
                     alt="Capa do livro Ectoplasma: Panorama Contemporâneo das Pesquisas sobre Ectoplasmia, da Ectolab"
-                    width="320" height="453" loading="eager" fetchpriority="high" decoding="async"
-                    style={{ width: 'min(260px, 62vw)', height: 'auto', borderRadius: 'var(--r-sm)', boxShadow: '0 30px 60px -18px rgba(8,34,43,0.55)' }}
+                    width="382" height="523" loading="eager" fetchpriority="high" decoding="async"
+                    style={{ height: 'clamp(230px, 40vw, 330px)', width: 'auto', maxWidth: '100%', borderRadius: 'var(--r-sm)', boxShadow: '0 30px 60px -18px rgba(8,34,43,0.55)' }}
                   />
                   <figcaption className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', marginTop: 14, letterSpacing: '0.06em', textTransform: 'uppercase' }}>Edição em português</figcaption>
                 </figure>
@@ -216,9 +216,9 @@ function App() {
                   <img
                     src={BOOK.coverEn}
                     alt="Cover of the book Ectoplasm: A Contemporary Panorama of the Research on Ectoplasmy, by Ectolab"
-                    width="320" height="453" loading="lazy" decoding="async"
+                    width="600" height="600" loading="lazy" decoding="async"
                     onError={(e) => { e.currentTarget.closest('figure').style.display = 'none'; }}
-                    style={{ width: 'min(200px, 50vw)', height: 'auto', borderRadius: 'var(--r-sm)', boxShadow: '0 22px 46px -18px rgba(8,34,43,0.4)' }}
+                    style={{ height: 'clamp(252px, 44vw, 360px)', width: 'auto', maxWidth: '100%' }}
                   />
                   <figcaption className="mono" style={{ fontSize: 11, color: 'var(--ink-3)', marginTop: 14, letterSpacing: '0.06em', textTransform: 'uppercase' }}>English e-book edition</figcaption>
                 </figure>
