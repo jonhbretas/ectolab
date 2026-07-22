@@ -38,9 +38,16 @@ const replacements = [];
 (parsed.pages || []).forEach((page) => {
   (page.images || []).forEach((image) => {
     if (!image.originalPath || !image.image || image.originalPath === image.image) return;
-    replacements.push([image.originalPath, image.image]);
-    if (image.originalPath.startsWith('/') && image.image.startsWith('/')) {
-      replacements.push([`${siteUrl}${image.originalPath}`, `${siteUrl}${image.image}`]);
+    // O CMS pode salvar o caminho da imagem sem a barra inicial (ex.: "uploads/...").
+    // Sem ela, o navegador resolve de forma relativa e quebra em páginas dentro de
+    // /pages/. Normalizamos para caminho absoluto (mantendo URLs http intactas).
+    let target = image.image;
+    if (!/^(https?:)?\/\//.test(target) && !target.startsWith('/')) {
+      target = `/${target}`;
+    }
+    replacements.push([image.originalPath, target]);
+    if (image.originalPath.startsWith('/') && target.startsWith('/')) {
+      replacements.push([`${siteUrl}${image.originalPath}`, `${siteUrl}${target}`]);
     }
   });
 });
