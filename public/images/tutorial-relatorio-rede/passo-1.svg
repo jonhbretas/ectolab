@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 400" role="img" aria-label="Passo 1 — Acesso ao sistema de paracirurgia">
+  <rect width="640" height="400" rx="16" fill="#eef5f8"/>
+  <rect x="10" y="10" width="620" height="380" rx="12" fill="#ffffff" stroke="#aac7d0" stroke-width="2" stroke-dasharray="8 8"/>
+  <rect x="10" y="10" width="620" height="46" rx="12" fill="#dfeaf0"/>
+  <circle cx="36" cy="33" r="6" fill="#f0a030"/>
+  <circle cx="58" cy="33" r="6" fill="#aac7d0"/>
+  <circle cx="80" cy="33" r="6" fill="#aac7d0"/>
+  <circle cx="320" cy="185" r="46" fill="#155366"/>
+  <text x="320" y="185" font-family="'Space Grotesk', Arial, sans-serif" font-size="46" font-weight="700" fill="#ffffff" text-anchor="middle" dominant-baseline="central">1</text>
+  <text x="320" y="270" font-family="Manrope, Arial, sans-serif" font-size="21" font-weight="600" fill="#08222b" text-anchor="middle">Acesso ao sistema de paracirurgia</text>
+  <text x="320" y="302" font-family="'JetBrains Mono', monospace" font-size="12" letter-spacing="1.5" fill="#56707a" text-anchor="middle">IMAGEM ILUSTRATIVA · SUBSTITUIR NO CMS</text>
+</svg>

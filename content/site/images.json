@@ -230,6 +230,61 @@
       ]
     },
     {
+      "page": "Página / rede-relatorio",
+      "folder": "pages/rede-relatorio",
+      "images": [
+        {
+          "label": "Passo 1 - acesso ao sistema",
+          "originalPath": "/images/tutorial-relatorio-rede/passo-1.svg",
+          "image": "/images/tutorial-relatorio-rede/passo-1.svg",
+          "alt": "Passo 1: acesso ao sistema de paracirurgia da Ectolab",
+          "notes": "Imagem ilustrativa do passo 1. Preferir WEBP/PNG otimizado (proporção 16:10)."
+        },
+        {
+          "label": "Passo 2 - login",
+          "originalPath": "/images/tutorial-relatorio-rede/passo-2.svg",
+          "image": "/images/tutorial-relatorio-rede/passo-2.svg",
+          "alt": "Passo 2: tela de login da conta no sistema",
+          "notes": "Imagem ilustrativa do passo 2. Preferir WEBP/PNG otimizado (proporção 16:10)."
+        },
+        {
+          "label": "Passo 3 - aba Rede de Paracirurgia",
+          "originalPath": "/images/tutorial-relatorio-rede/passo-3.svg",
+          "image": "/images/tutorial-relatorio-rede/passo-3.svg",
+          "alt": "Passo 3: aba da Rede de Paracirurgia no sistema",
+          "notes": "Imagem ilustrativa do passo 3. Preferir WEBP/PNG otimizado (proporção 16:10)."
+        },
+        {
+          "label": "Passo 4 - relatórios da Rede",
+          "originalPath": "/images/tutorial-relatorio-rede/passo-4.svg",
+          "image": "/images/tutorial-relatorio-rede/passo-4.svg",
+          "alt": "Passo 4: relatórios da Rede na tela",
+          "notes": "Imagem ilustrativa do passo 4. Preferir WEBP/PNG otimizado (proporção 16:10)."
+        },
+        {
+          "label": "Passo 5 - digitar e-mail",
+          "originalPath": "/images/tutorial-relatorio-rede/passo-5.svg",
+          "image": "/images/tutorial-relatorio-rede/passo-5.svg",
+          "alt": "Passo 5: campo para digitar o e-mail da Rede",
+          "notes": "Imagem ilustrativa do passo 5. Preferir WEBP/PNG otimizado (proporção 16:10)."
+        },
+        {
+          "label": "Passo 6 - adicionar relatório",
+          "originalPath": "/images/tutorial-relatorio-rede/passo-6.svg",
+          "image": "/images/tutorial-relatorio-rede/passo-6.svg",
+          "alt": "Passo 6: ícone para adicionar o relatório da Rede",
+          "notes": "Imagem ilustrativa do passo 6. Preferir WEBP/PNG otimizado (proporção 16:10)."
+        },
+        {
+          "label": "Passo 7 - relatório detalhado da experiência",
+          "originalPath": "/images/tutorial-relatorio-rede/passo-7.svg",
+          "image": "/images/tutorial-relatorio-rede/passo-7.svg",
+          "alt": "Passo 7: preenchimento do relatório detalhado da experiência",
+          "notes": "Imagem ilustrativa do passo 7. Preferir WEBP/PNG otimizado (proporção 16:10)."
+        }
+      ]
+    },
+    {
       "page": "Página / relatorio-pedido",
       "folder": "pages/relatorio-pedido",
       "images": [
