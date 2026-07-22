@@ -600,6 +600,54 @@
       margin: 0;
     }
     @media (max-width: 900px) { .sec-head { grid-template-columns: 1fr; gap: 16px; } }
+
+    /* ---------- Banner: Pesquisas em Andamento ---------- */
+    .pesq-banner {
+      position: relative;
+      overflow: hidden;
+      margin-top: 48px;
+      border-radius: var(--r-lg);
+      background: linear-gradient(120deg, var(--teal-3), var(--teal-2) 55%, var(--teal));
+      color: var(--white);
+      padding: clamp(28px, 4vw, 44px);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 28px;
+      flex-wrap: wrap;
+      box-shadow: 0 30px 70px -38px rgba(8,34,43,.8);
+    }
+    .pesq-banner::before {
+      content: "";
+      position: absolute;
+      width: 340px; height: 340px;
+      right: -120px; top: -140px;
+      border-radius: 50%;
+      background: radial-gradient(circle at 40% 40%, rgba(240,160,48,.55), transparent 65%);
+      pointer-events: none;
+    }
+    .pesq-banner::after {
+      content: "";
+      position: absolute;
+      width: 240px; height: 240px;
+      left: -100px; bottom: -120px;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,.18);
+      box-shadow: 0 0 0 30px rgba(255,255,255,.05), 0 0 0 60px rgba(255,255,255,.03);
+      pointer-events: none;
+    }
+    .pesq-banner__txt { position: relative; z-index: 2; max-width: 620px; }
+    .pesq-banner__txt .eyebrow { color: var(--orange-soft2); }
+    .pesq-banner__txt h3 {
+      font-family: var(--display);
+      font-size: clamp(24px, 2.8vw, 36px);
+      line-height: 1.08;
+      letter-spacing: -.02em;
+      margin: 12px 0 10px;
+    }
+    .pesq-banner__txt p { margin: 0; color: rgba(255,255,255,.78); line-height: 1.6; font-size: 15.5px; }
+    .pesq-banner .btn { position: relative; z-index: 2; flex: none; }
+    @media (max-width: 720px) { .pesq-banner .btn { width: 100%; justify-content: center; } }
   </style>
 </head>
 <body data-active="">
@@ -629,7 +677,7 @@
             </p>
             <div class="flex gap-12" style="margin-top:28px;flex-wrap:wrap">
               <a href="#hospedar" class="btn btn-orange">Quero pesquisar aqui <span class="arrow">→</span></a>
-              <a href="#contribuicoes" class="btn btn-ghost">Ver contribuições científicas</a>
+              <a href="/pages/pesquisas.html" class="btn btn-ghost">Pesquisas em Andamento <span class="arrow">→</span></a>
             </div>
 
             <dl class="meta-grid parc-hero__meta">
@@ -735,6 +783,15 @@
               <span class="infra-tag">VFC · Termografia</span>
             </div>
           </div>
+        </div>
+
+        <div class="pesq-banner">
+          <div class="pesq-banner__txt">
+            <div class="eyebrow"><span class="dot"></span>ESTUDOS EM CURSO NO LABORATÓRIO</div>
+            <h3>Conheça as pesquisas em andamento.</h3>
+            <p>Veja os estudos conduzidos na Ectolab, acompanhe o status de cada um e manifeste interesse em participar quando houver recrutamento.</p>
+          </div>
+          <a href="/pages/pesquisas.html" class="btn btn-orange">Consultar pesquisas em andamento <span class="arrow">→</span></a>
         </div>
       </div>
     </section>
