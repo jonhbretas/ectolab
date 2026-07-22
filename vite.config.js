@@ -320,6 +320,7 @@ export default defineConfig({
         rede: resolve(__dirname, 'pages/rede.html'),
         redeCadastro: resolve(__dirname, 'pages/rede-cadastro.html'),
         redeRelatorio: resolve(__dirname, 'pages/rede-relatorio.html'),
+        relatorioPedido: resolve(__dirname, 'pages/relatorio-pedido.html'),
         laboratorioParacirurgia: resolve(__dirname, 'pages/laboratorio-paracirurgia.html'),
         bioenergologia: resolve(__dirname, 'pages/bioenergologia.html'),
         laboratorioEctoplasmologia: resolve(__dirname, 'pages/laboratorio-ectoplasmologia.html'),

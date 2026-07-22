@@ -29,7 +29,7 @@
         { cat: "Assistência", links: [
           { label: "O que é a Paracirurgia", href: P + "pages/paracirurgia.html" },
           { label: "Solicitar Paracirurgia ↗", href: "https://dip-ectolab.org.br/pedido-paracirurgia", target: "_blank" },
-          { label: "Enviar Relatório do Pedido ↗", href: "https://dip-ectolab.org.br/pedido-paracirurgia/historico", target: "_blank" },
+          { label: "Enviar Relatório do Pedido", href: P + "pages/relatorio-pedido.html" },
           { label: "Pontuações ↗", href: "https://dip-ectolab.org.br/pedido-paracirurgia/pontuacoes", target: "_blank" }
         ]},
         { cat: "Rede de Paracirurgia", links: [
@@ -292,7 +292,7 @@
       "Acessar Sistema ↗": "Access System ↗",
       "O que é a Paracirurgia": "What Parasurgery Is",
       "Solicitar Paracirurgia ↗": "Request Parasurgery ↗",
-      "Enviar Relatório do Pedido ↗": "Submit Request Report ↗",
+      "Enviar Relatório do Pedido": "Submit Request Report",
       "Painel de Pedidos": "Request Dashboard",
       "Rede de Paracirurgia": "Parasurgery Network",
       "Sobre a Rede Invisível": "About the Invisible Network",
@@ -504,7 +504,7 @@
       "Acessar Sistema ↗": "Acceder al Sistema ↗",
       "O que é a Paracirurgia": "Qué es la Paracirugía",
       "Solicitar Paracirurgia ↗": "Solicitar Paracirugía ↗",
-      "Enviar Relatório do Pedido ↗": "Enviar Informe de la Solicitud ↗",
+      "Enviar Relatório do Pedido": "Enviar Informe de la Solicitud",
       "Painel de Pedidos": "Panel de Solicitudes",
       "Rede de Paracirurgia": "Red de Paracirugía",
       "Sobre a Rede Invisível": "Sobre la Red Invisible",
