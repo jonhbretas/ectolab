@@ -5,218 +5,152 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="canonical" href="https://ectolab.org/pages/atividades.html" />
   <title>Atividades &amp; Eventos · Ectolab</title>
-  <meta name="description" content="Campos paracirúrgicos, tertúlias, imersões e simpósios. Calendário aberto de atividades da Ectolab — muitas gratuitas, todas com método." />
+  <meta name="description" content="Todas as atividades da Ectolab reunidas por categoria: campos e dinâmicas, tertúlias, cursos, fóruns e conteúdos gratuitos. Consulte a agenda e escolha o melhor caminho de participação." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="../assets/styles.css" />
-  <link rel="stylesheet" href="../assets/inner.css" />
+  <link rel="stylesheet" href="/assets/styles.css" />
+  <link rel="stylesheet" href="/assets/inner.css" />
+  <style>
+    .cat-card { padding: 28px; gap: 14px; height: 100%; }
+    .cat-card .specimen { color: var(--blue); }
+    .cat-card__desc { font-size: 14.5px; color: var(--ink-2); line-height: 1.6; margin: 0; }
+    .cat-links { list-style: none; padding: 0; margin: 6px 0 0; display: flex; flex-direction: column; }
+    .cat-links li { border-top: 1px solid var(--line); }
+    .cat-links a {
+      display: flex; justify-content: space-between; align-items: center; gap: 12px;
+      padding: 13px 0; font-size: 15px; font-weight: 500; color: var(--ink); line-height: 1.35;
+    }
+    .cat-links a:hover { color: var(--teal); }
+    .cat-links .arrow { color: var(--teal); flex: none; }
+    .loc-chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 4px 0 18px; }
+    .loc-chips a {
+      font-size: 13px; padding: 7px 12px; border: 1px solid var(--line);
+      border-radius: 999px; color: var(--ink-2); background: var(--paper);
+    }
+    .loc-chips a:hover { border-color: var(--teal); color: var(--teal); }
+    .cat-card .link-arrow { margin-top: auto; }
+  </style>
 </head>
 <body data-active="atividades">
   <div id="__header"></div>
 
   <main>
+    <!-- Hero -->
     <section class="page-hero">
       <div class="wrap">
         <div class="breadcrumb">
-          <a href="../index.html">Ectolab</a><span class="sep">◆</span><span>Atividades &amp; Eventos</span>
+          <a href="/index.html">Ectolab</a><span class="sep">◆</span><span>Atividades &amp; Eventos</span>
         </div>
-        <div class="page-hero__inner">
+        <div class="page-hero__inner center">
           <div>
-            <div class="eyebrow"><span class="dot"></span>CALENDÁRIO 2026 &nbsp;·&nbsp; 12 ATIVIDADES ESTE TRIMESTRE</div>
-            <h1 class="h-display" style="margin-top:24px">
-              <strong style="color:var(--blue);font-weight:700">Campos</strong>, tertúlias<br />
-              e imersões — <strong style="color:var(--blue);font-weight:700">abertos</strong>.
+            <div class="eyebrow"><span class="dot"></span>ATIVIDADES &amp; EVENTOS</div>
+            <h1 class="h-display" style="margin-top:20px">
+              Tudo o que acontece<br />na <strong style="color:var(--blue);font-weight:700">Ectolab</strong>.
             </h1>
-            <p class="lede" style="margin-top:24px;max-width:620px">
-              Muitas das nossas atividades são gratuitas e abertas ao público — em especial os Campos Paracirúrgicos públicos e as Tertúlias semanais. Consulte a agenda para escolher o melhor caminho de participação.
+            <p class="lede" style="margin:20px auto 0;max-width:640px">
+              Campos e dinâmicas, tertúlias, cursos, fóruns e conteúdos gratuitos — reunidos por
+              categoria para você encontrar o melhor caminho de participação. Para datas e inscrições,
+              consulte a Agenda.
             </p>
+            <div class="flex" style="gap:12px;margin-top:32px;flex-wrap:wrap;justify-content:center">
+              <a href="/pages/agenda.html" class="btn btn-orange">Ver Agenda Completa <span class="arrow">→</span></a>
+              <a href="/pages/dinamicas.html" class="btn btn-ghost">Dinâmicas (DIP) <span class="arrow">→</span></a>
+            </div>
           </div>
-          <dl class="meta-grid">
-            <div><dt>Campos públicos</dt><dd>Quartas · 19h30</dd></div>
-            <div><dt>Tertúlias</dt><dd>Sextas · 20h</dd></div>
-            <div><dt>Sede</dt><dd>Foz do Iguaçu</dd></div>
-            <div><dt>Online</dt><dd>Zoom + YouTube</dd></div>
-          </dl>
         </div>
       </div>
     </section>
 
+    <!-- Categorias (espelho do menu) -->
     <section class="section">
       <div class="wrap">
-        <div style="display:flex;justify-content:space-between;align-items:end;margin-bottom:40px;flex-wrap:wrap;gap:24px">
-          <div>
-            <div class="eyebrow"><span class="dot"></span>PRÓXIMOS 30 DIAS</div>
-            <h2 class="h1" style="margin-top:16px">Agenda aberta.</h2>
+        <div class="eyebrow"><span class="dot"></span>NAVEGUE POR CATEGORIA</div>
+        <h2 class="h1" style="margin-top:16px;margin-bottom:40px">Escolha por onde começar.</h2>
+
+        <div class="grid g3 gap-24" style="align-items:stretch">
+          <!-- Gratuitos -->
+          <div class="card cat-card">
+            <div class="specimen">Gratuitos</div>
+            <p class="cat-card__desc">Atividades e conteúdos abertos ao público, sem custo.</p>
+            <ul class="cat-links">
+              <li><a href="/pages/blog.html">Blog <span class="arrow">→</span></a></li>
+              <li><a href="/pages/orientacao-gratuita.html">OGB — Orientação Gratuita em Bioenergologia <span class="arrow">→</span></a></li>
+              <li><a href="/pages/tenepes.html">Pedido de Tenepes <span class="arrow">→</span></a></li>
+              <li><a href="https://www.youtube.com/playlist?list=PLpz4qwgYZyP3SxfEenlleSpxgqYMaVUhb" target="_blank" rel="noreferrer">Diálogos Online <span class="arrow">↗</span></a></li>
+            </ul>
           </div>
-          <div class="blog-filters" style="border:none;padding:0;margin:0">
-            <button class="on">Tudo</button>
-            <button>Campos</button>
-            <button>Tertúlias</button>
-            <button>Cursos</button>
-            <button>Simpósios</button>
+
+          <!-- Eventos & Consultoria -->
+          <div class="card cat-card">
+            <div class="specimen">Eventos &amp; Consultoria</div>
+            <p class="cat-card__desc">Encontros, fóruns internacionais e acompanhamento técnico.</p>
+            <ul class="cat-links">
+              <li><a href="/pages/agenda.html">Agenda Completa <span class="arrow">→</span></a></li>
+              <li><a href="/pages/curso.html?id=forum">Fórum Internacional (Online) <span class="arrow">→</span></a></li>
+              <li><a href="/pages/curso.html?id=preceptoria">Preceptoria em Ectoplasmia <span class="arrow">→</span></a></li>
+            </ul>
           </div>
-        </div>
 
-        <div class="eventos-grid">
-          <a href="atividades.html" class="evento">
-            <div class="evento__head">
-              <div class="evento__date">
-                <strong>14</strong>
-                <span>JUN 2026</span>
-              </div>
-              <span class="tag gold">CAMPO · GRATUITO</span>
+          <!-- Dinâmicas (DIP) -->
+          <div class="card cat-card">
+            <div class="specimen">Dinâmicas (DIP)</div>
+            <p class="cat-card__desc">Dinâmica Interassistencial da Paracirurgia — presencial, por cidade.</p>
+            <div class="loc-chips">
+              <a href="/pages/dinamica.html?loc=foz">Foz do Iguaçu</a>
+              <a href="/pages/dinamica.html?loc=sp">São Paulo</a>
+              <a href="/pages/dinamica.html?loc=rj">Rio de Janeiro</a>
+              <a href="/pages/dinamica.html?loc=curitiba">Curitiba</a>
+              <a href="/pages/dinamica.html?loc=floripa">Florianópolis</a>
+              <a href="/pages/dinamica.html?loc=brasilia">Brasília</a>
+              <a href="/pages/dinamica.html?loc=alemanha">Alemanha</a>
+              <a href="/pages/dinamica.html?loc=portugal">Portugal</a>
             </div>
-            <h3>Campo Paracirúrgico Público — Edição 412</h3>
-            <div class="evento__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório A</span>
-              <span><span class="ico">◆</span> 19h30 — 22h00</span>
-              <span><span class="ico">◆</span> Atividade gratuita</span>
-            </div>
-            <div class="evento__footer">
-              <span class="price">Gratuito</span>
-              <span class="link-arrow">Detalhes →</span>
-            </div>
-          </a>
-
-          <a href="atividades.html" class="evento">
-            <div class="evento__head">
-              <div class="evento__date">
-                <strong>22</strong>
-                <span>JUN 2026</span>
-              </div>
-              <span class="tag">TERTÚLIA</span>
-            </div>
-            <h3>Ectoplasma e Mediunidade Brasileira: distinções e pontes</h3>
-            <div class="evento__meta">
-              <span><span class="ico">◆</span> Online · Zoom + YouTube</span>
-              <span><span class="ico">◆</span> 20h00 — 21h30</span>
-              <span><span class="ico">◆</span> Com Dra. Lívia Ferraz</span>
-            </div>
-            <div class="evento__footer">
-              <span class="price">Gratuito</span>
-              <span class="link-arrow">Detalhes →</span>
-            </div>
-          </a>
-
-          <a href="curso-proep.html" class="evento">
-            <div class="evento__head">
-              <div class="evento__date">
-                <strong>05</strong>
-                <span>JUL 2026</span>
-              </div>
-              <span class="tag dark">CURSO · IMERSÃO</span>
-            </div>
-            <h3>IECTO — Imersão em Ectoplasmia · Turma 2026.2</h3>
-            <div class="evento__meta">
-              <span><span class="ico">◆</span> Sede Foz · Laboratório 03</span>
-              <span><span class="ico">◆</span> 7 dias · 56h</span>
-              <span><span class="ico">◆</span> Pré-requisito: EPPI + Campo</span>
-            </div>
-            <div class="evento__footer">
-              <span class="price">R$ 2.240</span>
-              <span class="link-arrow">Inscrições →</span>
-            </div>
-          </a>
-
-          <a href="atividades.html" class="evento">
-            <div class="evento__head">
-              <div class="evento__date">
-                <strong>11</strong>
-                <span>JUL 2026</span>
-              </div>
-              <span class="tag">TERTÚLIA</span>
-            </div>
-            <h3>O Parácorpo: anatomia e função na paracirurgia</h3>
-            <div class="evento__meta">
-              <span><span class="ico">◆</span> Online · Zoom + YouTube</span>
-              <span><span class="ico">◆</span> 20h00 — 21h30</span>
-              <span><span class="ico">◆</span> Com Prof. R. Caldeira</span>
-            </div>
-            <div class="evento__footer">
-              <span class="price">Gratuito</span>
-              <span class="link-arrow">Detalhes →</span>
-            </div>
-          </a>
-
-          <a href="atividades.html" class="evento">
-            <div class="evento__head">
-              <div class="evento__date">
-                <strong>22</strong>
-                <span>JUL 2026</span>
-              </div>
-              <span class="tag dark">CURSO · IMERSÃO</span>
-            </div>
-            <h3>EPPI — Ectoplasmia Projetiva Paracirúrgica Ectoplásmica Interassistencial</h3>
-            <div class="evento__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório B</span>
-              <span><span class="ico">◆</span> 5 dias · 40h</span>
-              <span><span class="ico">◆</span> Pré-requisito: DIP completo</span>
-            </div>
-            <div class="evento__footer">
-              <span class="price">R$ 1.480</span>
-              <span class="link-arrow">Inscrições →</span>
-            </div>
-          </a>
-
-          <a href="atividades.html" class="evento">
-            <div class="evento__head">
-              <div class="evento__date">
-                <strong>05</strong>
-                <span>AGO 2026</span>
-              </div>
-              <span class="tag" style="background:var(--gold-soft);color:var(--gold-2);border-color:var(--gold-soft2)">SIMPÓSIO · INTERNACIONAL</span>
-            </div>
-            <h3>III Simpósio Ectolab — Paracirurgia e Saúde Integrativa</h3>
-            <div class="evento__meta">
-              <span><span class="ico">◆</span> Sede Foz · Auditório principal + online</span>
-              <span><span class="ico">◆</span> 3 dias · 24h</span>
-              <span><span class="ico">◆</span> 14 palestrantes · 7 países</span>
-            </div>
-            <div class="evento__footer">
-              <span class="price">R$ 480 · estudante R$ 240</span>
-              <span class="link-arrow">Inscrições →</span>
-            </div>
-          </a>
-        </div>
-
-        <div style="margin-top:40px;text-align:center">
-          <a href="#" class="btn btn-ghost">Ver agenda completa (até dez/2026) →</a>
+            <a href="/pages/dinamicas.html" class="link-arrow">Ver todas as dinâmicas →</a>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="section bg-white">
+    <!-- O que é um Campo Paracirúrgico -->
+    <section class="section bg-white" style="background:var(--white)">
       <div class="wrap">
         <div class="grid g2 gap-48" style="align-items:start">
           <div>
             <div class="eyebrow"><span class="dot"></span>O QUE É UM CAMPO PARACIRÚRGICO?</div>
             <h2 class="h1" style="margin-top:16px">A atividade que melhor define o que fazemos.</h2>
             <p class="lede" style="margin-top:16px">
-              Encontro técnico em equipe, com até 40 participantes, em que uma roda central de pesquisadores conduz uma intervenção paracirúrgica enquanto o público acompanha, sente e registra. Dura cerca de 2h30, é gratuito e acontece quinzenalmente.
+              Encontro técnico em equipe em que uma roda central de pesquisadores conduz uma
+              intervenção paracirúrgica enquanto o público acompanha, sente e registra.
             </p>
             <p style="font-size:16px;color:var(--ink-2)">
-              Não é uma sessão de cura. Não há promessas. É um ambiente de pesquisa aberta — onde quem participa pela primeira vez pode acompanhar o trabalho, conversar com a equipe ao final e decidir, sem pressão, se quer aprofundar.
+              Não é uma sessão de cura e não há promessas. É um ambiente de pesquisa aberta — onde
+              quem participa pela primeira vez pode acompanhar o trabalho, conversar com a equipe ao
+              final e decidir, sem pressão, se quer aprofundar.
             </p>
+            <a href="/pages/dinamicas.html" class="link-arrow">Conhecer as dinâmicas →</a>
           </div>
           <div class="card" style="border:1px solid var(--ink);padding:32px">
-            <div class="specimen" style="color:var(--blue);margin-bottom:18px">PROTOCOLO PADRÃO &middot; CAMPO PÚBLICO</div>
+            <div class="specimen" style="color:var(--blue);margin-bottom:18px">PROTOCOLO PADRÃO · CAMPO PÚBLICO</div>
             <ol style="padding-left:18px;font-size:15.5px;line-height:1.7;color:var(--ink-2);margin:0">
               <li style="margin-bottom:14px"><strong>Acolhimento</strong> — recepção, leitura do que esperar, dúvidas.</li>
               <li style="margin-bottom:14px"><strong>Centramento</strong> — exercício curto de bioenergia para o grupo todo.</li>
               <li style="margin-bottom:14px"><strong>Trabalho</strong> — equipe central conduz, participantes acompanham.</li>
               <li style="margin-bottom:14px"><strong>Dispersão</strong> — fechamento energético, abertura para troca.</li>
-              <li><strong>Conversa</strong> — chá, perguntas livres, registro voluntário.</li>
+              <li><strong>Conversa</strong> — perguntas livres, registro voluntário.</li>
             </ol>
           </div>
         </div>
       </div>
     </section>
 
+    <!-- CTA final -->
     <section class="cta-band">
       <div class="wrap cta-band__inner">
-        <h2>Quer participar de uma atividade? Consulte a agenda e escolha o melhor caminho.</h2>
-        <a href="agenda.html" class="btn btn-primary">Ver próximas atividades <span class="arrow">→</span></a>
+        <h2>Pronto para participar? A agenda tem todas as datas e inscrições.</h2>
+        <div class="cta-band__actions">
+          <a href="/pages/agenda.html" class="btn btn-primary">Ver Agenda Completa <span class="arrow">→</span></a>
+        </div>
       </div>
     </section>
   </main>

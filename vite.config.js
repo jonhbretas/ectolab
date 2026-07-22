@@ -337,7 +337,8 @@ export default defineConfig({
         parcerias: resolve(__dirname, 'pages/parcerias.html'),
         apoie: resolve(__dirname, 'pages/apoie.html'),
         politicaPrivacidade: resolve(__dirname, 'pages/politica-de-privacidade.html'),
-        agenda: resolve(__dirname, 'pages/agenda.html')
+        agenda: resolve(__dirname, 'pages/agenda.html'),
+        atividades: resolve(__dirname, 'pages/atividades.html')
       }
     }
   }
