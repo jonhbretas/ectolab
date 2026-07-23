@@ -181,7 +181,7 @@
           <div class="pesq-researcher"><span class="pesq-researcher__ph">AP</span><span><b>Ana Paula Prado</b><small>Responsável</small></span></div>
           <div class="pesq-meta"><div class="pesq-meta__row"><span>Perfil</span><span>Adultos interessados em autopesquisa da ectoplasmia</span></div><div class="pesq-meta__row"><span>Modalidade</span><span>Presencial</span></div><div class="pesq-meta__row"><span>Formato</span><span>Registros e questionários</span></div><div class="pesq-meta__row"><span>Linha</span><span>Fisiologia e parafisiologia do ectoplasta</span></div></div>
           <div class="pesq-tags"><span class="pesq-tag">Estimulação vagal</span><span class="pesq-tag">Sintomas</span><span class="pesq-tag">Autopesquisa</span></div>
-          <div class="pesq-actions"><button type="button" class="btn btn-ghost pesq-details-btn" data-details="A equipe responsável informará os critérios de participação, a rotina de registros, os instrumentos utilizados e as condições de consentimento.">Ver detalhes <span class="arrow">→</span></button></div>
+          <div class="pesq-actions">Interessado? Envie email para <a href="mailto:pesquisas@ectolab.org">pesquisas@ectolab.org</a></div>
         </div>
       </article>
       <article class="pesq-card" data-status="preparacao">
@@ -194,7 +194,7 @@
           <div class="pesq-researcher"><span class="pesq-researcher__ph">GG</span><span><b>Giuliano Ginani</b><small>Responsável</small></span></div>
           <div class="pesq-meta"><div class="pesq-meta__row"><span>Perfil</span><span>Adultos com interesse em registros psicofisiológicos e autopesquisa</span></div><div class="pesq-meta__row"><span>Modalidade</span><span>Presencial</span></div><div class="pesq-meta__row"><span>Formato</span><span>Registros psicofisiológicos e autorrelato</span></div><div class="pesq-meta__row"><span>Linha</span><span>Fisiologia e parafisiologia do ectoplasta</span></div></div>
           <div class="pesq-tags"><span class="pesq-tag">Sistema nervoso autônomo</span><span class="pesq-tag">HRV</span><span class="pesq-tag">Ectoplasmia</span></div>
-          <div class="pesq-actions"><button type="button" class="btn btn-ghost pesq-details-btn" data-details="A triagem apresentará os procedimentos de registro, os critérios de inclusão e exclusão, os horários disponíveis e os cuidados com os dados coletados.">Ver detalhes <span class="arrow">→</span></button></div>
+          <div class="pesq-actions">Interessado? Envie email para <a href="mailto:pesquisas@ectolab.org">pesquisas@ectolab.org</a></div>
         </div>
       </article>
       <article class="pesq-card" data-status="preparacao">
@@ -207,7 +207,7 @@
           <div class="pesq-researcher"><span class="pesq-researcher__ph">MG</span><span><b>Maria Gabriela Azevedo Barros</b><small>Responsável</small></span></div>
           <div class="pesq-meta"><div class="pesq-meta__row"><span>Perfil</span><span>Voluntários adultos para atividade experimental controlada</span></div><div class="pesq-meta__row"><span>Modalidade</span><span>Presencial</span></div><div class="pesq-meta__row"><span>Formato</span><span>Protocolo laboratorial</span></div><div class="pesq-meta__row"><span>Linha</span><span>Ectoplasmia aplicada</span></div></div>
           <div class="pesq-tags"><span class="pesq-tag">Modelos biológicos</span><span class="pesq-tag">Fungos</span><span class="pesq-tag">Bioensaios</span></div>
-          <div class="pesq-actions"><button type="button" class="btn btn-ghost pesq-details-btn" data-details="A equipe informará as condições do protocolo, o papel dos voluntários, os critérios de participação e os cuidados experimentais.">Ver detalhes <span class="arrow">→</span></button></div>
+          <div class="pesq-actions">Interessado? Envie email para <a href="mailto:pesquisas@ectolab.org">pesquisas@ectolab.org</a></div>
         </div>
       </article>
       <!-- CMS PESQUISAS END -->
@@ -267,8 +267,6 @@
 
   <div id="__footer"></div>
 
-  <div class="pesq-toast" id="pesq-toast" role="status" aria-live="polite"></div>
-
   <script type="module" src="/assets/chrome.js"></script>
   <script>
     (function () {
@@ -291,18 +289,6 @@
           btn.setAttribute('aria-pressed', 'true');
           applyFilter(btn.getAttribute('data-filter'));
         });
-      });
-
-      var toast = document.getElementById('pesq-toast');
-      var toastTimer;
-      function showToast(msg) {
-        toast.textContent = msg;
-        toast.classList.add('show');
-        clearTimeout(toastTimer);
-        toastTimer = setTimeout(function () { toast.classList.remove('show'); }, 3400);
-      }
-      document.querySelectorAll('.pesq-details-btn').forEach(function (btn) {
-        btn.addEventListener('click', function () { showToast(btn.getAttribute('data-details')); });
       });
     })();
   </script>
