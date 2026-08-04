@@ -342,11 +342,6 @@ async function gerarPDF(eventos) {
     doc.setTextColor(COR.ink);
     doc.text(nome, L, y + 17);
 
-    doc.setFont('jb', 'normal');
-    doc.setFontSize(8.5);
-    doc.setTextColor(COR.ink3);
-    doc.text(String(yr), L + doc.getTextWidth(nome) + 8, y + 17);
-
     doc.setFont('jbB', 'normal');
     doc.setFontSize(7.5);
     doc.setTextColor(COR.ink3);
