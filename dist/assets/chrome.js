@@ -117,7 +117,8 @@
         { cat: "Laboratórios", links: [
           { label: "Laboratório de Paracirurgia", href: P + "pages/laboratorio-paracirurgia.html" },
           { label: "Espaço Bioenergologia", href: P + "pages/bioenergologia.html" },
-          { label: "Laboratório de Ectoplasmologia", href: P + "pages/laboratorio-ectoplasmologia.html" }
+          { label: "Laboratório de Ectoplasmologia", href: P + "pages/laboratorio-ectoplasmologia.html" },
+          { label: "Pesquisas em Andamento", href: P + "pages/pesquisas.html" }
         ]},
         { cat: "Acervo de Pesquisa", links: [
           { label: "Livro Ectoplasma", href: P + "pages/ectoplasma-livro.html" },
@@ -323,6 +324,7 @@
       "Laboratório de Paracirurgia": "Parasurgery Laboratory",
       "Espaço Bioenergologia": "Bioenergology Space",
       "Laboratório de Ectoplasmologia": "Ectoplasmology Laboratory",
+      "Pesquisas em Andamento": "Ongoing Research",
       "Gratuitos": "Free",
       "OGB - Orientação Gratuita em Bioenergologia": "OGB - Free Bioenergology Guidance",
       "Pedido de Tenepes": "Tenepes Request",
@@ -535,6 +537,7 @@
       "Laboratório de Paracirurgia": "Laboratorio de Paracirugía",
       "Espaço Bioenergologia": "Espacio Bioenergología",
       "Laboratório de Ectoplasmologia": "Laboratorio de Ectoplasmología",
+      "Pesquisas em Andamento": "Investigaciones en Curso",
       "Gratuitos": "Gratuitos",
       "OGB - Orientação Gratuita em Bioenergologia": "OGB - Orientación Gratuita en Bioenergología",
       "Pedido de Tenepes": "Solicitud de Tenepes",

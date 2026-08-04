@@ -190,6 +190,33 @@
     .agenda-summary .reset:hover { border-color: var(--ink); color: var(--ink); }
     .agenda-summary .reset[hidden] { display: none; }
 
+    /* ---------- Download (CSV / MD / PDF) ---------- */
+    .dl-group { display: flex; gap: 8px; flex-wrap: wrap; }
+    .dl-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--line-2);
+      background: var(--white);
+      color: var(--ink-2);
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s, color 0.15s;
+    }
+    .dl-btn:hover { border-color: var(--teal); color: var(--teal); }
+    .dl-btn:active { transform: translateY(1px); }
+    .dl-hint {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 0.08em;
+      color: var(--ink-3);
+    }
+
     /* ---------- Month sections ---------- */
     .agenda-body { padding: clamp(36px, 4vw, 56px) 0 0; }
     .month-block { margin-bottom: clamp(40px, 5vw, 64px); scroll-margin-top: 220px; }
@@ -769,6 +796,16 @@
             </div>
           </div>
 
+          <div class="controls-row">
+            <span class="controls-label">Baixar</span>
+            <div class="dl-group" role="group" aria-label="Baixar a agenda em PDF, CSV ou Markdown">
+              <button type="button" class="dl-btn" id="dlPdf" title="Baixar as atividades visíveis em PDF">PDF</button>
+              <button type="button" class="dl-btn" id="dlCsv" title="Baixar as atividades visíveis em CSV (planilha)">CSV</button>
+              <button type="button" class="dl-btn" id="dlMd" title="Baixar as atividades visíveis em Markdown">MD</button>
+            </div>
+            <span class="dl-hint" id="dlHint">Baixa as atividades visíveis com os filtros atuais (ano, categoria e mês).</span>
+          </div>
+
           <div class="agenda-summary">
             <span>Mostrando <strong id="visCount">0</strong> de <strong id="totCount">0</strong> atividades</span>
             <button class="reset" id="resetBtn" hidden>✕ Limpar filtros</button>
@@ -1153,6 +1190,7 @@
 
   <div id="__footer"></div>
   <script type="module" src="/assets/chrome.js"></script>
+  <script type="module" src="/assets/agenda-download.js"></script>
 
   <script>
     (function () {

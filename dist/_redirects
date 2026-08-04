@@ -2,6 +2,12 @@
 # Redirecionamentos 301 do site antigo (WordPress/WooCommerce)
 # para as páginas correspondentes do novo site Ectolab.
 # As regras mais específicas devem vir antes das genéricas.
+#
+# ATENÇÃO: a hospedagem é VERCEL, que NÃO lê este arquivo (formato Netlify).
+# A fonte que a Vercel usa é o /vercel.json (na raiz). Após editar este
+# arquivo, rode `node scripts/convert-redirects.mjs` para regenerar o
+# vercel.json e commite ambos. (A regra /wp-content/* é omitida do vercel.json
+# de propósito — são imagens reais servidas ao blog.)
 # ============================================================
 
 # ---- www → não-www (canônico sem www) ----
