@@ -35,6 +35,7 @@
       "time": "",
       "tag": "",
       "status": "Vagas preenchidas",
+      "vacancies": "",
       "price": "",
       "free": false,
       "buttonLabel": "Ver detalhes",
@@ -42,6 +43,7 @@
       "featuredStyle": "",
       "featuredDate": "",
       "featuredCategory": "",
+      "homeOrdem": null,
       "students": ""
     },
     {
@@ -191,7 +193,8 @@
       "location": "",
       "time": "",
       "tag": "",
-      "status": "Inscrições Abertas",
+      "status": "Vagas preenchidas",
+      "vacancies": "",
       "price": "",
       "free": false,
       "buttonLabel": "Ver detalhes",
