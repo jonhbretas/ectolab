@@ -355,6 +355,15 @@ function isPast(event) {
   return String(event.status || '').toLowerCase().includes('realizado');
 }
 
+function isUpcoming(event) {
+  if (isPast(event)) return false;
+
+  const range = eventDateRange(event);
+  if (!range) return true;
+
+  return range.end.date >= todayUtc();
+}
+
 function monthId(year, month) {
   return year === '2026' ? `m-${month}` : `m${String(year).slice(2)}-${month}`;
 }
@@ -603,7 +612,7 @@ const mapped = events.map((event) => ({
 }
 
 const eventTypes = readEventTypes();
-const events = readEvents(eventTypes);
+const events = readEvents(eventTypes).filter(isUpcoming);
 
 if (events.length === 0) {
   throw new Error('No events found in content/agenda/events.json.');
