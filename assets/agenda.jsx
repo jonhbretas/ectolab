@@ -12,6 +12,16 @@ function agruparPorMes(lista) {
   return [...map.entries()].map(([label, events]) => ({ label, events }));
 }
 
+function mesesCorrentesOuFuturos(lista) {
+  const agora = new Date();
+  const anoAtual = agora.getFullYear();
+  const mesAtual = agora.getMonth() + 1;
+  return lista.filter((e) => {
+    const [ano, mes] = String(e.date).split("-").map(Number);
+    return ano > anoAtual || (ano === anoAtual && mes >= mesAtual);
+  });
+}
+
 function tagStyle(tipo) {
   if (tipo.includes("IMERSÃO") || tipo.includes("CURSO")) return { background: "var(--ink)", color: "var(--paper)", borderColor: "var(--ink)" };
   if (tipo.includes("SIMPÓSIO")) return { background: "var(--gold)", color: "var(--ink)", borderColor: "var(--gold-2)" };
@@ -85,7 +95,7 @@ function MesBloco({ label, events, first }) {
 }
 
 function AgendaPage() {
-  const grupos = agruparPorMes(eventos);
+  const grupos = agruparPorMes(mesesCorrentesOuFuturos(eventos));
 
   return (
     <main>
