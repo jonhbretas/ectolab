@@ -192,7 +192,7 @@
       "description": "",
       "location": "",
       "time": "",
-      "tag": "",
+      "tag": "Esgotado",
       "status": "Vagas preenchidas",
       "vacancies": "",
       "price": "",
@@ -202,6 +202,7 @@
       "featuredStyle": "",
       "featuredDate": "",
       "featuredCategory": "",
+      "homeOrdem": null,
       "students": ""
     },
     {
