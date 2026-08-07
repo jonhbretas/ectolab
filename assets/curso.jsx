@@ -50,7 +50,7 @@ const CURSOS_DB = {
     ],
     obj: ["Ectoplasmia", "Autopensene e heteropensene", "Holopensene do ectoplasta", "Energia consciencial e energia imanente", "Sinais e sintomas relacionados à ectoplasmia", "Instrumentos de autoavaliação, como o parapercepciograma"],
     objLabel: "Temas abordados",
-    info: [["Horário", "14h às 16h30 • 17h às 19h30"], ["Carga horária", "5 horas"], ["Modalidade", "Online"], ["Professor", "Paulo Battistela"], ["Valor", "R$ 75,00"]],
+    info: [["Horário", "14h às 16h30 • 17h às 19h30"], ["Carga horária", "5 horas"], ["Modalidade", "Online"], ["Professor", "Paulo Battistela"], ["Valor", "R$ 180,00"]],
     link: "https://store.conscienciologia.org.br/loja/ectolab/?s=qualifica%C3%A7%C3%A3o+dos+pensenes",
     depoimentos: [{ a: "Celeste Silveira", t: "Parabéns Prof. Paulo! Grata." }]
   },
