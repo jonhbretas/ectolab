@@ -400,7 +400,7 @@ function CursosDestaque() {
       nivel: "Aprofundamento",
       preco: "Em breve",
       image: "/imagens/materializacoes-interassistenciais.webp",
-      link: "pages/cursos.html",
+      link: "pages/curso-materializacoes.html",
     },
   ];
   return (

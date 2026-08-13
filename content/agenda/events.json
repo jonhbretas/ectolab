@@ -405,6 +405,7 @@
       "price": "R$500",
       "free": false,
       "buttonLabel": "Ver detalhes",
+      "page": "/pages/curso-materializacoes.html",
       "modalidades": [
         {
           "label": "Presencial",

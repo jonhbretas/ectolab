@@ -351,6 +351,7 @@ export default defineConfig({
         dinamicas: resolve(__dirname, 'pages/dinamicas.html'),
         cursoEctoplasmiaInterassistencial: resolve(__dirname, 'pages/curso-ectoplasmia-interassistencial.html'),
         cursoEctoplasmiaProtetiva: resolve(__dirname, 'pages/curso-ectoplasmia-protetiva.html'),
+        cursoMaterializacoes: resolve(__dirname, 'pages/curso-materializacoes.html'),
         curso: resolve(__dirname, 'pages/curso.html'),
         rede: resolve(__dirname, 'pages/rede.html'),
         redeCadastro: resolve(__dirname, 'pages/rede-cadastro.html'),

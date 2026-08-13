@@ -198,8 +198,8 @@ export const eventos = [
     "local": "Híbrido - Foz do Iguaçu",
     "horario": "09:00 às 17:00",
     "detalhe": null,
-    "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/",
-    "page": null,
+    "href": "/pages/curso-materializacoes.html",
+    "page": "/pages/curso-materializacoes.html",
     "preco": "R$500 · R$450",
     "precoExtra": null,
     "modalidades": [

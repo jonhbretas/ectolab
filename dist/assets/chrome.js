@@ -71,6 +71,9 @@
         ]},
         { cat: "Oficina", links: [
           { label: "Oficina de Ectoplasmologia", href: P + "pages/oficina-ectoplasmologia.html" }
+        ]},
+        { cat: "Híbridos / Parcerias", links: [
+          { label: "Materializações Interassistenciais", href: P + "pages/curso-materializacoes.html" }
         ]}
       ]
     },

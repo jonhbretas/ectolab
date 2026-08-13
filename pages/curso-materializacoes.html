@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Materializações Interassistenciais — Curso híbrido · Ectolab + IC TENEPES</title>
+<meta name="description" content="Curso híbrido nos dias 31/10 e 01/11/2026, em Foz do Iguaçu e online. Ectoplasmologia interassistencial, Tenepes avançada, gescons e materialização de estruturas e instituições evolutivas. Parceria IC TENEPES e ECTOLAB." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles.css" />
+<link rel="stylesheet" href="../assets/inner.css" />
+<style>
+a{color:inherit}
+.prose a,.mat-link{color:var(--blue);border-bottom:1px solid var(--blue-soft2)}
+.prose a:hover,.mat-link:hover{border-color:var(--blue);color:var(--teal-glow)}
+.mat-hero__title{font-family:var(--display);font-weight:700;font-size:clamp(38px,5.4vw,84px);line-height:0.94;letter-spacing:-0.035em;margin:0;color:#fff}
+.mat-hero__title em{font-style:normal;color:var(--gold);display:block}
+.mat-hero__sub{font-family:var(--display);font-weight:400;font-size:clamp(20px,2.1vw,30px);letter-spacing:-0.015em;color:var(--teal-glow2);margin:14px 0 0}
+.mat-hero__ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.mat-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.28);color:rgba(255,255,255,0.85)}
+.mat-ask{display:grid;grid-template-columns:1.25fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.mat-ask__figure{border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;background:var(--white)}
+.mat-ask__q{font-family:var(--display);font-weight:600;font-size:clamp(26px,2.8vw,40px);line-height:1.08;letter-spacing:-0.025em;margin:0 0 20px}
+.mat-ask__q em{font-style:normal;color:var(--blue)}
+.mat-temas{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden}
+.mat-tema{background:var(--white);padding:28px 26px 30px;display:flex;flex-direction:column;gap:10px}
+.mat-tema__n{font-family:var(--mono);font-size:12px;letter-spacing:0.1em;color:var(--gold-2)}
+.mat-tema h3{font-family:var(--display);font-size:21px;font-weight:600;letter-spacing:-0.015em;margin:2px 0 0}
+.mat-tema p{font-size:14.5px;color:var(--ink-2);line-height:1.6;margin:0}
+.mat-hibrido{display:grid;grid-template-columns:auto 1fr;gap:24px;align-items:start;padding:26px 30px;border-radius:var(--r-md);margin-bottom:40px}
+.mat-hibrido__tag{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:#fff;border:1px solid rgba(255,255,255,0.35);padding:6px 12px;border-radius:999px;white-space:nowrap}
+.mat-hibrido p{margin:0;font-size:15px;line-height:1.65;color:rgba(255,255,255,0.88)}
+.mat-hibrido strong{color:#fff}
+.mat-turno{margin-top:40px}
+.mat-turno__head{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.mat-turno__head h3{font-family:var(--display);font-size:clamp(20px,1.9vw,26px);font-weight:600;letter-spacing:-0.015em;margin:0}
+.mat-slot{display:grid;grid-template-columns:150px 1fr;gap:28px;padding:20px 0;border-bottom:1px dashed var(--line);align-items:start}
+.mat-slot__time{font-family:var(--mono);font-size:13.5px;letter-spacing:0.02em;color:var(--ink);font-weight:500;padding-top:2px}
+.mat-slot h4{font-family:var(--display);font-size:19px;font-weight:600;letter-spacing:-0.01em;margin:0 0 4px}
+.mat-slot__who{font-size:14.5px;color:var(--blue);margin:0}
+.mat-slot__note{font-size:13.5px;color:var(--ink-3);margin:8px 0 0}
+.mat-slot--pausa .mat-slot__time{color:var(--ink-3);font-weight:400}
+.mat-slot--pausa h4{font-family:var(--sans);font-size:15px;font-weight:500;color:var(--ink-3);margin:0}
+.mat-precos{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.mat-preco{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:30px 28px 28px;display:flex;flex-direction:column;gap:14px}
+.mat-preco--destaque{border-color:var(--ink)}
+.mat-preco__val{font-family:var(--display);font-size:44px;font-weight:700;letter-spacing:-0.035em;line-height:1;color:var(--blue)}
+.mat-preco h3{font-family:var(--display);font-size:20px;font-weight:600;margin:0;letter-spacing:-0.015em}
+.mat-preco p{font-size:14px;color:var(--ink-2);margin:0;flex:1}
+.mat-serie{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.mat-serie img{border:1px solid var(--line);border-radius:var(--r-md);width:100%}
+@media (max-width:1000px){.mat-temas{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){.mat-ask{grid-template-columns:1fr}.mat-precos,.mat-serie{grid-template-columns:1fr}.mat-slot{grid-template-columns:1fr;gap:6px}.mat-hibrido{grid-template-columns:1fr}}
+@media (max-width:620px){.mat-temas{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-active="cursos">
+<div id="__header"></div>
+
+<main>
+  <section class="curso-hero" data-screen-label="Hero">
+    <div class="wrap">
+      <div class="breadcrumb" style="color:rgba(255,255,255,0.5)">
+        <a href="../index.html" style="color:rgba(255,255,255,0.7)">Ectolab</a><span class="sep">◆</span>
+        <a href="cursos.html" style="color:rgba(255,255,255,0.7)">Cursos</a><span class="sep">◆</span>
+        <span style="color:#fff">Materializações Interassistenciais</span>
+      </div>
+      <div class="curso-hero__grid" style="margin-top:32px">
+        <div>
+          <div class="eyebrow" style="color:var(--gold)"><span class="dot"></span>CURSO HÍBRIDO &middot; PARCERIA IC TENEPES + ECTOLAB</div>
+          <h1 class="mat-hero__title" style="margin-top:18px">Materializações<em>Interassistenciais</em></h1>
+          <p class="mat-hero__sub">Sinergismo Tenepes–Ectoplasmia</p>
+          <p class="lede" style="margin-top:22px;max-width:560px;color:rgba(255,255,255,0.8)">
+            Você já refletiu sobre as suas materializações interassistenciais?
+            O que mais podemos materializar evolutivamente ainda nesta vida?
+          </p>
+          <div class="mat-hero__ctas">
+            <span class="mat-badge">31/10 e 01/11/2026</span>
+            <span class="mat-badge">Foz do Iguaçu + online</span>
+            <span class="mat-badge">6 professores</span>
+          </div>
+        </div>
+        <aside class="curso-hero__card">
+          <dl>
+            <div><dt>Datas</dt><dd>31/out e 01/nov &middot; 2026</dd></div>
+            <div><dt>Sábado</dt><dd>9h às 18h30</dd></div>
+            <div><dt>Domingo</dt><dd>9h às 17h</dd></div>
+            <div><dt>Modalidade</dt><dd>Híbrido &middot; presencial + online</dd></div>
+            <div><dt>Investimento</dt><dd class="curso-hero__price">R$ 500 / R$ 450</dd></div>
+          </dl>
+          <div style="display:flex;flex-direction:column;gap:10px;margin-top:24px">
+            <a href="https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;justify-content:center">Inscrição presencial <span class="arrow">→</span></a>
+            <a href="https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-online/" target="_blank" rel="noopener" class="btn btn-ghost" style="width:100%;justify-content:center;color:#fff;border-color:rgba(255,255,255,0.5)">Inscrição online <span class="arrow">→</span></a>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-screen-label="Convite">
+    <div class="wrap">
+      <div class="mat-ask">
+        <div>
+          <div class="eyebrow"><span class="dot"></span>O CONVITE</div>
+          <h2 class="mat-ask__q" style="margin-top:16px">Como ectoplastas, usamos nossa ectoplasmia<br /><em>todos os dias</em> — na Tenepes, nas reciclagens<br />pessoais e na interassistência.</h2>
+          <div class="prose" style="margin-left:0;max-width:none">
+            <p>O que mais podemos materializar evolutivamente ainda nesta vida? É com essa proposta que convidamos você para o curso <strong>Materializações Interassistenciais</strong>, uma parceria da <strong>IC TENEPES</strong> com a <strong>ECTOLAB</strong>.</p>
+            <p>Vamos aprofundar juntos a temática da ectoplasmologia interassistencial, da Tenepes avançada, das gescons e até das materializações de estruturas e instituições evolutivas. Será uma oportunidade para pensarmos juntos sobre nossas materializações — as que já sustentamos e as que ainda estão por vir.</p>
+            <p style="margin-bottom:0"><strong>Seja muito bem-vindo(a).</strong></p>
+          </div>
+        </div>
+        <figure class="mat-ask__figure" style="margin:0">
+          <img src="../assets/mat-card.png" alt="Curso híbrido Materializações Interassistenciais — Sinergismo Tenepes-Ectoplasmia, 31/10 e 01/11 de 2026, IC TENEPES e Ectolab" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white" data-screen-label="Temas">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span>O QUE VAMOS APROFUNDAR</div>
+      <h2 class="h1" style="margin:16px 0 40px">Quatro frentes de estudo.</h2>
+      <div class="mat-temas">
+        <div class="mat-tema">
+          <span class="mat-tema__n">/01</span>
+          <h3>Ectoplasmologia interassistencial</h3>
+          <p>Do fenômeno pelo fenômeno para o fenômeno com finalidade: a ectoplasmia estudada, experimentada e qualificada dentro da assistência.</p>
+        </div>
+        <div class="mat-tema">
+          <span class="mat-tema__n">/02</span>
+          <h3>Tenepes avançada</h3>
+          <p>A tarefa energética pessoal como laboratório diário — sinergismo entre ectoplasmia, amparo e ampliação do atendimento.</p>
+        </div>
+        <div class="mat-tema">
+          <span class="mat-tema__n">/03</span>
+          <h3>Gescons</h3>
+          <p>A gestação consciencial como materialização evolutiva: obras, pesquisas e escritas que sobrevivem à consciência que as gerou.</p>
+        </div>
+        <div class="mat-tema">
+          <span class="mat-tema__n">/04</span>
+          <h3>Estruturas e instituições</h3>
+          <p>Materializações maxiproexológicas: como projetos, sedes e instituições conscienciocêntricas saem do potencial para o concreto.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-screen-label="Cronograma">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span>CRONOGRAMA</div>
+      <h2 class="h1" style="margin:16px 0 32px">Sábado, 31 de outubro e<br />domingo, 01 de novembro de 2026.</h2>
+
+      <div class="mat-hibrido glass-teal">
+        <span class="mat-hibrido__tag">⇄ 100% híbrido</span>
+        <p>Todas as atividades acontecem ao mesmo tempo presencialmente e online. O aluno permanece conectado durante <strong>todo o cronograma</strong> — inclusive na Oficina e no Campo Pangrafológico, que terão orientações para autoexperimentação de quem estiver em casa. O curso ficará gravado e disponível no EAD da Conscienciologia.</p>
+      </div>
+
+      <div class="mat-turno">
+        <div class="mat-turno__head">
+          <h3>Sábado de manhã</h3>
+          <span class="specimen">31 DE OUTUBRO</span>
+        </div>
+        <div class="mat-slot">
+          <span class="mat-slot__time">9h00 – 10h30</span>
+          <div>
+            <h4>Aula: Introdução de Ectoplasmologia e Materializações Interassistenciais</h4>
+            <p class="mat-slot__who">Flávio Amado e Ana Prado</p>
+          </div>
+        </div>
+        <div class="mat-slot mat-slot--pausa">
+          <span class="mat-slot__time">10h30 – 10h45</span>
+          <div><h4>Intervalo · 15'</h4></div>
+        </div>
+        <div class="mat-slot">
+          <span class="mat-slot__time">10h45 – 11h30</span>
+          <div><h4>Debate sobre a aula</h4><p class="mat-slot__who">Turma e professores &middot; 45'</p></div>
+        </div>
+        <div class="mat-slot mat-slot--pausa">
+          <span class="mat-slot__time">11h30 – 14h30</span>
+          <div><h4>Almoço e intervalo</h4></div>
+        </div>
+      </div>
+
+      <div class="mat-turno">
+        <div class="mat-turno__head">
+          <h3>Sábado à tarde</h3>
+          <span class="specimen">31 DE OUTUBRO</span>
+        </div>
+        <div class="mat-slot">
+          <span class="mat-slot__time">14h30 – 16h00</span>
+          <div><h4>Aula: Materializações Maxiproexológicas</h4><p class="mat-slot__who">Alexandre Balthazar</p></div>
+        </div>
+        <div class="mat-slot mat-slot--pausa">
+          <span class="mat-slot__time">16h00 – 16h15</span>
+          <div><h4>Intervalo · 15'</h4></div>
+        </div>
+        <div class="mat-slot">
+          <span class="mat-slot__time">16h15 – 18h30</span>
+          <div>
+            <h4>Aula: Escrita Parapsíquica Tenepessológica + Oficina</h4>
+            <p class="mat-slot__who">Julio Royer e Valdirene Meselira</p>
+            <p class="mat-slot__note">⇄ Híbrido: orientações para autoexperimentação de quem estiver em casa.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="mat-turno">
+        <div class="mat-turno__head">
+          <h3>Domingo de manhã</h3>
+          <span class="specimen">01 DE NOVEMBRO</span>
+        </div>
+        <div class="mat-slot">
+          <span class="mat-slot__time">9h00 – 11h45</span>
+          <div>
+            <h4>Campo Pangrafológico</h4>
+            <p class="mat-slot__who">Julio Royer e Valdirene Meselira</p>
+            <p class="mat-slot__note">⇄ Híbrido: orientações para autoexperimentação de quem estiver em casa.</p>
+          </div>
+        </div>
+        <div class="mat-slot mat-slot--pausa">
+          <span class="mat-slot__time">11h45 – 14h00</span>
+          <div><h4>Almoço e intervalo</h4></div>
+        </div>
+      </div>
+
+      <div class="mat-turno">
+        <div class="mat-turno__head">
+          <h3>Domingo à tarde</h3>
+          <span class="specimen">01 DE NOVEMBRO</span>
+        </div>
+        <div class="mat-slot">
+          <span class="mat-slot__time">14h00 – 15h30</span>
+          <div><h4>Aula: Parambulatório</h4><p class="mat-slot__who">Hernande Leite</p></div>
+        </div>
+        <div class="mat-slot mat-slot--pausa">
+          <span class="mat-slot__time">15h30 – 15h45</span>
+          <div><h4>Intervalo · 15'</h4></div>
+        </div>
+        <div class="mat-slot">
+          <span class="mat-slot__time">15h45 – 17h00</span>
+          <div><h4>Debate final e encerramento</h4><p class="mat-slot__who">Toda a equipe docente</p></div>
+        </div>
+      </div>
+
+      <p style="margin-top:28px"><a href="../assets/mat-cronograma.png" target="_blank" rel="noopener" class="mat-link">Ver o cronograma em imagem →</a></p>
+    </div>
+  </section>
+
+  <section class="section bg-white" data-screen-label="Professores">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span>EQUIPE DOCENTE</div>
+      <h2 class="h1" style="margin:16px 0 48px">Quem ensina.</h2>
+      <div class="equipe-grid" style="grid-template-columns:repeat(3,1fr)">
+        <div class="pessoa">
+          <div class="pessoa__viz">AB</div>
+          <div class="specimen">MAXIPROEXOLOGIA</div>
+          <h3>Alexandre Balthazar</h3>
+          <p>Conduz a aula sobre materializações maxiproexológicas — projetos, estruturas e instituições evolutivas.</p>
+        </div>
+        <div class="pessoa">
+          <div class="pessoa__viz">AP</div>
+          <div class="specimen">ECTOPLASMOLOGIA</div>
+          <h3>Ana Prado</h3>
+          <p>Abertura do curso, com a introdução de ectoplasmologia e materializações interassistenciais.</p>
+        </div>
+        <div class="pessoa">
+          <div class="pessoa__viz">FA</div>
+          <div class="specimen">ECTOPLASMOLOGIA</div>
+          <h3>Flavio Amado</h3>
+          <p>Abertura do curso, com a introdução de ectoplasmologia e materializações interassistenciais.</p>
+        </div>
+        <div class="pessoa">
+          <div class="pessoa__viz">HL</div>
+          <div class="specimen">PARAMBULATÓRIO</div>
+          <h3>Hernande Leite</h3>
+          <p>Aula de Parambulatório, no domingo à tarde: a assistência aplicada em ambiente parapsíquico.</p>
+        </div>
+        <div class="pessoa">
+          <div class="pessoa__viz">JR</div>
+          <div class="specimen">ESCRITA PARAPSÍQUICA</div>
+          <h3>Julio Royer</h3>
+          <p>Escrita parapsíquica tenepessológica, oficina prática e condução do Campo Pangrafológico.</p>
+        </div>
+        <div class="pessoa">
+          <div class="pessoa__viz">VM</div>
+          <div class="specimen">CAMPO PANGRAFOLÓGICO</div>
+          <h3>Valdirene Meselira</h3>
+          <p>Escrita parapsíquica tenepessológica, oficina prática e condução do Campo Pangrafológico.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-screen-label="Investimento">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span>INVESTIMENTO E INSCRIÇÃO</div>
+      <h2 class="h1" style="margin:16px 0 40px">Escolha a sua modalidade.</h2>
+      <div class="mat-precos">
+        <div class="mat-preco mat-preco--destaque">
+          <span class="specimen" style="color:var(--blue)">📍 PRESENCIAL &middot; FOZ DO IGUAÇU</span>
+          <div class="mat-preco__val">R$ 500</div>
+          <h3>Presencial</h3>
+          <p>Dois dias de curso no campus, com a oficina e o Campo Pangrafológico vivenciados em grupo.</p>
+          <a href="https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center">Inscrever-se <span class="arrow">→</span></a>
+        </div>
+        <div class="mat-preco">
+          <span class="specimen" style="color:var(--blue)">💻 ONLINE &middot; AO VIVO</span>
+          <div class="mat-preco__val">R$ 450</div>
+          <h3>Online</h3>
+          <p>Transmissão de todas as atividades, com orientações de autoexperimentação em casa. Gravação no EAD da Conscienciologia.</p>
+          <a href="https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-online/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center">Inscrever-se <span class="arrow">→</span></a>
+        </div>
+        <div class="mat-preco">
+          <span class="specimen" style="color:var(--gold-2)">ACIMA DE 65 ANOS</span>
+          <div class="mat-preco__val">R$ 350</div>
+          <h3>Valor reduzido</h3>
+          <p>Disponível para participantes acima de 65 anos, nas duas modalidades. Informe a condição no momento da inscrição.</p>
+          <a href="contato.html" class="btn btn-ghost" style="width:100%;justify-content:center">Falar com a secretaria</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white" data-screen-label="Contexto">
+    <div class="wrap">
+      <div class="grid g2 gap-48" style="align-items:center">
+        <div>
+          <div class="eyebrow"><span class="dot"></span>DE ONDE VEM ESSE TEMA</div>
+          <h2 class="h2" style="margin:16px 0 20px">Menos espetáculo.<br /><em style="color:var(--blue)">Mais lucidez.</em></h2>
+          <p class="lede" style="margin-bottom:20px">
+            No século XIX as mesas girantes chocaram multidões. A pergunta mais importante, porém, nunca foi
+            <em>“isso aconteceu?”</em> — e sim <em>“para que isso serviria hoje?”</em>
+          </p>
+          <p style="color:var(--ink-2);max-width:520px">
+            Da história ao laboratório. Do fenômeno à finalidade. Da curiosidade à interassistência: é essa transição
+            paradigmática que o curso propõe estudar, experimentar e aplicar.
+          </p>
+          <a href="historia.html" class="btn-text" style="margin-top:20px;font-size:13.5px">História &middot; Fatos e Parafatos →</a>
+        </div>
+        <div class="mat-serie">
+          <img src="../assets/mat-serie-01.png" alt="Card da série: no século XIX, as mesas começaram a girar" />
+          <img src="../assets/mat-serie-08.png" alt="Card da série: essa é a transição paradigmática — menos espetáculo, mais lucidez" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" data-screen-label="CTA">
+    <div class="wrap cta-band__inner">
+      <h2>Você já refletiu sobre o que ainda pode <strong style="color:var(--blue);font-weight:700">materializar evolutivamente</strong> nesta vida?</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/" target="_blank" rel="noopener" class="btn btn-primary">Presencial · R$ 500 <span class="arrow">→</span></a>
+        <a href="https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-online/" target="_blank" rel="noopener" class="btn btn-ghost">Online · R$ 450 <span class="arrow">→</span></a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="__footer"></div>
+<script type="module" src="/assets/chrome.js"></script>
+</body>
+</html>
