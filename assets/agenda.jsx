@@ -29,7 +29,8 @@ function tagStyle(tipo) {
 }
 
 function EventoRow({ e }) {
-  const hasModalidades = e.modalidades && e.modalidades.length >= 2;
+  const hasModalidades = e.modalidades && e.modalidades.length >= 2 && !e.page;
+  const linkTarget = e.page || e.href;
   return (
     <article className="timeline-event">
       <div className="agenda-date">
@@ -55,7 +56,7 @@ function EventoRow({ e }) {
         {hasModalidades ? (
           <div className="agenda-event-foot" style={{ flexDirection: "column", alignItems: "stretch", gap: 8 }}>
             {e.modalidades.map((m, i) => (
-              <a key={i} href={m.href || e.href} className="link-arrow" style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
+              <a key={i} href={m.href || linkTarget} className="link-arrow" style={{ display: "flex", justifyContent: "space-between", width: "100%" }}>
                 <span>{m.buttonLabel || m.label} →</span>
                 {m.price && <span className="agenda-price" style={{ position: "static" }}>{m.price}</span>}
               </a>
@@ -63,7 +64,7 @@ function EventoRow({ e }) {
           </div>
         ) : (
           <div className="agenda-event-foot">
-            <a href={e.href} className="link-arrow">
+            <a href={linkTarget} className="link-arrow">
               {e.gratuito ? "Detalhes →" : "Inscrições →"}
             </a>
             {!e.gratuito && (

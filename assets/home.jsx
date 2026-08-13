@@ -529,7 +529,7 @@ function ProximosEventos() {
             </div>
             <div className="home-destaques__grid">
               {destaques.map((e, i) => (
-                <a href={`pages/agenda.html?focus=${e.slug || ''}`} key={i} className={`home-feat${e.featuredStyle === 'highlight' ? ' highlight' : ''}`}>
+                <a href={e.page || `pages/agenda.html?focus=${e.slug || ''}`} key={i} className={`home-feat${e.featuredStyle === 'highlight' ? ' highlight' : ''}`}>
                   <div className="home-feat__tags">
                     {e.tipo ? <span className="home-feat__cat">{e.tipo}</span> : null}
                     {e.gratuito ? <span className="home-feat__free">Gratuito</span> : null}
@@ -553,7 +553,7 @@ function ProximosEventos() {
           </div>
           <div className="prox-eventos__rail">
             {proximos.map((e, i) => (
-              <a href={`pages/agenda.html?focus=${e.slug || ''}`} key={i} className="prox-evento">
+              <a href={e.page || `pages/agenda.html?focus=${e.slug || ''}`} key={i} className="prox-evento">
                 <div className="prox-evento__date">
                   <strong>{e.dia}</strong>
                   <span>{e.mes}</span>

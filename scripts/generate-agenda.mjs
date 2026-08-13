@@ -346,6 +346,7 @@ function normalizeEvent(rawEvent, monthGroup = {}, models = new Map(), eventType
     vacancies: event.vacancies || event.students || event.studentCount || '',
     free: Boolean(event.free || String(price).toLowerCase().includes('gratuito')),
     status,
+    page: event.page || '',
     href: event.href || '/pages/atividades.html',
     buttonLabel: event.buttonLabel || event.ctaLabel || 'Ver detalhes',
   };
@@ -436,7 +437,8 @@ function renderRow(event) {
   const buttonLabel = event.buttonLabel || 'Ver detalhes';
   const rowDate = formatRowDate(event);
   const vacancies = event.vacancies ? `<span class="vacancies">${escapeHtml(event.vacancies)}</span>` : '';
-  const hasModalidades = event.modalidades && event.modalidades.length >= 2;
+  const hasModalidades = event.modalidades && event.modalidades.length >= 2 && !event.page;
+  const linkTarget = event.page || event.href || '/pages/atividades.html';
 
   if (hasModalidades) {
     const modalidadesHtml = event.modalidades.map((m) => {
@@ -465,7 +467,7 @@ ${modalidadesHtml}
           </div>`;
   }
 
-  return `          <a class="agenda-row${rowPast}" data-cat="${escapeHtml(event.category)}" data-month="${escapeHtml(event.month)}" data-slug="${escapeHtml(event.slug)}" href="${escapeHtml(event.href || '/pages/atividades.html')}">
+  return `          <a class="agenda-row${rowPast}" data-cat="${escapeHtml(event.category)}" data-month="${escapeHtml(event.month)}" data-slug="${escapeHtml(event.slug)}" href="${escapeHtml(linkTarget)}">
             <div class="agenda-row__date"><strong>${escapeHtml(rowDate.day)}</strong><span>${escapeHtml(rowDate.weekday)}</span></div>
             <div class="agenda-row__body">
               <div class="agenda-row__labels"><span class="agenda-tag ${escapeHtml(event.category)}">${escapeHtml(event.tag)}</span><span class="${stateClass}">${escapeHtml(event.status)}</span>${vacancies}</div>
@@ -580,7 +582,8 @@ const mapped = events.map((event) => ({
     local:     event.location || '',
     horario:   event.time || '',
     detalhe:   event.detalhe || null,
-    href:      event.href || '/pages/atividades.html',
+    href:      event.page || event.href || '/pages/atividades.html',
+    page:      event.page || null,
     preco:     event.price || '',
     precoExtra: event.precoExtra || null,
     modalidades: (event.modalidades || []).map((m) => ({
