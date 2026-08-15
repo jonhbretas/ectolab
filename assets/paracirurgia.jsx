@@ -58,7 +58,7 @@ function HeroParacirurgia() {
           <div className="col gap-16">
             <p>
               Aqueles que desejam estudar e aprimorar seu parapsiquismo (de modo assistencial) podem participar 
-              presencialmente da Dinâmica Interassistencial da Paracirurgia como doadores 
+              presencialmente da Dinâmica Interassistencial de Paracirurgia como doadores 
               de energia e/ou acopladores das consciências extrafísicas e intrafísicas enfermas. 
               Todos somos capazes de assistir, tendo identificado ou não algum grau de domínio parapsíquico.
             </p>
@@ -142,7 +142,7 @@ function ComoFunciona() {
             <h2 className="h2" style={{ marginTop: 16 }}>Como funciona?</h2>
             <div className="prose" style={{ marginLeft: 0, marginTop: 24, fontSize: '16px' }}>
               <p>
-                A Dinâmica Interassistencial da Paracirurgia é uma atividade grupal, semanal, 
+                A Dinâmica Interassistencial de Paracirurgia é uma atividade grupal, semanal, 
                 que ocorre em espaço físico tecnicamente otimizado pelo sinergismo voluntários 
                 ectoplastas – amparadores técnicos em ectoplasmia paracirúrgica. Realizada 
                 nas cidades de Foz do Iguaçu, Curitiba, São Paulo, Florianópolis, Brasília e 
@@ -208,7 +208,7 @@ function ComoParticipar() {
           <div className="eyebrow"><span className="dot"></span>INSCRIÇÕES E ACESSO</div>
           <h2 className="h2" style={{ marginTop: 16 }}>Como participar?</h2>
           <p className="lede" style={{ marginTop: 16, maxWidth: 800 }}>
-            A Dinâmica Interassistencial da Paracirurgia é realizada nas cidades de Foz do Iguaçu, Curitiba, São Paulo, Florianópolis, Brasília e Rio de Janeiro. Realizada também em 2 países: Alemanha e Portugal.
+            A Dinâmica Interassistencial de Paracirurgia é realizada nas cidades de Foz do Iguaçu, Curitiba, São Paulo, Florianópolis, Brasília e Rio de Janeiro. Realizada também em 2 países: Alemanha e Portugal.
           </p>
         </div>
         <div className="grid g3 gap-24">
