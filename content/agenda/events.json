@@ -577,6 +577,31 @@
       "featuredCategory": "",
       "pinHome": false,
       "homeOrdem": null
+    },
+    {
+      "model": "",
+      "title": "",
+      "category": "",
+      "categoryCustom": "Escola Multidimensional de Interassistência Parambulatorial",
+      "date": "2026-11-15",
+      "durationDays": 1,
+      "href": "https://docs.google.com/forms/d/1wCZQVt5Cqi9lkBIHOoTM0fIA52DwslYMrecEuI0w3Ys/viewform?edit_requested=true#responses",
+      "description": "",
+      "location": "Online",
+      "time": "09h00 às 11h30",
+      "tag": "",
+      "status": "Em breve",
+      "vacancies": "",
+      "price": "",
+      "free": false,
+      "buttonLabel": "Ver detalhes",
+      "modalidades": [],
+      "featured": true,
+      "featuredStyle": "default",
+      "featuredDate": "",
+      "featuredCategory": "",
+      "pinHome": false,
+      "homeOrdem": null
     }
   ]
 }
