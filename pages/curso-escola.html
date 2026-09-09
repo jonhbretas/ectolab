@@ -93,8 +93,16 @@ a{color:inherit}
 .esc-prof__viz img{width:100%;height:100%;object-fit:cover;object-position:72% 30%}
 .esc-prof h3{font-family:var(--display);font-size:26px;font-weight:600;margin:6px 0 8px;letter-spacing:-0.015em}
 .esc-prof p{font-size:15px;color:var(--ink-2);margin:0;line-height:1.6;max-width:640px}
+.esc-video{display:grid;grid-template-columns:0.8fr 1.4fr;gap:clamp(28px,5vw,72px);align-items:center}
+.esc-video__intro{max-width:420px}
+.esc-video__intro h2{font-family:var(--display);font-weight:600;font-size:clamp(28px,3.2vw,46px);line-height:1.04;letter-spacing:-0.025em;margin:16px 0 18px}
+.esc-video__intro h2 em{font-style:normal;color:var(--blue)}
+.esc-video__intro p{font-size:15px;color:var(--ink-2);line-height:1.65;margin:0}
+.esc-video__frame{margin:0;background:var(--ink);border:1px solid var(--teal-soft2);border-radius:var(--r-lg);padding:8px;box-shadow:0 22px 48px -24px rgba(8,34,43,0.5)}
+.esc-video__ratio{position:relative;aspect-ratio:16 / 9;overflow:hidden;border-radius:var(--r-md);background:var(--ink-3)}
+.esc-video__ratio iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
 @media (max-width:1000px){.esc-obj{grid-template-columns:1fr}.esc-datas{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:900px){.esc-hero__grid,.esc-def,.esc-precos{grid-template-columns:1fr}.esc-jornada{grid-template-columns:1fr}.esc-seta{flex-direction:row;padding:4px 0}.esc-seta__ico{transform:rotate(90deg)}.esc-prof{grid-template-columns:1fr}}
+@media (max-width:900px){.esc-hero__grid,.esc-def,.esc-precos,.esc-video{grid-template-columns:1fr}.esc-jornada{grid-template-columns:1fr}.esc-seta{flex-direction:row;padding:4px 0}.esc-seta__ico{transform:rotate(90deg)}.esc-prof{grid-template-columns:1fr}.esc-video__intro{max-width:none}}
 @media (max-width:620px){.esc-datas,.esc-lote,.esc-lotes{grid-template-columns:1fr}}
 </style>
 </head>
@@ -140,6 +148,23 @@ a{color:inherit}
         </div>
         <figure class="esc-hero__figure">
           <img src="../assets/escola-card.png" alt="Escola Multidimensional de Interassistência Parambulatorial — curso online com o professor Hernande Leite. Aulas em 15/11 e 13/12 de 2026, 17/01 e 21/02 de 2027." />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white" data-screen-label="Apresentação em vídeo">
+    <div class="wrap">
+      <div class="esc-video">
+        <div class="esc-video__intro">
+          <div class="eyebrow"><span class="dot"></span>APRESENTAÇÃO DA ESCOLA</div>
+          <h2>Entenda o percurso <em>Escola + Imersão.</em></h2>
+          <p>Assista à live de apresentação e conheça a proposta, a estrutura dos encontros e como a formação online se conecta à experiência prática da Imersão Parambulatorial.</p>
+        </div>
+        <figure class="esc-video__frame">
+          <div class="esc-video__ratio">
+            <iframe src="https://www.youtube-nocookie.com/embed/Z7V1_0DbYEk" title="Live de apresentação da Escola Multidimensional de Interassistência Parambulatorial" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
         </figure>
       </div>
     </div>
