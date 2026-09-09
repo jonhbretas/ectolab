@@ -353,6 +353,7 @@ export default defineConfig({
         cursoEctoplasmiaProtetiva: resolve(__dirname, 'pages/curso-ectoplasmia-protetiva.html'),
         cursoQuadroSinoptico: resolve(__dirname, 'pages/curso-quadro-sinoptico.html'),
         cursoMaterializacoes: resolve(__dirname, 'pages/curso-materializacoes.html'),
+        cursoEscola: resolve(__dirname, 'pages/curso-escola.html'),
         curso: resolve(__dirname, 'pages/curso.html'),
         rede: resolve(__dirname, 'pages/rede.html'),
         redeCadastro: resolve(__dirname, 'pages/rede-cadastro.html'),

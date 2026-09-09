@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Escola Multidimensional de Interassistência Parambulatorial — Curso online · Ectolab</title>
+<meta name="description" content="Escola online em 4 encontros modulares (nov/2026 a fev/2027) com o professor Hernande Leite. Base teórica que se completa na Imersão em Ectoplasmia 2027. Lotes com desconto e combos Escola + Imersão." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="../assets/styles.css" />
+<link rel="stylesheet" href="../assets/inner.css" />
+<style>
+a{color:inherit}
+.prose a,.esc-link{color:var(--blue);border-bottom:1px solid var(--blue-soft2)}
+.prose a:hover,.esc-link:hover{border-color:var(--blue);color:var(--teal-glow)}
+.esc-hero__grid{display:grid;grid-template-columns:1.2fr 1fr;gap:clamp(32px,5vw,72px);align-items:center;position:relative;z-index:1}
+.esc-hero__title{font-family:var(--display);font-weight:700;font-size:clamp(36px,4.6vw,72px);line-height:0.96;letter-spacing:-0.035em;margin:0;color:#fff}
+.esc-hero__title small{display:block;font-size:0.5em;font-weight:500;letter-spacing:-0.02em;color:rgba(255,255,255,0.75);margin-bottom:8px}
+.esc-hero__title em{font-style:normal;color:var(--gold)}
+.esc-badges{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.esc-badge{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;padding:6px 12px;border-radius:999px;border:1px solid rgba(255,255,255,0.28);color:rgba(255,255,255,0.85)}
+.esc-hero__figure{margin:0;border-radius:var(--r-lg);overflow:hidden;border:1px solid rgba(255,255,255,0.18);box-shadow:0 30px 60px -30px rgba(0,0,0,0.6)}
+.esc-hero__figure img{width:100%}
+.esc-lote{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:28px}
+.esc-lote__box{border-radius:var(--r-md);padding:16px 18px;border:1px solid rgba(255,255,255,0.18);background:rgba(255,255,255,0.06)}
+.esc-lote__box--on{background:var(--gold);border-color:var(--gold);color:var(--ink)}
+.esc-lote__box .lbl{font-family:var(--mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;opacity:0.8}
+.esc-lote__box .val{font-family:var(--display);font-weight:700;font-size:34px;letter-spacing:-0.03em;line-height:1.1;margin-top:4px}
+.esc-lote__box .sub{font-size:12.5px;opacity:0.8;margin-top:2px}
+.esc-lote__box--on .sub,.esc-lote__box--on .lbl{opacity:0.85}
+.esc-def{display:grid;grid-template-columns:1.1fr 1fr;gap:clamp(32px,5vw,72px);align-items:start}
+.esc-def__q{font-family:var(--display);font-weight:600;font-size:clamp(26px,2.8vw,40px);line-height:1.08;letter-spacing:-0.025em;margin:16px 0 20px}
+.esc-def__q em{font-style:normal;color:var(--blue)}
+.esc-pilares{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden}
+.esc-pilar{background:var(--white);padding:22px 24px;display:grid;grid-template-columns:44px 1fr;gap:16px;align-items:start}
+.esc-pilar__n{font-family:var(--display);font-weight:700;font-size:26px;color:var(--gold-2);letter-spacing:-0.03em;line-height:1}
+.esc-pilar h3{font-family:var(--display);font-size:19px;font-weight:600;margin:0 0 4px;letter-spacing:-0.015em}
+.esc-pilar p{font-size:14px;color:var(--ink-2);margin:0;line-height:1.55}
+.esc-obj{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.esc-obj__card{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:28px 26px;display:flex;flex-direction:column;gap:10px}
+.esc-obj__card .n{font-family:var(--display);font-weight:700;font-size:36px;color:var(--gold-2);letter-spacing:-0.03em;line-height:1}
+.esc-obj__card h3{font-family:var(--display);font-size:20px;font-weight:600;margin:6px 0 0;letter-spacing:-0.015em;line-height:1.2}
+.esc-obj__card p{font-size:14.5px;color:var(--ink-2);margin:0;line-height:1.6}
+.esc-datas{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.esc-data{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:24px 22px;display:flex;flex-direction:column;gap:6px}
+.esc-data .mod{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue)}
+.esc-data .dia{font-family:var(--display);font-weight:700;font-size:44px;letter-spacing:-0.035em;line-height:1;color:var(--ink)}
+.esc-data .mes{font-family:var(--display);font-size:18px;font-weight:500;color:var(--ink-2)}
+.esc-data .tema{font-size:13.5px;color:var(--ink-3);margin-top:8px;padding-top:10px;border-top:1px dashed var(--line)}
+.esc-temas{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.esc-jornada{display:grid;grid-template-columns:1fr auto 1fr;gap:20px;align-items:stretch}
+.esc-etapa{border-radius:var(--r-md);padding:32px 30px;display:flex;flex-direction:column;gap:14px}
+.esc-etapa--escola{background:var(--white);border:1px solid var(--line)}
+.esc-etapa--imersao{background:var(--ink);color:var(--paper)}
+.esc-etapa__tag{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--blue)}
+.esc-etapa--imersao .esc-etapa__tag{color:var(--gold)}
+.esc-etapa h3{font-family:var(--display);font-size:clamp(24px,2.2vw,32px);font-weight:600;letter-spacing:-0.02em;margin:0;line-height:1.1}
+.esc-etapa .quando{font-family:var(--mono);font-size:12.5px;letter-spacing:0.04em;color:var(--ink-3)}
+.esc-etapa--imersao .quando{color:rgba(255,255,255,0.6)}
+.esc-etapa p{font-size:15px;color:var(--ink-2);margin:0;line-height:1.6}
+.esc-etapa--imersao p{color:rgba(255,255,255,0.82)}
+.esc-etapa ul{margin:6px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:14.5px}
+.esc-etapa li{display:grid;grid-template-columns:14px 1fr;gap:10px;align-items:start;line-height:1.5}
+.esc-etapa li::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold);margin-top:8px}
+.esc-etapa--imersao li{color:rgba(255,255,255,0.88)}
+.esc-seta{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;font-family:var(--mono);font-size:11px;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink-3);padding:0 8px;text-align:center}
+.esc-seta__ico{width:44px;height:44px;border-radius:50%;background:var(--gold);color:var(--ink);display:flex;align-items:center;justify-content:center;font-size:22px}
+.esc-precos{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.esc-preco{background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:30px 28px 28px;display:flex;flex-direction:column;gap:14px;position:relative}
+.esc-preco--destaque{border:2px solid var(--gold);background:linear-gradient(180deg,#fff8ec,var(--white) 40%)}
+.esc-preco__ribbon{position:absolute;top:-13px;left:24px;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:999px;font-weight:600}
+.esc-preco h3{font-family:var(--display);font-size:22px;font-weight:600;margin:0;letter-spacing:-0.015em}
+.esc-preco__val{font-family:var(--display);font-size:46px;font-weight:700;letter-spacing:-0.035em;line-height:1;color:var(--blue)}
+.esc-preco__val small{font-size:15px;font-weight:500;color:var(--ink-3);letter-spacing:0;margin-left:6px}
+.esc-preco p{font-size:14.5px;color:var(--ink-2);margin:0;line-height:1.6}
+.esc-preco__inclui{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:14px;flex:1}
+.esc-preco__inclui li{display:grid;grid-template-columns:18px 1fr;gap:8px}
+.esc-preco__inclui li::before{content:"✓";color:var(--blue);font-weight:700}
+.esc-preco__inclui li.riscado{color:var(--ink-3);text-decoration:line-through}
+.esc-preco__inclui li.riscado::before{content:"–";color:var(--ink-3)}
+.esc-economia{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--gold-2);background:var(--gold-soft);padding:6px 12px;border-radius:999px;align-self:flex-start}
+.esc-lotes{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r-md);overflow:hidden;margin-bottom:24px}
+.esc-lotes>div{background:var(--white);padding:22px 26px;display:flex;flex-direction:column;gap:4px}
+.esc-lotes .lbl{font-family:var(--mono);font-size:11px;letter-spacing:0.14em;text-transform:uppercase;color:var(--ink-3)}
+.esc-lotes .val{font-family:var(--display);font-weight:700;font-size:32px;letter-spacing:-0.03em;line-height:1.1}
+.esc-lotes .val small{font-size:14px;font-weight:500;color:var(--ink-3);letter-spacing:0}
+.esc-lotes .on .lbl{color:var(--gold-2)}
+.esc-lotes .on .val{color:var(--blue)}
+.esc-nota{font-size:13.5px;color:var(--ink-3);margin-top:20px;max-width:720px}
+.esc-prof{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:32px}
+.esc-prof__viz{width:120px;height:120px;border-radius:50%;overflow:hidden;border:1px solid var(--line);flex:none}
+.esc-prof__viz img{width:100%;height:100%;object-fit:cover;object-position:72% 30%}
+.esc-prof h3{font-family:var(--display);font-size:26px;font-weight:600;margin:6px 0 8px;letter-spacing:-0.015em}
+.esc-prof p{font-size:15px;color:var(--ink-2);margin:0;line-height:1.6;max-width:640px}
+@media (max-width:1000px){.esc-obj{grid-template-columns:1fr}.esc-datas{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){.esc-hero__grid,.esc-def,.esc-precos{grid-template-columns:1fr}.esc-jornada{grid-template-columns:1fr}.esc-seta{flex-direction:row;padding:4px 0}.esc-seta__ico{transform:rotate(90deg)}.esc-prof{grid-template-columns:1fr}}
+@media (max-width:620px){.esc-datas,.esc-lote,.esc-lotes{grid-template-columns:1fr}}
+</style>
+</head>
+<body data-active="cursos">
+<div id="__header"></div>
+
+<main>
+  <section class="curso-hero" data-screen-label="Hero">
+    <div class="wrap">
+      <div class="breadcrumb" style="color:rgba(255,255,255,0.5)">
+        <a href="../index.html" style="color:rgba(255,255,255,0.7)">Ectolab</a><span class="sep">◆</span>
+        <a href="cursos.html" style="color:rgba(255,255,255,0.7)">Cursos</a><span class="sep">◆</span>
+        <span style="color:#fff">Escola de Interassistência Parambulatorial</span>
+      </div>
+      <div class="esc-hero__grid" style="margin-top:32px">
+        <div>
+          <div class="eyebrow" style="color:var(--gold)"><span class="dot"></span>CURSO ONLINE &middot; 4 ENCONTROS MODULARES &middot; PROF. HERNANDE LEITE</div>
+          <h1 class="esc-hero__title" style="margin-top:18px"><small>Escola Multidimensional de</small>Interassistência <em>Parambulatorial</em></h1>
+          <p class="lede" style="margin-top:22px;max-width:560px;color:rgba(255,255,255,0.8)">
+            Pesquisa, experiência e interassistência com lucidez e autocrítica. A base teórica que se completa, um mês depois, na prática da <strong style="color:#fff">Imersão em Ectoplasmia 2027</strong>.
+          </p>
+          <div class="esc-badges">
+            <span class="esc-badge">Nov/2026 → Fev/2027</span>
+            <span class="esc-badge">100% online · ao vivo</span>
+            <span class="esc-badge">Combo com a Imersão</span>
+          </div>
+          <div class="esc-lote">
+            <div class="esc-lote__box esc-lote__box--on">
+              <div class="lbl">1º lote · até 30/09</div>
+              <div class="val">R$ 400</div>
+              <div class="sub">60+ e voluntários: R$ 300</div>
+            </div>
+            <div class="esc-lote__box">
+              <div class="lbl">A partir de 01/10</div>
+              <div class="val">R$ 600</div>
+              <div class="sub">60+ e voluntários: R$ 400</div>
+            </div>
+          </div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+            <a href="#investimento" class="btn btn-gold">Garantir 1º lote <span class="arrow">→</span></a>
+            <a href="#combo" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,0.5)">Ver combo Escola + Imersão</a>
+          </div>
+        </div>
+        <figure class="esc-hero__figure">
+          <img src="../assets/escola-card.png" alt="Escola Multidimensional de Interassistência Parambulatorial — curso online com o professor Hernande Leite. Aulas em 15/11 e 13/12 de 2026, 17/01 e 21/02 de 2027." />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-screen-label="O que é">
+    <div class="wrap">
+      <div class="esc-def">
+        <div>
+          <div class="eyebrow"><span class="dot"></span>O QUE É A ESCOLA</div>
+          <h2 class="esc-def__q">Um ambiente de <em>autoexperimentação, estudo e pesquisa</em> da interassistência em âmbito parambulatorial.</h2>
+          <div class="prose" style="margin-left:0;max-width:none">
+            <p>A Escola é para quem quer ir além de assistir aulas: é um espaço para experimentar, registrar e discutir a própria vivência parapsíquica em ambiente assistencial, com método e autocrítica.</p>
+            <p>São <strong>4 encontros online mensais</strong>, de novembro de 2026 a fevereiro de 2027, com o professor Hernande Leite e docentes convidados. O percurso termina um mês antes da Imersão em Ectoplasmia — a etapa prática, em campo.</p>
+            <p style="margin-bottom:0"><strong>Você não precisa ter feito nenhum curso antes.</strong> A Escola foi pensada para o público geral que quer entender e praticar a interassistência com base científica.</p>
+          </div>
+        </div>
+        <div>
+          <div class="eyebrow" style="margin-bottom:16px"><span class="dot"></span>COMO FUNCIONA</div>
+          <div class="esc-pilares">
+            <div class="esc-pilar"><span class="esc-pilar__n">01</span><div><h3>Interação multidimensional</h3><p>Aprender pela experiência: cada encontro inclui prática energética e observação parapsíquica em grupo.</p></div></div>
+            <div class="esc-pilar"><span class="esc-pilar__n">02</span><div><h3>Estudos de casos</h3><p>Casos reais de parambulatório analisados em turma — o que aconteceu, como foi percebido, o que se conclui.</p></div></div>
+            <div class="esc-pilar"><span class="esc-pilar__n">03</span><div><h3>Metodologia específica</h3><p>Técnicas de evidenciação parapsíquica e método parapercepciológico para registrar e validar o que se percebe.</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section bg-white" data-screen-label="O que se desenvolve">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span>O QUE SE DESENVOLVE</div>
+      <h2 class="h1" style="margin:16px 0 12px">Três frentes de qualificação.</h2>
+      <p class="lede" style="margin:0 0 40px;max-width:640px;color:var(--ink-2)">Pessoal, pesquisística e assistencial — para chegar à teática da interassistência parambulatorial: saber e fazer, juntos.</p>
+      <div class="esc-obj">
+        <div class="esc-obj__card"><span class="n">04</span><h3>Desenvolvimento do parapsiquismo lúcido</h3><p>Perceber com clareza, sem misticismo. Emprego autocrítico dos fundamentos da Parapercepciologia.</p></div>
+        <div class="esc-obj__card"><span class="n">05</span><h3>Estruturação parapesquisística em Assistenciologia</h3><p>Transformar experiência em pesquisa: registro, comparação e conclusões que possam ser verificadas.</p></div>
+        <div class="esc-obj__card"><span class="n">06</span><h3>Qualificação tarística do conscienciólogo</h3><p>Assistir melhor — com responsabilidade, método e domínio das técnicas de evidenciação parapsíquica.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" data-screen-label="Datas">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span>CALENDÁRIO MODULAR</div>
+      <h2 class="h1" style="margin:16px 0 12px">Um encontro por mês.<br />Quatro encontros online.</h2>
+      <p class="lede" style="margin:0 0 36px;max-width:640px;color:var(--ink-2)">Sempre em domingos, com transmissão ao vivo. Datas definidas para você se organizar com antecedência.</p>
+      <div class="esc-datas">
+        <div class="esc-data"><span class="mod">Módulo 1</span><span class="dia">15</span><span class="mes">novembro · 2026</span><span class="tema">Abertura da Escola</span></div>
+        <div class="esc-data"><span class="mod">Módulo 2</span><span class="dia">13</span><span class="mes">dezembro · 2026</span><span class="tema">Aprofundamento</span></div>
+        <div class="esc-data"><span class="mod">Módulo 3</span><span class="dia">17</span><span class="mes">janeiro · 2027</span><span class="tema">Aprofundamento</span></div>
+        <div class="esc-data"><span class="mod">Módulo 4</span><span class="dia">21</span><span class="mes">fevereiro · 2027</span><span class="tema">Encerramento · preparação para a Imersão</span></div>
+      </div>
+      <div class="eyebrow" style="margin-top:48px"><span class="dot"></span>TEMAS EM ESTUDO NA ESCOLA E NA IMERSÃO</div>
+      <div class="esc-temas">
+        <span class="tag soft">DIP</span><span class="tag soft">Paracirurgia</span><span class="tag soft">Paracirurgia à distância</span><span class="tag soft">Ectoplasmologia</span><span class="tag soft">Oficina de criticidade</span><span class="tag soft">Fitoectoplasmia</span><span class="tag soft">Sistema energético</span><span class="tag soft">Ectoplasmia e sistema nervoso autônomo</span><span class="tag soft">Saúde holossomática do ectoplasta</span><span class="tag soft">Ectoplasmia e desassédio</span><span class="tag soft">Parapercepciograma e inteligência artificial</span>
+      </div>
+      <p class="esc-nota">Distribuição dos temas por encontro e docentes convidados serão confirmados aos inscritos.</p>
+    </div>
+  </section>
+
+  <section class="section bg-white" id="combo" data-screen-label="Escola + Imersão">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span>ESCOLA + IMERSÃO: UM PERCURSO ÚNICO</div>
+      <h2 class="h1" style="margin:16px 0 12px">Teoria na Escola.<br />Prática na Imersão.</h2>
+      <p class="lede" style="margin:0 0 40px;max-width:720px;color:var(--ink-2)">São dois cursos que se completam. Na Escola você estuda a fundo; na Imersão em Ectoplasmia, um mês depois, você vive em campo o que estudou. Quem faz os dois faz, na prática, um curso só.</p>
+      <div class="esc-jornada">
+        <div class="esc-etapa esc-etapa--escola">
+          <span class="esc-etapa__tag">Etapa 1 · online</span>
+          <h3>Escola Multidimensional de Interassistência Parambulatorial</h3>
+          <span class="quando">NOV/2026 → FEV/2027 · 4 ENCONTROS</span>
+          <p>A parte teórica estudada com profundidade: fundamentos, método, estudos de casos e autoexperimentação orientada.</p>
+          <ul>
+            <li>4 aulas online ao vivo, uma por mês</li>
+            <li>Estudos de casos de parambulatório</li>
+            <li>Metodologia parapercepciológica</li>
+            <li>Preparação direta para o campo</li>
+          </ul>
+        </div>
+        <div class="esc-seta"><span class="esc-seta__ico">→</span><span>1 mês<br />depois</span></div>
+        <div class="esc-etapa esc-etapa--imersao">
+          <span class="esc-etapa__tag">Etapa 2 · híbrida · Foz do Iguaçu ou online</span>
+          <h3>Imersão em Ectoplasmia Parambulatorial</h3>
+          <span class="quando">19, 20 E 21 DE MARÇO DE 2027</span>
+          <p>A parte prática. Aulas teóricas também, mas com foco no que só se aprende em campo.</p>
+          <ul>
+            <li>2 campos ectoplásmicos interassistenciais</li>
+            <li>Participação na pesquisa da Ectolab</li>
+            <li>Devolutiva do parapercepcionograma</li>
+            <li>10 a 11 minicursos na semana que antecede a Imersão</li>
+          </ul>
+          <a href="curso-imersao.html" class="btn btn-gold" style="align-self:flex-start;margin-top:10px">Conhecer a Imersão <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="investimento" data-screen-label="Investimento">
+    <div class="wrap">
+      <div class="eyebrow"><span class="dot"></span>INVESTIMENTO E INSCRIÇÃO</div>
+      <h2 class="h1" style="margin:16px 0 12px">Escolha como quer participar.</h2>
+      <p class="lede" style="margin:0 0 40px;max-width:640px;color:var(--ink-2)">Inscrição por lote: quanto antes, menor o valor. E os combos garantem Escola + Imersão com desconto sobre a compra separada.</p>
+
+      <div class="eyebrow" style="margin-bottom:14px"><span class="dot"></span>SOMENTE A ESCOLA</div>
+      <div class="esc-lotes">
+        <div class="on"><span class="lbl">1º lote · até 30 de setembro</span><span class="val">R$ 400 <small>· 60+ e voluntários R$ 300</small></span></div>
+        <div><span class="lbl">2º lote · a partir de 1º de outubro</span><span class="val">R$ 600 <small>· 60+ e voluntários R$ 400</small></span></div>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:56px">
+        <a href="contato.html" class="btn btn-primary">Inscrever-se na Escola <span class="arrow">→</span></a>
+        <a href="contato.html" class="btn btn-ghost">Sou 60+ ou voluntário</a>
+      </div>
+
+      <div class="eyebrow" style="margin-bottom:24px"><span class="dot"></span>COMBOS ESCOLA + IMERSÃO 2027</div>
+      <div class="esc-precos">
+        <div class="esc-preco">
+          <h3>Escola + Imersão online</h3>
+          <div class="esc-preco__val">R$ 1.000<small>à vista</small></div>
+          <span class="esc-economia">Economize R$ 400 sobre o 2º lote</span>
+          <ul class="esc-preco__inclui">
+            <li>Escola completa · 4 encontros online</li>
+            <li>Imersão em Ectoplasmia · transmissão online (R$ 800)</li>
+            <li>Minicursos, aulas e devolutiva do parapercepcionograma</li>
+            <li class="riscado">Presença nos campos em Foz do Iguaçu</li>
+          </ul>
+          <a href="https://store.conscienciologia.org.br/sku/311520/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center">Quero o combo online <span class="arrow">→</span></a>
+        </div>
+        <div class="esc-preco esc-preco--destaque">
+          <span class="esc-preco__ribbon">Experiência completa</span>
+          <h3>Escola + Imersão presencial</h3>
+          <div class="esc-preco__val">R$ 1.600<small>à vista</small></div>
+          <span class="esc-economia">Economize R$ 500 sobre o 2º lote</span>
+          <ul class="esc-preco__inclui">
+            <li>Escola completa · 4 encontros online</li>
+            <li>Imersão em Ectoplasmia · presencial em Foz do Iguaçu (R$ 1.500)</li>
+            <li>2 campos ectoplásmicos interassistenciais ao vivo</li>
+            <li>Participação na pesquisa e devolutiva do parapercepcionograma</li>
+          </ul>
+          <a href="contato.html" class="btn btn-gold" style="width:100%;justify-content:center">Quero o combo presencial <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <p class="esc-nota">Valores da Imersão avulsa: R$ 1.500 presencial · R$ 800 online. Economia calculada em relação à Escola no 2º lote (R$ 600) somada à Imersão avulsa. Dúvidas sobre condições para 60+, voluntários e casais: <a class="esc-link" href="contato.html">fale com a secretaria</a>.</p>
+    </div>
+  </section>
+
+  <section class="section bg-white" data-screen-label="Professor">
+    <div class="wrap">
+      <div class="eyebrow" style="margin-bottom:24px"><span class="dot"></span>QUEM CONDUZ</div>
+      <div class="esc-prof">
+        <div class="esc-prof__viz"><img src="../assets/escola-card.png" alt="Professor Hernande Leite" /></div>
+        <div>
+          <span class="specimen" style="color:var(--blue)">PARAMBULATÓRIO · INTERASSISTENCIOLOGIA</span>
+          <h3>Hernande Leite</h3>
+          <p>Professor responsável pela Escola e pela aula de Parambulatório nos cursos da Ectolab. Conduz os quatro encontros com a participação de docentes convidados nos temas de paracirurgia, ectoplasmologia, fitoectoplasmia, sistema energético e parapercepciograma.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-band" data-screen-label="CTA">
+    <div class="wrap cta-band__inner">
+      <h2>Comece pela Escola em novembro e chegue à <strong style="color:var(--blue);font-weight:700">Imersão de março</strong> preparado.</h2>
+      <div style="display:flex;gap:12px;flex-wrap:wrap">
+        <a href="#investimento" class="btn btn-primary">Escola · 1º lote R$ 400 <span class="arrow">→</span></a>
+        <a href="#combo" class="btn btn-ghost">Combos a partir de R$ 1.000</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="__footer"></div>
+<script src="../assets/chrome.js"></script>
+</body>
+</html>
