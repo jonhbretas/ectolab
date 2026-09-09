@@ -137,6 +137,14 @@ const CURSOS = [
     type: 'Cursos Ao Vivo (Síncronos)',
     items: [
       {
+        t: 'Escola Multidimensional de Interassistência Parambulatorial',
+        desc: '4 encontros online (nov/2026 a fev/2027) com Hernande Leite. Base teórica que se completa na Imersão em Ectoplasmia 2027. Lotes R$ 400 / R$ 600.',
+        link: '/pages/curso-escola.html',
+        tag: 'Online Ao Vivo',
+        tagClass: 'tag',
+        labels: ['Ao Vivo', 'Online', 'Novo'],
+      },
+      {
         t: 'Auto-organização Bioenergética',
         desc: 'Homeostase identificando focos de desperdício.',
         link: '/pages/curso.html?id=auto-org',
