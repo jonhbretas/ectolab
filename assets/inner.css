@@ -44,6 +44,7 @@
 .meta-grid > div {
   background: var(--white);
   padding: 18px 20px;
+  min-width: 0;
 }
 .meta-grid dt {
   font-family: var(--mono);
@@ -55,9 +56,12 @@
 .meta-grid dd {
   margin: 4px 0 0;
   font-family: var(--serif);
-  font-size: 22px;
+  font-size: clamp(17px, 1.6vw, 22px);
   letter-spacing: -0.01em;
   color: var(--ink);
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 @media (max-width: 900px) {
