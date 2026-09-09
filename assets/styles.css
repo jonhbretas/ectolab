@@ -374,32 +374,17 @@ p { margin: 0 0 1em; }
 }
 .nav-drop-group a:hover { color: var(--blue); }
 
-/* Destaque visual no menu — Escola / PROEP / Imersão Parambulatorial */
+/* Destaque visual no menu — Escola / PROEP / Imersão Parambulatorial — apenas linha inferior + negrito */
 .nav-drop-group a.nav-highlight {
-  background: var(--gold-soft);
-  border: 1px solid var(--gold);
-  border-radius: 999px;
-  padding: 5px 12px;
   color: var(--ink);
-  font-weight: 600;
-  margin: 2px 0;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  transition: background 0.15s, border-color 0.15s, color 0.15s;
+  font-weight: 700;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 2px;
+  transition: color 0.15s, border-color 0.15s;
 }
 .nav-drop-group a.nav-highlight:hover {
-  background: var(--gold);
-  border-color: var(--gold-2);
-  color: var(--ink);
-}
-.nav-highlight__badge {
-  width: 6px;
-  height: 6px;
-  border-radius: 50%;
-  background: var(--teal);
-  display: inline-block;
-  flex: none;
+  color: var(--teal);
+  border-bottom-color: var(--teal);
 }
 
 .nav-drop-group a.nav-drop-cat--link {
@@ -1048,18 +1033,11 @@ a.mnav-cat--link:hover { color: var(--teal-2); }
 }
 .mnav-link:hover { color: var(--teal); }
 .mnav-link.nav-highlight {
-  background: var(--gold-soft);
-  border: 1px solid var(--gold);
-  border-radius: 999px;
-  padding: 6px 12px;
   color: var(--ink) !important;
-  font-weight: 600;
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  margin: 4px 0;
+  font-weight: 700;
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 2px;
 }
-.mnav-link.nav-highlight .nav-highlight__badge { background: var(--teal); }
 
 /* CTAs no rodapé da gaveta */
 .nav-drawer__ctas {
