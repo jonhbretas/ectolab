@@ -140,7 +140,7 @@
         const dropGroups = n.dropdown.map(d => `
           <div class="nav-drop-group">
             ${d.href ? `<a href="${d.href}" class="nav-drop-cat nav-drop-cat--link">${d.cat}</a>` : `<span class="nav-drop-cat">${d.cat}</span>`}
-            ${d.links.map(l => `<a href="${l.href}" class="${l.highlight ? 'nav-highlight' : ''}" ${l.target ? `target="${l.target}" rel="noreferrer"` : ""}>${l.label}${l.highlight ? '<span class="nav-highlight__badge">•</span>' : ''}</a>`).join("")}
+            ${d.links.map(l => `<a href="${l.href}" class="${l.highlight ? 'nav-highlight' : ''}" ${l.target ? `target="${l.target}" rel="noreferrer"` : ""}>${l.label}</a>`).join("")}
           </div>
         `).join("");
         return `
@@ -161,7 +161,7 @@
       const groups = n.dropdown.map(d => `
         <div class="mnav-group">
           ${d.href ? `<a href="${d.href}" class="mnav-cat mnav-cat--link">${d.cat}</a>` : `<span class="mnav-cat">${d.cat}</span>`}
-          ${d.links.map(l => `<a href="${l.href}" class="mnav-link${l.highlight ? ' nav-highlight' : ''}"${l.target ? ` target="${l.target}" rel="noreferrer"` : ""}>${l.label}${l.highlight ? '<span class="nav-highlight__badge">•</span>' : ''}</a>`).join("")}
+          ${d.links.map(l => `<a href="${l.href}" class="mnav-link${l.highlight ? ' nav-highlight' : ''}"${l.target ? ` target="${l.target}" rel="noreferrer"` : ""}>${l.label}</a>`).join("")}
         </div>`).join("");
       return `
         <div class="mnav-item has-sub">
