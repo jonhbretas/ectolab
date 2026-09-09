@@ -49,12 +49,12 @@
       href: P + "pages/cursos.html",
       dropdown: [
         { cat: "Cursos de Campo", links: [
-          { label: "Imersão em Ectoplasmia", href: P + "pages/curso-imersao.html" },
+          { label: "Imersão Parambulatorial ◆ Destaque", href: P + "pages/curso-imersao.html" },
           { label: "EPPI", href: P + "pages/curso-eppi.html" },
           { label: "Campo Paracirúrgico", href: P + "pages/curso-campo.html" }
         ]},
         { cat: "Presenciais", links: [
-          { label: "PROEP", href: P + "pages/curso-proep.html" },
+          { label: "PROEP ◆ Destaque", href: P + "pages/curso-proep.html" },
           { label: "Fitoectoplasmia Interassistencial", href: P + "pages/cursos.html#presenciais" }
         ]},
         { cat: "Gravados (Online)", links: [
@@ -66,6 +66,7 @@
           { label: "Raízes da Ectoplasmia", href: P + "pages/curso.html?id=raizes" }
         ]},
         { cat: "Online (Ao Vivo / Síncrono)", links: [
+          { label: "Escola Parambulatorial ◆ Novo", href: P + "pages/curso-escola.html" },
           { label: "Auto-organização Bioenergética", href: P + "pages/curso.html?id=auto-org" },
           { label: "Qualificação dos Pensenes", href: P + "pages/curso.html?id=qualificacao" }
         ]},

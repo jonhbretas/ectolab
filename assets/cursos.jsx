@@ -3,24 +3,24 @@ import ReactDOM from 'react-dom/client';
 
 const DESTAQUES = [
   {
-    t: 'Ectoplasmia Interassistencial',
-    desc: 'Fundamentos da assistência com ectoplasma. Aprenda no seu ritmo com acesso imediato.',
-    link: '/pages/curso-ectoplasmia-interassistencial.html',
-    tag: 'Gravado',
-    tagClass: 'tag ghost',
+    t: 'Escola Parambulatorial',
+    desc: '4 encontros online (nov/2026 a fev/2027) com Hernande Leite. Base teórica que se completa na Imersão Parambulatorial 2027.',
+    link: '/pages/curso-escola.html',
+    tag: '◆ Novo · Online Ao Vivo',
+    tagClass: 'tag gold',
   },
   {
-    t: 'Imersão em Ectoplasmia',
-    desc: 'Maratona ectoplásmica de 27 horas em ambiente hoteleiro. Presencial e online.',
+    t: 'Imersão Parambulatorial',
+    desc: 'Maratona ectoplásmica de 27 horas em ambiente hoteleiro. Presencial e online — 19 a 21/mar/2027.',
     link: '/pages/curso-imersao.html',
-    tag: 'Híbrido',
+    tag: '◆ Destaque · Híbrido',
     tagClass: 'tag gold',
   },
   {
     t: 'PROEP',
     desc: 'Programa de Estimulação Parapsíquica Ectoplásmica. Turmas mensais com até 4 alunos.',
     link: '/pages/curso-proep.html',
-    tag: 'Mensal',
+    tag: '◆ Destaque · Mensal',
     tagClass: 'tag dark',
   },
 ];
@@ -31,12 +31,12 @@ const CURSOS = [
     type: 'Cursos de Campo',
     items: [
       {
-        t: 'Imersão em Ectoplasmia',
-        desc: 'Maratona ectoplásmica de 27 horas em ambiente hoteleiro. Disponível presencial e online.',
+        t: 'Imersão Parambulatorial',
+        desc: 'Maratona ectoplásmica de 27 horas em ambiente hoteleiro. Disponível presencial e online — 19 a 21/mar/2027.',
         link: '/pages/curso-imersao.html',
-        tag: 'Híbrido',
+        tag: '◆ Destaque · Híbrido',
         tagClass: 'tag gold',
-        labels: ['Curso principal', 'Campo'],
+        labels: ['Curso principal', 'Campo', 'Destaque'],
       },
       {
         t: 'EPPI',
@@ -64,9 +64,9 @@ const CURSOS = [
         t: 'PROEP',
         desc: 'Programa de Estimulação Parapsíquica Ectoplásmica. Turmas mensais reduzidas — até 4 alunos.',
         link: '/pages/curso-proep.html',
-        tag: 'Mensal',
+        tag: '◆ Destaque · Mensal',
         tagClass: 'tag dark',
-        labels: ['Mensal'],
+        labels: ['Mensal', 'Destaque'],
       },
       {
         t: 'Fitoectoplasmia Interassistencial',
@@ -138,11 +138,11 @@ const CURSOS = [
     items: [
       {
         t: 'Escola Multidimensional de Interassistência Parambulatorial',
-        desc: '4 encontros online (nov/2026 a fev/2027) com Hernande Leite. Base teórica que se completa na Imersão em Ectoplasmia 2027. Lotes R$ 400 / R$ 600.',
+        desc: '4 encontros online (nov/2026 a fev/2027) com Hernande Leite. Base teórica que se completa na Imersão Parambulatorial 2027. Lotes R$ 400 / R$ 600.',
         link: '/pages/curso-escola.html',
-        tag: 'Online Ao Vivo',
-        tagClass: 'tag',
-        labels: ['Ao Vivo', 'Online', 'Novo'],
+        tag: '◆ Novo · Online Ao Vivo',
+        tagClass: 'tag gold',
+        labels: ['Ao Vivo', 'Online', 'Novo', 'Destaque'],
       },
       {
         t: 'Auto-organização Bioenergética',
