@@ -88,6 +88,17 @@ a{color:inherit}
 .esc-lotes .on .lbl{color:var(--gold-2)}
 .esc-lotes .on .val{color:var(--blue)}
 .esc-nota{font-size:13.5px;color:var(--ink-3);margin-top:20px;max-width:720px}
+.esc-modal{position:fixed;inset:0;z-index:200;display:none;align-items:center;justify-content:center;padding:20px}
+.esc-modal.is-open{display:flex}
+.esc-modal__backdrop{position:absolute;inset:0;background:rgba(8,34,43,0.6)}
+.esc-modal__card{position:relative;background:var(--white);border:1px solid var(--line);border-radius:var(--r-lg);padding:32px 30px;max-width:440px;width:100%;box-shadow:0 30px 60px -20px rgba(0,0,0,0.4);display:flex;flex-direction:column;gap:0}
+.esc-modal__card h3{font-family:var(--display);font-size:24px;font-weight:600;margin:12px 0 10px;letter-spacing:-0.02em}
+.esc-modal__card p{font-size:14.5px;color:var(--ink-2);line-height:1.6;margin:0 0 6px}
+.esc-modal__close{position:absolute;top:12px;right:12px;background:none;border:1px solid var(--line-2);border-radius:50%;width:32px;height:32px;color:var(--ink-3);font-size:14px;line-height:1}
+.esc-modal__close:hover{background:var(--paper);color:var(--ink)}
+.esc-cupombox{font-family:var(--mono);font-size:22px;font-weight:600;letter-spacing:0.08em;text-align:center;color:var(--ink);border:2px dashed var(--gold);border-radius:var(--r-md);background:var(--gold-soft);padding:14px;margin:18px 0}
+.esc-modal__ok{color:var(--blue);font-weight:700}
+.esc-modal__alert{background:#fef9c3;border:1px solid var(--gold);border-radius:var(--r-md);padding:10px 14px;font-size:13.5px;color:#713f12;margin:16px 0;line-height:1.5}
 .esc-prof{display:grid;grid-template-columns:auto 1fr;gap:32px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:var(--r-md);padding:32px}
 .esc-prof__viz{width:120px;height:120px;border-radius:50%;overflow:hidden;border:1px solid var(--line);flex:none}
 .esc-prof__viz img{width:100%;height:100%;object-fit:cover;object-position:72% 30%}
@@ -136,12 +147,12 @@ a{color:inherit}
             <div class="esc-lote__box esc-lote__box--on">
               <div class="lbl">1º lote · até 30/09</div>
               <div class="val">R$ 400</div>
-              <div class="sub">60+ e voluntários: R$ 300</div>
+              <div class="sub">Preço promocional · sem cupom 60+</div>
             </div>
             <div class="esc-lote__box">
               <div class="lbl">A partir de 01/10</div>
               <div class="val">R$ 600</div>
-              <div class="sub">60+ e voluntários: R$ 400</div>
+              <div class="sub">60+: R$ 400 com cupom</div>
             </div>
           </div>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
@@ -273,12 +284,12 @@ a{color:inherit}
 
       <div class="eyebrow" style="margin-bottom:14px"><span class="dot"></span>SOMENTE A ESCOLA</div>
       <div class="esc-lotes">
-        <div class="on"><span class="lbl">1º lote · até 30 de setembro</span><span class="val">R$ 400 <small>· 60+ e voluntários R$ 300</small></span></div>
-        <div><span class="lbl">2º lote · a partir de 1º de outubro</span><span class="val">R$ 600 <small>· 60+ e voluntários R$ 400</small></span></div>
+        <div class="on"><span class="lbl">1º lote · até 30 de setembro</span><span class="val">R$ 400 <small>· preço promocional · sem cupom 60+</small></span></div>
+        <div><span class="lbl">2º lote · a partir de 1º de outubro</span><span class="val">R$ 600 <small>· 60+: R$ 400 com cupom</small></span></div>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:56px">
         <a href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial-2/" target="_blank" rel="noopener" class="btn btn-primary">Inscrever-se na Escola <span class="arrow">→</span></a>
-        <a href="contato.html" class="btn btn-ghost">Sou 60+ ou voluntário</a>
+        <button type="button" class="btn btn-ghost" data-cupom-open>Sou 60+ · Ver cupom</button>
       </div>
 
       <div class="eyebrow" style="margin-bottom:24px"><span class="dot"></span>COMBOS ESCOLA + IMERSÃO 2027</div>
@@ -309,7 +320,7 @@ a{color:inherit}
           <a href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial-imersao-parambulatorial-presencial/" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;justify-content:center">Quero o combo presencial <span class="arrow">→</span></a>
         </div>
       </div>
-      <p class="esc-nota">Valores da Imersão avulsa: <a class="esc-link" href="https://store.conscienciologia.org.br/product/imersao-em-ectoplasmia-11-edicao-presencial-imersao-em-ectoplasmia/" target="_blank" rel="noopener">R$ 1.500 presencial</a> · <a class="esc-link" href="https://store.conscienciologia.org.br/product/imersao-em-ectoplasmia-11-edicao-online-imersao-em-ectoplasmia/" target="_blank" rel="noopener">R$ 800 online</a>. Economia calculada em relação à Escola no 2º lote (R$ 600) somada à Imersão avulsa. Dúvidas sobre condições para 60+, voluntários e casais: <a class="esc-link" href="contato.html">fale com a secretaria</a>. <a class="esc-link" href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial/" target="_blank" rel="noopener">Ver página de combos →</a></p>
+      <p class="esc-nota">Valores da Imersão avulsa: <a class="esc-link" href="https://store.conscienciologia.org.br/product/imersao-em-ectoplasmia-11-edicao-presencial-imersao-em-ectoplasmia/" target="_blank" rel="noopener">R$ 1.500 presencial</a> · <a class="esc-link" href="https://store.conscienciologia.org.br/product/imersao-em-ectoplasmia-11-edicao-online-imersao-em-ectoplasmia/" target="_blank" rel="noopener">R$ 800 online</a>. Economia calculada em relação à Escola no 2º lote (R$ 600) somada à Imersão avulsa. Dúvidas sobre condições para 60+ e casais: <a class="esc-link" href="contato.html">fale com a secretaria</a>. <a class="esc-link" href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial/" target="_blank" rel="noopener">Ver página de combos →</a></p>
     </div>
   </section>
 
@@ -339,6 +350,42 @@ a{color:inherit}
 </main>
 
 <div id="__footer"></div>
+
+<div class="esc-modal" id="cupomModal" role="dialog" aria-modal="true" aria-labelledby="cupomModalTitle" aria-hidden="true">
+  <div class="esc-modal__backdrop" data-cupom-close></div>
+  <div class="esc-modal__card">
+    <button type="button" class="esc-modal__close" data-cupom-close aria-label="Fechar">✕</button>
+    <div class="eyebrow"><span class="dot"></span>CUPOM 60+</div>
+    <h3 id="cupomModalTitle">Desconto para 60+</h3>
+    <p>No 1º lote (até 30/09) não há cupom: os R$ 400 já são o preço promocional. A partir de 01/10, use o cupom abaixo na página de inscrição — lá você escolhe só a Escola ou o combo com a Imersão.</p>
+    <div class="esc-cupombox"><span id="cupomCode">ESCOLA60</span></div>
+    <button type="button" class="btn btn-primary" data-cupom-copy style="width:100%;justify-content:center">Copiar cupom</button>
+    <p class="esc-modal__ok" id="cupomOk" hidden>Cupom copiado ✓</p>
+    <p class="esc-modal__alert">⚠ Iremos verificar cada inscrição feita com este cupom.</p>
+    <a href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial/" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;justify-content:center">Ir para a inscrição <span class="arrow">→</span></a>
+  </div>
+</div>
+<script>
+(function(){
+  var modal=document.getElementById('cupomModal');
+  if(!modal) return;
+  var codeEl=document.getElementById('cupomCode');
+  var ok=document.getElementById('cupomOk');
+  var copyBtn=modal.querySelector('[data-cupom-copy]');
+  function open(){modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+  function close(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
+  document.querySelectorAll('[data-cupom-open]').forEach(function(b){b.addEventListener('click',open);});
+  modal.querySelectorAll('[data-cupom-close]').forEach(function(b){b.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&modal.classList.contains('is-open'))close();});
+  function done(){ok.hidden=false;copyBtn.textContent='Copiado ✓';setTimeout(function(){ok.hidden=true;copyBtn.textContent='Copiar cupom';},2500);}
+  function fallback(code){var t=document.createElement('textarea');t.value=code;document.body.appendChild(t);t.select();try{document.execCommand('copy');done();}catch(e){}document.body.removeChild(t);}
+  copyBtn.addEventListener('click',function(){
+    var code=codeEl.textContent.trim();
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(code).then(done).catch(function(){fallback(code);});}
+    else{fallback(code);}
+  });
+})();
+</script>
 <script src="../assets/chrome.js"></script>
 </body>
 </html>
