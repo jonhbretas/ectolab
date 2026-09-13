@@ -7,8 +7,10 @@
       "fullName": "Dinâmica Interassistencial da Paracirurgia",
       "title": "DIP - Dinâmica Interassistencial de Paracirurgia",
       "category": "dinamica",
+      "categoryCustom": "",
       "tag": "DIP · Presencial",
       "status": "Inscrições Abertas",
+      "vacancies": "",
       "description": "Atividade presencial de paracirurgia voltada ao desenvolvimento parapsíquico, assistência energética e pesquisa interassistencial.",
       "location": "Consultar local da turma",
       "time": "19h00 - 22h00",
@@ -16,6 +18,7 @@
       "free": false,
       "href": "/pages/dinamica.html",
       "buttonLabel": "Inscrever-se",
+      "modalidades": [],
       "durationDays": 0
     },
     {
@@ -25,8 +28,10 @@
       "fullName": "Campo Interassistencial Paracirúrgico",
       "title": "CIP - Campo Interassistencial Paracirúrgico",
       "category": "curso-campo",
+      "categoryCustom": "",
       "tag": "Campo · Presencial",
       "status": "Inscrições Abertas",
+      "vacancies": "",
       "description": "Imersão dedicada ao reequilíbrio bioenergético e ao desenvolvimento da ectoplasmia interassistencial.",
       "location": "Consultar próximas turmas",
       "time": "Sexta, sábado e domingo",
@@ -34,6 +39,7 @@
       "free": false,
       "href": "/pages/curso-campo.html",
       "buttonLabel": "Consultar próximas turmas",
+      "modalidades": [],
       "durationDays": 2
     },
     {
@@ -43,8 +49,10 @@
       "fullName": "Dinâmica Interassistencial da Paracirurgia",
       "title": "DIP - Dinâmica Interassistencial da Paracirurgia",
       "category": "curso-presencial",
+      "categoryCustom": "",
       "tag": "Curso · DIP",
       "status": "Inscrições Abertas",
+      "vacancies": "",
       "description": "Curso introdutório sobre a Dinâmica Interassistencial da Paracirurgia, com fundamentos, orientações e preparação para participação.",
       "location": "Online + presencial",
       "time": "4 encontros",
@@ -52,6 +60,7 @@
       "free": true,
       "href": "/pages/cursos.html",
       "buttonLabel": "Ver detalhes",
+      "modalidades": [],
       "durationDays": 0
     },
     {
@@ -61,6 +70,7 @@
       "fullName": "Programa de Estimulação Parapsíquica Ectoplásmica",
       "title": "PROEP - Programa de Estimulação Parapsíquica Ectoplásmica",
       "category": "programa",
+      "categoryCustom": "",
       "tag": "Programa · PROEP",
       "status": "Inscrições Abertas",
       "vacancies": "Turma reduzida",
@@ -71,6 +81,7 @@
       "free": false,
       "href": "/pages/curso-proep.html",
       "buttonLabel": "Inscrever-se",
+      "modalidades": [],
       "durationDays": 2
     },
     {
@@ -91,6 +102,7 @@
       "free": false,
       "href": "/pages/curso-imersao.html",
       "buttonLabel": "Inscrever-se",
+      "modalidades": [],
       "durationDays": 2
     },
     {
@@ -100,8 +112,10 @@
       "fullName": "Ectoplasmia Projetiva Paracirúrgica Interassistencial",
       "title": "EPPI - Ectoplasmia Projetiva Paracirúrgica Interassistencial",
       "category": "curso-campo",
+      "categoryCustom": "",
       "tag": "Imersão · EPPI",
       "status": "Inscrições Abertas",
+      "vacancies": "",
       "description": "Curso de campo para favorecer a projeção consciente com objetivos interassistenciais e paracirúrgicos.",
       "location": "Consultar próximas turmas",
       "time": "Sexta, sábado e domingo",
@@ -109,6 +123,7 @@
       "free": false,
       "href": "/pages/curso-eppi.html",
       "buttonLabel": "Consultar próximas turmas",
+      "modalidades": [],
       "durationDays": 2
     },
     {
@@ -118,8 +133,10 @@
       "fullName": "Ectoplasmia Interassistencial",
       "title": "EI - Ectoplasmia Interassistencial",
       "category": "curso-online",
+      "categoryCustom": "",
       "tag": "Curso · Online",
       "status": "Em breve",
+      "vacancies": "",
       "description": "Curso gravado sobre os fundamentos da assistência com ectoplasma, bioenergologia, paraterapêutica e pesquisa.",
       "location": "Online",
       "time": "Acesso imediato",
@@ -127,6 +144,7 @@
       "free": false,
       "href": "/pages/curso-ectoplasmia-interassistencial.html",
       "buttonLabel": "Ver curso",
+      "modalidades": [],
       "durationDays": 0
     },
     {
@@ -136,8 +154,10 @@
       "fullName": "Ectoplasmia Protetiva",
       "title": "EP - Ectoplasmia Protetiva",
       "category": "curso-presencial",
+      "categoryCustom": "",
       "tag": "Curso · Presencial",
       "status": "Inscrições Abertas",
+      "vacancies": "",
       "description": "Curso para conhecer situações adversas ou traumáticas que um ectoplasta pode vivenciar e estudar medidas profiláticas.",
       "location": "Auditorium - CEAEC",
       "time": "Sábado e domingo",
@@ -145,6 +165,7 @@
       "free": false,
       "href": "/pages/curso-ectoplasmia-protetiva.html",
       "buttonLabel": "Inscrever-se",
+      "modalidades": [],
       "durationDays": 1
     },
     {
@@ -154,8 +175,10 @@
       "fullName": "Tertúlia Ectolab",
       "title": "TERT - Tertúlia Ectolab",
       "category": "palestra",
+      "categoryCustom": "",
       "tag": "Palestra · Online",
       "status": "Inscrições Abertas",
+      "vacancies": "",
       "description": "Encontro aberto para estudo, debate e aprofundamento em ectoplasmia, paracirurgia e temas conscienciológicos.",
       "location": "Online",
       "time": "20h00 - 21h30",
@@ -163,6 +186,7 @@
       "free": true,
       "href": "/pages/materiais.html",
       "buttonLabel": "Ver detalhes",
+      "modalidades": [],
       "durationDays": 0
     },
     {
@@ -172,8 +196,10 @@
       "fullName": "Simpósio Ectolab",
       "title": "SIMP - Simpósio Ectolab",
       "category": "simposio",
+      "categoryCustom": "",
       "tag": "Simpósio · Internacional",
       "status": "Inscrições Abertas",
+      "vacancies": "",
       "description": "Evento científico com palestras, debates e apresentação de pesquisas sobre ectoplasmia, paracirurgia e saúde integrativa.",
       "location": "Presencial + online",
       "time": "3 dias",
@@ -181,6 +207,7 @@
       "free": false,
       "href": "/pages/atividades.html",
       "buttonLabel": "Inscrever-se",
+      "modalidades": [],
       "durationDays": 2
     },
     {
@@ -190,8 +217,10 @@
       "fullName": "Oficina Ectolab",
       "title": "OFIC - Oficina Ectolab",
       "category": "oficina",
+      "categoryCustom": "",
       "tag": "Oficina",
       "status": "Inscrições Abertas",
+      "vacancies": "",
       "description": "Atividade prática orientada para desenvolvimento técnico, autopesquisa e aplicação de ferramentas bioenergéticas.",
       "location": "Consultar",
       "time": "Consultar",
@@ -199,6 +228,7 @@
       "free": false,
       "href": "/pages/cursos.html",
       "buttonLabel": "Ver detalhes",
+      "modalidades": [],
       "durationDays": 0
     },
     {
@@ -208,8 +238,10 @@
       "fullName": "Verbete",
       "title": "VERB - Verbete",
       "category": "verbete",
+      "categoryCustom": "",
       "tag": "Verbete",
       "status": "Em breve",
+      "vacancies": "",
       "description": "Atividade dedicada ao estudo, apresentação ou debate de verbetes relacionados à pesquisa conscienciológica.",
       "location": "Online",
       "time": "Consultar",
@@ -217,6 +249,7 @@
       "free": true,
       "href": "/pages/materiais.html",
       "buttonLabel": "Ver detalhes",
+      "modalidades": [],
       "durationDays": 0
     },
     {
@@ -226,8 +259,10 @@
       "fullName": "Artigo Ectolab",
       "title": "ART - Artigo Ectolab",
       "category": "artigo",
+      "categoryCustom": "",
       "tag": "Artigo",
       "status": "Em breve",
+      "vacancies": "",
       "description": "Publicação de conteúdo técnico, artigo ou material de pesquisa da Ectolab.",
       "location": "Blog Ectolab",
       "time": "Publicação online",
@@ -235,6 +270,7 @@
       "free": true,
       "href": "/pages/blog.html",
       "buttonLabel": "Ler artigo",
+      "modalidades": [],
       "durationDays": 0
     },
     {
@@ -244,8 +280,10 @@
       "fullName": "Fórum Ectolab",
       "title": "FORUM - Fórum Ectolab",
       "category": "forum",
+      "categoryCustom": "",
       "tag": "Fórum",
       "status": "Inscrições Abertas",
+      "vacancies": "",
       "description": "Encontro para debate, troca de experiências e aprofundamento coletivo em temas de pesquisa da Ectolab.",
       "location": "Consultar",
       "time": "Consultar",
@@ -253,6 +291,7 @@
       "free": false,
       "href": "/pages/curso.html?id=forum",
       "buttonLabel": "Ver detalhes",
+      "modalidades": [],
       "durationDays": 0
     },
     {
@@ -262,8 +301,10 @@
       "fullName": "Encontro Ectolab",
       "title": "ENC - Encontro Ectolab",
       "category": "encontro",
+      "categoryCustom": "",
       "tag": "Encontro",
       "status": "Em breve",
+      "vacancies": "",
       "description": "Encontro da comunidade Ectolab para integração, estudo e alinhamento de atividades.",
       "location": "Consultar",
       "time": "Consultar",
@@ -271,7 +312,28 @@
       "free": false,
       "href": "/pages/atividades.html",
       "buttonLabel": "Ver detalhes",
+      "modalidades": [],
       "durationDays": 0
+    },
+    {
+      "id": "Escola",
+      "label": "Escola Parambulatorial",
+      "acronym": "",
+      "fullName": "Escola Multidimensional de Interassistência Parambulatorial",
+      "title": "",
+      "category": "curso-online",
+      "categoryCustom": "",
+      "tag": "100% ONLINE",
+      "status": "Inscrições Abertas",
+      "vacancies": "",
+      "description": "A Escola é para quem quer ir além de assistir aulas: é um espaço para experimentar, registrar e discutir a própria vivência parapsíquica em ambiente assistencial, com método e autocrítica.\n\nSão 4 encontros online mensais, de novembro de 2026 a fevereiro de 2027, com o professor Hernande Leite e docentes convidados. O percurso termina um mês antes da Imersão em Ectoplasmia — a etapa prática, em campo.\n\nVocê não precisa ter feito nenhum curso antes. A Escola foi pensada para o público geral que quer entender e praticar a interassistência com base científica.",
+      "location": "Online",
+      "time": "2h30",
+      "price": "400",
+      "free": false,
+      "href": "/pages/atividades.html",
+      "buttonLabel": "Ver detalhes",
+      "durationDays": null
     }
   ]
 }
