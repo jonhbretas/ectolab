@@ -69,6 +69,11 @@
       "value": "Programa",
       "label": "Programa",
       "plural": "Programa"
+    },
+    {
+      "value": "Escola",
+      "label": "Escola",
+      "plural": "Escola"
     }
   ]
 }
