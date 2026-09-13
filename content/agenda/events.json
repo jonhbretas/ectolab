@@ -555,7 +555,7 @@
     },
     {
       "model": "escola",
-      "title": "",
+      "title": "Escola Multidimensional de Interassistência Parambulatorial",
       "category": "escola",
       "categoryCustom": "",
       "date": "2026-11-15",
@@ -567,7 +567,7 @@
       "tag": "100% Online",
       "status": "Inscrições Abertas",
       "vacancies": "",
-      "price": "R$400",
+      "price": "R$ 400",
       "free": false,
       "buttonLabel": "Ver detalhes",
       "modalidades": [],
