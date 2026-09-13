@@ -10,31 +10,6 @@
 
 export const eventos = [
   {
-    "slug": "2026-09-10-oficina-de-ectoplasmologia",
-    "date": "2026-09-10",
-    "durationDays": 0,
-    "dia": "10",
-    "mes": "SET",
-    "mesNome": "SETEMBRO",
-    "ano": "2026",
-    "titulo": "OFIC - Oficina Ectolab · Oficina de Ectoplasmologia",
-    "tipo": "Oficina",
-    "gratuito": true,
-    "local": "Consultar",
-    "horario": "Consultar",
-    "detalhe": null,
-    "href": "/pages/oficina-ectoplasmologia.html",
-    "page": "/pages/oficina-ectoplasmologia.html",
-    "preco": "Consultar",
-    "precoExtra": null,
-    "modalidades": [],
-    "status": "Inscrições Abertas",
-    "featured": false,
-    "featuredStyle": "",
-    "pinHome": false,
-    "homeOrdem": 999
-  },
-  {
     "slug": "2026-09-11-encontro-de-voluntarios",
     "date": "2026-09-11",
     "durationDays": 2,

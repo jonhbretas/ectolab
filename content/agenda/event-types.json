@@ -66,14 +66,9 @@
       "plural": "Encontros"
     },
     {
-      "value": "Programa",
-      "label": "Programa",
-      "plural": "Programa"
-    },
-    {
-      "value": "Escola",
+      "value": "escola",
       "label": "Escola",
-      "plural": "Escola"
+      "plural": "Escolas"
     }
   ]
 }

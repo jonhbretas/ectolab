@@ -176,6 +176,7 @@ collections:
                   - { label: Fórum, value: forum }
                   - { label: Dinâmica, value: dinamica }
                   - { label: Encontro, value: encontro }
+                  - { label: Escola, value: escola }
               - { name: categoryCustom, label: Tipo personalizado padrao, widget: string, required: false, hint: "Use apenas quando o tipo ainda nao existir na lista. Ex.: Semana de Verbetes. O site cria o filtro automaticamente." }
               - { name: tag, label: Etiqueta padrao, widget: string, required: false }
               - name: status
@@ -246,6 +247,7 @@ collections:
                   - { label: Artigo, value: artigo }
                   - { label: Fórum, value: forum }
                   - { label: Encontro, value: encontro }
+                  - { label: Escola Parambulatorial, value: escola }
               - { name: title, label: "2. Complemento do titulo (opcional)", widget: string, required: false, hint: "Com modelo selecionado, o site ja usa SIGLA - nome completo. Preencha aqui apenas um complemento, como Turma 2027, Edicao 412 ou tema especifico." }
               - name: category
                 label: "3. Tipo de evento"
@@ -266,6 +268,7 @@ collections:
                   - { label: Fórum, value: forum }
                   - { label: Dinâmica, value: dinamica }
                   - { label: Encontro, value: encontro }
+                  - { label: Escola, value: escola }
               - { name: categoryCustom, label: Tipo personalizado, widget: string, required: false, hint: "Use quando o tipo desejado ainda nao existir na lista acima. Ex.: Semana de Verbetes. Este texto aparece no evento e vira filtro automaticamente." }
               - { name: date, label: "4. Data de inicio", widget: datetime, date_format: "YYYY-MM-DD", time_format: false, hint: "Data em que o evento comeca. O site calcula o dia da semana automaticamente." }
               - { name: durationDays, label: "5. Duracao em dias", widget: number, value_type: int, min: 0, required: false, hint: "Quantos dias o evento dura a partir da data de inicio. Use 0 para evento de um dia. Ex.: inicio 01/01 + 2 dias termina em 03/01." }
