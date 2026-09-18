@@ -352,6 +352,7 @@ export default defineConfig({
         cursoEctoplasmiaInterassistencial: resolve(__dirname, 'pages/curso-ectoplasmia-interassistencial.html'),
         cursoEctoplasmiaProtetiva: resolve(__dirname, 'pages/curso-ectoplasmia-protetiva.html'),
         cursoQuadroSinoptico: resolve(__dirname, 'pages/curso-quadro-sinoptico.html'),
+        cursoQualificacaoPensenes: resolve(__dirname, 'pages/curso-qualificacao-pensenes.html'),
         cursoMaterializacoes: resolve(__dirname, 'pages/curso-materializacoes.html'),
         cursoEscola: resolve(__dirname, 'pages/curso-escola.html'),
         curso: resolve(__dirname, 'pages/curso.html'),

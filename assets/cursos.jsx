@@ -4,9 +4,9 @@ import ReactDOM from 'react-dom/client';
 const DESTAQUES = [
   {
     t: 'Escola Parambulatorial',
-    desc: '4 encontros online (nov/2026 a fev/2027) com Hernande Leite. Base teórica que se completa na Imersão Parambulatorial 2027.',
+    desc: 'Desenvolvimento do projetor lúcido em Assistência Extrafísica Parambulatorial. 4 encontros online (nov/2026 a fev/2027) para tenepessistas. Vagas limitadas.',
     link: '/pages/curso-escola.html',
-    tag: '◆ Novo · Online Ao Vivo',
+    tag: '◆ Vagas limitadas · Online Ao Vivo',
     tagClass: 'tag gold',
   },
   {
@@ -137,12 +137,12 @@ const CURSOS = [
     type: 'Cursos Ao Vivo (Síncronos)',
     items: [
       {
-        t: 'Escola Multidimensional de Interassistência Parambulatorial',
-        desc: '4 encontros online (nov/2026 a fev/2027) com Hernande Leite. Base teórica que se completa na Imersão Parambulatorial 2027. Lotes R$ 400 / R$ 600.',
+        t: 'Escola Parambulatorial — Desenvolvimento Interassistencial Projetivo',
+        desc: 'Para tenepessistas lúcidos: acoplamento homeostático, assimilação interassistencial, desperticidade e casuística. Lotes R$ 400 / R$ 600. Vagas limitadas.',
         link: '/pages/curso-escola.html',
-        tag: '◆ Novo · Online Ao Vivo',
+        tag: '◆ Vagas limitadas · Online Ao Vivo',
         tagClass: 'tag gold',
-        labels: ['Ao Vivo', 'Online', 'Novo', 'Destaque'],
+        labels: ['Ao Vivo', 'Online', 'Tenepes', 'Destaque'],
       },
       {
         t: 'Auto-organização Bioenergética',
@@ -153,12 +153,12 @@ const CURSOS = [
         labels: ['Ao Vivo', 'Verificar agenda'],
       },
       {
-        t: 'Qualificação dos Pensenes',
-        desc: 'Qualificação de pensamentos, sentimentos e energias.',
-        link: '/pages/curso.html?id=qualificacao',
-        tag: 'Verificar agenda',
-        tagClass: 'tag ghost',
-        labels: ['Ao Vivo', 'Verificar agenda'],
+        t: 'Qualificação dos Pensenes do Ectoplasta',
+        desc: 'Pensamentos, sentimentos e energias em 5h online ao vivo — 10/10/2026 com Paulo Battistella. Sem pré-requisito.',
+        link: '/pages/curso-qualificacao-pensenes.html',
+        tag: '◆ Inscrições abertas · 10/10/2026',
+        tagClass: 'tag gold',
+        labels: ['Ao Vivo', 'Online', 'Destaque'],
       },
     ],
   },

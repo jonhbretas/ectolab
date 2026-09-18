@@ -38,20 +38,19 @@ const CURSOS_DB = {
     ]
   },
   'qualificacao': {
-    tag: "CURSO ONLINE E SÍNCRONO",
+    tag: "CURSO ONLINE · AO VIVO · SEM PRÉ-REQUISITO",
     title: "Qualificação dos Pensenes do Ectoplasta",
-    desc: "O curso Qualificação dos Pensenes do Ectoplasta, desenvolvido pela ECTOLAB, propõe uma imersão teórico-reflexiva voltada ao aprofundamento da autoconscientização energética e à compreensão da ectoplasmia nas vivências do cotidiano.",
+    desc: "Imersão teórico-reflexiva de 5 horas sobre pensamentos, sentimentos e energias — os pensenes — e seus impactos nas manifestações pessoais e interassistenciais do ectoplasta.",
     extra: [
-      "Ao longo de 5 horas de conteúdo, os participantes serão convidados a ampliar a percepção sobre a relação entre pensamentos, sentimentos e energias — os pensenes — e seus impactos nas manifestações pessoais e interassistenciais.",
-      "Com base nos fundamentos da Conscienciologia, o curso aborda temas essenciais como:",
-      "A proposta combina fundamentação teórica, reflexão prática e autopesquisa, favorecendo maior lucidez quanto às próprias manifestações energéticas e auxiliando no desenvolvimento do discernimento, equilíbrio íntimo e qualificação assistencial.",
-      "Mais do que compreender conceitos, o participante é incentivado a observar seus padrões energéticos, ampliar a autopercepção e desenvolver uma postura mais técnica e equilibrada diante das interações intra e extrafísicas.",
-      "Indicado para interessados em energias conscienciais, parapsiquismo, autopesquisa e assistência energética, o curso oferece uma abordagem séria, acessível e aprofundada sobre a realidade do ectoplasta e a importância da qualificação pensênica no cotidiano."
+      "Pensamentos, sentimentos e energias formam o pensene — e o pensene molda o campo, o corpo e a assistência. Neste curso, você amplia a autoconscientização energética e aprende a ler a ectoplasmia no cotidiano, com base nos fundamentos da Conscienciologia.",
+      "Mais do que compreender conceitos, você é incentivado a observar seus padrões energéticos, ampliar a autopercepção e desenvolver postura mais técnica e equilibrada diante das interações intra e extrafísicas.",
+      "A proposta combina fundamentação teórica, reflexão prática e autopesquisa — discernimento, equilíbrio íntimo e qualificação assistencial na prática.",
+      "📅 Próxima turma: 10/10/2026 (sábado) · ⏰ 14h às 16h30 + 17h às 19h30 · 💻 Online ao vivo · 🎓 5 horas · Sem pré-requisito. Página completa com programação detalhada: /pages/curso-qualificacao-pensenes.html"
     ],
-    obj: ["Ectoplasmia", "Autopensene e heteropensene", "Holopensene do ectoplasta", "Energia consciencial e energia imanente", "Sinais e sintomas relacionados à ectoplasmia", "Instrumentos de autoavaliação, como o parapercepciograma"],
+    obj: ["Ectoplasmia: bases do fenômeno e do ectoplasta no cotidiano", "Autopensene e heteropensene: o que é seu, o que é do ambiente", "Holopensene do ectoplasta: formação e sustentação do ambiente pessoal", "Energia consciencial e energia imanente na prática diária", "Sinais e sintomas relacionados à ectoplasmia: leitura técnica", "Parapercepciograma como instrumento de autoavaliação e acompanhamento"],
     objLabel: "Temas abordados",
-    info: [["Horário", "14h às 16h30 • 17h às 19h30"], ["Carga horária", "5 horas"], ["Modalidade", "Online"], ["Professor", "Paulo Battistela"], ["Valor", "R$ 180,00"]],
-    link: "https://store.conscienciologia.org.br/loja/ectolab/?s=qualifica%C3%A7%C3%A3o+dos+pensenes",
+    info: [["Data", "10/10/2026 (sábado)"], ["Horário", "14h às 16h30 • 17h às 19h30"], ["Carga horária", "5 horas"], ["Modalidade", "Online · ao vivo"], ["Pré-requisito", "Nenhum"], ["Professor", "Paulo Battistella"], ["Valor", "R$ 180,00"]],
+    link: "https://store.conscienciologia.org.br/product/qualificacao-dos-pensenes-do-ectoplasta/",
     depoimentos: [{ a: "Celeste Silveira", t: "Parabéns Prof. Paulo! Grata." }]
   },
   'raizes': {
@@ -89,6 +88,11 @@ function App() {
         <div className="breadcrumb" style={{ marginBottom: 24, fontSize: 13, color: 'var(--ink-3)' }}>
           <a href="/pages/cursos.html" style={{ textDecoration: 'underline' }}>Cursos</a> / {c.title}
         </div>
+        {id === 'qualificacao' && (
+          <div style={{ marginBottom: 24, padding: '14px 18px', background: '#fff8ec', border: '1px solid var(--gold)', borderRadius: 'var(--r-md)', fontSize: 14.5 }}>
+            ✨ <strong>Nova página do curso disponível</strong> — programação completa, temas e FAQ: <a href="/pages/curso-qualificacao-pensenes.html" style={{ color: 'var(--blue)', fontWeight: 700, textDecoration: 'underline' }}>abrir página atualizada →</a>
+          </div>
+        )}
         <div className="grid g2 gap-48">
           <div>
             <div className="eyebrow"><span className="dot"></span>{c.tag}</div>
