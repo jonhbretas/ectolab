@@ -577,6 +577,31 @@
       "featuredCategory": "",
       "pinHome": true,
       "homeOrdem": 1
+    },
+    {
+      "model": "",
+      "title": "Dinâmica Interassistencial da Paracicurgia (DIP) - 1 década em Curitiba",
+      "category": "",
+      "categoryCustom": "",
+      "date": "2026-12-04",
+      "durationDays": 1,
+      "href": "https://www.sympla.com.br/evento/ectolab-dinamica-interassistencial-da-paracicurgia-dip-1-decada-em-curitiba-alunos/3563670",
+      "description": "",
+      "location": "Hotel Deville Curitiba, Curitiba - PR",
+      "time": "18h00 às 22h00",
+      "tag": "",
+      "status": "Inscrições Abertas",
+      "vacancies": "",
+      "price": "",
+      "free": true,
+      "buttonLabel": "Ver detalhes",
+      "modalidades": [],
+      "featured": true,
+      "featuredStyle": "default",
+      "featuredDate": "",
+      "featuredCategory": "",
+      "pinHome": false,
+      "homeOrdem": null
     }
   ]
 }
