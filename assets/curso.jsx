@@ -82,17 +82,18 @@ function App() {
   const id = urlParams.get('id') || 'auto-org';
   const c = CURSOS_DB[id] || CURSOS_DB['auto-org'];
 
+  // A Qualificação dos Pensenes ganhou página própria — redireciona a URL antiga.
+  if (id === 'qualificacao') {
+    window.location.replace('/pages/curso-qualificacao-pensenes.html');
+    return null;
+  }
+
   return (
     <section className="section bg-white" style={{ paddingTop: '80px', paddingBottom: '64px' }}>
       <div className="wrap">
         <div className="breadcrumb" style={{ marginBottom: 24, fontSize: 13, color: 'var(--ink-3)' }}>
           <a href="/pages/cursos.html" style={{ textDecoration: 'underline' }}>Cursos</a> / {c.title}
         </div>
-        {id === 'qualificacao' && (
-          <div style={{ marginBottom: 24, padding: '14px 18px', background: '#fff8ec', border: '1px solid var(--gold)', borderRadius: 'var(--r-md)', fontSize: 14.5 }}>
-            ✨ <strong>Nova página do curso disponível</strong> — programação completa, temas e FAQ: <a href="/pages/curso-qualificacao-pensenes.html" style={{ color: 'var(--blue)', fontWeight: 700, textDecoration: 'underline' }}>abrir página atualizada →</a>
-          </div>
-        )}
         <div className="grid g2 gap-48">
           <div>
             <div className="eyebrow"><span className="dot"></span>{c.tag}</div>
