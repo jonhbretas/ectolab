@@ -28,17 +28,17 @@
       dropdown: [
         { cat: "Assistência", links: [
           { label: "O que é a Paracirurgia", href: P + "pages/paracirurgia.html" },
-          { label: "Solicitar Paracirurgia ↗", href: "https://dip-ectolab.org.br/pedido-paracirurgia", target: "_blank" },
+          { label: "Solicitar Paracirurgia ↗", href: "https://sistema.ectolab.org/pedido-paracirurgia", target: "_blank" },
           { label: "Enviar Relatório do Pedido", href: P + "pages/relatorio-pedido.html" },
-          { label: "Pontuações ↗", href: "https://dip-ectolab.org.br/pedido-paracirurgia/pontuacoes", target: "_blank" }
+          { label: "Pontuações ↗", href: "https://sistema.ectolab.org/pedido-paracirurgia/pontuacoes", target: "_blank" }
         ]},
         { cat: "Rede de Paracirurgia", links: [
           { label: "Sobre a Rede Invisível", href: P + "pages/rede.html" },
-          { label: "Cadastro na Rede ↗", href: "https://dip-ectolab.org.br/register", target: "_blank" },
+          { label: "Cadastro na Rede ↗", href: "https://sistema.ectolab.org/register", target: "_blank" },
           { label: "Relatório da Rede", href: P + "pages/rede-relatorio.html" }
         ]},
         { cat: "Sistema", links: [
-          { label: "Acessar Sistema ↗", href: "https://dip-ectolab.org.br/login", target: "_blank" }
+          { label: "Acessar Sistema ↗", href: "https://sistema.ectolab.org/login", target: "_blank" }
         ]}
       ]
     },
@@ -187,7 +187,7 @@
         <nav class="nav">${navHTML}</nav>
         <div class="header-actions" aria-label="Ações rápidas">
           <a href="${P}pages/parcerias.html" class="btn btn-parcerias btn-sm">Parcerias</a>
-          <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange btn-sm">Paracirurgia</a>
+          <a href="https://sistema.ectolab.org/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange btn-sm">Paracirurgia</a>
           <a href="${P}pages/tenepes.html" class="btn btn-ghost btn-sm">Tenepes</a>
         </div>
         <select class="lang-select" aria-label="Idioma">
@@ -214,7 +214,7 @@
       <div class="nav-drawer__ctas">
         <div class="drawer-action-grid">
           <a href="${P}pages/parcerias.html" class="btn btn-ghost btn-sm">Parcerias</a>
-          <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange btn-sm">Paracirurgia <span class="arrow">↗</span></a>
+          <a href="https://sistema.ectolab.org/pedido-paracirurgia" target="_blank" rel="noreferrer" class="btn btn-orange btn-sm">Paracirurgia <span class="arrow">↗</span></a>
           <a href="${P}pages/tenepes.html" class="btn btn-ghost btn-sm">Tenepes</a>
         </div>
         <select class="lang-select" aria-label="Idioma" style="width:100%">

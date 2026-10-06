@@ -68,7 +68,7 @@ function HeroParacirurgia() {
           </div>
         </div>
         <div className="flex gap-16" style={{ marginTop: 40, flexWrap: 'wrap' }}>
-          <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange">
+          <a href="https://sistema.ectolab.org/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange">
             Solicitar Paracirurgia <span className="arrow">↗</span>
           </a>
           <a href="#como-participar" className="btn btn-ghost">
@@ -216,7 +216,7 @@ function ComoParticipar() {
             <span className="specimen">MODALIDADE 01</span>
             <h3 className="h3" style={{ margin: '16px 0' }}>Receber atendimento</h3>
             <p style={{ fontSize: '14.5px', color: 'var(--ink-2)' }}>Os atendimentos paracirúrgicos são feitos a distância. A pessoa permanece em casa e não precisa ir até o local da dinâmica. Basta preencher o formulário, seguir as instruções e colocar-se em repouso.</p>
-            <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="link-arrow" style={{ marginTop: 'auto', alignSelf: 'flex-start' }}>Solicitar atendimento ↗</a>
+            <a href="https://sistema.ectolab.org/pedido-paracirurgia" target="_blank" rel="noreferrer" className="link-arrow" style={{ marginTop: 'auto', alignSelf: 'flex-start' }}>Solicitar atendimento ↗</a>
           </div>
           
           <div className="card" style={{ padding: '32px', border: '1px solid var(--orange)' }}>
@@ -275,7 +275,7 @@ function FormularioSolicitacao() {
               <p className="lede" style={{ marginBottom: 24 }}>
                 Os agendamentos são realizados através de nossa plataforma externa dedicada.
               </p>
-              <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange" style={{ width: '100%', justifyContent: 'center' }}>
+              <a href="https://sistema.ectolab.org/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange" style={{ width: '100%', justifyContent: 'center' }}>
                 Acessar Portal do Assistido <span className="arrow">↗</span>
               </a>
             </div>

@@ -26,7 +26,7 @@ function HeroConservadora() {
               registro técnico e compromisso interassistencial.
             </p>
             <div className="flex gap-12" style={{ marginTop: 36, flexWrap: "wrap" }}>
-              <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange">
+              <a href="https://sistema.ectolab.org/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange">
                 Solicitar paracirurgia <span className="arrow">↗</span>
               </a>
               <a href="pages/trilha.html" className="btn btn-ghost">
@@ -101,7 +101,7 @@ function HeroEquilibrada() {
           formação de voluntários e práticas interassistenciais.
         </p>
         <div className="flex gap-12 center-cta">
-          <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange">
+          <a href="https://sistema.ectolab.org/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange">
             Solicitar paracirurgia <span className="arrow">↗</span>
           </a>
           <a href="pages/trilha.html" className="btn btn-ghost">
@@ -158,7 +158,7 @@ function HeroOusada() {
               o estudo técnico dos fenômenos ectoplásmicos.
             </p>
             <div className="ousada-cta">
-              <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange btn-big">
+              <a href="https://sistema.ectolab.org/pedido-paracirurgia" target="_blank" rel="noreferrer" className="btn btn-orange btn-big">
                 Solicitar paracirurgia <span className="arrow">↗</span>
               </a>
               <a href="pages/trilha.html" className="btn-text">
@@ -206,7 +206,7 @@ function PrincipioDescrenca() {
         </div>
 
         <div className="paths-grid">
-          <a href="https://dip-ectolab.org.br/pedido-paracirurgia" target="_blank" rel="noreferrer" className="path-card path-card--orange">
+          <a href="https://sistema.ectolab.org/pedido-paracirurgia" target="_blank" rel="noreferrer" className="path-card path-card--orange">
             <span className="specimen">CAMINHO 01</span>
             <h3 className="h2 path-h">Busco assistência</h3>
             <p>Quero solicitar paracirurgia para mim, terceiros ou animais e compreender preparo, prazos e registro pós-atendimento.</p>
