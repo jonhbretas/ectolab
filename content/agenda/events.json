@@ -602,6 +602,31 @@
       "featuredCategory": "",
       "pinHome": false,
       "homeOrdem": null
+    },
+    {
+      "model": "",
+      "title": "Parapercepciologia: Estudo de Caso",
+      "category": "curso-online",
+      "categoryCustom": "",
+      "date": "2026-11-21",
+      "durationDays": 0,
+      "href": "https://store.conscienciologia.org.br/sku/312870/",
+      "description": "Aprenda a analisar uma vivência parapsíquica com método, e não só com impressão. Dois encontros com o Prof. Hernande Leite para qualificar a sua pesquisa parapsíquica.",
+      "location": "Online",
+      "time": "16h00 às 18h00",
+      "tag": "",
+      "status": "Inscrições Abertas",
+      "vacancies": "",
+      "price": "R$ 150,00",
+      "free": false,
+      "buttonLabel": "Ver detalhes",
+      "modalidades": [],
+      "featured": true,
+      "featuredStyle": "default",
+      "featuredDate": "",
+      "featuredCategory": "",
+      "pinHome": false,
+      "homeOrdem": null
     }
   ]
 }
