@@ -310,7 +310,7 @@ a{color:inherit}
             <li class="riscado">Presença nos campos em Foz do Iguaçu</li>
           </ul>
           <a href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial-imersao-parambulatorial-online/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center">Quero o combo online <span class="arrow">→</span></a>
-          <button type="button" class="btn btn-ghost" data-cupom-open style="width:100%;justify-content:center">Sou 60+ · Ver cupom</button>
+          <button type="button" class="btn btn-ghost" data-cupom-open data-cupom="combo-online" data-cupom-href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial-imersao-parambulatorial-online/" style="width:100%;justify-content:center">Sou 60+ · Ver cupom</button>
         </div>
         <div class="esc-preco esc-preco--destaque">
           <span class="esc-preco__ribbon">Experiência completa</span>
@@ -325,7 +325,7 @@ a{color:inherit}
             <li>Participação na pesquisa e devolutiva do parapercepcionograma</li>
           </ul>
           <a href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial-imersao-parambulatorial-presencial/" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;justify-content:center">Quero o combo presencial <span class="arrow">→</span></a>
-          <button type="button" class="btn btn-ghost" data-cupom-open style="width:100%;justify-content:center">Sou 60+ · Ver cupom</button>
+          <button type="button" class="btn btn-ghost" data-cupom-open data-cupom="combo-presencial" data-cupom-href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial-imersao-parambulatorial-presencial/" style="width:100%;justify-content:center">Sou 60+ · Ver cupom</button>
         </div>
       </div>
       <p class="esc-nota">Valores da Imersão avulsa: <a class="esc-link" href="https://store.conscienciologia.org.br/product/imersao-em-ectoplasmia-11-edicao-presencial-imersao-em-ectoplasmia/" target="_blank" rel="noopener">R$ 1.500 presencial</a> · <a class="esc-link" href="https://store.conscienciologia.org.br/product/imersao-em-ectoplasmia-11-edicao-online-imersao-em-ectoplasmia/" target="_blank" rel="noopener">R$ 800 online</a>. Economia calculada em relação à Escola (R$ 600) somada à Imersão avulsa. Dúvidas sobre condições para 60+ e casais: <a class="esc-link" href="contato.html">fale com a secretaria</a>. <a class="esc-link" href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial/" target="_blank" rel="noopener">Ver página de combos →</a></p>
@@ -370,7 +370,7 @@ a{color:inherit}
     <button type="button" class="btn btn-primary" data-cupom-copy style="width:100%;justify-content:center">Copiar cupom</button>
     <p class="esc-modal__ok" id="cupomOk" hidden>Cupom copiado ✓</p>
     <p class="esc-modal__alert">⚠ Iremos verificar cada inscrição feita com este cupom.</p>
-    <a href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial/" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;justify-content:center">Ir para a inscrição <span class="arrow">→</span></a>
+    <a id="cupomHref" href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial/" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;justify-content:center">Ir para a inscrição <span class="arrow">→</span></a>
   </div>
 </div>
 <script>
@@ -380,7 +380,9 @@ a{color:inherit}
   var codeEl=document.getElementById('cupomCode');
   var ok=document.getElementById('cupomOk');
   var copyBtn=modal.querySelector('[data-cupom-copy]');
-  function open(){modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
+  var hrefEl=document.getElementById('cupomHref');
+  var defCode=codeEl.textContent.trim(), defHref=hrefEl.getAttribute('href');
+  function open(e){var b=e&&e.currentTarget;codeEl.textContent=(b&&b.getAttribute('data-cupom'))||defCode;hrefEl.setAttribute('href',(b&&b.getAttribute('data-cupom-href'))||defHref);modal.classList.add('is-open');modal.setAttribute('aria-hidden','false');document.body.style.overflow='hidden';}
   function close(){modal.classList.remove('is-open');modal.setAttribute('aria-hidden','true');document.body.style.overflow='';}
   document.querySelectorAll('[data-cupom-open]').forEach(function(b){b.addEventListener('click',open);});
   modal.querySelectorAll('[data-cupom-close]').forEach(function(b){b.addEventListener('click',close);});
