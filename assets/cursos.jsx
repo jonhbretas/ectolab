@@ -138,7 +138,7 @@ const CURSOS = [
     items: [
       {
         t: 'Escola Parambulatorial — Desenvolvimento Interassistencial Projetivo',
-        desc: 'Para tenepessistas lúcidos: acoplamento homeostático, assimilação interassistencial, desperticidade e casuística. Lotes R$ 400 / R$ 600. Vagas limitadas.',
+        desc: 'Para tenepessistas lúcidos: acoplamento homeostático, assimilação interassistencial, desperticidade e casuística. Investimento R$ 600. Vagas limitadas.',
         link: '/pages/curso-escola.html',
         tag: '◆ Vagas limitadas · Online Ao Vivo',
         tagClass: 'tag gold',

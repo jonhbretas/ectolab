@@ -72,6 +72,7 @@ a{color:inherit}
 .esc-preco__ribbon{position:absolute;top:-13px;left:24px;background:var(--gold);color:var(--ink);font-family:var(--mono);font-size:10.5px;letter-spacing:0.14em;text-transform:uppercase;padding:5px 12px;border-radius:999px;font-weight:600}
 .esc-preco h3{font-family:var(--display);font-size:22px;font-weight:600;margin:0;letter-spacing:-0.015em}
 .esc-preco__val{font-family:var(--display);font-size:46px;font-weight:700;letter-spacing:-0.035em;line-height:1;color:var(--blue)}
+.esc-preco__60{font-size:13.5px;font-weight:600;color:var(--ink-2);margin-top:-6px}
 .esc-preco__val small{font-size:15px;font-weight:500;color:var(--ink-3);letter-spacing:0;margin-left:6px}
 .esc-preco p{font-size:14.5px;color:var(--ink-2);margin:0;line-height:1.6}
 .esc-preco__inclui{margin:4px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px;font-size:14px;flex:1}
@@ -145,18 +146,18 @@ a{color:inherit}
           </div>
           <div class="esc-lote">
             <div class="esc-lote__box esc-lote__box--on">
-              <div class="lbl">1º lote · até 30/09</div>
-              <div class="val">R$ 400</div>
-              <div class="sub">60+: R$ 300 com cupom</div>
+              <div class="lbl">Somente a Escola</div>
+              <div class="val">R$ 600</div>
+              <div class="sub">60+: R$ 450 com cupom</div>
             </div>
             <div class="esc-lote__box">
-              <div class="lbl">A partir de 01/10</div>
-              <div class="val">R$ 600</div>
-              <div class="sub">60+: R$ 400 com cupom</div>
+              <div class="lbl">Combo com a Imersão</div>
+              <div class="val">R$ 1.000</div>
+              <div class="sub">online · presencial: R$ 1.600</div>
             </div>
           </div>
           <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
-            <a href="#investimento" class="btn btn-gold">Garantir 1º lote <span class="arrow">→</span></a>
+            <a href="#investimento" class="btn btn-gold">Garantir minha vaga <span class="arrow">→</span></a>
             <a href="#combo" class="btn btn-ghost" style="color:#fff;border-color:rgba(255,255,255,0.5)">Ver combo Escola + Imersão</a>
           </div>
         </div>
@@ -284,12 +285,11 @@ a{color:inherit}
     <div class="wrap">
       <div class="eyebrow"><span class="dot"></span>INVESTIMENTO E INSCRIÇÃO · VAGAS LIMITADAS</div>
       <h2 class="h1" style="margin:16px 0 12px">Garanta já a sua vaga.</h2>
-      <p class="lede" style="margin:0 0 40px;max-width:640px;color:var(--ink-2)">Turma reduzida para garantir debate e acompanhamento. Inscrição por lote: quanto antes, menor o valor — e os combos garantem Escola + Imersão com desconto.</p>
+      <p class="lede" style="margin:0 0 40px;max-width:640px;color:var(--ink-2)">Turma reduzida para garantir debate e acompanhamento. Os combos garantem Escola + Imersão com desconto sobre a compra separada.</p>
 
       <div class="eyebrow" style="margin-bottom:14px"><span class="dot"></span>SOMENTE A ESCOLA</div>
-      <div class="esc-lotes">
-        <div class="on"><span class="lbl">1º lote · até 30 de setembro</span><span class="val">R$ 400 <small>· 60+: R$ 300 com cupom</small></span></div>
-        <div><span class="lbl">2º lote · a partir de 1º de outubro</span><span class="val">R$ 600 <small>· 60+: R$ 400 com cupom</small></span></div>
+      <div class="esc-lotes" style="grid-template-columns:1fr">
+        <div class="on"><span class="lbl">Escola completa · 4 encontros online</span><span class="val">R$ 600 <small>· 60+: R$ 450 com cupom</small></span></div>
       </div>
       <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:56px">
         <a href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial-2/" target="_blank" rel="noopener" class="btn btn-primary">Inscrever-se na Escola <span class="arrow">→</span></a>
@@ -301,7 +301,8 @@ a{color:inherit}
         <div class="esc-preco">
           <h3>Escola + Imersão online</h3>
           <div class="esc-preco__val">R$ 1.000<small>à vista</small></div>
-          <span class="esc-economia">Economize R$ 400 sobre o 2º lote</span>
+          <div class="esc-preco__60">60+: R$ 800 com cupom</div>
+          <span class="esc-economia">Economize R$ 400 sobre a compra separada</span>
           <ul class="esc-preco__inclui">
             <li>Escola completa · 4 encontros online</li>
             <li>Imersão em Ectoplasmia · transmissão online (R$ 800)</li>
@@ -309,12 +310,14 @@ a{color:inherit}
             <li class="riscado">Presença nos campos em Foz do Iguaçu</li>
           </ul>
           <a href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial-imersao-parambulatorial-online/" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center">Quero o combo online <span class="arrow">→</span></a>
+          <button type="button" class="btn btn-ghost" data-cupom-open style="width:100%;justify-content:center">Sou 60+ · Ver cupom</button>
         </div>
         <div class="esc-preco esc-preco--destaque">
           <span class="esc-preco__ribbon">Experiência completa</span>
           <h3>Escola + Imersão presencial</h3>
           <div class="esc-preco__val">R$ 1.600<small>à vista</small></div>
-          <span class="esc-economia">Economize R$ 500 sobre o 2º lote</span>
+          <div class="esc-preco__60">60+: R$ 1.200 com cupom</div>
+          <span class="esc-economia">Economize R$ 500 sobre a compra separada</span>
           <ul class="esc-preco__inclui">
             <li>Escola completa · 4 encontros online</li>
             <li>Imersão em Ectoplasmia · presencial em Foz do Iguaçu (R$ 1.500)</li>
@@ -322,9 +325,10 @@ a{color:inherit}
             <li>Participação na pesquisa e devolutiva do parapercepcionograma</li>
           </ul>
           <a href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial-imersao-parambulatorial-presencial/" target="_blank" rel="noopener" class="btn btn-gold" style="width:100%;justify-content:center">Quero o combo presencial <span class="arrow">→</span></a>
+          <button type="button" class="btn btn-ghost" data-cupom-open style="width:100%;justify-content:center">Sou 60+ · Ver cupom</button>
         </div>
       </div>
-      <p class="esc-nota">Valores da Imersão avulsa: <a class="esc-link" href="https://store.conscienciologia.org.br/product/imersao-em-ectoplasmia-11-edicao-presencial-imersao-em-ectoplasmia/" target="_blank" rel="noopener">R$ 1.500 presencial</a> · <a class="esc-link" href="https://store.conscienciologia.org.br/product/imersao-em-ectoplasmia-11-edicao-online-imersao-em-ectoplasmia/" target="_blank" rel="noopener">R$ 800 online</a>. Economia calculada em relação à Escola no 2º lote (R$ 600) somada à Imersão avulsa. Dúvidas sobre condições para 60+ e casais: <a class="esc-link" href="contato.html">fale com a secretaria</a>. <a class="esc-link" href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial/" target="_blank" rel="noopener">Ver página de combos →</a></p>
+      <p class="esc-nota">Valores da Imersão avulsa: <a class="esc-link" href="https://store.conscienciologia.org.br/product/imersao-em-ectoplasmia-11-edicao-presencial-imersao-em-ectoplasmia/" target="_blank" rel="noopener">R$ 1.500 presencial</a> · <a class="esc-link" href="https://store.conscienciologia.org.br/product/imersao-em-ectoplasmia-11-edicao-online-imersao-em-ectoplasmia/" target="_blank" rel="noopener">R$ 800 online</a>. Economia calculada em relação à Escola (R$ 600) somada à Imersão avulsa. Dúvidas sobre condições para 60+ e casais: <a class="esc-link" href="contato.html">fale com a secretaria</a>. <a class="esc-link" href="https://store.conscienciologia.org.br/product/escola-multidimensional-de-interassistencia-parambulatorial/" target="_blank" rel="noopener">Ver página de combos →</a></p>
     </div>
   </section>
 
@@ -346,7 +350,7 @@ a{color:inherit}
     <div class="wrap cta-band__inner">
       <h2>Vagas limitadas. Comece pela Escola em novembro e chegue à <strong style="color:var(--blue);font-weight:700">Imersão de março</strong> como projetor assistencial.</h2>
       <div style="display:flex;gap:12px;flex-wrap:wrap">
-        <a href="#investimento" class="btn btn-primary">Escola · 1º lote R$ 400 <span class="arrow">→</span></a>
+        <a href="#investimento" class="btn btn-primary">Escola · R$ 600 <span class="arrow">→</span></a>
         <a href="#combo" class="btn btn-ghost">Combos a partir de R$ 1.000</a>
       </div>
     </div>
@@ -361,7 +365,7 @@ a{color:inherit}
     <button type="button" class="esc-modal__close" data-cupom-close aria-label="Fechar">✕</button>
     <div class="eyebrow"><span class="dot"></span>CUPOM 60+</div>
     <h3 id="cupomModalTitle">Desconto para 60+</h3>
-    <p>O cupom dá R$ 100 de desconto em qualquer lote: até 30/09, 60+ paga R$ 300; a partir de 01/10, paga R$ 400. Use o cupom abaixo na página de inscrição — lá você escolhe só a Escola ou o combo com a Imersão.</p>
+    <p>Com o cupom, 60+ paga R$ 450 na Escola, R$ 800 no combo com a Imersão online e R$ 1.200 no combo com a Imersão presencial. Use o cupom abaixo na página de inscrição — lá você escolhe só a Escola ou o combo com a Imersão.</p>
     <div class="esc-cupombox"><span id="cupomCode">escola60</span></div>
     <button type="button" class="btn btn-primary" data-cupom-copy style="width:100%;justify-content:center">Copiar cupom</button>
     <p class="esc-modal__ok" id="cupomOk" hidden>Cupom copiado ✓</p>
