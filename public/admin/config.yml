@@ -128,7 +128,7 @@ collections:
   - name: eventos
     label: Agenda · Eventos
     label_singular: Evento
-    description: "**Novo evento:** escolha o Modelo e a Data, e salve — o resto vem do modelo. **Repetir evento:** abra um existente → Duplicar → troque a data. **Pré-visualização:** arraste a alça ↔ da direita para ver o card como vai ficar no site."
+    description: "**Cadastro passo a passo com prévia ao vivo:** [abrir o cadastro guiado](/admin/novo-evento.html). **Novo evento aqui:** escolha o Modelo e a Data, e salve — o resto vem do modelo. **Repetir evento:** abra um existente → Duplicar → troque a data. **Pré-visualização:** arraste a alça ↔ da direita para ver o card como vai ficar no site."
     folder: content/agenda/events
     format: json
     extension: json
