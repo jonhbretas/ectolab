@@ -1,49 +1,35 @@
 import fs from 'node:fs';
 import path from 'node:path';
+import {
+  monthOrder,
+  monthNames,
+  buildEventTypes,
+  buildModels,
+  normalizeEvent,
+  eventDateRange,
+  formatFeaturedDate,
+  formatRowDate,
+  isPast,
+  isUpcoming,
+  todayUtc,
+} from '../public/admin/agenda-core.js';
+
+// Lógica de eventos (modelo, título, datas, status, preço) vive em
+// public/admin/agenda-core.js — compartilhada com o preview do CMS.
 
 const root = process.cwd();
 const agendaPagePath = path.join(root, 'pages', 'agenda.html');
-const eventsPath = path.join(root, 'content', 'agenda', 'events.json');
+const eventsDir = path.join(root, 'content', 'agenda', 'events');
 const eventModelsPath = path.join(root, 'content', 'agenda', 'event-models.json');
 const eventTypesPath = path.join(root, 'content', 'agenda', 'event-types.json');
 const agendaDataPath = path.join(root, 'assets', 'agenda-data.js');
+// Cópia de modelos/tipos para o preview do CMS (gerada; ignorada no git).
+const adminModelsPath = path.join(root, 'public', 'admin', 'agenda-models.json');
 
 const eventsStart = '<!-- CMS AGENDA EVENTS START -->';
 const eventsEnd = '<!-- CMS AGENDA EVENTS END -->';
 const featuredStart = '<!-- CMS AGENDA FEATURED START -->';
 const featuredEnd = '<!-- CMS AGENDA FEATURED END -->';
-
-const monthOrder = ['jan', 'fev', 'mar', 'abr', 'mai', 'jun', 'jul', 'ago', 'set', 'out', 'nov', 'dez'];
-const monthNames = {
-  jan: 'Janeiro',
-  fev: 'Fevereiro',
-  mar: 'Março',
-  abr: 'Abril',
-  mai: 'Maio',
-  jun: 'Junho',
-  jul: 'Julho',
-  ago: 'Agosto',
-  set: 'Setembro',
-  out: 'Outubro',
-  nov: 'Novembro',
-  dez: 'Dezembro',
-};
-const weekdayNames = ['DOM', 'SEG', 'TER', 'QUA', 'QUI', 'SEX', 'SÁB'];
-const defaultEventTypes = [
-  { value: 'palestra', label: 'Palestra', plural: 'Palestras' },
-  { value: 'oficina', label: 'Oficina', plural: 'Oficinas' },
-  { value: 'programa', label: 'Programa', plural: 'Programas' },
-  { value: 'curso-campo', label: 'Curso de Campo', plural: 'Cursos de Campo' },
-  { value: 'curso-hibrido', label: 'Curso Híbrido', plural: 'Cursos Híbridos' },
-  { value: 'curso-presencial', label: 'Curso Presencial', plural: 'Cursos Presenciais' },
-  { value: 'curso-online', label: 'Curso Online', plural: 'Cursos Online' },
-  { value: 'verbete', label: 'Verbete', plural: 'Verbetes' },
-  { value: 'artigo', label: 'Artigo', plural: 'Artigos' },
-  { value: 'simposio', label: 'Simpósio', plural: 'Simpósios' },
-  { value: 'forum', label: 'Fórum', plural: 'Fóruns' },
-  { value: 'dinamica', label: 'Dinâmica', plural: 'Dinâmicas' },
-  { value: 'encontro', label: 'Encontro', plural: 'Encontros' },
-];
 
 function escapeHtml(value = '') {
   return String(value)
@@ -54,339 +40,39 @@ function escapeHtml(value = '') {
     .replace(/'/g, '&#39;');
 }
 
+function readJson(filePath, fallback) {
+  if (!fs.existsSync(filePath)) return fallback;
+  return JSON.parse(fs.readFileSync(filePath, 'utf8'));
+}
+
 function dateValue(event) {
   return new Date(`${event.date}T00:00:00Z`);
-}
-
-function todayUtc() {
-  const now = new Date();
-  return new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
-}
-
-function hasValue(value) {
-  return value !== undefined && value !== null && value !== '';
-}
-
-function escapeRegExp(value) {
-  return String(value).replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
-}
-
-function slugify(value) {
-  const slug = String(value || '')
-    .normalize('NFD')
-    .replace(/[\u0300-\u036f]/g, '')
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, '-')
-    .replace(/^-+|-+$/g, '');
-
-  return slug || 'evento';
-}
-
-function readEventTypes() {
-  let parsed = { types: defaultEventTypes };
-  if (fs.existsSync(eventTypesPath)) {
-    parsed = JSON.parse(fs.readFileSync(eventTypesPath, 'utf8'));
-  }
-
-  const byValue = new Map();
-  const types = [];
-
-  [...(parsed.types || []), ...defaultEventTypes].forEach((type) => {
-    const label = String(type.label || type.value || '').trim();
-    const value = slugify(type.value || label);
-    if (!label || byValue.has(value)) return;
-
-    const normalized = {
-      value,
-      label,
-      plural: String(type.plural || label).trim(),
-    };
-    byValue.set(value, normalized);
-    types.push(normalized);
-  });
-
-  return { types, byValue };
-}
-
-function readEventModels() {
-  if (!fs.existsSync(eventModelsPath)) return new Map();
-
-  const parsed = JSON.parse(fs.readFileSync(eventModelsPath, 'utf8'));
-  const models = new Map();
-  (parsed.models || []).forEach((model) => {
-    if (model.id) models.set(model.id, model);
-  });
-
-  return models;
-}
-
-function applyEventModel(event, models) {
-  const model = models.get(event.model);
-  if (!model) return event;
-
-  const merged = { ...model };
-  Object.entries(event).forEach(([key, value]) => {
-    if (hasValue(value)) merged[key] = value;
-  });
-
-  return merged;
-}
-
-function addDays(date, days) {
-  const next = new Date(date);
-  next.setUTCDate(next.getUTCDate() + days);
-  return next;
-}
-
-function dateParts(value) {
-  const isoDate = String(value || '').slice(0, 10);
-  const match = isoDate.match(/^(\d{4})-(\d{2})-(\d{2})$/);
-  if (!match) return null;
-
-  const [, year, monthNumber, day] = match;
-  const monthIndex = Number(monthNumber) - 1;
-  const date = new Date(Date.UTC(Number(year), monthIndex, Number(day)));
-
-  return {
-    year,
-    month: monthOrder[monthIndex],
-    monthLabel: monthNames[monthOrder[monthIndex]],
-    day,
-    weekday: weekdayNames[date.getUTCDay()],
-    date,
-  };
-}
-
-function datePartsFromDate(date) {
-  const month = monthOrder[date.getUTCMonth()];
-  return {
-    year: String(date.getUTCFullYear()),
-    month,
-    monthLabel: monthNames[month],
-    day: String(date.getUTCDate()).padStart(2, '0'),
-    weekday: weekdayNames[date.getUTCDay()],
-    date,
-  };
-}
-
-function durationDays(value) {
-  const duration = Number.parseInt(value, 10);
-  return Number.isFinite(duration) && duration > 0 ? duration : 0;
-}
-
-function eventDateRange(event) {
-  const start = dateParts(event.date);
-  if (!start) return null;
-
-  const duration = durationDays(event.durationDays);
-  const end = duration > 0 ? datePartsFromDate(addDays(start.date, duration)) : start;
-
-  return { start, end, duration };
-}
-
-function formatFeaturedDate(event) {
-  const range = eventDateRange(event);
-  if (!range) return event.date || '';
-
-  const { start, end, duration } = range;
-  if (duration === 0) return `${start.day} ${start.month.toUpperCase()} ${start.year}`;
-  if (start.year === end.year && start.month === end.month) {
-    return `${start.day}–${end.day} ${start.month.toUpperCase()} ${start.year}`;
-  }
-  if (start.year === end.year) {
-    return `${start.day} ${start.month.toUpperCase()} – ${end.day} ${end.month.toUpperCase()} ${start.year}`;
-  }
-
-  return `${start.day} ${start.month.toUpperCase()} ${start.year} – ${end.day} ${end.month.toUpperCase()} ${end.year}`;
-}
-
-function formatRowDate(event) {
-  const range = eventDateRange(event);
-  if (!range) return { day: event.day || '', weekday: event.weekday || '' };
-
-  const { start, end, duration } = range;
-  if (duration === 0) return { day: start.day, weekday: start.weekday };
-
-  return {
-    day: `${start.day}–${end.day}`,
-    weekday: `${start.weekday}–${end.weekday}`,
-  };
-}
-
-function normalizeStatus(value) {
-  const status = String(value || '').trim().toLowerCase();
-  if (!status) return 'Em breve';
-  if (status.includes('realizado')) return 'Realizado';
-  if (
-    status.includes('vagas preenchidas') ||
-    status.includes('vaga preenchida') ||
-    status.includes('vagas fechadas') ||
-    status.includes('vaga fechada') ||
-    status.includes('esgotad') ||
-    status.includes('lotad') ||
-    status.includes('sem vagas')
-  ) return 'Vagas preenchidas';
-  if (status.includes('breve') || status.includes('programado') || status.includes('disponivel') || status.includes('disponível') || status.includes('publicado')) return 'Em breve';
-  if (status.includes('inscri') || status.includes('sem inscrição') || status.includes('sem inscricao') || status.includes('vaga') || status.includes('chamada')) return 'Inscrições Abertas';
-
-  return 'Inscrições Abertas';
-}
-
-function statusForEvent(event) {
-  const range = eventDateRange(event);
-  if (range && range.end.date < todayUtc()) return 'Realizado';
-
-  return normalizeStatus(event.status);
-}
-
-function standardTitle(event) {
-  if (event.acronym && event.fullName) return `${event.acronym} - ${event.fullName}`;
-  return event.title || '';
-}
-
-function titleComplement(event, base) {
-  let complement = String(event.title || '').trim();
-  if (!complement || !base) return complement;
-
-  const acronym = String(event.acronym || '').trim();
-  const fullName = String(event.fullName || '').trim();
-  complement = complement
-    .replace(new RegExp(`^${escapeRegExp(base)}\\s*[·:–—-]?\\s*`, 'i'), '')
-    .trim();
-
-  if (acronym && fullName) {
-    complement = complement
-      .replace(new RegExp(`^${escapeRegExp(acronym)}\\s*[–—-]\\s*${escapeRegExp(fullName)}\\s*[·:–—-]?\\s*`, 'i'), '')
-      .replace(new RegExp(`^${escapeRegExp(acronym)}\\s*[–—-]\\s*`, 'i'), '')
-      .replace(new RegExp(`^${escapeRegExp(fullName)}\\s*[·:–—-]?\\s*`, 'i'), '')
-      .trim();
-  }
-
-  if (event.model === 'dip') {
-    complement = complement.replace(/^Campo Paracirúrgico Público\s*[–—-]\s*/i, '').trim();
-  }
-
-  if (event.model === 'palestra-tertulia') {
-    complement = complement
-      .replace(/^Tertúlia\s*[·:–—-]?\s*/i, '')
-      .replace(/^de\s+/i, '')
-      .trim();
-  }
-
-  if (event.model === 'simposio') {
-    complement = complement
-      .replace(/^([IVXLCDM]+)\s+Simpósio Ectolab\s*[–—-]\s*/i, '$1 - ')
-      .replace(/^([IVXLCDM]+)\s+Simpósio Ectolab\s*/i, '$1 ')
-      .trim();
-  }
-
-  return complement;
-}
-
-function displayTitle(event) {
-  const base = standardTitle(event);
-  const complement = titleComplement(event, base);
-
-  if (!base) return complement;
-  if (!complement || complement === base) return base;
-  if (complement.toLowerCase().startsWith(base.toLowerCase())) return complement;
-
-  return `${base} · ${complement}`;
-}
-
-function normalizeModalidades(event) {
-  const list = Array.isArray(event.modalidades) ? event.modalidades : [];
-  const clean = list
-    .map((m) => ({
-      label: String(m.label || '').trim(),
-      price: String(m.price || '').trim(),
-      href: String(m.href || '').trim(),
-      buttonLabel: String(m.buttonLabel || m.label || 'Inscrever-se').trim(),
-    }))
-    .filter((m) => m.label || m.href || m.price);
-  return clean.length >= 2 ? clean : [];
-}
-
-function eventSlug(event) {
-  const base = `${event.date || ''}-${event.title || ''}`;
-  return slugify(base);
-}
-
-function normalizeEvent(rawEvent, monthGroup = {}, models = new Map(), eventTypes = readEventTypes()) {
-  const event = applyEventModel(rawEvent, models);
-  const parts = dateParts(event.date) || {};
-  const customCategory = String(event.categoryCustom || '').trim();
-  const category = customCategory ? slugify(customCategory) : event.category || 'palestra';
-  const categoryLabel = customCategory || eventTypes.byValue.get(category)?.label || category;
-  const modalidades = normalizeModalidades(event);
-  const price = modalidades.length
-    ? modalidades.map((m) => m.price).filter(Boolean).join(' · ')
-    : (event.price || (event.free ? 'Gratuito' : ''));
-  const duration = durationDays(event.durationDays);
-  const status = statusForEvent({ ...event, durationDays: duration });
-
-  return {
-    ...event,
-    slug: eventSlug(event),
-    title: displayTitle(event),
-    year: parts.year || event.year || monthGroup.year,
-    month: parts.month || event.month || monthGroup.month,
-    monthLabel: parts.monthLabel || event.monthLabel || monthGroup.monthLabel,
-    day: parts.day || event.day || '',
-    weekday: parts.weekday || event.weekday || '',
-    durationDays: duration,
-    category,
-    categoryCustom: customCategory,
-    tag: event.tag || categoryLabel,
-    description: event.description || '',
-    location: event.location || '',
-    time: event.time || '',
-    price,
-    modalidades,
-    vacancies: event.vacancies || event.students || event.studentCount || '',
-    free: Boolean(event.free || String(price).toLowerCase().includes('gratuito')),
-    status,
-    page: event.page || '',
-    href: event.href || '/pages/atividades.html',
-    buttonLabel: event.buttonLabel || event.ctaLabel || 'Ver detalhes',
-  };
-}
-
-function isPast(event) {
-  return String(event.status || '').toLowerCase().includes('realizado');
-}
-
-function isUpcoming(event) {
-  if (isPast(event)) return false;
-
-  const range = eventDateRange(event);
-  if (!range) return true;
-
-  return range.end.date >= todayUtc();
 }
 
 function monthId(year, month) {
   return year === '2026' ? `m-${month}` : `m${String(year).slice(2)}-${month}`;
 }
 
-function readEvents(eventTypes) {
-  const parsed = JSON.parse(fs.readFileSync(eventsPath, 'utf8'));
-  const models = readEventModels();
+// Um arquivo .json por evento em content/agenda/events/ (coleção de pastas do CMS).
+function readRawEvents() {
+  if (!fs.existsSync(eventsDir)) throw new Error(`Pasta de eventos não encontrada: ${eventsDir}`);
 
-  if (Array.isArray(parsed.months)) {
-    return parsed.months
-      .flatMap((monthGroup) => {
-        const events = Array.isArray(monthGroup.events) ? monthGroup.events : [];
-        return events.map((event) => normalizeEvent(event, monthGroup, models, eventTypes));
-      })
-      .filter((event) => event.title && event.date)
-      .sort((a, b) => dateValue(a) - dateValue(b));
-  }
+  return fs.readdirSync(eventsDir)
+    .filter((file) => file.endsWith('.json'))
+    .sort()
+    .map((file) => {
+      try {
+        return JSON.parse(fs.readFileSync(path.join(eventsDir, file), 'utf8'));
+      } catch (error) {
+        throw new Error(`JSON inválido em content/agenda/events/${file}: ${error.message}`);
+      }
+    });
+}
 
-  return (parsed.events || [])
-    .map((event) => normalizeEvent(event, {}, models, eventTypes))
+function readEvents(models, eventTypes, today) {
+  return readRawEvents()
+    .map((event) => normalizeEvent(event, models, eventTypes, today))
     .filter((event) => event.title && event.date)
-    .slice()
     .sort((a, b) => dateValue(a) - dateValue(b));
 }
 
@@ -437,6 +123,7 @@ function renderRow(event) {
   const buttonLabel = event.buttonLabel || 'Ver detalhes';
   const rowDate = formatRowDate(event);
   const vacancies = event.vacancies ? `<span class="vacancies">${escapeHtml(event.vacancies)}</span>` : '';
+  // Com Página do evento, o card leva à página do curso (não à loja) — modalidades ficam na página.
   const hasModalidades = event.modalidades && event.modalidades.length >= 2 && !event.page;
   const linkTarget = event.page || event.href || '/pages/atividades.html';
 
@@ -558,7 +245,7 @@ function updatePage(events, eventTypes) {
 
 // ─── Geração do agenda-data.js (usado pelo React na Home e Agenda) ───────────
 //
-// Campos de controle nos eventos do CMS (events.json):
+// Campos de controle nos eventos do CMS (content/agenda/events/*.json):
 //   featured  : true/false  — aparece na seção "Destaques" da Agenda e entra na Home
 //   pinHome   : true/false  — fixa o evento na seção "Próximas Atividades" da Home
 //   homeOrdem : número      — posição na Home, de 1 a 5 (menor = primeiro)
@@ -601,7 +288,7 @@ const mapped = events.map((event) => ({
 
   const header = [
     '// AUTO-GERADO por scripts/generate-agenda.mjs — não edite manualmente.',
-    '// Para atualizar: edite content/agenda/events.json e execute npm run generate:content',
+    '// Para atualizar: edite os eventos no CMS (content/agenda/events/) e execute npm run generate:content',
     '//',
     '// Controle da Home via campos no CMS:',
     '//   featured  — true/false: destaque da Agenda, também entra na Home',
@@ -614,12 +301,18 @@ const mapped = events.map((event) => ({
   fs.writeFileSync(agendaDataPath, `${header}\n\nexport const eventos = ${JSON.stringify(mapped, null, 2)};\n`);
 }
 
-const eventTypes = readEventTypes();
-const events = readEvents(eventTypes).filter(isUpcoming);
+const rawModels = readJson(eventModelsPath, { models: [] }).models || [];
+const rawTypes = readJson(eventTypesPath, { types: [] }).types || [];
+const models = buildModels(rawModels);
+const eventTypes = buildEventTypes(rawTypes);
+const today = todayUtc();
+const events = readEvents(models, eventTypes, today).filter((event) => isUpcoming(event, today));
 
 if (events.length === 0) {
-  throw new Error('No events found in content/agenda/events.json.');
+  throw new Error('Nenhum evento futuro em content/agenda/events/.');
 }
+
+fs.writeFileSync(adminModelsPath, `${JSON.stringify({ models: rawModels, types: eventTypes.types }, null, 2)}\n`);
 
 updatePage(events, eventTypes);
 console.log(`Generated agenda page with ${events.length} events.`);

@@ -1,0 +1,19 @@
+{
+  "model": "escola",
+  "date": "2026-11-15",
+  "title": "Escola Parambulatorial — Desenvolvimento Interassistencial Projetivo",
+  "status": "Inscrições Abertas",
+  "category": "escola",
+  "tag": "100% Online",
+  "description": "Para tenepessistas lúcidos: acoplamento homeostático, assimilação interassistencial, desperticidade e casuística parambulatorial. Vagas limitadas.",
+  "location": "Online",
+  "time": "9h às 11h30",
+  "price": "R$ 400",
+  "free": false,
+  "href": "https://www.ectolab.org/pages/curso-escola.html",
+  "buttonLabel": "Ver detalhes",
+  "featured": true,
+  "featuredStyle": "highlight",
+  "pinHome": true,
+  "homeOrdem": 1
+}

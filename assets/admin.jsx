@@ -69,12 +69,12 @@ function EventRow({ ev, index, onChange }) {
 // ─── App ─────────────────────────────────────────────────────────────────────
 
 function App() {
-  const [events, setEvents]   = useState(null);   // raw events array from events.json
+  const [events, setEvents]   = useState(null);   // raw events from content/agenda/events/*.json (cada um com _file)
   const [dirty, setDirty]     = useState(false);
   const [status, setStatus]   = useState(null);   // null | { type: 'ok'|'err'|'loading', msg: string }
   const [apiOk, setApiOk]     = useState(true);
 
-  // Load events.json from the dev API
+  // Load events from the dev API
   useEffect(() => {
     fetch('/api/admin/events')
       .then(r => {

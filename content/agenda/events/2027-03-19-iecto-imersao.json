@@ -1,0 +1,31 @@
+{
+  "model": "iecto-imersao",
+  "date": "2027-03-19",
+  "durationDays": 2,
+  "title": "Parambulatorial",
+  "status": "Inscrições Abertas",
+  "category": "curso-hibrido",
+  "description": "Imersão em Ectoplasmia Parambulatorial",
+  "location": "Discernimentum - Foz do Iguaçu - PR",
+  "vacancies": "Até 50 Alunos",
+  "free": false,
+  "page": "/pages/curso-imersao.html",
+  "href": "https://store.conscienciologia.org.br/sku/311521/",
+  "modalidades": [
+    {
+      "label": "Presencial",
+      "price": "R$1500",
+      "href": "https://store.conscienciologia.org.br/sku/311521/",
+      "buttonLabel": "Presencial"
+    },
+    {
+      "label": "Online",
+      "price": "R$800",
+      "href": "https://store.conscienciologia.org.br/sku/311520/",
+      "buttonLabel": "Online"
+    }
+  ],
+  "featured": true,
+  "featuredStyle": "default",
+  "pinHome": true
+}

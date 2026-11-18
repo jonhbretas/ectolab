@@ -1,0 +1,14 @@
+{
+  "model": "verbete",
+  "date": "2026-07-11",
+  "title": "Descablagem Paracirúrgica",
+  "status": "Em breve",
+  "description": "V Semana de Verbetes sobre Ectoplasmologia e Paracirurgia",
+  "location": "Tertuliarium - CEAEC",
+  "time": "12:30",
+  "free": true,
+  "buttonLabel": "Ver detalhes",
+  "featured": false,
+  "featuredStyle": "gold",
+  "pinHome": false
+}

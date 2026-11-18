@@ -1,7 +1,7 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 import { relative, resolve } from 'path';
-import { copyFileSync, mkdirSync, readFileSync, writeFileSync } from 'fs';
+import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'fs';
 import { spawnSync } from 'child_process';
 import { BOOK, FAQ_LIVRO, FAQ_TEMA } from './assets/ectoplasma-data.js';
 import { PESQUISAS } from './assets/pesquisas-data.js';
@@ -272,10 +272,10 @@ function seoPlugin() {
 
 // ─── Admin Plugin (dev only) ─────────────────────────────────────────────────
 // Expõe duas rotas durante o "npm run dev":
-//   GET  /api/admin/events  → lê content/agenda/events.json
-//   POST /api/admin/events  → salva events.json e regenera agenda-data.js
+//   GET  /api/admin/events  → lê content/agenda/events/*.json (um arquivo por evento)
+//   POST /api/admin/events  → salva cada evento no seu arquivo e regenera agenda-data.js
 function adminPlugin() {
-  const eventsFilePath    = resolve(__dirname, 'content', 'agenda', 'events.json');
+  const eventsDir          = resolve(__dirname, 'content', 'agenda', 'events');
   const generateScriptPath = resolve(__dirname, 'scripts', 'generate-agenda.mjs');
 
   return {
@@ -288,11 +288,15 @@ function adminPlugin() {
         if (url === '/api/admin/events' && req.method === 'GET') {
           res.setHeader('Content-Type', 'application/json; charset=utf-8');
           res.setHeader('Cache-Control', 'no-cache');
-          res.end(readFileSync(eventsFilePath, 'utf8'));
+          const events = readdirSync(eventsDir)
+            .filter((file) => file.endsWith('.json'))
+            .sort()
+            .map((file) => ({ ...JSON.parse(readFileSync(resolve(eventsDir, file), 'utf8')), _file: file }));
+          res.end(JSON.stringify({ events }));
           return;
         }
 
-        // POST /api/admin/events  — salva JSON + regenera agenda-data.js
+        // POST /api/admin/events  — salva cada evento + regenera agenda-data.js
         if (url === '/api/admin/events' && req.method === 'POST') {
           let body = '';
           req.on('data', chunk => { body += chunk; });
@@ -300,7 +304,11 @@ function adminPlugin() {
             res.setHeader('Content-Type', 'application/json; charset=utf-8');
             try {
               const parsed = JSON.parse(body);
-              writeFileSync(eventsFilePath, JSON.stringify(parsed, null, 2) + '\n');
+              for (const { _file, ...event } of parsed.events || []) {
+                // Só grava em arquivos existentes da pasta de eventos.
+                if (!/^[\w.-]+\.json$/.test(_file || '') || !existsSync(resolve(eventsDir, _file))) continue;
+                writeFileSync(resolve(eventsDir, _file), JSON.stringify(event, null, 2) + '\n');
+              }
               const result = spawnSync(process.execPath, [generateScriptPath], {
                 cwd: __dirname,
                 encoding: 'utf8',

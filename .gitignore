@@ -5,3 +5,6 @@ node_modules/.vite/
 
 # Duplicata gerada no build — a fonte unica e a pasta assets/
 public/assets/
+
+# Gerado por scripts/generate-agenda.mjs para o preview do CMS
+public/admin/agenda-models.json

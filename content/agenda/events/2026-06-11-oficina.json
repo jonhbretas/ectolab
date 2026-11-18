@@ -1,0 +1,16 @@
+{
+  "model": "oficina",
+  "date": "2026-06-11",
+  "title": "Oficina de Ectoplasmologia",
+  "status": "Realizado",
+  "category": "oficina",
+  "description": "Oficina presencial gratuita, sem pré-requisito.",
+  "location": "Avenida Rio Branco, 380, sala 602, centro, Florianópolis, SC.",
+  "time": "19h30 às 21h30",
+  "free": true,
+  "page": "/pages/oficina-ectoplasmologia.html",
+  "href": "https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/",
+  "buttonLabel": "Ver detalhes",
+  "featured": false,
+  "pinHome": false
+}

@@ -1,0 +1,15 @@
+{
+  "model": "encontro",
+  "date": "2026-09-11",
+  "durationDays": 2,
+  "title": "Encontro de Voluntários",
+  "status": "Inscrições Abertas",
+  "categoryCustom": "Encontro de Voluntários",
+  "tag": "Exclusivo para Voluntários",
+  "location": "São Paulo / SP",
+  "free": false,
+  "buttonLabel": "Ver detalhes",
+  "featured": false,
+  "featuredStyle": "dark",
+  "pinHome": false
+}
