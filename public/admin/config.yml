@@ -136,11 +136,7 @@ collections:
     slug: "{{year}}-{{month}}-{{day}}-{{model | default('evento')}}"
     summary: "{{date | date('DD/MM/YYYY')}} · {{model | upper | default('SEM MODELO')}} {{title}} — {{status | default('status do modelo')}}"
     sortable_fields:
-      fields:
-        - { field: date, label: Data }
-        - { field: model, label: Modelo }
-        - { field: title, label: Título }
-        - { field: status, label: Status }
+      fields: [date, model, title, status]
       default:
         field: date
         direction: ascending
