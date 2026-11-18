@@ -10,6 +10,39 @@
   <script src="https://unpkg.com/@sveltia/cms/dist/sveltia-cms.js"></script>
   <!-- Pré-visualização dos eventos da agenda (mesma lógica do gerador do site) -->
   <script type="module" src="/admin/preview.js"></script>
+
+  <!-- Atalho fixo para o cadastro guiado de eventos -->
+  <style>
+    .ecto-quick {
+      position: fixed; left: 16px; bottom: 16px; z-index: 2147483000;
+      display: inline-flex; align-items: center; gap: 8px;
+      padding: 10px 16px 10px 12px; border-radius: 999px;
+      background: #f0a030; color: #08222b; text-decoration: none;
+      font: 700 14px/1 system-ui, -apple-system, "Segoe UI", sans-serif;
+      box-shadow: 0 10px 24px -8px rgba(0,0,0,.45);
+      transition: transform .15s, box-shadow .15s;
+    }
+    .ecto-quick:hover { transform: translateY(-2px); box-shadow: 0 14px 28px -8px rgba(0,0,0,.55); }
+    .ecto-quick:focus-visible { outline: 3px solid #fff; outline-offset: 2px; }
+    .ecto-quick b { display: grid; place-items: center; width: 22px; height: 22px; border-radius: 50%; background: #08222b; color: #f0a030; font-size: 16px; }
+    @media (max-width: 600px) { .ecto-quick span { display: none; } .ecto-quick { padding: 10px; } }
+  </style>
+  <script>
+    // Garante o botão mesmo se o CMS reescrever o <body> ao montar a interface.
+    (function () {
+      function ensureQuickLink() {
+        if (document.querySelector('.ecto-quick')) return;
+        var a = document.createElement('a');
+        a.className = 'ecto-quick';
+        a.href = '/admin/novo-evento.html';
+        a.title = 'Cadastro guiado de evento, com prévia ao vivo';
+        a.innerHTML = '<b aria-hidden="true">+</b><span>Novo evento guiado</span>';
+        document.body.appendChild(a);
+      }
+      ensureQuickLink();
+      new MutationObserver(ensureQuickLink).observe(document.body, { childList: true });
+    })();
+  </script>
   <script>
     // Rola ate o novo item quando um botao "Add" e clicado em uma lista do CMS.
     // O Sveltia CMS adiciona o item no fim da lista mas nao rola a tela automaticamente,
