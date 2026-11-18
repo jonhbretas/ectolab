@@ -3,30 +3,36 @@
   "durationDays": 1,
   "title": "Materializações Interassistenciais",
   "status": "Inscrições Abertas",
-  "category": "curso-hibrido",
-  "categoryCustom": "Parceria ICTENEPES",
-  "description": "Você já refletiu sobre as suas materializações interassistenciais?",
-  "location": "Híbrido - Foz do Iguaçu",
-  "time": "09:00 às 17:00",
-  "price": "R$500",
-  "free": false,
-  "page": "/pages/curso-materializacoes.html",
-  "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/",
-  "buttonLabel": "Ver detalhes",
-  "modalidades": [
-    {
-      "label": "Presencial",
-      "price": "R$500",
-      "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/",
-      "buttonLabel": "Presencial"
-    },
-    {
-      "label": "Online",
-      "price": "R$450",
-      "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-online/",
-      "buttonLabel": "Online"
-    }
-  ],
-  "featured": true,
-  "pinHome": true
+  "card": {
+    "category": "curso-hibrido",
+    "categoryCustom": "Parceria ICTENEPES",
+    "description": "Você já refletiu sobre as suas materializações interassistenciais?",
+    "location": "Híbrido - Foz do Iguaçu",
+    "time": "09:00 às 17:00"
+  },
+  "inscricao": {
+    "price": "R$500",
+    "free": false,
+    "page": "/pages/curso-materializacoes.html",
+    "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/",
+    "buttonLabel": "Ver detalhes",
+    "modalidades": [
+      {
+        "label": "Presencial",
+        "price": "R$500",
+        "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-presencial/",
+        "buttonLabel": "Presencial"
+      },
+      {
+        "label": "Online",
+        "price": "R$450",
+        "href": "https://store.conscienciologia.org.br/product/materializacoes-interassistenciais-online/",
+        "buttonLabel": "Online"
+      }
+    ]
+  },
+  "destaque": {
+    "featured": true,
+    "pinHome": true
+  }
 }

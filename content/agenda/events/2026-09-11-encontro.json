@@ -4,12 +4,18 @@
   "durationDays": 2,
   "title": "Encontro de Voluntários",
   "status": "Inscrições Abertas",
-  "categoryCustom": "Encontro de Voluntários",
-  "tag": "Exclusivo para Voluntários",
-  "location": "São Paulo / SP",
-  "free": false,
-  "buttonLabel": "Ver detalhes",
-  "featured": false,
-  "featuredStyle": "dark",
-  "pinHome": false
+  "card": {
+    "categoryCustom": "Encontro de Voluntários",
+    "tag": "Exclusivo para Voluntários",
+    "location": "São Paulo / SP"
+  },
+  "inscricao": {
+    "free": false,
+    "buttonLabel": "Ver detalhes"
+  },
+  "destaque": {
+    "featured": false,
+    "featuredStyle": "dark",
+    "pinHome": false
+  }
 }

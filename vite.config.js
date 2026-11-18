@@ -5,6 +5,7 @@ import { copyFileSync, existsSync, mkdirSync, readdirSync, readFileSync, writeFi
 import { spawnSync } from 'child_process';
 import { BOOK, FAQ_LIVRO, FAQ_TEMA } from './assets/ectoplasma-data.js';
 import { PESQUISAS } from './assets/pesquisas-data.js';
+import { flattenEvent, nestEvent } from './public/admin/agenda-core.js';
 
 /**
  * Assets "crus" referenciados por caminho absoluto /assets/... nas páginas
@@ -291,7 +292,7 @@ function adminPlugin() {
           const events = readdirSync(eventsDir)
             .filter((file) => file.endsWith('.json'))
             .sort()
-            .map((file) => ({ ...JSON.parse(readFileSync(resolve(eventsDir, file), 'utf8')), _file: file }));
+            .map((file) => ({ ...flattenEvent(JSON.parse(readFileSync(resolve(eventsDir, file), 'utf8'))), _file: file }));
           res.end(JSON.stringify({ events }));
           return;
         }
@@ -307,7 +308,7 @@ function adminPlugin() {
               for (const { _file, ...event } of parsed.events || []) {
                 // Só grava em arquivos existentes da pasta de eventos.
                 if (!/^[\w.-]+\.json$/.test(_file || '') || !existsSync(resolve(eventsDir, _file))) continue;
-                writeFileSync(resolve(eventsDir, _file), JSON.stringify(event, null, 2) + '\n');
+                writeFileSync(resolve(eventsDir, _file), JSON.stringify(nestEvent(event), null, 2) + '\n');
               }
               const result = spawnSync(process.execPath, [generateScriptPath], {
                 cwd: __dirname,

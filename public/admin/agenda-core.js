@@ -44,6 +44,38 @@ export function slugify(value) {
   return slug || 'evento';
 }
 
+// Blocos recolhíveis do formulário do CMS. No arquivo, o evento fica:
+// { model, date, durationDays, title, status, card: {...}, inscricao: {...}, destaque: {...} }
+export const EVENT_GROUPS = {
+  card: ['description', 'location', 'time', 'vacancies', 'tag', 'category', 'categoryCustom'],
+  inscricao: ['price', 'free', 'page', 'href', 'buttonLabel', 'modalidades'],
+  destaque: ['featured', 'featuredStyle', 'featuredDate', 'featuredCategory', 'pinHome', 'homeOrdem'],
+};
+const GROUP_OF = new Map(Object.entries(EVENT_GROUPS).flatMap(([group, keys]) => keys.map((key) => [key, group])));
+
+// Blocos -> objeto plano (aceita também o formato plano antigo).
+export function flattenEvent(event = {}) {
+  const flat = { ...event };
+  Object.keys(EVENT_GROUPS).forEach((group) => {
+    const values = flat[group];
+    delete flat[group];
+    if (values && typeof values === 'object' && !Array.isArray(values)) Object.assign(flat, values);
+  });
+  return flat;
+}
+
+// Objeto plano -> blocos (usado pelo painel local ao salvar).
+export function nestEvent(flat = {}) {
+  const nested = {};
+  Object.entries(flat).forEach(([key, value]) => {
+    const group = GROUP_OF.get(key);
+    if (!group) { nested[key] = value; return; }
+    nested[group] = nested[group] || {};
+    nested[group][key] = value;
+  });
+  return nested;
+}
+
 export function todayUtc(now = new Date()) {
   return new Date(Date.UTC(now.getFullYear(), now.getMonth(), now.getDate()));
 }
@@ -240,7 +272,7 @@ export function eventSlug(event) {
 
 // Evento cru do CMS -> evento final (modelo aplicado, título, datas, status, preço).
 export function normalizeEvent(rawEvent, models = new Map(), eventTypes = buildEventTypes(), today = todayUtc()) {
-  const event = applyEventModel(rawEvent, models);
+  const event = applyEventModel(flattenEvent(rawEvent), models);
   const parts = dateParts(event.date) || {};
   const customCategory = String(event.categoryCustom || '').trim();
   const category = customCategory ? slugify(customCategory) : event.category || 'palestra';
@@ -291,12 +323,13 @@ export function isUpcoming(event, today = todayUtc()) {
 }
 
 // Problemas comuns de preenchimento, mostrados no preview do CMS.
-export function eventWarnings(rawEvent, models) {
+export function eventWarnings(event, models) {
+  const rawEvent = flattenEvent(event);
   const warnings = [];
   if (!rawEvent.date) warnings.push('Falta a Data de início — o evento não aparece no site sem ela.');
   if (rawEvent.model && !models.has(rawEvent.model)) warnings.push(`O modelo "${rawEvent.model}" não existe mais em Modelos de eventos.`);
   if (!rawEvent.model && !hasValue(rawEvent.title)) warnings.push('Sem modelo e sem título — o evento não aparece no site. Escolha um modelo ou preencha o título.');
-  if (/^\s*\d+\s*$/.test(String(rawEvent.time || ''))) warnings.push(`Horário "${rawEvent.time}" parece um número solto. Para duração, use o campo Duração em dias.`);
+  if (/^\s*\d+\s*$/.test(String(rawEvent.time || ''))) warnings.push(`Horário "${rawEvent.time}" parece um número solto. Para a duração, use o campo Dias a mais.`);
   const mods = Array.isArray(rawEvent.modalidades) ? rawEvent.modalidades.filter((m) => m && (m.label || m.href || m.price)) : [];
   if (mods.length === 1) warnings.push('Só 1 modalidade cadastrada — são necessárias 2 ou mais; com 1 o site ignora as modalidades.');
   if (mods.length >= 2 && hasValue(rawEvent.page)) warnings.push('Há Página do evento: o card leva para ela e os botões das Modalidades não aparecem na agenda (a inscrição fica na página do curso). Para mostrar os botões, apague a Página do evento.');

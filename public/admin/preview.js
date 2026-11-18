@@ -8,6 +8,7 @@ import {
   formatFeaturedDate,
   eventWarnings,
   hasValue,
+  flattenEvent,
 } from './agenda-core.js';
 
 const CMS = window.CMS;
@@ -37,7 +38,7 @@ const INHERITABLE = [
 
 function toPlain(entry) {
   const data = entry && entry.getIn ? entry.getIn(['data']) : null;
-  return data && data.toJS ? data.toJS() : {};
+  return flattenEvent(data && data.toJS ? data.toJS() : {});
 }
 
 function stateClass(status) {

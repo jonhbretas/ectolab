@@ -3,12 +3,18 @@
   "date": "2026-07-13",
   "title": "Campo Bioenergético Paracirúrgico",
   "status": "Em breve",
-  "description": "V Semana de Verbetes sobre Ectoplasmologia e Paracirurgia",
-  "location": "Tertuliarium - CEAEC",
-  "time": "12:30",
-  "free": true,
-  "buttonLabel": "Ver detalhes",
-  "featured": false,
-  "featuredStyle": "gold",
-  "pinHome": false
+  "card": {
+    "description": "V Semana de Verbetes sobre Ectoplasmologia e Paracirurgia",
+    "location": "Tertuliarium - CEAEC",
+    "time": "12:30"
+  },
+  "inscricao": {
+    "free": true,
+    "buttonLabel": "Ver detalhes"
+  },
+  "destaque": {
+    "featured": false,
+    "featuredStyle": "gold",
+    "pinHome": false
+  }
 }

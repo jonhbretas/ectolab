@@ -3,11 +3,17 @@
   "date": "2026-07-09",
   "title": "Oficina de Ectoplasmologia",
   "status": "Inscrições Abertas",
-  "vacancies": "Até 20 Alunos",
-  "free": true,
-  "page": "/pages/oficina-ectoplasmologia.html",
-  "href": "https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/",
-  "buttonLabel": "Ver detalhes",
-  "featured": false,
-  "pinHome": false
+  "card": {
+    "vacancies": "Até 20 Alunos"
+  },
+  "inscricao": {
+    "free": true,
+    "page": "/pages/oficina-ectoplasmologia.html",
+    "href": "https://orthocognitivus.org/loja/produto/oficina-de-ectoplasmologia-2026/",
+    "buttonLabel": "Ver detalhes"
+  },
+  "destaque": {
+    "featured": false,
+    "pinHome": false
+  }
 }
