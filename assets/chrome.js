@@ -146,7 +146,7 @@
         return `
           <div class="nav-item has-drop">
             <a href="${n.href}" class="${active === n.id ? "active" : ""}">${n.label} <span class="caret">▾</span></a>
-            <div class="nav-dropdown">${dropGroups}</div>
+            <div class="nav-dropdown${n.dropdown.length > 4 ? " nav-dropdown--grid" : ""}">${dropGroups}</div>
           </div>
         `;
       }

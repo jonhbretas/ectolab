@@ -347,6 +347,16 @@ p { margin: 0 0 1em; }
   transition: all 0.2s;
   pointer-events: none;
   min-width: max-content;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 100px);
+  overflow-y: auto;
+}
+/* Menus com muitos grupos (ex.: Cursos) — grade de 3 colunas para caber em notebooks */
+.nav-dropdown--grid {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 24px 40px;
+  min-width: 0;
 }
 .nav-item.has-drop:hover .nav-dropdown {
   opacity: 1;
